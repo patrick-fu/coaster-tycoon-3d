@@ -1,5 +1,9 @@
 # OpenRCT2 Simulation Reuse Feasibility
 
+**Route status: discontinued on 2026-10-03.** Patrick selected an independent
+MIT implementation in [ADR 0001](../adr/0001-independent-mit-implementation.md).
+Retain this report as historical research; core reuse is outside the selected route.
+
 **Static research snapshot: 2026-10-03, commit `11513222890717e81431c83a28aafb7555f2ccd2`.** Source, CMake, browser bootstrap, CI and test definitions were inspected remotely. No OpenRCT2 build, test suite, browser port, benchmark or original-data import was executed. This investigation covers coaster construction, guests and park management together; it does not select an architecture.
 
 ## Diagnosis and coupling evidence

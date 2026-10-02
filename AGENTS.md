@@ -18,6 +18,10 @@ unavailable.
 
 ## Agent skills
 
+Before adding simulation code, dependencies or game resources, read
+`docs/adr/0001-independent-mit-implementation.md` for the independent MIT source
+strategy and provenance requirements.
+
 ### Issue tracker
 
 Track issues, specifications, and Wayfinder maps in this repository's GitHub Issues. Before tracker operations, read `docs/agents/issue-tracker.md`.
