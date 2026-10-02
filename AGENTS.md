@@ -6,6 +6,16 @@ Use English for all project artifacts, including README files, documentation,
 issues and issue comments, pull requests, commit messages, code comments, and
 agent instruction files. Continue communicating with Patrick in Chinese.
 
+## Patrick's execution environment
+
+Do not run builds or tests on Patrick's Mac. Execute compilation, test suites,
+simulation experiments, and runtime validation on the designated Grok Bot Linux
+build host over SSH. Use the Mac for editing, documentation, and remote
+orchestration. Keep local project workspaces and retained experiment artifacts
+on the external storage volume, and keep generated build output on the remote
+host. Do not silently fall back to local execution when the remote host is
+unavailable.
+
 ## Agent skills
 
 ### Issue tracker
