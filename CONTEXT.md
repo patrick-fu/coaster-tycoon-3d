@@ -19,3 +19,8 @@ _Avoid_: Visual similarity, OpenRCT2 compatibility
 The breadth of available ride types, track pieces, amenities, staff roles and
 scenery. A smaller selection does not imply simpler simulation rules.
 _Avoid_: Simulation depth
+
+**Park scale**:
+The extent of a park's usable land and the population of operating ride and
+facility instances, guests and staff within it.
+_Avoid_: Content variety, ride-type count
