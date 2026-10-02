@@ -9,6 +9,11 @@ game resources are independent; see the [source strategy decision](docs/adr/0001
 
 The project is currently in Wayfinder planning. The destination is to establish the design, technical approach, and acceptance criteria for a first playable version, ready for development.
 
-Custom coaster construction, park management, and guest simulation are all essential to the intended experience. Their fidelity and the exact scope of the first playable version will be established through a decision map in GitHub Issues.
+The first playable scope is a money-enabled sandbox integrating custom coaster
+construction, individual guest simulation and park management at original-game
+scale. The selected [browser architecture](docs/adr/0002-client-side-simulation-and-rendering.md)
+uses an independent TypeScript simulation in a Web Worker, Three.js rendering
+and project-owned local saves. Construction usability, measured capacity and
+final acceptance still require disposable prototypes and live feedback.
 
 Follow the planning map: [Define the first playable version of a faithful 3D RCT2 browser game](https://github.com/patrick-fu/coaster-tycoon-3d/issues/1). Its sub-issues and dependencies show the current decision frontier.
