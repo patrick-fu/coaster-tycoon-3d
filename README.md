@@ -1,7 +1,7 @@
 # Coaster Tycoon 3D
 
-以《过山车大亨 2》的玩法为基准，探索 3D 乐园经营游戏。
+A browser-based 3D theme park management game aiming to reproduce the gameplay of RollerCoaster Tycoon 2 as closely as possible.
 
-当前阶段使用 Wayfinder 梳理关键决策，目标是明确首个可玩版本的设计、技术路线与验收标准，使项目可以进入开发。
+The project is currently in Wayfinder planning. The destination is to establish the design, technical approach, and acceptance criteria for a first playable version, ready for development.
 
-首版候选闭环：建道路和设施 → 游客入园、排队、乘坐 → 获得收入 → 扩建乐园。具体范围将在决策地图中确定。
+Custom coaster construction, park management, and guest simulation are all essential to the intended experience. Their fidelity and the exact scope of the first playable version will be established through a decision map in GitHub Issues.
