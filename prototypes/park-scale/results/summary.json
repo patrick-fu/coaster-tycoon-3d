@@ -1,0 +1,634 @@
+{
+  "ordinary": {
+    "simulation-only": {
+      "stepMs": [
+        0.20000001788139343,
+        0.20000001788139343,
+        0.20000001788139343
+      ],
+      "coldStepMs": [
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645
+      ],
+      "snapshotBuildAndPostMs": null,
+      "snapshotArrivalMs": null,
+      "decodeMs": null,
+      "frameMs": null,
+      "overviewFrameMs": null,
+      "nearFrameMs": null,
+      "entryDelayMs": null,
+      "backlogTicks": null,
+      "stepMax": 14.399999976158142,
+      "deadlineMisses": null,
+      "entryMax": null,
+      "eventMax": 14.399999976158142,
+      "saveRestoreRange": [
+        10.099999994039536,
+        14.399999976158142
+      ],
+      "walkingRange": [
+        1293,
+        1633
+      ],
+      "rssObservedMax": 950857728
+    },
+    "uncached-routing": {
+      "stepMs": [
+        4.9000000059604645,
+        5,
+        5
+      ],
+      "coldStepMs": [
+        6.800000011920929,
+        7.5,
+        7.899999976158142
+      ],
+      "snapshotBuildAndPostMs": null,
+      "snapshotArrivalMs": null,
+      "decodeMs": null,
+      "frameMs": null,
+      "overviewFrameMs": null,
+      "nearFrameMs": null,
+      "entryDelayMs": null,
+      "backlogTicks": null,
+      "stepMax": 12.799999982118607,
+      "deadlineMisses": null,
+      "entryMax": null,
+      "eventMax": 12.600000023841858,
+      "saveRestoreRange": [
+        11.699999988079071,
+        12.600000023841858
+      ],
+      "walkingRange": [
+        1293,
+        1633
+      ],
+      "rssObservedMax": 941252608
+    },
+    "message-only": {
+      "stepMs": [
+        0.20000001788139343,
+        0.20000001788139343,
+        0.20000001788139343
+      ],
+      "coldStepMs": [
+        0.29999998211860657,
+        0.29999998211860657,
+        0.30000001192092896
+      ],
+      "snapshotBuildAndPostMs": [
+        0.30000001192092896,
+        0.30000001192092896,
+        0.3999999761581421
+      ],
+      "snapshotArrivalMs": [
+        0.5,
+        0.60009765625,
+        0.60009765625
+      ],
+      "decodeMs": [
+        0.10000002384185791,
+        0.10000002384185791,
+        0.10000002384185791
+      ],
+      "frameMs": null,
+      "overviewFrameMs": null,
+      "nearFrameMs": null,
+      "entryDelayMs": [
+        3.7999999821186066,
+        3.800000011920929,
+        3.800000011920929
+      ],
+      "backlogTicks": [
+        0,
+        0,
+        0
+      ],
+      "stepMax": 10.5,
+      "deadlineMisses": 0,
+      "entryMax": 4.4000000059604645,
+      "eventMax": 10.5,
+      "saveRestoreRange": [
+        9.099999994039536,
+        10.5
+      ],
+      "walkingRange": [
+        1293,
+        1633
+      ],
+      "rssObservedMax": 986992640
+    },
+    "full": {
+      "stepMs": [
+        0.20000001788139343,
+        0.20000001788139343,
+        0.20000001788139343
+      ],
+      "coldStepMs": [
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896
+      ],
+      "snapshotBuildAndPostMs": [
+        5.0999999940395355,
+        5.399999976158142,
+        5.5
+      ],
+      "snapshotArrivalMs": [
+        6.39990234375,
+        6.400146484375,
+        7.000244140625
+      ],
+      "decodeMs": [
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896
+      ],
+      "frameMs": [
+        100,
+        100,
+        100
+      ],
+      "overviewFrameMs": [
+        100,
+        100,
+        100
+      ],
+      "nearFrameMs": [
+        83.40000000000146,
+        100,
+        100
+      ],
+      "entryDelayMs": [
+        3.9000000059604645,
+        3.9000000059604645,
+        4
+      ],
+      "backlogTicks": [
+        0,
+        0,
+        0
+      ],
+      "stepMax": 10.5,
+      "deadlineMisses": 0,
+      "entryMax": 6.800000011920929,
+      "eventMax": 10.5,
+      "saveRestoreRange": [
+        9.699999988079071,
+        10.5
+      ],
+      "walkingRange": [
+        1293,
+        1633
+      ],
+      "rssObservedMax": 1177169920
+    },
+    "packed-clone": {
+      "stepMs": [
+        0.20000001788139343,
+        0.20000001788139343,
+        0.20000001788139343
+      ],
+      "coldStepMs": [
+        0.30000001192092896,
+        0.30000001192092896,
+        0.3999999761581421
+      ],
+      "snapshotBuildAndPostMs": [
+        0.30000001192092896,
+        0.3999999761581421,
+        0.3999999761581421
+      ],
+      "snapshotArrivalMs": [
+        0.89990234375,
+        1.099853515625,
+        1.099853515625
+      ],
+      "decodeMs": [
+        0.09999999403953552,
+        0.09999999403953552,
+        0.10000002384185791
+      ],
+      "frameMs": [
+        99.90000000000146,
+        100,
+        100
+      ],
+      "overviewFrameMs": [
+        100,
+        100,
+        100.10000000000036
+      ],
+      "nearFrameMs": [
+        83.39999999999782,
+        99.90000000000146,
+        100
+      ],
+      "entryDelayMs": [
+        3.899999976158142,
+        3.9000000059604645,
+        3.9000000059604645
+      ],
+      "backlogTicks": [
+        0,
+        0,
+        0
+      ],
+      "stepMax": 12,
+      "deadlineMisses": 0,
+      "entryMax": 15.799999982118607,
+      "eventMax": 12,
+      "saveRestoreRange": [
+        9.599999994039536,
+        12
+      ],
+      "walkingRange": [
+        1293,
+        1633
+      ],
+      "rssObservedMax": 1056071680
+    },
+    "packed-transfer": {
+      "stepMs": [
+        0.20000001788139343,
+        0.20000001788139343,
+        0.20000001788139343
+      ],
+      "coldStepMs": [
+        0.29999998211860657,
+        0.3999999761581421,
+        0.4000000059604645
+      ],
+      "snapshotBuildAndPostMs": [
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896
+      ],
+      "snapshotArrivalMs": [
+        0.599853515625,
+        0.69970703125,
+        0.89990234375
+      ],
+      "decodeMs": [
+        0.19999998807907104,
+        0.20000001788139343,
+        0.20000001788139343
+      ],
+      "frameMs": [
+        100,
+        100,
+        100
+      ],
+      "overviewFrameMs": [
+        100,
+        100,
+        116.69999999999891
+      ],
+      "nearFrameMs": [
+        83.40000000000146,
+        83.40000000000146,
+        100
+      ],
+      "entryDelayMs": [
+        3.7999999821186066,
+        3.899999976158142,
+        3.9000000059604645
+      ],
+      "backlogTicks": [
+        0,
+        0,
+        0
+      ],
+      "stepMax": 16.69999998807907,
+      "deadlineMisses": 0,
+      "entryMax": 7.199999988079071,
+      "eventMax": 16.69999998807907,
+      "saveRestoreRange": [
+        9.800000011920929,
+        16.69999998807907
+      ],
+      "walkingRange": [
+        1293,
+        1633
+      ],
+      "rssObservedMax": 1038684160
+    }
+  },
+  "large": {
+    "simulation-only": {
+      "stepMs": [
+        0.5,
+        0.5999999940395355,
+        0.5999999940395355
+      ],
+      "coldStepMs": [
+        0.800000011920929,
+        0.9000000059604645,
+        1
+      ],
+      "snapshotBuildAndPostMs": null,
+      "snapshotArrivalMs": null,
+      "decodeMs": null,
+      "frameMs": null,
+      "overviewFrameMs": null,
+      "nearFrameMs": null,
+      "entryDelayMs": null,
+      "backlogTicks": null,
+      "stepMax": 20.599999994039536,
+      "deadlineMisses": null,
+      "entryMax": null,
+      "eventMax": 20.599999994039536,
+      "saveRestoreRange": [
+        17.599999994039536,
+        20.599999994039536
+      ],
+      "walkingRange": [
+        4550,
+        4822
+      ],
+      "rssObservedMax": 951558144
+    },
+    "uncached-routing": {
+      "stepMs": [
+        71.7999999821186,
+        72,
+        78.5
+      ],
+      "coldStepMs": [
+        107,
+        110.2000000178814,
+        125.09999999403954
+      ],
+      "snapshotBuildAndPostMs": null,
+      "snapshotArrivalMs": null,
+      "decodeMs": null,
+      "frameMs": null,
+      "overviewFrameMs": null,
+      "nearFrameMs": null,
+      "entryDelayMs": null,
+      "backlogTicks": null,
+      "stepMax": 156.69999998807907,
+      "deadlineMisses": null,
+      "entryMax": null,
+      "eventMax": 141.5,
+      "saveRestoreRange": [
+        17.400000005960464,
+        20.400000005960464
+      ],
+      "walkingRange": [
+        4550,
+        4822
+      ],
+      "rssObservedMax": 1032167424
+    },
+    "message-only": {
+      "stepMs": [
+        0.699999988079071,
+        0.7000000178813934,
+        0.7000000178813934
+      ],
+      "coldStepMs": [
+        0.7999999821186066,
+        0.800000011920929,
+        1
+      ],
+      "snapshotBuildAndPostMs": [
+        0.4000000059604645,
+        0.4000000059604645,
+        0.5
+      ],
+      "snapshotArrivalMs": [
+        0.60009765625,
+        0.699951171875,
+        0.7001953125
+      ],
+      "decodeMs": [
+        0.10000002384185791,
+        0.10000002384185791,
+        0.10000002384185791
+      ],
+      "frameMs": null,
+      "overviewFrameMs": null,
+      "nearFrameMs": null,
+      "entryDelayMs": [
+        3.9000000059604645,
+        3.9000000059604645,
+        3.9000000059604645
+      ],
+      "backlogTicks": [
+        0,
+        0,
+        0
+      ],
+      "stepMax": 35.400000005960464,
+      "deadlineMisses": 4,
+      "entryMax": 16.900000005960464,
+      "eventMax": 35.400000005960464,
+      "saveRestoreRange": [
+        20.599999994039536,
+        35.400000005960464
+      ],
+      "walkingRange": [
+        4550,
+        4822
+      ],
+      "rssObservedMax": 1019744256
+    },
+    "full": {
+      "stepMs": [
+        0.699999988079071,
+        0.7000000178813934,
+        0.7000000178813934
+      ],
+      "coldStepMs": [
+        0.800000011920929,
+        0.9000000059604645,
+        0.9000000059604645
+      ],
+      "snapshotBuildAndPostMs": [
+        9.099999994039536,
+        9.099999994039536,
+        9.100000023841858
+      ],
+      "snapshotArrivalMs": [
+        12.300048828125,
+        12.80029296875,
+        14.10009765625
+      ],
+      "decodeMs": [
+        0.800000011920929,
+        0.9000000059604645,
+        2.800000011920929
+      ],
+      "frameMs": [
+        233.39999999999782,
+        250,
+        250
+      ],
+      "overviewFrameMs": [
+        200,
+        266.59999999999854,
+        266.6999999999989
+      ],
+      "nearFrameMs": [
+        150,
+        233.20000000000073,
+        233.39999999999782
+      ],
+      "entryDelayMs": [
+        3.9000000059604645,
+        3.9000000059604645,
+        3.9000000059604645
+      ],
+      "backlogTicks": [
+        0,
+        0,
+        0
+      ],
+      "stepMax": 21.30000001192093,
+      "deadlineMisses": 4,
+      "entryMax": 8.700000017881393,
+      "eventMax": 21.30000001192093,
+      "saveRestoreRange": [
+        18.5,
+        21.30000001192093
+      ],
+      "walkingRange": [
+        4550,
+        4822
+      ],
+      "rssObservedMax": 1204371456
+    },
+    "packed-clone": {
+      "stepMs": [
+        0.6000000238418579,
+        0.699999988079071,
+        0.7000000178813934
+      ],
+      "coldStepMs": [
+        0.800000011920929,
+        0.9000000059604645,
+        1
+      ],
+      "snapshotBuildAndPostMs": [
+        0.5,
+        0.5,
+        0.5999999940395355
+      ],
+      "snapshotArrivalMs": [
+        0.7001953125,
+        0.899658203125,
+        1.000244140625
+      ],
+      "decodeMs": [
+        0.10000002384185791,
+        0.10000002384185791,
+        0.19999998807907104
+      ],
+      "frameMs": [
+        249.89999999999782,
+        250,
+        250
+      ],
+      "overviewFrameMs": [
+        250.10000000000036,
+        266.59999999999854,
+        266.8000000000011
+      ],
+      "nearFrameMs": [
+        150,
+        200,
+        233.29999999999927
+      ],
+      "entryDelayMs": [
+        3.7999999821186066,
+        3.9000000059604645,
+        3.9000000059604645
+      ],
+      "backlogTicks": [
+        0,
+        0,
+        0
+      ],
+      "stepMax": 22.200000017881393,
+      "deadlineMisses": 5,
+      "entryMax": 11.699999988079071,
+      "eventMax": 21.200000017881393,
+      "saveRestoreRange": [
+        18.900000005960464,
+        21.200000017881393
+      ],
+      "walkingRange": [
+        4550,
+        4822
+      ],
+      "rssObservedMax": 1075552256
+    },
+    "packed-transfer": {
+      "stepMs": [
+        0.699999988079071,
+        0.699999988079071,
+        0.7999999821186066
+      ],
+      "coldStepMs": [
+        0.7999999821186066,
+        0.7999999821186066,
+        0.800000011920929
+      ],
+      "snapshotBuildAndPostMs": [
+        0.4000000059604645,
+        0.5,
+        0.5
+      ],
+      "snapshotArrivalMs": [
+        0.699951171875,
+        0.800048828125,
+        0.800048828125
+      ],
+      "decodeMs": [
+        0.20000001788139343,
+        0.20000001788139343,
+        0.20000001788139343
+      ],
+      "frameMs": [
+        250,
+        250.09999999999854,
+        266.59999999999854
+      ],
+      "overviewFrameMs": [
+        250.10000000000036,
+        283.2999999999993,
+        300
+      ],
+      "nearFrameMs": [
+        133.40000000000146,
+        200,
+        200
+      ],
+      "entryDelayMs": [
+        3.7999999821186066,
+        3.9000000059604645,
+        3.9000000059604645
+      ],
+      "backlogTicks": [
+        0,
+        0,
+        0
+      ],
+      "stepMax": 19.19999998807907,
+      "deadlineMisses": 2,
+      "entryMax": 7.9000000059604645,
+      "eventMax": 19.19999998807907,
+      "saveRestoreRange": [
+        18.799999982118607,
+        19.19999998807907
+      ],
+      "walkingRange": [
+        4550,
+        4822
+      ],
+      "rssObservedMax": 1058861056
+    }
+  }
+}

@@ -155,3 +155,8 @@ That hardware qualification remains outstanding, as do complete game rules,
 production rendering, maximum-density map cases and long-duration memory tests.
 The issue remains open until Patrick discusses the evidence and decides the
 next qualification/development gate.
+
+The completed [result report](REPORT.md), [review disposition](REVIEW.md) and
+[36 per-run records](results/results.json) are retained on this branch. The
+[acceptance proposal](ACCEPTANCE-PROPOSAL.md) is prepared for the next human
+contract discussion and is not yet accepted.
