@@ -26,8 +26,8 @@ const icon = (name:string) => `<svg viewBox="0 0 24 24" fill="none" stroke="curr
 const escape = (text:string) => text.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]!));
 const money = (value:number) => '£'+Math.round(value).toLocaleString('en-GB');
 const variants = [{key:'studio',name:'Park studio'}, {key:'classic',name:'Classic command desk'}, {key:'immersive',name:'Immersive builder'}];
-let variant = new URLSearchParams(location.search).get('variant') || 'studio';
-if (!variants.some(v=>v.key===variant)) variant='studio';
+let variant = new URLSearchParams(location.search).get('variant') || 'classic';
+if (!variants.some(v=>v.key===variant)) variant='classic';
 let park:Park|undefined, mode='overview', selected:PieceKind='straight', queue=false, terrainDelta=.25, night=false, guestIndex=14;
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div class="park-app" data-variant="${variant}">

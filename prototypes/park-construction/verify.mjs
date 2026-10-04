@@ -12,7 +12,7 @@ const snapshot=()=>page.evaluate(()=>window.__prototype.snapshot());
 const check=async(name,fn)=>{await fn();checks.push(name);};
 const waitChange=(old,field)=>page.waitForFunction(({old,field})=>window.__prototype.snapshot()?.[field]!==old,{old,field});
 try {
-  await page.goto(base,{waitUntil:'networkidle'});
+  await page.goto(`${base}?variant=studio`,{waitUntil:'networkidle'});
   await page.waitForFunction(()=>window.__prototype?.snapshot()?.pieces.length===23);
   await page.waitForTimeout(1500);
   await page.screenshot({path:`${out}/studio-overview.png`});

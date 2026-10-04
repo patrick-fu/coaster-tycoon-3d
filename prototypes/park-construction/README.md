@@ -20,6 +20,12 @@ The bottom layout explorer and left/right arrow keys cycle the layouts; the
 URL preserves the selection. This build is exclusively a prototype, so the
 explorer remains visible in its preview. It must not be promoted to production.
 
+Patrick selected **Classic** on 2026-10-05. It is now the default layout,
+including the fallback for an unknown variant. Explicit Studio and Immersive
+URLs remain available as comparison references. This selects the layout
+direction; it does not certify original-rule fidelity or every construction
+interaction.
+
 ## Remote execution only
 
 **Do not run these commands on Patrick's Mac.** Use the designated Linux build
