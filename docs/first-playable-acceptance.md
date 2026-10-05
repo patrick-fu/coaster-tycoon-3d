@@ -1,11 +1,12 @@
-# First playable acceptance proposal
+# First playable acceptance contract
 
 Prepared on 2026-10-05 for
 [Agree on the first playable acceptance criteria and development handoff](https://github.com/patrick-fu/coaster-tycoon-3d/issues/9).
-**Draft for Patrick's decision. Not an accepted contract or a production pass.**
+**Accepted by Patrick on 2026-10-05. This is an acceptance contract, not a production pass.**
 Patrick chose on 2026-10-05 to proceed, retaining representative integrated-GPU
 qualification as a mandatory first-playable gate. The performance decision is
-settled; the integrated acceptance contract remains proposed.
+settled. Patrick confirmed the integrated acceptance contract and development
+sequence with "ok" after the agent presented the final planning decision.
 
 ## Existing decisions
 
@@ -79,7 +80,7 @@ These reports have explicit unverified areas; this proposal does not close them.
 | S4 Stability | A longer session covering recurring finance/staff work and repeated topology edits has no sustained backlog, corrupt membership or unbounded resource growth. | Proposed 30-minute production soak; short experiment does not qualify this. |
 | L1 Provenance | Own code/resources or explicit compatible dependency/asset rights, notices included, no original assets or GPL core dependency. | Manifest and distribution inspection. |
 
-## Proposed development sequence
+## Development sequence
 
 1. A deterministic authoritative world/command/save kernel with independent
    track connectors, topology and atomic integer-cost mutations.
@@ -96,7 +97,7 @@ These are agent-owned implementation steps; Patrick need not decompose them.
 This proposal introduces no permission to promote disposable code into main,
 lower scale targets, claim exact original parity, or skip the hardware gate.
 
-## Remaining decision and release gates
+## Release gates
 
 Patrick chose on 2026-10-05 to continue development preparation while deferring
 representative integrated-GPU testing to mandatory first-playable acceptance.
@@ -105,9 +106,10 @@ The completed remote synthetic experiment is evidence about CPU/message work,
 not a full-game or hardware pass. Its source and results are retained on the
 [experiment branch](https://github.com/patrick-fu/coaster-tycoon-3d/tree/p/patrick/experiment/park-scale/prototypes/park-scale).
 
-The final planning decision is Patrick's confirmation that these observable
-cases and agent-owned development sequence define the first playable contract.
-Do not close the integrated acceptance ticket from this draft alone.
+Patrick confirmed that these observable cases and agent-owned development
+sequence define the first playable contract. Planning is complete; implementation
+and all actual acceptance evidence remain to be delivered. Closing the planning
+map does not certify the game or any unexecuted acceptance case.
 
 Exact original formulas and timings still require named original evidence.
 Production implementation can expose independently implemented behavior for

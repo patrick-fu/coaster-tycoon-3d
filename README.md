@@ -7,7 +7,10 @@ unaffiliated with RollerCoaster Tycoon 2 and OpenRCT2.
 Project code is licensed under [MIT](LICENSE). The implementation and required
 game resources are independent; see the [source strategy decision](docs/adr/0001-independent-mit-implementation.md).
 
-The project is currently in Wayfinder planning. The destination is to establish the design, technical approach, and acceptance criteria for a first playable version, ready for development.
+Planning is complete and the first playable implementation is starting.
+Patrick accepted the scope, independent architecture, Classic controls and
+[acceptance contract](docs/first-playable-acceptance.md). The game is not yet
+playable or accepted; prototype evidence is kept separate from production checks.
 
 The first playable scope is a money-enabled sandbox integrating custom coaster
 construction, individual guest simulation and park management at original-game
@@ -23,7 +26,7 @@ experiments and live feedback. Patrick chose to proceed on 2026-10-05 while
 keeping real integrated-GPU qualification as a mandatory first-playable gate.
 The remote synthetic experiment informs implementation; it does not lower the
 original-scale or frame-rate goals. The concrete
-[acceptance proposal](docs/first-playable-acceptance.md) is prepared for the final
-planning decision.
+[acceptance contract](docs/first-playable-acceptance.md) defines the production
+checks and human review required before completion.
 
 Follow the planning map: [Define the first playable version of a faithful 3D RCT2 browser game](https://github.com/patrick-fu/coaster-tycoon-3d/issues/1). Its sub-issues and dependencies show the current decision frontier.
