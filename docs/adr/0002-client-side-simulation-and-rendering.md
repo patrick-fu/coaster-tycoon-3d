@@ -17,3 +17,13 @@ unmeasured. Validate simulation-only and combined workloads remotely before
 acceptance; consider moving bounded, independently authored computation to Wasm
 only when profiling identifies a material bottleneck. This decision selects an
 architecture, not a claim of determinism, fidelity or achieved performance.
+
+On 2026-10-05 Patrick chose to continue after reviewing the bounded
+[remote CPU/software-renderer experiment](https://github.com/patrick-fu/coaster-tycoon-3d/blob/a582a33/prototypes/park-scale/REPORT.md).
+Representative real integrated-GPU testing is deferred to a mandatory
+first-playable acceptance gate, rather than blocking development preparation.
+The original-scale goals, 16 GB desktop, 1080p 60 FPS aim / 30 FPS floor and
+normal simulation cadence remain unchanged. The experiment does not qualify
+complete game capacity, exact original rules or hardware frame rate. Begin
+presentation with bounded projected messages; add transfer ownership or Wasm
+only when production profiling demonstrates a worthwhile benefit.

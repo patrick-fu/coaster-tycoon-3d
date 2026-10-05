@@ -19,6 +19,11 @@ with precise endpoint construction and contextual inspection. The disposable
 [construction prototype](https://github.com/patrick-fu/coaster-tycoon-3d/tree/p/patrick/prototype/park-construction/prototypes/park-construction)
 is retained outside main. Layout selection does not certify every interaction
 or gameplay parity; measured capacity and final acceptance still require
-experiments and live feedback.
+experiments and live feedback. Patrick chose to proceed on 2026-10-05 while
+keeping real integrated-GPU qualification as a mandatory first-playable gate.
+The remote synthetic experiment informs implementation; it does not lower the
+original-scale or frame-rate goals. The concrete
+[acceptance proposal](docs/first-playable-acceptance.md) is prepared for the final
+planning decision.
 
 Follow the planning map: [Define the first playable version of a faithful 3D RCT2 browser game](https://github.com/patrick-fu/coaster-tycoon-3d/issues/1). Its sub-issues and dependencies show the current decision frontier.
