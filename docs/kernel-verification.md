@@ -20,7 +20,10 @@ with the same saved revision, premature refunds attributed to active purchases,
 and loss of correlation IDs on malformed execution requests. All three were
 first reproduced by failing remote regressions, then fixed and included in the
 21-test green run. Sol's focused source verification closed its counterexamples.
-Grok review is pending; this milestone is not yet ready for mainline integration.
+Grok completed its source review with no additional verified findings. Its Git
+metadata command was rejected in read-only mode; the main agent independently
+verified the base, clean final working tree and full committed diff. No conclusion
+depends on that rejected command. Both reviews were file-only, not test runs.
 
 The engine preserves persisted deterministic state while issuing opaque quote
 tokens scoped to each engine instance and successful load. Imported net
