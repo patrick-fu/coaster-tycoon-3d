@@ -21,7 +21,8 @@ Rendering and the message host call the same small interface:
   identifiers and RNG unchanged. The receipt does not expose mutable state.
 - `advance(ticks)` advances logical time in bounded batches, suppressing updates
   while paused. Candidate train and individual guest updates run on these ticks with atomic
-  boarding payments. Staff/services and original qualification remain outstanding.
+  boarding payments. Facility services, mechanics and recurring charges also run here; cleanliness
+  and original qualification remain outstanding.
 - `route(from, to, queueRide)` queries flat path reachability. Foreign queues
   cannot form public shortcuts; removing/replacing paths updates the index and
   topology revision. This is topology support, not original guest path-choice AI.
@@ -45,8 +46,9 @@ Usable tiles exclude the one-tile boundary. Technical side bounds 15–256,
 255 shared instance slots and the reconstructed 196,096 construction-record
 threshold are implemented from [original-oriented scale evidence](research/original-rct2-scale.md).
 These are reference-oriented limits, not a saturation pass for a running
-original executable. Stable car and guest IDs count against the 10,000 shared entity budget; staff
-allocation and the complete registry boundary remain to be integrated.
+original executable. Stable car and guest IDs count against the 10,000 shared entity budget; staff also
+consume that registry and the additional 200-staff cap. Litter/effects are
+not yet integrated.
 
 Track uses discrete position/heading/pitch/bank connectors and per-tile vertical
 intervals/quarter-tile occupancy. An appended piece must match input attitude;
@@ -86,11 +88,11 @@ not every original loan, wage, upkeep, pricing or profit formula.
 
 ## Save validation
 
-Version 3 stores clock/pause/RNG, command/topology revisions, profile identity,
+Version 4 stores clock/pause/RNG, command/topology revisions, profile identity,
 funds/loan/ledger aggregates, surface ownership/heights/water, ride anchors and
 ordered track membership, path/queue associations, portals, stable element/car
 IDs, train motion/measurements, individual guest navigation, queue/seat membership
-and reconciled guest payments. Versions 1 and 2 were earlier milestones; no
+and reconciled guest payments. Versions 1–3 were earlier milestones; no
 migration is provided for those development formats.
 Derived clearance and path indexes are rebuilt, not trusted from the save.
 
