@@ -77,3 +77,9 @@ or evacuation permission for that queue. Merely standing on a queue no longer
 satisfies import semantics. The second model's accepted-save mutation reproduced
 before the new guard; explicit evacuation remains loadable and continues.
 The backend passed 94 remote checks after this final boundary regression.
+
+Evacuation goals are constrained to the current public park entry; a corrupt
+queue-internal goal cannot complete and erase its own permission. Removing the
+park entry keeps affected guests explicitly stranded until a valid entry is
+restored. Both boundaries are covered by remote regressions. Final backend:
+96 checks passed in 14.26 seconds on the designated Linux host.

@@ -39,7 +39,7 @@ function releaseQueue(guest:Guest,index:PeopleIndex){
 function recover(guest:Guest,state:State,index:ServiceIndex,route:Routing,thought:Guest['thought']){
   const previous=guest.queueRide??guest.destination??guest.navigationRide??index.paths.get(key(guest.point))?.queueFor??null;releaseQueue(guest,index);releaseAmenity(guest,index);guest.facility=null;guest.serviceProgress=0;guest.destination=null;guest.entrance=null;guest.exit=null;guest.thought=thought;
   const path=index.paths.get(key(guest.point));guest.phase=path?'walking':'stranded';
-  clearNavigation(guest);guest.navigationRide=previous;if(path&&state.people.entry){const distance=route.distance(guest.point,state.people.entry,previous);if(distance===null)guest.phase='stranded';else navigate(guest,state.people.entry);}
+  clearNavigation(guest);guest.navigationRide=previous;if(previous!==null&&!state.people.entry)guest.phase='stranded';if(path&&state.people.entry){const distance=route.distance(guest.point,state.people.entry,previous);if(distance===null)guest.phase='stranded';else navigate(guest,state.people.entry);}
 }
 
 function access(ride:Ride,state:State,index:PeopleIndex,rules:Rules,route:Routing){
@@ -69,7 +69,7 @@ export function recoverPeople(state:State,rules:Rules,index:ServiceIndex,route:R
   if(state.people.open&&(!state.people.entry||index.paths.get(key(state.people.entry))?.queueFor!==null))state.people.open=false;
   for(const guest of state.people.guests){
     if(guest.phase==='riding')continue;
-    if(guest.navigationRide!==null&&state.people.entry&&(guest.goal===null||!equal(guest.goal,state.people.entry))){recover(guest,state,index,route,guest.thought);continue;}
+    if(guest.navigationRide!==null&&(!state.people.entry||guest.goal===null||!equal(guest.goal,state.people.entry))){recover(guest,state,index,route,guest.thought);continue;}
     if(!amenityAvailable(guest,rules,index)){recover(guest,state,index,route,'path-lost');continue;}
     if(!recoverFacility(guest,index)){recover(guest,state,index,route,'price-changed');continue;}
     const ride=guest.destination===null?undefined:index.rides.get(guest.destination);
