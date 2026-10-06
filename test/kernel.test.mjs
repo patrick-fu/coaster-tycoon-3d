@@ -92,3 +92,7 @@ test('rejected loads preserve pending quotes while new engine instances cannot r
  assert.equal(b.execute(command,q.value.revision).error.code,'STALE_REVISION');
  assert.equal(a.restoreSave('{').ok,false);assert(a.execute(command,q.value.revision).ok);assert.equal(a.snapshot().cash,9988);
 });
+
+test('command accessors are rejected before they can execute user code',()=>{
+ const e=create(),before=e.exportSave();let invoked=false;const c={amount:100};Object.defineProperty(c,'type',{enumerable:true,get(){invoked=true;throw new Error('Accessor ran.');}});assert.equal(e.quote(c).error.code,'INVALID_COMMAND');assert.equal(invoked,false);assert.equal(e.exportSave(),before);
+});

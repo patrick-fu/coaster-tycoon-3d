@@ -1,8 +1,9 @@
 # Authoritative simulation kernel
 
 First production foundation under the [accepted contract](first-playable-acceptance.md).
-This milestone implements commands, construction topology, integer accounting
-and versioned state continuation. It is not a playable park, a complete guest or
+The initial milestone implements commands, construction topology, integer
+accounting and versioned state continuation. The [operating extension](operating-simulation.md)
+adds station access and candidate train motion. It is not a playable park, a complete guest or
 vehicle simulation, or original RCT2 conformance.
 
 ## Interface and ownership
@@ -19,7 +20,8 @@ Rendering and the message host call the same small interface:
   committing it. Stale revisions and invalid commands leave world, finance,
   identifiers and RNG unchanged. The receipt does not expose mutable state.
 - `advance(ticks)` advances logical time in bounded batches, suppressing updates
-  while paused. No physics/guest/economy update is claimed in this first kernel.
+  while paused. Candidate train updates now run on these ticks; guest/economy
+  integration and original physics qualification are still outstanding.
 - `route(from, to, queueRide)` queries flat path reachability. Foreign queues
   cannot form public shortcuts; removing/replacing paths updates the index and
   topology revision. This is topology support, not original guest path-choice AI.
@@ -43,14 +45,16 @@ Usable tiles exclude the one-tile boundary. Technical side bounds 15–256,
 255 shared instance slots and the reconstructed 196,096 construction-record
 threshold are implemented from [original-oriented scale evidence](research/original-rct2-scale.md).
 These are reference-oriented limits, not a saturation pass for a running
-original executable. The guest/staff/car shared registry is not implemented yet.
+original executable. Stable car IDs now count against the 10,000 shared entity budget; guest/staff
+allocation and the complete registry boundary remain to be integrated.
 
 Track uses discrete position/heading/pitch/bank connectors and per-tile vertical
 intervals/quarter-tile occupancy. An appended piece must match input attitude;
 footprints must stay on owned usable land, above terrain/water, inside the profile
 height/support limits and outside existing clearance. Cells are charged against
 the element budget separately from piece count. Circuit closure is distinct
-from ride operating eligibility, which needs portals, testing and vehicles later.
+from ride operating eligibility and guest access; the operating extension adds
+portal, configured-train and reachability checks.
 
 Project heading codes are 0 east, 1 south, 2 west, 3 north. They are **not**
 original game direction IDs. XY connector units use 32 per tile; Z positions
@@ -81,9 +85,10 @@ not every original loan, wage, upkeep, pricing or profit formula.
 
 ## Save validation
 
-Version 1 stores clock/pause/RNG, command/topology revisions, profile identity,
+Version 2 stores clock/pause/RNG, command/topology revisions, profile identity,
 funds/loan/ledger aggregates, surface ownership/heights/water, ride anchors and
-ordered track membership, path/queue associations and stable element IDs.
+ordered track membership, path/queue associations, portals, stable element/car
+IDs and train motion/measurements. The initial kernel was version 1.
 Derived clearance and path indexes are rebuilt, not trusted from the save.
 
 Import checks exact record shapes, numeric/range/array bounds, usable ownership,
