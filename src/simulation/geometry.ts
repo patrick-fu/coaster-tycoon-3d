@@ -1,9 +1,12 @@
+import {validateHousekeepingRules} from './housekeeping.js';
+import {validateServiceRules} from './services.js';
+import type {GuestRules} from './people.js';
 import type {MotionRules} from './motion.js';
 import type {Cell,Connector,PieceRule,Rules} from './types.js';
 import {ensure,integer,record} from './validation.js';
 export function validateRules(input:Rules):Rules{
-  record(input,['motion','id','evidence','pathPrice','portalPrice','terrainPrice','refundPerThousand','maxSupport','maxHeight','pieces']);
-  const motion=validateMotionRules(input.motion);
+  record(input,['housekeeping','services','guests','motion','id','evidence','pathPrice','portalPrice','terrainPrice','refundPerThousand','maxSupport','maxHeight','pieces']);
+  const housekeeping=validateHousekeepingRules(input.housekeeping),services=validateServiceRules(input.services),motion=validateMotionRules(input.motion),guests=validateGuestRules(input.guests);
   ensure(typeof input.id==='string'&&input.id.length>0&&input.id.length<=80&&['project-candidate','reference-verified'].includes(input.evidence),'INVALID_COMMAND','Invalid rule identity.');
   for(const v of [input.pathPrice,input.portalPrice,input.terrainPrice,input.maxSupport,input.maxHeight])ensure(integer(v,0,1000000),'INVALID_COMMAND','Invalid rule value.');
   ensure(integer(input.refundPerThousand,0,1000)&&input.maxHeight>=16&&input.maxHeight%8===0,'INVALID_COMMAND','Invalid refund or height rule.');
@@ -26,7 +29,7 @@ export function validateRules(input:Rules):Rules{
     for(const c of p.cells){record(c,['x','y','low','high','mask']);ensure(integer(c.x,-1024,1024)&&c.x%32===0&&integer(c.y,-1024,1024)&&c.y%32===0&&integer(c.low,-1024,1024)&&integer(c.high,-1024,2048)&&c.low%8===0&&c.high%8===0&&c.high>c.low&&integer(c.mask,1,15),'INVALID_COMMAND','Invalid clearance cell.');const k=`${c.x},${c.y}`;ensure(!occupied.has(k),'INVALID_COMMAND','Duplicate footprint cell.');occupied.add(k);}
   }
   ensure(stations>0,'INVALID_COMMAND','A station definition is required.');
-  return{motion,id:input.id,evidence:input.evidence,pathPrice:input.pathPrice,portalPrice:input.portalPrice,terrainPrice:input.terrainPrice,refundPerThousand:input.refundPerThousand,maxSupport:input.maxSupport,maxHeight:input.maxHeight,pieces:Object.fromEntries(keys.sort().map(k=>{const p=input.pieces[k]!;return[k,{price:p.price,station:p.station,motion:{samples:p.motion.samples.map(q=>({x:q.x,y:q.y,z:q.z})),chain:p.motion.chain,brake:p.motion.brake},end:{x:p.end.x,y:p.end.y,z:p.end.z,turn:p.end.turn,pitch:p.end.pitch,bank:p.end.bank},entry:{pitch:p.entry.pitch,bank:p.entry.bank},cells:p.cells.map(c=>({x:c.x,y:c.y,low:c.low,high:c.high,mask:c.mask}))}];}))};
+  return{housekeeping,services,guests,motion,id:input.id,evidence:input.evidence,pathPrice:input.pathPrice,portalPrice:input.portalPrice,terrainPrice:input.terrainPrice,refundPerThousand:input.refundPerThousand,maxSupport:input.maxSupport,maxHeight:input.maxHeight,pieces:Object.fromEntries(keys.sort().map(k=>{const p=input.pieces[k]!;return[k,{price:p.price,station:p.station,motion:{samples:p.motion.samples.map(q=>({x:q.x,y:q.y,z:q.z})),chain:p.motion.chain,brake:p.motion.brake},end:{x:p.end.x,y:p.end.y,z:p.end.z,turn:p.end.turn,pitch:p.end.pitch,bank:p.end.bank},entry:{pitch:p.entry.pitch,bank:p.entry.bank},cells:p.cells.map(c=>({x:c.x,y:c.y,low:c.low,high:c.high,mask:c.mask}))}];}))};
 }
 export function turn(x:number,y:number,d:number){const vectors=[[1,0],[0,1],[-1,0],[0,-1]] as const;const [dx,dy]=vectors[d]!;return{x:x*dx-y*dy,y:x*dy+y*dx};}
 export function endpoint(a:Connector,p:PieceRule):Connector{const b=turn(p.end.x,p.end.y,a.direction);return{x:a.x+b.x,y:a.y+b.y,z:a.z+p.end.z,direction:((a.direction+p.end.turn+4)%4) as Connector['direction'],pitch:p.end.pitch,bank:p.end.bank};}
@@ -39,4 +42,14 @@ export function validateMotionRules(input:MotionRules):MotionRules{
   for(const key of ['tickHz','tileMetres','gravity','stationSpeed','chainSpeed','brakeDeceleration','carLength','seatsPerCar','maxCars','waitTicks','unloadTicks'] as const)ensure(integer(input[key],1,100000),'INVALID_COMMAND','Invalid train rule.');
   ensure(input.tickHz<=1000&&input.tileMetres<=100&&input.maxCars<=32&&input.seatsPerCar<=32&&integer(input.rolling,0,1000)&&integer(input.drag,0,1000000)&&integer(input.bankDegrees,0,90),'INVALID_COMMAND','Invalid motion bounds.');
   return Object.fromEntries(keys.map(key=>[key,input[key]])) as MotionRules;
+}
+
+function validateGuestRules(input:GuestRules):GuestRules{
+  const keys=['spawnTicks','walkTicks','decisionTicks','needTicks','queueSlotsPerTile','patienceTicks','rideCooldownTicks','defaultRidePrice','maxRidePrice','cashMin','cashMax','fareMin','fareMax','forceMin','forceMax','initialHunger','initialThirst','initialHappiness','initialEnergy','needGrowth','rideHappiness','rideNausea'] as const;
+  record(input,[...keys]);
+  for(const key of keys)ensure(integer(input[key],0,1000000),'INVALID_COMMAND','Invalid guest rule.');
+  for(const key of ['spawnTicks','walkTicks','decisionTicks','needTicks','queueSlotsPerTile','patienceTicks','rideCooldownTicks'] as const)ensure(input[key]>0,'INVALID_COMMAND','Invalid guest cadence or capacity.');
+  ensure(input.cashMin<=input.cashMax&&input.fareMin<=input.fareMax&&input.forceMin<=input.forceMax&&input.defaultRidePrice<=input.maxRidePrice&&input.fareMax<=input.maxRidePrice&&input.queueSlotsPerTile<=64,'INVALID_COMMAND','Invalid guest profile range.');
+  for(const key of ['initialHunger','initialThirst','initialHappiness','initialEnergy','needGrowth','rideHappiness','rideNausea'] as const)ensure(input[key]<=1000,'INVALID_COMMAND','Invalid guest need range.');
+  return Object.fromEntries(keys.map(key=>[key,input[key]])) as GuestRules;
 }

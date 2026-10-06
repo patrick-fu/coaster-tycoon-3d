@@ -20,8 +20,9 @@ Rendering and the message host call the same small interface:
   committing it. Stale revisions and invalid commands leave world, finance,
   identifiers and RNG unchanged. The receipt does not expose mutable state.
 - `advance(ticks)` advances logical time in bounded batches, suppressing updates
-  while paused. Candidate train updates now run on these ticks; guest/economy
-  integration and original physics qualification are still outstanding.
+  while paused. Candidate train and individual guest updates run on these ticks with atomic
+  boarding payments. Facility services, mechanics and recurring charges also run here; resting, waste and cleanup are integrated. Original qualification remains
+  outstanding.
 - `route(from, to, queueRide)` queries flat path reachability. Foreign queues
   cannot form public shortcuts; removing/replacing paths updates the index and
   topology revision. This is topology support, not original guest path-choice AI.
@@ -45,8 +46,8 @@ Usable tiles exclude the one-tile boundary. Technical side bounds 15–256,
 255 shared instance slots and the reconstructed 196,096 construction-record
 threshold are implemented from [original-oriented scale evidence](research/original-rct2-scale.md).
 These are reference-oriented limits, not a saturation pass for a running
-original executable. Stable car IDs now count against the 10,000 shared entity budget; guest/staff
-allocation and the complete registry boundary remain to be integrated.
+original executable. Stable car and guest IDs count against the 10,000 shared entity budget; staff also
+consume that registry and the additional 200-staff cap. Litter also counts; effects and outside-park guests are not yet integrated.
 
 Track uses discrete position/heading/pitch/bank connectors and per-tile vertical
 intervals/quarter-tile occupancy. An appended piece must match input attitude;
@@ -79,22 +80,25 @@ fixed crowd and visual ride motion were not copied into this kernel.
 See the [fidelity gap register](fidelity-gaps.md) before selecting production rules.
 
 Cash, loans, costs and ledger aggregates use integer tenths with safe-integer
-checks. Loan transfers affect cash/principal without becoming construction
+checks. Cash may be negative; mandatory operating charges must not be suppressed
+by construction affordability rules. Loan transfers affect cash/principal without becoming construction
 expense. This implements the [accounting distinction](research/park-economy-model.md),
 not every original loan, wage, upkeep, pricing or profit formula.
 
 ## Save validation
 
-Version 2 stores clock/pause/RNG, command/topology revisions, profile identity,
+Version 6 stores clock/pause/RNG, command/topology revisions, profile identity,
 funds/loan/ledger aggregates, surface ownership/heights/water, ride anchors and
 ordered track membership, path/queue associations, portals, stable element/car
-IDs and train motion/measurements. The initial kernel was version 1.
+IDs, train motion/measurements, individual guest navigation, queue/seat membership
+and reconciled guest payments. Versions 1–5 were earlier milestones; no
+migration is provided for those development formats.
 Derived clearance and path indexes are rebuilt, not trusted from the save.
 
 Import checks exact record shapes, numeric/range/array bounds, usable ownership,
 money reconciliation and net expenditure covering active construction, catalogue references, identifiers, ride membership/order,
 connector attitude, clearances/supports and cumulative resource capacity.
-The fixed backing map and 32 MiB input-string ceiling bound the import workload.
+The fixed backing map and 64 MiB input-string ceiling bound the import workload.
 Malformed, semantically inconsistent or wrong-profile input leaves the live
 park untouched. This is a local state-validation contract, not tamper-proof
 online accounting or original `.sv6` compatibility.
