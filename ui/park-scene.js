@@ -20,7 +20,7 @@ export class ParkScene{
  mat(color){if(!this.materials.has(color))this.materials.set(color,new THREE.MeshStandardMaterial({color,roughness:.83}));return this.materials.get(color);}
  block(parent,color,x,y,z,sx,sy,sz,kind='box'){const geo=kind==='cylinder'?this.cylinder:kind==='sphere'?this.sphere:kind==='cone'?this.cone:this.box,m=new THREE.Mesh(geo,this.mat(color));m.position.set(x,y,z);m.scale.set(sx,sy,sz);m.castShadow=true;m.receiveShadow=true;parent.add(m);return m;}
  resize(){const {clientWidth:w,clientHeight:h}=this.container;if(!w||!h)return;this.camera.aspect=w/h;this.camera.updateProjectionMatrix();this.renderer.setSize(w,h,false);}
- clearStatic(){this.staticGroup.clear();for(const geometry of this.staticGeometry)geometry.dispose();this.staticGeometry.clear();}
+ clearStatic(){this.staticGroup.traverse(object=>{if(object.isInstancedMesh)object.dispose();});this.staticGroup.clear();for(const geometry of this.staticGeometry)geometry.dispose();this.staticGeometry.clear();}
  setStatic(scenery,entry){
   this.clearStatic();this.elements=scenery.elements;
   const ground=new THREE.InstancedMesh(this.box,this.mat('#a8bc73'),scenery.surfaces.length/5);ground.receiveShadow=true;for(let i=0;i<scenery.surfaces.length;i+=5){const [x,y,height,water,owned]=scenery.surfaces.slice(i,i+5),h=height/32*tile;this.transform.position.set(x*tile+half,h/2,y*tile+half);this.transform.scale.set(tile,h,tile);this.transform.rotation.set(0,0,0);this.transform.updateMatrix();ground.setMatrixAt(i/5,this.transform.matrix);ground.setColorAt(i/5,new THREE.Color(owned?(x+y)%3===0?'#a8bc73':'#9eb16a':'#7d9a74'));if(water)this.block(this.staticGroup,'#78b6bc',x*tile+half,water/32*tile+.025,y*tile+half,tile,.04,tile);}

@@ -34,18 +34,19 @@ server is a static-file service without a game backend.
 
 ## Executed verification
 
-Grok Bot Linux compiled and passed 96 source tests, including candidate starter
+Grok Bot Linux compiled and passed 99 source tests, including candidate starter
 operation, bounded projection/copy isolation and fixed-clock debt/pause/speed.
-Headless Chrome 154 using SwiftShader passed 13 actual Classic browser scenarios:
+Headless Chrome 154 using SwiftShader passed 17 actual Classic browser scenarios:
 rendering, pause, speed, pointer path placement/payment, duplicate-placement
 rejection, new coaster/track/removal refund, loans, facility price/opening, real
 staff picking, patrol painting, IndexedDB save/file import, malformed file
-recovery and worker guest arrivals. No page exceptions were recorded.
+recovery, obsolete instance disposal, retained forced static refresh, overlapping
+employee list selection, actual IndexedDB page reload and worker guest arrivals. No page exceptions were recorded.
 
 The first test harness used accelerated virtual time and could expire a main
-thread timeout before asynchronous worker messages arrived. The corrected
-remote test server provides real network timing barriers; the game clock and
-production worker code are unchanged by that harness correction. The headless
+thread timeout before asynchronous worker messages arrived. The retained check harness controls the existing remote Chrome through CDP and
+uses real wall time; it creates a tab, without a separate browser profile. The
+game clock and production worker code are unchanged by that harness correction. The headless
 harness explicitly renders before projection-based pointer actions. Test-only
 check.html/browser-check.js are removed from the distribution after validation.
 
@@ -66,3 +67,16 @@ npm run build:web
 
 The web build copies pinned Three.js modules plus the complete license. All
 visible geometry is project-authored. See third-party notices and fidelity gaps.
+
+Independent GPT 6.1 Sol Max review identified obsolete ground instance buffers,
+a dropped forced refresh during automatic local restoration, and overlapping
+initial employees without individual selection. The old-instance check failed
+before repair. Static rebuilding now dispatches instance disposal while shared
+geometry/material remain reusable; requested static refreshes survive in-flight
+views with an epoch guard; automatic restore invalidates scenery; and the staff
+list exposes every employee independent of overlap. Browser regressions cover
+all three seams.
+
+A synthetic 34-tile queue stress at 400/1,600 queued guests measured p95
+1.50/5.34 ms per tick on the same CPU. That profile stretches movement/dispatch
+to hold the queue and does not qualify original timings or organic crowd state.
