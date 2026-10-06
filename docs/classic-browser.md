@@ -80,3 +80,9 @@ all three seams.
 A synthetic 34-tile queue stress at 400/1,600 queued guests measured p95
 1.50/5.34 ms per tick on the same CPU. That profile stretches movement/dispatch
 to hold the queue and does not qualify original timings or organic crowd state.
+
+Startup waits for IndexedDB recovery before enabling player controls or regular
+projection polling. This prevents a late automatic load from overwriting a new
+park or early construction. The actual reload check recovers both the saved
+Browser Probe coaster and newly placed path in authoritative state and scenery.
+The final real-time CDP run passed all 17 browser scenarios without exceptions.
