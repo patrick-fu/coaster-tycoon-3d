@@ -12,3 +12,8 @@ Source: [Microsoft TypeScript](https://github.com/microsoft/TypeScript).
 
 Add separate dependency and resource permissions here before including further
 third-party code or assets in a distribution.
+
+The browser presentation uses Three.js 0.186.1 (MIT), including its OrbitControls
+addon. The locked registry package supplies the runtime modules; web builds
+include its complete license at `vendor/THREE-LICENSE.txt`. No third-party visual
+assets are included. Source: [Three.js](https://github.com/mrdoob/three.js).

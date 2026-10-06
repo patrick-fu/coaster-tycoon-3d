@@ -12,8 +12,10 @@ construction commands, candidate train motion, individual guests/queues/seats,
 food/drink/restroom purchases, benches/bins, staff services and categorized
 operating finance with validated save continuation. See its [interface and verification boundary](docs/simulation-kernel.md).
 Patrick accepted the scope, independent architecture, Classic controls and
-[acceptance contract](docs/first-playable-acceptance.md). The game is not yet
-playable or accepted; prototype evidence is kept separate from production checks.
+[acceptance contract](docs/first-playable-acceptance.md). The [Classic development preview](docs/classic-browser.md) integrates construction
+and management with the production simulation. It is not yet an accepted first
+playable; original fidelity, scale/soak and real integrated-GPU gates remain open.
+Prototype evidence is kept separate from production checks.
 
 The first playable scope is a money-enabled sandbox integrating custom coaster
 construction, individual guest simulation and park management at original-game

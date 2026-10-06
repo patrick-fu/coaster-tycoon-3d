@@ -4,6 +4,15 @@
   "private": true,
   "license": "MIT",
   "type": "module",
-  "scripts": {"build": "tsc -p tsconfig.json", "test": "npm run build && node --test test/*.test.mjs"},
-  "devDependencies": {"typescript": "7.0.2"}
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test test/*.test.mjs",
+    "build:web": "npm run build && node scripts/build-web.mjs"
+  },
+  "devDependencies": {
+    "typescript": "7.0.2"
+  },
+  "dependencies": {
+    "three": "0.186.1"
+  }
 }
