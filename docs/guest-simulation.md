@@ -71,3 +71,9 @@ Moving the public park entry during evacuation also replans that guest's goal.
 Arrival completes the temporary permission, and selecting a new ride or service
 clears it. An independent closure reviewer supplied an entry-change counterexample;
 it failed before this fix and the full backend passed 93 checks afterward.
+
+Queue-starting walking imports must now explicitly own an intent, membership
+or evacuation permission for that queue. Merely standing on a queue no longer
+satisfies import semantics. The second model's accepted-save mutation reproduced
+before the new guard; explicit evacuation remains loadable and continues.
+The backend passed 94 remote checks after this final boundary regression.

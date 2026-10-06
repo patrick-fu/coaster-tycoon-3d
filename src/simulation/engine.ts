@@ -360,7 +360,7 @@ export class Engine{
       }
       if(g.next!==null)ensure(g.goal!==null&&g.point.z===g.next.z&&Math.abs(g.point.x-g.next.x)+Math.abs(g.point.y-g.next.y)===1,'INVALID_SAVE','Next path is not adjacent.');
       if(g.phase==='riding'||g.phase==='stranded')ensure(g.goal===null&&g.next===null,'INVALID_SAVE','Inactive pedestrian retains a walking leg.');
-      if(g.phase!=='riding'&&g.phase!=='stranded')ensure(index.paths.has(pathKey(g.point.x,g.point.y,g.point.z)),'INVALID_SAVE','Guest has no path.');
+      if(g.phase!=='riding'&&g.phase!=='stranded'){const path=index.paths.get(pathKey(g.point.x,g.point.y,g.point.z));ensure(path,'INVALID_SAVE','Guest has no path.');if(path.queueFor!==null)ensure((g.queueRide??g.destination??g.navigationRide)===path.queueFor,'INVALID_SAVE','Queue pedestrian has no membership or evacuation permission.');}
       if(g.seat!==null){record(g.seat,['ride','slot']);ensure(integer(g.seat.ride,0,254)&&integer(g.seat.slot,0,1023),'INVALID_SAVE','Invalid guest seat.');}
       ensure((g.phase==='queued')===(g.queueRide!==null)&&(g.phase==='riding')===(g.seat!==null),'INVALID_SAVE','Guest membership contradicts its phase.');
       if(g.phase==='queued')ensure(g.destination===g.queueRide,'INVALID_SAVE','Queue and intended ride disagree.');
