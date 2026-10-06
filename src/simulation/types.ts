@@ -16,7 +16,7 @@ export type Path={id:number,kind:'path',tile:Tile,height:number,queueFor:number|
 export type Portal={id:number,kind:'portal',ride:number,station:number,role:'entrance'|'exit',tile:Tile,height:number,direction:Direction};
 export type Element=Track|Path|Portal|FacilityElement|AmenityElement;
 export type Ride={id:number,name:string,anchor:Connector,track:number[],status:'closed'|'testing'|'open',cars:number,price:number,income:number,broken:boolean,lastInspection:number,queue:number[]};
-export type State={version:5,amenities:Amenity[],litter:Litter[],facilities:Facility[],retiredShopIncome:number,retiredStock:number,staff:Staff[],rules:string,side:number,tick:number,revision:number,topologyRevision:number,rng:number,paused:boolean,initialCash:number,cash:number,loan:number,maxLoan:number,spent:number,refunded:number,nextElement:number,nextEntity:number,people:PeopleState,ledger:Ledger,trains:Train[],terrain:number[],water:number[],owned:boolean[],rides:Ride[],elements:Element[]};
+export type State={version:6,amenities:Amenity[],litter:Litter[],facilities:Facility[],retiredShopIncome:number,retiredStock:number,staff:Staff[],rules:string,side:number,tick:number,revision:number,topologyRevision:number,rng:number,paused:boolean,initialCash:number,cash:number,loan:number,maxLoan:number,spent:number,refunded:number,nextElement:number,nextEntity:number,people:PeopleState,ledger:Ledger,trains:Train[],terrain:number[],water:number[],owned:boolean[],rides:Ride[],elements:Element[]};
 export type Command=
  | {type:'create-ride',name:string,tile:Tile,height:number,direction:Direction}
  | {type:'append-track',ride:number,piece:string}

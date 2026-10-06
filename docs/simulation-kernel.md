@@ -87,11 +87,11 @@ not every original loan, wage, upkeep, pricing or profit formula.
 
 ## Save validation
 
-Version 5 stores clock/pause/RNG, command/topology revisions, profile identity,
+Version 6 stores clock/pause/RNG, command/topology revisions, profile identity,
 funds/loan/ledger aggregates, surface ownership/heights/water, ride anchors and
 ordered track membership, path/queue associations, portals, stable element/car
 IDs, train motion/measurements, individual guest navigation, queue/seat membership
-and reconciled guest payments. Versions 1–4 were earlier milestones; no
+and reconciled guest payments. Versions 1–5 were earlier milestones; no
 migration is provided for those development formats.
 Derived clearance and path indexes are rebuilt, not trusted from the save.
 

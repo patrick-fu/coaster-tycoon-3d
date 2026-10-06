@@ -67,7 +67,7 @@ export class Engine{
     if(options.land){ensure(Array.isArray(options.land)&&options.land.length<=65536,'INVALID_COMMAND','Invalid land setup.');const seen=new Set<number>();
       for(const l of options.land){record(l,['tile','height','water','owned']);validTile(l.tile);this.bounds(l.tile,options.side);ensure(!seen.has(at(l.tile))&&integer(l.height,0,this.rules.maxHeight)&&l.height%16===0&&integer(l.water,0,this.rules.maxHeight)&&l.water%16===0&&(l.water===0||l.water>=l.height)&&typeof l.owned==='boolean','INVALID_COMMAND','Invalid land setup.');seen.add(at(l.tile));terrain[at(l.tile)]=l.height;water[at(l.tile)]=l.water;owned[at(l.tile)]=l.owned;}
     }
-    this.state={version:5,amenities:[],litter:[],facilities:[],retiredShopIncome:0,retiredStock:0,staff:[],rules:JSON.stringify(this.rules),side:options.side,tick:0,revision:0,topologyRevision:0,rng:options.seed,paused:false,initialCash:options.cash,cash:options.cash,loan:0,maxLoan:options.maxLoan,spent:0,refunded:0,nextElement:1,nextEntity:1,people:{entry:null,open:false,guests:[],departedSpent:0},ledger:{rideSales:0,shopSales:0,stock:0,wages:0,upkeep:0,interest:0},trains:[],terrain,water,owned,rides:[],elements:[]};
+    this.state={version:6,amenities:[],litter:[],facilities:[],retiredShopIncome:0,retiredStock:0,staff:[],rules:JSON.stringify(this.rules),side:options.side,tick:0,revision:0,topologyRevision:0,rng:options.seed,paused:false,initialCash:options.cash,cash:options.cash,loan:0,maxLoan:options.maxLoan,spent:0,refunded:0,nextElement:1,nextEntity:1,people:{entry:null,open:false,guests:[],departedSpent:0},ledger:{rideSales:0,shopSales:0,stock:0,wages:0,upkeep:0,interest:0},trains:[],terrain,water,owned,rides:[],elements:[]};
     this.index=this.indexState(this.state);
   }
   get revision():string{return `${this.session}:${this.generation}:${this.state.revision}`;}
@@ -264,7 +264,7 @@ export class Engine{
   }
   private indexState(s:State):Index{
     record(s,['amenities','litter','facilities','retiredShopIncome','retiredStock','staff','version','rules','side','tick','revision','topologyRevision','rng','paused','initialCash','cash','loan','maxLoan','spent','refunded','nextElement','nextEntity','people','ledger','trains','terrain','water','owned','rides','elements']);
-    ensure(s.version===5,'INVALID_SAVE','Unsupported save version.');ensure(s.rules===JSON.stringify(this.rules),'WRONG_RULES','Save rule profile differs from the engine.');
+    ensure(s.version===6,'INVALID_SAVE','Unsupported save version.');ensure(s.rules===JSON.stringify(this.rules),'WRONG_RULES','Save rule profile differs from the engine.');
     ensure(integer(s.side,LIMITS.mapMin,LIMITS.mapMax)&&integer(s.rng,0,0xffffffff)&&typeof s.paused==='boolean','INVALID_SAVE','Invalid world metadata.');
     for(const n of [s.tick,s.revision,s.topologyRevision,s.initialCash,s.loan,s.maxLoan,s.spent,s.refunded,s.retiredShopIncome,s.retiredStock])ensure(integer(n),'INVALID_SAVE','Invalid clock or money field.');
     record(s.ledger,['rideSales','shopSales','stock','wages','upkeep','interest']);for(const n of Object.values(s.ledger))ensure(integer(n),'INVALID_SAVE','Invalid operating ledger.');
@@ -332,9 +332,10 @@ export class Engine{
     ensure(!s.people.open||s.people.entry!==null&&index.paths.get(pathKey(s.people.entry.x,s.people.entry.y,s.people.entry.z))?.queueFor===null,'INVALID_SAVE','Open park has no public entrance.');
     const ids=new Set(s.trains.flatMap(t=>t.carIds));let payments=BigInt(s.people.departedSpent);
     for(const g of s.people.guests){
-      record(g,['amenity','restProgress','wrapper','wrapperTick','facility','serviceProgress','bladder','id','point','phase','goal','next','walkProgress','destination','entrance','exit','queueRide','seat','initialCash','cash','spent','fareLimit','forceTolerance','hunger','thirst','nausea','happiness','energy','queuedAt','lastRide','lastRideTick','ridesTaken','thought']);
+      record(g,['navigationRide','amenity','restProgress','wrapper','wrapperTick','facility','serviceProgress','bladder','id','point','phase','goal','next','walkProgress','destination','entrance','exit','queueRide','seat','initialCash','cash','spent','fareLimit','forceTolerance','hunger','thirst','nausea','happiness','energy','queuedAt','lastRide','lastRideTick','ridesTaken','thought']);
       ensure(integer(g.id,1,s.nextEntity-1)&&!ids.has(g.id),'INVALID_SAVE','Duplicate or invalid guest entity.');ids.add(g.id);index.guests.set(g.id,g);
       validPoint(g.point);this.owned(g.point,s);
+      ensure(g.navigationRide===null||integer(g.navigationRide,0,254)&&index.rides.has(g.navigationRide)&&g.destination===null&&g.queueRide===null&&g.seat===null&&g.facility===null&&g.amenity===null&&(g.phase==='walking'||g.phase==='stranded'||g.phase==='leaving'),'INVALID_SAVE','Invalid evacuation route permission.');
       ensure(typeof g.wrapper==='boolean'&&integer(g.wrapperTick,0,s.tick)&&(g.wrapper||g.wrapperTick===0)&&integer(g.restProgress,0,this.rules.housekeeping.restTicks-1)&&(g.phase==='resting'||g.restProgress===0),'INVALID_SAVE','Invalid guest resting or wrapper state.');
       if(g.amenity!==null){const a=index.amenities.get(g.amenity);ensure(integer(g.amenity,1)&&a&&g.facility===null&&g.destination===null&&g.queueRide===null&&g.seat===null&&(g.phase==='walking'||g.phase==='resting'),'INVALID_SAVE','Conflicting amenity destination.');const point=amenityPoint(a,index)!;if(g.phase==='walking')ensure(g.goal!==null&&g.goal.x===point.x&&g.goal.y===point.y&&g.goal.z===point.z,'INVALID_SAVE','Walking amenity guest has no correct destination.');ensure(g.phase==='resting'?a.kind==='bench'&&a.occupant===g.id&&g.goal===null&&g.next===null&&g.point.x===point.x&&g.point.y===point.y&&g.point.z===point.z:a.kind!=='bin'||g.wrapper,'INVALID_SAVE','Amenity use disagrees with guest state.');}else ensure(g.phase!=='resting','INVALID_SAVE','Resting guest has no bench.');
       ensure(integer(g.serviceProgress,0,this.rules.services.serviceTicks-1)&&((g.phase==='buying')||g.serviceProgress===0)&&(g.facility===null||integer(g.facility,0,254)&&index.facilities.has(g.facility)),'INVALID_SAVE','Invalid guest facility service.');
@@ -350,7 +351,7 @@ export class Engine{
       ensure(integer(g.walkProgress,0,this.rules.guests.walkTicks-1),'INVALID_SAVE','Invalid walking progress.');
       for(const point of [g.goal,g.next])if(point!==null){validPoint(point);ensure(index.paths.has(pathKey(point.x,point.y,point.z)),'INVALID_SAVE','Navigation uses a missing path.');}
       ensure(g.next!==null||g.walkProgress===0,'INVALID_SAVE','Walking progress has no next path.');
-      if(g.goal!==null){const permission=g.queueRide??g.destination??index.paths.get(pathKey(g.point.x,g.point.y,g.point.z))?.queueFor??null;
+      if(g.goal!==null){const permission=g.queueRide??g.destination??g.navigationRide??index.paths.get(pathKey(g.point.x,g.point.y,g.point.z))?.queueFor??null;
         ensure(this.navigation(s,index).distance(g.point,g.goal,permission)!==null,'INVALID_SAVE','Guest goal is unreachable with its queue permissions.');
         if(g.next!==null){const path=index.paths.get(pathKey(g.next.x,g.next.y,g.next.z));ensure(path&&(path.queueFor===null||path.queueFor===permission)&&this.navigation(s,index).distance(g.next,g.goal,permission)!==null,'INVALID_SAVE','Saved next step violates queue permissions.');}
       }

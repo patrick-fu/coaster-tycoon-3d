@@ -1,0 +1,11 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {apply,create,operatingPark} from './fixtures.mjs';
+function candidate(paths,entry){const {engine:e,id}=operatingPark();for(const [x,y,q] of paths)apply(e,{type:'place-path',tile:{x,y},height:32,queueFor:q?id:null});apply(e,{type:'set-park-entrance',point:{...entry,z:32}});apply(e,{type:'set-ride-status',ride:id,status:'open'});assert(e.advance(460).ok);apply(e,{type:'set-park-open',open:true});assert(e.advance(20).ok);apply(e,{type:'set-park-open',open:false});return{e,id};}
+function intended(s,id,point,queued=false){const g=s.people.guests[0],entrance=s.elements.find(e=>e.kind==='portal'&&e.role==='entrance'),exit=s.elements.find(e=>e.kind==='portal'&&e.role==='exit');Object.assign(g,{phase:queued?'queued':'walking',point:{...point,z:32},goal:queued?null:{x:10,y:8,z:32},next:null,walkProgress:0,destination:id,entrance:entrance.id,exit:exit.id,queueRide:queued?id:null,queuedAt:s.tick});if(queued)s.rides[0].queue=[g.id];return g;}
+test('cancelled ride intent retains the same own-queue permission until the guest reaches the public entry',()=>{
+ const {e,id}=candidate([[10,5,0],[10,6,1],[10,7,0],[10,8,1],[11,8,0],[12,8,0],[12,7,0],[12,6,0],[12,5,0],[11,5,0]],{x:10,y:5}),s=e.snapshot(),g=intended(s,id,{x:10,y:7});assert(e.restoreSave(JSON.stringify(s)).ok);apply(e,{type:'set-ride-status',ride:id,status:'closed'});assert(e.advance(8).ok);assert(e.restoreSave(e.exportSave()).ok);assert(e.advance(8).ok);const after=e.snapshot().people.guests.find(t=>t.id===g.id);assert.deepEqual(after.point,{x:10,y:5,z:32});assert.equal(after.phase,'walking');assert.equal(after.navigationRide,null);assert(e.restoreSave(e.exportSave()).ok);
+});
+test('a new public shortcut synchronously releases guests excluded from the new queue body',()=>{
+ const paths=[[8,7,0],[8,6,1],[9,6,1],[10,6,1],[10,7,1],[10,8,1],[11,8,0],[11,7,0],[11,6,0],[11,5,0],[10,5,0],[9,5,0],[8,5,0],[7,5,0],[7,6,0],[7,7,0]],{e,id}=candidate(paths,{x:8,y:7}),s=e.snapshot(),g=intended(s,id,{x:8,y:6},true);assert(e.restoreSave(JSON.stringify(s)).ok);apply(e,{type:'place-path',tile:{x:9,y:7},height:32,queueFor:null});assert.equal(e.snapshot().rides[0].queue.includes(g.id),false);assert.equal(e.snapshot().people.guests[0].phase,'walking');assert(e.restoreSave(e.exportSave()).ok);
+});

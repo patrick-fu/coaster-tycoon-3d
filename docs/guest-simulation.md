@@ -52,3 +52,17 @@ representative integrated-GPU acceptance result.
 
 Facilities, amenities, staff work, recurring costs, demand calibration and
 original behavioral comparison are not covered by this milestone.
+
+## Recovery review
+
+A second independent model found two additional queue-topology recovery cases.
+A cancelled ride intent could plan a return using its own queue, then forget
+that permission before movement. A shorter public approach could change the
+queue body without synchronously releasing guests excluded from that body.
+Both were reproduced on the designated Linux host, with legal independent
+station/path geometry. Version 6 persists an exclusive evacuation-route ride
+permission until arrival at the public entry. Public routes still exclude
+foreign queues. Topology recovery now applies the same queue-body membership
+check as the tick loop, without consuming RNG. A partial evacuation save and
+immediate shortcut edit have regression coverage. The integrated backend passed
+92 tests remotely in 14.01 seconds after these corrections.

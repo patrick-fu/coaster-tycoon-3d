@@ -49,7 +49,7 @@ patrol-constrained search and saved-step checks, explicit walking destinations,
 and exact BigInt net-receipt validation before assigning cash. No saturation or
 silent loss of accounting precision is used.
 
-Version 5 is the current development save format; earlier milestone formats
+Version 5 introduced housekeeping; version 6 is the current development save format; earlier milestone formats
 have no migration. These correctness checks do not qualify original AI/formulas,
 production catalogue geometry, scale performance, browser controls, the proposed
 longer soak or the representative integrated-GPU gate.
