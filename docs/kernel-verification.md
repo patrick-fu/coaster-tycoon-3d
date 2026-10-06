@@ -1,6 +1,7 @@
 # Kernel milestone verification
 
-Verified on 2026-10-05 on the designated Linux build host, using Node 20.19.2,
+Initial kernel commit [34c1b68](https://github.com/patrick-fu/coaster-tycoon-3d/commit/34c1b68),
+verified on 2026-10-05 on the designated Linux build host, using Node 20.19.2,
 npm 9.2.0 and TypeScript 7.0.2. No compilation or tests ran on Patrick's Mac.
 
 `npm ci --ignore-scripts` installed the isolated locked compiler toolchain.
