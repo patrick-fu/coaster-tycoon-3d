@@ -1,14 +1,16 @@
 {
   "project": "Coaster Tycoon 3D",
   "status": "development preview",
-  "sourceCommit": "9371cdd1267e27f092e1c88ceaf0c0a74f951d01",
+  "sourceCommit": "5ae0957d91406cdca86f6ff8a231f84da34aab54",
   "builtOn": "Grok Bot Linux",
   "buildDate": "2026-10-07",
   "rulesSha256": "fec73050499a6b9a021c21e4209e16eb9031387fe490d326cc0cbcb0f0fc1aa2",
   "assetSha256": {
-    "game.js": "52bb3ed6294afbc68275ca2286a0e30bfeb0714c4ac112e1ca2823619b186f99",
+    "game.js": "f656dee99bd6a0535f97c792c6178daa90026b647798739311c4550b97bb05ba",
     "park-scene.js": "e1b97b0997a29747f43f2e89b65616969fff4e396120de580e7174dbb2c5bede",
-    "simulation/engine.js": "4a0306aa3834374a85f3184e05417a5daa2915a43e0d3ce077039ed880565241"
+    "simulation/engine.js": "4a0306aa3834374a85f3184e05417a5daa2915a43e0d3ce077039ed880565241",
+    "simulation/browser-worker.js": "7c750c60653c2c119a4eca0ea58137c65672286440644970638cbd55cae9b9f7",
+    "simulation/clock.js": "32820b03a12b9bde816654f4e58fd37a24c32b9c8dc035b52d157636e58d9fbd"
   },
   "dependencies": { "three": "0.186.1", "typescript": "7.0.2" },
   "qualification": "Original RCT2 fidelity, representative integrated-GPU performance and first-playable acceptance remain open."

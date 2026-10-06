@@ -42,7 +42,7 @@ scope.onmessage = event => {
     if (response.ok) {
         if (response.value.result.ok && message.request?.type === 'execute' && message.request?.payload?.command?.type === 'set-paused')
             paused = message.request.payload.command.paused;
-        if (message.request.type === 'load' && response.value.result.ok) {
+        if (response.value.result.ok && message.request?.type === 'load') {
             const s = engine.view({ bounds: { x0: 0, y0: 0, x1: 0, y1: 0 }, includeStatic: false });
             if (s.ok)
                 paused = s.value.paused;
