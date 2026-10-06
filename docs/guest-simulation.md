@@ -66,3 +66,8 @@ foreign queues. Topology recovery now applies the same queue-body membership
 check as the tick loop, without consuming RNG. A partial evacuation save and
 immediate shortcut edit have regression coverage. The integrated backend passed
 92 tests remotely in 14.01 seconds after these corrections.
+
+Moving the public park entry during evacuation also replans that guest's goal.
+Arrival completes the temporary permission, and selecting a new ride or service
+clears it. An independent closure reviewer supplied an entry-change counterexample;
+it failed before this fix and the full backend passed 93 checks afterward.

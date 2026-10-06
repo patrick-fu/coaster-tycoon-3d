@@ -9,3 +9,6 @@ test('cancelled ride intent retains the same own-queue permission until the gues
 test('a new public shortcut synchronously releases guests excluded from the new queue body',()=>{
  const paths=[[8,7,0],[8,6,1],[9,6,1],[10,6,1],[10,7,1],[10,8,1],[11,8,0],[11,7,0],[11,6,0],[11,5,0],[10,5,0],[9,5,0],[8,5,0],[7,5,0],[7,6,0],[7,7,0]],{e,id}=candidate(paths,{x:8,y:7}),s=e.snapshot(),g=intended(s,id,{x:8,y:6},true);assert(e.restoreSave(JSON.stringify(s)).ok);apply(e,{type:'place-path',tile:{x:9,y:7},height:32,queueFor:null});assert.equal(e.snapshot().rides[0].queue.includes(g.id),false);assert.equal(e.snapshot().people.guests[0].phase,'walking');assert(e.restoreSave(e.exportSave()).ok);
 });
+test('moving the public entry during evacuation cannot overlap escape permission and a new ride intent',()=>{
+ const {e,id}=candidate([[10,5,0],[10,6,1],[10,7,0],[10,8,1],[11,8,0],[12,8,0],[12,7,0],[12,6,0],[12,5,0],[11,5,0]],{x:10,y:5}),s=e.snapshot();intended(s,id,{x:10,y:7});assert(e.restoreSave(JSON.stringify(s)).ok);apply(e,{type:'set-ride-status',ride:id,status:'closed'});apply(e,{type:'set-park-entrance',point:{x:11,y:5,z:32}});apply(e,{type:'set-ride-status',ride:id,status:'open'});assert(e.advance(32).ok);assert(e.restoreSave(e.exportSave()).ok);for(const g of e.snapshot().people.guests)assert(g.destination===null||g.navigationRide===null);
+});

@@ -24,12 +24,12 @@ function clearNavigation(guest:Guest){guest.navigationRide=null;guest.goal=null;
 function move(guest:Guest,rules:GuestRules,index:PeopleIndex,route:Routing):boolean{
   if(guest.goal===null)return true;
   if(guest.next===null){
-    if(equal(guest.point,guest.goal)){guest.goal=null;guest.walkProgress=0;return true;}
+    if(equal(guest.point,guest.goal)){guest.goal=null;guest.navigationRide=null;guest.walkProgress=0;return true;}
     guest.next=route.next(guest.point,guest.goal,guest.queueRide??guest.destination??guest.navigationRide??index.paths.get(key(guest.point))?.queueFor??null);
     if(guest.next===null)return false;
   }
   guest.walkProgress++;
-  if(guest.walkProgress>=rules.walkTicks){guest.point={...guest.next};guest.next=null;guest.walkProgress=0;if(equal(guest.point,guest.goal))guest.goal=null;}
+  if(guest.walkProgress>=rules.walkTicks){guest.point={...guest.next};guest.next=null;guest.walkProgress=0;if(equal(guest.point,guest.goal)){guest.goal=null;guest.navigationRide=null;}}
   return true;
 }
 function releaseQueue(guest:Guest,index:PeopleIndex){
@@ -69,6 +69,7 @@ export function recoverPeople(state:State,rules:Rules,index:ServiceIndex,route:R
   if(state.people.open&&(!state.people.entry||index.paths.get(key(state.people.entry))?.queueFor!==null))state.people.open=false;
   for(const guest of state.people.guests){
     if(guest.phase==='riding')continue;
+    if(guest.navigationRide!==null&&state.people.entry&&(guest.goal===null||!equal(guest.goal,state.people.entry))){recover(guest,state,index,route,guest.thought);continue;}
     if(!amenityAvailable(guest,rules,index)){recover(guest,state,index,route,'path-lost');continue;}
     if(!recoverFacility(guest,index)){recover(guest,state,index,route,'price-changed');continue;}
     const ride=guest.destination===null?undefined:index.rides.get(guest.destination);
@@ -86,9 +87,9 @@ export function recoverPeople(state:State,rules:Rules,index:ServiceIndex,route:R
 function choose(guest:Guest,state:State,rules:Rules,index:ServiceIndex,route:Routing){
   if(!index.paths.has(key(guest.point))||guest.phase==='riding'||guest.phase==='queued')return;
   const amenity=chooseAmenity(guest,state,rules,index,route);
-  if(amenity){guest.amenity=amenity.amenity;guest.thought='none';navigate(guest,amenity.goal);return;}
+  if(amenity){guest.navigationRide=null;guest.amenity=amenity.amenity;guest.thought='none';navigate(guest,amenity.goal);return;}
   const service=chooseFacility(guest,state,rules,index,route);
-  if(service){guest.facility=service.facility;guest.destination=null;guest.entrance=null;guest.exit=null;guest.thought='none';navigate(guest,service.goal);return;}
+  if(service){guest.navigationRide=null;guest.facility=service.facility;guest.destination=null;guest.entrance=null;guest.exit=null;guest.thought='none';navigate(guest,service.goal);return;}
   let choice:{ride:Ride,portals:NonNullable<ReturnType<typeof access>>,distance:number}|undefined;
   for(const ride of state.rides){
     const train=index.trains.get(ride.id);
@@ -97,7 +98,7 @@ function choose(guest:Guest,state:State,rules:Rules,index:ServiceIndex,route:Rou
     const distance=route.distance(guest.point,portals.front,ride.id);if(distance!==null&&(!choice||distance<choice.distance))choice={ride,portals,distance};
   }
   if(choice){
-    guest.destination=choice.ride.id;guest.entrance=choice.portals.entrance.id;guest.exit=choice.portals.exit.id;guest.phase='walking';guest.thought='none';navigate(guest,choice.portals.front);return;
+    guest.navigationRide=null;guest.destination=choice.ride.id;guest.entrance=choice.portals.entrance.id;guest.exit=choice.portals.exit.id;guest.phase='walking';guest.thought='none';navigate(guest,choice.portals.front);return;
   }
   releaseAmenity(guest,index);guest.facility=null;guest.serviceProgress=0;guest.destination=null;guest.entrance=null;guest.exit=null;
   if(guest.cash<rules.guests.defaultRidePrice)guest.thought='not-enough-cash';
