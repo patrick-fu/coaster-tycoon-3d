@@ -7,6 +7,7 @@ import {boardGuests,recoverPeople,stepPeople,unloadGuests,type Guest,type PathPo
 import {facilityApproach,recoverStaff,sharedCount,stepFinance,stepStaff,type Facility,type FacilityElement,type ServiceIndex,type Staff} from './services.js';
 import {amenityPoint,recoverCleanup,stepHandymen,type Amenity,type AmenityElement} from './housekeeping.js';
 import {encodePatrol,inPatrol} from './patrol.js';
+import {project,validateView} from './view.js';
 import {Routes} from './routes.js';
 type Index=ServiceIndex&{cells:Map<number,{id:number,cell:Cell}[]>,records:number};
 type Plan={cost:number,category:'construction'|'refund'|'loan'|'none',cells:Cell[],endpoint?:Connector,id?:number,commit:()=>void};
@@ -71,6 +72,8 @@ export class Engine{
     this.index=this.indexState(this.state);
   }
   get revision():string{return `${this.session}:${this.generation}:${this.state.revision}`;}
+  view(input:unknown){return result(()=>({...project(this.state,this.rules,validateView(input,this.state.side),this.index.elements,id=>this.course(this.ride(id))),commandRevision:this.revision}));}
+  inspect(kind:unknown,id:unknown){return result(()=>{ensure(integer(id,0),'INVALID_COMMAND','Invalid selection identifier.');const selected=kind==='guest'?this.index.guests.get(id):kind==='staff'?this.index.staff.get(id):kind==='element'?this.index.elements.get(id):undefined;ensure(selected,'UNKNOWN_ELEMENT','Selection is unavailable.');return structuredClone(selected);});}
   snapshot():State{return structuredClone(this.state);}
   exportSave():string{return JSON.stringify(this.state);}
   restoreSave(input:unknown):Result<void>{return result(()=>{

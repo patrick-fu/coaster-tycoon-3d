@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Coaster Tycoon 3D</title><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css"><script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script></head>
+<body inert>
+<header class="command-desk">
+ <div class="brand"><span class="brand-mark">CT</span><div><strong>Coaster Tycoon <b>3D</b></strong><small id="calendar">March · Year 1</small></div></div>
+ <div class="time-controls"><button id="pause" title="Pause / resume (Space)">Ⅱ</button><button data-speed="1" class="active">1×</button><button data-speed="2">2×</button><button data-speed="4">4×</button></div>
+ <button id="park-toggle" class="park-open">Park open</button>
+ <button id="finance" class="money"><small>Park funds</small><strong id="cash">—</strong></button>
+ <div class="desk-right"><span id="guest-count">0 guests</span><button id="save">Save park</button><button id="export">Export</button><button id="import">Import</button><button id="new">New park</button><input id="import-file" type="file" accept=".json,application/json" hidden></div>
+</header>
+<nav class="tools" aria-label="Park tools">
+ <button data-tool="inspect" class="active">↖ <span>Inspect</span></button><button data-tool="track">∿ <span>Coasters</span></button><button data-tool="path">╬ <span>Paths</span></button><button data-tool="facility">▰ <span>Shops & facilities</span></button><button data-tool="amenity">▤ <span>Benches & bins</span></button><button data-tool="staff">♙ <span>Staff</span></button><button data-tool="terrain">▱ <span>Land & water</span></button>
+ <div class="tools-end"><button id="camera">Overview</button><button id="close-camera">Close view</button><span id="save-status">Development preview</span></div>
+</nav>
+<main>
+ <div id="viewport" tabindex="0" aria-label="3D park. Drag to orbit, right-drag to pan, scroll to zoom."></div>
+ <div class="scene-label"><span class="live-dot"></span><strong>Copper Meadows</strong><span id="scene-status">Opening park…</span></div>
+ <aside id="inspector"><div class="panel-heading"><span id="inspector-title">Park overview</span><button id="clear-selection" title="Clear selection">×</button></div><div id="inspection"></div></aside>
+ <div id="feedback" role="status" aria-live="polite">Loading your park…</div>
+ <div class="camera-hint">Drag to orbit · Right-drag to pan · Scroll to zoom</div>
+</main>
+<footer class="construction-desk">
+ <div class="mode-name"><small>BUILD & MANAGE</small><strong id="tool-label">Park inspector</strong><span id="tool-help">Select a ride, guest or staff member.</span></div>
+ <div id="palette"></div>
+ <div class="placement-controls"><label>Height <input id="height" type="number" min="0" max="256" step="8" value="32"></label><label>Facing <select id="direction"><option value="0">East</option><option value="1">South</option><option value="2">West</option><option value="3">North</option></select></label><span id="position">—</span></div>
+</footer>
+<dialog id="finance-dialog"><form method="dialog"><button class="dialog-close" aria-label="Close finances">×</button><h2>Park finances</h2><div id="finance-summary"></div><label>Loan principal <input id="loan" type="number" min="0" step="10"></label><button id="set-loan" type="button">Set loan</button><p id="loan-feedback"></p><button>Close</button></form></dialog>
+<script type="module" src="game.js"></script>
+</body></html>

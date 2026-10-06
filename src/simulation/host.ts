@@ -8,6 +8,8 @@ export function createHost(engine:Engine){return(message:unknown)=>result(()=>{
     record(message,['id','request']);const {request}=message;
     record(request,['type','payload']);
     switch(request.type){
+      case 'view':return engine.view(request.payload);
+      case 'inspect':record(request.payload,['kind','id']);return engine.inspect(request.payload.kind,request.payload.id);
       case 'quote':return engine.quote(request.payload);
       case 'execute':record(request.payload,['command','revision']);return engine.execute(request.payload.command,request.payload.revision as string);
       case 'advance':return engine.advance(request.payload as number);

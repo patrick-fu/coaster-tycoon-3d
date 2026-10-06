@@ -1,0 +1,800 @@
+{
+  "durationMs": 1800000,
+  "tickHz": 40,
+  "startTick": 2400,
+  "samples": [
+    {
+      "wallMs": 13.300000004470348,
+      "tick": 2400,
+      "backlog": 0,
+      "guests": 0,
+      "staff": 2,
+      "litter": 0,
+      "cash": 497110,
+      "ledger": {
+        "rideSales": 0,
+        "shopSales": 0,
+        "stock": 0,
+        "wages": 0,
+        "upkeep": 0,
+        "interest": 0
+      },
+      "heap": 5865585,
+      "saveBytes": 740176
+    },
+    {
+      "wallMs": 60029.10000000149,
+      "tick": 4800,
+      "backlog": 0,
+      "guests": 30,
+      "staff": 2,
+      "litter": 0,
+      "cash": 496914,
+      "ledger": {
+        "rideSales": 160,
+        "shopSales": 0,
+        "stock": 0,
+        "wages": 350,
+        "upkeep": 0,
+        "interest": 0
+      },
+      "heap": 7490237,
+      "saveBytes": 756335
+    },
+    {
+      "wallMs": 120028.10000000149,
+      "tick": 7200,
+      "backlog": 0,
+      "guests": 60,
+      "staff": 2,
+      "litter": 0,
+      "cash": 497364,
+      "ledger": {
+        "rideSales": 480,
+        "shopSales": 170,
+        "stock": 34,
+        "wages": 350,
+        "upkeep": 0,
+        "interest": 0
+      },
+      "heap": 14947949,
+      "saveBytes": 772442
+    },
+    {
+      "wallMs": 180032.70000000298,
+      "tick": 9600,
+      "backlog": 0,
+      "guests": 90,
+      "staff": 2,
+      "litter": 0,
+      "cash": 497321,
+      "ledger": {
+        "rideSales": 960,
+        "shopSales": 600,
+        "stock": 131,
+        "wages": 700,
+        "upkeep": 500,
+        "interest": 0
+      },
+      "heap": 11292265,
+      "saveBytes": 788782
+    },
+    {
+      "wallMs": 240027.80000000447,
+      "tick": 12000,
+      "backlog": 0,
+      "guests": 120,
+      "staff": 2,
+      "litter": 0,
+      "cash": 498055,
+      "ledger": {
+        "rideSales": 1280,
+        "shopSales": 1160,
+        "stock": 271,
+        "wages": 700,
+        "upkeep": 500,
+        "interest": 0
+      },
+      "heap": 12397949,
+      "saveBytes": 804910
+    },
+    {
+      "wallMs": 300019.700000003,
+      "tick": 14400,
+      "backlog": 0,
+      "guests": 150,
+      "staff": 2,
+      "litter": 0,
+      "cash": 498659,
+      "ledger": {
+        "rideSales": 1760,
+        "shopSales": 1800,
+        "stock": 431,
+        "wages": 1050,
+        "upkeep": 500,
+        "interest": 0
+      },
+      "heap": 17193965,
+      "saveBytes": 821295
+    },
+    {
+      "wallMs": 360024.200000003,
+      "tick": 16800,
+      "backlog": 0,
+      "guests": 180,
+      "staff": 2,
+      "litter": 0,
+      "cash": 498653,
+      "ledger": {
+        "rideSales": 2080,
+        "shopSales": 2470,
+        "stock": 571,
+        "wages": 1400,
+        "upkeep": 1000,
+        "interest": 0
+      },
+      "heap": 11775481,
+      "saveBytes": 837785
+    },
+    {
+      "wallMs": 420024.700000003,
+      "tick": 19200,
+      "backlog": 0,
+      "guests": 210,
+      "staff": 2,
+      "litter": 0,
+      "cash": 499877,
+      "ledger": {
+        "rideSales": 2560,
+        "shopSales": 3380,
+        "stock": 731,
+        "wages": 1400,
+        "upkeep": 1000,
+        "interest": 0
+      },
+      "heap": 21863429,
+      "saveBytes": 853999
+    },
+    {
+      "wallMs": 480022.6000000015,
+      "tick": 21600,
+      "backlog": 0,
+      "guests": 240,
+      "staff": 2,
+      "litter": 0,
+      "cash": 500530,
+      "ledger": {
+        "rideSales": 2880,
+        "shopSales": 4200,
+        "stock": 862,
+        "wages": 1750,
+        "upkeep": 1000,
+        "interest": 0
+      },
+      "heap": 15545977,
+      "saveBytes": 870935
+    },
+    {
+      "wallMs": 540022.900000006,
+      "tick": 24000,
+      "backlog": 0,
+      "guests": 270,
+      "staff": 2,
+      "litter": 0,
+      "cash": 501946,
+      "ledger": {
+        "rideSales": 3360,
+        "shopSales": 5340,
+        "stock": 1060,
+        "wages": 1750,
+        "upkeep": 1000,
+        "interest": 0
+      },
+      "heap": 19586965,
+      "saveBytes": 887278
+    },
+    {
+      "wallMs": 600025.5,
+      "tick": 26400,
+      "backlog": 0,
+      "guests": 300,
+      "staff": 2,
+      "litter": 0,
+      "cash": 502542,
+      "ledger": {
+        "rideSales": 3680,
+        "shopSales": 6730,
+        "stock": 1318,
+        "wages": 2100,
+        "upkeep": 1500,
+        "interest": 0
+      },
+      "heap": 16528301,
+      "saveBytes": 908435
+    },
+    {
+      "wallMs": 660024.5,
+      "tick": 28800,
+      "backlog": 0,
+      "guests": 330,
+      "staff": 2,
+      "litter": 0,
+      "cash": 503927,
+      "ledger": {
+        "rideSales": 4160,
+        "shopSales": 8320,
+        "stock": 1647,
+        "wages": 2450,
+        "upkeep": 1500,
+        "interest": 0
+      },
+      "heap": 17785705,
+      "saveBytes": 924395
+    },
+    {
+      "wallMs": 720031.5,
+      "tick": 31200,
+      "backlog": 0,
+      "guests": 360,
+      "staff": 2,
+      "litter": 39,
+      "cash": 505232,
+      "ledger": {
+        "rideSales": 4320,
+        "shopSales": 9750,
+        "stock": 1926,
+        "wages": 2450,
+        "upkeep": 1500,
+        "interest": 0
+      },
+      "heap": 7106665,
+      "saveBytes": 936860
+    },
+    {
+      "wallMs": 780026.400000006,
+      "tick": 33600,
+      "backlog": 0,
+      "guests": 390,
+      "staff": 2,
+      "litter": 141,
+      "cash": 506275,
+      "ledger": {
+        "rideSales": 4800,
+        "shopSales": 11490,
+        "stock": 2247,
+        "wages": 2800,
+        "upkeep": 2000,
+        "interest": 0
+      },
+      "heap": 37221625,
+      "saveBytes": 957119
+    },
+    {
+      "wallMs": 840022.900000006,
+      "tick": 36000,
+      "backlog": 0,
+      "guests": 420,
+      "staff": 2,
+      "litter": 242,
+      "cash": 508034,
+      "ledger": {
+        "rideSales": 5120,
+        "shopSales": 13210,
+        "stock": 2522,
+        "wages": 2800,
+        "upkeep": 2000,
+        "interest": 0
+      },
+      "heap": 26060109,
+      "saveBytes": 977514
+    },
+    {
+      "wallMs": 900022.8000000045,
+      "tick": 38400,
+      "backlog": 0,
+      "guests": 450,
+      "staff": 2,
+      "litter": 342,
+      "cash": 509728,
+      "ledger": {
+        "rideSales": 5600,
+        "shopSales": 15110,
+        "stock": 2852,
+        "wages": 3150,
+        "upkeep": 2000,
+        "interest": 0
+      },
+      "heap": 33154657,
+      "saveBytes": 997725
+    },
+    {
+      "wallMs": 960034.5,
+      "tick": 40800,
+      "backlog": 0,
+      "guests": 480,
+      "staff": 2,
+      "litter": 465,
+      "cash": 511742,
+      "ledger": {
+        "rideSales": 5920,
+        "shopSales": 17150,
+        "stock": 3192,
+        "wages": 3150,
+        "upkeep": 2000,
+        "interest": 0
+      },
+      "heap": 39178117,
+      "saveBytes": 1019425
+    },
+    {
+      "wallMs": 1020058.200000003,
+      "tick": 43200,
+      "backlog": 0,
+      "guests": 510,
+      "staff": 2,
+      "litter": 593,
+      "cash": 513250,
+      "ledger": {
+        "rideSales": 6400,
+        "shopSales": 19470,
+        "stock": 3628,
+        "wages": 3500,
+        "upkeep": 2500,
+        "interest": 0
+      },
+      "heap": 27340857,
+      "saveBytes": 1040839
+    },
+    {
+      "wallMs": 1080026.200000003,
+      "tick": 45600,
+      "backlog": 0,
+      "guests": 540,
+      "staff": 2,
+      "litter": 754,
+      "cash": 515091,
+      "ledger": {
+        "rideSales": 6720,
+        "shopSales": 21760,
+        "stock": 4041,
+        "wages": 3850,
+        "upkeep": 2500,
+        "interest": 0
+      },
+      "heap": 33366113,
+      "saveBytes": 1064176
+    },
+    {
+      "wallMs": 1140032.700000003,
+      "tick": 48000,
+      "backlog": 0,
+      "guests": 570,
+      "staff": 2,
+      "litter": 907,
+      "cash": 517563,
+      "ledger": {
+        "rideSales": 7200,
+        "shopSales": 24230,
+        "stock": 4513,
+        "wages": 3850,
+        "upkeep": 2500,
+        "interest": 0
+      },
+      "heap": 19742309,
+      "saveBytes": 1087779
+    },
+    {
+      "wallMs": 1200028.900000006,
+      "tick": 50400,
+      "backlog": 0,
+      "guests": 600,
+      "staff": 2,
+      "litter": 1056,
+      "cash": 519062,
+      "ledger": {
+        "rideSales": 7520,
+        "shopSales": 26680,
+        "stock": 4928,
+        "wages": 4200,
+        "upkeep": 3000,
+        "interest": 0
+      },
+      "heap": 23550909,
+      "saveBytes": 1111287
+    },
+    {
+      "wallMs": 1260030.5,
+      "tick": 52800,
+      "backlog": 0,
+      "guests": 630,
+      "staff": 2,
+      "litter": 1221,
+      "cash": 521722,
+      "ledger": {
+        "rideSales": 8000,
+        "shopSales": 29320,
+        "stock": 5382,
+        "wages": 4200,
+        "upkeep": 3000,
+        "interest": 0
+      },
+      "heap": 26945721,
+      "saveBytes": 1134431
+    },
+    {
+      "wallMs": 1320043.6000000015,
+      "tick": 55200,
+      "backlog": 0,
+      "guests": 660,
+      "staff": 2,
+      "litter": 1383,
+      "cash": 524036,
+      "ledger": {
+        "rideSales": 8320,
+        "shopSales": 32130,
+        "stock": 5842,
+        "wages": 4550,
+        "upkeep": 3000,
+        "interest": 0
+      },
+      "heap": 28123837,
+      "saveBytes": 1162971
+    },
+    {
+      "wallMs": 1380033.8000000045,
+      "tick": 57600,
+      "backlog": 0,
+      "guests": 690,
+      "staff": 2,
+      "litter": 1551,
+      "cash": 526095,
+      "ledger": {
+        "rideSales": 8800,
+        "shopSales": 35090,
+        "stock": 6367,
+        "wages": 4900,
+        "upkeep": 3500,
+        "interest": 0
+      },
+      "heap": 29090221,
+      "saveBytes": 1184735
+    },
+    {
+      "wallMs": 1440032.6000000015,
+      "tick": 60000,
+      "backlog": 0,
+      "guests": 720,
+      "staff": 2,
+      "litter": 1757,
+      "cash": 528791,
+      "ledger": {
+        "rideSales": 8960,
+        "shopSales": 38180,
+        "stock": 6915,
+        "wages": 4900,
+        "upkeep": 3500,
+        "interest": 0
+      },
+      "heap": 29079893,
+      "saveBytes": 1204977
+    },
+    {
+      "wallMs": 1500038.1000000015,
+      "tick": 62400,
+      "backlog": 0,
+      "guests": 750,
+      "staff": 2,
+      "litter": 1964,
+      "cash": 531550,
+      "ledger": {
+        "rideSales": 9440,
+        "shopSales": 41400,
+        "stock": 7500,
+        "wages": 5250,
+        "upkeep": 3500,
+        "interest": 0
+      },
+      "heap": 23113073,
+      "saveBytes": 1230333
+    },
+    {
+      "wallMs": 1560036.3000000045,
+      "tick": 64800,
+      "backlog": 0,
+      "guests": 779,
+      "staff": 2,
+      "litter": 2178,
+      "cash": 534540,
+      "ledger": {
+        "rideSales": 9760,
+        "shopSales": 44650,
+        "stock": 8074,
+        "wages": 5250,
+        "upkeep": 3500,
+        "interest": 0
+      },
+      "heap": 43188413,
+      "saveBytes": 1255106
+    },
+    {
+      "wallMs": 1620036.1000000015,
+      "tick": 67200,
+      "backlog": 0,
+      "guests": 809,
+      "staff": 2,
+      "litter": 2386,
+      "cash": 536985,
+      "ledger": {
+        "rideSales": 10240,
+        "shopSales": 48060,
+        "stock": 8663,
+        "wages": 5600,
+        "upkeep": 4000,
+        "interest": 0
+      },
+      "heap": 34280989,
+      "saveBytes": 1280843
+    },
+    {
+      "wallMs": 1680044.5,
+      "tick": 69600,
+      "backlog": 0,
+      "guests": 839,
+      "staff": 2,
+      "litter": 2603,
+      "cash": 540137,
+      "ledger": {
+        "rideSales": 10560,
+        "shopSales": 51470,
+        "stock": 9235,
+        "wages": 5600,
+        "upkeep": 4000,
+        "interest": 0
+      },
+      "heap": 39736953,
+      "saveBytes": 1306212
+    },
+    {
+      "wallMs": 1740034.8000000045,
+      "tick": 72000,
+      "backlog": 0,
+      "guests": 869,
+      "staff": 2,
+      "litter": 2817,
+      "cash": 543274,
+      "ledger": {
+        "rideSales": 11040,
+        "shopSales": 55100,
+        "stock": 9852,
+        "wages": 5950,
+        "upkeep": 4000,
+        "interest": 0
+      },
+      "heap": 38824521,
+      "saveBytes": 1331465
+    },
+    {
+      "wallMs": 1800054.8000000045,
+      "tick": 74400,
+      "backlog": 0,
+      "guests": 899,
+      "staff": 2,
+      "litter": 3046,
+      "cash": 545755,
+      "ledger": {
+        "rideSales": 11360,
+        "shopSales": 58740,
+        "stock": 10475,
+        "wages": 6300,
+        "upkeep": 4500,
+        "interest": 0
+      },
+      "heap": 18987697,
+      "saveBytes": 1357748
+    },
+    {
+      "wallMs": 1800079.700000003,
+      "tick": 74400,
+      "backlog": 0,
+      "guests": 899,
+      "staff": 2,
+      "litter": 3046,
+      "cash": 545755,
+      "ledger": {
+        "rideSales": 11360,
+        "shopSales": 58740,
+        "stock": 10475,
+        "wages": 6300,
+        "upkeep": 4500,
+        "interest": 0
+      },
+      "heap": 18987697,
+      "saveBytes": 1357748
+    }
+  ],
+  "actions": [
+    {
+      "stage": 1,
+      "tick": 4800,
+      "broken": true,
+      "price": 20
+    },
+    {
+      "stage": 2,
+      "tick": 7200,
+      "broken": false,
+      "price": 30
+    },
+    {
+      "stage": 3,
+      "tick": 9600,
+      "broken": true,
+      "price": 20
+    },
+    {
+      "stage": 4,
+      "tick": 12000,
+      "broken": false,
+      "price": 30
+    },
+    {
+      "stage": 5,
+      "tick": 14400,
+      "broken": true,
+      "price": 20
+    },
+    {
+      "stage": 6,
+      "tick": 16800,
+      "broken": false,
+      "price": 30
+    },
+    {
+      "stage": 7,
+      "tick": 19200,
+      "broken": true,
+      "price": 20
+    },
+    {
+      "stage": 8,
+      "tick": 21600,
+      "broken": false,
+      "price": 30
+    },
+    {
+      "stage": 9,
+      "tick": 24000,
+      "broken": true,
+      "price": 20
+    },
+    {
+      "stage": 10,
+      "tick": 26400,
+      "broken": false,
+      "price": 30
+    },
+    {
+      "stage": 11,
+      "tick": 28800,
+      "broken": true,
+      "price": 20
+    },
+    {
+      "stage": 12,
+      "tick": 31200,
+      "broken": false,
+      "price": 30
+    },
+    {
+      "stage": 13,
+      "tick": 33600,
+      "broken": true,
+      "price": 20
+    },
+    {
+      "stage": 14,
+      "tick": 36000,
+      "broken": false,
+      "price": 30
+    },
+    {
+      "stage": 15,
+      "tick": 38400,
+      "broken": true,
+      "price": 20
+    },
+    {
+      "stage": 16,
+      "tick": 40800,
+      "broken": false,
+      "price": 30
+    },
+    {
+      "stage": 17,
+      "tick": 43200,
+      "broken": true,
+      "price": 20
+    },
+    {
+      "stage": 18,
+      "tick": 45600,
+      "broken": false,
+      "price": 30
+    },
+    {
+      "stage": 19,
+      "tick": 48000,
+      "broken": true,
+      "price": 20
+    },
+    {
+      "stage": 20,
+      "tick": 50400,
+      "broken": false,
+      "price": 30
+    },
+    {
+      "stage": 21,
+      "tick": 52800,
+      "broken": true,
+      "price": 20
+    },
+    {
+      "stage": 22,
+      "tick": 55200,
+      "broken": false,
+      "price": 30
+    },
+    {
+      "stage": 23,
+      "tick": 57600,
+      "broken": true,
+      "price": 20
+    },
+    {
+      "stage": 24,
+      "tick": 60000,
+      "broken": false,
+      "price": 30
+    },
+    {
+      "stage": 25,
+      "tick": 62400,
+      "broken": true,
+      "price": 20
+    },
+    {
+      "stage": 26,
+      "tick": 64800,
+      "broken": false,
+      "price": 30
+    },
+    {
+      "stage": 27,
+      "tick": 67200,
+      "broken": true,
+      "price": 20
+    },
+    {
+      "stage": 28,
+      "tick": 69600,
+      "broken": false,
+      "price": 30
+    },
+    {
+      "stage": 29,
+      "tick": 72000,
+      "broken": true,
+      "price": 20
+    },
+    {
+      "stage": 30,
+      "tick": 74400,
+      "broken": false,
+      "price": 30
+    }
+  ],
+  "errors": [],
+  "done": true,
+  "ok": true
+}

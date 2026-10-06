@@ -1,0 +1,38 @@
+{
+  "sourceCommit": "9371cdd1267e27f092e1c88ceaf0c0a74f951d01",
+  "model": "grok-4.7-xhigh",
+  "scope": "Read-only presentation review; no runtime execution",
+  "streamSha256": "b588a90744b8016cda905bb442ff6575cf9c717119327ee4c65dd7732302759a",
+  "completedTools": {
+    "globToolCall": 8,
+    "readToolCall": 24,
+    "grepToolCall": 23
+  },
+  "toolFailures": [
+    {
+      "tool": "grepToolCall",
+      "result": {
+        "error": {
+          "error": "Path does not exist: /Volumes/WD/code/workspaces/coaster-browser-startup/coaster-tycoon-3d/ui/vendor"
+        }
+      }
+    },
+    {
+      "tool": "globToolCall",
+      "result": {
+        "error": {
+          "error": "Path does not exist: /Volumes/WD/code/workspaces/coaster-browser-startup/coaster-tycoon-3d/node_modules/three"
+        }
+      }
+    }
+  ],
+  "terminal": [
+    {
+      "subtype": "success",
+      "is_error": false
+    }
+  ],
+  "processExit": 0,
+  "sourceTreeUnchanged": true,
+  "rawFinalReport": "grok-presentation-result.json"
+}

@@ -1,0 +1,174 @@
+{
+  "scope": "Candidate production starter-park stress; synthetic colocated arrivals, flat routes; no renderer, organic demand, hardware or original fidelity qualification.",
+  "ticksPerRepeat": 600,
+  "results": [
+    {
+      "population": 2000,
+      "repeat": 0,
+      "fixtureSHA256": "e349c111456d66f96a55c3ba5b8d40cd8c8fd56ee7891bcbe0d527e767edc2e5",
+      "profileSHA256": "fec73050499a6b9a021c21e4209e16eb9031387fe490d326cc0cbcb0f0fc1aa2",
+      "seed": 3944359972,
+      "initialTick": 2480,
+      "endTick": 3208,
+      "categories": {
+        "guests": 2000,
+        "staff": 2,
+        "cars": 4,
+        "litter": 0
+      },
+      "advanceMs": {
+        "p50": 2.4510150000000976,
+        "p95": 3.900724999999966,
+        "max": 5.6215329999999994
+      },
+      "viewMs": {
+        "p50": 0.23640899999986686,
+        "p95": 0.7237760000000435,
+        "max": 1.9797269999999685
+      },
+      "packedEntityBytes": 96096,
+      "peakRSS": 119431168,
+      "saveBytes": 1834894
+    },
+    {
+      "population": 2000,
+      "repeat": 1,
+      "fixtureSHA256": "e349c111456d66f96a55c3ba5b8d40cd8c8fd56ee7891bcbe0d527e767edc2e5",
+      "profileSHA256": "fec73050499a6b9a021c21e4209e16eb9031387fe490d326cc0cbcb0f0fc1aa2",
+      "seed": 3944359972,
+      "initialTick": 2480,
+      "endTick": 3208,
+      "categories": {
+        "guests": 2000,
+        "staff": 2,
+        "cars": 4,
+        "litter": 0
+      },
+      "advanceMs": {
+        "p50": 2.359386000000086,
+        "p95": 3.4922820000001593,
+        "max": 7.277160999999978
+      },
+      "viewMs": {
+        "p50": 0.2191210000000865,
+        "p95": 0.8384059999998499,
+        "max": 2.7182090000001153
+      },
+      "packedEntityBytes": 96096,
+      "peakRSS": 170561536,
+      "saveBytes": 1834894
+    },
+    {
+      "population": 2000,
+      "repeat": 2,
+      "fixtureSHA256": "e349c111456d66f96a55c3ba5b8d40cd8c8fd56ee7891bcbe0d527e767edc2e5",
+      "profileSHA256": "fec73050499a6b9a021c21e4209e16eb9031387fe490d326cc0cbcb0f0fc1aa2",
+      "seed": 3944359972,
+      "initialTick": 2480,
+      "endTick": 3208,
+      "categories": {
+        "guests": 2000,
+        "staff": 2,
+        "cars": 4,
+        "litter": 0
+      },
+      "advanceMs": {
+        "p50": 2.30228999999963,
+        "p95": 3.262840999999753,
+        "max": 5.738914999999906
+      },
+      "viewMs": {
+        "p50": 0.21581700000024284,
+        "p95": 0.8206330000002708,
+        "max": 1.678066000000399
+      },
+      "packedEntityBytes": 96096,
+      "peakRSS": 168751104,
+      "saveBytes": 1834894
+    },
+    {
+      "population": 5000,
+      "repeat": 0,
+      "fixtureSHA256": "5563d3330dec06a3a4b01200420d37c55cefca519f9879554d053d60e597bca0",
+      "profileSHA256": "fec73050499a6b9a021c21e4209e16eb9031387fe490d326cc0cbcb0f0fc1aa2",
+      "seed": 3944359972,
+      "initialTick": 2480,
+      "endTick": 3208,
+      "categories": {
+        "guests": 5000,
+        "staff": 2,
+        "cars": 4,
+        "litter": 0
+      },
+      "advanceMs": {
+        "p50": 7.721311999999671,
+        "p95": 9.632766000000629,
+        "max": 20.449437999999645
+      },
+      "viewMs": {
+        "p50": 1.1069129999996221,
+        "p95": 1.9996500000006563,
+        "max": 3.970392000001084
+      },
+      "packedEntityBytes": 240096,
+      "peakRSS": 275132416,
+      "saveBytes": 3480611
+    },
+    {
+      "population": 5000,
+      "repeat": 1,
+      "fixtureSHA256": "5563d3330dec06a3a4b01200420d37c55cefca519f9879554d053d60e597bca0",
+      "profileSHA256": "fec73050499a6b9a021c21e4209e16eb9031387fe490d326cc0cbcb0f0fc1aa2",
+      "seed": 3944359972,
+      "initialTick": 2480,
+      "endTick": 3208,
+      "categories": {
+        "guests": 5000,
+        "staff": 2,
+        "cars": 4,
+        "litter": 0
+      },
+      "advanceMs": {
+        "p50": 7.945058999999674,
+        "p95": 10.469182999999248,
+        "max": 27.721385000000737
+      },
+      "viewMs": {
+        "p50": 1.1210059999993973,
+        "p95": 2.6960890000009385,
+        "max": 4.49580799999967
+      },
+      "packedEntityBytes": 240096,
+      "peakRSS": 292290560,
+      "saveBytes": 3480611
+    },
+    {
+      "population": 5000,
+      "repeat": 2,
+      "fixtureSHA256": "5563d3330dec06a3a4b01200420d37c55cefca519f9879554d053d60e597bca0",
+      "profileSHA256": "fec73050499a6b9a021c21e4209e16eb9031387fe490d326cc0cbcb0f0fc1aa2",
+      "seed": 3944359972,
+      "initialTick": 2480,
+      "endTick": 3208,
+      "categories": {
+        "guests": 5000,
+        "staff": 2,
+        "cars": 4,
+        "litter": 0
+      },
+      "advanceMs": {
+        "p50": 8.151358999999502,
+        "p95": 11.128915000001143,
+        "max": 21.792943000000378
+      },
+      "viewMs": {
+        "p50": 1.1302920000016456,
+        "p95": 1.8258390000009967,
+        "max": 3.5633769999985816
+      },
+      "packedEntityBytes": 240096,
+      "peakRSS": 270893056,
+      "saveBytes": 3480611
+    }
+  ]
+}
