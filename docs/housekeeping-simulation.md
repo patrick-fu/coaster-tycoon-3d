@@ -53,3 +53,15 @@ Version 5 is the current development save format; earlier milestone formats
 have no migration. These correctness checks do not qualify original AI/formulas,
 production catalogue geometry, scale performance, browser controls, the proposed
 longer soak or the representative integrated-GPU gate.
+
+## Follow-up state review
+
+Three further independently identified cases were reproduced before repair:
+removing a cleaner's next step while a detour remains, two guests competing for
+the same bench/bin within a tick, and a null position in a resting guest save.
+The cleaner now cancels a removed or forbidden saved step. Walking amenity
+intent may briefly outlive target availability, matching normal tick order;
+actual use remains exclusive and the next tick explicitly recovers the guest.
+Import validates guest positions before any positional dereference and returns
+structured errors. Separate bench and last-slot-bin regressions preserve these
+legitimate pending states. All 90 checks passed remotely in 14.08 seconds.

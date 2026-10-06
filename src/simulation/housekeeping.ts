@@ -1,6 +1,7 @@
 import type {Guest,PathPoint,Routing} from './people.js';
 import type {ServiceIndex,Staff} from './services.js';
 import {accessible,sharedCount} from './services.js';
+import {inPatrol} from './patrol.js';
 import {LIMITS,type State,type Rules,type Tile} from './types.js';
 import {ensure,integer,record} from './validation.js';
 
@@ -53,7 +54,7 @@ function goal(t:Staff,index:ServiceIndex):PathPoint|null{
   if(!t.cleanup)return null;if(t.cleanup.kind==='litter')return index.litter.get(t.cleanup.target)?.point??null;
   const bin=index.amenities.get(t.cleanup.target);return bin?.kind==='bin'&&bin.fill>0?amenityPoint(bin,index):null;
 }
-export function recoverCleanup(s:State,index:ServiceIndex,route:Routing){for(const t of s.staff)if(t.role==='handyman'&&t.cleanup){const p=goal(t,index);if(!p||!t.goal||!same(p,t.goal)||!accessible(t,p,index,route))clear(t);}}
+export function recoverCleanup(s:State,index:ServiceIndex,route:Routing){for(const t of s.staff)if(t.role==='handyman'&&t.cleanup){const p=goal(t,index);if(!p||!t.goal||!same(p,t.goal)||!accessible(t,p,index,route)||t.next!==null&&(!publicPoint(t.next,index)||!inPatrol(t.patrol,t.next)))clear(t);}}
 export function stepHandymen(s:State,rules:Rules,index:ServiceIndex,route:Routing){
   const claimed=new Set(s.staff.filter(t=>t.cleanup).map(t=>`${t.cleanup!.kind}:${t.cleanup!.target}`));
   recoverCleanup(s,index,route);
