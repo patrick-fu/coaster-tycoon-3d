@@ -71,10 +71,11 @@ export class Engine{
   advance(ticks:number):Result<number>{return result(()=>{
     ensure(integer(ticks,0,4096),'INVALID_COMMAND','Invalid tick batch.');if(this.state.paused)return 0;
     ensure(integer(this.state.tick+ticks),'CAPACITY','Clock capacity exhausted.');
+    const trains=structuredClone(this.state.trains);
     for(let i=0;i<ticks;i++){
-      for(const train of this.state.trains)stepTrain(train,this.course(this.ride(train.ride)),this.rules.motion,this.ride(train.ride).status!=='closed');
-      this.state.tick++;
+      for(const train of trains)stepTrain(train,this.course(this.ride(train.ride)),this.rules.motion,this.ride(train.ride).status!=='closed');
     }
+    this.state.trains=trains;this.index.trains=new Map(trains.map(t=>[t.ride,t]));this.state.tick+=ticks;
     return ticks;
   });}
   circuit(ride:number):Result<boolean>{return result(()=>{const r=this.ride(ride);return r.track.length>1&&same(this.tip(r),r.anchor);});}
@@ -240,6 +241,10 @@ export class Engine{
       };
       measured(t.stats,false);ensure(t.stats.distance===t.travelled&&t.stats.maxSpeed>=t.speed,'INVALID_SAVE','Inconsistent travel measurements.');
       ensure((t.laps===0)===(t.measured===null),'INVALID_SAVE','Completed lap measurement is missing.');if(t.measured!==null)measured(t.measured,true);
+      if(t.travelled===course.length){
+        ensure(t.laps>0&&t.measured!==null,'INVALID_SAVE','Completed travel has no completed lap.');
+        for(const key of ['ticks','distance','maxSpeed','minVerticalG','maxVerticalG','maxLateralG'] as const)ensure(t.measured[key]===t.stats[key],'INVALID_SAVE','Completed travel and measurement disagree.');
+      }
       index.trains.set(t.ride,t);
     }
     ensure(ids.size<=LIMITS.sharedEntities,'INVALID_SAVE','Shared entity capacity exceeded.');

@@ -22,4 +22,8 @@ One train per ride is currently implemented. Multiple-train block allocation, pa
 
 Version 2 adds portals, operating/car settings, stable shared car IDs, train phase/travel/wait, lap statistics and measured results. Loading validates platform references, operating prerequisites, train fit, car uniqueness, travel/phase consistency and measurements before replacing the live world. Version 1 kernel saves are explicitly incompatible; the project has not shipped a production save format yet.
 
-Paused state suppresses train updates. Equivalent ordered commands/ticks continue the same saved simulation across different batch sizes. Test rules and centerlines remain `project-candidate`, with no claim of vanilla constants, forces, timing or ratings. Compilation and integration tests run only on the designated Linux host. Independent review is required before this extension is integrated.
+Paused state suppresses train updates. A failed numeric update preserves the
+whole tick batch, including other trains and the clock. Completed travel must
+agree with its lap count and copied measurement. Equivalent ordered commands/ticks continue the same saved simulation across different batch sizes. Test rules and centerlines remain `project-candidate`, with no claim of vanilla constants, forces, timing or ratings. Compilation and integration tests run only on the designated Linux host. Independent review is required before this extension is integrated.
+
+See the [milestone verification](operating-verification.md) for actual checks and pending review.

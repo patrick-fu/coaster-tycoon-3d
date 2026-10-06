@@ -12,7 +12,11 @@ const cross=(a:Vector,b:Vector):Vector=>({x:a.y*b.z-a.z*b.y,y:a.z*b.x-a.x*b.z,z:
 const scale=(a:Vector,n:number):Vector=>({x:a.x*n,y:a.y*n,z:a.z*n});
 const add=(a:Vector,b:Vector):Vector=>({x:a.x+b.x,y:a.y+b.y,z:a.z+b.z});
 const subtract=(a:Vector,b:Vector):Vector=>add(a,scale(b,-1));
-const unit=(a:Vector)=>scale(a,1/Math.hypot(a.x,a.y,a.z));
+const unit=(a:Vector)=>{
+  const length=Math.hypot(a.x,a.y,a.z);
+  ensure(Number.isFinite(length)&&length>1e-12,'GEOMETRY','Motion orientation cannot be normalized.');
+  return scale(a,1/length);
+};
 function rotate(v:Vector,axis:Vector,angle:number){return add(add(scale(v,Math.cos(angle)),scale(cross(axis,v),Math.sin(angle))),scale(axis,dot(axis,v)*(1-Math.cos(angle))));}
 const stats=():Measurements=>({ticks:0,distance:0,maxSpeed:0,minVerticalG:1000,maxVerticalG:1000,maxLateralG:0});
 
@@ -37,7 +41,8 @@ export function compileCourse(ride:Ride,elements:Map<number,Element>,rules:Rules
   ensure(segments.length>1&&stationLength>0,'OPERATING_REQUIREMENTS','A measurable station and track are required.');
   const stationEnd=stationLength;
   if(!initialStation){for(let i=segments.length-1;i>=0&&segments[i]!.station;i--)stationLength+=segments[i]!.length;}
-  let normal={x:0,y:0,z:1},previous=segments[0]!.tangent;
+  let previous=segments[0]!.tangent;
+  let normal=Math.abs(previous.z)<=Math.abs(previous.x)?{x:0,y:0,z:1}:{x:1,y:0,z:0};
   for(let i=0;i<segments.length;i++){
     const segment=segments[i]!,axis=cross(previous,segment.tangent),sin=Math.hypot(axis.x,axis.y,axis.z),cos=dot(previous,segment.tangent);
     if(sin>1e-12)normal=rotate(normal,scale(axis,1/sin),Math.atan2(sin,cos));
@@ -89,11 +94,14 @@ export function stepTrain(train:Train,course:Course,rules:MotionRules,dispatch:b
   if(front.chain)train.speed=Math.max(train.speed,rules.chainSpeed);
   if(front.station)train.speed=train.speed<rules.stationSpeed?Math.min(rules.stationSpeed,train.speed+rules.brakeDeceleration):Math.max(rules.stationSpeed,train.speed-rules.brakeDeceleration);
   if(front.brake!==null&&train.speed>front.brake)train.speed=Math.max(front.brake,train.speed-rules.brakeDeceleration);
+  ensure(integer(train.speed,0,1000000000),'CAPACITY','Train speed exceeds the supported numeric range.');
   if(train.speed===0){train.phase='stalled';return;}
   const acceleration=scale(front.curvature,train.speed*train.speed*rules.tickHz*rules.tickHz);
   acceleration.z+=rules.gravity;
   const vertical=Math.round(dot(acceleration,front.normal)/rules.gravity*1000),lateral=Math.round(dot(acceleration,cross(front.tangent,front.normal))/rules.gravity*1000);
+  ensure(integer(vertical,-Number.MAX_SAFE_INTEGER)&&integer(lateral,-Number.MAX_SAFE_INTEGER),'CAPACITY','Motion measurements exceed the supported numeric range.');
   const distance=Math.min(train.speed,course.length-train.travelled);
+  ensure(integer(train.position+distance),'CAPACITY','Train travel exceeds the supported numeric range.');
   train.stats.ticks++;train.stats.distance+=distance;train.stats.maxSpeed=Math.max(train.stats.maxSpeed,train.speed);
   train.stats.minVerticalG=Math.min(train.stats.minVerticalG,vertical);train.stats.maxVerticalG=Math.max(train.stats.maxVerticalG,vertical);train.stats.maxLateralG=Math.max(train.stats.maxLateralG,Math.abs(lateral));
   train.position=(train.position+distance)%course.length;train.travelled+=distance;
