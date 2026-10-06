@@ -1,5 +1,13 @@
 # Classic browser integration
 
+The [public development preview](https://patrick-fu.github.io/coaster-tycoon-3d/)
+is served from the remotely built `gh-pages` static distribution. Its `build.json`
+identifies the source, pinned tools and selected artifact hashes. Grok Bot Chrome
+for Testing, reusing the default profile, loaded the HTTPS page at 1080p/DPR1,
+rendered 43 starter elements and observed worker ticks/guest arrivals without
+page exceptions. The downloaded `game.js` hash matched the remote build. This
+confirms direct entry and relative module/Worker loading, not GPU qualification.
+
 The browser caller now uses the authoritative engine in a module Worker. A
 fixed-rate worker clock retains missed tick debt and drains bounded batches;
 pause discards paused wall time. Changing render frame rate does not change the
@@ -86,3 +94,28 @@ projection polling. This prevents a late automatic load from overwriting a new
 park or early construction. The actual reload check recovers both the saved
 Browser Probe coaster and newly placed path in authoritative state and scenery.
 The final real-time CDP run passed all 17 browser scenarios without exceptions.
+All 17 scenarios were repeated successfully with the same-version official
+Chrome for Testing and the explicit existing default profile directory. This
+corrects the earlier standard headless Chrome's automatic temporary profile.
+Raw results and their limits are retained in [preview evidence](verification/classic-preview/README.md).
+
+The focused GPT 6.1 Sol Max closure review independently checked these three
+repairs plus startup ownership at source `9371cdd`; it reported no remaining
+verified issue within that scope. The reviewer inspected code and regressions;
+Linux source/browser execution was performed by the primary agent.
+
+A 30-minute real-wall-time simulation baseline completed 72,000 additional ticks
+with 30 rounds of price/breakdown changes, path placement/removal and full
+save/restore checkpoints. Its 32 sampled checkpoints had zero backlog and no
+errors. The final state contained 899 guests, two staff and 3,046 litter records;
+sampled JavaScript heap peaked at 43,188,413 bytes and finished at 18,987,697.
+Ticket/shop sales, stock, wages and upkeep reconciled to final cash after the
+180-unit net construction cost of repeated path edits.
+
+This baseline started before the later import-validation and presentation
+repairs, against the `ee21d6a` development state. Its raw result did not capture
+an initial source hash, so it is retained as diagnostic baseline evidence,
+not a final-source stability qualification. It exercised the engine inside
+Chrome without the production renderer/Worker caller. An integrated long run,
+representative scale and real integrated-GPU qualification remain open in
+[the first-playable qualification task](https://github.com/patrick-fu/coaster-tycoon-3d/issues/24).

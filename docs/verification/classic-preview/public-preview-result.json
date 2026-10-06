@@ -1,0 +1,29 @@
+{
+  "ok": true,
+  "url": "https://patrick-fu.github.io/coaster-tycoon-3d/",
+  "browser": "Chrome/154.0.8037.57",
+  "first": {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/",
+    "tick": 2475,
+    "guests": 0,
+    "ride": "Copper Loop",
+    "cash": 497110,
+    "inert": false,
+    "canvas": 1920,
+    "drawCalls": 887,
+    "elements": 43
+  },
+  "last": {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/",
+    "tick": 2636,
+    "guests": 2,
+    "ride": "Copper Loop",
+    "cash": 497110,
+    "inert": false,
+    "canvas": 1920,
+    "drawCalls": 887,
+    "elements": 43
+  },
+  "errors": [],
+  "scope": "Public HTTPS page, relative module/Worker assets, startup and live simulation/rendering; SwiftShader is not integrated-GPU qualification."
+}

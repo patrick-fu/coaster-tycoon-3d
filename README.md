@@ -7,6 +7,13 @@ unaffiliated with RollerCoaster Tycoon 2 and OpenRCT2.
 Project code is licensed under [MIT](LICENSE). The implementation and required
 game resources are independent; see the [source strategy decision](docs/adr/0001-independent-mit-implementation.md).
 
+Try the [Classic development preview](https://patrick-fu.github.io/coaster-tycoon-3d/)
+in desktop Chrome or Edge. Build and manage Copper Meadows with mouse/keyboard;
+drag to orbit, right-drag to pan and scroll to zoom. Space pauses the park.
+Saves remain in this browser; Export/Import moves a park between devices.
+
+![Classic development preview](docs/verification/classic-preview/public-preview.png)
+
 Planning is complete. The first production simulation kernel implements atomic
 construction commands, candidate train motion, individual guests/queues/seats,
 food/drink/restroom purchases, benches/bins, staff services and categorized
@@ -34,6 +41,6 @@ original-scale or frame-rate goals. The concrete
 [acceptance contract](docs/first-playable-acceptance.md) defines the production
 checks and human review required before completion.
 
-Current integration: [Integrate coaster operation, guest services and park finances](https://github.com/patrick-fu/coaster-tycoon-3d/issues/19).
+Current work: [Qualify the Classic first playable against original RCT2 and representative hardware](https://github.com/patrick-fu/coaster-tycoon-3d/issues/24).
 
 Retained planning map: [Define the first playable version of a faithful 3D RCT2 browser game](https://github.com/patrick-fu/coaster-tycoon-3d/issues/1). Its sub-issues and dependencies show the current decision frontier.
