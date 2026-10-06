@@ -30,7 +30,7 @@ async def run():
     value=reply.get('result',{}).get('value')
     if value:result=json.loads(value);break
    if result is None:
-    diagnostic=await call('Runtime.evaluate',{'expression':'JSON.stringify({body:document.body.textContent,inert:document.body.inert,cash:document.getElementById("cash")?.textContent})','returnByValue':True},session)
+    diagnostic=await call('Runtime.evaluate',{'expression':'JSON.stringify({check:window.browserCheckEvidence,body:document.body.textContent,inert:document.body.inert,cash:document.getElementById("cash")?.textContent})','returnByValue':True},session)
     raise RuntimeError('Browser check produced no terminal result: '+str(diagnostic)+'; exceptions: '+str(page_errors))
    (evidence/'browser-check-result.json').write_text(json.dumps(result,indent=2));print(json.dumps(result,indent=2),flush=True)
    image=await call('Page.captureScreenshot',{'format':'png'},session)

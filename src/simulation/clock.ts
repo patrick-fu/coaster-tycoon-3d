@@ -7,9 +7,9 @@ export class FixedClock{
   poll(now:number,paused:boolean,maxTicks=40){
     ensure(Number.isFinite(now)&&now>=this.last,'INVALID_COMMAND','Invalid monotonic time.');
     const elapsed=now-this.last;this.last=now;
-    if(paused)this.balance=0;else this.balance+=elapsed*this.hz*this.speed/1000;
+    if(!paused)this.balance+=elapsed*this.hz*this.speed/1000;
     ensure(Number.isSafeInteger(Math.floor(this.balance)),'CAPACITY','Clock backlog exhausted.');
-    const ticks=Math.min(maxTicks,Math.floor(this.balance));this.balance-=ticks;return{ticks,backlog:Math.floor(this.balance)};
+    const ticks=paused?0:Math.min(maxTicks,Math.floor(this.balance));this.balance-=ticks;return{ticks,backlog:Math.floor(this.balance)};
   }
   reset(now:number){this.last=now;this.balance=0;}
 }

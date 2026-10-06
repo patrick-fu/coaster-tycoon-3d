@@ -12,3 +12,6 @@ test('presentation is bounded, copied, nonauthoritative and follows actual car m
 test('the worker clock preserves missed logical ticks, drains bounded backlog and discards paused wall time',()=>{
  const clock=new FixedClock(40,0);assert.deepEqual(clock.poll(2500,false),{ticks:40,backlog:60});assert.deepEqual(clock.poll(2500,false),{ticks:40,backlog:20});assert.deepEqual(clock.poll(2500,false),{ticks:20,backlog:0});assert.deepEqual(clock.poll(10000,true),{ticks:0,backlog:0});assert.deepEqual(clock.poll(10025,false),{ticks:1,backlog:0});clock.speed=4;assert.deepEqual(clock.poll(10050,false),{ticks:4,backlog:0});
 });
+test('pause retains unpaused tick debt without advancing it or counting paused wall time',()=>{
+ const clock=new FixedClock(40,0);assert.deepEqual(clock.poll(2500,false),{ticks:40,backlog:60});assert.deepEqual(clock.poll(10000,true),{ticks:0,backlog:60});assert.deepEqual(clock.poll(10025,false),{ticks:40,backlog:21});assert.deepEqual(clock.poll(10025,false),{ticks:21,backlog:0});
+});
