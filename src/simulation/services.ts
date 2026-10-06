@@ -1,3 +1,5 @@
+import type {Amenity,Litter,CleanupJob} from './housekeeping.js';
+import {inPatrol} from './patrol.js';
 import {LIMITS,type Direction,type Element,type State,type Rules,type Tile} from './types.js';
 import type {Guest,PathPoint,PeopleIndex,Routing} from './people.js';
 import {portalApproach} from './operation.js';
@@ -6,9 +8,9 @@ import {ensure,integer,record} from './validation.js';
 export type FacilityKind='food'|'drink'|'restroom';
 export type Facility={id:number,name:string,kind:FacilityKind,element:number,open:boolean,price:number,income:number,sales:number};
 export type FacilityElement={id:number,kind:'facility',facility:number,tile:Tile,height:number,direction:Direction};
-export type Staff={id:number,role:'mechanic'|'handyman',point:PathPoint,next:PathPoint|null,goal:PathPoint|null,progress:number,patrol:Tile[],job:{ride:number,kind:'repair'|'inspection'}|null,work:number,completed:number};
+export type Staff={id:number,role:'mechanic'|'handyman',point:PathPoint,next:PathPoint|null,goal:PathPoint|null,progress:number,patrol:number[],job:{ride:number,kind:'repair'|'inspection'}|null,work:number,completed:number,cleanup:CleanupJob|null};
 export type ServiceRules={buildPrice:number,defaultPrice:number,maxPrice:number,foodStock:number,drinkStock:number,needThreshold:number,relief:number,initialBladder:number,serviceTicks:number,weekTicks:number,upkeepWeeks:number,mechanicMonthlyWage:number,handymanMonthlyWage:number,rideUpkeep:number,facilityUpkeep:number,interestPer10000:number,staffWalkTicks:number,repairTicks:number,inspectionTicks:number,inspectionInterval:number};
-export type ServiceIndex=PeopleIndex&{facilities:Map<number,Facility>,staff:Map<number,Staff>};
+export type ServiceIndex=PeopleIndex&{amenities:Map<number,Amenity>,litter:Map<number,Litter>,facilities:Map<number,Facility>,staff:Map<number,Staff>};
 const same=(a:PathPoint,b:PathPoint)=>a.x===b.x&&a.y===b.y&&a.z===b.z;
 const key=(p:PathPoint)=>`${p.x},${p.y},${p.z}`;
 export function validateServiceRules(input:ServiceRules):ServiceRules{
@@ -21,12 +23,12 @@ export function validateServiceRules(input:ServiceRules):ServiceRules{
 export function facilityApproach(e:FacilityElement):PathPoint{
   const [dx,dy]=[[1,0],[0,1],[-1,0],[0,-1]][e.direction]!;return{x:e.tile.x+dx!,y:e.tile.y+dy!,z:e.height};
 }
-export function sharedCount(s:State){return s.people.guests.length+s.staff.length+s.trains.reduce((n,t)=>n+t.carIds.length,0);}
+export function sharedCount(s:State){return s.people.guests.length+s.staff.length+s.litter.length+s.trains.reduce((n,t)=>n+t.carIds.length,0);}
 export function chooseFacility(g:Guest,s:State,rules:Rules,index:ServiceIndex,route:Routing):{facility:number,goal:PathPoint}|null{
   const motive=(f:Facility)=>f.kind==='food'?g.hunger:f.kind==='drink'?g.thirst:g.bladder;
   let choice:{facility:number,goal:PathPoint,need:number,distance:number}|null=null;
   for(const f of s.facilities){
-    if(!f.open||g.cash<f.price||motive(f)<rules.services.needThreshold)continue;
+    if(!f.open||g.cash<f.price||g.wrapper&&f.kind!=='restroom'||motive(f)<rules.services.needThreshold)continue;
     const e=index.elements.get(f.element);if(e?.kind!=='facility')continue;const goal=facilityApproach(e);
     if(!publicPath(goal,index))continue;const distance=route.distance(g.point,goal,null);if(distance===null)continue;
     if(!choice||motive(f)>choice.need||motive(f)===choice.need&&distance<choice.distance)choice={facility:f.id,goal,need:motive(f),distance};
@@ -40,20 +42,23 @@ export function recoverFacility(g:Guest,index:ServiceIndex):boolean{
 }
 export function buy(g:Guest,s:State,rules:Rules,index:ServiceIndex){
   const f=index.facilities.get(g.facility!)!,r=rules.services,stock=f.kind==='food'?r.foodStock:f.kind==='drink'?r.drinkStock:0,price=f.price;
-  ensure(integer(s.cash+price-stock,-Number.MAX_SAFE_INTEGER)&&integer(s.ledger.shopSales+price)&&integer(s.ledger.stock+stock)&&integer(f.income+price)&&integer(f.sales+1)&&integer(g.spent+price),'CAPACITY','Shop accounting capacity exhausted.');
-  g.cash-=price;g.spent+=price;s.cash+=price-stock;s.ledger.shopSales+=price;s.ledger.stock+=stock;f.income+=price;f.sales++;
+  const cash=BigInt(s.cash)+BigInt(price)-BigInt(stock);
+  ensure(cash>=BigInt(-Number.MAX_SAFE_INTEGER)&&cash<=BigInt(Number.MAX_SAFE_INTEGER)&&integer(s.ledger.shopSales+price)&&integer(s.ledger.stock+stock)&&integer(f.income+price)&&integer(f.sales+1)&&integer(g.spent+price),'CAPACITY','Shop accounting capacity exhausted.');
+  g.cash-=price;g.spent+=price;s.cash=Number(cash);s.ledger.shopSales+=price;s.ledger.stock+=stock;f.income+=price;f.sales++;
+  if(f.kind!=='restroom'){g.wrapper=true;g.wrapperTick=s.tick;}
   if(f.kind==='food')g.hunger=Math.max(0,g.hunger-r.relief);else if(f.kind==='drink')g.thirst=Math.max(0,g.thirst-r.relief);else g.bladder=Math.max(0,g.bladder-r.relief);
   g.facility=null;g.serviceProgress=0;g.phase='walking';g.thought='none';
 }
 function publicPath(p:PathPoint,index:PeopleIndex){return index.paths.get(key(p))?.queueFor===null;}
-function allowed(staff:Staff,p:PathPoint){return !staff.patrol.length||staff.patrol.some(t=>t.x===p.x&&t.y===p.y);}
-function accessible(staff:Staff,goal:PathPoint,index:PeopleIndex,route:Routing){
+function allowed(staff:Staff,p:PathPoint){return inPatrol(staff.patrol,p);}
+export function accessible(staff:Staff,goal:PathPoint,index:PeopleIndex,route:Routing){
   if(!publicPath(staff.point,index)||!publicPath(goal,index)||!allowed(staff,staff.point))return false;
-  const path=route.find(staff.point,goal,null);return path.length>0&&path.every(p=>allowed(staff,p));
+  const path=route.find(staff.point,goal,null,staff.patrol);return path.length>0&&path.every(p=>allowed(staff,p));
 }
 function clear(staff:Staff){staff.next=null;staff.goal=null;staff.progress=0;staff.job=null;staff.work=0;}
 export function recoverStaff(s:State,index:ServiceIndex,route:Routing){
   for(const staff of s.staff){
+    if(staff.role!=='mechanic')continue;
     const ride=staff.job?index.rides.get(staff.job.ride):undefined;
     const station=staff.goal&&staff.job&&[...index.elements.values()].some(e=>e.kind==='portal'&&e.ride===staff.job!.ride&&same(portalApproach(e),staff.goal!));
     if(staff.goal&&(!station||!ride||staff.job!.kind==='repair'&&!ride.broken||!accessible(staff,staff.goal,index,route)||staff.next&&!publicPath(staff.next,index)))clear(staff);
@@ -69,14 +74,14 @@ export function stepStaff(s:State,rules:Rules,index:ServiceIndex,route:Routing){
       let choice:{ride:number,kind:'repair'|'inspection',goal:PathPoint,distance:number}|undefined;
       for(const ride of s.rides){
         if(claimed.has(ride.id)||!ride.track.length||!ride.broken&&s.tick-ride.lastInspection<rules.services.inspectionInterval)continue;
-        for(const e of index.elements.values())if(e.kind==='portal'&&e.ride===ride.id){const goal=portalApproach(e);if(!accessible(staff,goal,index,route))continue;const distance=route.distance(staff.point,goal,null)!;
+        for(const e of index.elements.values())if(e.kind==='portal'&&e.ride===ride.id){const goal=portalApproach(e);if(!accessible(staff,goal,index,route))continue;const distance=route.distance(staff.point,goal,null,staff.patrol)!;
           const kind=ride.broken?'repair':'inspection';if(!choice||kind==='repair'&&choice.kind!=='repair'||kind===choice.kind&&distance<choice.distance)choice={ride:ride.id,kind,goal,distance};}
       }
       if(choice){staff.job={ride:choice.ride,kind:choice.kind};staff.goal=choice.goal;staff.work=0;claimed.add(choice.ride);}
     }
     if(!staff.job||!staff.goal)continue;
     if(!same(staff.point,staff.goal)){
-      staff.next??=route.next(staff.point,staff.goal,null);if(!staff.next){claimed.delete(staff.job.ride);clear(staff);continue;}
+      staff.next??=route.next(staff.point,staff.goal,null,staff.patrol);if(!staff.next){claimed.delete(staff.job.ride);clear(staff);continue;}
       staff.progress++;if(staff.progress>=rules.services.staffWalkTicks){staff.point={...staff.next};staff.next=null;staff.progress=0;}continue;
     }
     staff.work++;const duration=staff.job.kind==='repair'?rules.services.repairTicks:rules.services.inspectionTicks;

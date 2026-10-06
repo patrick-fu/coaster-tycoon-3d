@@ -8,8 +8,9 @@ Project code is licensed under [MIT](LICENSE). The implementation and required
 game resources are independent; see the [source strategy decision](docs/adr/0001-independent-mit-implementation.md).
 
 Planning is complete. The first production simulation kernel implements atomic
-construction commands, path connectivity, integer accounting and validated
-save continuation. See its [interface and verification boundary](docs/simulation-kernel.md).
+construction commands, candidate train motion, individual guests/queues/seats,
+food/drink/restroom purchases, benches/bins, staff services and categorized
+operating finance with validated save continuation. See its [interface and verification boundary](docs/simulation-kernel.md).
 Patrick accepted the scope, independent architecture, Classic controls and
 [acceptance contract](docs/first-playable-acceptance.md). The game is not yet
 playable or accepted; prototype evidence is kept separate from production checks.
@@ -31,6 +32,6 @@ original-scale or frame-rate goals. The concrete
 [acceptance contract](docs/first-playable-acceptance.md) defines the production
 checks and human review required before completion.
 
-Track implementation: [Implement the authoritative simulation kernel](https://github.com/patrick-fu/coaster-tycoon-3d/issues/18).
+Current integration: [Integrate coaster operation, guest services and park finances](https://github.com/patrick-fu/coaster-tycoon-3d/issues/19).
 
 Retained planning map: [Define the first playable version of a faithful 3D RCT2 browser game](https://github.com/patrick-fu/coaster-tycoon-3d/issues/1). Its sub-issues and dependencies show the current decision frontier.

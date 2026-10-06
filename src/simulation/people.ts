@@ -1,4 +1,5 @@
-import {LIMITS,type Element,type Path,type Portal,type Ride,type Rules,type State} from './types.js';
+import {LIMITS,type Element,type Path,type Portal,type Ride,type Rules,type Tile,type State} from './types.js';
+import {amenityAvailable,chooseAmenity,dropLitter,releaseAmenity,rest,useAmenity} from './housekeeping.js';
 import {buy,chooseFacility,recoverFacility,sharedCount,type ServiceIndex} from './services.js';
 import type {Train} from './motion.js';
 import {portalApproach,stationGroups} from './operation.js';
@@ -7,11 +8,11 @@ import {integer} from './validation.js';
 export type PathPoint={readonly x:number,readonly y:number,readonly z:number};
 export type GuestRules={spawnTicks:number,walkTicks:number,decisionTicks:number,needTicks:number,queueSlotsPerTile:number,patienceTicks:number,rideCooldownTicks:number,defaultRidePrice:number,maxRidePrice:number,cashMin:number,cashMax:number,fareMin:number,fareMax:number,forceMin:number,forceMax:number,initialHunger:number,initialThirst:number,initialHappiness:number,initialEnergy:number,needGrowth:number,rideHappiness:number,rideNausea:number};
 export type Ledger={rideSales:number,shopSales:number,stock:number,wages:number,upkeep:number,interest:number};
-export type Guest={id:number,facility:number|null,serviceProgress:number,bladder:number,point:PathPoint,phase:'walking'|'queued'|'riding'|'stranded'|'leaving'|'buying',goal:PathPoint|null,next:PathPoint|null,walkProgress:number,destination:number|null,entrance:number|null,exit:number|null,queueRide:number|null,seat:{ride:number,slot:number}|null,initialCash:number,cash:number,spent:number,fareLimit:number,forceTolerance:number,hunger:number,thirst:number,nausea:number,happiness:number,energy:number,queuedAt:number,lastRide:number|null,lastRideTick:number,ridesTaken:number,thought:'none'|'not-enough-cash'|'too-intense'|'path-lost'|'ride-closed'|'queue-too-long'|'price-changed'|'payment-blocked'|'leaving'};
+export type Guest={id:number,amenity:number|null,restProgress:number,wrapper:boolean,wrapperTick:number,facility:number|null,serviceProgress:number,bladder:number,point:PathPoint,phase:'walking'|'queued'|'riding'|'stranded'|'leaving'|'buying'|'resting',goal:PathPoint|null,next:PathPoint|null,walkProgress:number,destination:number|null,entrance:number|null,exit:number|null,queueRide:number|null,seat:{ride:number,slot:number}|null,initialCash:number,cash:number,spent:number,fareLimit:number,forceTolerance:number,hunger:number,thirst:number,nausea:number,happiness:number,energy:number,queuedAt:number,lastRide:number|null,lastRideTick:number,ridesTaken:number,thought:'none'|'not-enough-cash'|'too-intense'|'path-lost'|'ride-closed'|'queue-too-long'|'price-changed'|'payment-blocked'|'leaving'};
 export type PeopleState={entry:PathPoint|null,open:boolean,guests:Guest[],departedSpent:number};
 type Access={entrance:Portal,exit:Portal,front:PathPoint,out:PathPoint,body:PathPoint[]};
 export type PeopleIndex={elements:Map<number,Element>,paths:Map<string,Path>,rides:Map<number,Ride>,trains:Map<number,Train>,guests:Map<number,Guest>,accessCache:Map<number,{stamp:string,value:Access|null}>};
-export type Routing={find:(from:PathPoint,to:PathPoint,ride:number|null)=>PathPoint[],next:(from:PathPoint,to:PathPoint,ride:number|null)=>PathPoint|null,distance:(from:PathPoint,to:PathPoint,ride:number|null)=>number|null};
+export type Routing={find:(from:PathPoint,to:PathPoint,ride:number|null,patrol?:readonly number[])=>PathPoint[],next:(from:PathPoint,to:PathPoint,ride:number|null,patrol?:readonly number[])=>PathPoint|null,distance:(from:PathPoint,to:PathPoint,ride:number|null,patrol?:readonly number[])=>number|null};
 const key=(p:PathPoint)=>`${p.x},${p.y},${p.z}`;
 const equal=(a:PathPoint,b:PathPoint)=>a.x===b.x&&a.y===b.y&&a.z===b.z;
 const clamp=(n:number)=>Math.max(0,Math.min(1000,n));
@@ -36,7 +37,7 @@ function releaseQueue(guest:Guest,index:PeopleIndex){
   guest.queueRide=null;
 }
 function recover(guest:Guest,state:State,index:ServiceIndex,route:Routing,thought:Guest['thought']){
-  const previous=guest.queueRide??guest.destination??index.paths.get(key(guest.point))?.queueFor??null;releaseQueue(guest,index);guest.facility=null;guest.serviceProgress=0;guest.destination=null;guest.entrance=null;guest.exit=null;guest.thought=thought;
+  const previous=guest.queueRide??guest.destination??index.paths.get(key(guest.point))?.queueFor??null;releaseQueue(guest,index);releaseAmenity(guest,index);guest.facility=null;guest.serviceProgress=0;guest.destination=null;guest.entrance=null;guest.exit=null;guest.thought=thought;
   const path=index.paths.get(key(guest.point));guest.phase=path?'walking':'stranded';
   clearNavigation(guest);if(path&&state.people.entry){const distance=route.distance(guest.point,state.people.entry,previous);if(distance===null)guest.phase='stranded';else navigate(guest,state.people.entry);}
 }
@@ -68,6 +69,7 @@ export function recoverPeople(state:State,rules:Rules,index:ServiceIndex,route:R
   if(state.people.open&&(!state.people.entry||index.paths.get(key(state.people.entry))?.queueFor!==null))state.people.open=false;
   for(const guest of state.people.guests){
     if(guest.phase==='riding')continue;
+    if(!amenityAvailable(guest,rules,index)){recover(guest,state,index,route,'path-lost');continue;}
     if(!recoverFacility(guest,index)){recover(guest,state,index,route,'price-changed');continue;}
     const ride=guest.destination===null?undefined:index.rides.get(guest.destination);
     const portals=ride?access(ride,state,index,rules,route):null;
@@ -82,6 +84,8 @@ export function recoverPeople(state:State,rules:Rules,index:ServiceIndex,route:R
 
 function choose(guest:Guest,state:State,rules:Rules,index:ServiceIndex,route:Routing){
   if(!index.paths.has(key(guest.point))||guest.phase==='riding'||guest.phase==='queued')return;
+  const amenity=chooseAmenity(guest,state,rules,index,route);
+  if(amenity){guest.amenity=amenity.amenity;guest.thought='none';navigate(guest,amenity.goal);return;}
   const service=chooseFacility(guest,state,rules,index,route);
   if(service){guest.facility=service.facility;guest.destination=null;guest.entrance=null;guest.exit=null;guest.thought='none';navigate(guest,service.goal);return;}
   let choice:{ride:Ride,portals:NonNullable<ReturnType<typeof access>>,distance:number}|undefined;
@@ -94,7 +98,7 @@ function choose(guest:Guest,state:State,rules:Rules,index:ServiceIndex,route:Rou
   if(choice){
     guest.destination=choice.ride.id;guest.entrance=choice.portals.entrance.id;guest.exit=choice.portals.exit.id;guest.phase='walking';guest.thought='none';navigate(guest,choice.portals.front);return;
   }
-  guest.facility=null;guest.serviceProgress=0;guest.destination=null;guest.entrance=null;guest.exit=null;
+  releaseAmenity(guest,index);guest.facility=null;guest.serviceProgress=0;guest.destination=null;guest.entrance=null;guest.exit=null;
   if(guest.cash<rules.guests.defaultRidePrice)guest.thought='not-enough-cash';
   else if(guest.forceTolerance<1000)guest.thought='too-intense';
   if(guest.happiness===0&&state.people.entry){guest.phase='leaving';guest.thought='leaving';navigate(guest,state.people.entry);}
@@ -104,13 +108,16 @@ export function stepPeople(state:State,rules:Rules,index:ServiceIndex,route:Rout
   const entry=state.people.entry;
   if(state.people.open&&entry&&state.tick%rules.guests.spawnTicks===0&&index.paths.get(key(entry))?.queueFor===null&&sharedCount(state)<LIMITS.sharedEntities&&integer(state.nextEntity+1)){
     const cash=random(state,rules.guests.cashMin,rules.guests.cashMax);
-    const guest:Guest={id:state.nextEntity++,facility:null,serviceProgress:0,bladder:rules.services.initialBladder,point:{...entry},phase:'walking',goal:null,next:null,walkProgress:0,destination:null,entrance:null,exit:null,queueRide:null,seat:null,initialCash:cash,cash,spent:0,fareLimit:random(state,rules.guests.fareMin,rules.guests.fareMax),forceTolerance:random(state,rules.guests.forceMin,rules.guests.forceMax),hunger:rules.guests.initialHunger,thirst:rules.guests.initialThirst,nausea:0,happiness:rules.guests.initialHappiness,energy:rules.guests.initialEnergy,queuedAt:0,lastRide:null,lastRideTick:0,ridesTaken:0,thought:'none'};
+    const guest:Guest={id:state.nextEntity++,amenity:null,restProgress:0,wrapper:false,wrapperTick:0,facility:null,serviceProgress:0,bladder:rules.services.initialBladder,point:{...entry},phase:'walking',goal:null,next:null,walkProgress:0,destination:null,entrance:null,exit:null,queueRide:null,seat:null,initialCash:cash,cash,spent:0,fareLimit:random(state,rules.guests.fareMin,rules.guests.fareMax),forceTolerance:random(state,rules.guests.forceMin,rules.guests.forceMax),hunger:rules.guests.initialHunger,thirst:rules.guests.initialThirst,nausea:0,happiness:rules.guests.initialHappiness,energy:rules.guests.initialEnergy,queuedAt:0,lastRide:null,lastRideTick:0,ridesTaken:0,thought:'none'};
     state.people.guests.push(guest);index.guests.set(guest.id,guest);
   }
   const departing:number[]=[];
   for(const guest of state.people.guests){
     if(due(state.tick,guest.id,rules.guests.needTicks)){guest.hunger=clamp(guest.hunger+rules.guests.needGrowth);guest.thirst=clamp(guest.thirst+rules.guests.needGrowth);guest.bladder=clamp(guest.bladder+rules.guests.needGrowth);guest.energy=clamp(guest.energy-rules.guests.needGrowth);guest.nausea=clamp(guest.nausea-1);if(guest.hunger===1000||guest.thirst===1000||guest.bladder===1000)guest.happiness=clamp(guest.happiness-rules.guests.needGrowth);}
     if(guest.phase==='riding')continue;
+    if(!amenityAvailable(guest,rules,index)){recover(guest,state,index,route,'path-lost');continue;}
+    dropLitter(guest,state,rules,index);
+    if(guest.phase==='resting'){rest(guest,rules,index);continue;}
     if(guest.facility!==null&&!recoverFacility(guest,index)){recover(guest,state,index,route,'price-changed');continue;}
     if(guest.phase==='buying'){guest.serviceProgress++;if(guest.serviceProgress>=rules.services.serviceTicks)buy(guest,state,rules,index);continue;}
     if(guest.phase==='queued'){
@@ -135,6 +142,7 @@ export function stepPeople(state:State,rules:Rules,index:ServiceIndex,route:Rout
       }
     }
     if(!move(guest,rules.guests,index,route)){recover(guest,state,index,route,'path-lost');continue;}
+    if(guest.amenity!==null&&guest.goal===null&&guest.next===null){useAmenity(guest,rules,index);continue;}
     if(guest.facility!==null&&guest.goal===null&&guest.next===null){guest.phase='buying';guest.serviceProgress=0;continue;}
     if(guest.phase==='leaving'&&entry&&equal(guest.point,entry)&&guest.walkProgress===0&&integer(state.people.departedSpent+guest.spent)){departing.push(guest.id);state.people.departedSpent+=guest.spent;continue;}
     if(guest.destination===null&&guest.goal===null&&guest.next===null&&due(state.tick,guest.id,rules.guests.decisionTicks))choose(guest,state,rules,index,route);

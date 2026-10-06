@@ -1,11 +1,12 @@
+import {validateHousekeepingRules} from './housekeeping.js';
 import {validateServiceRules} from './services.js';
 import type {GuestRules} from './people.js';
 import type {MotionRules} from './motion.js';
 import type {Cell,Connector,PieceRule,Rules} from './types.js';
 import {ensure,integer,record} from './validation.js';
 export function validateRules(input:Rules):Rules{
-  record(input,['services','guests','motion','id','evidence','pathPrice','portalPrice','terrainPrice','refundPerThousand','maxSupport','maxHeight','pieces']);
-  const services=validateServiceRules(input.services),motion=validateMotionRules(input.motion),guests=validateGuestRules(input.guests);
+  record(input,['housekeeping','services','guests','motion','id','evidence','pathPrice','portalPrice','terrainPrice','refundPerThousand','maxSupport','maxHeight','pieces']);
+  const housekeeping=validateHousekeepingRules(input.housekeeping),services=validateServiceRules(input.services),motion=validateMotionRules(input.motion),guests=validateGuestRules(input.guests);
   ensure(typeof input.id==='string'&&input.id.length>0&&input.id.length<=80&&['project-candidate','reference-verified'].includes(input.evidence),'INVALID_COMMAND','Invalid rule identity.');
   for(const v of [input.pathPrice,input.portalPrice,input.terrainPrice,input.maxSupport,input.maxHeight])ensure(integer(v,0,1000000),'INVALID_COMMAND','Invalid rule value.');
   ensure(integer(input.refundPerThousand,0,1000)&&input.maxHeight>=16&&input.maxHeight%8===0,'INVALID_COMMAND','Invalid refund or height rule.');
@@ -28,7 +29,7 @@ export function validateRules(input:Rules):Rules{
     for(const c of p.cells){record(c,['x','y','low','high','mask']);ensure(integer(c.x,-1024,1024)&&c.x%32===0&&integer(c.y,-1024,1024)&&c.y%32===0&&integer(c.low,-1024,1024)&&integer(c.high,-1024,2048)&&c.low%8===0&&c.high%8===0&&c.high>c.low&&integer(c.mask,1,15),'INVALID_COMMAND','Invalid clearance cell.');const k=`${c.x},${c.y}`;ensure(!occupied.has(k),'INVALID_COMMAND','Duplicate footprint cell.');occupied.add(k);}
   }
   ensure(stations>0,'INVALID_COMMAND','A station definition is required.');
-  return{services,guests,motion,id:input.id,evidence:input.evidence,pathPrice:input.pathPrice,portalPrice:input.portalPrice,terrainPrice:input.terrainPrice,refundPerThousand:input.refundPerThousand,maxSupport:input.maxSupport,maxHeight:input.maxHeight,pieces:Object.fromEntries(keys.sort().map(k=>{const p=input.pieces[k]!;return[k,{price:p.price,station:p.station,motion:{samples:p.motion.samples.map(q=>({x:q.x,y:q.y,z:q.z})),chain:p.motion.chain,brake:p.motion.brake},end:{x:p.end.x,y:p.end.y,z:p.end.z,turn:p.end.turn,pitch:p.end.pitch,bank:p.end.bank},entry:{pitch:p.entry.pitch,bank:p.entry.bank},cells:p.cells.map(c=>({x:c.x,y:c.y,low:c.low,high:c.high,mask:c.mask}))}];}))};
+  return{housekeeping,services,guests,motion,id:input.id,evidence:input.evidence,pathPrice:input.pathPrice,portalPrice:input.portalPrice,terrainPrice:input.terrainPrice,refundPerThousand:input.refundPerThousand,maxSupport:input.maxSupport,maxHeight:input.maxHeight,pieces:Object.fromEntries(keys.sort().map(k=>{const p=input.pieces[k]!;return[k,{price:p.price,station:p.station,motion:{samples:p.motion.samples.map(q=>({x:q.x,y:q.y,z:q.z})),chain:p.motion.chain,brake:p.motion.brake},end:{x:p.end.x,y:p.end.y,z:p.end.z,turn:p.end.turn,pitch:p.end.pitch,bank:p.end.bank},entry:{pitch:p.entry.pitch,bank:p.entry.bank},cells:p.cells.map(c=>({x:c.x,y:c.y,low:c.low,high:c.high,mask:c.mask}))}];}))};
 }
 export function turn(x:number,y:number,d:number){const vectors=[[1,0],[0,1],[-1,0],[0,-1]] as const;const [dx,dy]=vectors[d]!;return{x:x*dx-y*dy,y:x*dy+y*dx};}
 export function endpoint(a:Connector,p:PieceRule):Connector{const b=turn(p.end.x,p.end.y,a.direction);return{x:a.x+b.x,y:a.y+b.y,z:a.z+p.end.z,direction:((a.direction+p.end.turn+4)%4) as Connector['direction'],pitch:p.end.pitch,bank:p.end.bank};}

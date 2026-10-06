@@ -1,0 +1,16 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {Engine} from '../dist/simulation/index.js';
+import {apply,operatingPark,rules,options} from './fixtures.mjs';
+function tick(e,n){while(n>0){const count=Math.min(n,4096),r=e.advance(count);assert(r.ok,JSON.stringify(r));n-=count;}}
+test('one park couples service needs, queue payments, patrol-blocked breakdown, repair, cleanliness and recurring expenses',()=>{
+ const profile=structuredClone(rules);profile.guests.initialHunger=900;profile.guests.initialEnergy=150;profile.guests.needGrowth=20;profile.guests.needTicks=128;profile.services.weekTicks=256;
+ const {engine:e,id}=operatingPark(new Engine({...options,cash:50000},profile)),paths=[];for(const [x,y,queueFor] of [[10,7,null],[11,7,null],[11,8,null],[10,8,id]])paths.push(apply(e,{type:'place-path',tile:{x,y},height:32,queueFor}).id);
+ const food=apply(e,{type:'place-facility',name:'Food stand',kind:'food',tile:{x:9,y:7},height:32,direction:0}).id;apply(e,{type:'set-facility-open',facility:food,open:true});apply(e,{type:'place-amenity',kind:'bench',path:paths[1]});apply(e,{type:'place-amenity',kind:'bin',path:paths[2]});
+ apply(e,{type:'set-park-entrance',point:{x:10,y:7,z:32}});apply(e,{type:'set-ride-status',ride:id,status:'open'});tick(e,460);
+ const mechanic=apply(e,{type:'hire-staff',role:'mechanic',point:{x:10,y:7,z:32}}).id;apply(e,{type:'set-staff-patrol',staff:mechanic,tiles:[{x:10,y:7}]});apply(e,{type:'hire-staff',role:'handyman',point:{x:11,y:8,z:32}});apply(e,{type:'set-park-open',open:true});
+ let riding;for(let n=0;n<1600;n+=4){tick(e,4);const s=e.snapshot();if(s.people.guests.some(g=>g.phase==='riding')){riding=s;break;}}assert(riding);assert(riding.ledger.shopSales>0);assert(riding.ledger.stock>0);assert(riding.people.guests.some(g=>g.energy>150));
+ apply(e,{type:'set-ride-broken',ride:id,broken:true});const broken=e.snapshot(),position=broken.trains[0].position,paid=broken.people.guests.find(g=>g.phase==='riding');tick(e,200);let s=e.snapshot();assert.equal(s.rides[0].broken,true);assert.equal(s.trains[0].position,position);assert.equal(s.rides[0].queue.length,0);assert.equal(s.people.guests.find(g=>g.id===paid.id).spent,paid.spent);assert.equal(s.staff.find(t=>t.id===mechanic).completed,0);
+ apply(e,{type:'set-staff-patrol',staff:mechanic,tiles:[{x:10,y:7},{x:11,y:7},{x:11,y:8}]});tick(e,700);s=e.snapshot();assert.equal(s.rides[0].broken,false);assert(s.staff.find(t=>t.id===mechanic).completed>0);assert(s.staff.find(t=>t.role==='handyman').completed>0);assert(s.people.guests.find(g=>g.id===paid.id).ridesTaken>0);assert(s.ledger.wages>0);assert(s.ledger.upkeep>0);assert.equal(s.ledger.rideSales,s.rides[0].income);assert.equal(s.ledger.shopSales,s.facilities[0].income);assert.equal(s.ledger.stock,s.facilities[0].sales*profile.services.foodStock);
+ const accounting=s.initialCash+s.loan-s.spent+s.refunded+s.ledger.rideSales+s.ledger.shopSales-s.ledger.stock-s.ledger.wages-s.ledger.upkeep-s.ledger.interest;assert.equal(s.cash,accounting);const restored=new Engine(options,profile);assert(restored.restoreSave(e.exportSave()).ok);tick(e,400);tick(restored,7);tick(restored,393);assert.equal(restored.exportSave(),e.exportSave());
+});
