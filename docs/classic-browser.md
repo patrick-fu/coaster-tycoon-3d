@@ -7,10 +7,13 @@ for Testing, reusing the default profile, loaded the HTTPS page at 1080p/DPR1,
 rendered 43 starter elements and observed worker ticks/guest arrivals without
 page exceptions. The downloaded `game.js` hash matched the remote build. This
 confirms direct entry and relative module/Worker loading, not GPU qualification.
+The repaired deployment was checked again with client cache disabled: all five
+named runtime module hashes matched source `5ae0957`, and a malformed Worker
+envelope returned `INVALID_COMMAND` before a subsequent valid save succeeded.
 
 The browser caller now uses the authoritative engine in a module Worker. A
 fixed-rate worker clock retains missed tick debt and drains bounded batches;
-pause discards paused wall time. Changing render frame rate does not change the
+pause retains existing debt without advancing it and excludes paused wall time. Changing render frame rate does not change the
 simulation rules. Normal, 2× and 4× controls alter tick accumulation.
 
 The independently authored steel candidate includes straight/station, left/right
@@ -42,14 +45,16 @@ server is a static-file service without a game backend.
 
 ## Executed verification
 
-Grok Bot Linux compiled and passed 99 source tests, including candidate starter
+Grok Bot Linux compiled and passed 100 source tests, including candidate starter
 operation, bounded projection/copy isolation and fixed-clock debt/pause/speed.
-Headless Chrome 154 using SwiftShader passed 17 actual Classic browser scenarios:
+Headless Chrome 154 using SwiftShader passed 20 actual Classic browser scenarios:
 rendering, pause, speed, pointer path placement/payment, duplicate-placement
 rejection, new coaster/track/removal refund, loans, facility price/opening, real
 staff picking, patrol painting, IndexedDB save/file import, malformed file
 recovery, obsolete instance disposal, retained forced static refresh, overlapping
-employee list selection, actual IndexedDB page reload and worker guest arrivals. No page exceptions were recorded.
+employee list selection, rejected/rapid patrol painting, correlated malformed
+Worker errors with a subsequent valid save, actual IndexedDB page reload and
+worker guest arrivals. No page exceptions were recorded.
 
 The first test harness used accelerated virtual time and could expire a main
 thread timeout before asynchronous worker messages arrived. The retained check harness controls the existing remote Chrome through CDP and
@@ -93,11 +98,30 @@ Startup waits for IndexedDB recovery before enabling player controls or regular
 projection polling. This prevents a late automatic load from overwriting a new
 park or early construction. The actual reload check recovers both the saved
 Browser Probe coaster and newly placed path in authoritative state and scenery.
-The final real-time CDP run passed all 17 browser scenarios without exceptions.
+The pre-review real-time CDP run passed all 17 browser scenarios without exceptions.
 All 17 scenarios were repeated successfully with the same-version official
 Chrome for Testing and the explicit existing default profile directory. This
 corrects the earlier standard headless Chrome's automatic temporary profile.
 Raw results and their limits are retained in [preview evidence](verification/classic-preview/README.md).
+
+Independent Grok 4.7 xhigh review identified three further defects: rejected
+patrol points polluted later edits and mutated an in-flight proposal; pause
+discarded previously retained unpaused tick debt; and a malformed request
+envelope threw before the structured Worker reply. All were reproduced remotely
+before repair, including both patrol failure paths. Patrol edits now serialize
+independent proposals and update local tiles only after success; paused polling
+keeps debt with zero advance; load side effects require a valid inner response.
+GPT 6.1 Sol Max performed focused static closure and found no remaining verified
+counterexample within these fixes. The repaired source `5ae0957` passed 100
+source checks and all 20 real-browser scenarios on the default profile.
+
+The extended browser run initially failed to reach its terminal result, leaving
+an active park with its initial tools at timeout. The harness's initial state
+predicate did not establish that the new-park projection was current. It now
+waits for startup completion, the new-park acknowledgement and the visible
+unpaused control; that corrected run passed all scenarios, and diagnostics also
+retain the active check. Production commands
+and the clock were not changed to accommodate that harness synchronization.
 
 The focused GPT 6.1 Sol Max closure review independently checked these three
 repairs plus startup ownership at source `9371cdd`; it reported no remaining

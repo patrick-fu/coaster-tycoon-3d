@@ -4,26 +4,48 @@
   "browser": "Chrome/154.0.8037.57",
   "first": {
     "url": "https://patrick-fu.github.io/coaster-tycoon-3d/",
-    "tick": 2475,
-    "guests": 0,
+    "tick": 4887,
+    "guests": 31,
     "ride": "Copper Loop",
-    "cash": 497110,
+    "cash": 496960,
     "inert": false,
     "canvas": 1920,
-    "drawCalls": 887,
+    "drawCalls": 888,
     "elements": 43
   },
   "last": {
     "url": "https://patrick-fu.github.io/coaster-tycoon-3d/",
-    "tick": 2636,
-    "guests": 2,
+    "tick": 5057,
+    "guests": 33,
     "ride": "Copper Loop",
-    "cash": 497110,
+    "cash": 497080,
     "inert": false,
     "canvas": 1920,
-    "drawCalls": 887,
+    "drawCalls": 888,
     "elements": 43
   },
+  "identity": {
+    "source": "5ae0957d91406cdca86f6ff8a231f84da34aab54",
+    "hashes": {
+      "game.js": "f656dee99bd6a0535f97c792c6178daa90026b647798739311c4550b97bb05ba",
+      "park-scene.js": "e1b97b0997a29747f43f2e89b65616969fff4e396120de580e7174dbb2c5bede",
+      "simulation/engine.js": "4a0306aa3834374a85f3184e05417a5daa2915a43e0d3ce077039ed880565241",
+      "simulation/browser-worker.js": "7c750c60653c2c119a4eca0ea58137c65672286440644970638cbd55cae9b9f7",
+      "simulation/clock.js": "32820b03a12b9bde816654f4e58fd37a24c32b9c8dc035b52d157636e58d9fbd"
+    },
+    "match": true
+  },
+  "workerRecovery": [
+    {
+      "id": 901,
+      "ok": false,
+      "error": "INVALID_COMMAND"
+    },
+    {
+      "id": 902,
+      "ok": true
+    }
+  ],
   "errors": [],
-  "scope": "Public HTTPS page, relative module/Worker assets, startup and live simulation/rendering; SwiftShader is not integrated-GPU qualification."
+  "scope": "Public HTTPS page with cache disabled, module/Worker hashes, malformed-envelope recovery, startup and live simulation/rendering; SwiftShader is not integrated-GPU qualification."
 }

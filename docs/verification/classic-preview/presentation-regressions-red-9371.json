@@ -1,0 +1,20 @@
+{
+  "source": "9371cdd production code with added regressions",
+  "cases": [
+    {
+      "name": "Malformed envelope must return INVALID_COMMAND rather than throw",
+      "ok": false,
+      "error": "Uncaught TypeError: Cannot read properties of undefined (reading 'type')"
+    },
+    {
+      "name": "Rejected patrol tile must not poison the next valid click",
+      "ok": false,
+      "error": "Valid tile absent; Tile is outside usable land."
+    },
+    {
+      "name": "Rapid valid patrol clicks must not report a false stale revision",
+      "ok": false,
+      "error": "World changed; refresh the quote."
+    }
+  ]
+}
