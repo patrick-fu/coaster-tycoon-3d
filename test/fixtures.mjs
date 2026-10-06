@@ -1,7 +1,8 @@
 import {Engine} from '../dist/simulation/index.js';
 export const flat={motion:{samples:[{x:0,y:0,z:0},{x:32,y:0,z:0}],chain:false,brake:null},price:61,station:false,end:{x:32,y:0,z:0,turn:0,pitch:0,bank:0},entry:{pitch:0,bank:0},cells:[{x:0,y:0,low:0,high:16,mask:15}]};
 export const motionRules={tickHz:40,tileMetres:4,gravity:9810,rolling:0,drag:0,stationSpeed:100,chainSpeed:80,brakeDeceleration:4,carLength:2000,seatsPerCar:2,maxCars:8,waitTicks:40,unloadTicks:40,bankDegrees:30};
-export const rules={motion:motionRules,id:'kernel-tests-v1',evidence:'project-candidate',pathPrice:12,portalPrice:50,terrainPrice:15,refundPerThousand:500,maxSupport:128,maxHeight:256,pieces:{
+export const guestRules={spawnTicks:40,walkTicks:8,decisionTicks:32,needTicks:512,queueSlotsPerTile:2,patienceTicks:4096,rideCooldownTicks:256,defaultRidePrice:20,maxRidePrice:1000,cashMin:100,cashMax:100,fareMin:100,fareMax:100,forceMin:2000,forceMax:2000,initialHunger:100,initialThirst:100,initialHappiness:800,initialEnergy:1000,needGrowth:1,rideHappiness:20,rideNausea:50};
+export const rules={guests:guestRules,motion:motionRules,id:'kernel-tests-v1',evidence:'project-candidate',pathPrice:12,portalPrice:50,terrainPrice:15,refundPerThousand:500,maxSupport:128,maxHeight:256,pieces:{
  station:{...flat,price:101,station:true},flat,
  right:{...flat,motion:{samples:Array.from({length:17},(_,i)=>i===0?{x:0,y:0,z:0}:i===16?{x:32,y:32,z:0}:{x:32*Math.sin(i*Math.PI/32),y:32*(1-Math.cos(i*Math.PI/32)),z:0}),chain:false,brake:null},price:80,end:{x:32,y:32,z:0,turn:1,pitch:0,bank:0},cells:[{x:0,y:0,low:0,high:16,mask:15},{x:32,y:0,low:0,high:16,mask:15}]},
  transition:{...flat,motion:{...flat.motion,samples:[{x:0,y:0,z:0},{x:32,y:0,z:8}]},price:90,end:{x:32,y:0,z:8,turn:0,pitch:1,bank:0},cells:[{x:0,y:0,low:0,high:32,mask:15}]},
