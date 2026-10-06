@@ -1,0 +1,30 @@
+import { ensure, integer, record, result } from './validation.js';
+export function createHost(engine) {
+    return (message) => result(() => {
+        ensure(message !== null && typeof message === 'object', 'INVALID_COMMAND', 'Expected a request envelope.');
+        const id = Object.getOwnPropertyDescriptor(message, 'id')?.value;
+        ensure(integer(id), 'INVALID_COMMAND', 'Invalid request identifier.');
+        const handled = result(() => {
+            record(message, ['id', 'request']);
+            const { request } = message;
+            record(request, ['type', 'payload']);
+            switch (request.type) {
+                case 'view': return engine.view(request.payload);
+                case 'inspect':
+                    record(request.payload, ['kind', 'id']);
+                    return engine.inspect(request.payload.kind, request.payload.id);
+                case 'quote': return engine.quote(request.payload);
+                case 'execute':
+                    record(request.payload, ['command', 'revision']);
+                    return engine.execute(request.payload.command, request.payload.revision);
+                case 'advance': return engine.advance(request.payload);
+                case 'save':
+                    ensure(request.payload === null, 'INVALID_COMMAND', 'Save request takes no payload.');
+                    return { ok: true, value: engine.exportSave() };
+                case 'load': return engine.restoreSave(request.payload);
+                default: ensure(false, 'INVALID_COMMAND', 'Unknown worker request.');
+            }
+        });
+        return { id, result: handled.ok ? handled.value : handled };
+    });
+}
