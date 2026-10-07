@@ -42,6 +42,12 @@ The selected dispatch/session/motion policy supported by a ride's family and
 variant, such as continuous circuit, shuttle, race or timed rotation.
 _Avoid_: Cosmetic animation, ride family
 
+**Constructed instance**:
+A ride or facility built in a saved park, with its selected family, object
+variant and operating mode. Its lifecycle identity survives saving and differs
+from the finite slot that can be reused after demolition.
+_Avoid_: Ride family, object variant, permanent slot ID
+
 **Scenario recipe**:
 A versioned authored park starting state, selected content/research, climate,
 restrictions, finances and objective/deadline. It is distinct from a saved

@@ -1,0 +1,20 @@
+{
+  "sourceFiles": [
+    {
+      "path": "docs/research/rct2-program/families.csv",
+      "sha256": "7dea80f79763e77fb4d45edc887edd7216285dcc02ba837105f3f07446c7964f"
+    },
+    {
+      "path": "docs/research/rct2-program/ride-variants.csv",
+      "sha256": "5f83f38ccb37c4d0d42eb4dc6ad329f6881cb4f5df3612ddda14866ed65b11e1"
+    },
+    {
+      "path": "docs/research/rct2-program/descriptor-parameters.csv",
+      "sha256": "93860fb9efefb8771a282e335ccb5acb198d2c0fa7b22bfc16a36f8075b6b0f3"
+    }
+  ],
+  "families": 79,
+  "variants": 155,
+  "sourceCommit": "978f596972c1163dc670d853dd6add4766f10dbd",
+  "status": "Reference metadata only; all original-content runtime capabilities remain unimplemented."
+}

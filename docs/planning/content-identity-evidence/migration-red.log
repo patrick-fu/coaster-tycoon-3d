@@ -1,0 +1,56 @@
+TAP version 13
+# Subtest: v7 imports receive independent content identities without changing their original rules or park state
+not ok 1 - v7 imports receive independent content identities without changing their original rules or park state
+  ---
+  duration_ms: 144.119353
+  location: '/workspace/coaster-content-identity/baseline/test/content-migration.test.mjs:14:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    
+    7 !== 8
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 8
+  actual: 7
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/coaster-content-identity/baseline/test/content-migration.test.mjs:17:37)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    node:internal/test_runner/harness:255:12
+    node:internal/process/task_queues:140:7
+    AsyncResource.runInAsyncScope (node:async_hooks:206:9)
+    AsyncResource.runMicrotask (node:internal/process/task_queues:137:8)
+  ...
+# Subtest: v7 passenger and queue migration preserves exact continuation with nondefault motion and finance rules
+ok 2 - v7 passenger and queue migration preserves exact continuation with nondefault motion and finance rules # SKIP test name does not match pattern
+  ---
+  duration_ms: 0.250294
+  ...
+# Subtest: v7 shop migration preserves retired income and stock when a demolished slot was reused for drinks
+ok 3 - v7 shop migration preserves retired income and stock when a demolished slot was reused for drinks # SKIP test name does not match pattern
+  ---
+  duration_ms: 0.155631
+  ...
+# Subtest: legacy content fields, malformed ledgers and changed numeric rules are rejected without losing quotes or pause
+ok 4 - legacy content fields, malformed ledgers and changed numeric rules are rejected without losing quotes or pause # SKIP test name does not match pattern
+  ---
+  duration_ms: 0.130164
+  ...
+# Subtest: legal v6 scenery normalization reaches v8 while forbidden v6 scenery is rejected
+ok 5 - legal v6 scenery normalization reaches v8 while forbidden v6 scenery is rejected # SKIP test name does not match pattern
+  ---
+  duration_ms: 0.116716
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 0
+# fail 1
+# cancelled 0
+# skipped 4
+# todo 0
+# duration_ms 327.623016

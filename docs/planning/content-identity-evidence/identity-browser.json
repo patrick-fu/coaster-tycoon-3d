@@ -1,0 +1,27 @@
+{
+  "browserVersion": "Chrome/155.0.8059.39",
+  "defaultProfile": "/home/box/.config/google-chrome",
+  "actualDownload": {
+    "name": "coaster-park.json",
+    "bytes": 765368,
+    "sha256": "fbb8d75269d78b68e0c5f64e0b7e89dc98ebf39d43c380d2b4bc9758003e2369",
+    "version": 8,
+    "contentVersion": 1
+  },
+  "exceptions": [],
+  "checks": [
+    "Actual IndexedDB reload restores v8 identities and the constructed probe",
+    "Reloaded v8 park continues actual worker ticks without losing content identities",
+    "Unsupported presentation rejects before updating the existing rendered park"
+  ],
+  "continuation": {
+    "tickDelta": 323,
+    "unchangedIdentities": true,
+    "guestCounts": [
+      15,
+      15
+    ],
+    "glError": 0
+  },
+  "ok": true
+}

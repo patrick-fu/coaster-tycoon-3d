@@ -1,0 +1,11 @@
+{
+  "ok": true,
+  "baselineSourceCommit": "5571d39bc88b024ecccaa46dbacfa6707099a449",
+  "baselineFormat": 7,
+  "targetFormat": 8,
+  "method": "Actual baseline kernel creates v7 state and reference continuation; new kernel imports those bytes and independently continues with different tick batching.",
+  "cases": [
+    "Nondefault v7 motion profile with occupied train and queue",
+    "Actual v7 retired food and reused drinks slot with different stock costs"
+  ]
+}

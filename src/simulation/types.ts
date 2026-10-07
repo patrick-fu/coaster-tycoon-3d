@@ -3,6 +3,7 @@ import type {GuestRules,PeopleState,Ledger} from './people.js';
 import type {Facility,FacilityElement,Staff,ServiceRules} from './services.js';
 import type {MotionRules,Train} from './motion.js';
 import type {SceneryRules,SceneryType} from './scenery.js';
+import type {ContentIdentity} from '../content/registry.js';
 export type Direction=0|1|2|3;
 export type Attitude=-1|0|1;
 export type Tile={x:number,y:number};
@@ -17,10 +18,10 @@ export type Path={id:number,kind:'path',tile:Tile,height:number,queueFor:number|
 export type Portal={id:number,kind:'portal',ride:number,station:number,role:'entrance'|'exit',tile:Tile,height:number,direction:Direction};
 export type Scenery={id:number,kind:'scenery',sceneryType:SceneryType,tile:Tile,height:number};
 export type Element=Track|Path|Portal|FacilityElement|AmenityElement|Scenery;
-export type Ride={id:number,name:string,anchor:Connector,track:number[],status:'closed'|'testing'|'open',cars:number,price:number,income:number,broken:boolean,lastInspection:number,queue:number[]};
-export type State={version:7,amenities:Amenity[],litter:Litter[],facilities:Facility[],retiredShopIncome:number,retiredStock:number,staff:Staff[],rules:string,side:number,tick:number,revision:number,topologyRevision:number,rng:number,paused:boolean,initialCash:number,cash:number,loan:number,maxLoan:number,spent:number,refunded:number,nextElement:number,nextEntity:number,people:PeopleState,ledger:Ledger,trains:Train[],terrain:number[],water:number[],owned:boolean[],rides:Ride[],elements:Element[]};
+export type Ride={id:number,instanceId:number,content:ContentIdentity,name:string,anchor:Connector,track:number[],status:'closed'|'testing'|'open',cars:number,price:number,income:number,broken:boolean,lastInspection:number,queue:number[]};
+export type State={version:8,contentVersion:1,nextInstance:number,amenities:Amenity[],litter:Litter[],facilities:Facility[],retiredShopIncome:number,retiredStock:number,staff:Staff[],rules:string,side:number,tick:number,revision:number,topologyRevision:number,rng:number,paused:boolean,initialCash:number,cash:number,loan:number,maxLoan:number,spent:number,refunded:number,nextElement:number,nextEntity:number,people:PeopleState,ledger:Ledger,trains:Train[],terrain:number[],water:number[],owned:boolean[],rides:Ride[],elements:Element[]};
 export type Command=
- | {type:'create-ride',name:string,tile:Tile,height:number,direction:Direction}
+ | {type:'create-ride',name:string,tile:Tile,height:number,direction:Direction,content?:ContentIdentity}
  | {type:'append-track',ride:number,piece:string}
  | {type:'remove-last-track',ride:number}
  | {type:'place-scenery',sceneryType:SceneryType,tile:Tile,height:number}
@@ -39,7 +40,7 @@ export type Command=
  | {type:'set-ride-broken',ride:number,broken:boolean}
  | {type:'place-amenity',kind:'bench'|'bin',path:number}
  | {type:'remove-amenity',id:number}
- | {type:'place-facility',name:string,kind:'food'|'drink'|'restroom',tile:Tile,height:number,direction:Direction}
+ | {type:'place-facility',name:string,kind:'food'|'drink'|'restroom',tile:Tile,height:number,direction:Direction,content?:ContentIdentity}
  | {type:'set-facility-open',facility:number,open:boolean}
  | {type:'set-facility-price',facility:number,price:number}
  | {type:'remove-facility',facility:number}
@@ -48,7 +49,7 @@ export type Command=
  | {type:'set-staff-patrol',staff:number,tiles:Tile[]}
  | {type:'set-loan',amount:number}
  | {type:'set-paused',paused:boolean};
-export type ErrorCode='INVALID_COMMAND'|'STALE_REVISION'|'OFF_MAP'|'NOT_OWNED'|'GEOMETRY'|'CLEARANCE'|'SUPPORT'|'CAPACITY'|'INSUFFICIENT_CASH'|'UNKNOWN_RIDE'|'UNKNOWN_ELEMENT'|'CIRCUIT_CLOSED'|'RIDE_ACTIVE'|'OPERATING_REQUIREMENTS'|'INVALID_SAVE'|'WRONG_RULES';
+export type ErrorCode='INVALID_COMMAND'|'INVALID_CONTENT'|'UNKNOWN_CONTENT'|'UNSUPPORTED_CONTENT'|'STALE_REVISION'|'OFF_MAP'|'NOT_OWNED'|'GEOMETRY'|'CLEARANCE'|'SUPPORT'|'CAPACITY'|'INSUFFICIENT_CASH'|'UNKNOWN_RIDE'|'UNKNOWN_ELEMENT'|'CIRCUIT_CLOSED'|'RIDE_ACTIVE'|'OPERATING_REQUIREMENTS'|'INVALID_SAVE'|'WRONG_RULES';
 export type Result<T>={ok:true,value:T}|{ok:false,error:{code:ErrorCode,message:string}};
 export type Quote={revision:string,cost:number,cells:Cell[],endpoint?:Connector};
 export type Receipt={revision:string,cost:number,id?:number};
