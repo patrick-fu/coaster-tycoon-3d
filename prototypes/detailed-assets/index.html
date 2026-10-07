@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Model Workshop — Asset Review Laboratory</title>
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "./vendor/three.module.js",
+      "three/addons/": "./vendor/addons/"
+    }
+  }
+  </script>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <canvas id="viewport" tabindex="0" aria-label="3D Model Viewport"></canvas>
+
+  <header class="workshop-header">
+    <div class="brand-bar">
+      <span class="brand-badge">MODEL WORKSHOP</span>
+      <span class="brand-desc">Asset Review Lab</span>
+    </div>
+    <nav id="asset-list" class="asset-switcher" aria-label="Candidate assets"></nav>
+    <div id="load-error" role="alert" class="error-banner"></div>
+  </header>
+
+  <section class="controls-shelf" aria-label="Camera and inspection controls">
+    <div class="control-group view-angles" role="group" aria-label="View orientation">
+      <button type="button" class="btn" data-view="overview" title="Isometric Overview">Overview</button>
+      <button type="button" class="btn" data-view="front" title="Front view">Front</button>
+      <button type="button" class="btn" data-view="rear" title="Rear view">Rear</button>
+      <button type="button" class="btn" data-view="left" title="Left view">Left</button>
+      <button type="button" class="btn" data-view="right" title="Right view">Right</button>
+    </div>
+    <div class="control-group overlays" role="group" aria-label="Inspection overlays">
+      <label class="check-control" for="anchors">
+        <input type="checkbox" id="anchors">
+        <span>Anchors</span>
+      </label>
+      <label class="check-control" for="wireframe">
+        <input type="checkbox" id="wireframe">
+        <span>Wireframe</span>
+      </label>
+      <label class="check-control" for="restraints">
+        <input type="checkbox" id="restraints">
+        <span>Restraints</span>
+      </label>
+    </div>
+    <button type="button" id="reload" class="btn btn-action" title="Reload active model" disabled>Reload</button>
+  </section>
+
+  <aside class="inspector-panel" aria-label="Asset specification and metrics">
+    <div class="panel-titlebar">
+      <span>Candidate Inspector</span>
+    </div>
+    <div class="panel-content">
+      <header class="asset-heading">
+        <h1 id="asset-title">No Model Selected</h1>
+        <p id="asset-subtitle">Select an authored component to review</p>
+      </header>
+      <div class="status-strip">
+        <span class="meta-label">Export Status:</span>
+        <span id="asset-status" class="status-value">Standby</span>
+      </div>
+      <section class="meta-block">
+        <h2 class="block-title">Topology &amp; Bounds</h2>
+        <div id="asset-metrics" class="metrics-pane">Awaiting asset selection…</div>
+      </section>
+      <section class="meta-block">
+        <h2 class="block-title">Authored Details</h2>
+        <div id="asset-details" class="details-pane">—</div>
+      </section>
+      <section class="meta-block">
+        <h2 class="block-title">Sub-node / Selection</h2>
+        <div id="selection-detail" class="selection-pane">Click geometry node to inspect</div>
+      </section>
+      <footer class="panel-footnote">
+        <p>Editable Blender/GLB pipeline · Candidate scale (~4 m repeat / tile pitch) · Original behavior unverified.</p>
+        <p class="nav-hint">Drag orbit · Right-drag pan · Wheel zoom</p>
+      </footer>
+    </div>
+  </aside>
+
+  <script type="module" src="./viewer.js"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+{
+  "runs": [
+    {
+      "task": "wooden-car",
+      "requestedModel": "gemini-3.8-flash-high",
+      "effectiveModel": null,
+      "conversation": "ae31d8d6-43c2-4b12-9c05-edf313bcfab3",
+      "turns": 1,
+      "status": "ERROR",
+      "exit": 1,
+      "responseBytes": 0,
+      "deniedActions": [],
+      "disposition": "Root interrupted repeated reads/no authored source; resumed same conversation with narrower code-write outcome"
+    },
+    {
+      "task": "timber-station",
+      "requestedModel": "gemini-3.8-flash-high",
+      "effectiveModel": null,
+      "conversation": "8da94bc8-58d1-43c0-95e2-90f5ceeb50dc",
+      "turns": 1,
+      "status": "ERROR",
+      "exit": 1,
+      "responseBytes": 0,
+      "deniedActions": [],
+      "disposition": "Root interrupted repeated reads/no authored source; resumed same conversation with narrower code-write outcome"
+    },
+    {
+      "task": "information-kiosk",
+      "requestedModel": "gemini-3.8-flash-high",
+      "effectiveModel": null,
+      "conversation": "dbae12c0-0f33-444c-addb-6c0450f25649",
+      "turns": 1,
+      "status": "ERROR",
+      "exit": 1,
+      "responseBytes": 0,
+      "deniedActions": [],
+      "disposition": "Root interrupted repeated reads/no authored source; resumed same conversation with narrower code-write outcome"
+    },
+    {
+      "task": "wooden-car-resume",
+      "requestedModel": "gemini-3.8-flash-high",
+      "effectiveModel": null,
+      "conversation": "ae31d8d6-43c2-4b12-9c05-edf313bcfab3",
+      "turns": 2,
+      "status": "SUCCESS",
+      "exit": 0,
+      "responseBytes": 2522,
+      "deniedActions": [],
+      "disposition": "Source output inspected and independently corrected/validated by root; not human visual acceptance"
+    },
+    {
+      "task": "timber-station-resume",
+      "requestedModel": "gemini-3.8-flash-high",
+      "effectiveModel": null,
+      "conversation": "8da94bc8-58d1-43c0-95e2-90f5ceeb50dc",
+      "turns": 2,
+      "status": "SUCCESS",
+      "exit": 0,
+      "responseBytes": 3530,
+      "deniedActions": [],
+      "disposition": "Source output inspected and independently corrected/validated by root; not human visual acceptance"
+    },
+    {
+      "task": "information-kiosk-resume",
+      "requestedModel": "gemini-3.8-flash-high",
+      "effectiveModel": null,
+      "conversation": "dbae12c0-0f33-444c-addb-6c0450f25649",
+      "turns": 2,
+      "status": "SUCCESS",
+      "exit": 0,
+      "responseBytes": 3111,
+      "deniedActions": [],
+      "disposition": "Source output inspected and independently corrected/validated by root; not human visual acceptance"
+    },
+    {
+      "task": "asset-lab-ui",
+      "requestedModel": "gemini-3.8-flash-high",
+      "effectiveModel": null,
+      "conversation": "6b1a3f53-dc68-48e8-b685-bcb9a6c1e9fe",
+      "turns": 1,
+      "status": "SUCCESS",
+      "exit": 0,
+      "responseBytes": 1713,
+      "deniedActions": [],
+      "disposition": "Source output inspected and independently corrected/validated by root; not human visual acceptance"
+    },
+    {
+      "task": "style-refinement",
+      "requestedModel": "gemini-3.8-flash-high",
+      "effectiveModel": null,
+      "conversation": "3fa7d304-096d-46d7-ad71-247d48097345",
+      "turns": 1,
+      "reportedStatus": "SUCCESS",
+      "verifiedStatus": "PARTIAL",
+      "exit": 0,
+      "responseBytes": 0,
+      "stderr": "[agy] print timeout after 6m0s with turn in progress; returning partial output",
+      "disposition": "Partial authored source retained and corrected by root; timeout and empty response do not establish successful completed delegation"
+    },
+    {
+      "task": "kiosk-style-resume",
+      "requestedModel": "gemini-3.8-flash-high",
+      "effectiveModel": null,
+      "conversation": "3fa7d304-096d-46d7-ad71-247d48097345",
+      "turns": 2,
+      "reportedStatus": "SUCCESS",
+      "verifiedStatus": "PARTIAL",
+      "exit": 0,
+      "responseBytes": 0,
+      "stderr": "[agy] print timeout after 3m0s with turn in progress; returning partial output",
+      "disposition": "Partial authored source retained and corrected by root; timeout and empty response do not establish successful completed delegation"
+    }
+  ],
+  "captureArchiveRoot": "/Volumes/WD/code/workspaces/coaster-detailed-assets/evidence/agy",
+  "rootCorrections": [
+    "Normalize returned anchors/restraint names",
+    "Real PropMap EMPTY root and handle UV",
+    "Corbel bounds/winding, Y-axis cylinder winding",
+    "Rail/road/guide/upstop wheel gaps and modular station openings",
+    "Restraint rotation, stale-load resource ownership",
+    "Remote package denoiser availability, Blender relative texture paths and runtime texture size",
+    "Visible sign placement, calibrated independent palette and printed map",
+    "Initial-load Reload request ownership and explicit ImageBitmap lifetime",
+    "Addon dependency closure and narrow viewport inspector layout",
+    "Trace-verified retired shadow uniform fixed using asset-owned depth material disposal; cumulative GL-error capture"
+  ],
+  "logicalReview": "asset_contract_sol_max;gpt-6.1-sol/max/read-only",
+  "originalParity": false,
+  "humanVisualAccepted": false,
+  "verificationScope": "Independent source/geometry/runtime checks, not original behavior, real GPU performance or Patrick visual acceptance",
+  "logicalReviews": [
+    {
+      "agent": "asset_contract_sol_max",
+      "model": "gpt-6.1-sol",
+      "effort": "max",
+      "scope": "Read-only export/anchor/source/loader/disposal review; initial load Reload and bitmap lifetime findings corrected"
+    },
+    {
+      "agent": "bitmap_lifetime_sol_max",
+      "model": "gpt-6.1-sol",
+      "effort": "max",
+      "scope": "Independent exact Three-source and actual upload-trace diagnosis; cached shared shadow sampler confirmed, asset-owned depth fix evaluated"
+    }
+  ]
+}

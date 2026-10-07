@@ -1,0 +1,213 @@
+{
+  "authoring": {
+    "assetId": "wooden-car",
+    "referenceVariant": "PTCT1-inspired wooden train car",
+    "candidateDimensions": {
+      "width": 1.44,
+      "length": 2.68,
+      "height": 1.24
+    },
+    "anchors": [
+      "RailRoot",
+      "BogieFront",
+      "BogieRear",
+      "Seat_FrontLeft",
+      "Seat_FrontRight",
+      "Seat_RearLeft",
+      "Seat_RearRight",
+      "Coupler_Front",
+      "Coupler_Rear"
+    ],
+    "restraints": [
+      "LapBar_Front",
+      "LapBar_Rear"
+    ],
+    "notes": "Four-passenger articulated wooden coaster car with sculpted tub, contoured vinyl seats, hinged lap bars, complete road/guide/upstop wheel groups, couplers, and export-stable UVs.",
+    "geometryIntent": "Independently authored PTC-inspired wooden coaster car geometry featuring shaped prow/nose curvature, closed cowl deck, varnished timber side inserts, recessed cockpit tubs, layered steel undercarriage stringers, fin brake equipment, two articulated two-passenger rows with individual contoured bucket cushions and fluted lumbar backrests, and dual bogie pivot assemblies with differentiated rubber treads and metal hubs."
+  },
+  "geometry": {
+    "meshObjects": 11,
+    "trianglesEvaluated": 19416,
+    "boundsBlender": {
+      "min": [
+        -0.7080000042915344,
+        -1.4700000286102295,
+        -0.19849567115306854
+      ],
+      "max": [
+        0.7080000042915344,
+        1.4700000286102295,
+        0.8999999761581421
+      ]
+    },
+    "materials": [
+      "boards",
+      "brass",
+      "metal",
+      "paint_red",
+      "rubber",
+      "seat_vinyl"
+    ],
+    "anchorsBlender": {
+      "RailRoot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "BogieFront": [
+        0.0,
+        -0.75,
+        0.17000000178813934
+      ],
+      "BogieRear": [
+        0.0,
+        0.75,
+        0.17000000178813934
+      ],
+      "Seat_FrontLeft": [
+        -0.3199999928474426,
+        -0.41999998688697815,
+        0.46000000834465027
+      ],
+      "Seat_FrontRight": [
+        0.3199999928474426,
+        -0.41999998688697815,
+        0.46000000834465027
+      ],
+      "Seat_RearLeft": [
+        -0.3199999928474426,
+        0.41999998688697815,
+        0.46000000834465027
+      ],
+      "Seat_RearRight": [
+        0.3199999928474426,
+        0.41999998688697815,
+        0.46000000834465027
+      ],
+      "Coupler_Front": [
+        0.0,
+        -1.340000033378601,
+        0.2199999988079071
+      ],
+      "Coupler_Rear": [
+        0.0,
+        1.340000033378601,
+        0.2199999988079071
+      ]
+    },
+    "issues": []
+  },
+  "blender": "4.3.2",
+  "sourceSha256": "568a3a3429d2d1ea3edabeadedf253c2b73305626fa58f665b9959b4edf171f2",
+  "driverSha256": "e0821cdf8bd1cd1ae74e4269ac5cc07fb7acdab4d25f394c0e8111c8ce786f2f",
+  "textureSources": [
+    {
+      "file": "Metal049A_1K-PNG_Color.png",
+      "sourceSha256": "3c5be68c8a56534f120e88cff835a321ca51459c8f31482f984958c7fbfda8e6",
+      "sourceDimensions": [
+        1024,
+        1024
+      ],
+      "runtimeDimensions": [
+        512,
+        512
+      ]
+    },
+    {
+      "file": "Metal049A_1K-PNG_Metalness.png",
+      "sourceSha256": "61c66550ad5636c9fb8bfb13fc5b2ff4b2ba7cb66831e8c68509124915be045e",
+      "sourceDimensions": [
+        1024,
+        1024
+      ],
+      "runtimeDimensions": [
+        512,
+        512
+      ]
+    },
+    {
+      "file": "Metal049A_1K-PNG_NormalGL.png",
+      "sourceSha256": "5b80adcc8092618a127bb7dfa547e3a35d156efd027c9daa579ac26f9098a678",
+      "sourceDimensions": [
+        1024,
+        1024
+      ],
+      "runtimeDimensions": [
+        512,
+        512
+      ]
+    },
+    {
+      "file": "Metal049A_1K-PNG_Roughness.png",
+      "sourceSha256": "a42d9eaba9bc232739c7cb86dee03805e66f50a065cecfbbfe906aaeb6b3ded2",
+      "sourceDimensions": [
+        1024,
+        1024
+      ],
+      "runtimeDimensions": [
+        512,
+        512
+      ]
+    },
+    {
+      "file": "WoodFloor043_1K-PNG_Color.png",
+      "sourceSha256": "55a7c25c191c8eb501d87a8872438dcfba307b3a043fee00ad9e89f0c413d684",
+      "sourceDimensions": [
+        1024,
+        512
+      ],
+      "runtimeDimensions": [
+        512,
+        512
+      ]
+    },
+    {
+      "file": "WoodFloor043_1K-PNG_Metalness.png",
+      "sourceSha256": "46ca3dbd1939c6c89b437c195afe51d816336baa0376b9289d6e7dc0757a69dc",
+      "sourceDimensions": [
+        1024,
+        512
+      ],
+      "runtimeDimensions": [
+        512,
+        512
+      ]
+    },
+    {
+      "file": "WoodFloor043_1K-PNG_NormalGL.png",
+      "sourceSha256": "ac8e1221726a512c4eb3cae98674bf0dda774382b2ba2577d36cbf8192986a6e",
+      "sourceDimensions": [
+        1024,
+        512
+      ],
+      "runtimeDimensions": [
+        512,
+        512
+      ]
+    },
+    {
+      "file": "WoodFloor043_1K-PNG_Roughness.png",
+      "sourceSha256": "c15241e172c474ad147003f8e957cf88d305d9e8d82809de201f04f7b969ec26",
+      "sourceDimensions": [
+        1024,
+        512
+      ],
+      "runtimeDimensions": [
+        512,
+        512
+      ]
+    }
+  ],
+  "batchStatic": true,
+  "glb": {
+    "file": "wooden-car.glb",
+    "sha256": "fc988c55ed60dcd5abf7c5e02ecbc1ac3a8cd828cfe7fe4bb8f30bcf21699b59",
+    "bytes": 3545440
+  },
+  "editableMaster": {
+    "file": "wooden-car.blend",
+    "sha256": "d0d97cd1a89b3e98563e149acdef5da4548f6d555c4476fc2377548d68c492a7",
+    "bytes": 5846056
+  },
+  "scope": "Candidate detailed asset laboratory; no original-metric or gameplay validation"
+}

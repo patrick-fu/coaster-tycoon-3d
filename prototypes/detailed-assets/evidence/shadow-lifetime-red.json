@@ -1,0 +1,32 @@
+{
+  "scope": "Actual remote failure trace before asset-owned shadow-material fix",
+  "uploads": [
+    {
+      "name": "texStorage2D",
+      "id": null,
+      "width": 0,
+      "height": 0,
+      "stack": "Error\n    at WebGL2RenderingContext.<computed> [as texStorage2D] (<anonymous>:1:479)\n    at Object.texStorage2D (http://127.0.0.1:4181/vendor/three.module.js:10719:7)\n    at uploadTexture (http://127.0.0.1:4181/vendor/three.module.js:12389:14)\n    at WebGLTextures.setTexture2D (http://127.0.0.1:4181/vendor/three.module.js:11591:5)\n    at SingleUniform.setValueT1 [as setValue] (http://127.0.0.1:4181/vendor/three.module.js:5539:11)\n    at WebGLUniforms.upload (http://127.0.0.1:4181/vendor/three.module.js:6133:7)\n    at setProgram (http://127.0.0.1:4181/vendor/three.module.js:18828:19)\n    at WebGLRenderer.renderBufferDirect (http://127.0.0.1:4181/vendor/three.module.js:17239:20)\n    at renderObject (http://127.0.0.1:4181/vendor/three.module.js:9613:15)\n    at renderObject (http://127.0.0.1:4181/vendor/three.module.js:9627:4)"
+    },
+    {
+      "name": "texSubImage2D",
+      "id": 13,
+      "width": 0,
+      "height": 0,
+      "stack": "Error\n    at WebGL2RenderingContext.<computed> [as texSubImage2D] (<anonymous>:1:479)\n    at Object.texSubImage2D (http://127.0.0.1:4181/vendor/three.module.js:10663:7)\n    at uploadTexture (http://127.0.0.1:4181/vendor/three.module.js:12395:14)\n    at WebGLTextures.setTexture2D (http://127.0.0.1:4181/vendor/three.module.js:11591:5)\n    at SingleUniform.setValueT1 [as setValue] (http://127.0.0.1:4181/vendor/three.module.js:5539:11)\n    at WebGLUniforms.upload (http://127.0.0.1:4181/vendor/three.module.js:6133:7)\n    at setProgram (http://127.0.0.1:4181/vendor/three.module.js:18828:19)\n    at WebGLRenderer.renderBufferDirect (http://127.0.0.1:4181/vendor/three.module.js:17239:20)\n    at renderObject (http://127.0.0.1:4181/vendor/three.module.js:9613:15)\n    at renderObject (http://127.0.0.1:4181/vendor/three.module.js:9627:4)"
+    }
+  ],
+  "sharedBitmapsAcrossRoots": false,
+  "closedImageUploads": [
+    {
+      "name": "texSubImage2D",
+      "id": 13,
+      "width": 0,
+      "height": 0,
+      "stack": "Error\n    at WebGL2RenderingContext.<computed> [as texSubImage2D] (<anonymous>:1:479)\n    at Object.texSubImage2D (http://127.0.0.1:4181/vendor/three.module.js:10663:7)\n    at uploadTexture (http://127.0.0.1:4181/vendor/three.module.js:12395:14)\n    at WebGLTextures.setTexture2D (http://127.0.0.1:4181/vendor/three.module.js:11591:5)\n    at SingleUniform.setValueT1 [as setValue] (http://127.0.0.1:4181/vendor/three.module.js:5539:11)\n    at WebGLUniforms.upload (http://127.0.0.1:4181/vendor/three.module.js:6133:7)\n    at setProgram (http://127.0.0.1:4181/vendor/three.module.js:18828:19)\n    at WebGLRenderer.renderBufferDirect (http://127.0.0.1:4181/vendor/three.module.js:17239:20)\n    at renderObject (http://127.0.0.1:4181/vendor/three.module.js:9613:15)\n    at renderObject (http://127.0.0.1:4181/vendor/three.module.js:9627:4)"
+    }
+  ],
+  "fullTraceSha256": "e38c74c8071ff4971244c72c8b0fe30940a58b5d8083b8eb9d3ee83a894fce67",
+  "fullTraceRetainedExternally": "/Volumes/WD/code/workspaces/coaster-detailed-assets/evidence/bitmap-upload-trace/bitmap-diagnosis.json",
+  "disposition": "Fixed by per-asset customDepthMaterial ownership, confirmed by cumulative-zero-error final browser run and expected19 textures after reload"
+}

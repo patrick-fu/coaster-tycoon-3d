@@ -1,0 +1,29 @@
+{
+  "stages": [
+    {
+      "stage": "validation",
+      "exit": 0
+    },
+    {
+      "stage": "package",
+      "exit": 0
+    },
+    {
+      "stage": "browser",
+      "exit": 0
+    }
+  ],
+  "sourceHashes": {
+    "sources/export.py": "e0821cdf8bd1cd1ae74e4269ac5cc07fb7acdab4d25f394c0e8111c8ce786f2f",
+    "sources/package.py": "ee3325accb159943a8e378752263b005d8f116261de18c980e53e222e2418006",
+    "sources/capture.py": "6c417c7293b52a724120d335c4cc70e2c7204212cdfae4dd51a5cbd70d339f97",
+    "sources/wooden-car.py": "568a3a3429d2d1ea3edabeadedf253c2b73305626fa58f665b9959b4edf171f2",
+    "sources/timber-station.py": "a8565b402aa55489b17f9fc6ac28180efd9c2ab92d6a7f3e9bafb16a26812cf4",
+    "sources/information-kiosk.py": "f9c380c69056054f1e89d707a8a5a4e86c9e2928513b008be686eb099d0337b8",
+    "site/index.html": "c5569d91911315848294fdf9eea716df456d90809830857f3cae9382038ae527",
+    "site/viewer.js": "5f88a9531dbedbc96d8bd362bc6987f88ab7f6c3558835a6210a7a6f5ac9c111",
+    "site/style.css": "44313e216bd7de13bd74f82faf5674426f6f6dcda45144f1ab6abc3aa4251eff",
+    "site/validate.mjs": "dd875d7fe185ec2cb614fa5d427474527daa79891757174eb2b48a55f1fdf7d2"
+  },
+  "passed": true
+}
