@@ -1,0 +1,21 @@
+{
+  "logicalExperimentAuthor": {
+    "model": "gpt-6.1-sol",
+    "effort": "max",
+    "scope": "Isolated CPU measurements and minimal mixed-ride plan; no production writes"
+  },
+  "independentVisualCoordinateReview": {
+    "model": "gemini-3.8-flash-high",
+    "conversationId": "530ef22a-0271-428a-9081-0d7ad1d75511",
+    "status": "SUCCESS",
+    "exit": 0,
+    "responseBytes": 2697,
+    "stderrBytes": 0,
+    "frozenRunnerSha256": "b09b2768f5fb9405afbec6ab1cbea473944bbd819472a04fdc78b451fa8a5a54",
+    "frozenContractSha256": "9ff240fe46febf8addabfdf8c69650746e3b394e1cc63ec7dc3eb1bcfbd850fa",
+    "verdict": "No verified findings",
+    "rootCorrection": "The review prose says approximately .08 m of horizontal kiosk overflow. Actual extent is 4.1239477992 m versus 4 m reservation: .1239477992 m total overflow. The underlying measured JSON and rejection are correct.",
+    "limits": "Static coordinate review only; no curve, browser, original or production adapter acceptance"
+  },
+  "retainedRawDirectory": "/Volumes/WD/code/workspaces/coaster-native-calibration/visual-review/raw"
+}

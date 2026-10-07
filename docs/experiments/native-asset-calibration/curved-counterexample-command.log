@@ -1,0 +1,34 @@
+Exact executed SSH command (one execution; exit 0):
+
+ssh grok-build 'cd /workspace/coaster-native-calibration || exit 2
+node /workspace/coaster-native-calibration/curved-counterexample.mjs --output /workspace/coaster-native-calibration/curved-counterexample-result.json > /workspace/coaster-native-calibration/curved-counterexample.stdout.jsonl 2> /workspace/coaster-native-calibration/curved-counterexample.stderr.log
+curved_replay_exit=$?
+printf '\''%s\n'\'' "$curved_replay_exit" > /workspace/coaster-native-calibration/curved-counterexample.exit
+cat /workspace/coaster-native-calibration/curved-counterexample.stdout.jsonl
+cat /workspace/coaster-native-calibration/curved-counterexample.stderr.log >&2
+exit "$curved_replay_exit"'
+
+Local retained directory:
+/Volumes/WD/code/workspaces/coaster-native-calibration
+
+Remote retained directory:
+/workspace/coaster-native-calibration
+
+Identical SHA-256 values checked with local shasum and remote sha256sum:
+b95b2fd8f90ec3cb994b05ec8a0f6ebe71e8893380c27ff0fd84863787546012  curved-counterexample.mjs
+b8eef0231d5eedce48b17a9c00465d18c8995296bb7c6845519955c92e8f2311  curved-counterexample-result.json
+ebf840cc340fc13bff9b303cefdb5ce7dc262a85b3f333d814b40e33e90851fb  curved-counterexample.stdout.jsonl
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  curved-counterexample.stderr.log
+9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa  curved-counterexample.exit
+
+Reported witness reproduced without changes to expected values:
+- Actual input model hash fc988c55ed60dcd5abf7c5e02ecbc1ac3a8cd828cfe7fe4bb8f30bcf21699b59.
+- 8m / 32-chord rounded quarter-course length 12576mm; root inputs 6000mm and 3320mm.
+- Straight 2680mm control: 0 shell intersection pairs.
+- Curved rigid pose: 30 shell intersection pairs; coupler residual 0.030718982413461864m.
+- First pair 87/11, lead edge 0 fraction 0.9455778566636841.
+- Following-triangle barycentrics [0.20729934465877922,0.0045391413622160835,0.7881615139790047].
+- Strict edge-interior crossing true; all 14 replay checks pass; empty stderr; exit 0.
+
+Scope: CPU geometry replay only; no production simulation, asset modification,
+render, minimum-safe-radius determination or 16m acceptance claim.

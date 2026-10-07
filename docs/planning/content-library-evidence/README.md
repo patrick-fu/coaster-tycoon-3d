@@ -65,3 +65,6 @@ wood/steel/water/fixed operating differences, full shops/staff/finance/scenarios
 original comparison and full Classic management windows remain separate work.
 
 ![Classic content library in the actual park](library-desktop.png)
+
+Published-byte and actual-browser follow-up checks are retained in
+`publication.json`, `public-http.json` and `public-browser.json`.
