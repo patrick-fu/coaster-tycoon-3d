@@ -1,0 +1,1012 @@
+{
+  "capturedAt": "2026-10-07T14:58:41.374337+00:00",
+  "purpose": "Candidate source material corpus; external retained source bundles, no game build/export performed",
+  "licenseEvidence": {
+    "path": "materials/ambientCG-license.html",
+    "url": "https://docs.ambientcg.com/license/",
+    "bytes": 34106,
+    "sha256": "60138e09b277c89977841462634b36e99d7bae5b77174777813502069c59461c"
+  },
+  "assets": [
+    {
+      "id": "Wood096",
+      "role": "sawn timber grain",
+      "provider": "ambientCG",
+      "page": "https://ambientcg.com/a/Wood096",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://docs.ambientcg.com/license/",
+      "useStatus": "acquired candidate; not approved art or shipped resource",
+      "metadata": {
+        "path": "materials/Wood096-metadata.json",
+        "url": "https://ambientcg.com/api/v2/full_json?id=Wood096&include=downloadData%2CpreviewData%2CdimensionsData",
+        "bytes": 12593,
+        "sha256": "21ce87e576382056d0c9d3398d42b35d9353b2c33f76c21279c22587dbbe56fa"
+      },
+      "bundle": {
+        "path": "materials/Wood096_1K-PNG.zip",
+        "url": "https://ambientcg.com/get?file=Wood096_1K-PNG.zip",
+        "bytes": 15153371,
+        "sha256": "08bb999fff1a56789e33f77ab94124f1734238185fd2ff40e0ab109ce2f555b5"
+      },
+      "preview": {
+        "path": "materials/Wood096-preview.jpg",
+        "url": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/512-JPG-FFFFFF/Wood096.jpg",
+        "bytes": 53413,
+        "sha256": "f83aca048d0d1973940581dde979a03406ed6bab23d3d59c7435515cb7f1bbb2"
+      },
+      "members": [
+        {
+          "name": "Wood096_1K-PNG.usdc",
+          "bytes": 2985,
+          "sha256": "b72ca280c22278e97321c41d9d49ec207223b4177194b2708e891457438a3c4c"
+        },
+        {
+          "name": "Wood096_1K-PNG_Color.png",
+          "bytes": 1076245,
+          "sha256": "2635d3b950808e52d5de4ce4ee4b3aa35430ffd3117e00c1b2cfb155168e6b47"
+        },
+        {
+          "name": "Wood096_1K-PNG_Displacement.png",
+          "bytes": 1734025,
+          "sha256": "a51233132bb59b720a8d0344de6078f08ed7eed3e2be5fbd3239dfc74cc55e72"
+        },
+        {
+          "name": "Wood096_1K-PNG_NormalDX.png",
+          "bytes": 5092460,
+          "sha256": "f2af51ee14362feae4a461e779b671d7091567b0bb96cebf7e78f7d3217b5d71"
+        },
+        {
+          "name": "Wood096_1K-PNG_NormalGL.png",
+          "bytes": 5092366,
+          "sha256": "5b9f71b56cc74a397c9263619f7ef0cfc7d668762f4f2c960e4bd883dc2891c5"
+        },
+        {
+          "name": "Wood096_1K-PNG_Roughness.png",
+          "bytes": 609059,
+          "sha256": "bcba2c9b971c17875e0d8b6e11b234ce86a1c4110bd72725c2586b8950738418"
+        },
+        {
+          "name": "Wood096_1K-PNG.blend",
+          "bytes": 1313553,
+          "sha256": "b9f3f9ca8d26bb6b5a90650e54460dcf67e06e4c6bb4bb71a86c089a5d062a08"
+        },
+        {
+          "name": "Wood096_1K-PNG.mtlx",
+          "bytes": 2242,
+          "sha256": "c0835ea6e208f68d616b3f88a639b7c02dda27f0cd264727dd9a351294910998"
+        },
+        {
+          "name": "Wood096_1K-PNG.tres",
+          "bytes": 800,
+          "sha256": "6b2bae0174d5e2213fe27d590a9c3e9a6ac95a728cc0542db92c568f24b92bc5"
+        },
+        {
+          "name": "Wood096.png",
+          "bytes": 227580,
+          "sha256": "67bf7b142ba191f5caa9279d6d8f2ce600a7280d6199b5f0f1384c8197af2a14"
+        }
+      ]
+    },
+    {
+      "id": "WoodFloor043",
+      "role": "board surface study",
+      "provider": "ambientCG",
+      "page": "https://ambientcg.com/a/WoodFloor043",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://docs.ambientcg.com/license/",
+      "useStatus": "acquired candidate; not approved art or shipped resource",
+      "metadata": {
+        "path": "materials/WoodFloor043-metadata.json",
+        "url": "https://ambientcg.com/api/v2/full_json?id=WoodFloor043&include=downloadData%2CpreviewData%2CdimensionsData",
+        "bytes": 15918,
+        "sha256": "634b7e8dd203b14c6a2355d4604bf0a6b081d760079d4fcd171b5c75bf3e4482"
+      },
+      "bundle": {
+        "path": "materials/WoodFloor043_1K-PNG.zip",
+        "url": "https://ambientcg.com/get?file=WoodFloor043_1K-PNG.zip",
+        "bytes": 7581590,
+        "sha256": "6211c1589cc988b72fc74c3ad638be8db789a7cb619537d02cf7b6e0e6b30bb8"
+      },
+      "preview": {
+        "path": "materials/WoodFloor043-preview.jpg",
+        "url": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/512-JPG-FFFFFF/WoodFloor043.jpg",
+        "bytes": 86732,
+        "sha256": "41d566ca1fb58010b82ae952b4f966a818533e1288c33b0d421cd62e235c2211"
+      },
+      "members": [
+        {
+          "name": "WoodFloor043_1K-PNG.usdc",
+          "bytes": 3088,
+          "sha256": "6c209480157849b6870bb135d9c67808cfed1db03d58b5105aadc946f19d916b"
+        },
+        {
+          "name": "WoodFloor043_1K-PNG_AmbientOcclusion.png",
+          "bytes": 93431,
+          "sha256": "2d3922461ff5a83544ca1529af35b10b823b829be1abd2e8cc12a1f1f623e17e"
+        },
+        {
+          "name": "WoodFloor043_1K-PNG_Color.png",
+          "bytes": 659574,
+          "sha256": "55a7c25c191c8eb501d87a8872438dcfba307b3a043fee00ad9e89f0c413d684"
+        },
+        {
+          "name": "WoodFloor043_1K-PNG_Displacement.png",
+          "bytes": 772379,
+          "sha256": "a416ffa6bec0e875ab524fce0977e4b7961711c2201b33e345265bca9929ebff"
+        },
+        {
+          "name": "WoodFloor043_1K-PNG_Metalness.png",
+          "bytes": 1644,
+          "sha256": "46ca3dbd1939c6c89b437c195afe51d816336baa0376b9289d6e7dc0757a69dc"
+        },
+        {
+          "name": "WoodFloor043_1K-PNG_NormalDX.png",
+          "bytes": 2206381,
+          "sha256": "969a03cfa922fdcf962cb59051372797b82956a8532c64036f0f0704ff99444c"
+        },
+        {
+          "name": "WoodFloor043_1K-PNG_NormalGL.png",
+          "bytes": 2205607,
+          "sha256": "ac8e1221726a512c4eb3cae98674bf0dda774382b2ba2577d36cbf8192986a6e"
+        },
+        {
+          "name": "WoodFloor043_1K-PNG_Roughness.png",
+          "bytes": 190238,
+          "sha256": "c15241e172c474ad147003f8e957cf88d305d9e8d82809de201f04f7b969ec26"
+        },
+        {
+          "name": "WoodFloor043_1K-PNG.blend",
+          "bytes": 1119812,
+          "sha256": "428fe780d075dd59d12ab42e4e3107f908ebf4aa79a15e2add761c3144882b81"
+        },
+        {
+          "name": "WoodFloor043_1K-PNG.mtlx",
+          "bytes": 2667,
+          "sha256": "1a4ce6a09d2d5f7a36968263a2561dc089c4f0a1871660609b6442e14d2f8dc2"
+        },
+        {
+          "name": "WoodFloor043_1K-PNG.tres",
+          "bytes": 1238,
+          "sha256": "b9904dd4899205465218d2c424f9efbb22d2812c2e1ac1c7991f4831900437ac"
+        },
+        {
+          "name": "WoodFloor043.png",
+          "bytes": 323259,
+          "sha256": "2ffba56e86df4820084dcf1e3694a6a49b24e5a4e0480d96d70d68d8a2dfea27"
+        }
+      ]
+    },
+    {
+      "id": "Bark014",
+      "role": "conifer bark",
+      "provider": "ambientCG",
+      "page": "https://ambientcg.com/a/Bark014",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://docs.ambientcg.com/license/",
+      "useStatus": "acquired candidate; not approved art or shipped resource",
+      "metadata": {
+        "path": "materials/Bark014-metadata.json",
+        "url": "https://ambientcg.com/api/v2/full_json?id=Bark014&include=downloadData%2CpreviewData%2CdimensionsData",
+        "bytes": 12799,
+        "sha256": "19e85cb49eb82403d0e9f817e0b6036e862b26ab774db6af99e21b7f483bc635"
+      },
+      "bundle": {
+        "path": "materials/Bark014_1K-PNG.zip",
+        "url": "https://ambientcg.com/get?file=Bark014_1K-PNG.zip",
+        "bytes": 17756190,
+        "sha256": "57b041e2b2494d7a044405317716db21accc9c876e0dfbc1480a6f0554a564ed"
+      },
+      "preview": {
+        "path": "materials/Bark014-preview.jpg",
+        "url": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/512-JPG-FFFFFF/Bark014.jpg",
+        "bytes": 133810,
+        "sha256": "5cff4dc60863fe08c55d9eac8ae22514b890377066856bff48e6dba8f55bc3e8"
+      },
+      "members": [
+        {
+          "name": "Bark014_1K-PNG.usdc",
+          "bytes": 3001,
+          "sha256": "751e65db886b4dd99d51fee222bd7cf0467fee71514c8cb2e17a2a70bd319613"
+        },
+        {
+          "name": "Bark014_1K-PNG_AmbientOcclusion.png",
+          "bytes": 674403,
+          "sha256": "b9792d0963902c12a4c0b3c1db08b4195c2d58b44d9955ed90b072e40734d76b"
+        },
+        {
+          "name": "Bark014_1K-PNG_Color.png",
+          "bytes": 2117356,
+          "sha256": "6a4bdc1b737cb5886c64495b3c9b7cd2a1ae568550c87594537319edc66819c6"
+        },
+        {
+          "name": "Bark014_1K-PNG_Displacement.png",
+          "bytes": 1594126,
+          "sha256": "80d4fe815b9ac1c7c1bcf45711f4dc0ece30d1dc0abdba343e82eb8f75da862f"
+        },
+        {
+          "name": "Bark014_1K-PNG_NormalDX.png",
+          "bytes": 5508638,
+          "sha256": "acb2b0ece25b867fb0dc8e568c77cfa2fb3911765e4b3e553f48259220ca70b9"
+        },
+        {
+          "name": "Bark014_1K-PNG_NormalGL.png",
+          "bytes": 5508537,
+          "sha256": "efc1cc84fbbe018651a8b57147b7078a1e316cbeebf42ba6572ca7786a4771f9"
+        },
+        {
+          "name": "Bark014_1K-PNG_Roughness.png",
+          "bytes": 763384,
+          "sha256": "0675f21938dfca7db5632745e6ae42b3d38bd518ecff7d16e86c42f853bf90f1"
+        },
+        {
+          "name": "Bark014_1K-PNG.blend",
+          "bytes": 1109636,
+          "sha256": "5e3c05c9533279748db177d17b714b44f1a675d3cec2a2385e7299c6870a8e57"
+        },
+        {
+          "name": "Bark014_1K-PNG.mtlx",
+          "bytes": 2242,
+          "sha256": "27681003cd44a02979d4f99a42ba916a2147a4dc994f2a84e4f292c2ab28030b"
+        },
+        {
+          "name": "Bark014_1K-PNG.tres",
+          "bytes": 1010,
+          "sha256": "861ab622ccb9ebca81683060079d5dd8f8e766f96e56adcfb60d5aef10f07c5a"
+        },
+        {
+          "name": "Bark014.png",
+          "bytes": 471925,
+          "sha256": "6b8186c03c0808fa34260a416a8a12228ece881705a4445266f967f8fcd421ba"
+        }
+      ]
+    },
+    {
+      "id": "RoofingTiles013A",
+      "role": "clay roofing",
+      "provider": "ambientCG",
+      "page": "https://ambientcg.com/a/RoofingTiles013A",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://docs.ambientcg.com/license/",
+      "useStatus": "acquired candidate; not approved art or shipped resource",
+      "metadata": {
+        "path": "materials/RoofingTiles013A-metadata.json",
+        "url": "https://ambientcg.com/api/v2/full_json?id=RoofingTiles013A&include=downloadData%2CpreviewData%2CdimensionsData",
+        "bytes": 13739,
+        "sha256": "24cc395516bd36df8b0141b8d0816689ec73c8e80583928aa4d4e36b806ab7d3"
+      },
+      "bundle": {
+        "path": "materials/RoofingTiles013A_1K-PNG.zip",
+        "url": "https://ambientcg.com/get?file=RoofingTiles013A_1K-PNG.zip",
+        "bytes": 12212479,
+        "sha256": "fc4025f4b5b5a83463406b73f38eca674a9976a3b2785c7e41da5ff23567e3e8"
+      },
+      "preview": {
+        "path": "materials/RoofingTiles013A-preview.jpg",
+        "url": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/512-JPG-FFFFFF/RoofingTiles013A.jpg",
+        "bytes": 52620,
+        "sha256": "4fb21319f05307080e164396a3a1f86558455a612c747f57aa4af474537b1bab"
+      },
+      "members": [
+        {
+          "name": "RoofingTiles013A_1K-PNG.usdc",
+          "bytes": 3098,
+          "sha256": "40944a5afe380f5bcfbf150550cedc8464262e1db2918abc74c89331fa80901c"
+        },
+        {
+          "name": "RoofingTiles013A_1K-PNG_AmbientOcclusion.png",
+          "bytes": 247685,
+          "sha256": "e867370c2d649a19630529ef2099347ec4e004f6face658414c9ba2edec98b7b"
+        },
+        {
+          "name": "RoofingTiles013A_1K-PNG_Color.png",
+          "bytes": 813925,
+          "sha256": "ae2037e4c4934b42b60c799b2755cb73c164a883410f89e22ac54ed5ecb4d1de"
+        },
+        {
+          "name": "RoofingTiles013A_1K-PNG_Displacement.png",
+          "bytes": 1187545,
+          "sha256": "07f0b630ea5d3916b3be7cdd0ea63e53a2f71f31c27708213be2b1de7a4e85d6"
+        },
+        {
+          "name": "RoofingTiles013A_1K-PNG_NormalDX.png",
+          "bytes": 4029275,
+          "sha256": "a105257948d796b1d6d818eb26986cb81fefe2a901cc66888aa4ed332ab56997"
+        },
+        {
+          "name": "RoofingTiles013A_1K-PNG_NormalGL.png",
+          "bytes": 4029497,
+          "sha256": "2488e6f327db93fe29558a9326ee4dba94022f944e2daf070a7ed47825fa82ab"
+        },
+        {
+          "name": "RoofingTiles013A_1K-PNG_Opacity.png",
+          "bytes": 3410,
+          "sha256": "2573be7fcc0dff438323320beb593414d49785d5cbbda0420bea3bfd0aa4039e"
+        },
+        {
+          "name": "RoofingTiles013A_1K-PNG_Roughness.png",
+          "bytes": 523350,
+          "sha256": "575b1674cfd09dde9db152b917503c77fa4187693762bf2f8824521975bac812"
+        },
+        {
+          "name": "RoofingTiles013A_1K-PNG.blend",
+          "bytes": 1120228,
+          "sha256": "910c7663a62397ae6e40b8d1c51732c2157090a88105f57c3499ddbb32989d26"
+        },
+        {
+          "name": "RoofingTiles013A_1K-PNG.mtlx",
+          "bytes": 2734,
+          "sha256": "871363e8ed9f1b1f2df13fd79d143f61d858a4ac69e15e0835bfb2071672b78c"
+        },
+        {
+          "name": "RoofingTiles013A_1K-PNG.tres",
+          "bytes": 1055,
+          "sha256": "96879ab7f29d3fd2c5f5c85ea4d3769d6d37ef4aea43b055e56950012edb4781"
+        },
+        {
+          "name": "RoofingTiles013A.png",
+          "bytes": 248179,
+          "sha256": "08134e554bdf4bdcde7542969014ca1bb230973ade37091adeffe84decd554a5"
+        }
+      ]
+    },
+    {
+      "id": "PavingStones150",
+      "role": "cobblestone path",
+      "provider": "ambientCG",
+      "page": "https://ambientcg.com/a/PavingStones150",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://docs.ambientcg.com/license/",
+      "useStatus": "acquired candidate; not approved art or shipped resource",
+      "metadata": {
+        "path": "materials/PavingStones150-metadata.json",
+        "url": "https://ambientcg.com/api/v2/full_json?id=PavingStones150&include=downloadData%2CpreviewData%2CdimensionsData",
+        "bytes": 16132,
+        "sha256": "0695c450ef06585d13ed01c2f55b0b85789a684ceccd731110aeae867b4076f5"
+      },
+      "bundle": {
+        "path": "materials/PavingStones150_1K-PNG.zip",
+        "url": "https://ambientcg.com/get?file=PavingStones150_1K-PNG.zip",
+        "bytes": 10384047,
+        "sha256": "9c78ed11bce2b25c320375143f3e00ec8440834313145039ae2887fb9b000446"
+      },
+      "preview": {
+        "path": "materials/PavingStones150-preview.jpg",
+        "url": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/512-JPG-FFFFFF/PavingStones150.jpg",
+        "bytes": 122357,
+        "sha256": "da37996a46657de5f721c4f5e469871b9963202c0247ba2f27ab62129d4f083b"
+      },
+      "members": [
+        {
+          "name": "PavingStones150_1K-PNG.usdc",
+          "bytes": 3214,
+          "sha256": "e1cbf7611659082dff78216b6c3757f2f830f45060f4af895bf996f35b099ba4"
+        },
+        {
+          "name": "PavingStones150_1K-PNG_AmbientOcclusion.png",
+          "bytes": 342472,
+          "sha256": "f9eb54840d3ccb0e13193d25627957d630a8e753573abd86336b1ca42334879f"
+        },
+        {
+          "name": "PavingStones150_1K-PNG_Color.png",
+          "bytes": 1047783,
+          "sha256": "6edfd5a37c97368fcc52dafbce45ec2af5e8566bd640e9674b1a6fedfc32f79c"
+        },
+        {
+          "name": "PavingStones150_1K-PNG_Displacement.png",
+          "bytes": 874501,
+          "sha256": "86a4da1cb4b6b8fb27cdd8478abf1f6591ee7742431971210288cc3cfa26b055"
+        },
+        {
+          "name": "PavingStones150_1K-PNG_NormalDX.png",
+          "bytes": 3103927,
+          "sha256": "ba5964e707fc173c6144d6bc9ce79dc148134ad25b16dec1cc94c18ca91ef5f5"
+        },
+        {
+          "name": "PavingStones150_1K-PNG_NormalGL.png",
+          "bytes": 3104151,
+          "sha256": "d13f9acb139cfed7c215a12e7c81576fd7fb2bb15c69a1afe500990e1a12c096"
+        },
+        {
+          "name": "PavingStones150_1K-PNG_Roughness.png",
+          "bytes": 332816,
+          "sha256": "71c6dc7d19e24a9c342e8f28e3757aa591b8b8be0d9c00c517674090cc867efb"
+        },
+        {
+          "name": "PavingStones150_1K-PNG.blend",
+          "bytes": 1112340,
+          "sha256": "9eab35e681773a33fc1e6c80154ff57f113a455309dd5125fc3a3fe82a937946"
+        },
+        {
+          "name": "PavingStones150_1K-PNG.mtlx",
+          "bytes": 2362,
+          "sha256": "4ce059531ab78050a5bb58205f9f8390e1b654f6acb591656e67822df394ef24"
+        },
+        {
+          "name": "PavingStones150_1K-PNG.tres",
+          "bytes": 1050,
+          "sha256": "f5d2dc3e5fde91207ae3921d44600cc900a22a9698f09bda3c07a7f7a8707507"
+        },
+        {
+          "name": "PavingStones150.png",
+          "bytes": 457073,
+          "sha256": "de1ff6a6a4e230aea45d8b8b27fa0e36275e0788a738f8d6b4511ffb291753d4"
+        }
+      ]
+    },
+    {
+      "id": "Metal049A",
+      "role": "clean mechanical metal",
+      "provider": "ambientCG",
+      "page": "https://ambientcg.com/a/Metal049A",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://docs.ambientcg.com/license/",
+      "useStatus": "acquired candidate; not approved art or shipped resource",
+      "metadata": {
+        "path": "materials/Metal049A-metadata.json",
+        "url": "https://ambientcg.com/api/v2/full_json?id=Metal049A&include=downloadData%2CpreviewData%2CdimensionsData",
+        "bytes": 12855,
+        "sha256": "458057cc4e6a9ae2a1c67b459066cf9167244436f6e3b113f61114e9935b3438"
+      },
+      "bundle": {
+        "path": "materials/Metal049A_1K-PNG.zip",
+        "url": "https://ambientcg.com/get?file=Metal049A_1K-PNG.zip",
+        "bytes": 6456067,
+        "sha256": "802ac78fec292e86642630a510f9e6f869bd702fc2f2e81ad3a2160e80047880"
+      },
+      "preview": {
+        "path": "materials/Metal049A-preview.jpg",
+        "url": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/512-JPG-FFFFFF/Metal049A.jpg",
+        "bytes": 37509,
+        "sha256": "27c9979418c6557079d21daeecb82b48e6704b039a8faba787be5e2bdf8d5802"
+      },
+      "members": [
+        {
+          "name": "Metal049A_1K-PNG.usdc",
+          "bytes": 2980,
+          "sha256": "03ba43a5f11d926cbcb40a0e675d56ccf3fd2ce03f9f7bb1bebef8c656a54812"
+        },
+        {
+          "name": "Metal049A_1K-PNG_Color.png",
+          "bytes": 535253,
+          "sha256": "3c5be68c8a56534f120e88cff835a321ca51459c8f31482f984958c7fbfda8e6"
+        },
+        {
+          "name": "Metal049A_1K-PNG_Displacement.png",
+          "bytes": 675950,
+          "sha256": "ab99d67f75b4557fde8033e3fb1d6de6c240d18a15a5ca8d6acfa439d245f350"
+        },
+        {
+          "name": "Metal049A_1K-PNG_Metalness.png",
+          "bytes": 4281,
+          "sha256": "61c66550ad5636c9fb8bfb13fc5b2ff4b2ba7cb66831e8c68509124915be045e"
+        },
+        {
+          "name": "Metal049A_1K-PNG_NormalDX.png",
+          "bytes": 1792071,
+          "sha256": "53cee4c1353be3322f2dcc8b1569063ca57e2b774d5d35abf22abc9628ca14ae"
+        },
+        {
+          "name": "Metal049A_1K-PNG_NormalGL.png",
+          "bytes": 1791977,
+          "sha256": "5b80adcc8092618a127bb7dfa547e3a35d156efd027c9daa579ac26f9098a678"
+        },
+        {
+          "name": "Metal049A_1K-PNG_Roughness.png",
+          "bytes": 325089,
+          "sha256": "a42d9eaba9bc232739c7cb86dee03805e66f50a065cecfbbfe906aaeb6b3ded2"
+        },
+        {
+          "name": "Metal049A_1K-PNG.blend",
+          "bytes": 1109588,
+          "sha256": "290df349f4572dcddf930839cfff286b2e63e83787f05720f0adb2a29c794fe2"
+        },
+        {
+          "name": "Metal049A_1K-PNG.mtlx",
+          "bytes": 2613,
+          "sha256": "f0e8cc7e18c5ae7a0542a6799aaf4b7880891fda612ba67b0f0a37e7afc9da6a"
+        },
+        {
+          "name": "Metal049A_1K-PNG.tres",
+          "bytes": 1008,
+          "sha256": "231b5eb079b8a91781c24204ede0eb0b4f093dad2c4b9a7bf117e5301ff585aa"
+        },
+        {
+          "name": "Metal049A.png",
+          "bytes": 213095,
+          "sha256": "3bbcbdba0af442486a884fa80e9870a94d32403253f94fe13ddfffcd20abd260"
+        }
+      ]
+    },
+    {
+      "id": "Grass001",
+      "role": "lawn",
+      "provider": "ambientCG",
+      "page": "https://ambientcg.com/a/Grass001",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://docs.ambientcg.com/license/",
+      "useStatus": "acquired candidate; not approved art or shipped resource",
+      "metadata": {
+        "path": "materials/Grass001-metadata.json",
+        "url": "https://ambientcg.com/api/v2/full_json?id=Grass001&include=downloadData%2CpreviewData%2CdimensionsData",
+        "bytes": 13102,
+        "sha256": "10c4ef847713704fbf16f10951f20642f96bf1574e8ba0c0948cd0946bf10aad"
+      },
+      "bundle": {
+        "path": "materials/Grass001_1K-PNG.zip",
+        "url": "https://ambientcg.com/get?file=Grass001_1K-PNG.zip",
+        "bytes": 19229149,
+        "sha256": "43e6807e6fab786978a967a74b0a3abae9b43fadcce0f269e2e8045c758d5a3e"
+      },
+      "preview": {
+        "path": "materials/Grass001-preview.jpg",
+        "url": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/512-JPG-FFFFFF/Grass001.jpg",
+        "bytes": 162795,
+        "sha256": "9886dedc2917a75ad384a26994b167cb3a2a1b1c4227ca35546ceef923ce9d0a"
+      },
+      "members": [
+        {
+          "name": "Grass001_1K-PNG.usdc",
+          "bytes": 2969,
+          "sha256": "980a3f3407758e8d8d57e7f00225ec93459dcdfeffe796d2ebd504dcdbaf5dcc"
+        },
+        {
+          "name": "Grass001_1K-PNG_AmbientOcclusion.png",
+          "bytes": 878336,
+          "sha256": "cd295bfc5c4e87ed561e0084ecf88ec1d811e01cdfc721ff01cd9f05a596bd6e"
+        },
+        {
+          "name": "Grass001_1K-PNG_Color.png",
+          "bytes": 1937763,
+          "sha256": "c79fda29c8a1249157e5e90b033cde2b126905ef2961de3edca1255f322e64ae"
+        },
+        {
+          "name": "Grass001_1K-PNG_Displacement.png",
+          "bytes": 2013981,
+          "sha256": "b6de07741f59f3ede0ed76286b59d1ef849186438829307c29157492b57d460f"
+        },
+        {
+          "name": "Grass001_1K-PNG_NormalDX.png",
+          "bytes": 5985465,
+          "sha256": "c52859929ff1d1d7b775ef28b03ec9c7d8993299980f6ea507bf039675cc02c5"
+        },
+        {
+          "name": "Grass001_1K-PNG_NormalGL.png",
+          "bytes": 5984854,
+          "sha256": "671d017230245d39e16b9a6bdf0b77b4f98f9158850e03745eff0cd7f12a7f5d"
+        },
+        {
+          "name": "Grass001_1K-PNG_Roughness.png",
+          "bytes": 797863,
+          "sha256": "badbb391fa314817d71d43f591ddb5c5caecb8f40dc3394bb49b276d30a3f582"
+        },
+        {
+          "name": "Grass001_1K-PNG.blend",
+          "bytes": 1109012,
+          "sha256": "6fa47592230622937291ba18bd76cf6120ee2f11b5bed48449dbde7ef83d20f0"
+        },
+        {
+          "name": "Grass001_1K-PNG.mtlx",
+          "bytes": 2257,
+          "sha256": "53cf48ceb18f40f786dfb4097ef38f4d3b918ea0b8d5505abaf67e6ea6a40f91"
+        },
+        {
+          "name": "Grass001_1K-PNG.tres",
+          "bytes": 1015,
+          "sha256": "e4ab41bc39572e6098e87af707601ff53e3697a00c317cce0090555b2e1376ca"
+        },
+        {
+          "name": "Grass001.png",
+          "bytes": 513474,
+          "sha256": "e7a25afc56822ebfbc7f860ed5d22338898d3e7e46f98ad39ff47261c1018ef8"
+        }
+      ]
+    },
+    {
+      "id": "Fabric081C",
+      "role": "awning and umbrella fabric study",
+      "provider": "ambientCG",
+      "page": "https://ambientcg.com/a/Fabric081C",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://docs.ambientcg.com/license/",
+      "useStatus": "acquired candidate; not approved art or shipped resource",
+      "metadata": {
+        "path": "materials/Fabric081C-metadata.json",
+        "url": "https://ambientcg.com/api/v2/full_json?id=Fabric081C&include=downloadData%2CpreviewData%2CdimensionsData",
+        "bytes": 12972,
+        "sha256": "6830d230b1b4e5ac12e9171cf1401c3304b8298c5fc7fb61c6e2f30a0586565f"
+      },
+      "bundle": {
+        "path": "materials/Fabric081C_1K-PNG.zip",
+        "url": "https://ambientcg.com/get?file=Fabric081C_1K-PNG.zip",
+        "bytes": 14421965,
+        "sha256": "c9de806827984e7f80a69c917661a78449fe08f217e87661b182a6e19951f489"
+      },
+      "preview": {
+        "path": "materials/Fabric081C-preview.jpg",
+        "url": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/512-JPG-FFFFFF/Fabric081C.jpg",
+        "bytes": 22032,
+        "sha256": "656655160e12ef9975839c3c9ddbac6f7e540353520c1addbe49005562480e72"
+      },
+      "members": [
+        {
+          "name": "Fabric081C_1K-PNG.usdc",
+          "bytes": 2991,
+          "sha256": "66d02dce960f93c0a5cd0c31ffaa2cd77da2427fab6234839bc9a8e4dbb47c74"
+        },
+        {
+          "name": "Fabric081C_1K-PNG_AmbientOcclusion.png",
+          "bytes": 626345,
+          "sha256": "af39835e1785915b2ffdab913bbf00fca2ca4494efff7f11e4c43425908fcd83"
+        },
+        {
+          "name": "Fabric081C_1K-PNG_Color.png",
+          "bytes": 116823,
+          "sha256": "0723468f450e7e112738a2051e33403e3fa5a606837fcca8dd1f473817956a6d"
+        },
+        {
+          "name": "Fabric081C_1K-PNG_Displacement.png",
+          "bytes": 1895383,
+          "sha256": "74e4a4c753aac9bdbea78d30cb0a9049cca33d760ffb248ff9873f354127e15d"
+        },
+        {
+          "name": "Fabric081C_1K-PNG_NormalDX.png",
+          "bytes": 5089303,
+          "sha256": "4a6dbf7431ab0522ebe1796c2a1c7d2d81a41267d41c3ebe83d7ec4149783a7b"
+        },
+        {
+          "name": "Fabric081C_1K-PNG_NormalGL.png",
+          "bytes": 5088743,
+          "sha256": "6db4f24cf86fe3f1e4cde6b86b670da0726602929e3ef60d3c137a14cadb5b6f"
+        },
+        {
+          "name": "Fabric081C_1K-PNG_Roughness.png",
+          "bytes": 310712,
+          "sha256": "0a20570d975bfc6adb15b6881ef09e0d213f7f5a99d48735ef1564d464ca800d"
+        },
+        {
+          "name": "Fabric081C_1K-PNG.blend",
+          "bytes": 1109428,
+          "sha256": "bdb825b318151df64f9b246543f4c52b16e81619c735e7c57f4b0389735a1af7"
+        },
+        {
+          "name": "Fabric081C_1K-PNG.mtlx",
+          "bytes": 2287,
+          "sha256": "4f625f87a277d18f8bf24fb0619c93c87af5664778ea83b4d75aa68777791d33"
+        },
+        {
+          "name": "Fabric081C_1K-PNG.tres",
+          "bytes": 1025,
+          "sha256": "b9eb63a0d8890e0a51cab397509018e791b15d1fa6c90d0642c1a306b618bf42"
+        },
+        {
+          "name": "Fabric081C.png",
+          "bytes": 176871,
+          "sha256": "04d15dc50e990368ad3fedaca632f8e309133f7cf98ca462f1dab7b47b179728"
+        }
+      ]
+    },
+    {
+      "id": "Concrete034",
+      "role": "foundations",
+      "provider": "ambientCG",
+      "page": "https://ambientcg.com/a/Concrete034",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://docs.ambientcg.com/license/",
+      "useStatus": "acquired candidate; not approved art or shipped resource",
+      "metadata": {
+        "path": "materials/Concrete034-metadata.json",
+        "url": "https://ambientcg.com/api/v2/full_json?id=Concrete034&include=downloadData%2CpreviewData%2CdimensionsData",
+        "bytes": 15117,
+        "sha256": "31258bf1eda669f7d02d1220427da7e51aa8b03eedd8544417c754aa44197b16"
+      },
+      "bundle": {
+        "path": "materials/Concrete034_1K-PNG.zip",
+        "url": "https://ambientcg.com/get?file=Concrete034_1K-PNG.zip",
+        "bytes": 8081290,
+        "sha256": "d79cbba91fa35bcd491400baf69e4428f60c33522e0221e17b2c0431025d0ecc"
+      },
+      "preview": {
+        "path": "materials/Concrete034-preview.jpg",
+        "url": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/512-JPG-FFFFFF/Concrete034.jpg",
+        "bytes": 39850,
+        "sha256": "596d2bbd098ef2d994223a13d87d2dec5ade7be1920bbf129e5e30f078cd3f10"
+      },
+      "members": [
+        {
+          "name": "Concrete034_1K-PNG.usdc",
+          "bytes": 2909,
+          "sha256": "eb8db21d7b5249c9a1839c43c1efd451590f78ae9079b58bbdc4340039ca3bd8"
+        },
+        {
+          "name": "Concrete034_1K-PNG_Color.png",
+          "bytes": 288279,
+          "sha256": "dffbbd0fd7249e938a30b650675262034fe0face516b0d036e9c34cae5a99190"
+        },
+        {
+          "name": "Concrete034_1K-PNG_Displacement.png",
+          "bytes": 819292,
+          "sha256": "c0b238c188451dd5f4cee3d1dc30582d9a4906b3231439ee19e22af8fda3ea60"
+        },
+        {
+          "name": "Concrete034_1K-PNG_NormalDX.png",
+          "bytes": 2715983,
+          "sha256": "7a82a48d6cf758a4d7575767cfc4f97f6d456a2bbfc653cab84d3d29bb30e4b0"
+        },
+        {
+          "name": "Concrete034_1K-PNG_NormalGL.png",
+          "bytes": 2715117,
+          "sha256": "7378313b5e38d138a2048d0a300194444ba7b205b062751a93a91bde8dfbccf9"
+        },
+        {
+          "name": "Concrete034_1K-PNG_Roughness.png",
+          "bytes": 206202,
+          "sha256": "b2f8b937d4c9d1d305fc30b915b28712d166939bba1c3823ad39767dd22e1f07"
+        },
+        {
+          "name": "Concrete034_1K-PNG.blend",
+          "bytes": 1099204,
+          "sha256": "f760fc92722eae7bb49830356712ed0b613147c7f404812eb4fe4672082a9ce3"
+        },
+        {
+          "name": "Concrete034_1K-PNG.mtlx",
+          "bytes": 2302,
+          "sha256": "360de9eabfa9a23b0fb4b87797e56dc9e627883e56704858af5322a973e692ad"
+        },
+        {
+          "name": "Concrete034_1K-PNG.tres",
+          "bytes": 816,
+          "sha256": "bc835c25dc523a5a574dcfdd6de2f6d68bd1e25a883ffa9098887bc94ad2dc37"
+        },
+        {
+          "name": "Concrete034.png",
+          "bytes": 229324,
+          "sha256": "5290401e637c31afdf35057e74b3f3de031ec4bd0dcf996e11491cf3ca86bb74"
+        }
+      ]
+    },
+    {
+      "id": "Ground110",
+      "role": "gravel service ground",
+      "provider": "ambientCG",
+      "page": "https://ambientcg.com/a/Ground110",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://docs.ambientcg.com/license/",
+      "useStatus": "acquired candidate; not approved art or shipped resource",
+      "metadata": {
+        "path": "materials/Ground110-metadata.json",
+        "url": "https://ambientcg.com/api/v2/full_json?id=Ground110&include=downloadData%2CpreviewData%2CdimensionsData",
+        "bytes": 13086,
+        "sha256": "cfacc30e1045b091418cc306a509f9c447f9fd7b44f7197f7b68dd804bb29690"
+      },
+      "bundle": {
+        "path": "materials/Ground110_1K-PNG.zip",
+        "url": "https://ambientcg.com/get?file=Ground110_1K-PNG.zip",
+        "bytes": 21103171,
+        "sha256": "61a7badaa6328c03fe31dbebf50e52728e6cf4fb585c9b6bdcb97b52c8fa3f24"
+      },
+      "preview": {
+        "path": "materials/Ground110-preview.jpg",
+        "url": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/512-JPG-FFFFFF/Ground110.jpg",
+        "bytes": 140419,
+        "sha256": "b9be492baae46262ddfaf45be51ca5699e9f7bdeb603035c1da9aa7ba47f2fcc"
+      },
+      "members": [
+        {
+          "name": "Ground110_1K-PNG.usdc",
+          "bytes": 3101,
+          "sha256": "bc3ae9eba6acd898b18c8a10961bb7e18bbe620c4f62d8e83b2507252894ee1b"
+        },
+        {
+          "name": "Ground110_1K-PNG_AmbientOcclusion.png",
+          "bytes": 865850,
+          "sha256": "67531e9ddca726973b312a10d9dc3047e910dbfec9697eeaad9300ffc40e8185"
+        },
+        {
+          "name": "Ground110_1K-PNG_Color.png",
+          "bytes": 2516963,
+          "sha256": "ecbf168756fc3f513d7653b6a59f957e816df2fc07bd7ac194cd2adc82c6bab1"
+        },
+        {
+          "name": "Ground110_1K-PNG_Displacement.png",
+          "bytes": 1805823,
+          "sha256": "ced3a4ee6ea54e59397b6b01fdbfe4b51d5f5c5230d645a22ce13255c494e805"
+        },
+        {
+          "name": "Ground110_1K-PNG_NormalDX.png",
+          "bytes": 6644901,
+          "sha256": "a5c272a31a29061f6b0551cce62afe71a9b49d6346bf799b38049d3a40be62be"
+        },
+        {
+          "name": "Ground110_1K-PNG_NormalGL.png",
+          "bytes": 6645255,
+          "sha256": "ae3239a73b9fe82894e28d7a2d661d1100c164a9e6cfb95f7443da2fc0291258"
+        },
+        {
+          "name": "Ground110_1K-PNG_Roughness.png",
+          "bytes": 770391,
+          "sha256": "7a4d0a1d8f58a8c2ecda48e4ededd2587ba0188ebdd2d206acbd69bc865ad882"
+        },
+        {
+          "name": "Ground110_1K-PNG.blend",
+          "bytes": 1324065,
+          "sha256": "56e89a71932415093f74aa126bf44a910576917dbfa4224824eb92e6ccd68417"
+        },
+        {
+          "name": "Ground110_1K-PNG.mtlx",
+          "bytes": 2272,
+          "sha256": "f2c6ea57395524c8d761202449519fbfe1969690769d63f9a4cbd747ac641fc8"
+        },
+        {
+          "name": "Ground110_1K-PNG.tres",
+          "bytes": 1020,
+          "sha256": "8b1b028cab791deadddf4f1274094b489368ea2ab7819d5b594b987657a02ace"
+        },
+        {
+          "name": "Ground110.png",
+          "bytes": 521398,
+          "sha256": "03ca48fcb8e734f143a64b117d9fd643fc1a8e830cd86f2e872af08e91daa882"
+        }
+      ]
+    },
+    {
+      "id": "Plaster001",
+      "role": "painted masonry",
+      "provider": "ambientCG",
+      "page": "https://ambientcg.com/a/Plaster001",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://docs.ambientcg.com/license/",
+      "useStatus": "acquired candidate; not approved art or shipped resource",
+      "metadata": {
+        "path": "materials/Plaster001-metadata.json",
+        "url": "https://ambientcg.com/api/v2/full_json?id=Plaster001&include=downloadData%2CpreviewData%2CdimensionsData",
+        "bytes": 12853,
+        "sha256": "e3a2e6a21029460d7b8c1cff6aa72721b51157d9f7fd7d06e43cbad651cdd5a5"
+      },
+      "bundle": {
+        "path": "materials/Plaster001_1K-PNG.zip",
+        "url": "https://ambientcg.com/get?file=Plaster001_1K-PNG.zip",
+        "bytes": 16614092,
+        "sha256": "080f62f6a8b052e4963dfbdaed8b6da86c002d5b1aeea7f82dc27a9a11400aba"
+      },
+      "preview": {
+        "path": "materials/Plaster001-preview.jpg",
+        "url": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/512-JPG-FFFFFF/Plaster001.jpg",
+        "bytes": 73735,
+        "sha256": "9888a66ec9ad8155cd7660c8b9ca0ebc2521457f1be80e61cfd699289dd8fd05"
+      },
+      "members": [
+        {
+          "name": "Plaster001_1K-PNG.usdc",
+          "bytes": 2905,
+          "sha256": "2543ae31dd5fcb564dbf5e011077388d5c4842beb2103537fcd9c2e198e5c379"
+        },
+        {
+          "name": "Plaster001_1K-PNG_Color.png",
+          "bytes": 1308061,
+          "sha256": "ecf4f5e9a877f942f67292cb43ebdc960a321aea97baf28ab41a2f6d61585612"
+        },
+        {
+          "name": "Plaster001_1K-PNG_Displacement.png",
+          "bytes": 1806043,
+          "sha256": "62de7183f2ccd14bc50e566e70542f1248562601095113bbd41d5d2a6862d824"
+        },
+        {
+          "name": "Plaster001_1K-PNG_NormalDX.png",
+          "bytes": 5854125,
+          "sha256": "fd4e5d7bbad718263ec742558d57154e221e654b3c6842c9d41ee197a801a359"
+        },
+        {
+          "name": "Plaster001_1K-PNG_NormalGL.png",
+          "bytes": 5854150,
+          "sha256": "e48b8f1744819de3acd6e9696da7c71d83c62a3e721050f4112bdfa88eae3ab8"
+        },
+        {
+          "name": "Plaster001_1K-PNG_Roughness.png",
+          "bytes": 355457,
+          "sha256": "ade29ec97652165aa49ba24cd2f90cb27750c91d498298ebcd6e0ebad366c665"
+        },
+        {
+          "name": "Plaster001_1K-PNG.blend",
+          "bytes": 1099204,
+          "sha256": "44bed97421892300602bad711260bf84e2eb7bd4ca1d3a550c37e32f8176318f"
+        },
+        {
+          "name": "Plaster001_1K-PNG.mtlx",
+          "bytes": 2287,
+          "sha256": "4b2565fb2aa512d295e76e6915afe879c230443bd55634e423d816e41a2d5b4a"
+        },
+        {
+          "name": "Plaster001_1K-PNG.tres",
+          "bytes": 812,
+          "sha256": "4269087c19da8d8b366237af6e375a9dc40f2cfe25cce31c6d47fc5386e34cdb"
+        },
+        {
+          "name": "Plaster001.png",
+          "bytes": 329146,
+          "sha256": "bbbffb69fc80ab990a81495df059f0d35a0224973541ce0cccdb772f4a807f90"
+        }
+      ]
+    },
+    {
+      "id": "Bricks051",
+      "role": "brick wall study",
+      "provider": "ambientCG",
+      "page": "https://ambientcg.com/a/Bricks051",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://docs.ambientcg.com/license/",
+      "useStatus": "acquired candidate; not approved art or shipped resource",
+      "metadata": {
+        "path": "materials/Bricks051-metadata.json",
+        "url": "https://ambientcg.com/api/v2/full_json?id=Bricks051&include=downloadData%2CpreviewData%2CdimensionsData",
+        "bytes": 15103,
+        "sha256": "320912357fb929f19dff9116f33c5418c579b85627c07a4c2e8024e51b3cbd82"
+      },
+      "bundle": {
+        "path": "materials/Bricks051_1K-PNG.zip",
+        "url": "https://ambientcg.com/get?file=Bricks051_1K-PNG.zip",
+        "bytes": 16665975,
+        "sha256": "9223035fb3a281eeb86caf0aba499994b5b790b3b4b6b6a3633274f2097a937a"
+      },
+      "preview": {
+        "path": "materials/Bricks051-preview.jpg",
+        "url": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/512-JPG-FFFFFF/Bricks051.jpg",
+        "bytes": 104904,
+        "sha256": "07c7f4ade82aebd62a761c6ebff9db1285b83ce27f302fad3f9b8d5180498648"
+      },
+      "members": [
+        {
+          "name": "Bricks051_1K-PNG.usdc",
+          "bytes": 2917,
+          "sha256": "0b194739c053e4db82281be9137c8a9c1a765bc8bc6713ed7d2ed2254f6c0ae7"
+        },
+        {
+          "name": "Bricks051_1K-PNG_Color.png",
+          "bytes": 1807156,
+          "sha256": "9adbf36c4f0d6a7f7eb3b85dc35c5c022c15bea802562e5bf9966d83d29facd4"
+        },
+        {
+          "name": "Bricks051_1K-PNG_Displacement.png",
+          "bytes": 1595130,
+          "sha256": "bc7d09573181c80d0f22bbe8d0e798c62882fc274477dc99e9635e03db39318e"
+        },
+        {
+          "name": "Bricks051_1K-PNG_NormalDX.png",
+          "bytes": 5674179,
+          "sha256": "9bb3bc71e336e92f561557dc3f2a04f2904cc4f36711ce539a7a0e6361efa50c"
+        },
+        {
+          "name": "Bricks051_1K-PNG_NormalGL.png",
+          "bytes": 5673741,
+          "sha256": "8b14ad4bd834773a26b0bbc4f4afd80fe92c939aa3f49385a41a1fb8165646e8"
+        },
+        {
+          "name": "Bricks051_1K-PNG_Roughness.png",
+          "bytes": 425776,
+          "sha256": "fce4ec1fb6301336503c0d65dd6c14aaf7288dfba5b20c4cd6ab15abf9f33a9d"
+        },
+        {
+          "name": "Bricks051_1K-PNG.blend",
+          "bytes": 1099412,
+          "sha256": "9caabd07df8b7194196efbc7e43884d1d331ea95364cf6213df7c646620d3eb5"
+        },
+        {
+          "name": "Bricks051_1K-PNG.mtlx",
+          "bytes": 2272,
+          "sha256": "6df48b9d9e34315894d183979b1cfe0f24d7acf3f60b2074f71931e8db742055"
+        },
+        {
+          "name": "Bricks051_1K-PNG.tres",
+          "bytes": 808,
+          "sha256": "d4e34967bdc027cc1a92d6189cdb4e91426f0b1d88a1db8a0844dce20fe6e4de"
+        },
+        {
+          "name": "Bricks051.png",
+          "bytes": 382576,
+          "sha256": "500ac381f62a24c916853fdf67854d4b5f11194e14dbee25343dee7e67f02e5c"
+        }
+      ]
+    }
+  ],
+  "retainedSourceRoot": "/Volumes/WD/code/workspaces/coaster-rct2-program/evidence",
+  "actualExportStatus": "No Blender export or browser model validation yet"
+}

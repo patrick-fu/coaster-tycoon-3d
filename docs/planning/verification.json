@@ -1,0 +1,50 @@
+{
+  "type": "Read-only documentation and reference-data validation, not game tests",
+  "sourceHead": "7b8c51235a3ee1c24728bf8e933dcb1fc714c91b",
+  "reproduction": [
+    {
+      "path": "docs/research/rct2-program/ride-variants.csv",
+      "sha256": "5f83f38ccb37c4d0d42eb4dc6ad329f6881cb4f5df3612ddda14866ed65b11e1",
+      "reproduced": true
+    },
+    {
+      "path": "docs/research/rct2-program/products-reference.csv",
+      "sha256": "95773de9c79e6cff67e071da1dd990c61c42a0283e6e261900cb6e9a27fd74b9",
+      "reproduced": true
+    },
+    {
+      "path": "docs/research/rct2-program/base-content.csv",
+      "sha256": "8f666d950f11b439458e8bdf23f32f8f832c458ce0535ecb8b327526907e493b",
+      "reproduced": true
+    },
+    {
+      "path": "docs/research/rct2-program/families.csv",
+      "sha256": "7dea80f79763e77fb4d45edc887edd7216285dcc02ba837105f3f07446c7964f",
+      "reproduced": true
+    },
+    {
+      "path": "docs/research/rct2-program/descriptor-parameters.csv",
+      "sha256": "93860fb9efefb8771a282e335ccb5acb198d2c0fa7b22bfc16a36f8075b6b0f3",
+      "reproduced": true
+    },
+    {
+      "path": "docs/research/rct2-program/catalogue-summary.json",
+      "sha256": "ce0209ffdf2702353d58116fb6480f778c20e9a20db172ec7c9fe414c768d251",
+      "reproduced": true
+    }
+  ],
+  "missingLocalLinks": [],
+  "originalExecutableObserved": false,
+  "newModelExported": false,
+  "remoteExporterProbe": {
+    "host": "grok-build",
+    "blender": "4.3.2",
+    "gltfOperatorPresent": true
+  },
+  "unverified": [
+    "exact-original runtime/numerics/scenarios",
+    "new exported model quality",
+    "real integrated GPU performance",
+    "human visual/play acceptance"
+  ]
+}

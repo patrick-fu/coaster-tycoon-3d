@@ -1,0 +1,158 @@
+{
+  "captureScope": "Planning documents only; no Mac build/test/render; successful CLI execution is not original or visual acceptance",
+  "runs": [
+    {
+      "task": "art-pipeline",
+      "requestedModel": "gemini-3.8-flash-high",
+      "effectiveModel": null,
+      "terminalStatus": "SUCCESS",
+      "exitCode": 0,
+      "nonemptyFinalResponse": true,
+      "stderrBytes": 0,
+      "completedToolCounts": {
+        "view_file": 9,
+        "write_to_file": 1
+      },
+      "deniedActions": [],
+      "streamSha256": "8aa72e8dd64cc1e9bf18ba62c288b64e23503152853660fd727e56a1eb8c00de",
+      "captureArchiveRoot": "/Volumes/WD/code/workspaces/coaster-rct2-program/evidence/agy",
+      "error": null,
+      "artifactSha256": "9ef5c75c0778d3f7c159dc7e956a0001378c106f3781c281613983b57fab7db9",
+      "artifactDisposition": "Root retained useful workflow/detail guidance in corrected specifications; rejected unsupported numerical, taxonomy, version and example-evidence claims"
+    },
+    {
+      "task": "visual-corpus",
+      "requestedModel": "gemini-3.8-flash-high",
+      "effectiveModel": null,
+      "terminalStatus": "SUCCESS",
+      "exitCode": 0,
+      "nonemptyFinalResponse": true,
+      "stderrBytes": 0,
+      "completedToolCounts": {
+        "view_file": 8,
+        "write_to_file": 1
+      },
+      "deniedActions": [],
+      "streamSha256": "34684908f27c30c4520907be57cc492b3a1b94eb136018cc8817094ef92a1e3d",
+      "captureArchiveRoot": "/Volumes/WD/code/workspaces/coaster-rct2-program/evidence/agy",
+      "error": null,
+      "artifactSha256": "abe38c5fd5b3e61d4a8f5c4d0e4177e4d86d7edae7fcdcab6b60543431f8ba19",
+      "artifactDisposition": "Root retained useful workflow/detail guidance in corrected specifications; rejected unsupported numerical, taxonomy, version and example-evidence claims"
+    },
+    {
+      "task": "frontend",
+      "requestedModel": "gemini-3.8-flash-high",
+      "effectiveModel": null,
+      "terminalStatus": "ERROR",
+      "exitCode": 3,
+      "nonemptyFinalResponse": false,
+      "stderrBytes": 448,
+      "completedToolCounts": {
+        "view_file": 9
+      },
+      "deniedActions": [],
+      "streamSha256": "2e7f886a9a9a579779b1388d54f7a2bfbb079bd40961f56a6bb9e5177f5d42ba",
+      "captureArchiveRoot": "/Volumes/WD/code/workspaces/coaster-rct2-program/evidence/agy",
+      "error": "There was a network issue connecting to the server, please try again.",
+      "artifactDisposition": "Failed network stream; no output artifact, retry captured separately"
+    },
+    {
+      "task": "frontend-retry",
+      "requestedModel": "gemini-3.8-flash-high",
+      "effectiveModel": null,
+      "terminalStatus": "SUCCESS",
+      "exitCode": 0,
+      "nonemptyFinalResponse": true,
+      "stderrBytes": 0,
+      "completedToolCounts": {
+        "view_file": 8,
+        "write_to_file": 1
+      },
+      "deniedActions": [],
+      "streamSha256": "b167cda536835074ddc2fcf0a86ed42e5b0226247dd872d7512b8bf5f1235ce9",
+      "captureArchiveRoot": "/Volumes/WD/code/workspaces/coaster-rct2-program/evidence/agy",
+      "error": null,
+      "artifactSha256": "47df0d84b47e4eb44e4bef5a158709d65d6e8cfdce98f4f3bc96c30e19f42075",
+      "artifactDisposition": "Root retained useful workflow/detail guidance in corrected specifications; rejected unsupported numerical, taxonomy, version and example-evidence claims"
+    }
+  ],
+  "logicalInvestigations": [
+    {
+      "task": "catalogue_sol_max",
+      "requestedModel": "gpt-6.1-sol",
+      "effort": "max",
+      "forkTurns": "none",
+      "scope": "read-only logical research",
+      "outcome": "findings retained and corrected by root; source pins and limitations in research index"
+    },
+    {
+      "task": "coaster_physics_sol_max",
+      "requestedModel": "gpt-6.1-sol",
+      "effort": "max",
+      "forkTurns": "none",
+      "scope": "read-only logical research",
+      "outcome": "findings retained and corrected by root; source pins and limitations in research index"
+    },
+    {
+      "task": "other_rides_sol_max",
+      "requestedModel": "gpt-6.1-sol",
+      "effort": "max",
+      "forkTurns": "none",
+      "scope": "read-only logical research",
+      "outcome": "findings retained and corrected by root; source pins and limitations in research index"
+    },
+    {
+      "task": "commerce_sol_max",
+      "requestedModel": "gpt-6.1-sol",
+      "effort": "max",
+      "forkTurns": "none",
+      "scope": "read-only logical research",
+      "outcome": "findings retained and corrected by root; source pins and limitations in research index"
+    },
+    {
+      "task": "finance_sol_max",
+      "requestedModel": "gpt-6.1-sol",
+      "effort": "max",
+      "forkTurns": "none",
+      "scope": "read-only logical research",
+      "outcome": "findings retained and corrected by root; source pins and limitations in research index"
+    },
+    {
+      "task": "guests_services_sol_max",
+      "requestedModel": "gpt-6.1-sol",
+      "effort": "max",
+      "forkTurns": "none",
+      "scope": "read-only logical research",
+      "outcome": "findings retained and corrected by root; source pins and limitations in research index"
+    },
+    {
+      "task": "scenarios_sol_max",
+      "requestedModel": "gpt-6.1-sol",
+      "effort": "max",
+      "forkTurns": "none",
+      "scope": "read-only logical research",
+      "outcome": "findings retained and corrected by root; source pins and limitations in research index"
+    }
+  ],
+  "rootCorrections": [
+    "Directory-scoped645 versus source-marked857 population and modern synthetic identity distinctions",
+    "Source-corrected14 finance categories rather than13",
+    "AGY155 vehicle-count, Twist and Ferris footprints, arbitrary metre envelopes and Blender5.2LTS excluded",
+    "AGY taxonomy, price/wage examples, two-product combinations, new research category and fake source hashes excluded",
+    "Existing endpoint construction and tick-derived date retained; no formal clean-room claim"
+  ],
+  "independentAudit": {
+    "agent": "program_audit_sol_max",
+    "model": "gpt-6.1-sol",
+    "effort": "max",
+    "scope": "Read-only integrated specification, reference metadata/source and material hashes",
+    "confirmedCounts": "33coaster families /155base ride variants /41commercial variants /507scenery;44external reference/material files",
+    "findingsResolved": [
+      "Preserve four height tuple expressions including commercial symbolic defaults",
+      "Retain split descriptor parameters separately from canonical original slot",
+      "Add SteelWildMouse mechanisms",
+      "Extract all descriptor blocks, include hidden56/58/64 mapped55/57/62"
+    ],
+    "limitations": "No original executable, new model quality, browser export/runtime or hardware performance validation"
+  }
+}
