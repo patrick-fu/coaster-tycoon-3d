@@ -1,0 +1,9 @@
+{
+  "manifestUrl": "https://googlechromelabs.github.io/chrome-for-testing/last-known-good-versions-with-downloads.json",
+  "manifestSha256": "0aa95997168ec1ea826bb5015f201ebe3156da0ba20135669801f25bce36c8bc",
+  "version": "155.0.8059.39",
+  "downloadUrl": "https://storage.googleapis.com/chrome-for-testing-public/155.0.8059.39/linux64/chrome-linux64.zip",
+  "zipSha256": "55672d1f392fd3e7b7a08621b6e804e6bcb39d40cf155504abb74b3a021ea8ea",
+  "bytes": 198195769,
+  "defaultProfileReused": "/home/box/.config/google-chrome"
+}

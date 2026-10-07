@@ -61,6 +61,14 @@ distinguishes original families, variants, expansions and modern additions. A
 implementation. Twelve hashed CC0 material source bundles were acquired; actual
 model export, original comparisons and visual acceptance remain separate gates.
 
+The [Model Workshop](https://patrick-fu.github.io/coaster-tycoon-3d/previews/model-workshop/)
+provides actual editable wooden-car, timber-station and information-kiosk
+samples from the dedicated Blender/GLB route. See the
+[laboratory source and verification boundaries](prototypes/detailed-assets/README.md).
+The samples precede bulk art production and do not add those rides/services to
+the playable park. Original comparisons and Patrick's visual acceptance remain
+open.
+
 [Qualify the Classic first playable against original RCT2 and representative hardware](https://github.com/patrick-fu/coaster-tycoon-3d/issues/24)
 remains open for its original fidelity, scale and representative-hardware gates.
 

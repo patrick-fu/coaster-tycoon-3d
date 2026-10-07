@@ -1,0 +1,41 @@
+{
+  "baselineVariable": "same frozen source, Blender/materials and geometry; static export grouping is the changed variable",
+  "records": [
+    {
+      "asset": "timber-station",
+      "sourceHash": "670c59e32ae5b3cca7d90c9915b150757a918c5f473c60fca450a77d944e030e",
+      "triangles": 15984,
+      "meshNodes": 148,
+      "bytes": 9189236,
+      "anchorNames": [
+        "StationRoot",
+        "RailIn",
+        "RailOut",
+        "DeckBoarding",
+        "DeckUnload",
+        "QueueGate",
+        "ExitGate",
+        "OperatorBooth",
+        "RoofApex"
+      ]
+    },
+    {
+      "asset": "timber-station-batched",
+      "sourceHash": "670c59e32ae5b3cca7d90c9915b150757a918c5f473c60fca450a77d944e030e",
+      "triangles": 15984,
+      "meshNodes": 9,
+      "bytes": 9081964,
+      "anchorNames": [
+        "StationRoot",
+        "RailIn",
+        "RailOut",
+        "DeckBoarding",
+        "DeckUnload",
+        "QueueGate",
+        "ExitGate",
+        "OperatorBooth",
+        "RoofApex"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,264 @@
+{
+  "scope": "Remote structural/semantic GLB checks; original behavior and human visual acceptance unverified",
+  "records": [
+    {
+      "asset": "wooden-car",
+      "sha256": "fc988c55ed60dcd5abf7c5e02ecbc1ac3a8cd828cfe7fe4bb8f30bcf21699b59",
+      "bytes": 3545440,
+      "validatorVersion": "2.0.0-dev.3.10",
+      "errors": 0,
+      "warnings": 4,
+      "warningCodes": [
+        "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE"
+      ],
+      "meshNodes": 11,
+      "materials": 6,
+      "embeddedImages": 6,
+      "exportedAnchors": [
+        {
+          "name": "RailRoot",
+          "translation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "BogieFront",
+          "translation": [
+            0,
+            0.17000000178813934,
+            0.75
+          ]
+        },
+        {
+          "name": "BogieRear",
+          "translation": [
+            0,
+            0.17000000178813934,
+            -0.75
+          ]
+        },
+        {
+          "name": "Seat_FrontLeft",
+          "translation": [
+            -0.3199999928474426,
+            0.46000000834465027,
+            0.41999998688697815
+          ]
+        },
+        {
+          "name": "Seat_FrontRight",
+          "translation": [
+            0.3199999928474426,
+            0.46000000834465027,
+            0.41999998688697815
+          ]
+        },
+        {
+          "name": "Seat_RearLeft",
+          "translation": [
+            -0.3199999928474426,
+            0.46000000834465027,
+            -0.41999998688697815
+          ]
+        },
+        {
+          "name": "Seat_RearRight",
+          "translation": [
+            0.3199999928474426,
+            0.46000000834465027,
+            -0.41999998688697815
+          ]
+        },
+        {
+          "name": "Coupler_Front",
+          "translation": [
+            0,
+            0.2199999988079071,
+            1.340000033378601
+          ]
+        },
+        {
+          "name": "Coupler_Rear",
+          "translation": [
+            0,
+            0.2199999988079071,
+            -1.340000033378601
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "asset": "timber-station",
+      "sha256": "60d94b3c784726b3dfa5aa89bed37a4da8dee05769ff1f648d918a0de1bf7b41",
+      "bytes": 9141736,
+      "validatorVersion": "2.0.0-dev.3.10",
+      "errors": 0,
+      "warnings": 5,
+      "warningCodes": [
+        "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE"
+      ],
+      "meshNodes": 9,
+      "materials": 9,
+      "embeddedImages": 15,
+      "exportedAnchors": [
+        {
+          "name": "StationRoot",
+          "translation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "RailIn",
+          "translation": [
+            0,
+            0.5,
+            -2
+          ]
+        },
+        {
+          "name": "RailOut",
+          "translation": [
+            0,
+            0.5,
+            2
+          ]
+        },
+        {
+          "name": "DeckBoarding",
+          "translation": [
+            1.350000023841858,
+            0.8199999928474426,
+            0
+          ]
+        },
+        {
+          "name": "DeckUnload",
+          "translation": [
+            -1.350000023841858,
+            0.8199999928474426,
+            0
+          ]
+        },
+        {
+          "name": "QueueGate",
+          "translation": [
+            1.899999976158142,
+            0.8199999928474426,
+            -1.399999976158142
+          ]
+        },
+        {
+          "name": "ExitGate",
+          "translation": [
+            -1.899999976158142,
+            0.8199999928474426,
+            1.399999976158142
+          ]
+        },
+        {
+          "name": "OperatorBooth",
+          "translation": [
+            1.4500000476837158,
+            0.8199999928474426,
+            1.399999976158142
+          ]
+        },
+        {
+          "name": "RoofApex",
+          "translation": [
+            0,
+            4.050000190734863,
+            0
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "asset": "information-kiosk",
+      "sha256": "6e54f9362e967ac7b7a2427f178dd39163894e006ce86958e07dcc636cb900d0",
+      "bytes": 8950308,
+      "validatorVersion": "2.0.0-dev.3.10",
+      "errors": 0,
+      "warnings": 14,
+      "warningCodes": [
+        "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE"
+      ],
+      "meshNodes": 38,
+      "materials": 10,
+      "embeddedImages": 15,
+      "exportedAnchors": [
+        {
+          "name": "GroundRoot",
+          "translation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "Counter_Front",
+          "translation": [
+            0,
+            1.0299999713897705,
+            1.5800000429153442
+          ]
+        },
+        {
+          "name": "Counter_Back",
+          "translation": [
+            0,
+            1.0299999713897705,
+            -1.5800000429153442
+          ]
+        },
+        {
+          "name": "Counter_Left",
+          "translation": [
+            -1.5800000429153442,
+            1.0299999713897705,
+            0
+          ]
+        },
+        {
+          "name": "Counter_Right",
+          "translation": [
+            1.5800000429153442,
+            1.0299999713897705,
+            0
+          ]
+        },
+        {
+          "name": "Sign_Front",
+          "translation": [
+            0,
+            2,
+            1.6200000047683716
+          ]
+        },
+        {
+          "name": "PropMap",
+          "translation": [
+            0.3499999940395355,
+            1.0299999713897705,
+            1.4800000190734863
+          ]
+        },
+        {
+          "name": "PropUmbrella",
+          "translation": [
+            -1.5499999523162842,
+            0.2800000011920929,
+            1.5499999523162842
+          ]
+        }
+      ],
+      "issues": []
+    }
+  ]
+}

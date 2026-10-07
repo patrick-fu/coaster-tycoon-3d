@@ -1,0 +1,24 @@
+{
+  "scope": "Source acquisition member hash correspondence; not visual acceptance",
+  "sourceManifest": "docs/planning/materials-acquired.json",
+  "sourceManifestSha256": "3c5fe18162328929bd0505f7104e6f545c70c85b70bfe0abe768b482bf26347a",
+  "matchedPngInputs": {
+    "Metal049A_1K-PNG_Color.png": "3c5be68c8a56534f120e88cff835a321ca51459c8f31482f984958c7fbfda8e6",
+    "Metal049A_1K-PNG_Metalness.png": "61c66550ad5636c9fb8bfb13fc5b2ff4b2ba7cb66831e8c68509124915be045e",
+    "Metal049A_1K-PNG_NormalGL.png": "5b80adcc8092618a127bb7dfa547e3a35d156efd027c9daa579ac26f9098a678",
+    "Metal049A_1K-PNG_Roughness.png": "a42d9eaba9bc232739c7cb86dee03805e66f50a065cecfbbfe906aaeb6b3ded2",
+    "WoodFloor043_1K-PNG_Color.png": "55a7c25c191c8eb501d87a8872438dcfba307b3a043fee00ad9e89f0c413d684",
+    "WoodFloor043_1K-PNG_Metalness.png": "46ca3dbd1939c6c89b437c195afe51d816336baa0376b9289d6e7dc0757a69dc",
+    "WoodFloor043_1K-PNG_NormalGL.png": "ac8e1221726a512c4eb3cae98674bf0dda774382b2ba2577d36cbf8192986a6e",
+    "WoodFloor043_1K-PNG_Roughness.png": "c15241e172c474ad147003f8e957cf88d305d9e8d82809de201f04f7b969ec26",
+    "Bricks051_1K-PNG_Color.png": "9adbf36c4f0d6a7f7eb3b85dc35c5c022c15bea802562e5bf9966d83d29facd4",
+    "Bricks051_1K-PNG_NormalGL.png": "8b14ad4bd834773a26b0bbc4f4afd80fe92c939aa3f49385a41a1fb8165646e8",
+    "Bricks051_1K-PNG_Roughness.png": "fce4ec1fb6301336503c0d65dd6c14aaf7288dfba5b20c4cd6ab15abf9f33a9d",
+    "RoofingTiles013A_1K-PNG_Color.png": "ae2037e4c4934b42b60c799b2755cb73c164a883410f89e22ac54ed5ecb4d1de",
+    "RoofingTiles013A_1K-PNG_NormalGL.png": "2488e6f327db93fe29558a9326ee4dba94022f944e2daf070a7ed47825fa82ab",
+    "RoofingTiles013A_1K-PNG_Roughness.png": "575b1674cfd09dde9db152b917503c77fa4187693762bf2f8824521975bac812",
+    "Wood096_1K-PNG_Color.png": "2635d3b950808e52d5de4ce4ee4b3aa35430ffd3117e00c1b2cfb155168e6b47",
+    "Wood096_1K-PNG_NormalGL.png": "5b9f71b56cc74a397c9263619f7ef0cfc7d668762f4f2c960e4bd883dc2891c5",
+    "Wood096_1K-PNG_Roughness.png": "bcba2c9b971c17875e0d8b6e11b234ce86a1c4110bd72725c2586b8950738418"
+  }
+}
