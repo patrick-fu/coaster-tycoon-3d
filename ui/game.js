@@ -2,10 +2,22 @@ import {ParkScene} from './park-scene.js';
 const saveSlot=new URLSearchParams(location.search).get('showcase')==='classic'?'showcase-classic':'current';
 import {steelRules} from './content/steel-coaster.js';
 import {WORKER_PROTOCOL_VERSION} from './simulation/protocol.js';
+import {createContentBrowser} from './content-browser.js';
+import {legacyRideContent,legacyFacilityContent} from './content/registry.js';
 const $=id=>document.getElementById(id),escape=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])),money=n=>'$'+(n/10).toLocaleString('en',{minimumFractionDigits:2,maximumFractionDigits:2});
 const scene=new ParkScene($('viewport')),worker=new Worker('./simulation/browser-worker.js',{type:'module'}),pending=new Map();
 let serial=0,ready=false,packet=null,staticRevision=null,staticRequested=true,staticEpoch=0,requesting=false,tool='inspect',subtool='flat',selectedRide=0,selection=null,hover=null,quoted=null,quoteSequence=0,previewTimer=null,inspectSignature='',lastInspect=0,patrolTiles=[];
 let patrolUpdate=Promise.resolve();
+let libraryCatalogue=null,selectedRideContent=legacyRideContent();
+const selectedFacilityContent={food:legacyFacilityContent('food'),drink:legacyFacilityContent('drink'),restroom:legacyFacilityContent('restroom')};
+const contentLibrary=createContentBrowser({loadCatalogue:async()=>{libraryCatalogue=await request('catalogue',null);return libraryCatalogue;},onChoose:content=>{
+ const variant=libraryCatalogue?.variants.find(v=>v.id===content.variantId),choice=variant?.choices.find(c=>c.familyId===content.familyId&&c.modeIds.includes(content.modeId)),capabilities=choice?.capabilities;
+ if(capabilities?.construction.kind==='tracked'&&capabilities.operation.kind==='circuit'&&capabilities.presentation.kind==='procedural-coaster'){selectedRideContent={...content};setTool('track');subtool='create-ride';contentLibrary.close();renderPalette();$('new-ride-name').value=variant.label;}
+ else if(capabilities?.construction.kind==='facility'&&capabilities.operation.kind==='service'&&capabilities.presentation.kind==='procedural-facility'){const kind=capabilities.construction.service;if(!Object.hasOwn(selectedFacilityContent,kind))return;selectedFacilityContent[kind]={...content};setTool('facility');subtool=kind;contentLibrary.close();renderPalette();}
+ else{feedback('This content is not available for construction.',true);return;}
+ schedulePreview();feedback('Content selected. Click the park to place it.');
+}});
+$('content-library').onclick=()=>contentLibrary.open({opener:$('content-library')});
 const feedback=(message,error=false)=>{$('feedback').textContent=message;$('feedback').classList.toggle('error',error);$('feedback').classList.remove('hidden');};
 function request(type,payload){return new Promise((resolve,reject)=>{const id=++serial,timer=setTimeout(()=>{pending.delete(id);reject(new Error('The park did not respond. Reload the page to recover your last save.'));},20000);pending.set(id,{resolve,reject,timer});worker.postMessage({id,protocolVersion:WORKER_PROTOCOL_VERSION,request:{type,payload}});});}
 worker.onmessage=event=>{const m=event.data;if(m.protocolVersion!==WORKER_PROTOCOL_VERSION){const error=new Error('The park worker uses an unsupported protocol. Reload the page.');feedback(error.message,true);for(const p of pending.values()){clearTimeout(p.timer);p.reject(error);}pending.clear();return;}if(m.event==='ready'){restoreLocal();return;}if(m.event==='error'){feedback(m.error.message,true);return;}const call=pending.get(m.id);if(!call)return;clearTimeout(call.timer);pending.delete(m.id);if(m.result.ok)call.resolve(m.result.value);else call.reject(new Error(m.result.error.message));};
@@ -39,10 +51,10 @@ function renderPalette(){let html='';const choices=(values)=>values.map(([value,
 function commandAt(point){const height=Number($('height').value),direction=Number($('direction').value),path=point&&(scene.elements??[]).find(e=>e.kind==='path'&&e.tile.x===point.x&&e.tile.y===point.y&&e.height===height);
  if(tool==='track'&&subtool!=='create-ride'&&subtool!=='entrance'&&subtool!=='exit')return{type:'append-track',ride:selectedRide,piece:subtool};
  if(!point||point.x<0||point.y<0||point.x>255||point.y>255)return null;
- if(tool==='track'&&subtool==='create-ride')return{type:'create-ride',name:$('new-ride-name').value.trim()||'New coaster',tile:point,height,direction};
+ if(tool==='track'&&subtool==='create-ride')return{type:'create-ride',name:$('new-ride-name').value.trim()||'New coaster',tile:point,height,direction,content:{...selectedRideContent}};
  if(tool==='track'&&(subtool==='entrance'||subtool==='exit'))return{type:'place-portal',ride:selectedRide,station:Number($('station-select')?.value),role:subtool,tile:point,height,direction};
  if(tool==='path'){if(subtool==='park-entry')return{type:'set-park-entrance',point:{...point,z:height}};return{type:'place-path',tile:point,height,queueFor:subtool==='queue'?selectedRide:null};}
- if(tool==='facility')return{type:'place-facility',name:subtool==='food'?'Food stand':subtool==='drink'?'Drink stand':'Restrooms',kind:subtool,tile:point,height,direction};
+ if(tool==='facility')return{type:'place-facility',name:subtool==='food'?'Food stand':subtool==='drink'?'Drink stand':'Restrooms',kind:subtool,tile:point,height,direction,content:{...selectedFacilityContent[subtool]}};
  if(tool==='amenity')return path?{type:'place-amenity',kind:subtool,path:path.id}:null;
  if(tool==='staff')return{type:'hire-staff',role:subtool,point:{...point,z:height}};
  if(tool==='scenery')return{type:'place-scenery',sceneryType:subtool,tile:point,height};
@@ -77,4 +89,4 @@ async function restoreLocal(){try{const database=await db(),save=await new Promi
 $('save').onclick=()=>saveLocal();setInterval(()=>{if(ready)saveLocal(true);},60000);$('export').onclick=async()=>{try{const save=await request('save',null),url=URL.createObjectURL(new Blob([save],{type:'application/json'})),a=document.createElement('a');a.href=url;a.download='coaster-park.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);feedback('Park exported. Keep the file to continue on another browser.');}catch(e){feedback(e.message,true);}};$('import').onclick=()=>$('import-file').click();$('import-file').onchange=async e=>{const file=e.target.files[0];if(!file)return;try{if(file.size>64*1024*1024)throw new Error('This park file is too large.');await request('load',await file.text());selection=null;inspectSignature='';staticRevision=null;await refresh(true);feedback('Park imported successfully.');}catch(error){feedback('Import failed: '+error.message,true);}finally{e.target.value='';}};$('new').onclick=async()=>{if(!confirm('Start a new Copper Meadows park? Save or export this park first if you want to keep it.'))return;try{await request('new-park',null);selection=null;staticRevision=null;inspectSignature='';await refresh(true);renderPalette();feedback('A new park is ready.');}catch(e){feedback(e.message,true);}};
 renderPalette();
 
-export {request,execute,scene,refresh};
+export {request,execute,scene,refresh,contentLibrary};

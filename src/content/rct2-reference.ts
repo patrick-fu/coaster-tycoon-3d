@@ -3,7 +3,7 @@
 export const referenceFamilies=[
  {
   "id": "reference.rct2.family.spiral-rc",
-  "label": "Spiral Rc",
+  "label": "Spiral Roller Coaster",
   "category": "rollerCoaster",
   "originalSlot": 0,
   "startPiece": "endStation",
@@ -11,7 +11,7 @@ export const referenceFamilies=[
  },
  {
   "id": "reference.rct2.family.stand-up-rc",
-  "label": "Stand Up Rc",
+  "label": "Stand Up Roller Coaster",
   "category": "rollerCoaster",
   "originalSlot": 1,
   "startPiece": "endStation",
@@ -19,7 +19,7 @@ export const referenceFamilies=[
  },
  {
   "id": "reference.rct2.family.suspended-swinging-rc",
-  "label": "Suspended Swinging Rc",
+  "label": "Suspended Swinging Roller Coaster",
   "category": "rollerCoaster",
   "originalSlot": 2,
   "startPiece": "endStation",
@@ -27,7 +27,7 @@ export const referenceFamilies=[
  },
  {
   "id": "reference.rct2.family.inverted-rc",
-  "label": "Inverted Rc",
+  "label": "Inverted Roller Coaster",
   "category": "rollerCoaster",
   "originalSlot": 3,
   "startPiece": "endStation",
@@ -35,7 +35,7 @@ export const referenceFamilies=[
  },
  {
   "id": "reference.rct2.family.junior-rc",
-  "label": "Junior Rc",
+  "label": "Junior Roller Coaster",
   "category": "rollerCoaster",
   "originalSlot": 4,
   "startPiece": "endStation",
@@ -59,7 +59,7 @@ export const referenceFamilies=[
  },
  {
   "id": "reference.rct2.family.mini-suspended-rc",
-  "label": "Mini Suspended Rc",
+  "label": "Mini Suspended Roller Coaster",
   "category": "rollerCoaster",
   "originalSlot": 7,
   "startPiece": "endStation",
@@ -107,7 +107,7 @@ export const referenceFamilies=[
  },
  {
   "id": "reference.rct2.family.bobsleigh-rc",
-  "label": "Bobsleigh Rc",
+  "label": "Bobsleigh Roller Coaster",
   "category": "rollerCoaster",
   "originalSlot": 13,
   "startPiece": "endStation",
@@ -123,7 +123,7 @@ export const referenceFamilies=[
  },
  {
   "id": "reference.rct2.family.looping-rc",
-  "label": "Looping Rc",
+  "label": "Looping Roller Coaster",
   "category": "rollerCoaster",
   "originalSlot": 15,
   "startPiece": "endStation",
@@ -139,7 +139,7 @@ export const referenceFamilies=[
  },
  {
   "id": "reference.rct2.family.mine-train-rc",
-  "label": "Mine Train Rc",
+  "label": "Mine Train Roller Coaster",
   "category": "rollerCoaster",
   "originalSlot": 17,
   "startPiece": "endStation",
@@ -155,7 +155,7 @@ export const referenceFamilies=[
  },
  {
   "id": "reference.rct2.family.corkscrew-rc",
-  "label": "Corkscrew Rc",
+  "label": "Corkscrew Roller Coaster",
   "category": "rollerCoaster",
   "originalSlot": 19,
   "startPiece": "endStation",
@@ -315,7 +315,7 @@ export const referenceFamilies=[
  },
  {
   "id": "reference.rct2.family.reverse-freefall-rc",
-  "label": "Reverse Freefall Rc",
+  "label": "Reverse Freefall Roller Coaster",
   "category": "rollerCoaster",
   "originalSlot": 42,
   "startPiece": "endStation",
@@ -331,7 +331,7 @@ export const referenceFamilies=[
  },
  {
   "id": "reference.rct2.family.vertical-drop-rc",
-  "label": "Vertical Drop Rc",
+  "label": "Vertical Drop Roller Coaster",
   "category": "rollerCoaster",
   "originalSlot": 44,
   "startPiece": "endStation",
@@ -387,7 +387,7 @@ export const referenceFamilies=[
  },
  {
   "id": "reference.rct2.family.twister-rc",
-  "label": "Twister Rc",
+  "label": "Twister Roller Coaster",
   "category": "rollerCoaster",
   "originalSlot": 51,
   "startPiece": "endStation",
@@ -395,7 +395,7 @@ export const referenceFamilies=[
  },
  {
   "id": "reference.rct2.family.wooden-rc",
-  "label": "Wooden Rc",
+  "label": "Wooden Roller Coaster",
   "category": "rollerCoaster",
   "originalSlot": 52,
   "startPiece": "endStation",
@@ -403,7 +403,7 @@ export const referenceFamilies=[
  },
  {
   "id": "reference.rct2.family.side-friction-rc",
-  "label": "Side Friction Rc",
+  "label": "Side Friction Roller Coaster",
   "category": "rollerCoaster",
   "originalSlot": 53,
   "startPiece": "endStation",
@@ -419,7 +419,7 @@ export const referenceFamilies=[
  },
  {
   "id": "reference.rct2.family.multi-dimension-rc",
-  "label": "Multi Dimension Rc",
+  "label": "Multi Dimension Roller Coaster",
   "category": "rollerCoaster",
   "originalSlot": 55,
   "startPiece": "endStation",
@@ -427,7 +427,7 @@ export const referenceFamilies=[
  },
  {
   "id": "reference.rct2.family.flying-rc",
-  "label": "Flying Rc",
+  "label": "Flying Roller Coaster",
   "category": "rollerCoaster",
   "originalSlot": 57,
   "startPiece": "endStation",
@@ -459,7 +459,7 @@ export const referenceFamilies=[
  },
  {
   "id": "reference.rct2.family.lay-down-rc",
-  "label": "Lay Down Rc",
+  "label": "Lay Down Roller Coaster",
   "category": "rollerCoaster",
   "originalSlot": 62,
   "startPiece": "endStation",
@@ -475,7 +475,7 @@ export const referenceFamilies=[
  },
  {
   "id": "reference.rct2.family.reverser-rc",
-  "label": "Reverser Rc",
+  "label": "Reverser Roller Coaster",
   "category": "rollerCoaster",
   "originalSlot": 65,
   "startPiece": "endStation",
@@ -483,7 +483,7 @@ export const referenceFamilies=[
  },
  {
   "id": "reference.rct2.family.heartline-twister-rc",
-  "label": "Heartline Twister Rc",
+  "label": "Heartline Twister Roller Coaster",
   "category": "rollerCoaster",
   "originalSlot": 66,
   "startPiece": "endStation",
@@ -499,7 +499,7 @@ export const referenceFamilies=[
  },
  {
   "id": "reference.rct2.family.giga-rc",
-  "label": "Giga Rc",
+  "label": "Giga Roller Coaster",
   "category": "rollerCoaster",
   "originalSlot": 68,
   "startPiece": "endStation",
@@ -539,7 +539,7 @@ export const referenceFamilies=[
  },
  {
   "id": "reference.rct2.family.compact-inverted-rc",
-  "label": "Compact Inverted Rc",
+  "label": "Compact Inverted Roller Coaster",
   "category": "rollerCoaster",
   "originalSlot": 73,
   "startPiece": "endStation",
@@ -555,7 +555,7 @@ export const referenceFamilies=[
  },
  {
   "id": "reference.rct2.family.air-powered-vertical-rc",
-  "label": "Air Powered Vertical Rc",
+  "label": "Air Powered Vertical Roller Coaster",
   "category": "rollerCoaster",
   "originalSlot": 75,
   "startPiece": "endStation",
@@ -563,7 +563,7 @@ export const referenceFamilies=[
  },
  {
   "id": "reference.rct2.family.inverted-hairpin-rc",
-  "label": "Inverted Hairpin Rc",
+  "label": "Inverted Hairpin Roller Coaster",
   "category": "rollerCoaster",
   "originalSlot": 76,
   "startPiece": "endStation",
@@ -603,7 +603,7 @@ export const referenceFamilies=[
  },
  {
   "id": "reference.rct2.family.inverted-impulse-rc",
-  "label": "Inverted Impulse Rc",
+  "label": "Inverted Impulse Roller Coaster",
   "category": "rollerCoaster",
   "originalSlot": 86,
   "startPiece": "endStation",
@@ -611,7 +611,7 @@ export const referenceFamilies=[
  },
  {
   "id": "reference.rct2.family.mini-rc",
-  "label": "Mini Rc",
+  "label": "Mini Roller Coaster",
   "category": "rollerCoaster",
   "originalSlot": 87,
   "startPiece": "endStation",
@@ -627,7 +627,7 @@ export const referenceFamilies=[
  },
  {
   "id": "reference.rct2.family.lim-launched-rc",
-  "label": "Lim Launched Rc",
+  "label": "LIM Launched Roller Coaster",
   "category": "rollerCoaster",
   "originalSlot": 90,
   "startPiece": "endStation",
