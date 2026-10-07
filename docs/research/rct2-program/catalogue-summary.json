@@ -78,6 +78,7 @@
     "ferris_wheel": 37,
     "first_aid": 48,
     "flying_rc": 57,
+    "flying_rc_alt": 57,
     "flying_saucers": 70,
     "food_stall": 28,
     "ghost_train": 50,
@@ -95,6 +96,7 @@
     "junior_rc": 4,
     "launched_freefall": 12,
     "lay_down_rc": 62,
+    "lay_down_rc_alt": 62,
     "lift": 43,
     "lim_launched_rc": 90,
     "log_flume": 23,
@@ -115,6 +117,7 @@
     "monster_trucks": 11,
     "motion_simulator": 38,
     "multi_dimension_rc": 55,
+    "multi_dimension_rc_alt": 55,
     "observation_tower": 14,
     "reverse_freefall_rc": 42,
     "reverser_rc": 65,
@@ -148,10 +151,10 @@
     "wooden_wild_mouse": 9
   },
   "artifacts": {
-    "ride-variants.csv": "aa244f66a536bbd2b172b109e6948a830759947e759962e7d2042da8adee4063",
-    "products-reference.csv": "efa7d88c4222991aa9c98527a05ef2cfb6d9df1816e207e97053cf1bbb27b6ab",
-    "base-content.csv": "14a2415a284afe52b4e2c5167adb3dd635d946adfd233e44dccd37c151ce9da8",
-    "families.csv": "006ed597df8fbb1a8764649634ee9981bb3b4ef50749abf33813d9046c22f21c",
-    "descriptor-parameters.csv": "aa63158dfa1b33f8507765216b3e21f70f95c462c2b1a741dcaef1dd28f48d0e"
+    "ride-variants.csv": "5f83f38ccb37c4d0d42eb4dc6ad329f6881cb4f5df3612ddda14866ed65b11e1",
+    "products-reference.csv": "95773de9c79e6cff67e071da1dd990c61c42a0283e6e261900cb6e9a27fd74b9",
+    "base-content.csv": "8f666d950f11b439458e8bdf23f32f8f832c458ce0535ecb8b327526907e493b",
+    "families.csv": "7dea80f79763e77fb4d45edc887edd7216285dcc02ba837105f3f07446c7964f",
+    "descriptor-parameters.csv": "93860fb9efefb8771a282e335ccb5acb198d2c0fa7b22bfc16a36f8075b6b0f3"
   }
 }

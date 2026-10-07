@@ -140,5 +140,19 @@
     "AGY155 vehicle-count, Twist and Ferris footprints, arbitrary metre envelopes and Blender5.2LTS excluded",
     "AGY taxonomy, price/wage examples, two-product combinations, new research category and fake source hashes excluded",
     "Existing endpoint construction and tick-derived date retained; no formal clean-room claim"
-  ]
+  ],
+  "independentAudit": {
+    "agent": "program_audit_sol_max",
+    "model": "gpt-6.1-sol",
+    "effort": "max",
+    "scope": "Read-only integrated specification, reference metadata/source and material hashes",
+    "confirmedCounts": "33coaster families /155base ride variants /41commercial variants /507scenery;44external reference/material files",
+    "findingsResolved": [
+      "Preserve four height tuple expressions including commercial symbolic defaults",
+      "Retain split descriptor parameters separately from canonical original slot",
+      "Add SteelWildMouse mechanisms",
+      "Extract all descriptor blocks, include hidden56/58/64 mapped55/57/62"
+    ],
+    "limitations": "No original executable, new model quality, browser export/runtime or hardware performance validation"
+  }
 }

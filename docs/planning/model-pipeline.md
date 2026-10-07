@@ -21,9 +21,10 @@ acceptance. All Blender execution, texture processing, exports, render captures,
 GLB/runtime checks and performance work run on Grok Bot. The Mac only edits,
 collects source files, reads metadata and views remotely generated output.
 
-Remote availability was actually probed: Blender is not installed; Debian 13
-offers `4.3.2+dfsg-2`, and the build workspace has roughly 121 GB free. This is a
-candidate pinned export tool, **not a claim about the latest Blender release**.
+Grok Bot installed Debian 13 package `4.3.2+dfsg-2` and actually ran Blender
+4.3.2 with its glTF exporter present. The workspace had roughly 121 GB free
+before installation. This pinned export tool is **not a claim about the latest
+Blender release**, nor proof that a new model has been exported.
 The historical report and AGY's “5.2 LTS” assumption were not verified and are
 excluded. Record the actual binary/version/exporter used for every exported asset.
 [Package evidence](https://packages.debian.org/trixie/blender).

@@ -13,7 +13,8 @@ from pathlib import Path
 OBJECTS_SHA = "978f596972c1163dc670d853dd6add4766f10dbd"
 CORE_SHA = "11513222890717e81431c83a28aafb7555f2ccd2"
 SPLITS = {"hypercoaster": 19, "hyper_twister": 51, "monster_trucks": 11,
-          "spinning_wild_mouse": 54, "classic_mini_rc": 4}
+          "spinning_wild_mouse": 54, "classic_mini_rc": 4,
+          "multi_dimension_rc_alt": 55, "flying_rc_alt": 57, "lay_down_rc_alt": 62}
 HIDDEN = {56, 58, 64}
 DUMMY = {29, 31, 34, 80, 82, 83, 84, 85, 89}
 
@@ -33,7 +34,7 @@ def list_value(value):
 
 def write_csv(path, rows):
     with path.open("w", newline="") as stream:
-        writer = csv.DictWriter(stream, fieldnames=list(rows[0]))
+        writer = csv.DictWriter(stream, fieldnames=list(rows[0]), lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
 
@@ -50,10 +51,12 @@ def main():
     descriptors = {}
     for file in sorted((args.core / "src/openrct2/ride/rtd").rglob("*.h")):
         text = file.read_text()
-        symbol = re.search(r"constexpr RideTypeDescriptor (\w+)", text)
-        name = re.search(r'\.Name\s*=\s*"([^"]+)"', text)
-        if symbol and name:
-            descriptors[symbol[1]] = (name[1], file, text)
+        matches = list(re.finditer(r"constexpr RideTypeDescriptor (\w+)", text))
+        for index, symbol in enumerate(matches):
+            block = text[symbol.end():matches[index + 1].start() if index + 1 < len(matches) else len(text)]
+            name = re.search(r'\.Name\s*=\s*"([^"]+)"', block)
+            if name:
+                descriptors[symbol[1]] = (name[1], file, block)
     table = (args.core / "src/openrct2/ride/RideData.cpp").read_text()
     table = table.split("constexpr RideTypeDescriptor kRideTypeDescriptors", 1)[1].split("};", 1)[0]
     entries = re.findall(r"/\*\s*(RIDE_TYPE_\w+),?\s*\*/\s*(\w+)", table)
@@ -73,6 +76,7 @@ def main():
         descriptor_rows.append({
             "modern_descriptor_slot": slot, "reference_token": token,
             "canonical_original_slot": token_slot[token] if token_slot[token] <= 90 else "",
+            "descriptor_kind": "hidden track state" if slot in HIDDEN else "modern split" if token in SPLITS else "original selectable" if slot <= 90 else "modern addition",
             "height_tuple_native_expressions": ";".join(height_fields),
             "operation_modes_reference": ";".join(re.findall(r"RideMode::(\w+)", modes[1])) if modes else "",
             "parameter_evidence": "reconstructed implementation; symbols preserved; original unresolved",
