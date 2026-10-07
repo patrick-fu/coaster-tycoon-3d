@@ -4,9 +4,10 @@ import {LIMITS,type Direction,type Element,type State,type Rules,type Tile} from
 import type {Guest,PathPoint,PeopleIndex,Routing} from './people.js';
 import {portalApproach} from './operation.js';
 import {ensure,integer,record} from './validation.js';
+import type {ContentIdentity} from '../content/registry.js';
 
 export type FacilityKind='food'|'drink'|'restroom';
-export type Facility={id:number,name:string,kind:FacilityKind,element:number,open:boolean,price:number,income:number,sales:number};
+export type Facility={id:number,instanceId:number,content:ContentIdentity,name:string,kind:FacilityKind,element:number,open:boolean,price:number,income:number,sales:number};
 export type FacilityElement={id:number,kind:'facility',facility:number,tile:Tile,height:number,direction:Direction};
 export type Staff={id:number,role:'mechanic'|'handyman',point:PathPoint,next:PathPoint|null,goal:PathPoint|null,progress:number,patrol:number[],job:{ride:number,kind:'repair'|'inspection'}|null,work:number,completed:number,cleanup:CleanupJob|null};
 export type ServiceRules={buildPrice:number,defaultPrice:number,maxPrice:number,foodStock:number,drinkStock:number,needThreshold:number,relief:number,initialBladder:number,serviceTicks:number,weekTicks:number,upkeepWeeks:number,mechanicMonthlyWage:number,handymanMonthlyWage:number,rideUpkeep:number,facilityUpkeep:number,interestPer10000:number,staffWalkTicks:number,repairTicks:number,inspectionTicks:number,inspectionInterval:number};

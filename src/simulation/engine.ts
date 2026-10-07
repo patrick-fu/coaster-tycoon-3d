@@ -10,6 +10,7 @@ import {encodePatrol,inPatrol} from './patrol.js';
 import {project,validateView} from './view.js';
 import {Routes} from './routes.js';
 import {sceneryTypes} from './scenery.js';
+import {CONTENT_VERSION,catalogue,executableContent,legacyRideContent,legacyFacilityContent,resolveContent} from '../content/registry.js';
 type Index=ServiceIndex&{cells:Map<number,{id:number,cell:Cell}[]>,records:number};
 type Plan={cost:number,category:'construction'|'refund'|'loan'|'none',cells:Cell[],endpoint?:Connector,id?:number,commit:()=>void};
 const at=(t:Tile)=>t.y*256+t.x;
@@ -20,7 +21,7 @@ function validPoint(v:unknown):asserts v is PathPoint{record(v,['x','y','z']);en
 function command(value:unknown):Command{
   ensure(value!==null&&typeof value==='object'&&Object.hasOwn(Object.getOwnPropertyDescriptor(value,'type')??{},'value'),'INVALID_COMMAND','Missing command data type.');const c=value as Command;
   switch(c.type){
-    case 'create-ride':record(c,['type','name','tile','height','direction']);validTile(c.tile);ensure(typeof c.name==='string'&&c.name.length>0&&c.name.length<=80&&integer(c.direction,0,3),'INVALID_COMMAND','Invalid ride.');break;
+    case 'create-ride':record(c,['type','name','tile','height','direction',...(Object.hasOwn(c,'content')?['content']:[])]);validTile(c.tile);ensure(typeof c.name==='string'&&c.name.length>0&&c.name.length<=80&&integer(c.direction,0,3),'INVALID_COMMAND','Invalid ride.');break;
     case 'append-track':record(c,['type','ride','piece']);ensure(integer(c.ride,0,254)&&typeof c.piece==='string','INVALID_COMMAND','Invalid track request.');break;
     case 'remove-last-track':record(c,['type','ride']);ensure(integer(c.ride,0,254),'INVALID_COMMAND','Invalid ride identifier.');break;
     case 'place-scenery':record(c,['type','sceneryType','tile','height']);validTile(c.tile);ensure(sceneryTypes.includes(c.sceneryType),'INVALID_COMMAND','Unknown scenery type.');break;
@@ -39,7 +40,7 @@ function command(value:unknown):Command{
     case 'set-ride-broken':record(c,['type','ride','broken']);ensure(integer(c.ride,0,254)&&typeof c.broken==='boolean','INVALID_COMMAND','Invalid breakdown state.');break;
     case 'place-amenity':record(c,['type','kind','path']);ensure(['bench','bin'].includes(c.kind)&&integer(c.path,1),'INVALID_COMMAND','Invalid amenity request.');break;
     case 'remove-amenity':record(c,['type','id']);ensure(integer(c.id,1),'INVALID_COMMAND','Invalid amenity identifier.');break;
-    case 'place-facility':record(c,['type','name','kind','tile','height','direction']);validTile(c.tile);ensure(typeof c.name==='string'&&c.name.length>0&&c.name.length<=80&&['food','drink','restroom'].includes(c.kind)&&integer(c.direction,0,3),'INVALID_COMMAND','Invalid facility.');break;
+    case 'place-facility':record(c,['type','name','kind','tile','height','direction',...(Object.hasOwn(c,'content')?['content']:[])]);validTile(c.tile);ensure(typeof c.name==='string'&&c.name.length>0&&c.name.length<=80&&['food','drink','restroom'].includes(c.kind)&&integer(c.direction,0,3),'INVALID_COMMAND','Invalid facility.');break;
     case 'set-facility-open':record(c,['type','facility','open']);ensure(integer(c.facility,0,254)&&typeof c.open==='boolean','INVALID_COMMAND','Invalid facility status.');break;
     case 'set-facility-price':record(c,['type','facility','price']);ensure(integer(c.facility,0,254)&&integer(c.price,0,1000000),'INVALID_COMMAND','Invalid facility price.');break;
     case 'remove-facility':record(c,['type','facility']);ensure(integer(c.facility,0,254),'INVALID_COMMAND','Invalid facility identifier.');break;
@@ -50,6 +51,7 @@ function command(value:unknown):Command{
     case 'set-paused':record(c,['type','paused']);ensure(typeof c.paused==='boolean','INVALID_COMMAND','Invalid pause flag.');break;
     default:throw new Fault('INVALID_COMMAND','Unknown command type.');
   }
+  if('content' in c)resolveContent(c.content);
   if('height' in c)ensure(integer(c.height,0,1000000)&&c.height%8===0,'GEOMETRY','Invalid height.');
   return structuredClone(c);
 }
@@ -71,18 +73,36 @@ export class Engine{
     if(options.land){ensure(Array.isArray(options.land)&&options.land.length<=65536,'INVALID_COMMAND','Invalid land setup.');const seen=new Set<number>();
       for(const l of options.land){record(l,['tile','height','water','owned']);validTile(l.tile);this.bounds(l.tile,options.side);ensure(!seen.has(at(l.tile))&&integer(l.height,0,this.rules.maxHeight)&&l.height%16===0&&integer(l.water,0,this.rules.maxHeight)&&l.water%16===0&&(l.water===0||l.water>=l.height)&&typeof l.owned==='boolean','INVALID_COMMAND','Invalid land setup.');seen.add(at(l.tile));terrain[at(l.tile)]=l.height;water[at(l.tile)]=l.water;owned[at(l.tile)]=l.owned;}
     }
-    this.state={version:7,amenities:[],litter:[],facilities:[],retiredShopIncome:0,retiredStock:0,staff:[],rules:JSON.stringify(this.rules),side:options.side,tick:0,revision:0,topologyRevision:0,rng:options.seed,paused:false,initialCash:options.cash,cash:options.cash,loan:0,maxLoan:options.maxLoan,spent:0,refunded:0,nextElement:1,nextEntity:1,people:{entry:null,open:false,guests:[],departedSpent:0},ledger:{rideSales:0,shopSales:0,stock:0,wages:0,upkeep:0,interest:0},trains:[],terrain,water,owned,rides:[],elements:[]};
+    this.state={version:8,contentVersion:CONTENT_VERSION,nextInstance:1,amenities:[],litter:[],facilities:[],retiredShopIncome:0,retiredStock:0,staff:[],rules:JSON.stringify(this.rules),side:options.side,tick:0,revision:0,topologyRevision:0,rng:options.seed,paused:false,initialCash:options.cash,cash:options.cash,loan:0,maxLoan:options.maxLoan,spent:0,refunded:0,nextElement:1,nextEntity:1,people:{entry:null,open:false,guests:[],departedSpent:0},ledger:{rideSales:0,shopSales:0,stock:0,wages:0,upkeep:0,interest:0},trains:[],terrain,water,owned,rides:[],elements:[]};
     this.index=this.indexState(this.state);
   }
   get revision():string{return `${this.session}:${this.generation}:${this.state.revision}`;}
   view(input:unknown){return result(()=>({...project(this.state,this.rules,validateView(input,this.state.side),this.index.elements,id=>this.course(this.ride(id))),commandRevision:this.revision}));}
   inspect(kind:unknown,id:unknown){return result(()=>{ensure(integer(id,0),'INVALID_COMMAND','Invalid selection identifier.');const selected=kind==='guest'?this.index.guests.get(id):kind==='staff'?this.index.staff.get(id):kind==='element'?this.index.elements.get(id):undefined;ensure(selected,'UNKNOWN_ELEMENT','Selection is unavailable.');return structuredClone(selected);});}
   snapshot():State{return structuredClone(this.state);}
+  catalogue(){return catalogue();}
   exportSave():string{return JSON.stringify(this.state);}
   restoreSave(input:unknown):Result<void>{return result(()=>{
     ensure(typeof input==='string'&&input.length<=64*1024*1024,'INVALID_SAVE','Invalid or oversized save.');let candidate:State;
     try{candidate=JSON.parse(input) as State;}catch{throw new Fault('INVALID_SAVE','Save is not valid JSON.');}
-    let index:Index;try{const legacy=candidate as unknown as {version:number,rules:string,elements:Element[]};if(legacy?.version===6){ensure(typeof legacy.rules==='string'&&Array.isArray(legacy.elements)&&!legacy.elements.some(e=>e?.kind==='scenery'),'INVALID_SAVE','Invalid legacy park.');let previous:Rules;try{previous=JSON.parse(legacy.rules);}catch{throw new Fault('INVALID_SAVE','Legacy rule profile is not JSON.');}ensure(previous!==null&&typeof previous==='object'&&!Array.isArray(previous),'INVALID_SAVE','Invalid legacy rule profile.');ensure(!Object.hasOwn(previous,'scenery'),'INVALID_SAVE','Invalid legacy rule profile.');candidate.rules=JSON.stringify(validateRules(previous));candidate.version=7;}index=this.indexState(candidate);}catch(e){if(e instanceof Fault)throw new Fault(e.code==='WRONG_RULES'?'WRONG_RULES':'INVALID_SAVE',e.message);throw e;}
+    let index:Index;
+    try{
+      const legacy=candidate as unknown as {version:number,rules:string,elements:Element[]};
+      if(legacy?.version===6){
+        ensure(typeof legacy.rules==='string'&&Array.isArray(legacy.elements)&&!legacy.elements.some(e=>e?.kind==='scenery'),'INVALID_SAVE','Invalid legacy park.');
+        let previous:Rules;try{previous=JSON.parse(legacy.rules);}catch{throw new Fault('INVALID_SAVE','Legacy rule profile is not JSON.');}
+        ensure(previous!==null&&typeof previous==='object'&&!Array.isArray(previous),'INVALID_SAVE','Invalid legacy rule profile.');ensure(!Object.hasOwn(previous,'scenery'),'INVALID_SAVE','Invalid legacy rule profile.');
+        legacy.rules=JSON.stringify(validateRules(previous));legacy.version=7;
+      }
+      if(legacy?.version===7){
+        this.indexState(candidate,true);
+        // Legacy slots identify surviving instances, not their unknown demolished history.
+        const instances=[...candidate.rides,...candidate.facilities].sort((a,b)=>a.id-b.id);
+        instances.forEach((instance,i)=>{instance.instanceId=i+1;instance.content='kind' in instance?legacyFacilityContent(instance.kind):legacyRideContent();});
+        candidate.version=8;candidate.contentVersion=CONTENT_VERSION;candidate.nextInstance=instances.length+1;
+      }
+      index=this.indexState(candidate);
+    }catch(e){if(e instanceof Fault)throw new Fault(e.code==='WRONG_RULES'?'WRONG_RULES':'INVALID_SAVE',e.message);throw e;}
     this.state=candidate;this.index=index;this.courses.clear();this.routes=new Routes();this.generation++;
   });}
   quote(input:unknown):Result<Quote>{return result(()=>{const p=this.plan(command(input));this.finances(p);return{revision:this.revision,cost:p.cost,cells:structuredClone(p.cells),...(p.endpoint?{endpoint:{...p.endpoint}}:{})};});}
@@ -162,9 +182,10 @@ export class Engine{
     const empty={cost:0,category:'none' as const,cells:[] as Cell[]};
     switch(c.type){
       case 'create-ride':{
+        const content=executableContent(Object.hasOwn(c,'content')?c.content:legacyRideContent(),'ride');ensure(integer(this.state.nextInstance+1),'CAPACITY','Instance identifier capacity exhausted.');
         this.owned(c.tile);ensure(c.height<=this.rules.maxHeight,'GEOMETRY','Height exceeds supported range.');ensure(this.state.rides.length+this.state.facilities.length<LIMITS.rideSlots,'CAPACITY','Ride/facility slots exhausted.');
-        let id=0;while(this.index.rides.has(id)||this.index.facilities.has(id))id++;const r:Ride={id,name:c.name,anchor:{x:c.tile.x*32,y:c.tile.y*32,z:c.height,direction:c.direction,pitch:0,bank:0},track:[],status:'closed',cars:1,price:this.rules.guests.defaultRidePrice,income:0,broken:false,lastInspection:this.state.tick,queue:[]};
-        return{...empty,id,commit:()=>{this.state.rides.push(r);this.index.rides.set(id,r);}};
+        let id=0;while(this.index.rides.has(id)||this.index.facilities.has(id))id++;const r:Ride={id,instanceId:this.state.nextInstance,content,name:c.name,anchor:{x:c.tile.x*32,y:c.tile.y*32,z:c.height,direction:c.direction,pitch:0,bank:0},track:[],status:'closed',cars:1,price:this.rules.guests.defaultRidePrice,income:0,broken:false,lastInspection:this.state.tick,queue:[]};
+        return{...empty,id,commit:()=>{this.state.rides.push(r);this.index.rides.set(id,r);this.state.nextInstance++;}};
       }
       case 'append-track':{
         const r=this.ride(c.ride);this.editable(r);ensure(Object.hasOwn(this.rules.pieces,c.piece),'GEOMETRY','Unknown track piece.');const p=this.rules.pieces[c.piece]!,origin=this.tip(r);
@@ -251,11 +272,12 @@ export class Engine{
       }
       case 'remove-amenity':{const a=this.index.amenities.get(c.id),e=this.index.elements.get(c.id);ensure(a&&e?.kind==='amenity','UNKNOWN_ELEMENT','Amenity does not exist.');return{cost:-Math.floor(this.rules.housekeeping.buildPrice*this.rules.refundPerThousand/1000),category:'refund',cells:[],commit:()=>{this.remove(e);this.state.amenities=this.state.amenities.filter(t=>t.id!==a.id);this.index.amenities.delete(a.id);}};}
       case 'place-facility':{
+        const content=executableContent(Object.hasOwn(c,'content')?c.content:legacyFacilityContent(c.kind),c.kind);ensure(integer(this.state.nextInstance+1),'CAPACITY','Instance identifier capacity exhausted.');
         ensure(this.state.rides.length+this.state.facilities.length<LIMITS.rideSlots&&this.state.nextElement<Number.MAX_SAFE_INTEGER,'CAPACITY','Facility slots or element identifiers exhausted.');
         let id=0;while(this.index.rides.has(id)||this.index.facilities.has(id))id++;
         const e:FacilityElement={id:this.state.nextElement,kind:'facility',facility:id,tile:c.tile,height:c.height,direction:c.direction},cells=this.cells(e);this.clear(cells);
-        const f:Facility={id,name:c.name,kind:c.kind,element:e.id,open:false,price:this.rules.services.defaultPrice,income:0,sales:0};
-        return{cost:this.rules.services.buildPrice,category:'construction',cells,id,commit:()=>{this.add(e,cells);this.state.facilities.push(f);this.index.facilities.set(id,f);}};
+        const f:Facility={id,instanceId:this.state.nextInstance,content,name:c.name,kind:c.kind,element:e.id,open:false,price:this.rules.services.defaultPrice,income:0,sales:0};
+        return{cost:this.rules.services.buildPrice,category:'construction',cells,id,commit:()=>{this.add(e,cells);this.state.facilities.push(f);this.index.facilities.set(id,f);this.state.nextInstance++;}};
       }
       case 'set-facility-open':{const f=this.index.facilities.get(c.facility);ensure(f,'UNKNOWN_RIDE','Facility does not exist.');return{...empty,commit:()=>{f.open=c.open;}};}
       case 'set-facility-price':{const f=this.index.facilities.get(c.facility);ensure(f,'UNKNOWN_RIDE','Facility does not exist.');ensure(c.price<=this.rules.services.maxPrice,'CAPACITY','Facility price exceeds profile bounds.');return{...empty,commit:()=>{f.price=c.price;}};}
@@ -274,9 +296,10 @@ export class Engine{
       case 'set-paused':return{...empty,commit:()=>{this.state.paused=c.paused;}};
     }
   }
-  private indexState(s:State):Index{
-    record(s,['amenities','litter','facilities','retiredShopIncome','retiredStock','staff','version','rules','side','tick','revision','topologyRevision','rng','paused','initialCash','cash','loan','maxLoan','spent','refunded','nextElement','nextEntity','people','ledger','trains','terrain','water','owned','rides','elements']);
-    ensure(s.version===7,'INVALID_SAVE','Unsupported save version.');ensure(s.rules===JSON.stringify(this.rules),'WRONG_RULES','Save rule profile differs from the engine.');
+  private indexState(s:State,legacy=false):Index{
+    record(s,['amenities','litter','facilities','retiredShopIncome','retiredStock','staff','version','rules','side','tick','revision','topologyRevision','rng','paused','initialCash','cash','loan','maxLoan','spent','refunded','nextElement','nextEntity','people','ledger','trains','terrain','water','owned','rides','elements',...(legacy?[]:['contentVersion','nextInstance'])]);
+    ensure(s.version===(legacy?7:8),'INVALID_SAVE','Unsupported save version.');ensure(s.rules===JSON.stringify(this.rules),'WRONG_RULES','Save rule profile differs from the engine.');
+    if(!legacy)ensure(s.contentVersion===CONTENT_VERSION&&integer(s.nextInstance,1),'INVALID_SAVE','Unsupported content version or invalid instance counter.');
     ensure(integer(s.side,LIMITS.mapMin,LIMITS.mapMax)&&integer(s.rng,0,0xffffffff)&&typeof s.paused==='boolean','INVALID_SAVE','Invalid world metadata.');
     for(const n of [s.tick,s.revision,s.topologyRevision,s.initialCash,s.loan,s.maxLoan,s.spent,s.refunded,s.retiredShopIncome,s.retiredStock])ensure(integer(n),'INVALID_SAVE','Invalid clock or money field.');
     record(s.ledger,['rideSales','shopSales','stock','wages','upkeep','interest']);for(const n of Object.values(s.ledger))ensure(integer(n),'INVALID_SAVE','Invalid operating ledger.');
@@ -285,8 +308,10 @@ export class Engine{
     for(let i=0;i<65536;i++){const h=s.terrain[i]!,w=s.water[i]!;ensure(integer(h,0,this.rules.maxHeight)&&h%16===0&&integer(w,0,this.rules.maxHeight)&&w%16===0&&(w===0||w>=h)&&typeof s.owned[i]==='boolean','INVALID_SAVE','Invalid surface record.');if(i%256===0||Math.floor(i/256)===0||i%256>=s.side-1||Math.floor(i/256)>=s.side-1)ensure(!s.owned[i],'INVALID_SAVE','Boundary/outside land cannot be owned.');}
     ensure(Array.isArray(s.rides)&&Array.isArray(s.facilities)&&s.rides.length+s.facilities.length<=255&&Array.isArray(s.elements)&&s.elements.length<=LIMITS.tileElements-65536,'INVALID_SAVE','Resource capacity exceeded.');
     const index:Index={amenities:new Map(),litter:new Map(),facilities:new Map(),staff:new Map(),elements:new Map(),rides:new Map(),trains:new Map(),guests:new Map(),accessCache:new Map(),cells:new Map(),paths:new Map(),records:65536};
-    for(const r of s.rides){record(r,['id','name','anchor','track','status','cars','price','income','broken','lastInspection','queue']);ensure(['closed','testing','open'].includes(r.status)&&integer(r.cars,1,this.rules.motion.maxCars)&&integer(r.price,0,this.rules.guests.maxRidePrice)&&integer(r.income)&&typeof r.broken==='boolean'&&integer(r.lastInspection,0,s.tick)&&Array.isArray(r.queue)&&r.queue.length<=LIMITS.sharedEntities,'INVALID_SAVE','Invalid operating status or car count.');ensure(integer(r.id,0,254)&&!index.rides.has(r.id)&&typeof r.name==='string'&&r.name.length>0&&r.name.length<=80&&Array.isArray(r.track)&&r.track.length<=s.elements.length,'INVALID_SAVE','Invalid ride record.');validConnector(r.anchor);this.owned({x:r.anchor.x/32,y:r.anchor.y/32},s);ensure(r.anchor.pitch===0&&r.anchor.bank===0&&r.anchor.z<=this.rules.maxHeight,'INVALID_SAVE','Invalid ride anchor.');index.rides.set(r.id,r);}
-    for(const f of s.facilities){record(f,['id','name','kind','element','open','price','income','sales']);ensure(integer(f.id,0,254)&&!index.rides.has(f.id)&&!index.facilities.has(f.id)&&typeof f.name==='string'&&f.name.length>0&&f.name.length<=80&&['food','drink','restroom'].includes(f.kind)&&integer(f.element,1,s.nextElement-1)&&typeof f.open==='boolean'&&integer(f.price,0,this.rules.services.maxPrice)&&integer(f.income)&&integer(f.sales)&&BigInt(f.income)<=BigInt(f.sales)*BigInt(this.rules.services.maxPrice),'INVALID_SAVE','Invalid facility record.');index.facilities.set(f.id,f);}
+    const instanceIds=new Set<number>();
+    const identity=(instance:Ride|Facility,kind:'ride'|'food'|'drink'|'restroom')=>{if(legacy)return;ensure(integer(instance.instanceId,1,s.nextInstance-1)&&!instanceIds.has(instance.instanceId),'INVALID_SAVE','Duplicate or invalid constructed instance identity.');executableContent(instance.content,kind);instanceIds.add(instance.instanceId);};
+    for(const r of s.rides){record(r,['id','name','anchor','track','status','cars','price','income','broken','lastInspection','queue',...(legacy?[]:['instanceId','content'])]);identity(r,'ride');ensure(['closed','testing','open'].includes(r.status)&&integer(r.cars,1,this.rules.motion.maxCars)&&integer(r.price,0,this.rules.guests.maxRidePrice)&&integer(r.income)&&typeof r.broken==='boolean'&&integer(r.lastInspection,0,s.tick)&&Array.isArray(r.queue)&&r.queue.length<=LIMITS.sharedEntities,'INVALID_SAVE','Invalid operating status or car count.');ensure(integer(r.id,0,254)&&!index.rides.has(r.id)&&typeof r.name==='string'&&r.name.length>0&&r.name.length<=80&&Array.isArray(r.track)&&r.track.length<=s.elements.length,'INVALID_SAVE','Invalid ride record.');validConnector(r.anchor);this.owned({x:r.anchor.x/32,y:r.anchor.y/32},s);ensure(r.anchor.pitch===0&&r.anchor.bank===0&&r.anchor.z<=this.rules.maxHeight,'INVALID_SAVE','Invalid ride anchor.');index.rides.set(r.id,r);}
+    for(const f of s.facilities){record(f,['id','name','kind','element','open','price','income','sales',...(legacy?[]:['instanceId','content'])]);identity(f,f.kind);ensure(integer(f.id,0,254)&&!index.rides.has(f.id)&&!index.facilities.has(f.id)&&typeof f.name==='string'&&f.name.length>0&&f.name.length<=80&&['food','drink','restroom'].includes(f.kind)&&integer(f.element,1,s.nextElement-1)&&typeof f.open==='boolean'&&integer(f.price,0,this.rules.services.maxPrice)&&integer(f.income)&&integer(f.sales)&&BigInt(f.income)<=BigInt(f.sales)*BigInt(this.rules.services.maxPrice),'INVALID_SAVE','Invalid facility record.');index.facilities.set(f.id,f);}
     let activeCost=0n;
     for(const e of s.elements){ensure(e!==null&&typeof e==='object','INVALID_SAVE','Invalid element record.');ensure(integer(e.id,1,s.nextElement-1)&&!index.elements.has(e.id),'INVALID_SAVE','Duplicate or invalid element identifier.');
       if(e.kind==='track'){record(e,['id','kind','ride','piece','origin']);ensure(typeof e.piece==='string'&&Object.hasOwn(this.rules.pieces,e.piece)&&integer(e.ride,0,254)&&index.rides.has(e.ride),'INVALID_SAVE','Unknown track metadata.');validConnector(e.origin);activeCost+=BigInt(this.rules.pieces[e.piece]!.price);}

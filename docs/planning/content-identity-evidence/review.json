@@ -1,0 +1,47 @@
+{
+  "logicalReviewer": "GPT 6.1 Sol Max, read-only deep review",
+  "logicalFindings": [
+    {
+      "finding": "Previous scenery test fixture retained v8 root fields while claiming v6.",
+      "resolution": "Corrected the fixture to the exact previous shape, kept production strict validation; remote full suite passed."
+    },
+    {
+      "finding": "New CC BY 4.0 reference metadata attribution was missing from the previous distribution notice.",
+      "resolution": "Added pinned authors/source/license/derived-fields attribution to THIRD_PARTY_NOTICES.md; actual web build copies the updated notice."
+    }
+  ],
+  "externalRuns": [
+    {
+      "conversationId": "4f1afc3b-354f-4bec-a970-eb6a81381594",
+      "requestedModel": "gemini-3.8-flash-high",
+      "effectiveModel": "gemini-3.8-flash-high",
+      "numTurns": 1,
+      "status": "SUCCESS",
+      "responseBytes": 0,
+      "exit": 0,
+      "timeout": true,
+      "classification": "partial: completed eight file reads but timeout/empty answer",
+      "response": ""
+    },
+    {
+      "conversationId": "4f1afc3b-354f-4bec-a970-eb6a81381594",
+      "requestedModel": "gemini-3.8-flash-high",
+      "effectiveModel": "gemini-3.8-flash-high",
+      "numTurns": 2,
+      "status": "SUCCESS",
+      "responseBytes": 4961,
+      "exit": 0,
+      "timeout": false,
+      "classification": "completed static review",
+      "response": "### Review Summary: No verified findings\n\nStatic contract review of the eight scoped files reveals **no verified findings** for the four targeted defect categories:\n\n1. **Unsupported Family Presentation**: In [`src/content/registry.ts`](file:///Volumes/WD/code/workspaces/coaster-content-identity/evidence/agy-presentation-review/source/src/content/registry.ts#L33) reference content resolves to `presentation.kind: 'unimplemented'`. In [`ui/park-scene.js`](file:///Volumes/WD/code/workspaces/coaster-content-identity/evidence/agy-presentation-review/source/ui/park-scene.js#L42-L43), `update()` validates `presentation.kind === 'procedural-coaster'` and throws `Unsupported park presentation version`, guarded in [`ui/game.js`](file:///Volumes/WD/code/workspaces/coaster-content-identity/evidence/agy-presentation-review/source/ui/game.js#L18) with error feedback rather than silently rendering a steel coaster.\n2. **Worker Protocol & Startup/Import/Refresh**: Protocol version `1` is uniformly defined in [`src/simulation/protocol.ts`](file:///Volumes/WD/code/workspaces/coaster-content-identity/evidence/agy-presentation-review/source/src/simulation/protocol.ts#L1) and validated on messages in [`src/simulation/browser-worker.ts`](file:///Volumes/WD/code/workspaces/coaster-content-identity/evidence/agy-presentation-review/source/src/simulation/browser-worker.ts#L15), [`ui/game.js`](file:///Volumes/WD/code/workspaces/coaster-content-identity/evidence/agy-presentation-review/source/ui/game.js#L11), and [`ui/park-scene.js`](file:///Volumes/WD/code/workspaces/coaster-content-identity/evidence/agy-presentation-review/source/ui/park-scene.js#L41). Startup handshake, save restore, and JSON imports trigger valid `load`/`view` requests.\n3. **Mutable Identity/Presentation Leakage**: [`src/simulation/view.ts`](file:///Volumes/WD/code/workspaces/coaster-content-identity/evidence/agy-presentation-review/source/src/simulation/view.ts#L21) projects shallow clones of `content` and resolves capabilities via [`src/content/registry.ts`](file:///Volumes/WD/code/workspaces/coaster-content-identity/evidence/agy-presentation-review/source/src/content/registry.ts#L48), which performs `structuredClone(choice.capabilities)`.\n4. **Obsolete Facility Silhouette**: Demolishing, placing, or reloading facilities triggers `refresh(true)` in [`ui/game.js`](file:///Volumes/WD/code/workspaces/coaster-content-identity/evidence/agy-presentation-review/source/ui/game.js#L13), which forces fresh `scenery` elements to [`ui/park-scene.js`](file:///Volumes/WD/code/workspaces/coaster-content-identity/evidence/agy-presentation-review/source/ui/park-scene.js#L26-L39). `setStatic()` invokes `clearStatic()` to dispose instanced meshes and clear existing scene groups.\n\n---\n\n### Inspected Paths\n- [`contract.md`](file:///Volumes/WD/code/workspaces/coaster-content-identity/evidence/agy-presentation-review/source/contract.md)\n- [`src/simulation/view.ts`](file:///Volumes/WD/code/workspaces/coaster-content-identity/evidence/agy-presentation-review/source/src/simulation/view.ts)\n- [`src/simulation/types.ts`](file:///Volumes/WD/code/workspaces/coaster-content-identity/evidence/agy-presentation-review/source/src/simulation/types.ts)\n- [`src/simulation/protocol.ts`](file:///Volumes/WD/code/workspaces/coaster-content-identity/evidence/agy-presentation-review/source/src/simulation/protocol.ts)\n- [`src/simulation/browser-worker.ts`](file:///Volumes/WD/code/workspaces/coaster-content-identity/evidence/agy-presentation-review/source/src/simulation/browser-worker.ts)\n- [`src/content/registry.ts`](file:///Volumes/WD/code/workspaces/coaster-content-identity/evidence/agy-presentation-review/source/src/content/registry.ts)\n- [`ui/game.js`](file:///Volumes/WD/code/workspaces/coaster-content-identity/evidence/agy-presentation-review/source/ui/game.js)\n- [`ui/park-scene.js`](file:///Volumes/WD/code/workspaces/coaster-content-identity/evidence/agy-presentation-review/source/ui/park-scene.js)\n\n---\n\n### Material Blind Spots & Unverified Risks\n- **Unverified Field Discrepancy (Speculative Risk)**: In [`ui/game.js`](file:///Volumes/WD/code/workspaces/coaster-content-identity/evidence/agy-presentation-review/source/ui/game.js#L18), caching reads `next.commandRevision`, whereas [`src/simulation/view.ts`](file:///Volumes/WD/code/workspaces/coaster-content-identity/evidence/agy-presentation-review/source/src/simulation/view.ts#L24) outputs `revision`, `worldRevision`, and `topologyRevision`. Because `undefined !== null`, routine polls do not fetch static geometry, but cache coherency under partial-field expectations is unverified without runtime execution.\n- **Uninspected Pipeline Modules**: Internal geometry implementations in `ui/art/*` and simulation host dispatch in `src/simulation/host.js` were outside the file boundary and not inspected.\n- **Validation Statement**: No WebGL rendering, test scripts, or browser sessions were executed; review is purely static.\n"
+    }
+  ],
+  "rootDecisions": [
+    "AGY commandRevision blind spot is refuted by Engine.view(), which appends commandRevision to project() output.",
+    "AGY quoted a different renderer error text; the actual family/profile guard and browser negative check establish rejection.",
+    "No verified authority, capability, migration or frontend defect remains within this reviewed foundation.",
+    "Original-size model mapping and legacy fitModel are explicitly incomplete; coordinate metadata alone is not calibration."
+  ],
+  "rawEvidence": "Task-owned raw streams/stderr/exit/prompts are gzip-retained on WD under coaster-content-identity/evidence/agy-presentation-review.",
+  "frozenSourceUnchanged": true
+}

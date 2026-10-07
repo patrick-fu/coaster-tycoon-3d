@@ -24,8 +24,8 @@ paths/queue, three services, amenities and two employees. It requires no origina
 game data. Geometry, rates and motion remain candidate metadata; excitement,
 intensity/nausea rating formulas and exact original catalogue comparisons are
 not yet qualified. Six independently authored scenery types and a planted starter
-landscape use authoritative costs, footprints and version-7 saves. Legacy
-version-6 parks migrate without replacing player construction or adding the
+landscape use authoritative costs, footprints and version-8 saves. Legacy
+version-6/7 parks migrate without replacing player construction or adding the
 expanded starter content.
 
 Classic controls use a horizontal command desk and bottom palette. Construction

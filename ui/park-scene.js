@@ -5,6 +5,7 @@ import {buildEnvironment,buildPath,buildScenery} from './art/environment.js';
 import {buildFacility,buildAmenity} from './art/buildings.js';
 import {buildTrack,buildPortal,createVehicles,createPeople} from './art/coaster.js';
 import {steelRules} from './content/steel-coaster.js';
+import {WORKER_PROTOCOL_VERSION} from './simulation/protocol.js';
 
 export class ParkScene{
  constructor(container){
@@ -37,6 +38,10 @@ export class ParkScene{
   batchStatic(this.staticGroup);this.renderer.shadowMap.needsUpdate=true;
  }
  update(packet){
+  if(packet.protocolVersion!==WORKER_PROTOCOL_VERSION||packet.contentVersion!==1)throw new Error('Unsupported park presentation version.');
+  for(const ride of packet.rides)if(ride.presentation.kind!=='procedural-coaster'||ride.presentation.profileId!=='classic-candidate-v1')throw new Error('This ride has no supported presentation.');
+  for(const facility of packet.facilities)if(facility.presentation.kind!=='procedural-facility'||facility.presentation.profileId!=='classic-candidate-v1'||facility.presentation.service!==facility.kind)throw new Error('This facility has no supported presentation.');
+  if(packet.coordinates.metresPerTile!==steelRules.motion.tileMetres)throw new Error('Unsupported park coordinate profile.');
   this.packet=packet;this.art.packet=packet;
   const facilities=packet.facilities.map(f=>`${f.id}:${f.open}`).join(','),amenities=packet.amenities.map(a=>`${a.id}:${a.fill}`).join(',');
   if(packet.scenery)this.setStatic(packet.scenery,packet.entry);

@@ -1,0 +1,43 @@
+{
+  "sourceBase": "5571d39bc88b024ecccaa46dbacfa6707099a449",
+  "host": "grok-build",
+  "node": "20.19.2",
+  "compiler": "TypeScript 7.0.2",
+  "three": "0.186.1",
+  "commands": [
+    {
+      "command": "npm test",
+      "exit": 0,
+      "tests": 121,
+      "passed": 121,
+      "failed": 0,
+      "logSha256": "c19b719df00a7f5127a743241f969f2073bb35d442c556ea7d1435221cd8d63f"
+    },
+    {
+      "command": "npm run build:web",
+      "exit": 0,
+      "logSha256": "120b133d25a41fc01f174dbb1129e91fbbc95e7d931def7b534c319a71105eb4"
+    },
+    {
+      "command": "check-venv/bin/python run-browser.py",
+      "exit": 0,
+      "classicChecks": 30,
+      "identityChecks": 3,
+      "actualV8Download": true,
+      "exceptions": 0,
+      "webGLErrors": 0
+    },
+    {
+      "command": "node compare-baseline.mjs baseline; node compare-baseline.mjs current",
+      "exit": 0,
+      "actualPreviousKernelContinuationCases": 2
+    }
+  ],
+  "noMacRuntimeExecution": true,
+  "remaining": [
+    "R01\u2013R03 native/original family, clearance and nonuniform dispatch calibration",
+    "S05 authored recipe/research/weather/objective continuation",
+    "Reference content adapters and independent visual assets",
+    "Representative integrated-GPU qualification and Patrick visual acceptance"
+  ]
+}

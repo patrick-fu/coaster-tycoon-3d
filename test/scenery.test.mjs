@@ -17,8 +17,8 @@ test('flower clearance covers its visible blooms while permitting a separated ov
  const e=create();apply(e,scenery('flower'));rejects(e,{type:'place-path',tile:{x:5,y:5},height:24,queueFor:null},'CLEARANCE');apply(e,{type:'place-path',tile:{x:5,y:5},height:32,queueFor:null});assert(e.restoreSave(e.exportSave()).ok);
 });
 test('version six parks migrate without changing continuation, cash, membership or player construction',()=>{
- const e=create();apply(e,{type:'place-path',tile:{x:5,y:5},height:16,queueFor:null});const expected=e.exportSave(),legacy=JSON.parse(expected),profile=JSON.parse(legacy.rules);delete profile.scenery;legacy.version=6;legacy.rules=JSON.stringify(profile);
- assert(e.restoreSave(JSON.stringify(legacy)).ok);assert.equal(e.exportSave(),expected);assert(e.advance(60).ok);assert(e.restoreSave(e.exportSave()).ok);
+ const e=create();apply(e,{type:'place-path',tile:{x:5,y:5},height:16,queueFor:null});const expected=e.snapshot(),legacy=structuredClone(expected),profile=JSON.parse(legacy.rules);delete profile.scenery;delete legacy.contentVersion;delete legacy.nextInstance;legacy.version=6;legacy.rules=JSON.stringify(profile);
+ assert(e.restoreSave(JSON.stringify(legacy)).ok);assert.deepEqual(e.snapshot(),expected);assert(e.advance(60).ok);assert(e.restoreSave(e.exportSave()).ok);
 });
 test('invalid scenery and legacy metadata preserve the live park on failed import',()=>{
  const e=create();apply(e,scenery());const before=e.exportSave();for(const mutate of[s=>s.elements[0].sceneryType='unknown',s=>s.elements[0].height=32,s=>{s.version=6;},s=>{s.version=6;s.elements=[];s.rules='null';},s=>{s.version=6;s.elements=[];s.rules='{';}]){const s=JSON.parse(before);mutate(s);const r=e.restoreSave(JSON.stringify(s));assert(!r.ok);assert.equal(r.error.code,'INVALID_SAVE');assert.equal(e.exportSave(),before);}
