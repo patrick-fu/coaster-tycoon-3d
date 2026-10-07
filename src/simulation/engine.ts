@@ -1,4 +1,4 @@
-import {LIMITS,type Cell,type Command,type Connector,type Element,type ErrorCode,type Path,type Portal,type Quote,type Receipt,type Result,type Ride,type Rules,type State,type Tile,type Track,type WorldOptions} from './types.js';
+import {LIMITS,type Cell,type Command,type Connector,type Element,type ErrorCode,type Path,type Portal,type Quote,type Scenery,type Receipt,type Result,type Ride,type Rules,type State,type Tile,type Track,type WorldOptions} from './types.js';
 import {Fault,ensure,integer,record,result} from './validation.js';
 import {endpoint,footprint,same,validateRules} from './geometry.js';
 import {eligibility,portalApproach,validatePortal} from './operation.js';
@@ -9,6 +9,7 @@ import {amenityPoint,recoverCleanup,stepHandymen,type Amenity,type AmenityElemen
 import {encodePatrol,inPatrol} from './patrol.js';
 import {project,validateView} from './view.js';
 import {Routes} from './routes.js';
+import {sceneryTypes} from './scenery.js';
 type Index=ServiceIndex&{cells:Map<number,{id:number,cell:Cell}[]>,records:number};
 type Plan={cost:number,category:'construction'|'refund'|'loan'|'none',cells:Cell[],endpoint?:Connector,id?:number,commit:()=>void};
 const at=(t:Tile)=>t.y*256+t.x;
@@ -22,6 +23,8 @@ function command(value:unknown):Command{
     case 'create-ride':record(c,['type','name','tile','height','direction']);validTile(c.tile);ensure(typeof c.name==='string'&&c.name.length>0&&c.name.length<=80&&integer(c.direction,0,3),'INVALID_COMMAND','Invalid ride.');break;
     case 'append-track':record(c,['type','ride','piece']);ensure(integer(c.ride,0,254)&&typeof c.piece==='string','INVALID_COMMAND','Invalid track request.');break;
     case 'remove-last-track':record(c,['type','ride']);ensure(integer(c.ride,0,254),'INVALID_COMMAND','Invalid ride identifier.');break;
+    case 'place-scenery':record(c,['type','sceneryType','tile','height']);validTile(c.tile);ensure(sceneryTypes.includes(c.sceneryType),'INVALID_COMMAND','Unknown scenery type.');break;
+    case 'remove-scenery':record(c,['type','id']);ensure(integer(c.id,1),'INVALID_COMMAND','Invalid scenery identifier.');break;
     case 'place-path':record(c,['type','tile','height','queueFor']);validTile(c.tile);ensure(c.queueFor===null||integer(c.queueFor,0,254),'INVALID_COMMAND','Invalid queue association.');break;
     case 'remove-path':record(c,['type','id']);ensure(integer(c.id,1),'INVALID_COMMAND','Invalid path identifier.');break;
     case 'set-terrain':record(c,['type','tile','height','water']);validTile(c.tile);ensure(integer(c.water,0,1000000)&&c.water%16===0,'INVALID_COMMAND','Invalid water level.');break;
@@ -68,7 +71,7 @@ export class Engine{
     if(options.land){ensure(Array.isArray(options.land)&&options.land.length<=65536,'INVALID_COMMAND','Invalid land setup.');const seen=new Set<number>();
       for(const l of options.land){record(l,['tile','height','water','owned']);validTile(l.tile);this.bounds(l.tile,options.side);ensure(!seen.has(at(l.tile))&&integer(l.height,0,this.rules.maxHeight)&&l.height%16===0&&integer(l.water,0,this.rules.maxHeight)&&l.water%16===0&&(l.water===0||l.water>=l.height)&&typeof l.owned==='boolean','INVALID_COMMAND','Invalid land setup.');seen.add(at(l.tile));terrain[at(l.tile)]=l.height;water[at(l.tile)]=l.water;owned[at(l.tile)]=l.owned;}
     }
-    this.state={version:6,amenities:[],litter:[],facilities:[],retiredShopIncome:0,retiredStock:0,staff:[],rules:JSON.stringify(this.rules),side:options.side,tick:0,revision:0,topologyRevision:0,rng:options.seed,paused:false,initialCash:options.cash,cash:options.cash,loan:0,maxLoan:options.maxLoan,spent:0,refunded:0,nextElement:1,nextEntity:1,people:{entry:null,open:false,guests:[],departedSpent:0},ledger:{rideSales:0,shopSales:0,stock:0,wages:0,upkeep:0,interest:0},trains:[],terrain,water,owned,rides:[],elements:[]};
+    this.state={version:7,amenities:[],litter:[],facilities:[],retiredShopIncome:0,retiredStock:0,staff:[],rules:JSON.stringify(this.rules),side:options.side,tick:0,revision:0,topologyRevision:0,rng:options.seed,paused:false,initialCash:options.cash,cash:options.cash,loan:0,maxLoan:options.maxLoan,spent:0,refunded:0,nextElement:1,nextEntity:1,people:{entry:null,open:false,guests:[],departedSpent:0},ledger:{rideSales:0,shopSales:0,stock:0,wages:0,upkeep:0,interest:0},trains:[],terrain,water,owned,rides:[],elements:[]};
     this.index=this.indexState(this.state);
   }
   get revision():string{return `${this.session}:${this.generation}:${this.state.revision}`;}
@@ -79,7 +82,7 @@ export class Engine{
   restoreSave(input:unknown):Result<void>{return result(()=>{
     ensure(typeof input==='string'&&input.length<=64*1024*1024,'INVALID_SAVE','Invalid or oversized save.');let candidate:State;
     try{candidate=JSON.parse(input) as State;}catch{throw new Fault('INVALID_SAVE','Save is not valid JSON.');}
-    let index:Index;try{index=this.indexState(candidate);}catch(e){if(e instanceof Fault)throw new Fault(e.code==='WRONG_RULES'?'WRONG_RULES':'INVALID_SAVE',e.message);throw e;}
+    let index:Index;try{const legacy=candidate as unknown as {version:number,rules:string,elements:Element[]};if(legacy?.version===6){ensure(typeof legacy.rules==='string'&&Array.isArray(legacy.elements)&&!legacy.elements.some(e=>e?.kind==='scenery'),'INVALID_SAVE','Invalid legacy park.');let previous:Rules;try{previous=JSON.parse(legacy.rules);}catch{throw new Fault('INVALID_SAVE','Legacy rule profile is not JSON.');}ensure(previous!==null&&typeof previous==='object'&&!Array.isArray(previous),'INVALID_SAVE','Invalid legacy rule profile.');ensure(!Object.hasOwn(previous,'scenery'),'INVALID_SAVE','Invalid legacy rule profile.');candidate.rules=JSON.stringify(validateRules(previous));candidate.version=7;}index=this.indexState(candidate);}catch(e){if(e instanceof Fault)throw new Fault(e.code==='WRONG_RULES'?'WRONG_RULES':'INVALID_SAVE',e.message);throw e;}
     this.state=candidate;this.index=index;this.courses.clear();this.routes=new Routes();this.generation++;
   });}
   quote(input:unknown):Result<Quote>{return result(()=>{const p=this.plan(command(input));this.finances(p);return{revision:this.revision,cost:p.cost,cells:structuredClone(p.cells),...(p.endpoint?{endpoint:{...p.endpoint}}:{})};});}
@@ -142,7 +145,7 @@ export class Engine{
   private editable(ride:Ride){const train=this.index.trains.get(ride.id);ensure(ride.status==='closed'&&(!train||train.phase==='waiting'&&!train.seats.some(id=>id!==null)),'RIDE_ACTIVE','Close the ride and wait for its empty train to return before editing.');}
   private discardTrain(ride:number){this.state.trains=this.state.trains.filter(t=>t.ride!==ride);this.index.trains.delete(ride);this.courses.delete(ride);}
   private tip(r:Ride):Connector{const id=r.track.at(-1);if(id===undefined)return{...r.anchor};const p=this.index.elements.get(id)! as Track;return endpoint(p.origin,this.rules.pieces[p.piece]!);}
-  private cells(e:Element):Cell[]{return e.kind==='track'?footprint(e.origin,this.rules.pieces[e.piece]!):[{x:e.tile.x,y:e.tile.y,low:e.height,high:e.height+16,mask:e.kind==='amenity'?1:15}];}
+  private cells(e:Element):Cell[]{return e.kind==='track'?footprint(e.origin,this.rules.pieces[e.piece]!):[{x:e.tile.x,y:e.tile.y,low:e.height,high:e.height+(e.kind==='scenery'?this.rules.scenery[e.sceneryType].height:16),mask:e.kind==='amenity'?1:15}];}
   private clear(cells:Cell[],s=this.state,index=this.index,ignore:number|null=null){
     for(const c of cells){this.owned(c,s);ensure(c.low>=0&&c.high<=this.rules.maxHeight,'GEOMETRY','Clearance exceeds height range.');const ground=s.terrain[at(c)]!,water=s.water[at(c)]!;
       ensure(c.low>=ground&&c.low>=water,'CLEARANCE','Construction intersects terrain or water.');ensure(c.low-ground<=this.rules.maxSupport,'SUPPORT','Support height exceeded.');
@@ -177,6 +180,12 @@ export class Engine{
         const r=this.ride(c.ride),id=r.track.at(-1);this.editable(r);ensure(id!==undefined,'UNKNOWN_ELEMENT','Ride has no track.');ensure(!this.state.elements.some(e=>e.kind==='portal'&&e.station===id),'OPERATING_REQUIREMENTS','Remove station portals before removing their track.');const e=this.index.elements.get(id)! as Track;const cost=-Math.floor(this.rules.pieces[e.piece]!.price*this.rules.refundPerThousand/1000);
         return{cost,category:'refund',cells:[],commit:()=>{this.discardTrain(r.id);this.remove(e);r.track.pop();}};
       }
+      case 'place-scenery':{
+        this.owned(c.tile);ensure(c.height===this.state.terrain[at(c.tile)],'GEOMETRY','Scenery must rest on the ground.');ensure(this.state.nextElement<Number.MAX_SAFE_INTEGER,'CAPACITY','Element identifiers exhausted.');
+        const e:Scenery={id:this.state.nextElement,kind:'scenery',sceneryType:c.sceneryType,tile:c.tile,height:c.height},cells=this.cells(e);this.clear(cells);
+        return{cost:this.rules.scenery[c.sceneryType].price,category:'construction',cells,id:e.id,commit:()=>this.add(e,cells)};
+      }
+      case 'remove-scenery':{const e=this.index.elements.get(c.id);ensure(e?.kind==='scenery','UNKNOWN_ELEMENT','Scenery does not exist.');return{cost:-Math.floor(this.rules.scenery[e.sceneryType].price*this.rules.refundPerThousand/1000),category:'refund',cells:[],commit:()=>this.remove(e)};}
       case 'place-path':{
         if(c.queueFor!==null)this.ride(c.queueFor);ensure(this.state.nextElement<Number.MAX_SAFE_INTEGER,'CAPACITY','Element identifier capacity exhausted.');const e:Path={id:this.state.nextElement,kind:'path',tile:c.tile,height:c.height,queueFor:c.queueFor};const cells=this.cells(e);this.clear(cells);
         return{cost:this.rules.pathPrice,category:'construction',cells,id:e.id,commit:()=>{this.add(e,cells);this.state.topologyRevision++;}};
@@ -186,7 +195,7 @@ export class Engine{
       }
       case 'set-terrain':{
         this.owned(c.tile);ensure(c.height%16===0&&c.height<=this.rules.maxHeight&&c.water<=this.rules.maxHeight&&(c.water===0||c.water>=c.height),'GEOMETRY','Invalid terrain or water height.');const i=at(c.tile);
-        for(const occupied of this.index.cells.get(i)??[]){ensure(occupied.cell.low>=Math.max(c.height,c.water),'CLEARANCE','Terrain change intersects construction.');ensure(occupied.cell.low-c.height<=this.rules.maxSupport,'SUPPORT','Terrain change leaves unsupported construction.');}
+        for(const occupied of this.index.cells.get(i)??[]){ensure(this.index.elements.get(occupied.id)?.kind!=='scenery'||occupied.cell.low===c.height,'CLEARANCE','Remove scenery before changing its ground height.');ensure(occupied.cell.low>=Math.max(c.height,c.water),'CLEARANCE','Terrain change intersects construction.');ensure(occupied.cell.low-c.height<=this.rules.maxSupport,'SUPPORT','Terrain change leaves unsupported construction.');}
         const cost=(Math.abs(this.state.terrain[i]!-c.height)+Math.abs(this.state.water[i]!-c.water))/16*this.rules.terrainPrice;
         return{cost,category:'construction',cells:[],commit:()=>{this.state.terrain[i]=c.height;this.state.water[i]=c.water;this.state.topologyRevision++;}};
       }
@@ -267,7 +276,7 @@ export class Engine{
   }
   private indexState(s:State):Index{
     record(s,['amenities','litter','facilities','retiredShopIncome','retiredStock','staff','version','rules','side','tick','revision','topologyRevision','rng','paused','initialCash','cash','loan','maxLoan','spent','refunded','nextElement','nextEntity','people','ledger','trains','terrain','water','owned','rides','elements']);
-    ensure(s.version===6,'INVALID_SAVE','Unsupported save version.');ensure(s.rules===JSON.stringify(this.rules),'WRONG_RULES','Save rule profile differs from the engine.');
+    ensure(s.version===7,'INVALID_SAVE','Unsupported save version.');ensure(s.rules===JSON.stringify(this.rules),'WRONG_RULES','Save rule profile differs from the engine.');
     ensure(integer(s.side,LIMITS.mapMin,LIMITS.mapMax)&&integer(s.rng,0,0xffffffff)&&typeof s.paused==='boolean','INVALID_SAVE','Invalid world metadata.');
     for(const n of [s.tick,s.revision,s.topologyRevision,s.initialCash,s.loan,s.maxLoan,s.spent,s.refunded,s.retiredShopIncome,s.retiredStock])ensure(integer(n),'INVALID_SAVE','Invalid clock or money field.');
     record(s.ledger,['rideSales','shopSales','stock','wages','upkeep','interest']);for(const n of Object.values(s.ledger))ensure(integer(n),'INVALID_SAVE','Invalid operating ledger.');
@@ -281,6 +290,7 @@ export class Engine{
     let activeCost=0n;
     for(const e of s.elements){ensure(e!==null&&typeof e==='object','INVALID_SAVE','Invalid element record.');ensure(integer(e.id,1,s.nextElement-1)&&!index.elements.has(e.id),'INVALID_SAVE','Duplicate or invalid element identifier.');
       if(e.kind==='track'){record(e,['id','kind','ride','piece','origin']);ensure(typeof e.piece==='string'&&Object.hasOwn(this.rules.pieces,e.piece)&&integer(e.ride,0,254)&&index.rides.has(e.ride),'INVALID_SAVE','Unknown track metadata.');validConnector(e.origin);activeCost+=BigInt(this.rules.pieces[e.piece]!.price);}
+      else if(e.kind==='scenery'){record(e,['id','kind','sceneryType','tile','height']);validTile(e.tile);ensure(sceneryTypes.includes(e.sceneryType)&&integer(e.height,0,this.rules.maxHeight)&&e.height%16===0&&e.height===s.terrain[at(e.tile)],'INVALID_SAVE','Invalid scenery metadata.');activeCost+=BigInt(this.rules.scenery[e.sceneryType].price);}
       else if(e.kind==='amenity'){record(e,['id','kind','amenityType','path','tile','height']);validTile(e.tile);const path=index.elements.get(e.path);ensure(['bench','bin'].includes(e.amenityType)&&integer(e.path,1)&&path?.kind==='path'&&path.queueFor===null&&path.tile.x===e.tile.x&&path.tile.y===e.tile.y&&path.height===e.height,'INVALID_SAVE','Invalid attached amenity.');activeCost+=BigInt(this.rules.housekeeping.buildPrice);}
       else if(e.kind==='facility'){record(e,['id','kind','facility','tile','height','direction']);validTile(e.tile);ensure(integer(e.facility,0,254)&&index.facilities.get(e.facility)?.element===e.id&&integer(e.height,0,this.rules.maxHeight)&&e.height%8===0&&integer(e.direction,0,3),'INVALID_SAVE','Invalid facility element.');activeCost+=BigInt(this.rules.services.buildPrice);}
       else if(e.kind==='portal'){record(e,['id','kind','ride','station','role','tile','height','direction']);validTile(e.tile);ensure(integer(e.ride,0,254)&&index.rides.has(e.ride)&&integer(e.station,1)&&(e.role==='entrance'||e.role==='exit')&&integer(e.direction,0,3)&&integer(e.height,0,this.rules.maxHeight)&&e.height%8===0,'INVALID_SAVE','Invalid portal metadata.');activeCost+=BigInt(this.rules.portalPrice);}

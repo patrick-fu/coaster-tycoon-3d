@@ -87,13 +87,24 @@ not every original loan, wage, upkeep, pricing or profit formula.
 
 ## Save validation
 
-Version 6 stores clock/pause/RNG, command/topology revisions, profile identity,
+Version 7 stores clock/pause/RNG, command/topology revisions, profile identity,
 funds/loan/ledger aggregates, surface ownership/heights/water, ride anchors and
 ordered track membership, path/queue associations, portals, stable element/car
 IDs, train motion/measurements, individual guest navigation, queue/seat membership
-and reconciled guest payments. Versions 1–5 were earlier milestones; no
+and reconciled guest payments, plus independently authored scenery placements.
+Accepted version-6 saves migrate atomically by normalizing their legacy rule
+profile with the scenery catalogue, then validating the entire candidate.
+The migration preserves existing park content, money, identifiers and RNG;
+it does not add the expanded starter park to a player's save.
+Versions 1–5 were earlier milestones; no
 migration is provided for those development formats.
 Derived clearance and path indexes are rebuilt, not trusted from the save.
+
+Scenery uses authoritative placement/removal commands, catalogue prices and
+vertical clearance. Trees, flower beds, hedges, lanterns, fountains and rocks
+must rest on owned ground without intersecting water. Ground elevation cannot change beneath existing
+scenery; remove it first. The scenery catalogue's costs and dimensions remain
+project candidates, without an original-game parity claim.
 
 Import checks exact record shapes, numeric/range/array bounds, usable ownership,
 money reconciliation and net expenditure covering active construction, catalogue references, identifiers, ride membership/order,

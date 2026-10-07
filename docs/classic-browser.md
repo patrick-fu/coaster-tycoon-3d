@@ -18,11 +18,15 @@ simulation rules. Normal, 2× and 4× controls alter tick accumulation.
 
 The independently authored steel candidate includes straight/station, left/right
 curves, lift/drop transitions, brakes and banking transitions. Copper Meadows
-starts with a closed loop containing a lift and drop, four measured cars, real
+starts with three operating layouts: Copper Loop, Juniper Sprint and Highland
+Flyer. These share one steel family, with four measured cars each, real
 paths/queue, three services, amenities and two employees. It requires no original
 game data. Geometry, rates and motion remain candidate metadata; excitement,
 intensity/nausea rating formulas and exact original catalogue comparisons are
-not yet qualified.
+not yet qualified. Six independently authored scenery types and a planted starter
+landscape use authoritative costs, footprints and version-7 saves. Legacy
+version-6 parks migrate without replacing player construction or adding the
+expanded starter content.
 
 Classic controls use a horizontal command desk and bottom palette. Construction
 quotes come from the worker; clicks execute a fresh quoted command and surface
@@ -41,9 +45,16 @@ windowing, dense-layer truncation UX and large-map presentation remain pending.
 IndexedDB stores the current versioned park. Export/import uses portable JSON;
 failed imports preserve the live park and display their error. New park requires
 a player confirmation. Saves are local to this browser and origin; the preview
-server is a static-file service without a game backend.
+server is a static-file service without a game backend. The `?showcase=classic`
+entry uses a separate local save slot so the new demonstration park does not
+replace an existing player park.
 
 ## Executed verification
+
+The 2026-10-07 detailed-art checkpoint and its source-bound captures are recorded
+in [Classic art evidence](verification/classic-art/README.md). The source counts,
+browser scenarios and older measurements below describe the earlier Classic
+integration; they are historical baselines, not measurements of the expanded art.
 
 Grok Bot Linux compiled and passed 100 source tests, including candidate starter
 operation, bounded projection/copy isolation and fixed-clock debt/pause/speed.
