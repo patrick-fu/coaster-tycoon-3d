@@ -1,0 +1,154 @@
+[
+  {
+    "name": "canopy",
+    "variant": 0,
+    "signedVolume": 0.3283807255753858,
+    "degenerate": 0,
+    "vertices": 540,
+    "triangles": 180,
+    "finite": true,
+    "min": [
+      -0.45222824811935425,
+      -0.34916672110557556,
+      -0.46022725105285645
+    ],
+    "max": [
+      0.4026790261268616,
+      0.4741199314594269,
+      0.4552335739135742
+    ]
+  },
+  {
+    "name": "canopy",
+    "variant": 1,
+    "signedVolume": 0.3251870326140328,
+    "degenerate": 0,
+    "vertices": 540,
+    "triangles": 180,
+    "finite": true,
+    "min": [
+      -0.46401292085647583,
+      -0.32847723364830017,
+      -0.39501112699508667
+    ],
+    "max": [
+      0.4279943108558655,
+      0.48292866349220276,
+      0.5118853449821472
+    ]
+  },
+  {
+    "name": "pine",
+    "variant": 0,
+    "signedVolume": 0.12878457881377986,
+    "degenerate": 0,
+    "vertices": 119,
+    "triangles": 176,
+    "finite": true,
+    "min": [
+      -0.5,
+      -0.5,
+      -0.5
+    ],
+    "max": [
+      0.5,
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "name": "pine",
+    "variant": 1,
+    "signedVolume": 0.10156817653105041,
+    "degenerate": 0,
+    "vertices": 119,
+    "triangles": 176,
+    "finite": true,
+    "min": [
+      -0.5,
+      -0.5,
+      -0.5
+    ],
+    "max": [
+      0.5,
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "name": "boulder",
+    "variant": 0,
+    "signedVolume": 0.58281454962584,
+    "degenerate": 0,
+    "vertices": 432,
+    "triangles": 144,
+    "finite": true,
+    "min": [
+      -0.5,
+      -0.5,
+      -0.5
+    ],
+    "max": [
+      0.5,
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "name": "boulder",
+    "variant": 1,
+    "signedVolume": 0.5708528791161673,
+    "degenerate": 0,
+    "vertices": 432,
+    "triangles": 144,
+    "finite": true,
+    "min": [
+      -0.5,
+      -0.5,
+      -0.5
+    ],
+    "max": [
+      0.5,
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "name": "boulder",
+    "variant": 2,
+    "signedVolume": 0.5233779535206188,
+    "degenerate": 0,
+    "vertices": 432,
+    "triangles": 144,
+    "finite": true,
+    "min": [
+      -0.5,
+      -0.5,
+      -0.5
+    ],
+    "max": [
+      0.5,
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "name": "flower",
+    "variant": 0,
+    "signedVolume": 0.05030110913515478,
+    "degenerate": 0,
+    "vertices": 22,
+    "triangles": 40,
+    "finite": true,
+    "min": [
+      -0.5,
+      -0.5,
+      -0.5
+    ],
+    "max": [
+      0.5,
+      0.5,
+      0.5
+    ]
+  }
+]

@@ -7,12 +7,21 @@ unaffiliated with RollerCoaster Tycoon 2 and OpenRCT2.
 Project code is licensed under [MIT](LICENSE). The implementation and required
 game resources are independent; see the [source strategy decision](docs/adr/0001-independent-mit-implementation.md).
 
-Try the [Classic development preview](https://patrick-fu.github.io/coaster-tycoon-3d/)
-in desktop Chrome or Edge. Build and manage Copper Meadows with mouse/keyboard;
+Try the [Classic showcase](https://patrick-fu.github.io/coaster-tycoon-3d/previews/classic-a7d6451/?showcase=classic)
+in desktop Chrome or Edge. Its three operating steel-coaster layouts, shops,
+gardens and local save use a separate showcase slot, preserving your existing
+park at the [regular preview](https://patrick-fu.github.io/coaster-tycoon-3d/).
+Build and manage Copper Meadows with mouse/keyboard;
 drag to orbit, right-drag to pan and scroll to zoom. Space pauses the park.
 Saves remain in this browser; Export/Import moves a park between devices.
 
-![Classic development preview](docs/verification/classic-preview/public-preview.png)
+![Classic park with independently authored art](docs/verification/classic-art/art-overview.png)
+
+The park now has authored paving, turf, bark, foliage, water and roof materials;
+timber stations, detailed rails/supports, identifiable concessions, seated riders
+and six buildable scenery types. Every placement uses the real construction,
+money, clearance and save model. See [art direction](docs/art-direction.md) and
+[verification evidence](docs/verification/classic-art/README.md).
 
 Planning is complete. The first production simulation kernel implements atomic
 construction commands, candidate train motion, individual guests/queues/seats,

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Current production shader state",
+    "error": 1282,
+    "shadowType": 1,
+    "autoUpdate": false
+  },
+  {
+    "name": "Only continuous shadow updates enabled",
+    "error": 1282,
+    "shadowType": 1,
+    "autoUpdate": true
+  },
+  {
+    "name": "Shadows disabled and affected materials recompiled",
+    "error": 0,
+    "shadowType": 1,
+    "autoUpdate": true
+  },
+  {
+    "name": "Supported PCF shadow type with materials recompiled",
+    "error": 0,
+    "shadowType": 1,
+    "autoUpdate": true
+  }
+]

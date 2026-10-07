@@ -1,0 +1,15 @@
+{
+  "requestedModel": "gemini-3.8-flash-high",
+  "emittedModel": null,
+  "streamSha256": "54f890a2ec5cd737bd162f5152ae7919de98bf49d4a7103cb45f04079f776d44",
+  "completedTools": {
+    "view_file": 39
+  },
+  "toolErrors": [],
+  "terminalStatus": "SUCCESS",
+  "responseNonempty": true,
+  "deniedActions": [],
+  "processExit": 0,
+  "stderr": "",
+  "executionClassification": "completed-tool-evidence"
+}
