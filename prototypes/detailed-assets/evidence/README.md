@@ -28,8 +28,22 @@ Git. Their recorded sizes and hashes were checked against those files.
 The [delivery manifest](output-manifest.json) records **16 files / 24,016,761
 bytes**, including local vendor modules/licence and the three binaries. The
 packager walks the actual relative addon dependency closure. It omits the Node
-validator from the browser delivery. Publishing that bundle still requires
-separate HTTP/public-browser evidence.
+validator from the browser delivery.
+
+The [published Model Workshop](https://patrick-fu.github.io/coaster-tycoon-3d/previews/model-workshop/)
+was separately checked from Grok Bot. [HTTP results](public-http.json) match all
+16 served runtime files to the same source-pinned manifest; [public browser
+results](public-browser.json) repeat the 19 captures and interaction/lifecycle
+checks with zero cumulative GL errors and 19 kiosk textures after reload. The
+[retained public screenshot](public-kiosk.png) matches that report. Other public
+captures are retained externally with their recorded hashes.
+
+The Pages commit is `d2b9f72536a30bdc66ee35842d82f470a4cdc6b2`, with source
+`e17c646bc2d49781bd567054309d6c2096bd847c`. The Pages whitespace check reported
+nine indentation warnings in untouched upstream Three.js files. Their exact
+vendor bytes are preserved and hash-checked; project-source whitespace passed.
+The first source push received a GitHub server error; remote refs/PR state were
+checked before a controlled retry succeeded. No duplicate PR was created.
 
 ## Actual browser checks
 
@@ -47,7 +61,7 @@ The initial-load Reload trigger is checked with deliberately slow network
 delivery. Three immediate reload clicks and a subsequent reload leave the
 kiosk at **40 geometries / 19 textures**, stable across the two final snapshots:
 38 mesh geometries plus floor/grid, 15 embedded model images plus four fixed
-renderer textures. The earlier falsely reassuring stable count was20, because
+renderer textures. The earlier falsely reassuring stable count was 20, because
 a retired station texture was still referenced by a shared shadow uniform.
 
 The initial-load dead end was reproduced before fixing requested-entry
@@ -76,7 +90,7 @@ station mesh nodes to 9 while preserving 15,984 triangles and all nine anchors.
 Later station style edits give the current 17,280 triangles; do not compare
 those two different sources as an isolated batching experiment.
 
-The car and station exceed the initial 5–12k /6–15k triangle ceilings. Current
+The car and station exceed the initial 5–12k / 6–15k triangle ceilings. Current
 models need production LOD/atlas/instancing and scene-scale profiling before
 bulk rollout. The car's seats and shell remain stylized; timber tone, signage,
 original proportions and actual park-zoom readability need visual review.

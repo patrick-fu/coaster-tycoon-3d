@@ -1,0 +1,877 @@
+{
+  "scope": "Actual remote model viewer and software WebGL; not original gameplay or real GPU qualification",
+  "browserVersion": "Chrome/155.0.8059.39",
+  "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/model-workshop/",
+  "states": [
+    {
+      "ready": true,
+      "asset": "wooden-car",
+      "frame": 16,
+      "errorCount": 0,
+      "glError": 0,
+      "glErrors": [],
+      "drawCalls": 24,
+      "triangles": 38834,
+      "geometries": 13,
+      "textures": 10,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "anchors": [
+        "RailRoot",
+        "BogieFront",
+        "BogieRear",
+        "Seat_FrontLeft",
+        "Seat_FrontRight",
+        "Seat_RearLeft",
+        "Seat_RearRight",
+        "Coupler_Front",
+        "Coupler_Rear"
+      ],
+      "camera": [
+        4.5432144539326345,
+        3.8843633944501414,
+        6.310020074906436
+      ]
+    },
+    {
+      "ready": true,
+      "asset": "timber-station",
+      "frame": 112,
+      "errorCount": 0,
+      "glError": 0,
+      "glErrors": [],
+      "drawCalls": 20,
+      "triangles": 34562,
+      "geometries": 22,
+      "textures": 25,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "anchors": [
+        "StationRoot",
+        "RailIn",
+        "RailOut",
+        "DeckBoarding",
+        "DeckUnload",
+        "QueueGate",
+        "ExitGate",
+        "OperatorBooth",
+        "RoofApex"
+      ],
+      "camera": [
+        7.349478793474556,
+        7.748221148507419,
+        10.219489883033294
+      ]
+    },
+    {
+      "ready": true,
+      "asset": "information-kiosk",
+      "frame": 171,
+      "errorCount": 0,
+      "glError": 0,
+      "glErrors": [],
+      "drawCalls": 78,
+      "triangles": 23666,
+      "geometries": 60,
+      "textures": 40,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "anchors": [
+        "GroundRoot",
+        "Counter_Front",
+        "Counter_Back",
+        "Counter_Left",
+        "Counter_Right",
+        "Sign_Front",
+        "PropMap",
+        "PropUmbrella"
+      ],
+      "camera": [
+        7.244075285105401,
+        7.999128416209532,
+        10.106115003809991
+      ]
+    },
+    {
+      "ready": true,
+      "asset": "information-kiosk",
+      "frame": 265,
+      "errorCount": 0,
+      "glError": 0,
+      "glErrors": [],
+      "drawCalls": 78,
+      "triangles": 23666,
+      "geometries": 40,
+      "textures": 19,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "anchors": [
+        "GroundRoot",
+        "Counter_Front",
+        "Counter_Back",
+        "Counter_Left",
+        "Counter_Right",
+        "Sign_Front",
+        "PropMap",
+        "PropUmbrella"
+      ],
+      "camera": [
+        7.244530247922198,
+        7.998971698162618,
+        10.10587520734104
+      ]
+    },
+    {
+      "ready": true,
+      "asset": "information-kiosk",
+      "frame": 280,
+      "errorCount": 0,
+      "glError": 0,
+      "glErrors": [],
+      "drawCalls": 78,
+      "triangles": 23666,
+      "geometries": 40,
+      "textures": 19,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "anchors": [
+        "GroundRoot",
+        "Counter_Front",
+        "Counter_Back",
+        "Counter_Left",
+        "Counter_Right",
+        "Sign_Front",
+        "PropMap",
+        "PropUmbrella"
+      ],
+      "camera": [
+        7.244534539361713,
+        7.998970219900294,
+        10.105872945333278
+      ]
+    }
+  ],
+  "captures": [
+    {
+      "file": "wooden-car-front.png",
+      "sha256": "ad974ff5ddd0f960d5698b5f074e47b734efbc3e21d18dc8d98cddc2d2385088",
+      "state": {
+        "ready": true,
+        "asset": "wooden-car",
+        "frame": 26,
+        "errorCount": 0,
+        "glError": 0,
+        "glErrors": [],
+        "drawCalls": 24,
+        "triangles": 38834,
+        "geometries": 13,
+        "textures": 10,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "anchors": [
+          "RailRoot",
+          "BogieFront",
+          "BogieRear",
+          "Seat_FrontLeft",
+          "Seat_FrontRight",
+          "Seat_RearLeft",
+          "Seat_RearRight",
+          "Coupler_Front",
+          "Coupler_Rear"
+        ],
+        "camera": [
+          3.795107379869581,
+          4.134698394581697,
+          6.649997755012973
+        ]
+      }
+    },
+    {
+      "file": "wooden-car-rear.png",
+      "sha256": "4b0d0e5589684673cf6d6ff562cca793575d87702f587893d58a00d7fa87b1d3",
+      "state": {
+        "ready": true,
+        "asset": "wooden-car",
+        "frame": 36,
+        "errorCount": 0,
+        "glError": 0,
+        "glErrors": [],
+        "drawCalls": 24,
+        "triangles": 38834,
+        "geometries": 13,
+        "textures": 10,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "anchors": [
+          "RailRoot",
+          "BogieFront",
+          "BogieRear",
+          "Seat_FrontLeft",
+          "Seat_FrontRight",
+          "Seat_RearLeft",
+          "Seat_RearRight",
+          "Coupler_Front",
+          "Coupler_Rear"
+        ],
+        "camera": [
+          -4.12130132093373,
+          4.027226950905398,
+          -6.514750018852732
+        ]
+      }
+    },
+    {
+      "file": "wooden-car-left.png",
+      "sha256": "6e1c6887d69b68f02eaa68a63f5f80f323543c57f6d5280e2474666c62b29ca3",
+      "state": {
+        "ready": true,
+        "asset": "wooden-car",
+        "frame": 46,
+        "errorCount": 0,
+        "glError": 0,
+        "glErrors": [],
+        "drawCalls": 24,
+        "triangles": 38834,
+        "geometries": 13,
+        "textures": 10,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "anchors": [
+          "RailRoot",
+          "BogieFront",
+          "BogieRear",
+          "Seat_FrontLeft",
+          "Seat_FrontRight",
+          "Seat_RearLeft",
+          "Seat_RearRight",
+          "Coupler_Front",
+          "Coupler_Rear"
+        ],
+        "camera": [
+          -8.07408859710432,
+          3.135103424259151,
+          -0.006375809006304421
+        ]
+      }
+    },
+    {
+      "file": "wooden-car-right.png",
+      "sha256": "d307730fe9ca50248ada18eae7e1091e8179ae60daa797c62897ea4f49331150",
+      "state": {
+        "ready": true,
+        "asset": "wooden-car",
+        "frame": 56,
+        "errorCount": 0,
+        "glError": 0,
+        "glErrors": [],
+        "drawCalls": 24,
+        "triangles": 38834,
+        "geometries": 13,
+        "textures": 10,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "anchors": [
+          "RailRoot",
+          "BogieFront",
+          "BogieRear",
+          "Seat_FrontLeft",
+          "Seat_FrontRight",
+          "Seat_RearLeft",
+          "Seat_RearRight",
+          "Coupler_Front",
+          "Coupler_Rear"
+        ],
+        "camera": [
+          8.075372822377862,
+          3.0985341505373034,
+          0.42615396306991793
+        ]
+      }
+    },
+    {
+      "file": "wooden-car-overview.png",
+      "sha256": "0cbd743edd45eea971713518c35dd89256d0baf1eb061a3e1b5c3406c7894bfe",
+      "state": {
+        "ready": true,
+        "asset": "wooden-car",
+        "frame": 66,
+        "errorCount": 0,
+        "glError": 0,
+        "glErrors": [],
+        "drawCalls": 24,
+        "triangles": 38834,
+        "geometries": 13,
+        "textures": 10,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "anchors": [
+          "RailRoot",
+          "BogieFront",
+          "BogieRear",
+          "Seat_FrontLeft",
+          "Seat_FrontRight",
+          "Seat_RearLeft",
+          "Seat_RearRight",
+          "Coupler_Front",
+          "Coupler_Rear"
+        ],
+        "camera": [
+          4.94614608406414,
+          5.137254552991283,
+          5.056539628498489
+        ]
+      }
+    },
+    {
+      "file": "wooden-car-close.png",
+      "sha256": "22454dc3316ff191073ed4b6b2e49eff9ca0c7d93880d8dd8720872be8902428",
+      "state": {
+        "ready": true,
+        "asset": "wooden-car",
+        "frame": 80,
+        "errorCount": 0,
+        "glError": 0,
+        "glErrors": [],
+        "drawCalls": 24,
+        "triangles": 38834,
+        "geometries": 13,
+        "textures": 10,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "anchors": [
+          "RailRoot",
+          "BogieFront",
+          "BogieRear",
+          "Seat_FrontLeft",
+          "Seat_FrontRight",
+          "Seat_RearLeft",
+          "Seat_RearRight",
+          "Coupler_Front",
+          "Coupler_Rear"
+        ],
+        "camera": [
+          2.945575184903429,
+          2.7185096631360026,
+          4.221577544965261
+        ]
+      }
+    },
+    {
+      "file": "wooden-car-open.png",
+      "sha256": "f91408278d765180f77d207ee6def6199f175edfd31025dbd84791017251e732",
+      "state": {
+        "ready": true,
+        "asset": "wooden-car",
+        "frame": 92,
+        "errorCount": 0,
+        "glError": 0,
+        "glErrors": [],
+        "drawCalls": 33,
+        "triangles": 40094,
+        "geometries": 22,
+        "textures": 10,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "anchors": [
+          "RailRoot",
+          "BogieFront",
+          "BogieRear",
+          "Seat_FrontLeft",
+          "Seat_FrontRight",
+          "Seat_RearLeft",
+          "Seat_RearRight",
+          "Coupler_Front",
+          "Coupler_Rear"
+        ],
+        "camera": [
+          4.512748865537146,
+          3.894844028860853,
+          6.3259837004127135
+        ]
+      }
+    },
+    {
+      "file": "timber-station-front.png",
+      "sha256": "554f6cd8bd0a5bc6d35b60f49ea76a8191ad87cb7c55cf0fe452ab46497672ad",
+      "state": {
+        "ready": true,
+        "asset": "timber-station",
+        "frame": 112,
+        "errorCount": 0,
+        "glError": 0,
+        "glErrors": [],
+        "drawCalls": 20,
+        "triangles": 34562,
+        "geometries": 22,
+        "textures": 25,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "anchors": [
+          "StationRoot",
+          "RailIn",
+          "RailOut",
+          "DeckBoarding",
+          "DeckUnload",
+          "QueueGate",
+          "ExitGate",
+          "OperatorBooth",
+          "RoofApex"
+        ],
+        "camera": [
+          7.35281055621075,
+          7.747073742065729,
+          10.217735626570763
+        ]
+      }
+    },
+    {
+      "file": "timber-station-rear.png",
+      "sha256": "b8d52b8019cf276d1ce2d38d62e2d391bb358dc74a871a91cd6929bcce0b127b",
+      "state": {
+        "ready": true,
+        "asset": "timber-station",
+        "frame": 120,
+        "errorCount": 0,
+        "glError": 0,
+        "glErrors": [],
+        "drawCalls": 20,
+        "triangles": 34562,
+        "geometries": 22,
+        "textures": 25,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "anchors": [
+          "StationRoot",
+          "RailIn",
+          "RailOut",
+          "DeckBoarding",
+          "DeckUnload",
+          "QueueGate",
+          "ExitGate",
+          "OperatorBooth",
+          "RoofApex"
+        ],
+        "camera": [
+          -7.349962964431121,
+          7.748054420368986,
+          -10.219235041960275
+        ]
+      }
+    },
+    {
+      "file": "timber-station-left.png",
+      "sha256": "0467b6da17d7ecc46f15b2c16a6ebe51a06fb75b9492f21162cea877b5627d82",
+      "state": {
+        "ready": true,
+        "asset": "timber-station",
+        "frame": 130,
+        "errorCount": 0,
+        "glError": 0,
+        "glErrors": [],
+        "drawCalls": 20,
+        "triangles": 34562,
+        "geometries": 22,
+        "textures": 25,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "anchors": [
+          "StationRoot",
+          "RailIn",
+          "RailOut",
+          "DeckBoarding",
+          "DeckUnload",
+          "QueueGate",
+          "ExitGate",
+          "OperatorBooth",
+          "RoofApex"
+        ],
+        "camera": [
+          -13.111386457385937,
+          6.396717210836465,
+          0.4332503383133833
+        ]
+      }
+    },
+    {
+      "file": "timber-station-right.png",
+      "sha256": "6ca01ae320982117cd2fb165fd8d499e3c1f6e2aab7ff83664519da57bf09433",
+      "state": {
+        "ready": true,
+        "asset": "timber-station",
+        "frame": 139,
+        "errorCount": 0,
+        "glError": 0,
+        "glErrors": [],
+        "drawCalls": 20,
+        "triangles": 34562,
+        "geometries": 22,
+        "textures": 25,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "anchors": [
+          "StationRoot",
+          "RailIn",
+          "RailOut",
+          "DeckBoarding",
+          "DeckUnload",
+          "QueueGate",
+          "ExitGate",
+          "OperatorBooth",
+          "RoofApex"
+        ],
+        "camera": [
+          13.11134074369609,
+          6.396248808132887,
+          0.4393174502543268
+        ]
+      }
+    },
+    {
+      "file": "timber-station-overview.png",
+      "sha256": "a638571b6714fe6c16c17c669a01c58cdbd08659bed78979e232355ae9facf19",
+      "state": {
+        "ready": true,
+        "asset": "timber-station",
+        "frame": 149,
+        "errorCount": 0,
+        "glError": 0,
+        "glErrors": [],
+        "drawCalls": 20,
+        "triangles": 34562,
+        "geometries": 22,
+        "textures": 25,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "anchors": [
+          "StationRoot",
+          "RailIn",
+          "RailOut",
+          "DeckBoarding",
+          "DeckUnload",
+          "QueueGate",
+          "ExitGate",
+          "OperatorBooth",
+          "RoofApex"
+        ],
+        "camera": [
+          8.115501797224209,
+          9.73599102967465,
+          8.117100505632497
+        ]
+      }
+    },
+    {
+      "file": "information-kiosk-front.png",
+      "sha256": "a580f9811006de06db98177fd976f0361c838dc24d6571214af51c2a9596da4a",
+      "state": {
+        "ready": true,
+        "asset": "information-kiosk",
+        "frame": 174,
+        "errorCount": 0,
+        "glError": 0,
+        "glErrors": [],
+        "drawCalls": 78,
+        "triangles": 23666,
+        "geometries": 60,
+        "textures": 40,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "anchors": [
+          "GroundRoot",
+          "Counter_Front",
+          "Counter_Back",
+          "Counter_Left",
+          "Counter_Right",
+          "Sign_Front",
+          "PropMap",
+          "PropUmbrella"
+        ],
+        "camera": [
+          7.244261659366144,
+          7.999064217561945,
+          10.106016775052254
+        ]
+      }
+    },
+    {
+      "file": "information-kiosk-rear.png",
+      "sha256": "93e55bdd1807c286d9ebac5c8153184c1302c2f502c563f1e67702b2f59fa6de",
+      "state": {
+        "ready": true,
+        "asset": "information-kiosk",
+        "frame": 184,
+        "errorCount": 0,
+        "glError": 0,
+        "glErrors": [],
+        "drawCalls": 78,
+        "triangles": 23666,
+        "geometries": 60,
+        "textures": 40,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "anchors": [
+          "GroundRoot",
+          "Counter_Front",
+          "Counter_Back",
+          "Counter_Left",
+          "Counter_Right",
+          "Sign_Front",
+          "PropMap",
+          "PropUmbrella"
+        ],
+        "camera": [
+          -7.281231764970569,
+          7.999023555732387,
+          -10.069102495861113
+        ]
+      }
+    },
+    {
+      "file": "information-kiosk-left.png",
+      "sha256": "7cfc2906933cd9a1d913ba90ace59ce4304feb0456879e88a85f6f62d62ed790",
+      "state": {
+        "ready": true,
+        "asset": "information-kiosk",
+        "frame": 194,
+        "errorCount": 0,
+        "glError": 0,
+        "glErrors": [],
+        "drawCalls": 78,
+        "triangles": 23666,
+        "geometries": 60,
+        "textures": 40,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "anchors": [
+          "GroundRoot",
+          "Counter_Front",
+          "Counter_Back",
+          "Counter_Left",
+          "Counter_Right",
+          "Sign_Front",
+          "PropMap",
+          "PropUmbrella"
+        ],
+        "camera": [
+          -12.964794200757526,
+          6.6654901365526085,
+          0.4498682490718235
+        ]
+      }
+    },
+    {
+      "file": "information-kiosk-right.png",
+      "sha256": "53f7d9be1dfae7f20a072988cc405c02ce3bfed2194d11e1caa7395c96bd2223",
+      "state": {
+        "ready": true,
+        "asset": "information-kiosk",
+        "frame": 204,
+        "errorCount": 0,
+        "glError": 0,
+        "glErrors": [],
+        "drawCalls": 78,
+        "triangles": 23666,
+        "geometries": 60,
+        "textures": 40,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "anchors": [
+          "GroundRoot",
+          "Counter_Front",
+          "Counter_Back",
+          "Counter_Left",
+          "Counter_Right",
+          "Sign_Front",
+          "PropMap",
+          "PropUmbrella"
+        ],
+        "camera": [
+          12.927941303607998,
+          6.665476427036641,
+          0.4500304155108136
+        ]
+      }
+    },
+    {
+      "file": "information-kiosk-overview.png",
+      "sha256": "88a27c0ea5264d15108e0896af1d0dd50dab2661c2437b0661183a00879b7e8a",
+      "state": {
+        "ready": true,
+        "asset": "information-kiosk",
+        "frame": 214,
+        "errorCount": 0,
+        "glError": 0,
+        "glErrors": [],
+        "drawCalls": 78,
+        "triangles": 23666,
+        "geometries": 60,
+        "textures": 40,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "anchors": [
+          "GroundRoot",
+          "Counter_Front",
+          "Counter_Back",
+          "Counter_Left",
+          "Counter_Right",
+          "Sign_Front",
+          "PropMap",
+          "PropUmbrella"
+        ],
+        "camera": [
+          7.995706318781686,
+          9.963458347107169,
+          8.032599746642944
+        ]
+      }
+    },
+    {
+      "file": "information-kiosk-wireframe.png",
+      "sha256": "e98d5eff01e76c14c1c547b80692fdc2f888c4c9ebd5104748855bc1ecbda4b9",
+      "state": {
+        "ready": true,
+        "asset": "information-kiosk",
+        "frame": 224,
+        "errorCount": 0,
+        "glError": 0,
+        "glErrors": [],
+        "drawCalls": 78,
+        "triangles": 2,
+        "geometries": 60,
+        "textures": 40,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "anchors": [
+          "GroundRoot",
+          "Counter_Front",
+          "Counter_Back",
+          "Counter_Left",
+          "Counter_Right",
+          "Sign_Front",
+          "PropMap",
+          "PropUmbrella"
+        ],
+        "camera": [
+          7.995646115885085,
+          9.96348005663677,
+          8.032639324840265
+        ]
+      }
+    },
+    {
+      "file": "workshop-narrow.png",
+      "sha256": "f801fd4c8afc25348e992076b574aa819187e846595c2a2312546af170a06ac8",
+      "state": {
+        "ready": true,
+        "asset": "information-kiosk",
+        "frame": 236,
+        "errorCount": 0,
+        "glError": 0,
+        "glErrors": [],
+        "drawCalls": 78,
+        "triangles": 23666,
+        "geometries": 60,
+        "textures": 40,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "anchors": [
+          "GroundRoot",
+          "Counter_Front",
+          "Counter_Back",
+          "Counter_Left",
+          "Counter_Right",
+          "Sign_Front",
+          "PropMap",
+          "PropUmbrella"
+        ],
+        "camera": [
+          7.995604826037621,
+          9.963494945945891,
+          8.03266646899246
+        ]
+      }
+    }
+  ],
+  "exceptions": [],
+  "pointerSelection": "Selected: CarBody_Tub",
+  "reloadDuringInitialLoad": true,
+  "narrowLayout": {
+    "canvasClear": true,
+    "buttonsClear": true
+  },
+  "orbitChangedCamera": true,
+  "pageCount": 1,
+  "passed": true
+}
