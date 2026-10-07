@@ -1,0 +1,5431 @@
+{
+  "schemaVersion": 1,
+  "passed": true,
+  "scope": "Isolated CPU-only GLB/matrix calibration experiment. Production source and delivered samples are unchanged. Preserve/reject decisions are this experiment's checks, not a new implemented production adapter.",
+  "originalBehavior": "Unknown: no original executable/DAT/scenario observation; no original metric, collision, spacing, dispatch or seat-pose equality is asserted.",
+  "execution": {
+    "host": "grok-bot-vm-405605737",
+    "node": "v20.19.2",
+    "platform": "linux",
+    "architecture": "x64",
+    "threeRevision": "186",
+    "timeUtc": "2026-10-07T20:10:06.251Z",
+    "argv": [
+      "/usr/bin/node",
+      "/workspace/coaster-native-calibration/measure.mjs",
+      "--assets",
+      "/workspace/coaster-detailed-assets/outputs",
+      "--runtime",
+      "/workspace/coaster-classic-game/app/node_modules/three/build/three.module.js",
+      "--output",
+      "/workspace/coaster-native-calibration/measurements.json"
+    ],
+    "runnerSha256": "b09b2768f5fb9405afbec6ab1cbea473944bbd819472a04fdc78b451fa8a5a54",
+    "runtimeFiles": {
+      "/workspace/coaster-classic-game/app/node_modules/three/build/three.module.js": {
+        "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea",
+        "bytes": 662772
+      },
+      "/workspace/coaster-classic-game/app/node_modules/three/build/three.core.js": {
+        "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
+        "bytes": 1458113
+      },
+      "/workspace/coaster-classic-game/app/node_modules/three/package.json": {
+        "sha256": "f9c474a27c920b9435353a6235968f4453436bee0444fac7e5fd289c8fa463de",
+        "bytes": 3672
+      }
+    }
+  },
+  "sourcePins": {
+    "productionCommit": "2c19a1b214e7c3a5b58ec6f9982cb94d485ab867",
+    "sampleSourceCommit": "e17c646bc2d49781bd567054309d6c2096bd847c",
+    "method": "Pinned git-show source snapshots; actual GLB hash equals export report; authoring and driver hashes equal source snapshot bytes.",
+    "files": {
+      "steel-coaster.ts": {
+        "path": "/workspace/coaster-native-calibration/pinned-source/steel-coaster.ts",
+        "sha256": "8000bd186760ef3893898ce6b5710bffa7207a021bb8f7bb563da1e88116ecef",
+        "bytes": 8044
+      },
+      "view.ts": {
+        "path": "/workspace/coaster-native-calibration/pinned-source/view.ts",
+        "sha256": "a5b344c6f086893c9363f268c8e917691eb5e2cdd3795c8b2f197c2ff0f69719",
+        "bytes": 4684
+      },
+      "geometry.ts": {
+        "path": "/workspace/coaster-native-calibration/pinned-source/geometry.ts",
+        "sha256": "84b9d0939e146238ae79bdc8ff606dd50e981a92b90d8fe7d55c29a5fce368d9",
+        "bytes": 8220
+      },
+      "engine.ts": {
+        "path": "/workspace/coaster-native-calibration/pinned-source/engine.ts",
+        "sha256": "afcd9b5a49ec5f0fb2608c5b13bad60c68ae3bcf2d0e283a22777b22db5dbe5c",
+        "bytes": 63872
+      },
+      "coaster.js": {
+        "path": "/workspace/coaster-native-calibration/pinned-source/coaster.js",
+        "sha256": "e3637608646d9237c8f4324bba071b55427aa09003cc36c72c222859d54db100",
+        "bytes": 65405
+      },
+      "runtime.js": {
+        "path": "/workspace/coaster-native-calibration/pinned-source/runtime.js",
+        "sha256": "876b391327d26778216644069f58f9236799375824c89ac84b9f9dbdf8106ca3",
+        "bytes": 5061
+      },
+      "park-scene.js": {
+        "path": "/workspace/coaster-native-calibration/pinned-source/park-scene.js",
+        "sha256": "6340e1cbec9c73ae49a27361c297cc6e278b047a4dc1911cf4bf87799af085f0",
+        "bytes": 9178
+      },
+      "content-identities.md": {
+        "path": "/workspace/coaster-native-calibration/pinned-source/content-identities.md",
+        "sha256": "633084924e48ee432c71f0cf97160365d575513b6a49bb241afa246e825f5562",
+        "bytes": 6322
+      },
+      "authoring-contract.md": {
+        "path": "/workspace/coaster-native-calibration/pinned-source/authoring-contract.md",
+        "sha256": "7c3ffb0e6be2e5e1343669b9b0768e18049f40eb2848cf86459bd8114f71e437",
+        "bytes": 4844
+      },
+      "wooden-car.py": {
+        "path": "/workspace/coaster-native-calibration/pinned-source/wooden-car.py",
+        "sha256": "568a3a3429d2d1ea3edabeadedf253c2b73305626fa58f665b9959b4edf171f2",
+        "bytes": 23221
+      },
+      "timber-station.py": {
+        "path": "/workspace/coaster-native-calibration/pinned-source/timber-station.py",
+        "sha256": "a8565b402aa55489b17f9fc6ac28180efd9c2ab92d6a7f3e9bafb16a26812cf4",
+        "bytes": 28130
+      },
+      "information-kiosk.py": {
+        "path": "/workspace/coaster-native-calibration/pinned-source/information-kiosk.py",
+        "sha256": "f9c380c69056054f1e89d707a8a5a4e86c9e2928513b008be686eb099d0337b8",
+        "bytes": 26911
+      },
+      "export.py": {
+        "path": "/workspace/coaster-native-calibration/pinned-source/export.py",
+        "sha256": "e0821cdf8bd1cd1ae74e4269ac5cc07fb7acdab4d25f394c0e8111c8ce786f2f",
+        "bytes": 11907
+      }
+    }
+  },
+  "sourceFacts": {
+    "metresPerTile": {
+      "value": 4,
+      "source": "steel-coaster.ts",
+      "line": 16,
+      "expression": "tileMetres:4",
+      "sourceSha256": "8000bd186760ef3893898ce6b5710bffa7207a021bb8f7bb563da1e88116ecef"
+    },
+    "nativeUnitsPerTile": {
+      "value": 32,
+      "source": "view.ts",
+      "line": 24,
+      "expression": "nativeUnitsPerTile:32",
+      "sourceSha256": "a5b344c6f086893c9363f268c8e917691eb5e2cdd3795c8b2f197c2ff0f69719"
+    },
+    "nativeHeightStep": {
+      "value": 8,
+      "source": "view.ts",
+      "line": 24,
+      "expression": "nativeHeightStep:8",
+      "sourceSha256": "a5b344c6f086893c9363f268c8e917691eb5e2cdd3795c8b2f197c2ff0f69719"
+    },
+    "nativeLandStep": {
+      "value": 16,
+      "source": "view.ts",
+      "line": 24,
+      "expression": "nativeLandStep:16",
+      "sourceSha256": "a5b344c6f086893c9363f268c8e917691eb5e2cdd3795c8b2f197c2ff0f69719"
+    },
+    "legacyCarPitchMm": {
+      "value": 2000,
+      "source": "steel-coaster.ts",
+      "line": 16,
+      "expression": "carLength:2000",
+      "sourceSha256": "8000bd186760ef3893898ce6b5710bffa7207a021bb8f7bb563da1e88116ecef"
+    },
+    "legacySeatsPerCar": {
+      "value": 2,
+      "source": "steel-coaster.ts",
+      "line": 16,
+      "expression": "seatsPerCar:2",
+      "sourceSha256": "8000bd186760ef3893898ce6b5710bffa7207a021bb8f7bb563da1e88116ecef"
+    },
+    "legacyHalfTileOffsetMetres": {
+      "value": 2,
+      "source": "runtime.js",
+      "line": 10,
+      "expression": "tile:4,half:2",
+      "sourceSha256": "876b391327d26778216644069f58f9236799375824c89ac84b9f9dbdf8106ca3"
+    },
+    "legacyRailCenterOffsetMetres": {
+      "value": 0.3,
+      "source": "coaster.js",
+      "line": 332,
+      "expression": "(e.origin.z + v.z) / 32 * tile + 0.3",
+      "sourceSha256": "e3637608646d9237c8f4324bba071b55427aa09003cc36c72c222859d54db100"
+    },
+    "legacyRailRadiusMetres": {
+      "value": 0.058,
+      "source": "coaster.js",
+      "line": 425,
+      "expression": "TubeGeometry(leftCurve, tubularSegments, 0.058",
+      "sourceSha256": "e3637608646d9237c8f4324bba071b55427aa09003cc36c72c222859d54db100"
+    },
+    "legacyCarShellOffsetMetres": {
+      "value": 0.65,
+      "source": "coaster.js",
+      "line": 1337,
+      "expression": "posVec.set(c.position.x + half, c.position.z + 0.65",
+      "sourceSha256": "e3637608646d9237c8f4324bba071b55427aa09003cc36c72c222859d54db100"
+    },
+    "legacyFacilityReservationNativeZ": {
+      "value": 16,
+      "source": "engine.ts",
+      "line": 168,
+      "expression": "high:e.height+(e.kind==='scenery'?this.rules.scenery[e.sceneryType].height:16)",
+      "sourceSha256": "afcd9b5a49ec5f0fb2608c5b13bad60c68ae3bcf2d0e283a22777b22db5dbe5c"
+    }
+  },
+  "assets": [
+    {
+      "id": "wooden-car",
+      "path": "/workspace/coaster-detailed-assets/outputs/wooden-car.glb",
+      "sha256": "fc988c55ed60dcd5abf7c5e02ecbc1ac3a8cd828cfe7fe4bb8f30bcf21699b59",
+      "bytes": 3545440,
+      "exportReport": {
+        "path": "/workspace/coaster-detailed-assets/outputs/wooden-car.json",
+        "sha256": "b07af7075b1928f8304a24ebe30b7063cc8172c2e6b85ff0e5ef65d27deb33f3",
+        "sourceSha256": "568a3a3429d2d1ea3edabeadedf253c2b73305626fa58f665b9959b4edf171f2",
+        "driverSha256": "e0821cdf8bd1cd1ae74e4269ac5cc07fb7acdab4d25f394c0e8111c8ce786f2f",
+        "scope": "Candidate detailed asset laboratory; no original-metric or gameplay validation",
+        "blender": "4.3.2"
+      },
+      "activeScene": 0,
+      "activeNodes": 22,
+      "meshNodes": 11,
+      "positionAccessors": 11,
+      "positionVertices": 23069,
+      "maximumAccessorBoundResidual": 0,
+      "anchors": {
+        "RailRoot": [
+          0,
+          0,
+          0
+        ],
+        "BogieFront": [
+          0,
+          0.17000000178813934,
+          0.75
+        ],
+        "BogieRear": [
+          0,
+          0.17000000178813934,
+          -0.75
+        ],
+        "Seat_FrontLeft": [
+          -0.3199999928474426,
+          0.46000000834465027,
+          0.41999998688697815
+        ],
+        "Seat_FrontRight": [
+          0.3199999928474426,
+          0.46000000834465027,
+          0.41999998688697815
+        ],
+        "Seat_RearLeft": [
+          -0.3199999928474426,
+          0.46000000834465027,
+          -0.41999998688697815
+        ],
+        "Seat_RearRight": [
+          0.3199999928474426,
+          0.46000000834465027,
+          -0.41999998688697815
+        ],
+        "Coupler_Front": [
+          0,
+          0.2199999988079071,
+          1.340000033378601
+        ],
+        "Coupler_Rear": [
+          0,
+          0.2199999988079071,
+          -1.340000033378601
+        ]
+      },
+      "vertexWorldBounds": {
+        "min": [
+          -0.7080000042915344,
+          -0.19849567115306854,
+          -1.4700000286102295
+        ],
+        "max": [
+          0.7080000042915344,
+          0.8999999761581421,
+          1.4700000286102295
+        ],
+        "size": [
+          1.4160000085830688,
+          1.0984956473112106,
+          2.940000057220459
+        ]
+      },
+      "transformedAccessorBounds": {
+        "min": [
+          -0.7080000042915344,
+          -0.19849567115306854,
+          -1.4700000286102295
+        ],
+        "max": [
+          0.7080000042915344,
+          0.8999999761581421,
+          1.4700000286102295
+        ],
+        "size": [
+          1.4160000085830688,
+          1.0984956473112106,
+          2.940000057220459
+        ]
+      },
+      "meshes": [
+        {
+          "node": "BogieFront_Metal",
+          "nodeIndex": 0,
+          "worldMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0.17000000178813934,
+            0.75,
+            1
+          ],
+          "accessorIndices": [
+            0
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              -0.5400000214576721,
+              -0.08999998867511749,
+              0.5499999970197678
+            ],
+            "max": [
+              0.5400000214576721,
+              0.3669615536928177,
+              0.9500000029802322
+            ],
+            "size": [
+              1.0800000429153442,
+              0.4569615423679352,
+              0.4000000059604645
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              -0.5400000214576721,
+              -0.08999998867511749,
+              0.5499999970197678
+            ],
+            "max": [
+              0.5400000214576721,
+              0.3669615536928177,
+              0.9500000029802322
+            ],
+            "size": [
+              1.0800000429153442,
+              0.4569615423679352,
+              0.4000000059604645
+            ]
+          }
+        },
+        {
+          "node": "BogieFront_Treads",
+          "nodeIndex": 1,
+          "worldMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0.17000000178813934,
+            0.75,
+            1
+          ],
+          "accessorIndices": [
+            4
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              -0.5099999904632568,
+              -0.19849567115306854,
+              0.5799999982118607
+            ],
+            "max": [
+              0.5099999904632568,
+              0.3400000035762787,
+              0.9200000017881393
+            ],
+            "size": [
+              1.0199999809265137,
+              0.5384956747293472,
+              0.3400000035762787
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              -0.5099999904632568,
+              -0.19849567115306854,
+              0.5799999982118607
+            ],
+            "max": [
+              0.5099999904632568,
+              0.3400000035762787,
+              0.9200000017881393
+            ],
+            "size": [
+              1.0199999809265137,
+              0.5384956747293472,
+              0.3400000035762787
+            ]
+          }
+        },
+        {
+          "node": "BogieRear_Metal",
+          "nodeIndex": 3,
+          "worldMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0.17000000178813934,
+            -0.75,
+            1
+          ],
+          "accessorIndices": [
+            8
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              -0.5400000214576721,
+              -0.08999998867511749,
+              -0.9500000029802322
+            ],
+            "max": [
+              0.5400000214576721,
+              0.3669615536928177,
+              -0.5499999970197678
+            ],
+            "size": [
+              1.0800000429153442,
+              0.4569615423679352,
+              0.4000000059604645
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              -0.5400000214576721,
+              -0.08999998867511749,
+              -0.9500000029802322
+            ],
+            "max": [
+              0.5400000214576721,
+              0.3669615536928177,
+              -0.5499999970197678
+            ],
+            "size": [
+              1.0800000429153442,
+              0.4569615423679352,
+              0.4000000059604645
+            ]
+          }
+        },
+        {
+          "node": "BogieRear_Treads",
+          "nodeIndex": 4,
+          "worldMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0.17000000178813934,
+            -0.75,
+            1
+          ],
+          "accessorIndices": [
+            11
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              -0.5099999904632568,
+              -0.19849567115306854,
+              -0.9200000017881393
+            ],
+            "max": [
+              0.5099999904632568,
+              0.3400000035762787,
+              -0.5799999982118607
+            ],
+            "size": [
+              1.0199999809265137,
+              0.5384956747293472,
+              0.3400000035762787
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              -0.5099999904632568,
+              -0.19849567115306854,
+              -0.9200000017881393
+            ],
+            "max": [
+              0.5099999904632568,
+              0.3400000035762787,
+              -0.5799999982118607
+            ],
+            "size": [
+              1.0199999809265137,
+              0.5384956747293472,
+              0.3400000035762787
+            ]
+          }
+        },
+        {
+          "node": "CarBody_TimberSide",
+          "nodeIndex": 6,
+          "worldMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "accessorIndices": [
+            14
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              -0.6800000071525574,
+              0.4000000059604645,
+              -0.7200000286102295
+            ],
+            "max": [
+              0.6800000071525574,
+              0.7200000286102295,
+              0.6800000071525574
+            ],
+            "size": [
+              1.3600000143051147,
+              0.320000022649765,
+              1.4000000357627869
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              -0.6800000071525574,
+              0.4000000059604645,
+              -0.7200000286102295
+            ],
+            "max": [
+              0.6800000071525574,
+              0.7200000286102295,
+              0.6800000071525574
+            ],
+            "size": [
+              1.3600000143051147,
+              0.320000022649765,
+              1.4000000357627869
+            ]
+          }
+        },
+        {
+          "node": "CarBody_Trim",
+          "nodeIndex": 7,
+          "worldMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "accessorIndices": [
+            18
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              -0.7080000042915344,
+              0.35562679171562195,
+              -1.2599999904632568
+            ],
+            "max": [
+              0.7080000042915344,
+              0.828000009059906,
+              1.284999966621399
+            ],
+            "size": [
+              1.4160000085830688,
+              0.47237321734428406,
+              2.5449999570846558
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              -0.7080000042915344,
+              0.35562679171562195,
+              -1.2599999904632568
+            ],
+            "max": [
+              0.7080000042915344,
+              0.828000009059906,
+              1.284999966621399
+            ],
+            "size": [
+              1.4160000085830688,
+              0.47237321734428406,
+              2.5449999570846558
+            ]
+          }
+        },
+        {
+          "node": "CarBody_Tub",
+          "nodeIndex": 8,
+          "worldMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "accessorIndices": [
+            22
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              -0.699999988079071,
+              0.25999999046325684,
+              -1.2799999713897705
+            ],
+            "max": [
+              0.699999988079071,
+              0.8398956060409546,
+              1.2799999713897705
+            ],
+            "size": [
+              1.399999976158142,
+              0.5798956155776978,
+              2.559999942779541
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              -0.699999988079071,
+              0.25999999046325684,
+              -1.2799999713897705
+            ],
+            "max": [
+              0.699999988079071,
+              0.8398956060409546,
+              1.2799999713897705
+            ],
+            "size": [
+              1.399999976158142,
+              0.5798956155776978,
+              2.559999942779541
+            ]
+          }
+        },
+        {
+          "node": "Chassis_Frame",
+          "nodeIndex": 9,
+          "worldMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "accessorIndices": [
+            26
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              -0.5199999809265137,
+              0,
+              -1.4700000286102295
+            ],
+            "max": [
+              0.5199999809265137,
+              0.27000001072883606,
+              1.4700000286102295
+            ],
+            "size": [
+              1.0399999618530273,
+              0.27000001072883606,
+              2.940000057220459
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              -0.5199999809265137,
+              0,
+              -1.4700000286102295
+            ],
+            "max": [
+              0.5199999809265137,
+              0.27000001072883606,
+              1.4700000286102295
+            ],
+            "size": [
+              1.0399999618530273,
+              0.27000001072883606,
+              2.940000057220459
+            ]
+          }
+        },
+        {
+          "node": "LapBar_Front_Mesh",
+          "nodeIndex": 12,
+          "worldMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0.6200000047683716,
+            0.6200000047683716,
+            1
+          ],
+          "accessorIndices": [
+            30
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              -0.5400000214576721,
+              0.5780000053346157,
+              0.3580000102519989
+            ],
+            "max": [
+              0.5400000214576721,
+              0.6620000042021275,
+              0.6500000040978193
+            ],
+            "size": [
+              1.0800000429153442,
+              0.08399999886751175,
+              0.2919999938458204
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              -0.5400000214576721,
+              0.5780000053346157,
+              0.3580000102519989
+            ],
+            "max": [
+              0.5400000214576721,
+              0.6620000042021275,
+              0.6500000040978193
+            ],
+            "size": [
+              1.0800000429153442,
+              0.08399999886751175,
+              0.2919999938458204
+            ]
+          }
+        },
+        {
+          "node": "LapBar_Rear_Mesh",
+          "nodeIndex": 14,
+          "worldMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0.6200000047683716,
+            -0.2199999988079071,
+            1
+          ],
+          "accessorIndices": [
+            34
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              -0.5400000214576721,
+              0.5780000053346157,
+              -0.4819999933242798
+            ],
+            "max": [
+              0.5400000214576721,
+              0.6620000042021275,
+              -0.18999999947845936
+            ],
+            "size": [
+              1.0800000429153442,
+              0.08399999886751175,
+              0.2919999938458204
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              -0.5400000214576721,
+              0.5780000053346157,
+              -0.4819999933242798
+            ],
+            "max": [
+              0.5400000214576721,
+              0.6620000042021275,
+              -0.18999999947845936
+            ],
+            "size": [
+              1.0800000429153442,
+              0.08399999886751175,
+              0.2919999938458204
+            ]
+          }
+        },
+        {
+          "node": "Seating_Cushions",
+          "nodeIndex": 20,
+          "worldMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "accessorIndices": [
+            37
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              -0.5400000214576721,
+              0.2750000059604645,
+              -0.6850000023841858
+            ],
+            "max": [
+              0.5400000214576721,
+              0.8999999761581421,
+              0.6449999809265137
+            ],
+            "size": [
+              1.0800000429153442,
+              0.6249999701976776,
+              1.3299999833106995
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              -0.5400000214576721,
+              0.2750000059604645,
+              -0.6850000023841858
+            ],
+            "max": [
+              0.5400000214576721,
+              0.8999999761581421,
+              0.6449999809265137
+            ],
+            "size": [
+              1.0800000429153442,
+              0.6249999701976776,
+              1.3299999833106995
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "timber-station",
+      "path": "/workspace/coaster-detailed-assets/outputs/timber-station.glb",
+      "sha256": "60d94b3c784726b3dfa5aa89bed37a4da8dee05769ff1f648d918a0de1bf7b41",
+      "bytes": 9141736,
+      "exportReport": {
+        "path": "/workspace/coaster-detailed-assets/outputs/timber-station.json",
+        "sha256": "2ec919b517129e5fd78b1efb14f36262536e7d227ec3dc237bb6faa7965c95fa",
+        "sourceSha256": "a8565b402aa55489b17f9fc6ac28180efd9c2ab92d6a7f3e9bafb16a26812cf4",
+        "driverSha256": "e0821cdf8bd1cd1ae74e4269ac5cc07fb7acdab4d25f394c0e8111c8ce786f2f",
+        "scope": "Candidate detailed asset laboratory; no original-metric or gameplay validation",
+        "blender": "4.3.2"
+      },
+      "activeScene": 0,
+      "activeNodes": 18,
+      "meshNodes": 9,
+      "positionAccessors": 9,
+      "positionVertices": 19391,
+      "maximumAccessorBoundResidual": 0,
+      "anchors": {
+        "StationRoot": [
+          0,
+          0,
+          0
+        ],
+        "RailIn": [
+          0,
+          0.5,
+          -2
+        ],
+        "RailOut": [
+          0,
+          0.5,
+          2
+        ],
+        "DeckBoarding": [
+          1.350000023841858,
+          0.8199999928474426,
+          0
+        ],
+        "DeckUnload": [
+          -1.350000023841858,
+          0.8199999928474426,
+          0
+        ],
+        "QueueGate": [
+          1.899999976158142,
+          0.8199999928474426,
+          -1.399999976158142
+        ],
+        "ExitGate": [
+          -1.899999976158142,
+          0.8199999928474426,
+          1.399999976158142
+        ],
+        "OperatorBooth": [
+          1.4500000476837158,
+          0.8199999928474426,
+          1.399999976158142
+        ],
+        "RoofApex": [
+          0,
+          4.050000190734863,
+          0
+        ]
+      },
+      "vertexWorldBounds": {
+        "min": [
+          -2.380000114440918,
+          0,
+          -2.009999990463257
+        ],
+        "max": [
+          2.380000114440918,
+          4.050000190734863,
+          2.009999990463257
+        ],
+        "size": [
+          4.760000228881836,
+          4.050000190734863,
+          4.019999980926514
+        ]
+      },
+      "transformedAccessorBounds": {
+        "min": [
+          -2.380000114440918,
+          0,
+          -2.009999990463257
+        ],
+        "max": [
+          2.380000114440918,
+          4.050000190734863,
+          2.009999990463257
+        ],
+        "size": [
+          4.760000228881836,
+          4.050000190734863,
+          4.019999980926514
+        ]
+      },
+      "meshes": [
+        {
+          "node": "Static_StationRoot_boards.001",
+          "nodeIndex": 8,
+          "worldMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "accessorIndices": [
+            0
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              -1.9199999570846558,
+              0.36000001430511475,
+              -2
+            ],
+            "max": [
+              1.9199999570846558,
+              0.8199999928474426,
+              2
+            ],
+            "size": [
+              3.8399999141693115,
+              0.4599999785423279,
+              4
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              -1.9199999570846558,
+              0.36000001430511475,
+              -2
+            ],
+            "max": [
+              1.9199999570846558,
+              0.8199999928474426,
+              2
+            ],
+            "size": [
+              3.8399999141693115,
+              0.4599999785423279,
+              4
+            ]
+          }
+        },
+        {
+          "node": "Static_StationRoot_brass",
+          "nodeIndex": 9,
+          "worldMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "accessorIndices": [
+            4
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              0.7300000190734863,
+              1.100000023841858,
+              -1.5499999523162842
+            ],
+            "max": [
+              1.8200000524520874,
+              1.7899999618530273,
+              1.5
+            ],
+            "size": [
+              1.090000033378601,
+              0.6899999380111694,
+              3.049999952316284
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              0.7300000190734863,
+              1.100000023841858,
+              -1.5499999523162842
+            ],
+            "max": [
+              1.8200000524520874,
+              1.7899999618530273,
+              1.5
+            ],
+            "size": [
+              1.090000033378601,
+              0.6899999380111694,
+              3.049999952316284
+            ]
+          }
+        },
+        {
+          "node": "Static_StationRoot_brick",
+          "nodeIndex": 10,
+          "worldMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "accessorIndices": [
+            8
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              -1.909999966621399,
+              0,
+              -2
+            ],
+            "max": [
+              1.909999966621399,
+              0.20000000298023224,
+              2
+            ],
+            "size": [
+              3.819999933242798,
+              0.20000000298023224,
+              4
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              -1.909999966621399,
+              0,
+              -2
+            ],
+            "max": [
+              1.909999966621399,
+              0.20000000298023224,
+              2
+            ],
+            "size": [
+              3.819999933242798,
+              0.20000000298023224,
+              4
+            ]
+          }
+        },
+        {
+          "node": "Static_StationRoot_cream",
+          "nodeIndex": 11,
+          "worldMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "accessorIndices": [
+            12
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              -1.9500000476837158,
+              0.8209999799728394,
+              -2
+            ],
+            "max": [
+              1.9600000381469727,
+              2.0999999046325684,
+              2
+            ],
+            "size": [
+              3.9100000858306885,
+              1.278999924659729,
+              4
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              -1.9500000476837158,
+              0.8209999799728394,
+              -2
+            ],
+            "max": [
+              1.9600000381469727,
+              2.0999999046325684,
+              2
+            ],
+            "size": [
+              3.9100000858306885,
+              1.278999924659729,
+              4
+            ]
+          }
+        },
+        {
+          "node": "Static_StationRoot_metal",
+          "nodeIndex": 12,
+          "worldMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "accessorIndices": [
+            16
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              -1.909999966621399,
+              0.20000000298023224,
+              -2.009999990463257
+            ],
+            "max": [
+              1.8600000143051147,
+              4.050000190734863,
+              2.009999990463257
+            ],
+            "size": [
+              3.7699999809265137,
+              3.850000187754631,
+              4.019999980926514
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              -1.909999966621399,
+              0.20000000298023224,
+              -2.009999990463257
+            ],
+            "max": [
+              1.8600000143051147,
+              4.050000190734863,
+              2.009999990463257
+            ],
+            "size": [
+              3.7699999809265137,
+              3.850000187754631,
+              4.019999980926514
+            ]
+          }
+        },
+        {
+          "node": "Static_StationRoot_paint_red",
+          "nodeIndex": 13,
+          "worldMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "accessorIndices": [
+            20
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              0.7699999809265137,
+              0.8199999928474426,
+              -0.9800000190734863
+            ],
+            "max": [
+              1.409999966621399,
+              1.8200000524520874,
+              1.5
+            ],
+            "size": [
+              0.6399999856948853,
+              1.0000000596046448,
+              2.4800000190734863
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              0.7699999809265137,
+              0.8199999928474426,
+              -0.9800000190734863
+            ],
+            "max": [
+              1.409999966621399,
+              1.8200000524520874,
+              1.5
+            ],
+            "size": [
+              0.6399999856948853,
+              1.0000000596046448,
+              2.4800000190734863
+            ]
+          }
+        },
+        {
+          "node": "Static_StationRoot_paint_teal",
+          "nodeIndex": 14,
+          "worldMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "accessorIndices": [
+            24
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              1.25,
+              1.649999976158142,
+              -1.6200000047683716
+            ],
+            "max": [
+              1.9500000476837158,
+              2.119999885559082,
+              1.6200000047683716
+            ],
+            "size": [
+              0.7000000476837158,
+              0.46999990940093994,
+              3.240000009536743
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              1.25,
+              1.649999976158142,
+              -1.6200000047683716
+            ],
+            "max": [
+              1.9500000476837158,
+              2.119999885559082,
+              1.6200000047683716
+            ],
+            "size": [
+              0.7000000476837158,
+              0.46999990940093994,
+              3.240000009536743
+            ]
+          }
+        },
+        {
+          "node": "Static_StationRoot_roof",
+          "nodeIndex": 15,
+          "worldMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "accessorIndices": [
+            28
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              -2.345193386077881,
+              2.5643324851989746,
+              -2
+            ],
+            "max": [
+              2.345193386077881,
+              3.985193967819214,
+              2
+            ],
+            "size": [
+              4.690386772155762,
+              1.4208614826202393,
+              4
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              -2.345193386077881,
+              2.5643324851989746,
+              -2
+            ],
+            "max": [
+              2.345193386077881,
+              3.985193967819214,
+              2
+            ],
+            "size": [
+              4.690386772155762,
+              1.4208614826202393,
+              4
+            ]
+          }
+        },
+        {
+          "node": "Static_StationRoot_timber.001",
+          "nodeIndex": 16,
+          "worldMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "accessorIndices": [
+            32
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              -2.380000114440918,
+              0.20000000298023224,
+              -2
+            ],
+            "max": [
+              2.380000114440918,
+              4.03000020980835,
+              2
+            ],
+            "size": [
+              4.760000228881836,
+              3.8300002068281174,
+              4
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              -2.380000114440918,
+              0.20000000298023224,
+              -2
+            ],
+            "max": [
+              2.380000114440918,
+              4.03000020980835,
+              2
+            ],
+            "size": [
+              4.760000228881836,
+              3.8300002068281174,
+              4
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "information-kiosk",
+      "path": "/workspace/coaster-detailed-assets/outputs/information-kiosk.glb",
+      "sha256": "6e54f9362e967ac7b7a2427f178dd39163894e006ce86958e07dcc636cb900d0",
+      "bytes": 8950308,
+      "exportReport": {
+        "path": "/workspace/coaster-detailed-assets/outputs/information-kiosk.json",
+        "sha256": "f2a6c6ead62d01cf0b49cc700ab589fb3bafa0d44d5bc0776a9cfc3c10090e52",
+        "sourceSha256": "f9c380c69056054f1e89d707a8a5a4e86c9e2928513b008be686eb099d0337b8",
+        "driverSha256": "e0821cdf8bd1cd1ae74e4269ac5cc07fb7acdab4d25f394c0e8111c8ce786f2f",
+        "scope": "Candidate detailed asset laboratory; no original-metric or gameplay validation",
+        "blender": "4.3.2"
+      },
+      "activeScene": 0,
+      "activeNodes": 54,
+      "meshNodes": 38,
+      "positionAccessors": 38,
+      "positionVertices": 14732,
+      "maximumAccessorBoundResidual": 0,
+      "anchors": {
+        "GroundRoot": [
+          0,
+          0,
+          0
+        ],
+        "Counter_Front": [
+          0,
+          1.0299999713897705,
+          1.5800000429153442
+        ],
+        "Counter_Back": [
+          0,
+          1.0299999713897705,
+          -1.5800000429153442
+        ],
+        "Counter_Left": [
+          -1.5800000429153442,
+          1.0299999713897705,
+          0
+        ],
+        "Counter_Right": [
+          1.5800000429153442,
+          1.0299999713897705,
+          0
+        ],
+        "Sign_Front": [
+          0,
+          2,
+          1.6200000047683716
+        ],
+        "PropMap": [
+          0.3499999940395355,
+          1.0299999713897705,
+          1.4800000190734863
+        ],
+        "PropUmbrella": [
+          -1.5499999523162842,
+          0.2800000011920929,
+          1.5499999523162842
+        ]
+      },
+      "vertexWorldBounds": {
+        "min": [
+          -2.0803999304771423,
+          0,
+          -2.0435478687286377
+        ],
+        "max": [
+          2.0435478687286377,
+          4.699999809265137,
+          2.0803999304771423
+        ],
+        "size": [
+          4.12394779920578,
+          4.699999809265137,
+          4.12394779920578
+        ]
+      },
+      "transformedAccessorBounds": {
+        "min": [
+          -2.0803999304771423,
+          0,
+          -2.0435478687286377
+        ],
+        "max": [
+          2.0435478687286377,
+          4.699999809265137,
+          2.0803999304771423
+        ],
+        "size": [
+          4.12394779920578,
+          4.699999809265137,
+          4.12394779920578
+        ]
+      },
+      "meshes": [
+        {
+          "node": "Static_CupolaLouver_Back_paint_teal",
+          "nodeIndex": 4,
+          "worldMatrix": [
+            -1,
+            0,
+            8.742277657347586e-8,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -8.742277657347586e-8,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "accessorIndices": [
+            0
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              -0.5500000665776466,
+              3.6600000858306885,
+              -0.6300000428945254
+            ],
+            "max": [
+              0.5499999599218619,
+              3.9100000858306885,
+              -0.5899999261110593
+            ],
+            "size": [
+              1.1000000264995085,
+              0.25,
+              0.040000116783466044
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              -0.5500000669972778,
+              3.6600000858306885,
+              -0.6300000433141566
+            ],
+            "max": [
+              0.5499999603414931,
+              3.9100000858306885,
+              -0.5899999256914281
+            ],
+            "size": [
+              1.100000027338771,
+              0.25,
+              0.04000011762272848
+            ]
+          }
+        },
+        {
+          "node": "Static_CupolaLouver_Front_paint_teal",
+          "nodeIndex": 6,
+          "worldMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "accessorIndices": [
+            4
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              -0.550000011920929,
+              3.6600000858306885,
+              0.5899999737739563
+            ],
+            "max": [
+              0.550000011920929,
+              3.9100000858306885,
+              0.6299999952316284
+            ],
+            "size": [
+              1.100000023841858,
+              0.25,
+              0.04000002145767212
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              -0.550000011920929,
+              3.6600000858306885,
+              0.5899999737739563
+            ],
+            "max": [
+              0.550000011920929,
+              3.9100000858306885,
+              0.6299999952316284
+            ],
+            "size": [
+              1.100000023841858,
+              0.25,
+              0.04000002145767212
+            ]
+          }
+        },
+        {
+          "node": "Static_CupolaLouver_Left_paint_teal",
+          "nodeIndex": 8,
+          "worldMatrix": [
+            -1.3435885648505064e-7,
+            0,
+            1.0000001343588565,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -1.0000001343588565,
+            0,
+            -1.3435885648505064e-7,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "accessorIndices": [
+            7
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              -0.6300001531301546,
+              3.6600000858306885,
+              -0.5500001698194551
+            ],
+            "max": [
+              -0.5899999797932309,
+              3.9100000858306885,
+              0.5500000059016544
+            ],
+            "size": [
+              0.04000017333692363,
+              0.25,
+              1.1000001757211095
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              -0.63000015377508,
+              3.6600000858306885,
+              -0.5500001704643805
+            ],
+            "max": [
+              -0.5899999791483055,
+              3.9100000858306885,
+              0.5500000065465798
+            ],
+            "size": [
+              0.04000017462677452,
+              0.25,
+              1.1000001770109602
+            ]
+          }
+        },
+        {
+          "node": "Static_CupolaLouver_Right_paint_teal",
+          "nodeIndex": 10,
+          "worldMatrix": [
+            -1.3435885648505064e-7,
+            0,
+            -1.0000001343588565,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1.0000001343588565,
+            0,
+            -1.3435885648505064e-7,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "accessorIndices": [
+            10
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              0.5899999797932309,
+              3.6600000858306885,
+              -0.5500001698194551
+            ],
+            "max": [
+              0.6300001531301546,
+              3.9100000858306885,
+              0.5500000059016544
+            ],
+            "size": [
+              0.04000017333692363,
+              0.25,
+              1.1000001757211095
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              0.5899999791483055,
+              3.6600000858306885,
+              -0.5500001704643805
+            ],
+            "max": [
+              0.63000015377508,
+              3.9100000858306885,
+              0.5500000065465798
+            ],
+            "size": [
+              0.04000017462677452,
+              0.25,
+              1.1000001770109602
+            ]
+          }
+        },
+        {
+          "node": "SignBorder_Back",
+          "nodeIndex": 12,
+          "worldMatrix": [
+            -1,
+            0,
+            8.742277657347586e-8,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -8.742277657347586e-8,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "accessorIndices": [
+            13
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              -1.0500000936264606,
+              1.8899999856948853,
+              -1.6200000962475607
+            ],
+            "max": [
+              1.0499998129993444,
+              2.0899999141693115,
+              -1.589999941899412
+            ],
+            "size": [
+              2.099999906625805,
+              0.19999992847442627,
+              0.030000154348148733
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              -1.0500000939411827,
+              1.8899999856948853,
+              -1.6200000965622827
+            ],
+            "max": [
+              1.0499998133140664,
+              2.0899999141693115,
+              -1.58999994158469
+            ],
+            "size": [
+              2.099999907255249,
+              0.19999992847442627,
+              0.030000154977592786
+            ]
+          }
+        },
+        {
+          "node": "Static_Facade_Back_boards.001",
+          "nodeIndex": 13,
+          "worldMatrix": [
+            -1,
+            0,
+            8.742277657347586e-8,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -8.742277657347586e-8,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "accessorIndices": [
+            17
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              -1.3800001209455883,
+              0.2800000011920929,
+              -1.450000167278077
+            ],
+            "max": [
+              1.3799998761618077,
+              0.949999988079071,
+              -0.6999998836962753
+            ],
+            "size": [
+              2.7599999971073963,
+              0.6699999868869781,
+              0.7500002835818016
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              -1.3800001219946587,
+              0.2800000011920929,
+              -1.450000168327147
+            ],
+            "max": [
+              1.3799999340356859,
+              0.949999988079071,
+              -0.6999998674356398
+            ],
+            "size": [
+              2.7600000560303446,
+              0.6699999868869781,
+              0.7500003008915073
+            ]
+          }
+        },
+        {
+          "node": "Static_Facade_Back_ink",
+          "nodeIndex": 14,
+          "worldMatrix": [
+            -1,
+            0,
+            8.742277657347586e-8,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -8.742277657347586e-8,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "accessorIndices": [
+            21
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              -0.3420001505656334,
+              1.940000057220459,
+              -1.6350000236839115
+            ],
+            "max": [
+              0.3799998531696165,
+              2.0859999656677246,
+              -1.6249999701014097
+            ],
+            "size": [
+              0.7220000037352499,
+              0.14599990844726562,
+              0.010000053582501778
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              -0.3420001505656334,
+              1.940000057220459,
+              -1.6350000236839115
+            ],
+            "max": [
+              0.3799998531696165,
+              2.0859999656677246,
+              -1.6249999701014097
+            ],
+            "size": [
+              0.7220000037352499,
+              0.14599990844726562,
+              0.010000053582501778
+            ]
+          }
+        },
+        {
+          "node": "Static_Facade_Back_paint_teal",
+          "nodeIndex": 15,
+          "worldMatrix": [
+            -1,
+            0,
+            8.742277657347586e-8,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -8.742277657347586e-8,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "accessorIndices": [
+            25
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              -1.3500001504300447,
+              1.8600000143051147,
+              -1.6100001099456307
+            ],
+            "max": [
+              1.349999907394718,
+              2.119999885559082,
+              -1.3199999354804073
+            ],
+            "size": [
+              2.700000057824763,
+              0.2599998712539673,
+              0.2900001744652234
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              -1.3500001645925295,
+              1.8600000143051147,
+              -1.6100001323258653
+            ],
+            "max": [
+              1.3499999084437881,
+              2.119999885559082,
+              -1.319999934431337
+            ],
+            "size": [
+              2.7000000730363176,
+              0.2599998712539673,
+              0.29000019789452836
+            ]
+          }
+        },
+        {
+          "node": "Static_Facade_Back_timber.001",
+          "nodeIndex": 16,
+          "worldMatrix": [
+            -1,
+            0,
+            8.742277657347586e-8,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -8.742277657347586e-8,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "accessorIndices": [
+            29
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              -1.4200000943733841,
+              0.949999988079071,
+              -1.5800001662164207
+            ],
+            "max": [
+              1.4199998469669226,
+              2.049999952316284,
+              -1.2499998766989235
+            ],
+            "size": [
+              2.8399999413403068,
+              1.0999999642372131,
+              0.33000028951749716
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              -1.4200000952126466,
+              0.949999988079071,
+              -1.5800001670556831
+            ],
+            "max": [
+              1.419999847806185,
+              2.049999952316284,
+              -1.249999875859661
+            ],
+            "size": [
+              2.8399999430188316,
+              1.0999999642372131,
+              0.33000029119602203
+            ]
+          }
+        },
+        {
+          "node": "SignBorder_Front",
+          "nodeIndex": 18,
+          "worldMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "accessorIndices": [
+            33
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              -1.0499999523162842,
+              1.8899999856948853,
+              1.590000033378601
+            ],
+            "max": [
+              1.0499999523162842,
+              2.0899999141693115,
+              1.6200000047683716
+            ],
+            "size": [
+              2.0999999046325684,
+              0.19999992847442627,
+              0.029999971389770508
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              -1.0499999523162842,
+              1.8899999856948853,
+              1.590000033378601
+            ],
+            "max": [
+              1.0499999523162842,
+              2.0899999141693115,
+              1.6200000047683716
+            ],
+            "size": [
+              2.0999999046325684,
+              0.19999992847442627,
+              0.029999971389770508
+            ]
+          }
+        },
+        {
+          "node": "Static_Facade_Front_boards.001",
+          "nodeIndex": 19,
+          "worldMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "accessorIndices": [
+            36
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              -1.3799999952316284,
+              0.2800000011920929,
+              0.699999988079071
+            ],
+            "max": [
+              1.3799999952316284,
+              0.949999988079071,
+              1.4500000476837158
+            ],
+            "size": [
+              2.759999990463257,
+              0.6699999868869781,
+              0.7500000596046448
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              -1.3799999952316284,
+              0.2800000011920929,
+              0.699999988079071
+            ],
+            "max": [
+              1.3799999952316284,
+              0.949999988079071,
+              1.4500000476837158
+            ],
+            "size": [
+              2.759999990463257,
+              0.6699999868869781,
+              0.7500000596046448
+            ]
+          }
+        },
+        {
+          "node": "Static_Facade_Front_ink",
+          "nodeIndex": 20,
+          "worldMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "accessorIndices": [
+            39
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              -0.3799999952316284,
+              1.940000057220459,
+              1.625
+            ],
+            "max": [
+              0.34200000762939453,
+              2.0859999656677246,
+              1.6349999904632568
+            ],
+            "size": [
+              0.722000002861023,
+              0.14599990844726562,
+              0.009999990463256836
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              -0.3799999952316284,
+              1.940000057220459,
+              1.625
+            ],
+            "max": [
+              0.34200000762939453,
+              2.0859999656677246,
+              1.6349999904632568
+            ],
+            "size": [
+              0.722000002861023,
+              0.14599990844726562,
+              0.009999990463256836
+            ]
+          }
+        },
+        {
+          "node": "Static_Facade_Front_paint_teal",
+          "nodeIndex": 21,
+          "worldMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "accessorIndices": [
+            42
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              -1.350000023841858,
+              1.8600000143051147,
+              1.3200000524520874
+            ],
+            "max": [
+              1.350000023841858,
+              2.119999885559082,
+              1.6100000143051147
+            ],
+            "size": [
+              2.700000047683716,
+              0.2599998712539673,
+              0.28999996185302734
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              -1.350000023841858,
+              1.8600000143051147,
+              1.3200000524520874
+            ],
+            "max": [
+              1.350000023841858,
+              2.119999885559082,
+              1.6100000143051147
+            ],
+            "size": [
+              2.700000047683716,
+              0.2599998712539673,
+              0.28999996185302734
+            ]
+          }
+        },
+        {
+          "node": "Static_Facade_Front_timber.001",
+          "nodeIndex": 22,
+          "worldMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "accessorIndices": [
+            45
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              -1.4199999570846558,
+              0.949999988079071,
+              1.25
+            ],
+            "max": [
+              1.4199999570846558,
+              2.049999952316284,
+              1.5800000429153442
+            ],
+            "size": [
+              2.8399999141693115,
+              1.0999999642372131,
+              0.33000004291534424
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              -1.4199999570846558,
+              0.949999988079071,
+              1.25
+            ],
+            "max": [
+              1.4199999570846558,
+              2.049999952316284,
+              1.5800000429153442
+            ],
+            "size": [
+              2.8399999141693115,
+              1.0999999642372131,
+              0.33000004291534424
+            ]
+          }
+        },
+        {
+          "node": "SignBorder_Left",
+          "nodeIndex": 24,
+          "worldMatrix": [
+            -1.3435885648505064e-7,
+            0,
+            1.0000001343588565,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -1.0000001343588565,
+            0,
+            -1.3435885648505064e-7,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "accessorIndices": [
+            48
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              -1.6200003630228206,
+              1.8899999856948853,
+              -1.0500003105707332
+            ],
+            "max": [
+              -1.5900001064160865,
+              2.0899999141693115,
+              1.0499998792787988
+            ],
+            "size": [
+              0.03000025660673411,
+              0.19999992847442627,
+              2.100000189849532
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              -1.6200003635065126,
+              1.8899999856948853,
+              -1.0500003110544252
+            ],
+            "max": [
+              -1.5900001059323945,
+              2.0899999141693115,
+              1.0499998797624908
+            ],
+            "size": [
+              0.03000025757411806,
+              0.19999992847442627,
+              2.1000001908169157
+            ]
+          }
+        },
+        {
+          "node": "Static_Facade_Left_boards.001",
+          "nodeIndex": 25,
+          "worldMatrix": [
+            -1.3435885648505064e-7,
+            0,
+            1.0000001343588565,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -1.0000001343588565,
+            0,
+            -1.3435885648505064e-7,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "accessorIndices": [
+            51
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              -1.450000426306984,
+              0.2800000011920929,
+              -1.3800003738548965
+            ],
+            "max": [
+              -0.6999999217057936,
+              0.949999988079071,
+              1.3799999976500887
+            ],
+            "size": [
+              0.7500005046011903,
+              0.6699999868869781,
+              2.7600003715049852
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              -1.4500004279192855,
+              0.2800000011920929,
+              -1.3800003754671981
+            ],
+            "max": [
+              -0.6999998967150477,
+              0.949999988079071,
+              1.3800000865956519
+            ],
+            "size": [
+              0.7500005312042378,
+              0.6699999868869781,
+              2.76000046206285
+            ]
+          }
+        },
+        {
+          "node": "Static_Facade_Left_ink",
+          "nodeIndex": 26,
+          "worldMatrix": [
+            -1.3435885648505064e-7,
+            0,
+            1.0000001343588565,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -1.0000001343588565,
+            0,
+            -1.3435885648505064e-7,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "accessorIndices": [
+            54
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              -1.6350002560907158,
+              1.940000057220459,
+              -0.3800002659647223
+            ],
+            "max": [
+              -1.6250001672767769,
+              2.0859999656677246,
+              0.3419998352469827
+            ],
+            "size": [
+              0.010000088813938879,
+              0.14599990844726562,
+              0.722000101211705
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              -1.6350002560907158,
+              1.940000057220459,
+              -0.3800002659647223
+            ],
+            "max": [
+              -1.6250001672767769,
+              2.0859999656677246,
+              0.3419998352469827
+            ],
+            "size": [
+              0.010000088813938879,
+              0.14599990844726562,
+              0.722000101211705
+            ]
+          }
+        },
+        {
+          "node": "Static_Facade_Left_paint_teal",
+          "nodeIndex": 27,
+          "worldMatrix": [
+            -1.3435885648505064e-7,
+            0,
+            1.0000001343588565,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -1.0000001343588565,
+            0,
+            -1.3435885648505064e-7,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "accessorIndices": [
+            57
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              -1.6100003776114622,
+              1.8600000143051147,
+              -1.3500003997779515
+            ],
+            "max": [
+              -1.320000050033627,
+              2.119999885559082,
+              1.3500000262603182
+            ],
+            "size": [
+              0.2900003275778351,
+              0.2599998712539673,
+              2.7000004260382697
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              -1.610000412007335,
+              1.8600000143051147,
+              -1.3500004215440782
+            ],
+            "max": [
+              -1.3200000484213255,
+              2.119999885559082,
+              1.3500000278726199
+            ],
+            "size": [
+              0.29000036358600956,
+              0.2599998712539673,
+              2.700000449416698
+            ]
+          }
+        },
+        {
+          "node": "Static_Facade_Left_timber.001",
+          "nodeIndex": 28,
+          "worldMatrix": [
+            -1.3435885648505064e-7,
+            0,
+            1.0000001343588565,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -1.0000001343588565,
+            0,
+            -1.3435885648505064e-7,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "accessorIndices": [
+            60
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              -1.580000444702063,
+              0.949999988079071,
+              -1.4200003588713743
+            ],
+            "max": [
+              -1.249999978448851,
+              2.049999952316284,
+              1.4199999786358046
+            ],
+            "size": [
+              0.3300004662532121,
+              1.0999999642372131,
+              2.840000337507179
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              -1.5800004459919137,
+              0.949999988079071,
+              -1.4200003601612252
+            ],
+            "max": [
+              -1.2499999771590002,
+              2.049999952316284,
+              1.4199999799256555
+            ],
+            "size": [
+              0.33000046883291345,
+              1.0999999642372131,
+              2.8400003400868807
+            ]
+          }
+        },
+        {
+          "node": "SignBorder_Right",
+          "nodeIndex": 30,
+          "worldMatrix": [
+            -1.3435885648505064e-7,
+            0,
+            -1.0000001343588565,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1.0000001343588565,
+            0,
+            -1.3435885648505064e-7,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "accessorIndices": [
+            63
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              1.5900001064160865,
+              1.8899999856948853,
+              -1.0500003105707332
+            ],
+            "max": [
+              1.6200003630228206,
+              2.0899999141693115,
+              1.0499998792787988
+            ],
+            "size": [
+              0.03000025660673411,
+              0.19999992847442627,
+              2.100000189849532
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              1.5900001059323945,
+              1.8899999856948853,
+              -1.0500003110544252
+            ],
+            "max": [
+              1.6200003635065126,
+              2.0899999141693115,
+              1.0499998797624908
+            ],
+            "size": [
+              0.03000025757411806,
+              0.19999992847442627,
+              2.1000001908169157
+            ]
+          }
+        },
+        {
+          "node": "Static_Facade_Right_boards.001",
+          "nodeIndex": 31,
+          "worldMatrix": [
+            -1.3435885648505064e-7,
+            0,
+            -1.0000001343588565,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1.0000001343588565,
+            0,
+            -1.3435885648505064e-7,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "accessorIndices": [
+            66
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              0.6999999217057936,
+              0.2800000011920929,
+              -1.3800003738548965
+            ],
+            "max": [
+              1.450000426306984,
+              0.949999988079071,
+              1.3799999976500887
+            ],
+            "size": [
+              0.7500005046011903,
+              0.6699999868869781,
+              2.7600003715049852
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              0.6999998967150477,
+              0.2800000011920929,
+              -1.3800003754671981
+            ],
+            "max": [
+              1.4500004279192855,
+              0.949999988079071,
+              1.3800000865956519
+            ],
+            "size": [
+              0.7500005312042378,
+              0.6699999868869781,
+              2.76000046206285
+            ]
+          }
+        },
+        {
+          "node": "Static_Facade_Right_ink",
+          "nodeIndex": 32,
+          "worldMatrix": [
+            -1.3435885648505064e-7,
+            0,
+            -1.0000001343588565,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1.0000001343588565,
+            0,
+            -1.3435885648505064e-7,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "accessorIndices": [
+            69
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              1.625000172382412,
+              1.940000057220459,
+              -0.34200027325685356
+            ],
+            "max": [
+              1.6350002611963508,
+              2.0859999656677246,
+              0.37999982795485143
+            ],
+            "size": [
+              0.010000088813938879,
+              0.14599990844726562,
+              0.722000101211705
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              1.625000172382412,
+              1.940000057220459,
+              -0.34200027325685356
+            ],
+            "max": [
+              1.6350002611963508,
+              2.0859999656677246,
+              0.37999982795485143
+            ],
+            "size": [
+              0.010000088813938879,
+              0.14599990844726562,
+              0.722000101211705
+            ]
+          }
+        },
+        {
+          "node": "Static_Facade_Right_paint_teal",
+          "nodeIndex": 33,
+          "worldMatrix": [
+            -1.3435885648505064e-7,
+            0,
+            -1.0000001343588565,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1.0000001343588565,
+            0,
+            -1.3435885648505064e-7,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "accessorIndices": [
+            72
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              1.320000050033627,
+              1.8600000143051147,
+              -1.3500003997779515
+            ],
+            "max": [
+              1.6100003776114622,
+              2.119999885559082,
+              1.3500000262603182
+            ],
+            "size": [
+              0.2900003275778351,
+              0.2599998712539673,
+              2.7000004260382697
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              1.3200000484213255,
+              1.8600000143051147,
+              -1.3500004215440782
+            ],
+            "max": [
+              1.610000412007335,
+              2.119999885559082,
+              1.3500000278726199
+            ],
+            "size": [
+              0.29000036358600956,
+              0.2599998712539673,
+              2.700000449416698
+            ]
+          }
+        },
+        {
+          "node": "Static_Facade_Right_timber.001",
+          "nodeIndex": 34,
+          "worldMatrix": [
+            -1.3435885648505064e-7,
+            0,
+            -1.0000001343588565,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1.0000001343588565,
+            0,
+            -1.3435885648505064e-7,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "accessorIndices": [
+            75
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              1.249999978448851,
+              0.949999988079071,
+              -1.4200003588713743
+            ],
+            "max": [
+              1.580000444702063,
+              2.049999952316284,
+              1.4199999786358046
+            ],
+            "size": [
+              0.3300004662532121,
+              1.0999999642372131,
+              2.840000337507179
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              1.2499999771590002,
+              0.949999988079071,
+              -1.4200003601612252
+            ],
+            "max": [
+              1.5800004459919137,
+              2.049999952316284,
+              1.4199999799256555
+            ],
+            "size": [
+              0.33000046883291345,
+              1.0999999642372131,
+              2.8400003400868807
+            ]
+          }
+        },
+        {
+          "node": "Plinth_Foundation",
+          "nodeIndex": 36,
+          "worldMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "accessorIndices": [
+            78
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              -1.850000023841858,
+              0,
+              -1.850000023841858
+            ],
+            "max": [
+              1.850000023841858,
+              0.15000000596046448,
+              1.850000023841858
+            ],
+            "size": [
+              3.700000047683716,
+              0.15000000596046448,
+              3.700000047683716
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              -1.850000023841858,
+              0,
+              -1.850000023841858
+            ],
+            "max": [
+              1.850000023841858,
+              0.15000000596046448,
+              1.850000023841858
+            ],
+            "size": [
+              3.700000047683716,
+              0.15000000596046448,
+              3.700000047683716
+            ]
+          }
+        },
+        {
+          "node": "Plinth_SteppedDeck",
+          "nodeIndex": 37,
+          "worldMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "accessorIndices": [
+            82
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              -1.75,
+              0.15000000596046448,
+              -1.75
+            ],
+            "max": [
+              1.75,
+              0.2800000011920929,
+              1.75
+            ],
+            "size": [
+              3.5,
+              0.12999999523162842,
+              3.5
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              -1.75,
+              0.15000000596046448,
+              -1.75
+            ],
+            "max": [
+              1.75,
+              0.2800000011920929,
+              1.75
+            ],
+            "size": [
+              3.5,
+              0.12999999523162842,
+              3.5
+            ]
+          }
+        },
+        {
+          "node": "Map_PathPrint",
+          "nodeIndex": 38,
+          "worldMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0.3499999940395355,
+            1.0299999713897705,
+            1.4800000190734863,
+            1
+          ],
+          "accessorIndices": [
+            86
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              0.3699999935925007,
+              1.0499999709427357,
+              1.4820000191684812
+            ],
+            "max": [
+              0.5099999904632568,
+              1.0799999721348286,
+              1.4840000192634761
+            ],
+            "size": [
+              0.13999999687075615,
+              0.030000001192092896,
+              0.0020000000949949026
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              0.3699999935925007,
+              1.0499999709427357,
+              1.4820000191684812
+            ],
+            "max": [
+              0.5099999904632568,
+              1.0799999721348286,
+              1.4840000192634761
+            ],
+            "size": [
+              0.13999999687075615,
+              0.030000001192092896,
+              0.0020000000949949026
+            ]
+          }
+        },
+        {
+          "node": "PropMap_Mesh",
+          "nodeIndex": 39,
+          "worldMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0.3499999940395355,
+            1.0299999713897705,
+            1.4800000190734863,
+            1
+          ],
+          "accessorIndices": [
+            90
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              0.3499999940395355,
+              1.0299999713897705,
+              1.4706010101363063
+            ],
+            "max": [
+              0.6294168829917908,
+              1.2100000381469727,
+              1.4799203611401026
+            ],
+            "size": [
+              0.27941688895225525,
+              0.18000006675720215,
+              0.009319351003796328
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              0.3499999940395355,
+              1.0299999713897705,
+              1.4706010101363063
+            ],
+            "max": [
+              0.6294168829917908,
+              1.2100000381469727,
+              1.4799203611401026
+            ],
+            "size": [
+              0.27941688895225525,
+              0.18000006675720215,
+              0.009319351003796328
+            ]
+          }
+        },
+        {
+          "node": "Static_PropMap_ink",
+          "nodeIndex": 40,
+          "worldMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0.3499999940395355,
+            1.0299999713897705,
+            1.4800000190734863,
+            1
+          ],
+          "accessorIndices": [
+            94
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              0.38999999314546585,
+              1.0949999690055847,
+              1.4820000191684812
+            ],
+            "max": [
+              0.48999999463558197,
+              1.1509999707341194,
+              1.4840000192634761
+            ],
+            "size": [
+              0.10000000149011612,
+              0.0560000017285347,
+              0.0020000000949949026
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              0.38999999314546585,
+              1.0949999690055847,
+              1.4820000191684812
+            ],
+            "max": [
+              0.48999999463558197,
+              1.1509999707341194,
+              1.4840000192634761
+            ],
+            "size": [
+              0.10000000149011612,
+              0.0560000017285347,
+              0.0020000000949949026
+            ]
+          }
+        },
+        {
+          "node": "Static_PropUmbrella_brass",
+          "nodeIndex": 42,
+          "worldMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -1.5499999523162842,
+            0.2800000011920929,
+            1.5499999523162842,
+            1
+          ],
+          "accessorIndices": [
+            98
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              -1.5673274379223585,
+              0.910999983549118,
+              1.5326724667102098
+            ],
+            "max": [
+              -1.5326724667102098,
+              1.3800000250339508,
+              1.5673274379223585
+            ],
+            "size": [
+              0.034654971212148666,
+              0.46900004148483276,
+              0.034654971212148666
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              -1.5673274379223585,
+              0.910999983549118,
+              1.5326724667102098
+            ],
+            "max": [
+              -1.5326724667102098,
+              1.3800000250339508,
+              1.5673274379223585
+            ],
+            "size": [
+              0.034654971212148666,
+              0.46900004148483276,
+              0.034654971212148666
+            ]
+          }
+        },
+        {
+          "node": "Static_PropUmbrella_timber.001",
+          "nodeIndex": 43,
+          "worldMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -1.5499999523162842,
+            0.2800000011920929,
+            1.5499999523162842,
+            1
+          ],
+          "accessorIndices": [
+            102
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              -1.6007865257561207,
+              0.269213430583477,
+              1.538645563647151
+            ],
+            "max": [
+              -1.538645563647151,
+              1.3099999725818634,
+              1.5613543409854174
+            ],
+            "size": [
+              0.06214096210896969,
+              1.0407865419983864,
+              0.022708777338266373
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              -1.6007865257561207,
+              0.269213430583477,
+              1.538645563647151
+            ],
+            "max": [
+              -1.538645563647151,
+              1.3099999725818634,
+              1.5613543409854174
+            ],
+            "size": [
+              0.06214096210896969,
+              1.0407865419983864,
+              0.022708777338266373
+            ]
+          }
+        },
+        {
+          "node": "Umbrella_Canopy_Cream",
+          "nodeIndex": 44,
+          "worldMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -1.5499999523162842,
+            0.2800000011920929,
+            1.5499999523162842,
+            1
+          ],
+          "accessorIndices": [
+            106
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              -2.0803999304771423,
+              0.9274999797344208,
+              1.019599974155426
+            ],
+            "max": [
+              -1.019599974155426,
+              1.1960000097751617,
+              2.0803999304771423
+            ],
+            "size": [
+              1.0607999563217163,
+              0.26850003004074097,
+              1.0607999563217163
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              -2.0803999304771423,
+              0.9274999797344208,
+              1.019599974155426
+            ],
+            "max": [
+              -1.019599974155426,
+              1.1960000097751617,
+              2.0803999304771423
+            ],
+            "size": [
+              1.0607999563217163,
+              0.26850003004074097,
+              1.0607999563217163
+            ]
+          }
+        },
+        {
+          "node": "Umbrella_Canopy_Teal",
+          "nodeIndex": 45,
+          "worldMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -1.5499999523162842,
+            0.2800000011920929,
+            1.5499999523162842,
+            1
+          ],
+          "accessorIndices": [
+            110
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              -2.0803999304771423,
+              0.9274999797344208,
+              1.019599974155426
+            ],
+            "max": [
+              -1.019599974155426,
+              1.1960000097751617,
+              2.0803999304771423
+            ],
+            "size": [
+              1.0607999563217163,
+              0.26850003004074097,
+              1.0607999563217163
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              -2.0803999304771423,
+              0.9274999797344208,
+              1.019599974155426
+            ],
+            "max": [
+              -1.019599974155426,
+              1.1960000097751617,
+              2.0803999304771423
+            ],
+            "size": [
+              1.0607999563217163,
+              0.26850003004074097,
+              1.0607999563217163
+            ]
+          }
+        },
+        {
+          "node": "Static_GroundRoot_brass",
+          "nodeIndex": 48,
+          "worldMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "accessorIndices": [
+            114
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              -0.042578957974910736,
+              4.449999809265137,
+              -0.042578957974910736
+            ],
+            "max": [
+              0.042578957974910736,
+              4.699999809265137,
+              0.042578957974910736
+            ],
+            "size": [
+              0.08515791594982147,
+              0.25,
+              0.08515791594982147
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              -0.042578957974910736,
+              4.449999809265137,
+              -0.042578957974910736
+            ],
+            "max": [
+              0.042578957974910736,
+              4.699999809265137,
+              0.042578957974910736
+            ],
+            "size": [
+              0.08515791594982147,
+              0.25,
+              0.08515791594982147
+            ]
+          }
+        },
+        {
+          "node": "Static_GroundRoot_cream",
+          "nodeIndex": 49,
+          "worldMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "accessorIndices": [
+            118
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              -0.75,
+              3.5199999809265137,
+              -0.75
+            ],
+            "max": [
+              0.75,
+              4.050000190734863,
+              0.75
+            ],
+            "size": [
+              1.5,
+              0.5300002098083496,
+              1.5
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              -0.75,
+              3.5199999809265137,
+              -0.75
+            ],
+            "max": [
+              0.75,
+              4.050000190734863,
+              0.75
+            ],
+            "size": [
+              1.5,
+              0.5300002098083496,
+              1.5
+            ]
+          }
+        },
+        {
+          "node": "Static_GroundRoot_metal",
+          "nodeIndex": 50,
+          "worldMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "accessorIndices": [
+            122
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              -1.6299999952316284,
+              0.2800000011920929,
+              -1.6299999952316284
+            ],
+            "max": [
+              1.6299999952316284,
+              4.449999809265137,
+              1.6299999952316284
+            ],
+            "size": [
+              3.259999990463257,
+              4.169999808073044,
+              3.259999990463257
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              -1.6299999952316284,
+              0.2800000011920929,
+              -1.6299999952316284
+            ],
+            "max": [
+              1.6299999952316284,
+              4.449999809265137,
+              1.6299999952316284
+            ],
+            "size": [
+              3.259999990463257,
+              4.169999808073044,
+              3.259999990463257
+            ]
+          }
+        },
+        {
+          "node": "Static_GroundRoot_roof",
+          "nodeIndex": 51,
+          "worldMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "accessorIndices": [
+            126
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              -2.0435478687286377,
+              2.5199999809265137,
+              -2.0435478687286377
+            ],
+            "max": [
+              2.0435478687286377,
+              3.450000047683716,
+              2.0435478687286377
+            ],
+            "size": [
+              4.087095737457275,
+              0.9300000667572021,
+              4.087095737457275
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              -2.0435478687286377,
+              2.5199999809265137,
+              -2.0435478687286377
+            ],
+            "max": [
+              2.0435478687286377,
+              3.450000047683716,
+              2.0435478687286377
+            ],
+            "size": [
+              4.087095737457275,
+              0.9300000667572021,
+              4.087095737457275
+            ]
+          }
+        },
+        {
+          "node": "Static_GroundRoot_timber.001",
+          "nodeIndex": 52,
+          "worldMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "accessorIndices": [
+            130
+          ],
+          "vertexWorldBounds": {
+            "min": [
+              -1.649999976158142,
+              0.2800000011920929,
+              -1.649999976158142
+            ],
+            "max": [
+              1.649999976158142,
+              3.9800000190734863,
+              1.649999976158142
+            ],
+            "size": [
+              3.299999952316284,
+              3.7000000178813934,
+              3.299999952316284
+            ]
+          },
+          "transformedAccessorBounds": {
+            "min": [
+              -1.649999976158142,
+              0.2800000011920929,
+              -1.649999976158142
+            ],
+            "max": [
+              1.649999976158142,
+              3.9800000190734863,
+              1.649999976158142
+            ],
+            "size": [
+              3.299999952316284,
+              3.7000000178813934,
+              3.299999952316284
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "id": "station-seams-four-directions",
+      "expectedRelationship": "Unchanged GLB RailOut(A) and RailIn(B) coincide when unit-scale bay centres are separated by the candidate 4m tile; +Z forward follows all four directions. The legacy +X basis is a negative control.",
+      "inputs": {
+        "nativeOrigin": {
+          "x": 640,
+          "y": 960,
+          "z": 32
+        },
+        "metresPerTile": 4,
+        "legacyOriginPolicy": "native metres plus half a tile in each horizontal axis",
+        "candidateBayPitchMetres": 4,
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "measurements": [
+        {
+          "direction": 0,
+          "forward": [
+            1,
+            0,
+            0
+          ],
+          "firstMatrix": [
+            0,
+            0,
+            -1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            84,
+            4,
+            122,
+            1
+          ],
+          "nextMatrix": [
+            0,
+            0,
+            -1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            88,
+            4,
+            122,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "railIn": [
+            82,
+            4.5,
+            122
+          ],
+          "railOut": [
+            86,
+            4.5,
+            122
+          ],
+          "nextRailIn": [
+            86,
+            4.5,
+            122
+          ],
+          "seamResidualMetres": 0,
+          "pitchMetres": 4,
+          "forwardDot": 1,
+          "legacyBasisForwardDot": 0,
+          "unitScaleResidual": 0,
+          "checks": [
+            {
+              "name": "Station seam closes at candidate tile pitch",
+              "actual": 0,
+              "expected": 0,
+              "tolerance": 0.0001,
+              "passed": true
+            },
+            {
+              "name": "Authored socket pitch equals candidate tile pitch",
+              "actual": 4,
+              "expected": 4,
+              "tolerance": 0.0001,
+              "passed": true
+            },
+            {
+              "name": "GLB +Z forward follows fixture direction",
+              "actual": 1,
+              "expected": 1,
+              "tolerance": 0.0001,
+              "passed": true
+            },
+            {
+              "name": "Unit scale retained",
+              "actual": 0,
+              "expected": 0,
+              "tolerance": 0.0001,
+              "passed": true
+            },
+            {
+              "name": "Legacy local +X basis fails GLB forward alignment",
+              "actual": true,
+              "expected": true,
+              "tolerance": null,
+              "passed": true
+            }
+          ]
+        },
+        {
+          "direction": 1,
+          "forward": [
+            0,
+            0,
+            1
+          ],
+          "firstMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            82,
+            4,
+            124,
+            1
+          ],
+          "nextMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            82,
+            4,
+            128,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "railIn": [
+            82,
+            4.5,
+            122
+          ],
+          "railOut": [
+            82,
+            4.5,
+            126
+          ],
+          "nextRailIn": [
+            82,
+            4.5,
+            126
+          ],
+          "seamResidualMetres": 0,
+          "pitchMetres": 4,
+          "forwardDot": 1,
+          "legacyBasisForwardDot": 0,
+          "unitScaleResidual": 0,
+          "checks": [
+            {
+              "name": "Station seam closes at candidate tile pitch",
+              "actual": 0,
+              "expected": 0,
+              "tolerance": 0.0001,
+              "passed": true
+            },
+            {
+              "name": "Authored socket pitch equals candidate tile pitch",
+              "actual": 4,
+              "expected": 4,
+              "tolerance": 0.0001,
+              "passed": true
+            },
+            {
+              "name": "GLB +Z forward follows fixture direction",
+              "actual": 1,
+              "expected": 1,
+              "tolerance": 0.0001,
+              "passed": true
+            },
+            {
+              "name": "Unit scale retained",
+              "actual": 0,
+              "expected": 0,
+              "tolerance": 0.0001,
+              "passed": true
+            },
+            {
+              "name": "Legacy local +X basis fails GLB forward alignment",
+              "actual": true,
+              "expected": true,
+              "tolerance": null,
+              "passed": true
+            }
+          ]
+        },
+        {
+          "direction": 2,
+          "forward": [
+            -1,
+            0,
+            0
+          ],
+          "firstMatrix": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            80,
+            4,
+            122,
+            1
+          ],
+          "nextMatrix": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            76,
+            4,
+            122,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "railIn": [
+            82,
+            4.5,
+            122
+          ],
+          "railOut": [
+            78,
+            4.5,
+            122
+          ],
+          "nextRailIn": [
+            78,
+            4.5,
+            122
+          ],
+          "seamResidualMetres": 0,
+          "pitchMetres": 4,
+          "forwardDot": 1,
+          "legacyBasisForwardDot": 0,
+          "unitScaleResidual": 0,
+          "checks": [
+            {
+              "name": "Station seam closes at candidate tile pitch",
+              "actual": 0,
+              "expected": 0,
+              "tolerance": 0.0001,
+              "passed": true
+            },
+            {
+              "name": "Authored socket pitch equals candidate tile pitch",
+              "actual": 4,
+              "expected": 4,
+              "tolerance": 0.0001,
+              "passed": true
+            },
+            {
+              "name": "GLB +Z forward follows fixture direction",
+              "actual": 1,
+              "expected": 1,
+              "tolerance": 0.0001,
+              "passed": true
+            },
+            {
+              "name": "Unit scale retained",
+              "actual": 0,
+              "expected": 0,
+              "tolerance": 0.0001,
+              "passed": true
+            },
+            {
+              "name": "Legacy local +X basis fails GLB forward alignment",
+              "actual": true,
+              "expected": true,
+              "tolerance": null,
+              "passed": true
+            }
+          ]
+        },
+        {
+          "direction": 3,
+          "forward": [
+            0,
+            0,
+            -1
+          ],
+          "firstMatrix": [
+            -1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            82,
+            4,
+            120,
+            1
+          ],
+          "nextMatrix": [
+            -1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            82,
+            4,
+            116,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "railIn": [
+            82,
+            4.5,
+            122
+          ],
+          "railOut": [
+            82,
+            4.5,
+            118
+          ],
+          "nextRailIn": [
+            82,
+            4.5,
+            118
+          ],
+          "seamResidualMetres": 0,
+          "pitchMetres": 4,
+          "forwardDot": 1,
+          "legacyBasisForwardDot": 0,
+          "unitScaleResidual": 0,
+          "checks": [
+            {
+              "name": "Station seam closes at candidate tile pitch",
+              "actual": 0,
+              "expected": 0,
+              "tolerance": 0.0001,
+              "passed": true
+            },
+            {
+              "name": "Authored socket pitch equals candidate tile pitch",
+              "actual": 4,
+              "expected": 4,
+              "tolerance": 0.0001,
+              "passed": true
+            },
+            {
+              "name": "GLB +Z forward follows fixture direction",
+              "actual": 1,
+              "expected": 1,
+              "tolerance": 0.0001,
+              "passed": true
+            },
+            {
+              "name": "Unit scale retained",
+              "actual": 0,
+              "expected": 0,
+              "tolerance": 0.0001,
+              "passed": true
+            },
+            {
+              "name": "Legacy local +X basis fails GLB forward alignment",
+              "actual": true,
+              "expected": true,
+              "tolerance": null,
+              "passed": true
+            }
+          ]
+        }
+      ],
+      "checks": [
+        {
+          "name": "Station seam closes at candidate tile pitch",
+          "actual": 0,
+          "expected": 0,
+          "tolerance": 0.0001,
+          "passed": true
+        },
+        {
+          "name": "Authored socket pitch equals candidate tile pitch",
+          "actual": 4,
+          "expected": 4,
+          "tolerance": 0.0001,
+          "passed": true
+        },
+        {
+          "name": "GLB +Z forward follows fixture direction",
+          "actual": 1,
+          "expected": 1,
+          "tolerance": 0.0001,
+          "passed": true
+        },
+        {
+          "name": "Unit scale retained",
+          "actual": 0,
+          "expected": 0,
+          "tolerance": 0.0001,
+          "passed": true
+        },
+        {
+          "name": "Legacy local +X basis fails GLB forward alignment",
+          "actual": true,
+          "expected": true,
+          "tolerance": null,
+          "passed": true
+        },
+        {
+          "name": "Station seam closes at candidate tile pitch",
+          "actual": 0,
+          "expected": 0,
+          "tolerance": 0.0001,
+          "passed": true
+        },
+        {
+          "name": "Authored socket pitch equals candidate tile pitch",
+          "actual": 4,
+          "expected": 4,
+          "tolerance": 0.0001,
+          "passed": true
+        },
+        {
+          "name": "GLB +Z forward follows fixture direction",
+          "actual": 1,
+          "expected": 1,
+          "tolerance": 0.0001,
+          "passed": true
+        },
+        {
+          "name": "Unit scale retained",
+          "actual": 0,
+          "expected": 0,
+          "tolerance": 0.0001,
+          "passed": true
+        },
+        {
+          "name": "Legacy local +X basis fails GLB forward alignment",
+          "actual": true,
+          "expected": true,
+          "tolerance": null,
+          "passed": true
+        },
+        {
+          "name": "Station seam closes at candidate tile pitch",
+          "actual": 0,
+          "expected": 0,
+          "tolerance": 0.0001,
+          "passed": true
+        },
+        {
+          "name": "Authored socket pitch equals candidate tile pitch",
+          "actual": 4,
+          "expected": 4,
+          "tolerance": 0.0001,
+          "passed": true
+        },
+        {
+          "name": "GLB +Z forward follows fixture direction",
+          "actual": 1,
+          "expected": 1,
+          "tolerance": 0.0001,
+          "passed": true
+        },
+        {
+          "name": "Unit scale retained",
+          "actual": 0,
+          "expected": 0,
+          "tolerance": 0.0001,
+          "passed": true
+        },
+        {
+          "name": "Legacy local +X basis fails GLB forward alignment",
+          "actual": true,
+          "expected": true,
+          "tolerance": null,
+          "passed": true
+        },
+        {
+          "name": "Station seam closes at candidate tile pitch",
+          "actual": 0,
+          "expected": 0,
+          "tolerance": 0.0001,
+          "passed": true
+        },
+        {
+          "name": "Authored socket pitch equals candidate tile pitch",
+          "actual": 4,
+          "expected": 4,
+          "tolerance": 0.0001,
+          "passed": true
+        },
+        {
+          "name": "GLB +Z forward follows fixture direction",
+          "actual": 1,
+          "expected": 1,
+          "tolerance": 0.0001,
+          "passed": true
+        },
+        {
+          "name": "Unit scale retained",
+          "actual": 0,
+          "expected": 0,
+          "tolerance": 0.0001,
+          "passed": true
+        },
+        {
+          "name": "Legacy local +X basis fails GLB forward alignment",
+          "actual": true,
+          "expected": true,
+          "tolerance": null,
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "decision": {
+        "candidateFixture": "preserve unit geometry",
+        "legacyProceduralBasisForGLB": "reject: forward axis is orthogonal"
+      },
+      "evidence": {
+        "sourceFacts": [
+          {
+            "file": "steel-coaster.ts",
+            "sha256": "8000bd186760ef3893898ce6b5710bffa7207a021bb8f7bb563da1e88116ecef"
+          },
+          {
+            "file": "view.ts",
+            "sha256": "a5b344c6f086893c9363f268c8e917691eb5e2cdd3795c8b2f197c2ff0f69719"
+          },
+          {
+            "file": "engine.ts",
+            "sha256": "afcd9b5a49ec5f0fb2608c5b13bad60c68ae3bcf2d0e283a22777b22db5dbe5c"
+          },
+          {
+            "file": "coaster.js",
+            "sha256": "e3637608646d9237c8f4324bba071b55427aa09003cc36c72c222859d54db100"
+          },
+          {
+            "file": "runtime.js",
+            "sha256": "876b391327d26778216644069f58f9236799375824c89ac84b9f9dbdf8106ca3"
+          },
+          {
+            "file": "park-scene.js",
+            "sha256": "6340e1cbec9c73ae49a27361c297cc6e278b047a4dc1911cf4bf87799af085f0"
+          }
+        ],
+        "measuredSamples": [
+          {
+            "asset": "timber-station",
+            "sha256": "60d94b3c784726b3dfa5aa89bed37a4da8dee05769ff1f648d918a0de1bf7b41",
+            "measurement": "Active-scene full parent transforms; float32 POSITION values and accessor bounds."
+          }
+        ],
+        "candidateFixture": "Right-handed +Y-up basis columns (up×forward,up,forward); ground-root bay centres are horizontal.",
+        "originalBehavior": "Unknown: no original executable/DAT/scenario observation; no original metric, collision, spacing, dispatch or seat-pose equality is asserted."
+      }
+    },
+    {
+      "id": "rail-datum-residual",
+      "expectedRelationship": "Measured station RailIn/Out are .5m above StationRoot; existing procedural rail centre+.058m radius is .358m above the native reference. Preserve both facts and report the .142m incompatibility. A candidate placement can align car RailRoot to the station datum without scaling.",
+      "inputs": {
+        "legacyRailCenterMetres": 0.3,
+        "legacyRailRadiusMetres": 0.058,
+        "legacyCarShellOffsetMetres": 0.65,
+        "groundReferenceMetres": 4
+      },
+      "measurements": {
+        "stationRailInAboveRootMetres": 0.5,
+        "stationRailOutAboveRootMetres": 0.5,
+        "legacyNominalRailTopMetres": 0.358,
+        "datumResidualMetres": 0.14200000000000002,
+        "legacyShellOffsetMinusRailTopMetres": 0.29200000000000004,
+        "candidateCarRailRootWorld": [
+          0,
+          4.5,
+          0
+        ],
+        "candidateCarMatrix": [
+          0,
+          0,
+          -1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          4.5,
+          0,
+          1
+        ],
+        "candidateCarRailContactResidualMetres": 0
+      },
+      "checks": [
+        {
+          "name": "Measured station datum matches .5m authored fixture",
+          "actual": 0.5,
+          "expected": 0.5,
+          "tolerance": 0.0001,
+          "passed": true
+        },
+        {
+          "name": "Both rail sockets share datum",
+          "actual": 0.5,
+          "expected": 0.5,
+          "tolerance": 0.0001,
+          "passed": true
+        },
+        {
+          "name": "Legacy source-derived rail top matches .358m",
+          "actual": 0.358,
+          "expected": 0.358,
+          "tolerance": 0.0001,
+          "passed": true
+        },
+        {
+          "name": "Datum mismatch detected",
+          "actual": 0.14200000000000002,
+          "expected": 0.142,
+          "tolerance": 0.0001,
+          "passed": true
+        },
+        {
+          "name": "Candidate car rail root contacts datum",
+          "actual": 0,
+          "expected": 0,
+          "tolerance": 0.0001,
+          "passed": true
+        },
+        {
+          "name": "Candidate placement retains unit scale",
+          "actual": 0,
+          "expected": 0,
+          "tolerance": 0.0001,
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "decision": {
+        "samples": "preserve unit geometry and individual rail datums",
+        "legacyRailAttachment": "reject: explicit datum conversion or separately calibrated track profile required"
+      },
+      "evidence": {
+        "sourceFacts": [
+          {
+            "file": "steel-coaster.ts",
+            "sha256": "8000bd186760ef3893898ce6b5710bffa7207a021bb8f7bb563da1e88116ecef"
+          },
+          {
+            "file": "view.ts",
+            "sha256": "a5b344c6f086893c9363f268c8e917691eb5e2cdd3795c8b2f197c2ff0f69719"
+          },
+          {
+            "file": "engine.ts",
+            "sha256": "afcd9b5a49ec5f0fb2608c5b13bad60c68ae3bcf2d0e283a22777b22db5dbe5c"
+          },
+          {
+            "file": "coaster.js",
+            "sha256": "e3637608646d9237c8f4324bba071b55427aa09003cc36c72c222859d54db100"
+          },
+          {
+            "file": "runtime.js",
+            "sha256": "876b391327d26778216644069f58f9236799375824c89ac84b9f9dbdf8106ca3"
+          },
+          {
+            "file": "park-scene.js",
+            "sha256": "6340e1cbec9c73ae49a27361c297cc6e278b047a4dc1911cf4bf87799af085f0"
+          }
+        ],
+        "measuredSamples": [
+          {
+            "asset": "timber-station",
+            "sha256": "60d94b3c784726b3dfa5aa89bed37a4da8dee05769ff1f648d918a0de1bf7b41",
+            "measurement": "Active-scene full parent transforms; float32 POSITION values and accessor bounds."
+          },
+          {
+            "asset": "wooden-car",
+            "sha256": "fc988c55ed60dcd5abf7c5e02ecbc1ac3a8cd828cfe7fe4bb8f30bcf21699b59",
+            "measurement": "Active-scene full parent transforms; float32 POSITION values and accessor bounds."
+          }
+        ],
+        "candidateFixture": "Measured station rail-top datum selected for this laboratory attachment only; no production track or collision changes.",
+        "originalBehavior": "Unknown: no original executable/DAT/scenario observation; no original metric, collision, spacing, dispatch or seat-pose equality is asserted."
+      }
+    },
+    {
+      "id": "car-couplers",
+      "expectedRelationship": "An unchanged mesh at legacy 2000mm pitch has a .68m coupler residual; a candidate pitch rounded from the actual GLB coupler separation (2680mm) closes the straight-fixture anchors to export tolerance.",
+      "inputs": {
+        "legacyCarPitchMm": 2000,
+        "candidatePitchMm": 2680,
+        "candidatePitchDerivation": "round(distance of actual full-world GLB coupler nodes × 1000)",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "measurements": {
+        "measuredCouplerPitchMetres": 2.680000066757202,
+        "placements": [
+          {
+            "pitchMm": 2000,
+            "firstRear": [
+              0,
+              0.2199999988079071,
+              -1.340000033378601
+            ],
+            "secondFront": [
+              0,
+              0.2199999988079071,
+              -0.6599999666213989
+            ],
+            "residualVectorMetres": [
+              0,
+              0,
+              0.6800000667572021
+            ],
+            "residualMetres": 0.6800000667572021,
+            "decision": "reject legacy spacing for this mesh"
+          },
+          {
+            "pitchMm": 2680,
+            "firstRear": [
+              0,
+              0.2199999988079071,
+              -1.340000033378601
+            ],
+            "secondFront": [
+              0,
+              0.2199999988079071,
+              -1.339999966621399
+            ],
+            "residualVectorMetres": [
+              0,
+              0,
+              6.675720198856538e-8
+            ],
+            "residualMetres": 6.675720198856538e-8,
+            "decision": "preserve candidate straight-fixture attachment"
+          }
+        ],
+        "fullVisualLengthMetres": 2.940000057220459
+      },
+      "checks": [
+        {
+          "name": "Source legacy pitch is 2000mm",
+          "actual": 2000,
+          "expected": 2000,
+          "tolerance": 0,
+          "passed": true
+        },
+        {
+          "name": "Measured candidate rounding gives 2680mm",
+          "actual": 2680,
+          "expected": 2680,
+          "tolerance": 0,
+          "passed": true
+        },
+        {
+          "name": "Legacy residual is .68m",
+          "actual": 0.6800000667572021,
+          "expected": 0.68,
+          "tolerance": 0.0001,
+          "passed": true
+        },
+        {
+          "name": "Candidate coupler anchors close",
+          "actual": 6.675720198856538e-8,
+          "expected": 0,
+          "tolerance": 0.0001,
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "decision": {
+        "legacyUniformTrainAttachment": "reject",
+        "candidateStraightFixture": "preserve",
+        "nativeReferenceSpacing": "unqualified: candidate 2680mm must not replace reconstructed native spacing"
+      },
+      "evidence": {
+        "sourceFacts": [
+          {
+            "file": "steel-coaster.ts",
+            "sha256": "8000bd186760ef3893898ce6b5710bffa7207a021bb8f7bb563da1e88116ecef"
+          },
+          {
+            "file": "view.ts",
+            "sha256": "a5b344c6f086893c9363f268c8e917691eb5e2cdd3795c8b2f197c2ff0f69719"
+          },
+          {
+            "file": "engine.ts",
+            "sha256": "afcd9b5a49ec5f0fb2608c5b13bad60c68ae3bcf2d0e283a22777b22db5dbe5c"
+          },
+          {
+            "file": "coaster.js",
+            "sha256": "e3637608646d9237c8f4324bba071b55427aa09003cc36c72c222859d54db100"
+          },
+          {
+            "file": "runtime.js",
+            "sha256": "876b391327d26778216644069f58f9236799375824c89ac84b9f9dbdf8106ca3"
+          },
+          {
+            "file": "park-scene.js",
+            "sha256": "6340e1cbec9c73ae49a27361c297cc6e278b047a4dc1911cf4bf87799af085f0"
+          }
+        ],
+        "measuredSamples": [
+          {
+            "asset": "wooden-car",
+            "sha256": "fc988c55ed60dcd5abf7c5e02ecbc1ac3a8cd828cfe7fe4bb8f30bcf21699b59",
+            "measurement": "Active-scene full parent transforms; float32 POSITION values and accessor bounds."
+          }
+        ],
+        "candidateFixture": "Two rigid parallel cars on a straight track; does not certify curve articulation, visual-body nonintersection, swept bounds or train dispatch.",
+        "originalBehavior": "Unknown: no original executable/DAT/scenario observation; no original metric, collision, spacing, dispatch or seat-pose equality is asserted."
+      }
+    },
+    {
+      "id": "ordered-four-seat-placement",
+      "expectedRelationship": "Two four-slot states with equal count=3 must retain different empty anchors and guest-to-slot identity. Occupant count alone cannot distinguish them; the legacy 2-seat candidate must reject this 4-seat mesh contract.",
+      "inputs": {
+        "explicitCandidateSeatOrder": [
+          "Seat_FrontLeft",
+          "Seat_FrontRight",
+          "Seat_RearLeft",
+          "Seat_RearRight"
+        ],
+        "states": [
+          [
+            101,
+            null,
+            103,
+            104
+          ],
+          [
+            101,
+            102,
+            103,
+            null
+          ]
+        ],
+        "legacySeatsPerCar": 2,
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "measurements": {
+        "candidateMatrix": [
+          0,
+          0,
+          -1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          82,
+          4.5,
+          122,
+          1
+        ],
+        "states": [
+          {
+            "slots": [
+              101,
+              null,
+              103,
+              104
+            ],
+            "occupants": 3,
+            "placements": [
+              {
+                "slot": 0,
+                "anchor": "Seat_FrontLeft",
+                "guestId": 101,
+                "worldPosition": [
+                  82.41999998688698,
+                  4.96000000834465,
+                  122.31999999284744
+                ]
+              },
+              {
+                "slot": 2,
+                "anchor": "Seat_RearLeft",
+                "guestId": 103,
+                "worldPosition": [
+                  81.58000001311302,
+                  4.96000000834465,
+                  122.31999999284744
+                ]
+              },
+              {
+                "slot": 3,
+                "anchor": "Seat_RearRight",
+                "guestId": 104,
+                "worldPosition": [
+                  81.58000001311302,
+                  4.96000000834465,
+                  121.68000000715256
+                ]
+              }
+            ],
+            "emptyAnchors": [
+              "Seat_FrontRight"
+            ]
+          },
+          {
+            "slots": [
+              101,
+              102,
+              103,
+              null
+            ],
+            "occupants": 3,
+            "placements": [
+              {
+                "slot": 0,
+                "anchor": "Seat_FrontLeft",
+                "guestId": 101,
+                "worldPosition": [
+                  82.41999998688698,
+                  4.96000000834465,
+                  122.31999999284744
+                ]
+              },
+              {
+                "slot": 1,
+                "anchor": "Seat_FrontRight",
+                "guestId": 102,
+                "worldPosition": [
+                  82.41999998688698,
+                  4.96000000834465,
+                  121.68000000715256
+                ]
+              },
+              {
+                "slot": 2,
+                "anchor": "Seat_RearLeft",
+                "guestId": 103,
+                "worldPosition": [
+                  81.58000001311302,
+                  4.96000000834465,
+                  122.31999999284744
+                ]
+              }
+            ],
+            "emptyAnchors": [
+              "Seat_RearRight"
+            ]
+          }
+        ],
+        "countOnlyPackets": [
+          {
+            "occupants": 3
+          },
+          {
+            "occupants": 3
+          }
+        ],
+        "measuredSeats": {
+          "Seat_FrontLeft": [
+            -0.3199999928474426,
+            0.46000000834465027,
+            0.41999998688697815
+          ],
+          "Seat_FrontRight": [
+            0.3199999928474426,
+            0.46000000834465027,
+            0.41999998688697815
+          ],
+          "Seat_RearLeft": [
+            -0.3199999928474426,
+            0.46000000834465027,
+            -0.41999998688697815
+          ],
+          "Seat_RearRight": [
+            0.3199999928474426,
+            0.46000000834465027,
+            -0.41999998688697815
+          ]
+        }
+      },
+      "checks": [
+        {
+          "name": "Four named active-scene seats measured",
+          "actual": 4,
+          "expected": 4,
+          "tolerance": 0,
+          "passed": true
+        },
+        {
+          "name": "State A has three occupants",
+          "actual": 3,
+          "expected": 3,
+          "tolerance": 0,
+          "passed": true
+        },
+        {
+          "name": "State B has three occupants",
+          "actual": 3,
+          "expected": 3,
+          "tolerance": 0,
+          "passed": true
+        },
+        {
+          "name": "State A leaves FrontRight empty",
+          "actual": true,
+          "expected": true,
+          "tolerance": null,
+          "passed": true
+        },
+        {
+          "name": "State B leaves RearRight empty",
+          "actual": true,
+          "expected": true,
+          "tolerance": null,
+          "passed": true
+        },
+        {
+          "name": "Guest-anchor placements distinguish equal counts",
+          "actual": true,
+          "expected": true,
+          "tolerance": null,
+          "passed": true
+        },
+        {
+          "name": "Legacy seat-capacity mismatch is detected",
+          "actual": true,
+          "expected": true,
+          "tolerance": null,
+          "passed": true
+        },
+        {
+          "name": "Seat placement matrix remains unit scale",
+          "actual": 0,
+          "expected": 0,
+          "tolerance": 0.0001,
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "decision": {
+        "orderedLabPlacements": "preserve",
+        "countOnlyProjection": "reject as insufficient for ordered seats",
+        "legacyTwoSeatCapability": "reject for this four-seat mesh"
+      },
+      "evidence": {
+        "sourceFacts": [
+          {
+            "file": "steel-coaster.ts",
+            "sha256": "8000bd186760ef3893898ce6b5710bffa7207a021bb8f7bb563da1e88116ecef"
+          },
+          {
+            "file": "view.ts",
+            "sha256": "a5b344c6f086893c9363f268c8e917691eb5e2cdd3795c8b2f197c2ff0f69719"
+          },
+          {
+            "file": "engine.ts",
+            "sha256": "afcd9b5a49ec5f0fb2608c5b13bad60c68ae3bcf2d0e283a22777b22db5dbe5c"
+          },
+          {
+            "file": "coaster.js",
+            "sha256": "e3637608646d9237c8f4324bba071b55427aa09003cc36c72c222859d54db100"
+          },
+          {
+            "file": "runtime.js",
+            "sha256": "876b391327d26778216644069f58f9236799375824c89ac84b9f9dbdf8106ca3"
+          },
+          {
+            "file": "park-scene.js",
+            "sha256": "6340e1cbec9c73ae49a27361c297cc6e278b047a4dc1911cf4bf87799af085f0"
+          }
+        ],
+        "measuredSamples": [
+          {
+            "asset": "wooden-car",
+            "sha256": "fc988c55ed60dcd5abf7c5e02ecbc1ac3a8cd828cfe7fe4bb8f30bcf21699b59",
+            "measurement": "Active-scene full parent transforms; float32 POSITION values and accessor bounds."
+          }
+        ],
+        "candidateFixture": "Explicit front-left/front-right/rear-left/rear-right ordering chosen for this laboratory; not an original boarding-order claim or an implemented worker view.",
+        "originalBehavior": "Unknown: no original executable/DAT/scenario observation; no original metric, collision, spacing, dispatch or seat-pose equality is asserted."
+      }
+    },
+    {
+      "id": "kiosk-visual-versus-native-reservation",
+      "expectedRelationship": "Actual full POSITION bounds of the unchanged kiosk, rooted on native height32, exceed the legacy 4m tile and 16-native-Z (=2m candidate) vertical reservation. Detect the mismatch and reject compatibility without squashing or enlarging authoritative clearance.",
+      "inputs": {
+        "nativeOrigin": {
+          "x": 640,
+          "y": 960,
+          "z": 32
+        },
+        "tile": {
+          "x": 20,
+          "y": 30
+        },
+        "legacyReservationNativeZ": 16,
+        "metresPerTile": 4,
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "measurements": {
+        "kioskPlacementMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          82,
+          4,
+          122,
+          1
+        ],
+        "actualVisualWorldBounds": {
+          "min": [
+            79.91960006952286,
+            4,
+            119.95645213127136
+          ],
+          "max": [
+            84.04354786872864,
+            8.699999809265137,
+            124.08039993047714
+          ],
+          "size": [
+            4.12394779920578,
+            4.699999809265137,
+            4.12394779920578
+          ]
+        },
+        "legacyReservationWorldBounds": {
+          "min": [
+            80,
+            4,
+            120
+          ],
+          "max": [
+            84,
+            6,
+            124
+          ],
+          "size": [
+            4,
+            2,
+            4
+          ]
+        },
+        "overflowMetres": {
+          "min": [
+            0.08039993047714233,
+            0,
+            0.043547868728637695
+          ],
+          "max": [
+            0.043547868728637695,
+            2.6999998092651367,
+            0.08039993047714233
+          ]
+        },
+        "containsVisualBounds": false,
+        "kioskHeightMetres": 4.699999809265137,
+        "legacyFitWouldScaleY": 0.4255319321625053,
+        "legacyFitScaleApplied": false
+      },
+      "checks": [
+        {
+          "name": "Measured kiosk roof is 4.7m above ground root",
+          "actual": 4.699999809265137,
+          "expected": 4.7,
+          "tolerance": 0.0001,
+          "passed": true
+        },
+        {
+          "name": "Legacy reservation is 2m candidate height",
+          "actual": 2,
+          "expected": 2,
+          "tolerance": 0.0001,
+          "passed": true
+        },
+        {
+          "name": "Vertical overflow is 2.7m",
+          "actual": 2.6999998092651367,
+          "expected": 2.7,
+          "tolerance": 0.0001,
+          "passed": true
+        },
+        {
+          "name": "Visual bound is outside reservation",
+          "actual": false,
+          "expected": false,
+          "tolerance": null,
+          "passed": true
+        },
+        {
+          "name": "No nonuniform scale applied",
+          "actual": 0,
+          "expected": 0,
+          "tolerance": 0.0001,
+          "passed": true
+        },
+        {
+          "name": "Horizontal overflow detected",
+          "actual": true,
+          "expected": true,
+          "tolerance": null,
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "decision": {
+        "visualSample": "preserve measured unit bounds",
+        "legacyFacilityEnvelopeCompatibility": "reject",
+        "authority": "Do not alter worker reservations or invoke fitModel; separate qualified footprint/overhang/envelope contract is required."
+      },
+      "evidence": {
+        "sourceFacts": [
+          {
+            "file": "steel-coaster.ts",
+            "sha256": "8000bd186760ef3893898ce6b5710bffa7207a021bb8f7bb563da1e88116ecef"
+          },
+          {
+            "file": "view.ts",
+            "sha256": "a5b344c6f086893c9363f268c8e917691eb5e2cdd3795c8b2f197c2ff0f69719"
+          },
+          {
+            "file": "engine.ts",
+            "sha256": "afcd9b5a49ec5f0fb2608c5b13bad60c68ae3bcf2d0e283a22777b22db5dbe5c"
+          },
+          {
+            "file": "coaster.js",
+            "sha256": "e3637608646d9237c8f4324bba071b55427aa09003cc36c72c222859d54db100"
+          },
+          {
+            "file": "runtime.js",
+            "sha256": "876b391327d26778216644069f58f9236799375824c89ac84b9f9dbdf8106ca3"
+          },
+          {
+            "file": "park-scene.js",
+            "sha256": "6340e1cbec9c73ae49a27361c297cc6e278b047a4dc1911cf4bf87799af085f0"
+          }
+        ],
+        "measuredSamples": [
+          {
+            "asset": "information-kiosk",
+            "sha256": "6e54f9362e967ac7b7a2427f178dd39163894e006ce86958e07dcc636cb900d0",
+            "measurement": "Active-scene full parent transforms; float32 POSITION values and accessor bounds."
+          }
+        ],
+        "candidateFixture": "Closed/default rigid GLB pose; POSITION bounds include detached inspection props. These are visual bounds, not native collision or swept passenger bounds.",
+        "originalBehavior": "Unknown: no original executable/DAT/scenario observation; no original metric, collision, spacing, dispatch or seat-pose equality is asserted."
+      }
+    }
+  ],
+  "profileDecisions": [
+    {
+      "input": {
+        "profileId": "lab.wooden-car-unit-v1",
+        "asset": "wooden-car",
+        "metresPerTile": 4,
+        "purpose": "laboratory",
+        "seatsPerCar": 4,
+        "pitchMm": 2680
+      },
+      "decision": "preserve",
+      "reason": "Unit-scale laboratory geometry and explicit candidate fixtures only; production implementation and original behavior remain unqualified.",
+      "expected": "preserve"
+    },
+    {
+      "input": {
+        "profileId": "lab.timber-station-unit-v1",
+        "asset": "timber-station",
+        "metresPerTile": 4,
+        "purpose": "laboratory"
+      },
+      "decision": "preserve",
+      "reason": "Unit-scale laboratory geometry and explicit candidate fixtures only; production implementation and original behavior remain unqualified.",
+      "expected": "preserve"
+    },
+    {
+      "input": {
+        "profileId": "lab.information-kiosk-unit-v1",
+        "asset": "information-kiosk",
+        "metresPerTile": 4,
+        "purpose": "laboratory"
+      },
+      "decision": "preserve",
+      "reason": "Unit-scale laboratory geometry and explicit candidate fixtures only; production implementation and original behavior remain unqualified.",
+      "expected": "preserve"
+    },
+    {
+      "input": {
+        "profileId": "classic-candidate-v1",
+        "asset": "wooden-car",
+        "metresPerTile": 4,
+        "purpose": "production",
+        "seatsPerCar": 2,
+        "pitchMm": 2000
+      },
+      "decision": "reject",
+      "reason": "Measured car seats/couplers do not match requested train capability.",
+      "expected": "reject"
+    },
+    {
+      "input": {
+        "profileId": "classic-candidate-v1",
+        "asset": "information-kiosk",
+        "metresPerTile": 4,
+        "purpose": "production"
+      },
+      "decision": "reject",
+      "reason": "Measured visual bounds do not fit legacy reservation; fitting is forbidden.",
+      "expected": "reject"
+    },
+    {
+      "input": {
+        "profileId": "lab.wooden-car-unit-v999",
+        "asset": "wooden-car",
+        "metresPerTile": 4,
+        "purpose": "laboratory",
+        "seatsPerCar": 4,
+        "pitchMm": 2680
+      },
+      "decision": "reject",
+      "reason": "Unknown or uncalibrated profile ID; no fallback to generic steel or geometry fitting.",
+      "expected": "reject"
+    },
+    {
+      "input": {
+        "profileId": "reference.rct2.variant.ptct1",
+        "asset": "wooden-car",
+        "metresPerTile": 4,
+        "purpose": "production",
+        "seatsPerCar": 4,
+        "pitchMm": 2680
+      },
+      "decision": "reject",
+      "reason": "Unknown or uncalibrated profile ID; no fallback to generic steel or geometry fitting.",
+      "expected": "reject"
+    },
+    {
+      "input": {
+        "profileId": "lab.timber-station-unit-v1",
+        "asset": "timber-station",
+        "metresPerTile": 6,
+        "purpose": "laboratory"
+      },
+      "decision": "reject",
+      "reason": "Unsupported coordinate contract for the unchanged 4m station sample.",
+      "expected": "reject"
+    },
+    {
+      "input": {
+        "profileId": "lab.wooden-car-unit-v1",
+        "asset": "wooden-car",
+        "metresPerTile": 4,
+        "purpose": "production",
+        "seatsPerCar": 4,
+        "pitchMm": 2680
+      },
+      "decision": "reject",
+      "reason": "Laboratory calibration records are not executable production adapters.",
+      "expected": "reject"
+    },
+    {
+      "input": {
+        "profileId": "classic-candidate-v1",
+        "asset": "timber-station",
+        "metresPerTile": 4,
+        "purpose": "laboratory"
+      },
+      "decision": "reject",
+      "reason": "The existing procedural profile has no qualified binding to these GLB samples, including in a laboratory request.",
+      "expected": "reject"
+    },
+    {
+      "input": {
+        "profileId": "lab.wooden-car-unit-v1",
+        "asset": "timber-station",
+        "metresPerTile": 4,
+        "purpose": "laboratory"
+      },
+      "decision": "reject",
+      "reason": "Profile identity does not bind this measured sample.",
+      "expected": "reject"
+    },
+    {
+      "input": {
+        "profileId": "lab.wooden-car-unit-v1",
+        "asset": "wooden-car",
+        "metresPerTile": 4,
+        "purpose": "laboratory",
+        "seatsPerCar": 4,
+        "pitchMm": 2000
+      },
+      "decision": "reject",
+      "reason": "Measured car seats/couplers do not match requested train capability.",
+      "expected": "reject"
+    },
+    {
+      "input": {
+        "profileId": "lab.wooden-car-unit-v1",
+        "asset": "wooden-car",
+        "metresPerTile": 4,
+        "purpose": "laboratory",
+        "seatsPerCar": 2,
+        "pitchMm": 2680
+      },
+      "decision": "reject",
+      "reason": "Measured car seats/couplers do not match requested train capability.",
+      "expected": "reject"
+    }
+  ],
+  "remaining": [
+    "Connector origin versus occupied quarter-cell geometry is not qualified by station seam checks.",
+    "Only default rigid sample poses and straight car coupling are measured; no swept passenger or curved bogie/coupler envelope.",
+    "The four-seat mapping is a fixture, not production per-seat worker integration or original boarding order.",
+    "No original runtime/metric equality, R01 family geometry, R02 suspended/inverted clearance, R03 nonuniform train/dispatch, S05 recipe/research/weather/objective, GPU or human visual acceptance."
+  ]
+}

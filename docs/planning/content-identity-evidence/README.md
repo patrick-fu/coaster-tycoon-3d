@@ -73,3 +73,6 @@ those cases. The full content, art, operating, commerce, finance, scenario,
 original comparison, integrated-GPU and Patrick visual gates remain open.
 
 ![Validated v8 Classic park](identity-desktop.png)
+
+Published-byte and actual-browser follow-up checks are retained in
+`publication.json`, `public-http.json` and `public-browser.json`.

@@ -1,0 +1,885 @@
+{
+  "schemaVersion": 1,
+  "reproducesReportedWitness": true,
+  "scope": "Independently authored read-only CPU replay of the exact 8m curved shell counterexample and straight2680 control. No production simulation, asset modification, rendering, or broader-curve acceptance.",
+  "originalBehavior": "No original RCT2 dimensional, motion, spacing, collision or gameplay equality is asserted.",
+  "tolerances": {
+    "separatingAxisProjectionMetres": 1e-9,
+    "ignoredAxisLengthSquared": 1e-16,
+    "strictInteriorFraction": 0.000001,
+    "reportedScalarReplayMetres": 1e-10,
+    "reportedWitnessReplayFraction": 1e-10
+  },
+  "expected": {
+    "bodyTriangles": 2132,
+    "roundedQuarterLengthMm": 12576,
+    "straightShellSurfaceIntersectionPairs": 0,
+    "curvedTriangleBroadphasePairs": 1859,
+    "curvedShellSurfaceIntersectionPairs": 30,
+    "curvedAngleDegrees": 19.687500000000068,
+    "curvedCouplerResidualMetres": 0.030718982413461864,
+    "firstPair": {
+      "leadTriangle": 87,
+      "followingTriangle": 11
+    },
+    "strictWitness": {
+      "edge": 0,
+      "segmentFraction": 0.9455778566636841,
+      "otherTriangleBarycentrics": [
+        0.20729934465877922,
+        0.0045391413622160835,
+        0.7881615139790047
+      ]
+    }
+  },
+  "checks": [
+    {
+      "name": "Actual component triangle count",
+      "actual": 2132,
+      "expected": 2132,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "Rounded quarter-course length",
+      "actual": 12576,
+      "expected": 12576,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "Straight shell control",
+      "actual": 0,
+      "expected": 0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "Curved triangle broadphase count",
+      "actual": 1859,
+      "expected": 1859,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "Curved surface intersection count",
+      "actual": 30,
+      "expected": 30,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "First lead triangle",
+      "actual": 87,
+      "expected": 87,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "First following triangle",
+      "actual": 11,
+      "expected": 11,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "Strict edge-interior crossing",
+      "actual": true,
+      "expected": true,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "Curved orientation angle",
+      "actual": 19.687500000000068,
+      "expected": 19.687500000000068,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "Curved coupler residual",
+      "actual": 0.030718982413461864,
+      "expected": 0.030718982413461864,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "Witness edge fraction",
+      "actual": 0.9455778566636841,
+      "expected": 0.9455778566636841,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "Witness barycentric 0",
+      "actual": 0.20729934465877922,
+      "expected": 0.20729934465877922,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "Witness barycentric 1",
+      "actual": 0.0045391413622160835,
+      "expected": 0.0045391413622160835,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "Witness barycentric 2",
+      "actual": 0.7881615139790047,
+      "expected": 0.7881615139790047,
+      "tolerance": 1e-10,
+      "passed": true
+    }
+  ],
+  "execution": {
+    "host": "grok-bot-vm-405605737",
+    "platform": "linux",
+    "architecture": "x64",
+    "node": "v20.19.2",
+    "threeRevision": "186",
+    "timeUtc": "2026-10-07T21:00:14.008Z",
+    "argv": [
+      "/usr/bin/node",
+      "/workspace/coaster-native-calibration/curved-counterexample.mjs",
+      "--output",
+      "/workspace/coaster-native-calibration/curved-counterexample-result.json"
+    ],
+    "runnerPath": "/workspace/coaster-native-calibration/curved-counterexample.mjs",
+    "runnerSha256": "b95b2fd8f90ec3cb994b05ec8a0f6ebe71e8893380c27ff0fd84863787546012",
+    "runtimeFiles": {
+      "/workspace/coaster-classic-game/app/node_modules/three/build/three.module.js": {
+        "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea",
+        "bytes": 662772
+      },
+      "/workspace/coaster-classic-game/app/node_modules/three/build/three.core.js": {
+        "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
+        "bytes": 1458113
+      },
+      "/workspace/coaster-classic-game/app/node_modules/three/package.json": {
+        "sha256": "f9c474a27c920b9435353a6235968f4453436bee0444fac7e5fd289c8fa463de",
+        "bytes": 3672
+      }
+    }
+  },
+  "inputs": {
+    "asset": {
+      "path": "/workspace/coaster-detailed-assets/outputs/wooden-car.glb",
+      "sha256": "fc988c55ed60dcd5abf7c5e02ecbc1ac3a8cd828cfe7fe4bb8f30bcf21699b59",
+      "bytes": 3545440
+    },
+    "curveDescriptor": {
+      "path": "/workspace/coaster-native-calibration/pinned-source/steel-coaster.ts",
+      "sha256": "8000bd186760ef3893898ce6b5710bffa7207a021bb8f7bb563da1e88116ecef",
+      "productionSourceCommit": "2c19a1b214e7c3a5b58ec6f9982cb94d485ab867",
+      "currentProductionCommit": "a8e5527fe443b69753b8263821f71e73e5f7cbf8",
+      "unchangedCurrentDescriptorHash": "8000bd186760ef3893898ce6b5710bffa7207a021bb8f7bb563da1e88116ecef"
+    },
+    "motionMethod": {
+      "inspectedFile": "/Volumes/WD/code/workspaces/coaster-content-library/coaster-tycoon-3d/src/simulation/motion.ts",
+      "inspectedSha256": "d04c3e11d06d57353ee8abfe0a1d761f65fc5cc07a2a27be31174af90b68ff58",
+      "lines": "31-36,66-68",
+      "method": "Manually reproduced project-authored rounded-chord/tangent fixture, not an import or execution of production simulation."
+    },
+    "fixture": {
+      "radiusNative": 64,
+      "tileMetres": 4,
+      "nativeUnitsPerTile": 32,
+      "radiusMetres": 8,
+      "sampleSegments": 32,
+      "angularDivisor": 64,
+      "roundedQuarterLengthMm": 12576,
+      "chords": [
+        {
+          "beginMm": 0,
+          "lengthMm": 393,
+          "pointMetres": [
+            0,
+            0,
+            0
+          ],
+          "tangent": [
+            0.9996988186962042,
+            0,
+            0.02454122852291204
+          ]
+        },
+        {
+          "beginMm": 393,
+          "lengthMm": 393,
+          "pointMetres": [
+            0.3925413946193441,
+            0,
+            0.00963635035862076
+          ],
+          "tangent": [
+            0.9972904566786903,
+            0,
+            0.07356456359966682
+          ]
+        },
+        {
+          "beginMm": 786,
+          "lengthMm": 393,
+          "pointMetres": [
+            0.7841371226364848,
+            0,
+            0.03852218662242457
+          ],
+          "tangent": [
+            0.99247953459871,
+            0,
+            0.12241067519921624
+          ]
+        },
+        {
+          "beginMm": 1179,
+          "lengthMm": 393,
+          "pointMetres": [
+            1.173843795642894,
+            0,
+            0.08658792028175188
+          ],
+          "tangent": [
+            0.985277642388941,
+            0,
+            0.17096188876030244
+          ]
+        },
+        {
+          "beginMm": 1572,
+          "lengthMm": 393,
+          "pointMetres": [
+            1.560722576129026,
+            0,
+            0.15371775677415656
+          ],
+          "tangent": [
+            0.9757021300385286,
+            0,
+            0.2191012401568698
+          ]
+        },
+        {
+          "beginMm": 1965,
+          "lengthMm": 393,
+          "pointMetres": [
+            1.943841439226111,
+            0,
+            0.2397499744436482
+          ],
+          "tangent": [
+            0.9637760657954397,
+            0,
+            0.2667127574748989
+          ]
+        },
+        {
+          "beginMm": 2358,
+          "lengthMm": 393,
+          "pointMetres": [
+            2.3222774180356986,
+            0,
+            0.3444773141423294
+          ],
+          "tangent": [
+            0.9495281805930371,
+            0,
+            0.31368174039889
+          ]
+        },
+        {
+          "beginMm": 2751,
+          "lengthMm": 393,
+          "pointMetres": [
+            2.6951188271377604,
+            0,
+            0.46764747853583355
+          ],
+          "tangent": [
+            0.9329927988347385,
+            0,
+            0.35989503653498883
+          ]
+        },
+        {
+          "beginMm": 3144,
+          "lengthMm": 393,
+          "pointMetres": [
+            3.0614674589207183,
+            0,
+            0.6089637399097061
+          ],
+          "tangent": [
+            0.9142097557035308,
+            0,
+            0.40524131400498964
+          ]
+        },
+        {
+          "beginMm": 3537,
+          "lengthMm": 393,
+          "pointMetres": [
+            3.4204407474422567,
+            0,
+            0.7680856550124533
+          ],
+          "tangent": [
+            0.8932243011955154,
+            0,
+            0.4496113296546064
+          ]
+        },
+        {
+          "beginMm": 3930,
+          "lengthMm": 393,
+          "pointMetres": [
+            3.771173894607981,
+            0,
+            0.9446298852131596
+          ],
+          "tangent": [
+            0.8700869911087113,
+            0,
+            0.4928981922297841
+          ]
+        },
+        {
+          "beginMm": 4323,
+          "lengthMm": 393,
+          "pointMetres": [
+            4.112821953545773,
+            0,
+            1.138171119997823
+          ],
+          "tangent": [
+            0.8448535652497068,
+            0,
+            0.5349976198870978
+          ]
+        },
+        {
+          "beginMm": 4716,
+          "lengthMm": 393,
+          "pointMetres": [
+            4.444561864156817,
+            0,
+            1.3482431015796381
+          ],
+          "tangent": [
+            0.8175848131515844,
+            0,
+            0.5758081914178442
+          ]
+        },
+        {
+          "beginMm": 5109,
+          "lengthMm": 393,
+          "pointMetres": [
+            4.765594435939467,
+            0,
+            1.5743397481548405
+          ],
+          "tangent": [
+            0.7883464276266061,
+            0,
+            0.6152315905806272
+          ]
+        },
+        {
+          "beginMm": 5502,
+          "lengthMm": 393,
+          "pointMetres": [
+            5.075146273309164,
+            0,
+            1.815916373098104
+          ],
+          "tangent": [
+            0.7572088465064851,
+            0,
+            0.6531728429537764
+          ]
+        },
+        {
+          "beginMm": 5895,
+          "lengthMm": 393,
+          "pointMetres": [
+            5.372471638776147,
+            0,
+            2.0723909971603263
+          ],
+          "tangent": [
+            0.7242470829514662,
+            0,
+            0.6895405447370677
+          ]
+        },
+        {
+          "beginMm": 6288,
+          "lengthMm": 393,
+          "pointMetres": [
+            5.65685424949238,
+            0,
+            2.3431457505076194
+          ],
+          "tangent": [
+            0.6895405447370677,
+            0,
+            0.7242470829514662
+          ]
+        },
+        {
+          "beginMm": 6681,
+          "lengthMm": 393,
+          "pointMetres": [
+            5.927609002839673,
+            0,
+            2.6275283612238525
+          ],
+          "tangent": [
+            0.6531728429537751,
+            0,
+            0.7572088465064859
+          ]
+        },
+        {
+          "beginMm": 7074,
+          "lengthMm": 393,
+          "pointMetres": [
+            6.184083626901895,
+            0,
+            2.924853726690836
+          ],
+          "tangent": [
+            0.6152315905806283,
+            0,
+            0.7883464276266053
+          ]
+        },
+        {
+          "beginMm": 7467,
+          "lengthMm": 393,
+          "pointMetres": [
+            6.425660251845159,
+            0,
+            3.2344055640605323
+          ],
+          "tangent": [
+            0.5758081914178457,
+            0,
+            0.8175848131515833
+          ]
+        },
+        {
+          "beginMm": 7860,
+          "lengthMm": 393,
+          "pointMetres": [
+            6.651756898420362,
+            0,
+            3.5554381358431817
+          ],
+          "tangent": [
+            0.5349976198870967,
+            0,
+            0.8448535652497072
+          ]
+        },
+        {
+          "beginMm": 8253,
+          "lengthMm": 393,
+          "pointMetres": [
+            6.861828880002177,
+            0,
+            3.8871780464542267
+          ],
+          "tangent": [
+            0.4928981922297838,
+            0,
+            0.8700869911087115
+          ]
+        },
+        {
+          "beginMm": 8646,
+          "lengthMm": 393,
+          "pointMetres": [
+            7.0553701147868395,
+            0,
+            4.2288261053920175
+          ],
+          "tangent": [
+            0.4496113296546077,
+            0,
+            0.8932243011955147
+          ]
+        },
+        {
+          "beginMm": 9039,
+          "lengthMm": 393,
+          "pointMetres": [
+            7.231914344987547,
+            0,
+            4.579559252557742
+          ],
+          "tangent": [
+            0.4052413140049892,
+            0,
+            0.9142097557035309
+          ]
+        },
+        {
+          "beginMm": 9432,
+          "lengthMm": 393,
+          "pointMetres": [
+            7.391036260090294,
+            0,
+            4.938532541079281
+          ],
+          "tangent": [
+            0.3598950365349881,
+            0,
+            0.9329927988347388
+          ]
+        },
+        {
+          "beginMm": 9825,
+          "lengthMm": 393,
+          "pointMetres": [
+            7.5323525214641665,
+            0,
+            5.30488117286224
+          ],
+          "tangent": [
+            0.313681740398892,
+            0,
+            0.9495281805930365
+          ]
+        },
+        {
+          "beginMm": 10218,
+          "lengthMm": 393,
+          "pointMetres": [
+            7.6555226858576715,
+            0,
+            5.677722581964302
+          ],
+          "tangent": [
+            0.266712757474898,
+            0,
+            0.9637760657954401
+          ]
+        },
+        {
+          "beginMm": 10611,
+          "lengthMm": 393,
+          "pointMetres": [
+            7.760250025556352,
+            0,
+            6.056158560773888
+          ],
+          "tangent": [
+            0.2191012401568693,
+            0,
+            0.9757021300385287
+          ]
+        },
+        {
+          "beginMm": 11004,
+          "lengthMm": 393,
+          "pointMetres": [
+            7.8462822432258434,
+            0,
+            6.439277423870974
+          ],
+          "tangent": [
+            0.17096188876030205,
+            0,
+            0.985277642388941
+          ]
+        },
+        {
+          "beginMm": 11397,
+          "lengthMm": 393,
+          "pointMetres": [
+            7.913412079718248,
+            0,
+            6.8261562043571065
+          ],
+          "tangent": [
+            0.12241067519921457,
+            0,
+            0.9924795345987103
+          ]
+        },
+        {
+          "beginMm": 11790,
+          "lengthMm": 393,
+          "pointMetres": [
+            7.9614778133775745,
+            0,
+            7.215862877363514
+          ],
+          "tangent": [
+            0.07356456359966894,
+            0,
+            0.9972904566786901
+          ]
+        },
+        {
+          "beginMm": 12183,
+          "lengthMm": 393,
+          "pointMetres": [
+            7.990363649641379,
+            0,
+            7.607458605380655
+          ],
+          "tangent": [
+            0.024541228522912052,
+            0,
+            0.9996988186962042
+          ]
+        }
+      ],
+      "leadingPositionMm": 6000,
+      "followingPositionMm": 3320,
+      "nominalStraightPitchMm": 2680,
+      "posePolicy": "Current centre-point tangent with unit-scale +Z-forward/+Y-up rigid root. Common vertical translation is zero and cancels in both intersection and coupling residuals."
+    },
+    "component": {
+      "name": "CarBody_Tub",
+      "nodeIndex": 8,
+      "accessorIndices": [
+        {
+          "position": 22,
+          "indices": 25
+        }
+      ],
+      "sceneParentWorldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "triangles": 2132,
+      "boundsMetres": {
+        "min": [
+          -0.699999988079071,
+          0.25999999046325684,
+          -1.2799999713897705
+        ],
+        "max": [
+          0.699999988079071,
+          0.8398956060409546,
+          1.2799999713897705
+        ]
+      }
+    },
+    "couplers": {
+      "front": [
+        0,
+        0.2199999988079071,
+        1.340000033378601
+      ],
+      "rear": [
+        0,
+        0.2199999988079071,
+        -1.340000033378601
+      ]
+    }
+  },
+  "straight": {
+    "pitchMm": 2680,
+    "leadMatrix": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      2.68,
+      1
+    ],
+    "followingMatrix": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "triangleBroadphasePairs": 0,
+    "shellSurfaceIntersectionPairs": 0,
+    "firstIntersectingPair": null
+  },
+  "curve": {
+    "leadPositionMetres": [
+      5.44851758248605,
+      0,
+      2.1447927543577183
+    ],
+    "followingPositionMetres": [
+      3.22236837592454,
+      0,
+      0.6802862111745842
+    ],
+    "leadForward": [
+      0.7242470829514662,
+      0,
+      0.6895405447370677
+    ],
+    "followingForward": [
+      0.9142097557035308,
+      0,
+      0.40524131400498964
+    ],
+    "leadMatrix": [
+      0.6895405447370677,
+      0,
+      -0.7242470829514662,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0.7242470829514662,
+      0,
+      0.6895405447370677,
+      0,
+      5.44851758248605,
+      0,
+      2.1447927543577183,
+      1
+    ],
+    "followingMatrix": [
+      0.40524131400498964,
+      0,
+      -0.9142097557035308,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0.9142097557035308,
+      0,
+      0.40524131400498964,
+      0,
+      3.22236837592454,
+      0,
+      0.6802862111745842,
+      1
+    ],
+    "angleDegrees": 19.687500000000068,
+    "couplerRearLeadMetres": [
+      4.478026467156731,
+      0.2199999988079071,
+      1.220808401394149
+    ],
+    "couplerFrontFollowingMetres": [
+      4.447409479082314,
+      0.2199999988079071,
+      1.2233095854676583
+    ],
+    "couplerResidualMetres": 0.030718982413461864,
+    "triangleBroadphasePairs": 1859,
+    "shellSurfaceIntersectionPairs": 30,
+    "firstIntersectingPair": {
+      "leadTriangle": 87,
+      "followingTriangle": 11,
+      "leadVertices": [
+        [
+          4.199562085680558,
+          0.518264889717102,
+          1.744817031134284
+        ],
+        [
+          4.220211614923301,
+          0.4801447093486786,
+          1.579160842176218
+        ],
+        [
+          4.273022538502603,
+          0.34036749601364136,
+          1.5236307670823825
+        ]
+      ],
+      "followingVertices": [
+        [
+          4.205605334421642,
+          0.5997459292411804,
+          1.619671020436219
+        ],
+        [
+          4.086195855604372,
+          0.47999998927116394,
+          1.6433677749043154
+        ],
+        [
+          4.22339928289157,
+          0.4513206481933594,
+          1.5795747003827438
+        ]
+      ]
+    },
+    "witness": {
+      "leadTriangle": 87,
+      "followingTriangle": 11,
+      "signedDistancesToFollowingPlaneMetres": [
+        0.12702908400117346,
+        -0.00731107964159073,
+        -0.00971912989701637
+      ],
+      "edgeIntersections": [
+        {
+          "edge": 0,
+          "segmentFraction": 0.9455778566636841,
+          "otherTriangleBarycentrics": [
+            0.20729934465877922,
+            0.0045391413622160835,
+            0.7881615139790047
+          ],
+          "point": [
+            4.219087823283025,
+            0.48221929126869517,
+            1.5881762070362417
+          ]
+        }
+      ],
+      "strictInteriorCrossing": true
+    }
+  },
+  "limits": [
+    "Default rigid CarBody_Tub only; not full chassis, couplers, passengers, bogies or swept contact qualification.",
+    "Triangle SAT may include coplanar/touching pairs; the retained witness separately proves a strict finite edge-through-triangle-interior crossing.",
+    "One selected 8m quarter-curve pose and one straight control; no safe minimum radius or 16m acceptance claim.",
+    "No production adapter, train physics or save schema was changed or executed."
+  ]
+}
