@@ -404,6 +404,369 @@ function coneMesh(ctx, parent, material, x, y, z, sx, sy, sz, rx = 0, ry = 0, rz
   return mesh;
 }
 
+// ---------------------------------------------------------------------------
+// Reusable Authored Scenery Geometries (Finite Cached Shapes)
+// ---------------------------------------------------------------------------
+
+function createCanopyLobeGeometry(variant = 0) {
+  const geo = new THREE.IcosahedronGeometry(0.5, 2);
+  const pos = geo.attributes.position;
+  const v = new THREE.Vector3();
+
+  const lobesA = [
+    new THREE.Vector3(0.5, 0.4, 0.4).normalize(),
+    new THREE.Vector3(-0.6, 0.3, 0.3).normalize(),
+    new THREE.Vector3(0.1, 0.7, -0.4).normalize(),
+    new THREE.Vector3(-0.2, -0.3, 0.7).normalize(),
+    new THREE.Vector3(0.4, -0.4, -0.5).normalize(),
+    new THREE.Vector3(-0.5, -0.2, -0.6).normalize()
+  ];
+  const lobesB = [
+    new THREE.Vector3(0.6, 0.2, -0.4).normalize(),
+    new THREE.Vector3(-0.5, 0.5, -0.3).normalize(),
+    new THREE.Vector3(0.0, 0.8, 0.3).normalize(),
+    new THREE.Vector3(0.4, -0.3, 0.6).normalize(),
+    new THREE.Vector3(-0.6, -0.3, 0.2).normalize(),
+    new THREE.Vector3(-0.2, 0.2, 0.7).normalize()
+  ];
+  const lobes = variant === 0 ? lobesA : lobesB;
+
+  for (let i = 0; i < pos.count; i++) {
+    v.fromBufferAttribute(pos, i);
+    const len = v.length();
+    if (len < 0.0001) continue;
+    const dir = v.clone().divideScalar(len);
+
+    let lobeDisp = 0;
+    for (const l of lobes) {
+      const dot = Math.max(0, dir.dot(l));
+      lobeDisp += Math.pow(dot, 2.5) * 0.28;
+    }
+
+    const wave = Math.sin(dir.x * 6 + variant) * Math.cos(dir.z * 6) * 0.04;
+    const flattenBottom = dir.y < -0.2 ? (dir.y + 0.2) * 0.15 : 0;
+    const r = 0.5 * (0.85 + lobeDisp + wave + flattenBottom);
+
+    v.copy(dir).multiplyScalar(r);
+    pos.setXYZ(i, v.x, v.y, v.z);
+  }
+
+  geo.computeVertexNormals();
+  geo.computeBoundingSphere();
+  const maxR = geo.boundingSphere.radius;
+  if (maxR > 0) {
+    const scale = 0.5 / maxR;
+    geo.scale(scale, scale, scale);
+  }
+  geo.computeVertexNormals();
+  return geo;
+}
+
+function createNeedleSkirtGeometry(variant = 0) {
+  const radialSegments = 16;
+  const heightSegments = 4;
+  const numLobes = variant === 0 ? 7 : 8;
+  const phase = variant === 0 ? 0 : 0.4;
+
+  const positions = [];
+  const uvs = [];
+  const indices = [];
+
+  for (let i = 0; i <= heightSegments; i++) {
+    const t = i / heightSegments;
+    const baseR = 0.04 + 0.46 * Math.pow(t, 1.35);
+    const yBase = 0.5 - t * 1.0;
+
+    for (let j = 0; j <= radialSegments; j++) {
+      const u = j / radialSegments;
+      const angle = u * Math.PI * 2 + phase;
+
+      const lobe = Math.cos(numLobes * angle);
+      const needleDetail = Math.cos(numLobes * 2 * angle) * 0.05;
+      const rMod = 1.0 + (0.16 * lobe + needleDetail) * Math.pow(t, 1.5);
+      const r = baseR * rMod;
+      const droop = -0.14 * Math.max(0, lobe + 0.2) * Math.pow(t, 2);
+
+      const vx = Math.cos(angle) * r;
+      const vy = yBase + droop;
+      const vz = Math.sin(angle) * r;
+
+      positions.push(vx, vy, vz);
+      uvs.push(u, 1 - t);
+    }
+  }
+
+  const rimStartIndex = (heightSegments + 1) * (radialSegments + 1);
+  const underRings = 2;
+  for (let i = 1; i <= underRings; i++) {
+    const ut = i / underRings;
+    const innerR = 0.45 * (1 - ut);
+    const innerY = -0.5 + 0.25 * ut;
+
+    for (let j = 0; j <= radialSegments; j++) {
+      const u = j / radialSegments;
+      const angle = u * Math.PI * 2 + phase;
+      const vx = Math.cos(angle) * innerR;
+      const vy = innerY;
+      const vz = Math.sin(angle) * innerR;
+
+      positions.push(vx, vy, vz);
+      uvs.push(u, ut);
+    }
+  }
+
+  for (let i = 0; i < heightSegments; i++) {
+    for (let j = 0; j < radialSegments; j++) {
+      const a = i * (radialSegments + 1) + j;
+      const b = (i + 1) * (radialSegments + 1) + j;
+      const c = (i + 1) * (radialSegments + 1) + (j + 1);
+      const d = i * (radialSegments + 1) + (j + 1);
+      indices.push(a, d, b);
+      indices.push(b, d, c);
+    }
+  }
+
+  const bottomRimStart = heightSegments * (radialSegments + 1);
+  for (let j = 0; j < radialSegments; j++) {
+    const a = bottomRimStart + j;
+    const b = rimStartIndex + j;
+    const c = rimStartIndex + (j + 1);
+    const d = bottomRimStart + (j + 1);
+    indices.push(a, d, b);
+    indices.push(b, d, c);
+  }
+
+  for (let i = 0; i < underRings - 1; i++) {
+    for (let j = 0; j < radialSegments; j++) {
+      const a = rimStartIndex + i * (radialSegments + 1) + j;
+      const b = rimStartIndex + (i + 1) * (radialSegments + 1) + j;
+      const c = rimStartIndex + (i + 1) * (radialSegments + 1) + (j + 1);
+      const d = rimStartIndex + i * (radialSegments + 1) + (j + 1);
+      indices.push(a, d, b);
+      if (i < underRings - 2) indices.push(b, d, c);
+    }
+  }
+
+  const geo = new THREE.BufferGeometry();
+  geo.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
+  geo.setAttribute('uv', new THREE.Float32BufferAttribute(uvs, 2));
+  geo.setIndex(indices);
+  geo.computeVertexNormals();
+
+  geo.computeBoundingBox();
+  const bb = geo.boundingBox;
+  const sx = 1 / Math.max(0.001, bb.max.x - bb.min.x);
+  const sz = 1 / Math.max(0.001, bb.max.z - bb.min.z);
+  const sy = 1 / Math.max(0.001, bb.max.y - bb.min.y);
+  geo.scale(sx, sy, sz);
+  geo.center();
+  geo.computeVertexNormals();
+
+  return geo;
+}
+
+function createBoulderGeometry(variant = 0) {
+  const geo = new THREE.DodecahedronGeometry(0.5, 1);
+  const pos = geo.attributes.position;
+  const v = new THREE.Vector3();
+
+  for (let i = 0; i < pos.count; i++) {
+    v.fromBufferAttribute(pos, i);
+
+    if (variant === 0) {
+      if (v.x > 0.1 && v.y > 0.1) {
+        v.x *= 1.2;
+        v.y = v.y * 0.8 + 0.08;
+      }
+      if (v.z < -0.15) {
+        v.z = -0.28 + (v.z + 0.15) * 0.35;
+      }
+      if (v.y > 0.25) {
+        v.y = 0.25 + (v.y - 0.25) * 0.65 - v.x * 0.15;
+      }
+      if (v.y < -0.2) {
+        v.y = -0.36 + (v.y + 0.2) * 0.25;
+      }
+    } else if (variant === 1) {
+      if (v.x < -0.1) {
+        v.x = -0.15 + (v.x + 0.1) * 0.6;
+      }
+      if (v.y > 0.2) {
+        v.y = 0.2 + (v.y - 0.2) * 0.7 + v.z * 0.15;
+      }
+      if (v.z > 0.15) {
+        v.z *= 1.18;
+      }
+      if (v.y < -0.2) {
+        v.y = -0.38 + (v.y + 0.2) * 0.2;
+      }
+    } else {
+      const dot = v.x * 0.6 + v.y * 0.7 - v.z * 0.3;
+      if (dot > 0.2) {
+        v.addScaledVector(v, -0.12);
+      }
+      if (v.y < -0.2) {
+        v.y = -0.35 + (v.y + 0.2) * 0.25;
+      }
+    }
+
+    pos.setXYZ(i, v.x, v.y, v.z);
+  }
+
+  geo.computeVertexNormals();
+  geo.computeBoundingBox();
+  const bb = geo.boundingBox;
+  const sx = 1 / Math.max(0.001, bb.max.x - bb.min.x);
+  const sz = 1 / Math.max(0.001, bb.max.z - bb.min.z);
+  const sy = 1 / Math.max(0.001, bb.max.y - bb.min.y);
+  geo.scale(sx, sy, sz);
+  geo.center();
+  geo.computeVertexNormals();
+
+  return geo;
+}
+
+function createPetalBlossomGeometry() {
+  const numPetals = 5;
+  const segments = 20;
+  const positions = [];
+  const uvs = [];
+  const indices = [];
+
+  positions.push(0, -0.04, 0);
+  uvs.push(0.5, 0.5);
+
+  for (let i = 0; i < segments; i++) {
+    const angle = (i / segments) * Math.PI * 2;
+    const petalCos = Math.cos(numPetals * angle);
+    const r = 0.5 * (0.42 + 0.58 * (0.5 + 0.5 * petalCos));
+    const y = 0.04 * (r / 0.5);
+    const x = Math.cos(angle) * r;
+    const z = Math.sin(angle) * r;
+
+    positions.push(x, y, z);
+    uvs.push(0.5 + Math.cos(angle) * 0.5 * (r / 0.5), 0.5 + Math.sin(angle) * 0.5 * (r / 0.5));
+  }
+
+  const bottomCenterIdx = positions.length / 3;
+  positions.push(0, -0.08, 0);
+  uvs.push(0.5, 0.5);
+
+  for (let i = 1; i <= segments; i++) {
+    const next = i === segments ? 1 : i + 1;
+    indices.push(0, next, i);
+  }
+
+  for (let i = 1; i <= segments; i++) {
+    const next = i === segments ? 1 : i + 1;
+    indices.push(bottomCenterIdx, i, next);
+  }
+
+  const geo = new THREE.BufferGeometry();
+  geo.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
+  geo.setAttribute('uv', new THREE.Float32BufferAttribute(uvs, 2));
+  geo.setIndex(indices);
+  geo.computeVertexNormals();
+
+  geo.computeBoundingBox();
+  const bb = geo.boundingBox;
+  const sx = 1 / Math.max(0.001, bb.max.x - bb.min.x);
+  const sz = 1 / Math.max(0.001, bb.max.z - bb.min.z);
+  const sy = 1 / Math.max(0.001, bb.max.y - bb.min.y);
+  geo.scale(sx, sy, sz);
+  geo.center();
+  geo.computeVertexNormals();
+
+  return geo;
+}
+
+function canopyMesh(ctx, parent, material, x, y, z, sx, sy, sz, rx = 0, ry = 0, rz = 0, variant = 0) {
+  const geoKey = variant === 0 ? 'unit-canopy-lobe-a' : 'unit-canopy-lobe-b';
+  const geo = typeof ctx.geometry === 'function'
+    ? ctx.geometry(geoKey, () => createCanopyLobeGeometry(variant))
+    : createCanopyLobeGeometry(variant);
+  if (typeof ctx.add === 'function') {
+    return ctx.add(parent, geo, material, [x, y, z], [sx, sy, sz], [rx, ry, rz]);
+  }
+  const mesh = new THREE.Mesh(geo, material);
+  mesh.position.set(x, y, z);
+  mesh.scale.set(sx, sy, sz);
+  if (rx || ry || rz) mesh.rotation.set(rx, ry, rz);
+  mesh.castShadow = true;
+  mesh.receiveShadow = true;
+  if (parent) parent.add(mesh);
+  return mesh;
+}
+
+function pineSkirtMesh(ctx, parent, material, x, y, z, sx, sy, sz, ry = 0, variant = 0) {
+  const geoKey = variant === 0 ? 'unit-pine-skirt-a' : 'unit-pine-skirt-b';
+  const geo = typeof ctx.geometry === 'function'
+    ? ctx.geometry(geoKey, () => createNeedleSkirtGeometry(variant))
+    : createNeedleSkirtGeometry(variant);
+  if (typeof ctx.add === 'function') {
+    return ctx.add(parent, geo, material, [x, y, z], [sx, sy, sz], [0, ry, 0]);
+  }
+  const mesh = new THREE.Mesh(geo, material);
+  mesh.position.set(x, y, z);
+  mesh.scale.set(sx, sy, sz);
+  if (ry) mesh.rotation.y = ry;
+  mesh.castShadow = true;
+  mesh.receiveShadow = true;
+  if (parent) parent.add(mesh);
+  return mesh;
+}
+
+function boulderMesh(ctx, parent, material, x, y, z, sx, sy, sz, rx = 0, ry = 0, rz = 0, variant = 0) {
+  const geoKey = `unit-boulder-granite-${variant}`;
+  const geo = typeof ctx.geometry === 'function'
+    ? ctx.geometry(geoKey, () => createBoulderGeometry(variant))
+    : createBoulderGeometry(variant);
+  if (typeof ctx.add === 'function') {
+    return ctx.add(parent, geo, material, [x, y, z], [sx, sy, sz], [rx, ry, rz]);
+  }
+  const mesh = new THREE.Mesh(geo, material);
+  mesh.position.set(x, y, z);
+  mesh.scale.set(sx, sy, sz);
+  if (rx || ry || rz) mesh.rotation.set(rx, ry, rz);
+  mesh.castShadow = true;
+  mesh.receiveShadow = true;
+  if (parent) parent.add(mesh);
+  return mesh;
+}
+
+function flowerPetalMesh(ctx, parent, material, x, y, z, sx = 0.32, sy = 0.14, sz = 0.32, ry = 0) {
+  const geo = typeof ctx.geometry === 'function'
+    ? ctx.geometry('unit-flower-petals-5', () => createPetalBlossomGeometry())
+    : createPetalBlossomGeometry();
+  if (typeof ctx.add === 'function') {
+    return ctx.add(parent, geo, material, [x, y, z], [sx, sy, sz], [0, ry, 0]);
+  }
+  const mesh = new THREE.Mesh(geo, material);
+  mesh.position.set(x, y, z);
+  mesh.scale.set(sx, sy, sz);
+  if (ry) mesh.rotation.y = ry;
+  mesh.castShadow = true;
+  mesh.receiveShadow = true;
+  if (parent) parent.add(mesh);
+  return mesh;
+}
+
+function flowerEyeMesh(ctx, parent, material, x, y, z, sx = 0.12, sy = 0.08, sz = 0.12) {
+  const geo = typeof ctx.geometry === 'function'
+    ? ctx.geometry('unit-flower-eye', () => new THREE.CylinderGeometry(0.5, 0.5, 0.6, 7))
+    : new THREE.CylinderGeometry(0.5, 0.5, 0.6, 7);
+  if (typeof ctx.add === 'function') {
+    return ctx.add(parent, geo, material, [x, y, z], [sx, sy, sz]);
+  }
+  const mesh = new THREE.Mesh(geo, material);
+  mesh.position.set(x, y, z);
+  mesh.scale.set(sx, sy, sz);
+  mesh.castShadow = true;
+  mesh.receiveShadow = true;
+  if (parent) parent.add(mesh);
+  return mesh;
+}
+
 function getElevation(ctx, x, y, fallback = 4) {
   if (typeof ctx.surfaceHeight === 'function') {
     return ctx.surfaceHeight(x, y);
@@ -613,28 +976,28 @@ export function buildEnvironment(ctx, scenery, entry) {
 
         const isDeciduous = hash2D(x, y, 104) > 0.48;
         if (isDeciduous) {
-          // Deciduous boundary tree: bark-grained trunk, boughs, asymmetrical multi-shade foliage
+          // Deciduous boundary tree: bark-grained trunk, boughs, irregular broadleaf canopy lobes
           cylinderMesh(ctx, staticParent, barkMat, tx, th + 1.8, tz, 0.42, 3.6, 0.42);
           cylinderMesh(ctx, staticParent, barkMat, tx + 0.38, th + 2.8, tz + 0.28, 0.2, 1.3, 0.2, 0.35, 0.2, -0.4);
 
-          // Clustered asymmetrical foliage clumps in multiple shades
-          sphereMesh(ctx, staticParent, leafDeep, tx - 0.25, th + 3.4, tz + 0.25, 1.35, 0.95, 1.25);
-          sphereMesh(ctx, staticParent, leafMid, tx + 0.7, th + 4.1, tz + 0.45, 1.55, 1.3, 1.5);
-          sphereMesh(ctx, staticParent, leafShade, tx - 0.7, th + 4.2, tz - 0.4, 1.45, 1.25, 1.4);
-          sphereMesh(ctx, staticParent, leafSun, tx + 0.2, th + 5.3, tz - 0.15, 1.6, 1.35, 1.5);
-          sphereMesh(ctx, staticParent, leafSun, tx - 0.1, th + 6.1, tz + 0.1, 1.1, 0.95, 1.05);
+          // Clustered asymmetrical broadleaf foliage lobes in multiple shades
+          canopyMesh(ctx, staticParent, leafDeep, tx - 0.25, th + 3.3, tz + 0.25, 1.75, 1.0, 1.65, 0, 0.4, 0, 0);
+          canopyMesh(ctx, staticParent, leafMid, tx + 0.65, th + 3.9, tz + 0.4, 1.95, 1.3, 1.85, 0.1, 0.7, -0.1, 1);
+          canopyMesh(ctx, staticParent, leafShade, tx - 0.65, th + 4.0, tz - 0.35, 1.85, 1.25, 1.75, -0.1, -0.5, 0, 0);
+          canopyMesh(ctx, staticParent, leafSun, tx + 0.2, th + 5.1, tz - 0.15, 1.95, 1.35, 1.85, 0.05, 0.3, 0, 1);
+          canopyMesh(ctx, staticParent, leafSun, tx - 0.1, th + 5.9, tz + 0.1, 1.4, 1.05, 1.35, 0, 0.2, 0, 0);
         } else {
-          // Tiered conifer boundary tree with multi-shade needle skirts
+          // Tiered conifer boundary tree with irregular drooping needle skirts
           cylinderMesh(ctx, staticParent, barkMat, tx, th + 2.5, tz, 0.32, 5.0, 0.32);
-          coneMesh(ctx, staticParent, pineShade, tx, th + 2.4, tz, 2.1, 1.6, 2.1);
-          coneMesh(ctx, staticParent, pineMid, tx, th + 3.7, tz, 1.7, 1.6, 1.7);
-          coneMesh(ctx, staticParent, pineSun, tx, th + 4.9, tz, 1.3, 1.5, 1.3);
-          coneMesh(ctx, staticParent, pineSun, tx, th + 6.0, tz, 0.75, 1.3, 0.75);
+          pineSkirtMesh(ctx, staticParent, pineShade, tx, th + 2.2, tz, 2.2, 1.5, 2.2, 0.0, 0);
+          pineSkirtMesh(ctx, staticParent, pineMid, tx, th + 3.5, tz, 1.8, 1.45, 1.8, 0.6, 1);
+          pineSkirtMesh(ctx, staticParent, pineSun, tx, th + 4.7, tz, 1.4, 1.35, 1.4, 1.2, 0);
+          pineSkirtMesh(ctx, staticParent, pineSun, tx, th + 5.8, tz, 0.85, 1.15, 0.85, 1.8, 1);
         }
 
-        // Boundary understory shrub
+        // Boundary understory shrub with irregular leafy contour
         if (hash2D(x, y, 105) > 0.55) {
-          sphereMesh(ctx, staticParent, leafMid, tx + 0.7, th + 0.45, tz - 0.7, 0.8, 0.55, 0.8);
+          canopyMesh(ctx, staticParent, leafMid, tx + 0.7, th + 0.45, tz - 0.7, 0.95, 0.6, 0.95, 0, 0.5, 0, 1);
         }
       }
     }
@@ -926,8 +1289,8 @@ export function buildScenery(ctx, parent, e) {
 
     if (isOak) {
       // Grand park broadleaf oak:
-      // Authored bark grain, flared base, 3 spreading scaffold boughs,
-      // and asymmetrical interlocking foliage clouds in 4 distinct shades.
+      // Authored bark grain, flared base, 4 spreading scaffold boughs,
+      // and natural interlocking broadleaf canopy lobes in 4 distinct shades.
 
       // 1. Trunk and root flare
       cylinderMesh(ctx, parent, barkMat, x, h + 1.6, z, 0.44, 3.2, 0.44);
@@ -935,57 +1298,58 @@ export function buildScenery(ctx, parent, e) {
       boxMesh(ctx, parent, barkMat, x - 0.34, h + 0.25, z + 0.24, 0.28, 0.5, 0.3, 0.2, -0.4, 0.15);
       boxMesh(ctx, parent, barkMat, x + 0.1, h + 0.25, z - 0.36, 0.32, 0.5, 0.26, -0.2, 0.5, 0);
 
-      // 2. Visible spreading scaffold boughs (angled timber limbs)
-      cylinderMesh(ctx, parent, barkMat, x + 0.48, h + 2.7, z + 0.28, 0.22, 1.4, 0.22, 0.35, 0.2, -0.45);
-      cylinderMesh(ctx, parent, barkMat, x - 0.42, h + 2.8, z - 0.32, 0.2, 1.3, 0.2, -0.4, 0.3, 0.4);
-      cylinderMesh(ctx, parent, barkMat, x - 0.3, h + 2.9, z + 0.45, 0.18, 1.2, 0.18, 0.45, -0.2, 0.3);
+      // 2. Visible spreading scaffold boughs reaching into the canopy
+      cylinderMesh(ctx, parent, barkMat, x + 0.52, h + 2.7, z + 0.32, 0.22, 1.5, 0.22, 0.35, 0.2, -0.5);
+      cylinderMesh(ctx, parent, barkMat, x - 0.46, h + 2.8, z - 0.36, 0.2, 1.4, 0.2, -0.4, 0.3, 0.45);
+      cylinderMesh(ctx, parent, barkMat, x - 0.35, h + 2.9, z + 0.5, 0.18, 1.3, 0.18, 0.45, -0.2, 0.35);
+      cylinderMesh(ctx, parent, barkMat, x + 0.4, h + 3.0, z - 0.45, 0.18, 1.3, 0.18, -0.45, -0.3, -0.3);
 
-      // 3. Asymmetrical multi-shade foliage cloud clusters
+      // 3. Natural broadleaf canopy masses with irregular leafy silhouettes
       // Under-canopy deep recess shadows
-      sphereMesh(ctx, parent, leafDeep, x - 0.3, h + 3.4, z + 0.4, 1.3, 0.9, 1.2);
-      sphereMesh(ctx, parent, leafDeep, x + 0.4, h + 3.3, z - 0.3, 1.2, 0.85, 1.3);
+      canopyMesh(ctx, parent, leafDeep, x - 0.4, h + 3.3, z + 0.3, 1.85, 1.05, 1.75, 0.1, 0.4, 0, 0);
+      canopyMesh(ctx, parent, leafDeep, x + 0.42, h + 3.2, z - 0.32, 1.75, 1.0, 1.85, -0.1, -0.3, 0, 1);
 
-      // Spreading lateral mid-canopy clumps
-      sphereMesh(ctx, parent, leafMid, x + 0.75, h + 4.1, z + 0.5, 1.6, 1.35, 1.55);
-      sphereMesh(ctx, parent, leafMid, x - 0.8, h + 4.2, z - 0.45, 1.5, 1.3, 1.45);
-      sphereMesh(ctx, parent, leafShade, x - 0.45, h + 3.9, z + 0.8, 1.4, 1.2, 1.35);
-      sphereMesh(ctx, parent, leafMid, x + 0.5, h + 4.3, z - 0.75, 1.45, 1.25, 1.4);
+      // Spreading lateral mid-canopy shelves (broad, interlocking, lush)
+      canopyMesh(ctx, parent, leafMid, x + 0.72, h + 3.95, z + 0.48, 2.1, 1.35, 2.0, 0.1, 0.8, -0.1, 0);
+      canopyMesh(ctx, parent, leafMid, x - 0.75, h + 4.05, z - 0.42, 2.05, 1.3, 2.1, -0.1, -0.5, 0.1, 1);
+      canopyMesh(ctx, parent, leafShade, x - 0.52, h + 3.85, z + 0.75, 1.95, 1.25, 1.9, 0.15, 1.2, 0, 0);
+      canopyMesh(ctx, parent, leafMid, x + 0.58, h + 4.15, z - 0.72, 1.95, 1.3, 1.9, -0.1, -1.0, 0, 1);
 
-      // Central canopy volume
-      sphereMesh(ctx, parent, leafMid, x - 0.1, h + 4.8, z + 0.1, 1.9, 1.6, 1.85);
+      // Voluminous central canopy mass
+      canopyMesh(ctx, parent, leafMid, x, h + 4.65, z, 2.45, 1.55, 2.35, 0, 0.3, 0, 0);
 
-      // Sunlit crowning apex clumps (asymmetrical sunward lift)
-      sphereMesh(ctx, parent, leafSun, x + 0.25, h + 5.6, z - 0.2, 1.6, 1.4, 1.55);
-      sphereMesh(ctx, parent, leafSun, x - 0.35, h + 5.2, z + 0.35, 1.3, 1.15, 1.25);
-      sphereMesh(ctx, parent, leafSun, x + 0.1, h + 6.3, z + 0.05, 1.1, 0.95, 1.05);
-      // Total oak height: ~6.8m <= 8m; horizontal radius ~1.6m <= 1.9m
+      // Sunlit crowning apex masses (asymmetrical sunward lift)
+      canopyMesh(ctx, parent, leafSun, x + 0.3, h + 5.35, z - 0.2, 2.05, 1.35, 1.95, 0.1, 0.5, -0.05, 1);
+      canopyMesh(ctx, parent, leafSun, x - 0.32, h + 5.15, z + 0.32, 1.8, 1.2, 1.75, -0.1, -0.4, 0.05, 0);
+      canopyMesh(ctx, parent, leafSun, x + 0.08, h + 6.05, z + 0.06, 1.45, 1.1, 1.45, 0.05, 0.2, 0, 1);
+      // Total oak height: ~6.6m <= 8m; horizontal radius ~1.77m <= 1.9m
     } else {
       // Tiered conifer pine:
-      // Tapered bark trunk, flared base, 5 tiered drooping needle shelves in 3 shades.
+      // Tapered bark trunk, flared base, 5 tiered drooping needle skirts in 3 shades.
 
       // 1. Straight tapered pine trunk
       cylinderMesh(ctx, parent, pineBarkMat, x, h + 2.5, z, 0.34, 5.0, 0.34);
       boxMesh(ctx, parent, pineBarkMat, x + 0.3, h + 0.2, z, 0.26, 0.4, 0.22);
       boxMesh(ctx, parent, pineBarkMat, x - 0.25, h + 0.2, z + 0.25, 0.24, 0.4, 0.26);
 
-      // 2. Tier 1 (Lowest spreading skirt)
-      coneMesh(ctx, parent, pineShade, x, h + 2.1, z, 2.15, 1.5, 2.15);
-      coneMesh(ctx, parent, pineMid, x, h + 2.6, z, 2.05, 1.6, 2.05);
+      // 2. Tier 1 (Lowest spreading drooping skirt)
+      pineSkirtMesh(ctx, parent, pineShade, x, h + 2.1, z, 2.3, 1.5, 2.3, 0.0, 0);
+      pineSkirtMesh(ctx, parent, pineMid, x, h + 2.65, z, 2.1, 1.5, 2.1, 0.45, 1);
 
       // 3. Tier 2 (Mid-low shelf, slight organic offset)
-      coneMesh(ctx, parent, pineShade, x + 0.05, h + 3.4, z - 0.04, 1.75, 1.5, 1.75);
-      coneMesh(ctx, parent, pineMid, x - 0.03, h + 3.9, z + 0.05, 1.65, 1.5, 1.65);
+      pineSkirtMesh(ctx, parent, pineShade, x + 0.04, h + 3.45, z - 0.03, 1.85, 1.45, 1.85, 0.9, 0);
+      pineSkirtMesh(ctx, parent, pineMid, x - 0.03, h + 3.95, z + 0.04, 1.7, 1.4, 1.7, 1.35, 1);
 
       // 4. Tier 3 (Mid-high shelf)
-      coneMesh(ctx, parent, pineMid, x + 0.04, h + 4.8, z + 0.02, 1.35, 1.4, 1.35);
-      coneMesh(ctx, parent, pineSun, x - 0.02, h + 5.2, z - 0.03, 1.2, 1.4, 1.2);
+      pineSkirtMesh(ctx, parent, pineMid, x + 0.03, h + 4.8, z + 0.02, 1.4, 1.35, 1.4, 1.8, 0);
+      pineSkirtMesh(ctx, parent, pineSun, x - 0.02, h + 5.25, z - 0.03, 1.25, 1.3, 1.25, 2.25, 1);
 
       // 5. Tier 4 (Upper shelf)
-      coneMesh(ctx, parent, pineSun, x, h + 6.0, z, 0.85, 1.3, 0.85);
+      pineSkirtMesh(ctx, parent, pineSun, x, h + 6.05, z, 0.9, 1.2, 0.9, 2.7, 0);
 
       // 6. Tier 5 (Apex needle spire)
-      coneMesh(ctx, parent, pineSun, x, h + 6.8, z, 0.45, 1.1, 0.45);
-      // Total pine height: ~7.35m <= 8m; horizontal radius ~1.1m <= 1.9m
+      pineSkirtMesh(ctx, parent, pineSun, x, h + 6.85, z, 0.5, 1.05, 0.5, 3.15, 1);
+      // Total pine height: ~7.38m <= 8m; horizontal radius ~1.15m <= 1.9m
     }
   } else if (type === 'flower') {
     // Formal Victorian raised flower bed:
@@ -1023,67 +1387,70 @@ export function buildScenery(ctx, parent, e) {
     sphereMesh(ctx, parent, leafCushionMat, x + 0.85, h + 0.2, z - 0.85, 1.25, 0.24, 1.25);
     sphereMesh(ctx, parent, leafCushionMat, x - 0.85, h + 0.2, z - 0.85, 1.25, 0.24, 1.25);
 
-    // 4. Low flowering stems and delicate blossom heads (finite deterministic variants)
+    // 4. Low flowering stems and delicate petaled blossom heads (finite deterministic variants)
     const variant = seed % 3;
 
-    // Helper to add delicate flowering plant (stem + petals + stamen)
-    const plantFlower = (ox, oz, bloomMat, stemHeight = 0.24) => {
+    // Helper to add delicate petaled flowering plant (stem + 5-lobed petals + central eye)
+    const plantFlower = (ox, oz, bloomMat, stemHeight = 0.24, rot = 0) => {
       const fx = x + ox;
       const fz = z + oz;
-      cylinderMesh(ctx, parent, stemMat, fx, h + 0.2 + stemHeight / 2, fz, 0.05, stemHeight, 0.05);
-      sphereMesh(ctx, parent, bloomMat, fx, h + 0.2 + stemHeight + 0.08, fz, 0.26, 0.18, 0.26);
-      sphereMesh(ctx, parent, stamenMat, fx, h + 0.2 + stemHeight + 0.15, fz, 0.1, 0.08, 0.1);
+      cylinderMesh(ctx, parent, stemMat, fx, h + 0.2 + stemHeight / 2, fz, 0.04, stemHeight, 0.04);
+      flowerPetalMesh(ctx, parent, bloomMat, fx, h + 0.2 + stemHeight + 0.06, fz, 0.32, 0.12, 0.32, rot);
+      flowerEyeMesh(ctx, parent, stamenMat, fx, h + 0.2 + stemHeight + 0.11, fz, 0.12, 0.07, 0.12);
     };
 
     if (variant === 0) {
       // Variant 0: Formal Parterre (Scarlet Roses & Golden Marigolds with central Urn)
       cylinderMesh(ctx, parent, stoneKerbMat, x, h + 0.32, z, 0.44, 0.38, 0.44);
-      sphereMesh(ctx, parent, leafCushionMat, x, h + 0.52, z, 0.5, 0.25, 0.5);
-      sphereMesh(ctx, parent, whiteBloomMat, x, h + 0.65, z, 0.32, 0.2, 0.32);
+      sphereMesh(ctx, parent, leafCushionMat, x, h + 0.52, z, 0.5, 0.22, 0.5);
+      flowerPetalMesh(ctx, parent, whiteBloomMat, x, h + 0.64, z, 0.44, 0.16, 0.44, 0.35);
+      flowerEyeMesh(ctx, parent, stamenMat, x, h + 0.71, z, 0.16, 0.09, 0.16);
 
-      plantFlower(0.65, 0, redBloomMat);
-      plantFlower(-0.65, 0, redBloomMat);
-      plantFlower(0, 0.65, redBloomMat);
-      plantFlower(0, -0.65, redBloomMat);
+      plantFlower(0.65, 0, redBloomMat, 0.24, 0.2);
+      plantFlower(-0.65, 0, redBloomMat, 0.24, 0.8);
+      plantFlower(0, 0.65, redBloomMat, 0.24, 1.4);
+      plantFlower(0, -0.65, redBloomMat, 0.24, 2.0);
 
-      plantFlower(1.05, 1.05, yellowBloomMat);
-      plantFlower(-1.05, 1.05, purpleBloomMat);
-      plantFlower(1.05, -1.05, purpleBloomMat);
-      plantFlower(-1.05, -1.05, yellowBloomMat);
+      plantFlower(1.05, 1.05, yellowBloomMat, 0.24, 0.5);
+      plantFlower(-1.05, 1.05, purpleBloomMat, 0.24, 1.1);
+      plantFlower(1.05, -1.05, purpleBloomMat, 0.24, 1.7);
+      plantFlower(-1.05, -1.05, yellowBloomMat, 0.24, 2.3);
 
-      plantFlower(1.15, 0, whiteBloomMat, 0.2);
-      plantFlower(-1.15, 0, whiteBloomMat, 0.2);
-      plantFlower(0, 1.15, whiteBloomMat, 0.2);
-      plantFlower(0, -1.15, whiteBloomMat, 0.2);
+      plantFlower(1.15, 0, whiteBloomMat, 0.18, 0.3);
+      plantFlower(-1.15, 0, whiteBloomMat, 0.18, 0.9);
+      plantFlower(0, 1.15, whiteBloomMat, 0.18, 1.5);
+      plantFlower(0, -1.15, whiteBloomMat, 0.18, 2.1);
     } else if (variant === 1) {
       // Variant 1: Cottage Garden Bed (Royal Violet, Coral Pink and Gold)
       cylinderMesh(ctx, parent, stoneKerbMat, x, h + 0.28, z, 0.36, 0.3, 0.36);
-      sphereMesh(ctx, parent, yellowBloomMat, x, h + 0.48, z, 0.35, 0.22, 0.35);
+      sphereMesh(ctx, parent, leafCushionMat, x, h + 0.46, z, 0.45, 0.18, 0.45);
+      flowerPetalMesh(ctx, parent, yellowBloomMat, x, h + 0.58, z, 0.42, 0.15, 0.42, 0.5);
+      flowerEyeMesh(ctx, parent, stamenMat, x, h + 0.65, z, 0.15, 0.08, 0.15);
 
-      plantFlower(0.55, 0.55, pinkBloomMat);
-      plantFlower(-0.55, 0.55, pinkBloomMat);
-      plantFlower(0.55, -0.55, pinkBloomMat);
-      plantFlower(-0.55, -0.55, pinkBloomMat);
+      plantFlower(0.55, 0.55, pinkBloomMat, 0.24, 0.4);
+      plantFlower(-0.55, 0.55, pinkBloomMat, 0.24, 1.0);
+      plantFlower(0.55, -0.55, pinkBloomMat, 0.24, 1.6);
+      plantFlower(-0.55, -0.55, pinkBloomMat, 0.24, 2.2);
 
-      plantFlower(1.1, 0.4, purpleBloomMat);
-      plantFlower(-1.1, 0.4, purpleBloomMat);
-      plantFlower(1.1, -0.4, purpleBloomMat);
-      plantFlower(-1.1, -0.4, purpleBloomMat);
-      plantFlower(0.4, 1.1, yellowBloomMat);
-      plantFlower(-0.4, 1.1, yellowBloomMat);
-      plantFlower(0.4, -1.1, yellowBloomMat);
-      plantFlower(-0.4, -1.1, yellowBloomMat);
+      plantFlower(1.1, 0.4, purpleBloomMat, 0.24, 0.2);
+      plantFlower(-1.1, 0.4, purpleBloomMat, 0.24, 0.8);
+      plantFlower(1.1, -0.4, purpleBloomMat, 0.24, 1.4);
+      plantFlower(-1.1, -0.4, purpleBloomMat, 0.24, 2.0);
+      plantFlower(0.4, 1.1, yellowBloomMat, 0.24, 0.6);
+      plantFlower(-0.4, 1.1, yellowBloomMat, 0.24, 1.2);
+      plantFlower(0.4, -1.1, yellowBloomMat, 0.24, 1.8);
+      plantFlower(-0.4, -1.1, yellowBloomMat, 0.24, 2.4);
     } else {
       // Variant 2: Parterre Ribbon Bed (Vibrant Scarlet, Purple and White ribbons)
       for (const ox of [-0.95, 0, 0.95]) {
-        plantFlower(ox, -0.9, redBloomMat);
-        plantFlower(ox, 0, purpleBloomMat);
-        plantFlower(ox, 0.9, yellowBloomMat);
+        plantFlower(ox, -0.9, redBloomMat, 0.24, ox * 0.5);
+        plantFlower(ox, 0, purpleBloomMat, 0.24, ox * 0.7 + 0.4);
+        plantFlower(ox, 0.9, yellowBloomMat, 0.24, ox * 0.9 + 0.8);
       }
-      plantFlower(-0.5, -0.45, whiteBloomMat, 0.2);
-      plantFlower(0.5, -0.45, whiteBloomMat, 0.2);
-      plantFlower(-0.5, 0.45, pinkBloomMat, 0.2);
-      plantFlower(0.5, 0.45, pinkBloomMat, 0.2);
+      plantFlower(-0.5, -0.45, whiteBloomMat, 0.18, 0.3);
+      plantFlower(0.5, -0.45, whiteBloomMat, 0.18, 1.1);
+      plantFlower(-0.5, 0.45, pinkBloomMat, 0.18, 1.7);
+      plantFlower(0.5, 0.45, pinkBloomMat, 0.18, 2.5);
     }
     // Total flower bed height: ~0.72m <= 2m; width 3.6m <= 4m
   } else if (type === 'hedge') {
@@ -1143,14 +1510,22 @@ export function buildScenery(ctx, parent, e) {
     }
     // Total fountain height: ~2.5m <= 3m
   } else if (type === 'rock') {
-    // Weathered granite rock formation with moss patina
-    const rockMat = getMat(ctx, 'mat-scenery-rock-granite', { color: '#7a7366', roughness: 0.92 });
-    const mossMat = getMat(ctx, 'mat-scenery-rock-moss', { color: '#636c4f', roughness: 0.9 });
+    // Weathered granite rock outcrop with restrained moss patina (chiseled planar facets)
+    const rockMat = getMat(ctx, 'mat-scenery-rock-granite', { color: '#888073', roughness: 0.92 });
+    const mossMat = getMat(ctx, 'mat-scenery-rock-moss', { color: '#5e6848', roughness: 0.88 });
 
-    boxMesh(ctx, parent, rockMat, x + 0.2, h + 0.65, z - 0.1, 1.7, 1.3, 1.5, 0.12, 0.38, -0.08);
-    boxMesh(ctx, parent, mossMat, x + 0.2, h + 1.28, z - 0.1, 1.3, 0.18, 1.1, 0.12, 0.38, -0.08);
-    boxMesh(ctx, parent, rockMat, x - 0.85, h + 0.42, z + 0.55, 1.15, 0.84, 1.05, -0.1, -0.42, 0.12);
-    boxMesh(ctx, parent, rockMat, x + 0.75, h + 0.22, z + 0.8, 0.62, 0.44, 0.55, 0.18, 0.22, 0.15);
-    // Total rock height: ~1.46m <= 2m
+    // 1. Primary massive granite boulder (dominant sloping fracture facet, sheer joint face)
+    boulderMesh(ctx, parent, rockMat, x + 0.15, h + 0.65, z - 0.1, 1.85, 1.3, 1.6, 0.08, 0.35, -0.06, 0);
+
+    // 2. Restrained moss clinging to upper shelf & joint crevice (not a flat box cap)
+    boulderMesh(ctx, parent, mossMat, x + 0.22, h + 1.18, z - 0.08, 1.25, 0.22, 1.05, 0.08, 0.35, -0.06, 2);
+
+    // 3. Secondary chiseled companion boulder nestled beside it
+    boulderMesh(ctx, parent, rockMat, x - 0.82, h + 0.44, z + 0.5, 1.25, 0.88, 1.15, -0.08, -0.45, 0.1, 1);
+
+    // 4. Smaller talus stones at foot of outcrop
+    boulderMesh(ctx, parent, rockMat, x + 0.78, h + 0.25, z + 0.75, 0.7, 0.5, 0.65, 0.15, 0.25, 0.12, 2);
+    boulderMesh(ctx, parent, rockMat, x - 0.25, h + 0.18, z - 0.85, 0.55, 0.36, 0.5, 0.1, 0.8, -0.15, 2);
+    // Total rock height: ~1.4m <= 2m; footprint strictly within 4m tile
   }
 }

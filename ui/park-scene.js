@@ -10,7 +10,7 @@ export class ParkScene{
  constructor(container){
   this.container=container;this.scene=new THREE.Scene();this.scene.background=new THREE.Color('#c9dce3');this.scene.fog=new THREE.Fog('#c9dce3',240,560);
   this.renderer=new THREE.WebGLRenderer({antialias:true,alpha:false});this.renderer.setPixelRatio(1);this.renderer.shadowMap.enabled=true;this.renderer.shadowMap.type=THREE.PCFShadowMap;this.renderer.shadowMap.autoUpdate=false;this.renderer.outputColorSpace=THREE.SRGBColorSpace;this.renderer.toneMapping=THREE.ACESFilmicToneMapping;this.renderer.toneMappingExposure=1.12;container.append(this.renderer.domElement);
-  this.camera=new THREE.OrthographicCamera(-100,100,60,-60,.1,700);this.camera.position.set(154,106,150);this.camera.zoom=1.18;
+  this.camera=new THREE.OrthographicCamera(-100,100,60,-60,.1,700);this.camera.position.set(154,64,150);this.camera.zoom=1.18;
   this.controls=new OrbitControls(this.camera,this.renderer.domElement);this.controls.target.set(82,4,74);this.controls.enableDamping=true;this.controls.dampingFactor=.1;this.controls.minPolarAngle=.2;this.controls.maxPolarAngle=Math.PI/2.08;this.controls.minZoom=.5;this.controls.maxZoom=5;
   this.scene.add(new THREE.HemisphereLight('#eff6ff','#596d37',2));const sun=new THREE.DirectionalLight('#fff0ce',3);sun.position.set(30,135,45);sun.target.position.set(90,0,80);sun.castShadow=true;sun.shadow.mapSize.set(2048,2048);sun.shadow.camera.left=-140;sun.shadow.camera.right=140;sun.shadow.camera.top=140;sun.shadow.camera.bottom=-140;sun.shadow.camera.near=1;sun.shadow.camera.far=330;sun.shadow.bias=-.0003;sun.shadow.normalBias=.025;this.scene.add(sun,sun.target);
   this.staticGroup=new THREE.Group();this.scene.add(this.staticGroup);this.art=createArtContext(this);this.art.staticGroup=this.staticGroup;this.art.scene=this.scene;this.art.renderer=this.renderer;this.surfaceMap=new Map();
@@ -56,7 +56,7 @@ export class ParkScene{
  }
  preview(cells,ok){this.ghost.clear();this.ghostMaterial.color.set(ok?'#9cdd53':'#d84831');for(const c of cells){const mesh=new THREE.Mesh(this.art.geometry('preview-box',()=>new THREE.BoxGeometry(1,1,1)),this.ghostMaterial);mesh.position.set(c.x*4+2,c.low/8+.12,c.y*4+2);mesh.scale.set(4,.18,4);this.ghost.add(mesh);}}
  highlight(point){this.selection.visible=!!point;if(point)this.selection.position.set(point.x*4+2,point.z/8+.2,point.y*4+2);}
- overview(){this.controls.target.set(82,4,74);this.camera.position.set(154,106,150);this.camera.zoom=1.18;this.camera.updateProjectionMatrix();}
- close(){this.controls.target.set(82,4,67);this.camera.position.set(124,66,113);this.camera.zoom=2.5;this.camera.updateProjectionMatrix();}
+ overview(){this.controls.target.set(82,4,74);this.camera.position.set(154,64,150);this.camera.zoom=1.18;this.camera.updateProjectionMatrix();}
+ close(){this.controls.target.set(82,4,67);this.camera.position.set(124,40,113);this.camera.zoom=2.5;this.camera.updateProjectionMatrix();}
  dispose(){this.renderer.setAnimationLoop(null);this.resizeObserver.disconnect();this.controls.dispose();this.clearStatic();this.people.dispose();this.vehicles.dispose();this.litter.dispose();this.ghostMaterial.dispose();this.selection.geometry.dispose();this.selection.material.dispose();this.art.dispose();this.renderer.dispose();}
 }
