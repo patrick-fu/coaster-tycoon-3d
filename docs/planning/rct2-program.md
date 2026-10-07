@@ -60,28 +60,78 @@ retention/integration independently.
 | Classic frontend | Reference-backed interaction/density/window/construction/management plan for the complete catalogue and scenarios; implementation batches with unchanged authoritative ownership. | AGY |
 | Visual content and material corpus | Representative asset briefs across all categories and a source/provenance manifest for visual references and usable texture/material sources. | AGY |
 
-## Implementation sequence to refine from findings
+## Retained planning results
 
-1. Close membership and evidence ambiguities; integrate one content/parameter
-   matrix, fidelity-gap register and asset/reference manifest.
-2. Fix art authoring contracts and original placement reservations. Author a
-   representative detailed station/coaster car/shop/tree/water/flat-ride sample;
-   export and inspect actual browser GLB assets. Do not distort complete models
-   to hide unverified collision/height assumptions.
-3. Expand declarative content identities and per-family construction/operation,
-   add merchandise and services, and migrate saves with explicit compatibility.
-4. Validate a contrasting vertical slice: wooden versus steel, a water ride,
-   a fixed-footprint ride, admission/shop/merchandise revenue and guest/staff work.
-5. Add scenario objectives/calendar/research/restrictions and authored presets;
-   cover every original category through successive bounded batches.
-6. Run original comparisons, production-scale fixtures/soak, representative GPU
-   qualification and Patrick's visual/play acceptance. Keep failed/unobserved
-   fidelity cases visible; a catalogue row or screenshot is not implementation.
+The [complete research checkpoint](../research/rct2-program/README.md) contains
+all original selectable families and object variants, per-object product/car
+facts and source hashes. Root independently regenerated the inventory from
+2,504 pinned JSON records and crosswalked the descriptor splits. Original targets
+are 33 coaster families/56 variants, five transport/11 variants, seven water/12,
+16 gentle/23, 11 thrill/12 and seven commercial classes/41 buildings. Scenery
+has 507 small/large/wall objects, with 29 theme groups. Modern decomposed styles,
+synthetic identity, compatibility and expansion rows remain separately classified.
+
+Seven Sol Max logical investigations are retained in the ride, commerce/guest
+and finance/scenario specifications. Three AGY visual outcomes are integrated
+in [the model pipeline](model-pipeline.md) and [Classic UI contract](classic-content-ui.md).
+The frontend run failed with a retryable network stream error, then a fresh
+bounded attempt completed. Root corrected false counts, footprints, unsupported
+dimensions/versions, invented prices/wages, category errors and fake example
+hashes. Execution success is separate from artifact acceptance. See the
+[delegation audit](delegation-audit.json).
+
+Twelve actual CC0 material source bundles and five official gallery images plus
+the original manual were acquired on WD with hashes. No original DAT assets,
+original executable comparison or new Blender export is established by this
+checkpoint. The [fidelity register](fidelity-gaps.md) specifies 37 discriminating
+ride, commercial, guest, finance, scenario, art and UI cases and their gaps.
+
+## Dependency-ordered implementation
+
+| Batch | Reviewable outcome and gate | Depends on | Write owner |
+|---|---|---|---|
+| P0 Content/evidence contracts | Audited complete inventory, source-linked native parameters/products, corrected art/UI contracts, gap cases and executable task boundaries. No candidate value is labelled observed original. | Research convergence | Root; independent Sol Max audit |
+| P1 Representative asset pipeline | Editable wooden car, timber station and information kiosk/map/umbrella; real UV/material/anchors; remotely exported/validated/rendered GLBs. Then organic foliage, log/water and articulated flat ride. Patrick reviews actual output before bulk style production. | P0; candidate native/render mapping stated | AGY asset writers in isolated files; root remote integration |
+| P2 Content and save foundation | Stable family/variant/mode/instance identities, separate construction/operation/presentation capabilities, versioned worker projections and explicit v7 migration. Native collision/render mapping calibration cases; no global model squash. | P0 | Root; Sol Max logical review/isolated experiments |
+| P3 Contrasting playable slice | Wooden versus steel, Log Flume and Twist/Carousel with actual topology, seats, sessions/dispatch, money, guests and save continuation; comparison traces and actual scene poses. | P1 + P2 | Root simulation/integration; AGY type-specific art |
+| P4 Full commerce and park service | All 41 original shop/service variants, 35 vendor products plus photos, carry/consume/container/voucher/ATM/treatment behavior; four staff roles/local jobs, guest motives/history/navigation and rating/reliability. No fake stock-refill mechanic. | P2; terrain/path and lifecycle contracts from P3 | Root logic; AGY visible models/props after P1 gate |
+| P5 Finance, research and scenarios | Admission policies, authoritative calendar/phases and 14-category monthly ledger, campaign/research state, distinct valuations/objectives; authored scenario recipes/restrictions/climates/rights and tested coaster presets. | P2 + P4 accounting/guest contracts; type/ratings from P3 | Root logic/integration; Sol Max adversarial review |
+| P6 Complete catalogue rollout | Individually qualified batches: ordinary coasters; inverted/suspended/flying/rotating/launch; tracked/free-water; transport; fixed/tower/walking rides; all scenery/theme/path/entrance/station kits. Coverage records below advance per entry. | Applicable P1–P5 capabilities and visual gate | AGY art/frontend; root behavior integration |
+| P7 Full qualification | Exact-original comparison cases, production-scale replay/soak, representative integrated GPU, real construction/management play and Patrick's visual acceptance. | Required P3–P6 coverage | Root and independent reviewers; human gates explicit |
+
+Classic UI work follows the same feature dependencies: modeless chrome first,
+then real catalogue/operation views, products/guest/staff, finance/research and
+scenarios. Each AGY UI batch has one writer for its HTML/CSS/game integration;
+root publishes worker contracts first. Never display invented telemetry or use
+locked research state to hide unimplemented engine behavior.
+
+P1 and P2 preparation can proceed in parallel without a shared-file writer.
+P3–P5 worker changes are integrated sequentially by root because they share
+transactions, state validation and saves. Separate renderer/asset tasks can run
+alongside a frozen worker interface. Delegation is about independent outcomes,
+not maximizing process count. Do not start bulk assets or all physics families
+before the sample/identity contracts have evidence.
+
+## Coverage and finish criteria
+
+Every family/object/product/scenery/recipe has separate status for membership
+evidence, parameter evidence, logic implemented, correctness checked, original
+agreement, editable art, GLB/runtime validated and human visual/play acceptance.
+Unobserved is not failed or passed. Shared kits require per-variant seat, pose,
+frontage, parameter and silhouette checks; a catalog row is not a finished ride.
+
+The current production game contains one candidate steel-family profile, three
+generic facilities and six scenery types; its exact original family mapping is
+unresolved. None of the new complete catalogue is claimed implemented merely by
+being inventoried. Earlier EFK/AFK research resolves factual contracts, not the
+whole programme or issue24's fidelity/hardware acceptance. These are staged
+deliverables, not a dated promise to complete hundreds of assets in one pass.
 
 ## Unsettled frontier
 
 - Exact vanilla formulas/timings and direct original observation access.
-- Original membership versus shared track families/object variants; counts await audit.
+- Exact launch membership of bonus/compatibility/scenario/style records; the
+  canonical family and 155 ride-variant counts have been audited.
 - Dimensional mismatch between current height/clearance reservations and convincing
   detailed buildings/stations; compare original construction before changing rules.
 - Art quality and asset/material/animation budgets await actual representative exports.

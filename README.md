@@ -17,13 +17,14 @@ Saves remain in this browser; Export/Import moves a park between devices.
 
 ![Classic park with independently authored art](docs/verification/classic-art/art-overview.png)
 
-The park now has authored paving, turf, bark, foliage, water and roof materials;
-timber stations, detailed rails/supports, identifiable concessions, seated riders
-and six buildable scenery types. Every placement uses the real construction,
-money, clearance and save model. See [art direction](docs/art-direction.md) and
+This checkpoint has procedural materials and composed models, three steel-coaster
+layouts, three generic facilities and six buildable scenery types with real
+construction, money, clearance and saves. Patrick rejected its visual quality;
+it is retained as a measured baseline, not the accepted art direction. See
 [verification evidence](docs/verification/classic-art/README.md).
 
-Planning is complete. The first production simulation kernel implements atomic
+The earlier first-playable planning established the architecture. The production
+simulation kernel implements atomic
 construction commands, candidate train motion, individual guests/queues/seats,
 food/drink/restroom purchases, benches/bins, staff services and categorized
 operating finance with validated save continuation. See its [interface and verification boundary](docs/simulation-kernel.md).
@@ -50,6 +51,17 @@ original-scale or frame-rate goals. The concrete
 [acceptance contract](docs/first-playable-acceptance.md) defines the production
 checks and human review required before completion.
 
-Current work: [Qualify the Classic first playable against original RCT2 and representative hardware](https://github.com/patrick-fu/coaster-tycoon-3d/issues/24).
+Current work: [Plan the complete RCT2 catalogue and detailed 3D production programme](https://github.com/patrick-fu/coaster-tycoon-3d/issues/27).
+The [programme](docs/planning/rct2-program.md) covers all original ride categories,
+physics/operation, products/services, guests/staff, admission/finance, research,
+scenarios and authored presets. Its [source-linked inventory](docs/research/rct2-program/README.md)
+distinguishes original families, variants, expansions and modern additions. A
+[dedicated editable model pipeline](docs/planning/model-pipeline.md) and corrected
+[Classic frontend contract](docs/planning/classic-content-ui.md) precede bulk
+implementation. Twelve hashed CC0 material source bundles were acquired; actual
+model export, original comparisons and visual acceptance remain separate gates.
+
+[Qualify the Classic first playable against original RCT2 and representative hardware](https://github.com/patrick-fu/coaster-tycoon-3d/issues/24)
+remains open for its original fidelity, scale and representative-hardware gates.
 
 Retained planning map: [Define the first playable version of a faithful 3D RCT2 browser game](https://github.com/patrick-fu/coaster-tycoon-3d/issues/1). Its sub-issues and dependencies show the current decision frontier.

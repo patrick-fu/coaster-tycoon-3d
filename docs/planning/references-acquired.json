@@ -1,0 +1,59 @@
+{
+  "capturedAt": "2026-10-07T14:58:41.374337+00:00",
+  "sourcePage": "https://store.steampowered.com/app/285330/",
+  "api": {
+    "path": "references/steam-appdetails.json",
+    "url": "https://store.steampowered.com/api/appdetails?appids=285330&l=english",
+    "bytes": 8535,
+    "sha256": "c3d4c010aa8902e7355d5da4fa16c7cf9f2aa7b6da362843dfc7cf26ed2721d3"
+  },
+  "images": [
+    {
+      "path": "references/steam-gallery-0.jpg",
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/285330/ss_606ca43a0269c54994cad3afb54de1fa44c788e6.1920x1080.jpg?t=1733160988",
+      "bytes": 923688,
+      "sha256": "4519f263ff7a9611d9881fcebe010a6ec9b37fb9b5fb62fb9497899b3a21dec5",
+      "license": "commercial reference only; not redistributed",
+      "baselineMembership": "Triple Thrill Pack gallery; original/expansion scene membership not established"
+    },
+    {
+      "path": "references/steam-gallery-1.jpg",
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/285330/ss_70ea110f186400e3b22618c0ee581c59c1c49c42.1920x1080.jpg?t=1733160988",
+      "bytes": 980798,
+      "sha256": "ef8bb3c64fc19629904beaacb40c7137c06f9ce42b51e5f4f4ed46c8c8c62a70",
+      "license": "commercial reference only; not redistributed",
+      "baselineMembership": "Triple Thrill Pack gallery; original/expansion scene membership not established"
+    },
+    {
+      "path": "references/steam-gallery-2.jpg",
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/285330/ss_fbe84aebdadc6a4109d7f646171a4168dda47588.1920x1080.jpg?t=1733160988",
+      "bytes": 374985,
+      "sha256": "e864aa0a3125cc017ac694360d203fa231a5c0e5cb8c36bb6002cac6555fa731",
+      "license": "commercial reference only; not redistributed",
+      "baselineMembership": "Triple Thrill Pack gallery; original/expansion scene membership not established"
+    },
+    {
+      "path": "references/steam-gallery-3.jpg",
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/285330/ss_fd1af2e8bfc7624d9d6d731139097c92979c30f9.1920x1080.jpg?t=1733160988",
+      "bytes": 386506,
+      "sha256": "f89a8b128fcc8d85f685c7b65609efa705dd275d89e6509d18e76c19b5021eab",
+      "license": "commercial reference only; not redistributed",
+      "baselineMembership": "Triple Thrill Pack gallery; original/expansion scene membership not established"
+    },
+    {
+      "path": "references/steam-gallery-4.jpg",
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/285330/ss_5f3d0c48967904f629d7f23a6c688c4eea6af936.1920x1080.jpg?t=1733160988",
+      "bytes": 409467,
+      "sha256": "8585486d741e537116ef3e8e2383507eb749cdb98861957e4ad0de60c07e942d",
+      "license": "commercial reference only; not redistributed",
+      "baselineMembership": "Triple Thrill Pack gallery; original/expansion scene membership not established"
+    }
+  ],
+  "manual": {
+    "path": "references/original-rct2-manual.pdf",
+    "url": "https://cdn.akamai.steamstatic.com/steam/apps/285330/manuals/manual.pdf",
+    "bytes": 3425160,
+    "sha256": "2aa16c7c41aac2bc00c196eb0835a53d145c2c76d4bd76f63ad4266a28b5f5ff"
+  },
+  "distribution": "external observation corpus only; never bundled with independent game"
+}
