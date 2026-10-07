@@ -6,6 +6,7 @@
   <title>Coaster Tycoon 3D</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="content-browser.css">
   <script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
 </head>
 <body inert>
@@ -50,6 +51,7 @@
   </div>
 </header>
 <nav class="tools" aria-label="Park tools">
+  <button id="content-library" title="Browse ride families, objects and operating modes">Library</button>
   <button data-tool="inspect" class="active" title="Inspect rides, guests, and staff">
     <svg class="tool-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="6.5" cy="6.5" r="4.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 10 L14.5 14.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><circle cx="5" cy="5" r="1.2" fill="currentColor"/></svg>
     <span>Inspect</span>

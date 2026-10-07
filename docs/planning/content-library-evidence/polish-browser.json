@@ -1,0 +1,69 @@
+{
+  "phase": "polish",
+  "browser": "Chrome/155.0.8059.39",
+  "defaultProfile": "/home/box/.config/google-chrome",
+  "checks": [
+    "Synchronous open/destroy leaves no DOM or deferred focus exception",
+    "Selecting a lower family preserves the actual list scroll position",
+    "Category counts and memberships come from the actual worker catalogue",
+    "Category names and selected choices remain legible in the Classic stylesheet",
+    "Original variants and modes are inspectable while their construction remains disabled",
+    "Selecting an operating mode preserves the actual detail scroll position",
+    "Search and status filters expose true empty and available states",
+    "Reopening preserves filters and selection without allocating another library window",
+    "Family arrow and Space keys preserve focus and do not pause the park",
+    "Browsing, filtering and cancelling preserve all authoritative park state",
+    "An available selected coaster is created through the actual park click with its exact identity",
+    "An available selected drink facility is placed through the actual park click",
+    "Actual Chrome pointer dragging changes only the library window position",
+    "Closing restores the toolbar opener focus",
+    "Desktop and 1280x800 windows remain styled and entirely inside the viewport"
+  ],
+  "setup": {
+    "loadedFacilities": 4,
+    "reusedFixtureSpot": true
+  },
+  "destroy": {
+    "errors": [],
+    "nodes": 0
+  },
+  "scroll": {
+    "before": 2012,
+    "after": 2012
+  },
+  "functional": {
+    "ok": true,
+    "checks": [
+      "Category counts and memberships come from the actual worker catalogue",
+      "Category names and selected choices remain legible in the Classic stylesheet",
+      "Original variants and modes are inspectable while their construction remains disabled",
+      "Selecting an operating mode preserves the actual detail scroll position",
+      "Search and status filters expose true empty and available states",
+      "Reopening preserves filters and selection without allocating another library window",
+      "Family arrow and Space keys preserve focus and do not pause the park",
+      "Browsing, filtering and cancelling preserve all authoritative park state",
+      "An available selected coaster is created through the actual park click with its exact identity",
+      "An available selected drink facility is placed through the actual park click"
+    ]
+  },
+  "library-desktop": {
+    "left": 690,
+    "top": 318,
+    "right": 1470,
+    "bottom": 858,
+    "width": 780,
+    "height": 540,
+    "background": "rgb(22, 48, 35)"
+  },
+  "library-narrow": {
+    "left": 500,
+    "top": 260,
+    "right": 1280,
+    "bottom": 800,
+    "width": 780,
+    "height": 540,
+    "background": "rgb(22, 48, 35)"
+  },
+  "exceptions": [],
+  "ok": true
+}

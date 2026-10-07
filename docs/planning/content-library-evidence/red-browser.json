@@ -1,0 +1,18 @@
+{
+  "phase": "red",
+  "browser": "Chrome/155.0.8059.39",
+  "defaultProfile": "/home/box/.config/google-chrome",
+  "checks": [],
+  "destroy": {
+    "errors": [
+      "TypeError: Cannot read properties of null (reading 'querySelector')"
+    ],
+    "nodes": 0
+  },
+  "scroll": {
+    "before": 2000,
+    "after": 0
+  },
+  "exceptions": [],
+  "ok": true
+}

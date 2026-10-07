@@ -1,0 +1,71 @@
+{
+  "host": "grok-build",
+  "scope": "Classic content library; independent original-reference directory remains unimplemented",
+  "sourceInputCount": 67,
+  "commands": [
+    {
+      "command": "npm test",
+      "exit": 0,
+      "passed": 121,
+      "failed": 0,
+      "logSha256": "9d1b1a7a6930df1a3d29872562c8458a84615f2a8e8e7b09956b1cc878481b1e"
+    },
+    {
+      "command": "node --check ui/content-browser.js; node --check ui/game.js; node --check test/content-library-browser.js; node --check test/content-library-lifecycle-browser.js",
+      "exit": 0
+    },
+    {
+      "command": "npm run build:web",
+      "exit": 0,
+      "logSha256": "120b133d25a41fc01f174dbb1129e91fbbc95e7d931def7b534c319a71105eb4"
+    },
+    {
+      "command": "check-venv/bin/python run-browser.py green",
+      "exit": 0,
+      "classicChecks": 30,
+      "newLibraryChecks": 14,
+      "logSha256": "42f3a12f28c05ad6ce97473239bc4749edf0f765d53abdb4a6ca80420d63dd2d"
+    },
+    {
+      "command": "check-venv/bin/python run-browser.py polish",
+      "exit": 0,
+      "newLibraryChecks": 15,
+      "logSha256": "c226462d5de42e49dadeeab60261be7a4850689ee662a283a541f326255b241b"
+    },
+    {
+      "command": "check-venv/bin/python run-browser.py lifecycle",
+      "exit": 0,
+      "checks": 8,
+      "logSha256": "eac34a69474470fb218897fec79bd91424b1c20021105646362993ebc4d81483"
+    }
+  ],
+  "finalSourceChangeAfterPolish": "Player-facing provider/loading wording only; final build and lifecycle checks passed again. Kernel source unchanged.",
+  "softwareRenderer": true,
+  "representativeIntegratedGpuQualified": false,
+  "originalGameplayAgreementQualified": false,
+  "humanVisualAcceptance": false,
+  "externalEvidence": "/Volumes/WD/code/workspaces/coaster-content-library/evidence",
+  "diagnosticFailures": [
+    {
+      "phase": "red",
+      "expected": "deferred focus error and scroll reset reproduced",
+      "reportSha256": "c9b3e19badd38bb4fa7e3c277781ba00e80057237682f8282e905a0b83c73be7"
+    },
+    {
+      "phase": "first-polish",
+      "outcome": "CDP timeout with reused saved fixture; actual new-park setup and explicit terminal polling corrected the runner",
+      "logSha256": "752c7d0859a334c702b0fab2128ceba1451ac2fda8b343655df825ee581f44bf"
+    }
+  ],
+  "evidence": {
+    "browser-check-result.json": "e4ba882d1508a5a9f430650654f358e9a2920e184eca9ab824d1e8bca4ddf29c",
+    "green-browser.json": "9927f74aae8c6eb4ad9dcdb554e6dbbaf32f51c9774d4ed279df118e6ac61b2f",
+    "library-desktop.png": "2d797121fcb908d68d1c2393c33bf4d834fe1bf3281a7e6207ef287b10167416",
+    "library-narrow.png": "a3f06b806292d946d3dd8c0902086a2287ef52553fa673522244c8fca9c9cd5a",
+    "lifecycle-browser.json": "eac34a69474470fb218897fec79bd91424b1c20021105646362993ebc4d81483",
+    "polish-browser.json": "c226462d5de42e49dadeeab60261be7a4850689ee662a283a541f326255b241b",
+    "red-browser.json": "c9b3e19badd38bb4fa7e3c277781ba00e80057237682f8282e905a0b83c73be7",
+    "review.json": "10fe1ea1d8d4b456821376dc82994f19ffa187a53b8b52ed580544e05195bd07",
+    "source-inputs.json": "0967688eda09bf9ed6bd044cb394415be8a8895e5078da34fdce57a4f3ae0acf"
+  }
+}

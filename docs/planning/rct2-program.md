@@ -105,6 +105,13 @@ scenarios. Each AGY UI batch has one writer for its HTML/CSS/game integration;
 root publishes worker contracts first. Never display invented telemetry or use
 locked research state to hide unimplemented engine behavior.
 
+The v8 content/instance identity and worker foundation is merged; see
+[its interface and remaining calibration](../content-identities.md). The first
+finite Classic library now reads that real catalogue and selects only executable
+candidate content; [actual remote evidence](content-library-evidence/README.md)
+records browsing, building and lifecycle checks. Native/model calibration and
+the remaining management windows keep their separate gates.
+
 P1 and P2 preparation can proceed in parallel without a shared-file writer.
 P3–P5 worker changes are integrated sequentially by root because they share
 transactions, state validation and saves. Separate renderer/asset tasks can run
