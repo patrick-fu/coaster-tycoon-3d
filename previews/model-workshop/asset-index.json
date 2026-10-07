@@ -1,0 +1,880 @@
+[
+  {
+    "id": "wooden-car",
+    "title": "Wooden coaster car",
+    "subtitle": "Four seats \u00b7 shaped shell \u00b7 articulated wheel groups",
+    "glb": "./models/wooden-car.glb",
+    "report": {
+      "authoring": {
+        "assetId": "wooden-car",
+        "referenceVariant": "PTCT1-inspired wooden train car",
+        "candidateDimensions": {
+          "width": 1.44,
+          "length": 2.68,
+          "height": 1.24
+        },
+        "anchors": [
+          "RailRoot",
+          "BogieFront",
+          "BogieRear",
+          "Seat_FrontLeft",
+          "Seat_FrontRight",
+          "Seat_RearLeft",
+          "Seat_RearRight",
+          "Coupler_Front",
+          "Coupler_Rear"
+        ],
+        "restraints": [
+          "LapBar_Front",
+          "LapBar_Rear"
+        ],
+        "notes": "Four-passenger articulated wooden coaster car with sculpted tub, contoured vinyl seats, hinged lap bars, complete road/guide/upstop wheel groups, couplers, and export-stable UVs.",
+        "geometryIntent": "Independently authored PTC-inspired wooden coaster car geometry featuring shaped prow/nose curvature, closed cowl deck, varnished timber side inserts, recessed cockpit tubs, layered steel undercarriage stringers, fin brake equipment, two articulated two-passenger rows with individual contoured bucket cushions and fluted lumbar backrests, and dual bogie pivot assemblies with differentiated rubber treads and metal hubs."
+      },
+      "geometry": {
+        "meshObjects": 11,
+        "trianglesEvaluated": 19416,
+        "boundsBlender": {
+          "min": [
+            -0.7080000042915344,
+            -1.4700000286102295,
+            -0.19849567115306854
+          ],
+          "max": [
+            0.7080000042915344,
+            1.4700000286102295,
+            0.8999999761581421
+          ]
+        },
+        "materials": [
+          "boards",
+          "brass",
+          "metal",
+          "paint_red",
+          "rubber",
+          "seat_vinyl"
+        ],
+        "anchorsBlender": {
+          "RailRoot": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "BogieFront": [
+            0.0,
+            -0.75,
+            0.17000000178813934
+          ],
+          "BogieRear": [
+            0.0,
+            0.75,
+            0.17000000178813934
+          ],
+          "Seat_FrontLeft": [
+            -0.3199999928474426,
+            -0.41999998688697815,
+            0.46000000834465027
+          ],
+          "Seat_FrontRight": [
+            0.3199999928474426,
+            -0.41999998688697815,
+            0.46000000834465027
+          ],
+          "Seat_RearLeft": [
+            -0.3199999928474426,
+            0.41999998688697815,
+            0.46000000834465027
+          ],
+          "Seat_RearRight": [
+            0.3199999928474426,
+            0.41999998688697815,
+            0.46000000834465027
+          ],
+          "Coupler_Front": [
+            0.0,
+            -1.340000033378601,
+            0.2199999988079071
+          ],
+          "Coupler_Rear": [
+            0.0,
+            1.340000033378601,
+            0.2199999988079071
+          ]
+        },
+        "issues": []
+      },
+      "blender": "4.3.2",
+      "sourceSha256": "568a3a3429d2d1ea3edabeadedf253c2b73305626fa58f665b9959b4edf171f2",
+      "driverSha256": "e0821cdf8bd1cd1ae74e4269ac5cc07fb7acdab4d25f394c0e8111c8ce786f2f",
+      "textureSources": [
+        {
+          "file": "Metal049A_1K-PNG_Color.png",
+          "sourceSha256": "3c5be68c8a56534f120e88cff835a321ca51459c8f31482f984958c7fbfda8e6",
+          "sourceDimensions": [
+            1024,
+            1024
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "Metal049A_1K-PNG_Metalness.png",
+          "sourceSha256": "61c66550ad5636c9fb8bfb13fc5b2ff4b2ba7cb66831e8c68509124915be045e",
+          "sourceDimensions": [
+            1024,
+            1024
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "Metal049A_1K-PNG_NormalGL.png",
+          "sourceSha256": "5b80adcc8092618a127bb7dfa547e3a35d156efd027c9daa579ac26f9098a678",
+          "sourceDimensions": [
+            1024,
+            1024
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "Metal049A_1K-PNG_Roughness.png",
+          "sourceSha256": "a42d9eaba9bc232739c7cb86dee03805e66f50a065cecfbbfe906aaeb6b3ded2",
+          "sourceDimensions": [
+            1024,
+            1024
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "WoodFloor043_1K-PNG_Color.png",
+          "sourceSha256": "55a7c25c191c8eb501d87a8872438dcfba307b3a043fee00ad9e89f0c413d684",
+          "sourceDimensions": [
+            1024,
+            512
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "WoodFloor043_1K-PNG_Metalness.png",
+          "sourceSha256": "46ca3dbd1939c6c89b437c195afe51d816336baa0376b9289d6e7dc0757a69dc",
+          "sourceDimensions": [
+            1024,
+            512
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "WoodFloor043_1K-PNG_NormalGL.png",
+          "sourceSha256": "ac8e1221726a512c4eb3cae98674bf0dda774382b2ba2577d36cbf8192986a6e",
+          "sourceDimensions": [
+            1024,
+            512
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "WoodFloor043_1K-PNG_Roughness.png",
+          "sourceSha256": "c15241e172c474ad147003f8e957cf88d305d9e8d82809de201f04f7b969ec26",
+          "sourceDimensions": [
+            1024,
+            512
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        }
+      ],
+      "batchStatic": true,
+      "glb": {
+        "file": "wooden-car.glb",
+        "sha256": "fc988c55ed60dcd5abf7c5e02ecbc1ac3a8cd828cfe7fe4bb8f30bcf21699b59",
+        "bytes": 3545440
+      },
+      "editableMaster": {
+        "file": "wooden-car.blend",
+        "sha256": "d0d97cd1a89b3e98563e149acdef5da4548f6d555c4476fc2377548d68c492a7",
+        "bytes": 5846056
+      },
+      "scope": "Candidate detailed asset laboratory; no original-metric or gameplay validation"
+    }
+  },
+  {
+    "id": "timber-station",
+    "title": "Timber station",
+    "subtitle": "Modular roof and platform \u00b7 gates \u00b7 4 m candidate pitch",
+    "glb": "./models/timber-station.glb",
+    "report": {
+      "authoring": {
+        "assetId": "timber-station",
+        "referenceVariant": "classic-timber-station-bay",
+        "candidateDimensions": {
+          "width": 4.7,
+          "length": 4.0,
+          "height": 4.15,
+          "pitch": 4.0
+        },
+        "anchors": [
+          "StationRoot",
+          "RailIn",
+          "RailOut",
+          "DeckBoarding",
+          "DeckUnload",
+          "QueueGate",
+          "ExitGate",
+          "OperatorBooth",
+          "RoofApex"
+        ],
+        "restraints": [],
+        "notes": [
+          "Modular 4.0m timber station bay with exact repeating pitch along Y-axis",
+          "King-post roof trusses with steel joint gussets, rafters, purlins, and fine-scale tile courses",
+          "Dual boarding (+X) and unload (-X) platforms with warm treated timber framing, decking, and kerb caution lines",
+          "Track trough with timber ties, running rails, and central maintenance catwalk",
+          "Four pneumatic air-gates for passenger row boarding and turnstile queue portal",
+          "Unload platform exit swing gate and outer timber safety handrails",
+          "Operator control pedestal with dispatch, emergency stop, and status display cabinet",
+          "Explicit UV unwrap coordinates conforming to timber grain and roof tile courses"
+        ],
+        "geometryIntent": "Detailed timber-framed coaster station bay module with warm treated timber palette, fine-scale roof shingle courses, deck joists, track trough, and queue/exit interfaces."
+      },
+      "geometry": {
+        "meshObjects": 160,
+        "trianglesEvaluated": 17280,
+        "boundsBlender": {
+          "min": [
+            -2.380000114440918,
+            -2.009999990463257,
+            0.0
+          ],
+          "max": [
+            2.380000114440918,
+            2.009999990463257,
+            4.050000190734863
+          ]
+        },
+        "materials": [
+          "boards.001",
+          "brass",
+          "brick",
+          "cream",
+          "metal",
+          "paint_red",
+          "paint_teal",
+          "roof",
+          "timber.001"
+        ],
+        "anchorsBlender": {
+          "StationRoot": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "RailIn": [
+            0.0,
+            2.0,
+            0.5
+          ],
+          "RailOut": [
+            0.0,
+            -2.0,
+            0.5
+          ],
+          "DeckBoarding": [
+            1.350000023841858,
+            0.0,
+            0.8199999928474426
+          ],
+          "DeckUnload": [
+            -1.350000023841858,
+            0.0,
+            0.8199999928474426
+          ],
+          "QueueGate": [
+            1.899999976158142,
+            1.399999976158142,
+            0.8199999928474426
+          ],
+          "ExitGate": [
+            -1.899999976158142,
+            -1.399999976158142,
+            0.8199999928474426
+          ],
+          "OperatorBooth": [
+            1.4500000476837158,
+            -1.399999976158142,
+            0.8199999928474426
+          ],
+          "RoofApex": [
+            0.0,
+            0.0,
+            4.050000190734863
+          ]
+        },
+        "issues": []
+      },
+      "blender": "4.3.2",
+      "sourceSha256": "a8565b402aa55489b17f9fc6ac28180efd9c2ab92d6a7f3e9bafb16a26812cf4",
+      "driverSha256": "e0821cdf8bd1cd1ae74e4269ac5cc07fb7acdab4d25f394c0e8111c8ce786f2f",
+      "textureSources": [
+        {
+          "file": "Bricks051_1K-PNG_Color.png",
+          "sourceSha256": "9adbf36c4f0d6a7f7eb3b85dc35c5c022c15bea802562e5bf9966d83d29facd4",
+          "sourceDimensions": [
+            1024,
+            1024
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "Bricks051_1K-PNG_NormalGL.png",
+          "sourceSha256": "8b14ad4bd834773a26b0bbc4f4afd80fe92c939aa3f49385a41a1fb8165646e8",
+          "sourceDimensions": [
+            1024,
+            1024
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "Bricks051_1K-PNG_Roughness.png",
+          "sourceSha256": "fce4ec1fb6301336503c0d65dd6c14aaf7288dfba5b20c4cd6ab15abf9f33a9d",
+          "sourceDimensions": [
+            1024,
+            1024
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "Metal049A_1K-PNG_Color.png",
+          "sourceSha256": "3c5be68c8a56534f120e88cff835a321ca51459c8f31482f984958c7fbfda8e6",
+          "sourceDimensions": [
+            1024,
+            1024
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "Metal049A_1K-PNG_Metalness.png",
+          "sourceSha256": "61c66550ad5636c9fb8bfb13fc5b2ff4b2ba7cb66831e8c68509124915be045e",
+          "sourceDimensions": [
+            1024,
+            1024
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "Metal049A_1K-PNG_NormalGL.png",
+          "sourceSha256": "5b80adcc8092618a127bb7dfa547e3a35d156efd027c9daa579ac26f9098a678",
+          "sourceDimensions": [
+            1024,
+            1024
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "Metal049A_1K-PNG_Roughness.png",
+          "sourceSha256": "a42d9eaba9bc232739c7cb86dee03805e66f50a065cecfbbfe906aaeb6b3ded2",
+          "sourceDimensions": [
+            1024,
+            1024
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "RoofingTiles013A_1K-PNG_Color.png",
+          "sourceSha256": "ae2037e4c4934b42b60c799b2755cb73c164a883410f89e22ac54ed5ecb4d1de",
+          "sourceDimensions": [
+            1024,
+            1024
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "RoofingTiles013A_1K-PNG_NormalGL.png",
+          "sourceSha256": "2488e6f327db93fe29558a9326ee4dba94022f944e2daf070a7ed47825fa82ab",
+          "sourceDimensions": [
+            1024,
+            1024
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "RoofingTiles013A_1K-PNG_Roughness.png",
+          "sourceSha256": "575b1674cfd09dde9db152b917503c77fa4187693762bf2f8824521975bac812",
+          "sourceDimensions": [
+            1024,
+            1024
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "Wood096_1K-PNG_Color.png",
+          "sourceSha256": "2635d3b950808e52d5de4ce4ee4b3aa35430ffd3117e00c1b2cfb155168e6b47",
+          "sourceDimensions": [
+            1024,
+            1024
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "Wood096_1K-PNG_NormalGL.png",
+          "sourceSha256": "5b9f71b56cc74a397c9263619f7ef0cfc7d668762f4f2c960e4bd883dc2891c5",
+          "sourceDimensions": [
+            1024,
+            1024
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "Wood096_1K-PNG_Roughness.png",
+          "sourceSha256": "bcba2c9b971c17875e0d8b6e11b234ce86a1c4110bd72725c2586b8950738418",
+          "sourceDimensions": [
+            1024,
+            1024
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "WoodFloor043_1K-PNG_Color.png",
+          "sourceSha256": "55a7c25c191c8eb501d87a8872438dcfba307b3a043fee00ad9e89f0c413d684",
+          "sourceDimensions": [
+            1024,
+            512
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "WoodFloor043_1K-PNG_Metalness.png",
+          "sourceSha256": "46ca3dbd1939c6c89b437c195afe51d816336baa0376b9289d6e7dc0757a69dc",
+          "sourceDimensions": [
+            1024,
+            512
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "WoodFloor043_1K-PNG_NormalGL.png",
+          "sourceSha256": "ac8e1221726a512c4eb3cae98674bf0dda774382b2ba2577d36cbf8192986a6e",
+          "sourceDimensions": [
+            1024,
+            512
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "WoodFloor043_1K-PNG_Roughness.png",
+          "sourceSha256": "c15241e172c474ad147003f8e957cf88d305d9e8d82809de201f04f7b969ec26",
+          "sourceDimensions": [
+            1024,
+            512
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        }
+      ],
+      "batchStatic": true,
+      "glb": {
+        "file": "timber-station.glb",
+        "sha256": "60d94b3c784726b3dfa5aa89bed37a4da8dee05769ff1f648d918a0de1bf7b41",
+        "bytes": 9141736
+      },
+      "editableMaster": {
+        "file": "timber-station.blend",
+        "sha256": "6c728ee9ae8b25ef282ab1265e03cf6b599f49c85f6add78ef281057757b4668",
+        "bytes": 25919155
+      },
+      "scope": "Candidate detailed asset laboratory; no original-metric or gameplay validation"
+    }
+  },
+  {
+    "id": "information-kiosk",
+    "title": "Information kiosk",
+    "subtitle": "Four counters \u00b7 map and umbrella props",
+    "glb": "./models/information-kiosk.glb",
+    "report": {
+      "authoring": {
+        "assetId": "information_kiosk",
+        "referenceVariant": "timber_four_frontage_kiosk",
+        "candidateDimensions": [
+          4.1,
+          4.1,
+          4.7
+        ],
+        "anchors": [
+          "GroundRoot",
+          "Counter_Front",
+          "Counter_Back",
+          "Counter_Left",
+          "Counter_Right",
+          "Sign_Front",
+          "PropMap",
+          "PropUmbrella"
+        ],
+        "restraints": [],
+        "notes": "Four-frontage timber information kiosk. Features stepped masonry plinth, chamfered timber posts, recessed counter bays with deep interior partitions on all four cardinal facades, flared bellcast shingle roof with rafter tails, louvered cupola lantern with metal pyramid cap, and two dedicated inspection props: PropMap (folded trifold map) and PropUmbrella (octagonal canopy).",
+        "geometryIntent": "Independent theme-park information kiosk with INFO signs, map markings and alternating umbrella panels. Replaces primitive box stalls with layered structural timber framing, chamfered corner collars, open counter recesses, explicit UV coordinates for woodgrain and shingle courses, and rigged reference empties for guest interaction and prop examination."
+      },
+      "geometry": {
+        "meshObjects": 254,
+        "trianglesEvaluated": 11832,
+        "boundsBlender": {
+          "min": [
+            -2.080399990081787,
+            -2.080399990081787,
+            0.0
+          ],
+          "max": [
+            2.0435478687286377,
+            2.0435478687286377,
+            4.699999809265137
+          ]
+        },
+        "materials": [
+          "boards.001",
+          "brass",
+          "brick",
+          "cream",
+          "ink",
+          "metal",
+          "paint_teal",
+          "paper",
+          "roof",
+          "timber.001"
+        ],
+        "anchorsBlender": {
+          "GroundRoot": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Counter_Front": [
+            0.0,
+            -1.5800000429153442,
+            1.0299999713897705
+          ],
+          "Counter_Back": [
+            0.0,
+            1.5800000429153442,
+            1.0299999713897705
+          ],
+          "Counter_Left": [
+            -1.5800000429153442,
+            0.0,
+            1.0299999713897705
+          ],
+          "Counter_Right": [
+            1.5800000429153442,
+            0.0,
+            1.0299999713897705
+          ],
+          "Sign_Front": [
+            0.0,
+            -1.6200000047683716,
+            2.0
+          ],
+          "PropMap": [
+            0.3499999940395355,
+            -1.4800000190734863,
+            1.0299999713897705
+          ],
+          "PropUmbrella": [
+            -1.5499999523162842,
+            -1.5499999523162842,
+            0.2800000011920929
+          ]
+        },
+        "issues": []
+      },
+      "blender": "4.3.2",
+      "sourceSha256": "f9c380c69056054f1e89d707a8a5a4e86c9e2928513b008be686eb099d0337b8",
+      "driverSha256": "e0821cdf8bd1cd1ae74e4269ac5cc07fb7acdab4d25f394c0e8111c8ce786f2f",
+      "textureSources": [
+        {
+          "file": "Bricks051_1K-PNG_Color.png",
+          "sourceSha256": "9adbf36c4f0d6a7f7eb3b85dc35c5c022c15bea802562e5bf9966d83d29facd4",
+          "sourceDimensions": [
+            1024,
+            1024
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "Bricks051_1K-PNG_NormalGL.png",
+          "sourceSha256": "8b14ad4bd834773a26b0bbc4f4afd80fe92c939aa3f49385a41a1fb8165646e8",
+          "sourceDimensions": [
+            1024,
+            1024
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "Bricks051_1K-PNG_Roughness.png",
+          "sourceSha256": "fce4ec1fb6301336503c0d65dd6c14aaf7288dfba5b20c4cd6ab15abf9f33a9d",
+          "sourceDimensions": [
+            1024,
+            1024
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "Metal049A_1K-PNG_Color.png",
+          "sourceSha256": "3c5be68c8a56534f120e88cff835a321ca51459c8f31482f984958c7fbfda8e6",
+          "sourceDimensions": [
+            1024,
+            1024
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "Metal049A_1K-PNG_Metalness.png",
+          "sourceSha256": "61c66550ad5636c9fb8bfb13fc5b2ff4b2ba7cb66831e8c68509124915be045e",
+          "sourceDimensions": [
+            1024,
+            1024
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "Metal049A_1K-PNG_NormalGL.png",
+          "sourceSha256": "5b80adcc8092618a127bb7dfa547e3a35d156efd027c9daa579ac26f9098a678",
+          "sourceDimensions": [
+            1024,
+            1024
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "Metal049A_1K-PNG_Roughness.png",
+          "sourceSha256": "a42d9eaba9bc232739c7cb86dee03805e66f50a065cecfbbfe906aaeb6b3ded2",
+          "sourceDimensions": [
+            1024,
+            1024
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "RoofingTiles013A_1K-PNG_Color.png",
+          "sourceSha256": "ae2037e4c4934b42b60c799b2755cb73c164a883410f89e22ac54ed5ecb4d1de",
+          "sourceDimensions": [
+            1024,
+            1024
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "RoofingTiles013A_1K-PNG_NormalGL.png",
+          "sourceSha256": "2488e6f327db93fe29558a9326ee4dba94022f944e2daf070a7ed47825fa82ab",
+          "sourceDimensions": [
+            1024,
+            1024
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "RoofingTiles013A_1K-PNG_Roughness.png",
+          "sourceSha256": "575b1674cfd09dde9db152b917503c77fa4187693762bf2f8824521975bac812",
+          "sourceDimensions": [
+            1024,
+            1024
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "Wood096_1K-PNG_Color.png",
+          "sourceSha256": "2635d3b950808e52d5de4ce4ee4b3aa35430ffd3117e00c1b2cfb155168e6b47",
+          "sourceDimensions": [
+            1024,
+            1024
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "Wood096_1K-PNG_NormalGL.png",
+          "sourceSha256": "5b9f71b56cc74a397c9263619f7ef0cfc7d668762f4f2c960e4bd883dc2891c5",
+          "sourceDimensions": [
+            1024,
+            1024
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "Wood096_1K-PNG_Roughness.png",
+          "sourceSha256": "bcba2c9b971c17875e0d8b6e11b234ce86a1c4110bd72725c2586b8950738418",
+          "sourceDimensions": [
+            1024,
+            1024
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "WoodFloor043_1K-PNG_Color.png",
+          "sourceSha256": "55a7c25c191c8eb501d87a8872438dcfba307b3a043fee00ad9e89f0c413d684",
+          "sourceDimensions": [
+            1024,
+            512
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "WoodFloor043_1K-PNG_Metalness.png",
+          "sourceSha256": "46ca3dbd1939c6c89b437c195afe51d816336baa0376b9289d6e7dc0757a69dc",
+          "sourceDimensions": [
+            1024,
+            512
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "WoodFloor043_1K-PNG_NormalGL.png",
+          "sourceSha256": "ac8e1221726a512c4eb3cae98674bf0dda774382b2ba2577d36cbf8192986a6e",
+          "sourceDimensions": [
+            1024,
+            512
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "WoodFloor043_1K-PNG_Roughness.png",
+          "sourceSha256": "c15241e172c474ad147003f8e957cf88d305d9e8d82809de201f04f7b969ec26",
+          "sourceDimensions": [
+            1024,
+            512
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        }
+      ],
+      "batchStatic": true,
+      "glb": {
+        "file": "information-kiosk.glb",
+        "sha256": "6e54f9362e967ac7b7a2427f178dd39163894e006ce86958e07dcc636cb900d0",
+        "bytes": 8950308
+      },
+      "editableMaster": {
+        "file": "information-kiosk.blend",
+        "sha256": "a8ad09386829ec7a1f6defc251d78ba588c7d144859708084bd4f29010d0800a",
+        "bytes": 25933365
+      },
+      "scope": "Candidate detailed asset laboratory; no original-metric or gameplay validation"
+    }
+  }
+]

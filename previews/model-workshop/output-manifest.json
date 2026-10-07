@@ -1,0 +1,84 @@
+{
+  "files": [
+    {
+      "path": "ASSET-NOTICES.txt",
+      "bytes": 602,
+      "sha256": "0c7ae3ffb422d23050c79c73c1708a56828529226b245c217352e340e18b0cd1"
+    },
+    {
+      "path": "asset-index.json",
+      "bytes": 25449,
+      "sha256": "5fb1a08e1b5b727037c6d914266787cf5b79881da8db3fd0c77e2a494a721b87"
+    },
+    {
+      "path": "index.html",
+      "bytes": 3601,
+      "sha256": "c5569d91911315848294fdf9eea716df456d90809830857f3cae9382038ae527"
+    },
+    {
+      "path": "models/information-kiosk.glb",
+      "bytes": 8950308,
+      "sha256": "6e54f9362e967ac7b7a2427f178dd39163894e006ce86958e07dcc636cb900d0"
+    },
+    {
+      "path": "models/timber-station.glb",
+      "bytes": 9141736,
+      "sha256": "60d94b3c784726b3dfa5aa89bed37a4da8dee05769ff1f648d918a0de1bf7b41"
+    },
+    {
+      "path": "models/wooden-car.glb",
+      "bytes": 3545440,
+      "sha256": "fc988c55ed60dcd5abf7c5e02ecbc1ac3a8cd828cfe7fe4bb8f30bcf21699b59"
+    },
+    {
+      "path": "style.css",
+      "bytes": 5762,
+      "sha256": "44313e216bd7de13bd74f82faf5674426f6f6dcda45144f1ab6abc3aa4251eff"
+    },
+    {
+      "path": "vendor/THREE-LICENSE.txt",
+      "bytes": 1081,
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+    },
+    {
+      "path": "vendor/addons/controls/OrbitControls.js",
+      "bytes": 40755,
+      "sha256": "3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b"
+    },
+    {
+      "path": "vendor/addons/environments/RoomEnvironment.js",
+      "bytes": 4960,
+      "sha256": "55f466192cc84298755a424c5e040345006b2ee1455589b3b54126c2ea4123f4"
+    },
+    {
+      "path": "vendor/addons/loaders/GLTFLoader.js",
+      "bytes": 117570,
+      "sha256": "131c0f78c01d19368ae495caa65b3adaa10487810a36a05bb5901b769a35ac16"
+    },
+    {
+      "path": "vendor/addons/utils/BufferGeometryUtils.js",
+      "bytes": 37712,
+      "sha256": "9fb63427ce6641fa14fd0baff9cc4d1b5f9c3d85fd084bf2e90e803c44ec1797"
+    },
+    {
+      "path": "vendor/addons/utils/SkeletonUtils.js",
+      "bytes": 11535,
+      "sha256": "b1632a703206c3d830de9fcbe515696770d04b71a15ee6b50afa6d2c3298c86f"
+    },
+    {
+      "path": "vendor/three.core.js",
+      "bytes": 1458113,
+      "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6"
+    },
+    {
+      "path": "vendor/three.module.js",
+      "bytes": 662772,
+      "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea"
+    },
+    {
+      "path": "viewer.js",
+      "bytes": 9365,
+      "sha256": "5f88a9531dbedbc96d8bd362bc6987f88ab7f6c3558835a6210a7a6f5ac9c111"
+    }
+  ]
+}

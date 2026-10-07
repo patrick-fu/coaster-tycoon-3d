@@ -1,0 +1,7 @@
+Coaster Tycoon 3D independently authored asset laboratory. Project source and authored geometry: MIT.
+Three.js 0.186.1: MIT, see vendor/THREE-LICENSE.txt.
+Materials from ambientCG (https://ambientcg.com), CC0-1.0 (https://docs.ambientcg.com/license/):
+Wood096, WoodFloor043, RoofingTiles013A, Metal049A, Fabric081C, Bricks051.
+Individual files/source hashes are recorded in the asset-index export reports.
+Original RCT2 screenshots, game objects, source code and commercial textures are not bundled.
+Candidate dimensions and poses do not establish original gameplay/metric parity or visual acceptance.

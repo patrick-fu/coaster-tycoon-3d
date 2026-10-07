@@ -1,0 +1,12 @@
+{
+  "kind": "candidate-detailed-asset-laboratory",
+  "sourceCommit": "e17c646bc2d49781bd567054309d6c2096bd847c",
+  "sourcePath": "prototypes/detailed-assets",
+  "sourcePullRequest": "https://github.com/patrick-fu/coaster-tycoon-3d/pull/46",
+  "outputManifestSha256": "200a142126043caedf314c7708edc18230e80330e120aa60c0b225b5ba4bf98f",
+  "files": 16,
+  "bytes": 24016761,
+  "verification": "https://github.com/patrick-fu/coaster-tycoon-3d/blob/e17c646bc2d49781bd567054309d6c2096bd847c/prototypes/detailed-assets/evidence/README.md",
+  "scope": "Three independent detailed asset samples; no new simulated attractions or original/human acceptance",
+  "buildHost": "Grok Bot; Debian13; Blender4.3.2; software WebGL"
+}
