@@ -1,0 +1,262 @@
+{
+  "rides": [
+    {
+      "name": "Copper Loop",
+      "status": "open",
+      "cars": 4
+    },
+    {
+      "name": "Juniper Sprint",
+      "status": "open",
+      "cars": 4
+    },
+    {
+      "name": "Highland Flyer",
+      "status": "open",
+      "cars": 4
+    }
+  ],
+  "scenery": 116,
+  "staticObjects": 358,
+  "drawCalls": 350,
+  "triangles": 516878,
+  "memory": {
+    "geometries": 214,
+    "textures": 33
+  },
+  "cash": 486030,
+  "errors": [],
+  "occupiedCar": {
+    "id": 3,
+    "ride": 0,
+    "position": {
+      "x": 102.1527313304401,
+      "y": 97.11149229794147,
+      "z": 8
+    },
+    "direction": {
+      "x": -0.6531728429537775,
+      "y": 0.7572088465064839,
+      "z": 0
+    },
+    "up": {
+      "x": -0.000145191404335904,
+      "y": -0.000125242966692838,
+      "z": 0.9999999816168277
+    },
+    "occupants": 2
+  },
+  "initialPageCount": 0,
+  "closedRestoredTaskTabs": 1,
+  "activeTaskPageCount": 1,
+  "glError": 0,
+  "ok": true,
+  "sourceCommit": "a7d6451bac636c40bf669e1c2f9c73ca1f3833c6",
+  "pageUrl": "http://127.0.0.1:4175/?showcase=classic",
+  "browserVersion": "Chrome/154.0.8037.57",
+  "profile": "/home/box/.config/google-chrome",
+  "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+  "deviceScaleFactor": 1,
+  "artifactHashes": {
+    "LICENSE": "f68cef6a23271aa6fa5022cd7acebc98de572571df4a97077b0ecd7b385aa45d",
+    "THIRD_PARTY_NOTICES.md": "102430fa2f07466af0d69461e0789d55d76007db46f109e85a2fd7e36fd908a3",
+    "art/buildings.js": "fd59e83c14589dc1db7cf43ef79a0ad02ebede0569f092465349387a0161e720",
+    "art/coaster.js": "e3637608646d9237c8f4324bba071b55427aa09003cc36c72c222859d54db100",
+    "art/environment.js": "115bcdb76bcb2c0de796eead9a1dc685ea2733ee5d7e63b52b0a1f073105fe97",
+    "art/runtime.js": "876b391327d26778216644069f58f9236799375824c89ac84b9f9dbdf8106ca3",
+    "content/steel-coaster.d.ts": "5343013758027f0728ea592f583da67f3c799e44e2014bffbe7ec7c1cab076ba",
+    "content/steel-coaster.js": "fb1de5ed28b9280d85c2295c13c708c48368a29b63abcf30b1270f2d024769db",
+    "favicon.svg": "60879a890648c630ab1dc7cdc25975693b3c0610be77a4a11d2e7c7315d5c697",
+    "game.js": "617d020d1905f1e3ebeb73a08bbc30210a048d5c1c3b9876d86c4e4b011c53dd",
+    "index.html": "f38aad633805141448978c9750de54831056d450b3a81c32454fed804d2cb10d",
+    "park-scene.js": "26cbd06d70d56e6d4516f92f975effd4c4c39dee7955d8e7440d3773bc7c767d",
+    "simulation/browser-worker.d.ts": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
+    "simulation/browser-worker.js": "7c750c60653c2c119a4eca0ea58137c65672286440644970638cbd55cae9b9f7",
+    "simulation/clock.d.ts": "3743b968c76cf0406ef9e81b77056b24bb39fec52a1d1ee203ec620667a36567",
+    "simulation/clock.js": "32820b03a12b9bde816654f4e58fd37a24c32b9c8dc035b52d157636e58d9fbd",
+    "simulation/engine.d.ts": "300427f4f82f74d6abacd546f88f5ec3f93f22cf3c5a87121364cd868ae6a1c7",
+    "simulation/engine.js": "44c491bd3814a0506d562526c9f19571d3aa451abe3919841d6b1b2fc51aece4",
+    "simulation/geometry.d.ts": "7f9748530e1641db5515ee36491598adfb17c22049dfb22dcfacb5ab818c3107",
+    "simulation/geometry.js": "262ca58c08300e26a656cbc8dfde01042baf72de546f1f4ce074af2dc65fb74e",
+    "simulation/host.d.ts": "f8cc49c0dd4aad617dead077ae05f9f875eaa47745aefa1a7fb4757d838b02d8",
+    "simulation/host.js": "082d7eb357e539da92874d913451461f894b303acd8d5b2fa19ddccf037ac4ea",
+    "simulation/housekeeping.d.ts": "990317c2bb8a132cc5e991592594b00977344fb025db0ada0f273e3cd6ae9281",
+    "simulation/housekeeping.js": "37f6c3f0c0b89ea42b97b0250c20aa01bc4e2b3c3ae58bfd6b78869d613b2932",
+    "simulation/index.d.ts": "72c637bae30bf37e9bd3e0bb6d893958ba41c53582f2f843c794c286f91db5d6",
+    "simulation/index.js": "950e0d44175e72d5e175b7c7211b04d1c93e4a2b3729ae1a49f0b87a9b0f3c22",
+    "simulation/motion.d.ts": "9b8e99db9e77447f15a84b1d92cce8cd14f6bf8f49e43023aa1b44e7b0b943b7",
+    "simulation/motion.js": "4c3d5c27617302f607d0235a10eeda4cd4fafc9c81cb7859327fba0b407f34e6",
+    "simulation/operation.d.ts": "4be5cf50780fee55e4602037219873aff1236a984d140de8a730f4ab92ae03dc",
+    "simulation/operation.js": "895e66beed28737a7eba467a38c0989ebdb5f25959c8283ca0537aae2c7e1860",
+    "simulation/patrol.d.ts": "ccd72adedd54103092d2887e31753f8d745417372834c6c4054f3e50979e3273",
+    "simulation/patrol.js": "4a59eec5e274c541fecf413cb62cd27cabfe5fb13aaa6104d5543b8498b16e16",
+    "simulation/people.d.ts": "d0d827823c3cdf19ce7e95fc5ad8e5ebad30bc8c71e3f53eea353094d058bcd9",
+    "simulation/people.js": "dbc11106f53b7fd7d230ec6b84a3b2daf6ddd5f5644b1717cbf06b1ace888b54",
+    "simulation/routes.d.ts": "59198c54257a442d97c716a79d773a68d8c3e0c3475f0148c954d0557c4abaa8",
+    "simulation/routes.js": "ec098e36c6a24155b4d10da3118a7240e08850a4b38c52eb7d4891be556c3453",
+    "simulation/scenery.d.ts": "b4c948c6004a2de0dbc5141a1c3fe28038ab036458e5b7824d8a30e0e6286bfb",
+    "simulation/scenery.js": "af181426f98f7c6daab583055906264db929940ecb25a3fe50c1ca219d9ee520",
+    "simulation/services.d.ts": "8517c797d1eba6417464ed3cf1e3b9a5ae28f880f4e1c0016b877c341fd3dbc5",
+    "simulation/services.js": "274a27fd582abacb8c1be47f70b10b5f4b6a50423dea162244dc1dc9115e9a35",
+    "simulation/types.d.ts": "cb3bdea1b64cdbc6c86677bbc15b12a7a0ebcec72888f0e9e20b10374958d778",
+    "simulation/types.js": "1a6231381895d5abcccbc927e582be7270c22e19c76be7c5c3e560d83ea97d91",
+    "simulation/validation.d.ts": "b5a15290a701b60b3d0ccfa2c8b0968fefe4b639623effee2e2f8d3cc121a43d",
+    "simulation/validation.js": "10a2f21ddd134f16105bf4f0153d57a6e660d7938157e30c1958487498b66056",
+    "simulation/view.d.ts": "4ae059cc1e81d0fbe999934a325771290f6e7fa8f8b88d34b3d01657ca9247fd",
+    "simulation/view.js": "426bb6f7ddd31ff5fe03b10747d0c670b670d99c4ddb2a8b96703a857c001b39",
+    "style.css": "f33dec5c2b4f693381e9b05308d47c10bf97ad89ba17a5a4642881435f7b20bc",
+    "vendor/OrbitControls.js": "3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b",
+    "vendor/THREE-LICENSE.txt": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+    "vendor/three.core.js": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
+    "vendor/three.module.js": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea"
+  },
+  "captures": {
+    "overview": {
+      "sha256": "b66fa41c2ba95cd5029564055520d9fe1c3d5d0b2ad992714993c0b3d1f3376e",
+      "width": 1920,
+      "height": 1080
+    },
+    "station-shops": {
+      "sha256": "727d7c6b00e3d88052f1e09ffdcbae3145895baf31ece5755e1f673774c59980",
+      "width": 1920,
+      "height": 1080
+    },
+    "gate-facilities": {
+      "sha256": "dd2f31477791c3227e6a81e4a9e606abfc5a4302b69e5da845072ce458482239",
+      "width": 1920,
+      "height": 1080
+    },
+    "landscaping": {
+      "sha256": "8843cee7e2366e8477f21021693dd317bfabedef3cf088351c5034507abe8be9",
+      "width": 1920,
+      "height": 1080
+    },
+    "train": {
+      "sha256": "b56985e822a9fab06ea33a8f4dab0ae4b001c585b31db8f514a4c967ebfeec8a",
+      "width": 1920,
+      "height": 1080
+    },
+    "narrow": {
+      "sha256": "325d6b9b0da85e86d01da157f7d8d7f53a7af5228fd4801eda9c938389049d5c",
+      "width": 1280,
+      "height": 800
+    }
+  },
+  "shotStates": {
+    "overview": {
+      "tick": 3818,
+      "paused": true,
+      "camera": [
+        154,
+        64,
+        150
+      ],
+      "target": [
+        82,
+        4,
+        74
+      ],
+      "zoom": 1.18,
+      "cars": 12,
+      "peoplePackedValues": 30,
+      "visiblePeople": 5.0
+    },
+    "station-shops": {
+      "tick": 3818,
+      "paused": true,
+      "camera": [
+        124,
+        39.99999999999999,
+        113
+      ],
+      "target": [
+        82,
+        4,
+        67
+      ],
+      "zoom": 2.5,
+      "cars": 12,
+      "peoplePackedValues": 30,
+      "visiblePeople": 5.0
+    },
+    "gate-facilities": {
+      "tick": 3818,
+      "paused": true,
+      "camera": [
+        110,
+        29.000000000000007,
+        74
+      ],
+      "target": [
+        82,
+        3.999999999999999,
+        42
+      ],
+      "zoom": 4,
+      "cars": 12,
+      "peoplePackedValues": 30,
+      "visiblePeople": 5.0
+    },
+    "landscaping": {
+      "tick": 3818,
+      "paused": true,
+      "camera": [
+        76,
+        31.000000000000007,
+        70
+      ],
+      "target": [
+        48,
+        4,
+        38
+      ],
+      "zoom": 3.2,
+      "cars": 12,
+      "peoplePackedValues": 30,
+      "visiblePeople": 5.0
+    },
+    "train": {
+      "tick": 4256,
+      "paused": true,
+      "camera": [
+        136.1527313304401,
+        35,
+        133.11149229794148
+      ],
+      "target": [
+        104.1527313304401,
+        9,
+        99.11149229794147
+      ],
+      "zoom": 4,
+      "cars": 12,
+      "peoplePackedValues": 66,
+      "visiblePeople": 11.0
+    },
+    "narrow": {
+      "tick": 4256,
+      "paused": true,
+      "camera": [
+        154,
+        64,
+        150
+      ],
+      "target": [
+        82,
+        4,
+        74
+      ],
+      "zoom": 1.18,
+      "cars": 12,
+      "peoplePackedValues": 66,
+      "visiblePeople": 11.0
+    }
+  },
+  "discardedAppleDoubleMetadata": {
+    "._favicon.svg": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a",
+    "._game.js": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a",
+    "._index.html": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a",
+    "._park-scene.js": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a",
+    "._style.css": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+  }
+}

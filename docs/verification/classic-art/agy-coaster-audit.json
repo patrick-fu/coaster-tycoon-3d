@@ -1,0 +1,16 @@
+{
+  "requestedModel": "gemini-3.8-flash-high",
+  "sourceBase": "458c2bf500aa34775199d793f478cf24c9efa22c",
+  "workspace": "/Volumes/WD/code/workspaces/coaster-art-coaster/coaster-tycoon-3d",
+  "streamSha256": "bb2b487dbc1a4c0a5db722bd7ebf884fca8c9dc6a7353afa7fb1328a1711b63a",
+  "completedTools": {
+    "view_file": 25,
+    "write_to_file": 1
+  },
+  "toolErrors": [],
+  "terminalStatus": "SUCCESS",
+  "deniedActions": [],
+  "processExit": 0,
+  "emittedModel": null,
+  "executionClassification": "completed-tool-evidence"
+}

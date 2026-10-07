@@ -1,0 +1,548 @@
+
+> coaster-tycoon-3d@0.1.0 test
+> npm run build && node --test test/*.test.mjs
+
+
+> coaster-tycoon-3d@0.1.0 build
+> tsc -p tsconfig.json
+
+TAP version 13
+# Subtest: cancelled ride intent retains the same own-queue permission until the guest reaches the public entry
+ok 1 - cancelled ride intent retains the same own-queue permission until the guest reaches the public entry
+  ---
+  duration_ms: 192.074028
+  ...
+# Subtest: a new public shortcut synchronously releases guests excluded from the new queue body
+ok 2 - a new public shortcut synchronously releases guests excluded from the new queue body
+  ---
+  duration_ms: 193.968318
+  ...
+# Subtest: moving the public entry during evacuation cannot overlap escape permission and a new ride intent
+ok 3 - moving the public entry during evacuation cannot overlap escape permission and a new ride intent
+  ---
+  duration_ms: 99.442458
+  ...
+# Subtest: a walking nonmember on a queue must explicitly own its evacuation permission in an imported save
+ok 4 - a walking nonmember on a queue must explicitly own its evacuation permission in an imported save
+  ---
+  duration_ms: 96.159524
+  ...
+# Subtest: evacuation imports cannot finish permission at an arbitrary queue-internal goal
+ok 5 - evacuation imports cannot finish permission at an arbitrary queue-internal goal
+  ---
+  duration_ms: 60.706873
+  ...
+# Subtest: removing and restoring the park entry preserves a waiting evacuation without inventing queue intent
+ok 6 - removing and restoring the park entry preserves a waiting evacuation without inventing queue intent
+  ---
+  duration_ms: 78.018308
+  ...
+# Subtest: another guest occupying a target bench does not make an earlier walking intention unloadable
+ok 7 - another guest occupying a target bench does not make an earlier walking intention unloadable
+  ---
+  duration_ms: 172.657073
+  ...
+# Subtest: malformed guest positions return INVALID_SAVE instead of escaping the host as TypeError
+ok 8 - malformed guest positions return INVALID_SAVE instead of escaping the host as TypeError
+  ---
+  duration_ms: 251.242182
+  ...
+# Subtest: a removed cleaner next step cancels stale movement even when an alternate route remains
+ok 9 - a removed cleaner next step cancels stale movement even when an alternate route remains
+  ---
+  duration_ms: 117.670988
+  ...
+# Subtest: a last-slot bin deposit preserves another pending walking intention for next-tick recovery
+ok 10 - a last-slot bin deposit preserves another pending walking intention for next-tick recovery
+  ---
+  duration_ms: 108.025107
+  ...
+# Subtest: a reachable bin receives an actual purchased wrapper without allocating ground litter
+ok 11 - a reachable bin receives an actual purchased wrapper without allocating ground litter
+  ---
+  duration_ms: 97.448949
+  ...
+# Subtest: no available bin produces persistent ground litter with a unique shared entity identity
+ok 12 - no available bin produces persistent ground litter with a unique shared entity identity
+  ---
+  duration_ms: 89.417396
+  ...
+# Subtest: a full bin remains full and a subsequent wrapper becomes ground litter
+ok 13 - a full bin remains full and a subsequent wrapper becomes ground litter
+  ---
+  duration_ms: 90.299094
+  ...
+# Subtest: a handyman needs patrol access and work duration to remove a litter entity
+ok 14 - a handyman needs patrol access and work duration to remove a litter entity
+  ---
+  duration_ms: 164.123748
+  ...
+# Subtest: a handyman empties a used bin after arrival and actual cleanup work
+ok 15 - a handyman empties a used bin after arrival and actual cleanup work
+  ---
+  duration_ms: 113.41641
+  ...
+# Subtest: bench occupation is exclusive and timed rest restores energy and reduces nausea
+ok 16 - bench occupation is exclusive and timed rest restores energy and reduces nausea
+  ---
+  duration_ms: 71.605706
+  ...
+# Subtest: removing an occupied bench releases its guest and attached amenities protect path deletion
+ok 17 - removing an occupied bench releases its guest and attached amenities protect path deletion
+  ---
+  duration_ms: 116.563911
+  ...
+# Subtest: removed bin jobs release their cleaner immediately and a disconnected litter job cannot finish
+ok 18 - removed bin jobs release their cleaner immediately and a disconnected litter job cannot finish
+  ---
+  duration_ms: 199.91312
+  ...
+# Subtest: partial bench and cleanup work continue identically through saves and different tick batches
+ok 19 - partial bench and cleanup work continue identically through saves and different tick batches
+  ---
+  duration_ms: 117.087548
+  ...
+# Subtest: malformed bench occupancy, litter IDs and cleanup work cannot replace the current park
+ok 20 - malformed bench occupancy, litter IDs and cleanup work cannot replace the current park
+  ---
+  duration_ms: 132.456139
+  ...
+# Subtest: litter consumes the shared entity pool and a full registry retains the wrapper without losing it
+ok 21 - litter consumes the shared entity pool and a full registry retains the wrapper without losing it
+  ---
+  duration_ms: 217.614222
+  ...
+# Subtest: walking amenity imports cannot substitute a missing goal to use a remote bench
+ok 22 - walking amenity imports cannot substitute a missing goal to use a remote bench
+  ---
+  duration_ms: 62.75618
+  ...
+# Subtest: 200 full-map patrols remain compact enough for a legal park to export and import
+ok 23 - 200 full-map patrols remain compact enough for a legal park to export and import
+  ---
+  duration_ms: 921.892629
+  ...
+# Subtest: an accepted high-speed save cannot produce an unrepresentable measurement on the next tick
+ok 24 - an accepted high-speed save cannot produce an unrepresentable measurement on the next tick
+  ---
+  duration_ms: 170.264048
+  ...
+# Subtest: one park couples service needs, queue payments, patrol-blocked breakdown, repair, cleanliness and recurring expenses
+ok 25 - one park couples service needs, queue payments, patrol-blocked breakdown, repair, cleanliness and recurring expenses
+  ---
+  duration_ms: 4676.632709
+  ...
+# Subtest: quotes never allocate identifiers or mutate authoritative state and execution charges its quoted price
+ok 26 - quotes never allocate identifiers or mutate authoritative state and execution charges its quoted price
+  ---
+  duration_ms: 145.748974
+  ...
+# Subtest: stale quotes are rejected without charging or allocating
+ok 27 - stale quotes are rejected without charging or allocating
+  ---
+  duration_ms: 18.112425
+  ...
+# Subtest: insufficient funds, unowned land and boundary placement reject atomically
+ok 28 - insufficient funds, unowned land and boundary placement reject atomically
+  ---
+  duration_ms: 101.272502
+  ...
+# Subtest: connector pitch and bank determine compatible continuation
+ok 29 - connector pitch and bank determine compatible continuation
+  ---
+  duration_ms: 119.14096
+  ...
+# Subtest: a connected circuit blocks extension until explicit removal, which refunds the configured amount
+ok 30 - a connected circuit blocks extension until explicit removal, which refunds the configured amount
+  ---
+  duration_ms: 112.33893
+  ...
+# Subtest: multi-cell clearances reject intersecting rides but allow vertically separated paths
+ok 31 - multi-cell clearances reject intersecting rides but allow vertically separated paths
+  ---
+  duration_ms: 52.123559
+  ...
+# Subtest: terrain and water edits cannot bury paths or leave supports beyond their limit
+ok 32 - terrain and water edits cannot bury paths or leave supports beyond their limit
+  ---
+  duration_ms: 98.138045
+  ...
+# Subtest: path removal invalidates connectivity and foreign queues cannot act as public shortcuts
+ok 33 - path removal invalidates connectivity and foreign queues cannot act as public shortcuts
+  ---
+  duration_ms: 75.760888
+  ...
+# Subtest: loan changes preserve cash minus principal and do not enter construction expenses
+ok 34 - loan changes preserve cash minus principal and do not enter construction expenses
+  ---
+  duration_ms: 179.808449
+  ...
+# Subtest: pause suppresses ticks and restored state continues the same ordered commands
+ok 35 - pause suppresses ticks and restored state continues the same ordered commands
+  ---
+  duration_ms: 128.946338
+  ...
+# Subtest: hostile commands and inherited piece names cannot mutate the park
+ok 36 - hostile commands and inherited piece names cannot mutate the park
+  ---
+  duration_ms: 293.514798
+  ...
+# Subtest: malformed saves preserve live state and reject inconsistent references, ledgers and geometry
+ok 37 - malformed saves preserve live state and reject inconsistent references, ledgers and geometry
+  ---
+  duration_ms: 778.837884
+  ...
+# Subtest: saved profile identity covers prices and external rules/snapshots cannot alter the live engine
+ok 38 - saved profile identity covers prices and external rules/snapshots cannot alter the live engine
+  ---
+  duration_ms: 147.672773
+  ...
+# Subtest: loading a different park invalidates old quotes even when persisted revisions match
+ok 39 - loading a different park invalidates old quotes even when persisted revisions match
+  ---
+  duration_ms: 28.111927
+  ...
+# Subtest: a save cannot pre-refund construction that remains active
+ok 40 - a save cannot pre-refund construction that remains active
+  ---
+  duration_ms: 57.056404
+  ...
+# Subtest: the 255 shared instance budget accepts its last slot and refuses another atomically
+ok 41 - the 255 shared instance budget accepts its last slot and refuses another atomically
+  ---
+  duration_ms: 65.920982
+  ...
+# Subtest: multi-record placement observes the reconstructed tile threshold, including the fixed surface backing
+ok 42 - multi-record placement observes the reconstructed tile threshold, including the fixed surface backing
+  ---
+  duration_ms: 1729.39838
+  ...
+# Subtest: rejected loads preserve pending quotes while new engine instances cannot reuse them
+ok 43 - rejected loads preserve pending quotes while new engine instances cannot reuse them
+  ---
+  duration_ms: 63.7333
+  ...
+# Subtest: command accessors are rejected before they can execute user code
+ok 44 - command accessors are rejected before they can execute user code
+  ---
+  duration_ms: 26.669998
+  ...
+# Subtest: unrepresentable force updates reject the complete tick batch without changing a restorable park
+ok 45 - unrepresentable force updates reject the complete tick batch without changing a restorable park
+  ---
+  duration_ms: 153.912394
+  ...
+# Subtest: a vertical initial tangent has finite orientation and measurements and preserves save continuation
+ok 46 - a vertical initial tangent has finite orientation and measurements and preserves save continuation
+  ---
+  duration_ms: 113.451605
+  ...
+# Subtest: completed travel cannot lose its lap count or disagree with its copied completed measurement
+ok 47 - completed travel cannot lose its lap count or disagree with its copied completed measurement
+  ---
+  duration_ms: 180.700008
+  ...
+# Subtest: imported next steps cannot bypass foreign-queue permissions or an unreachable goal
+ok 48 - imported next steps cannot bypass foreign-queue permissions or an unreachable goal
+  ---
+  duration_ms: 106.80942
+  ...
+# Subtest: testing and opening require a circuit, station and entrance/exit without charging rejected commands
+ok 49 - testing and opening require a circuit, station and entrance/exit without charging rejected commands
+  ---
+  duration_ms: 150.531243
+  ...
+# Subtest: portal height, station side, occupancy and duplicate station roles are authoritative
+ok 50 - portal height, station side, occupancy and duplicate station roles are authoritative
+  ---
+  duration_ms: 115.475272
+  ...
+# Subtest: active rides reject geometry edits, and station removal cannot strand a portal
+ok 51 - active rides reject geometry edits, and station removal cannot strand a portal
+  ---
+  duration_ms: 104.926393
+  ...
+# Subtest: operating legality and reachable guest access remain distinct; path edits change access immediately
+ok 52 - operating legality and reachable guest access remain distinct; path edits change access immediately
+  ---
+  duration_ms: 80.967703
+  ...
+# Subtest: portals refund the explicit profile fraction and preserve continuation and import integrity
+ok 53 - portals refund the explicit profile fraction and preserve continuation and import integrity
+  ---
+  duration_ms: 453.297829
+  ...
+# Subtest: closing a circuit cannot merge station groups with duplicate portal roles
+ok 54 - closing a circuit cannot merge station groups with duplicate portal roles
+  ---
+  duration_ms: 32.841035
+  ...
+# Subtest: individual arrivals walk into a real queue and boarding transfers exactly one current ticket payment
+ok 55 - individual arrivals walk into a real queue and boarding transfers exactly one current ticket payment
+  ---
+  duration_ms: 709.351173
+  ...
+# Subtest: repricing evicts unaffordable queued guests without charging them or disturbing existing passengers
+ok 56 - repricing evicts unaffordable queued guests without charging them or disturbing existing passengers
+  ---
+  duration_ms: 1117.282344
+  ...
+# Subtest: an affordable fare change is rechecked at boarding rather than charging the earlier intent price
+ok 57 - an affordable fare change is rechecked at boarding rather than charging the earlier intent price
+  ---
+  duration_ms: 4298.867801
+  ...
+# Subtest: removing an occupied queue clears membership and rebuilding its path explicitly recovers stranded guests
+ok 58 - removing an occupied queue clears membership and rebuilding its path explicitly recovers stranded guests
+  ---
+  duration_ms: 916.315259
+  ...
+# Subtest: closing a ride stops admission while paid passengers finish and unload safely
+ok 59 - closing a ride stops admission while paid passengers finish and unload safely
+  ---
+  duration_ms: 4483.630737
+  ...
+# Subtest: a missing exit holds passengers and their seats until safe path access is restored
+ok 60 - a missing exit holds passengers and their seats until safe path access is restored
+  ---
+  duration_ms: 596.561999
+  ...
+# Subtest: cash and force preferences produce different individual ride choices
+ok 61 - cash and force preferences produce different individual ride choices
+  ---
+  duration_ms: 165.457827
+  ...
+# Subtest: guest, queue, seat, cash and RNG state continue identically across save and different tick batches
+ok 62 - guest, queue, seat, cash and RNG state continue identically across save and different tick batches
+  ---
+  duration_ms: 156.273005
+  ...
+# Subtest: duplicate queue/seat ownership and inconsistent guest payments cannot replace a live park
+ok 63 - duplicate queue/seat ownership and inconsistent guest payments cannot replace a live park
+  ---
+  duration_ms: 1019.727676
+  ...
+# Subtest: the shared registry counts live guests and cars together and refuses another train atomically
+ok 64 - the shared registry counts live guests and cars together and refuses another train atomically
+  ---
+  duration_ms: 722.95416
+  ...
+# Subtest: saving midway through a walking leg preserves movement and future payment after load
+ok 65 - saving midway through a walking leg preserves movement and future payment after load
+  ---
+  duration_ms: 444.206174
+  ...
+# Subtest: the independent starter park has a legal measured train and continuing guest, service and finance state
+ok 66 - the independent starter park has a legal measured train and continuing guest, service and finance state
+  ---
+  duration_ms: 345.917222
+  ...
+# Subtest: presentation is bounded, copied, nonauthoritative and follows actual car motion
+ok 67 - presentation is bounded, copied, nonauthoritative and follows actual car motion
+  ---
+  duration_ms: 161.433464
+  ...
+# Subtest: the worker clock preserves missed logical ticks, drains bounded backlog and discards paused wall time
+ok 68 - the worker clock preserves missed logical ticks, drains bounded backlog and discards paused wall time
+  ---
+  duration_ms: 6.026755
+  ...
+# Subtest: pause retains unpaused tick debt without advancing it or counting paused wall time
+ok 69 - pause retains unpaused tick debt without advancing it or counting paused wall time
+  ---
+  duration_ms: 0.697269
+  ...
+# Subtest: scenery charges integer candidate costs, obstructs its occupied height, persists and refunds on removal
+ok 70 - scenery charges integer candidate costs, obstructs its occupied height, persists and refunds on removal
+  ---
+  duration_ms: 180.476208
+  ...
+# Subtest: scenery ownership, funds, water, grounding and terrain changes reject atomically
+ok 71 - scenery ownership, funds, water, grounding and terrain changes reject atomically
+  ---
+  duration_ms: 138.106781
+  ...
+# Subtest: flower clearance covers its visible blooms while permitting a separated overhead path
+ok 72 - flower clearance covers its visible blooms while permitting a separated overhead path
+  ---
+  duration_ms: 37.659179
+  ...
+# Subtest: version six parks migrate without changing continuation, cash, membership or player construction
+ok 73 - version six parks migrate without changing continuation, cash, membership or player construction
+  ---
+  duration_ms: 34.291892
+  ...
+# Subtest: invalid scenery and legacy metadata preserve the live park on failed import
+ok 74 - invalid scenery and legacy metadata preserve the live park on failed import
+  ---
+  duration_ms: 105.208959
+  ...
+# Subtest: malformed rule roots retain structured validation errors before scenery normalization
+ok 75 - malformed rule roots retain structured validation errors before scenery normalization
+  ---
+  duration_ms: 1.524427
+  ...
+# Subtest: mechanics can use a longer public route entirely inside patrol instead of an excluded shortcut
+ok 76 - mechanics can use a longer public route entirely inside patrol instead of an excluded shortcut
+  ---
+  duration_ms: 110.492098
+  ...
+# Subtest: saved staff steps cannot leave patrol despite a valid in-patrol goal route
+ok 77 - saved staff steps cannot leave patrol despite a valid in-patrol goal route
+  ---
+  duration_ms: 108.309041
+  ...
+# Subtest: a saved walking facility guest must retain the real counter goal rather than buying remotely
+ok 78 - a saved walking facility guest must retain the real counter goal rather than buying remotely
+  ---
+  duration_ms: 114.591398
+  ...
+# Subtest: shop net receipts use exact safe-integer arithmetic before committing an advance
+ok 79 - shop net receipts use exact safe-integer arithmetic before committing an advance
+  ---
+  duration_ms: 121.294281
+  ...
+# Subtest: food, drink and restroom motives cause an actual counter visit and reconciled purchase
+ok 80 - food, drink and restroom motives cause an actual counter visit and reconciled purchase
+  ---
+  duration_ms: 464.520115
+  ...
+# Subtest: current shop prices are charged at service completion and unavailable purchases recover without payment
+ok 81 - current shop prices are charged at service completion and unavailable purchases recover without payment
+  ---
+  duration_ms: 298.291193
+  ...
+# Subtest: demolishing a used shop retains historical income and stock while permitting slot reuse
+ok 82 - demolishing a used shop retains historical income and stock while permitting slot reuse
+  ---
+  duration_ms: 139.294957
+  ...
+# Subtest: the shared 255-instance pool includes facilities and prevents coaster over-allocation
+ok 83 - the shared 255-instance pool includes facilities and prevents coaster over-allocation
+  ---
+  duration_ms: 59.823863
+  ...
+# Subtest: weekly wages and interest and fortnightly upkeep are separate compulsory expenses
+ok 84 - weekly wages and interest and fortnightly upkeep are separate compulsory expenses
+  ---
+  duration_ms: 332.857741
+  ...
+# Subtest: an operating coaster pays upkeep without ticket sales and a closed one stops that charge
+ok 85 - an operating coaster pays upkeep without ticket sales and a closed one stops that charge
+  ---
+  duration_ms: 177.479357
+  ...
+# Subtest: a mechanic must reach a station inside patrol and complete work before releasing breakdown
+ok 86 - a mechanic must reach a station inside patrol and complete work before releasing breakdown
+  ---
+  duration_ms: 174.228466
+  ...
+# Subtest: a disconnected mechanic job cancels, then a restored route permits repair
+ok 87 - a disconnected mechanic job cancels, then a restored route permits repair
+  ---
+  duration_ms: 147.776085
+  ...
+# Subtest: scheduled inspection is actual staff work and survives a partial-job save
+ok 88 - scheduled inspection is actual staff work and survives a partial-job save
+  ---
+  duration_ms: 99.747667
+  ...
+# Subtest: shop service continuation and finance boundaries do not depend on advance batch sizes
+ok 89 - shop service continuation and finance boundaries do not depend on advance batch sizes
+  ---
+  duration_ms: 42.598549
+  ...
+# Subtest: staff records reject shared ID collisions, impossible jobs and inconsistent shop stock
+ok 90 - staff records reject shared ID collisions, impossible jobs and inconsistent shop stock
+  ---
+  duration_ms: 77.123377
+  ...
+# Subtest: payroll cannot overflow cash and a failing multi-tick batch rolls back time and all services
+ok 91 - payroll cannot overflow cash and a failing multi-tick batch rolls back time and all services
+  ---
+  duration_ms: 62.535117
+  ...
+# Subtest: the legacy 200-staff cap is additional to the shared entity budget and firing permits replacement
+ok 92 - the legacy 200-staff cap is additional to the shared entity budget and firing permits replacement
+  ---
+  duration_ms: 34.058774
+  ...
+# Subtest: removing a job portal or manually clearing breakdown immediately releases stale mechanic work
+ok 93 - removing a job portal or manually clearing breakdown immediately releases stale mechanic work
+  ---
+  duration_ms: 193.117348
+  ...
+# Subtest: testing runs an actual station/track cycle and records geometry-dependent motion
+ok 94 - testing runs an actual station/track cycle and records geometry-dependent motion
+  ---
+  duration_ms: 146.922251
+  ...
+# Subtest: higher actual speed shortens measured duration and increases curve forces
+ok 95 - higher actual speed shortens measured duration and increases curve forces
+  ---
+  duration_ms: 147.9522
+  ...
+# Subtest: a closed moving ride completes its current cycle, suppresses new dispatch and prevents unsafe edits
+ok 96 - a closed moving ride completes its current cycle, suppresses new dispatch and prevents unsafe edits
+  ---
+  duration_ms: 383.13684
+  ...
+# Subtest: configured cars must fit the platform before allocation and preserve unique shared car identities
+ok 97 - configured cars must fit the platform before allocation and preserve unique shared car identities
+  ---
+  duration_ms: 143.09645
+  ...
+# Subtest: pause and save continuation preserve moving trains across different tick batches
+ok 98 - pause and save continuation preserve moving trains across different tick batches
+  ---
+  duration_ms: 79.862143
+  ...
+# Subtest: invalid shared identities, motion phases and measurements cannot replace a live park
+ok 99 - invalid shared identities, motion phases and measurements cannot replace a live park
+  ---
+  duration_ms: 399.657119
+  ...
+# Subtest: gravity, lift chains and brakes affect legal profile-driven motion rather than displayed scores
+ok 100 - gravity, lift chains and brakes affect legal profile-driven motion rather than displayed scores
+  ---
+  duration_ms: 99.680194
+  ...
+# Subtest: a stopped train cannot be imported halfway around the circuit as if it were in its station
+ok 101 - a stopped train cannot be imported halfway around the circuit as if it were in its station
+  ---
+  duration_ms: 89.448009
+  ...
+# Subtest: station length includes a platform crossing the circuit origin and a closed stalled test train can be reset
+ok 102 - station length includes a platform crossing the circuit origin and a closed stalled test train can be reset
+  ---
+  duration_ms: 151.446989
+  ...
+# Subtest: equivalent motion profile data has stable identity regardless of input key order
+ok 103 - equivalent motion profile data has stable identity regardless of input key order
+  ---
+  duration_ms: 29.931166
+  ...
+# Subtest: real worker messages preserve ordering and refuse stale commands and corrupt loads
+ok 104 - real worker messages preserve ordering and refuse stale commands and corrupt loads
+  ---
+  duration_ms: 168.94916
+  ...
+# Subtest: invalid worker correlation data cannot commit a valid mutation
+ok 105 - invalid worker correlation data cannot commit a valid mutation
+  ---
+  duration_ms: 94.750131
+  ...
+# Subtest: a valid-id malformed request receives a correlated error without committing
+ok 106 - a valid-id malformed request receives a correlated error without committing
+  ---
+  duration_ms: 120.91438
+  ...
+1..106
+# tests 106
+# suites 0
+# pass 106
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 15655.77592

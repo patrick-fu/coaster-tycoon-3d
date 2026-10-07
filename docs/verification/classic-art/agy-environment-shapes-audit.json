@@ -1,0 +1,16 @@
+{
+  "requestedModel": "gemini-3.8-flash-high",
+  "emittedModel": null,
+  "streamSha256": "c1a8d0889e97bd8c873e9803ba119c7247277b8f47b0b79dc96f29d5ff8c3afa",
+  "completedTools": {
+    "view_file": 20,
+    "replace_file_content": 5
+  },
+  "toolErrors": [],
+  "terminalStatus": "SUCCESS",
+  "responseNonempty": false,
+  "deniedActions": [],
+  "processExit": 0,
+  "stderr": "[agy] print timeout after 12m0s with turn in progress; returning partial output\n",
+  "executionClassification": "partial-timeout"
+}

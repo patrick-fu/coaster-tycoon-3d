@@ -1,0 +1,29 @@
+{
+  "meshes": 339,
+  "reflected": 0,
+  "instances": 89,
+  "transparent": 36,
+  "observations": [
+    {
+      "name": "PCF shadows refreshed",
+      "error": 0,
+      "cpuSubmissionMs": 64.80000001192093,
+      "calls": 700,
+      "triangles": 628714
+    },
+    {
+      "name": "PCF shadows cached",
+      "error": 0,
+      "cpuSubmissionMs": 6.9000000059604645,
+      "calls": 351,
+      "triangles": 328182
+    },
+    {
+      "name": "Shadows disabled, materials recompiled",
+      "error": 0,
+      "cpuSubmissionMs": 513.2999999970198,
+      "calls": 351,
+      "triangles": 328182
+    }
+  ]
+}

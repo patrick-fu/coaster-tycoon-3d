@@ -7,7 +7,7 @@ unaffiliated with RollerCoaster Tycoon 2 and OpenRCT2.
 Project code is licensed under [MIT](LICENSE). The implementation and required
 game resources are independent; see the [source strategy decision](docs/adr/0001-independent-mit-implementation.md).
 
-Try the [Classic showcase](https://patrick-fu.github.io/coaster-tycoon-3d/?showcase=classic)
+Try the [Classic showcase](https://patrick-fu.github.io/coaster-tycoon-3d/previews/classic-a7d6451/?showcase=classic)
 in desktop Chrome or Edge. Its three operating steel-coaster layouts, shops,
 gardens and local save use a separate showcase slot, preserving your existing
 park at the [regular preview](https://patrick-fu.github.io/coaster-tycoon-3d/).

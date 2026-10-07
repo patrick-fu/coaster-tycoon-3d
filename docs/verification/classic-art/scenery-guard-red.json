@@ -1,0 +1,13 @@
+{
+  "command": "node --test test/scenery.test.mjs",
+  "host": "Grok Bot Linux",
+  "compiledState": "Scenery normalization before the null-root guard",
+  "tests": 6,
+  "passed": 5,
+  "failed": 1,
+  "regression": "malformed rule roots retain structured validation errors before scenery normalization",
+  "expected": "Fault with code INVALID_COMMAND",
+  "observed": "TypeError: Cannot convert undefined or null to object",
+  "exitCode": 1,
+  "durationMs": 662.583169
+}
