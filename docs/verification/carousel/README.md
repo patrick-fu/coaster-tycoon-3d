@@ -89,6 +89,7 @@ The [final real browser control](browser-final.json) also checks246 actual porta
 floor samples and portal bounds, real guest ray picking and seat inspector
 selection, hidden-session removal, shared model resources and actual loader
 cancellation. These finite checks do not imply full rider/body contact physics.
-Public publication is recorded separately when it completes. Original
+[Actual public publication](public-publication.md) records the repaired source,
+all224 HTTP files and both live16-rider entries. Original
 RCT2 metrics, Log Flume, all remaining catalogue/commerce/finance/scenario work,
 representative GPU/scale and Patrick's visual/play acceptance remain required.
