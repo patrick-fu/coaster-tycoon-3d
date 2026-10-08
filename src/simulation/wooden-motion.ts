@@ -1,5 +1,5 @@
 import type {Course,Train} from './motion.js';
-import type {Ride,RideProfile,Vector} from './types.js';
+import type {TrackedRide,RideProfile,Vector} from './types.js';
 import {ensure} from './validation.js';
 
 export type PoseFrame={position:Vector,direction:Vector,up:Vector};
@@ -54,7 +54,7 @@ export function woodenTrainPoses(train:Pick<Train,'position'|'carIds'>,course:Co
  return result;
 }
 
-export function qualifyWoodenCourse(ride:Ride,course:Course,profile:RideProfile){
+export function qualifyWoodenCourse(ride:TrackedRide,course:Course,profile:RideProfile){
  ensure(course.segments.every(s=>s.tangent.z===0),'OPERATING_REQUIREMENTS','This wooden candidate supports flat unbanked courses only.');
  let turn=0,sign=0;
  for(let i=0;i<course.segments.length;i++){

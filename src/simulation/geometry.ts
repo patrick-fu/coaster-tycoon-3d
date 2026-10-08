@@ -4,9 +4,10 @@ import type {GuestRules} from './people.js';
 import type {MotionRules} from './motion.js';
 import type {Cell,Connector,PieceRule,RideProfile,Rules} from './types.js';
 import {ensure,integer,record} from './validation.js';
+import {validateFixedProfiles} from './carousel.js';
 import {defaultScenery,sceneryTypes} from './scenery.js';
 export function validateRules(input:Rules):Rules{
-  record(input,[...(Object.hasOwn(input??{},'scenery')?['scenery']:[]),'housekeeping','services','guests','motion','id','evidence','pathPrice','portalPrice','terrainPrice','refundPerThousand','maxSupport','maxHeight','pieces',...(Object.hasOwn(input??{},'rideProfiles')?['rideProfiles']:[])]);
+  record(input,[...(Object.hasOwn(input??{},'scenery')?['scenery']:[]),'housekeeping','services','guests','motion','id','evidence','pathPrice','portalPrice','terrainPrice','refundPerThousand','maxSupport','maxHeight','pieces',...(Object.hasOwn(input??{},'rideProfiles')?['rideProfiles']:[]),...(Object.hasOwn(input??{},'fixedProfiles')?['fixedProfiles']:[])]);
   const scenery=structuredClone(Object.hasOwn(input,'scenery')?input.scenery:defaultScenery);record(scenery,[...sceneryTypes]);for(const type of sceneryTypes){const rule=scenery[type];record(rule,['price','height']);ensure(integer(rule.price,0,1000000)&&integer(rule.height,8,256)&&rule.height%8===0,'INVALID_COMMAND','Invalid scenery rule.');}
   const housekeeping=validateHousekeepingRules(input.housekeeping),services=validateServiceRules(input.services),motion=validateMotionRules(input.motion),guests=validateGuestRules(input.guests);
   ensure(typeof input.id==='string'&&input.id.length>0&&input.id.length<=80&&['project-candidate','reference-verified'].includes(input.evidence),'INVALID_COMMAND','Invalid rule identity.');
@@ -63,7 +64,7 @@ export function validateRules(input:Rules):Rules{
     const footprints=Object.fromEntries(['flat','left','right','station'].map(key=>[key,value.footprints[key]!.map(cells=>cells.map(c=>({x:c.x,y:c.y,low:c.low,high:c.high,mask:c.mask})).sort((a,b)=>a.x-b.x||a.y-b.y||a.low-b.low||a.high-b.high||a.mask-b.mask))])) as RideProfile['footprints'];
     rideProfiles[id]={motion:selected.motion,pieces:selected.pieces,vehicle:{kind:'coupled-flat',originMm:{x:vehicle.originMm.x,y:vehicle.originMm.y,z:vehicle.originMm.z},wheelbaseMm:vehicle.wheelbaseMm,bogiePivotHeightMm:vehicle.bogiePivotHeightMm,couplerHalfSpanMm:vehicle.couplerHalfSpanMm,couplerHeightMm:vehicle.couplerHeightMm,drawbarLengthMm:vehicle.drawbarLengthMm,railHalfGaugeMm:vehicle.railHalfGaugeMm,stationDeckMm:vehicle.stationDeckMm},footprints};
   }
-  return{...common,rideProfiles};
+  return{...common,rideProfiles,fixedProfiles:validateFixedProfiles(input.fixedProfiles,common)};
 }
 export function turn(x:number,y:number,d:number){const vectors=[[1,0],[0,1],[-1,0],[0,-1]] as const;const [dx,dy]=vectors[d]!;return{x:x*dx-y*dy,y:x*dy+y*dx};}
 export function endpoint(a:Connector,p:PieceRule):Connector{const b=turn(p.end.x,p.end.y,a.direction);return{x:a.x+b.x,y:a.y+b.y,z:a.z+p.end.z,direction:((a.direction+p.end.turn+4)%4) as Connector['direction'],pitch:p.end.pitch,bank:p.end.bank};}

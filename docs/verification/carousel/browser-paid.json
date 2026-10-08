@@ -1,0 +1,200 @@
+{
+  "scope": "Actual local-served shipping app, current worker, unit Carousel model and paid owner rendering. Default Chrome profile, SwiftShader; no representative GPU, original or human acceptance. Quiet autosave suppressed only for this bounded smoke.",
+  "checks": [
+    {
+      "check": "shipping-new-park",
+      "version": 10,
+      "content": 3,
+      "rides": 5,
+      "assets": {
+        "ready": true,
+        "error": null,
+        "disposed": false,
+        "geometries": 31,
+        "materials": 24,
+        "textures": 8,
+        "bitmaps": 8
+      }
+    },
+    {
+      "check": "carousel-toolbar",
+      "stationValue": "313",
+      "trackBuildVisible": false,
+      "position": "\u2014"
+    },
+    {
+      "check": "current-body-toolbar-and-queue-mode",
+      "body": 313,
+      "queueSelected": true
+    },
+    {
+      "check": "actual-paid-render",
+      "case": "full",
+      "seats": [
+        47,
+        31,
+        30,
+        26,
+        25,
+        18,
+        17,
+        46,
+        45,
+        44,
+        29,
+        27,
+        48,
+        42,
+        49,
+        43
+      ],
+      "renderedOwners": [
+        47,
+        31,
+        30,
+        26,
+        25,
+        18,
+        17,
+        46,
+        45,
+        44,
+        29,
+        27,
+        48,
+        42,
+        49,
+        43
+      ],
+      "phase": "running",
+      "phaseTick": 91,
+      "maxAnchorError": 1.4978732565396058e-07,
+      "factory": {
+        "records": 1,
+        "realRiders": 16,
+        "disposed": false
+      },
+      "glError": 0,
+      "triangles": 1049300,
+      "screenshot": {
+        "file": "full.png",
+        "sha256": "83d37f0ba3a6222dbd1641a960b42fcdf00d25eb88b571bd2ad7ef73260489b4"
+      }
+    },
+    {
+      "check": "actual-paid-render",
+      "case": "null-inner",
+      "seats": [
+        47,
+        null,
+        30,
+        26,
+        25,
+        18,
+        17,
+        46,
+        45,
+        44,
+        29,
+        27,
+        48,
+        42,
+        null,
+        43
+      ],
+      "renderedOwners": [
+        47,
+        null,
+        30,
+        26,
+        25,
+        18,
+        17,
+        46,
+        45,
+        44,
+        29,
+        27,
+        48,
+        42,
+        null,
+        43
+      ],
+      "phase": "running",
+      "phaseTick": 91,
+      "maxAnchorError": 1.4978732565396058e-07,
+      "factory": {
+        "records": 1,
+        "realRiders": 14,
+        "disposed": false
+      },
+      "glError": 0,
+      "triangles": 1596978,
+      "screenshot": {
+        "file": "null-inner.png",
+        "sha256": "dd8553cd2857f4cb66961a36712e13323fc24aba3fcaaec80d2a2af1a95815ae"
+      }
+    },
+    {
+      "check": "actual-paid-render",
+      "case": "null-ends",
+      "seats": [
+        null,
+        31,
+        30,
+        26,
+        25,
+        18,
+        17,
+        46,
+        45,
+        44,
+        29,
+        27,
+        48,
+        42,
+        49,
+        null
+      ],
+      "renderedOwners": [
+        null,
+        31,
+        30,
+        26,
+        25,
+        18,
+        17,
+        46,
+        45,
+        44,
+        29,
+        27,
+        48,
+        42,
+        49,
+        null
+      ],
+      "phase": "running",
+      "phaseTick": 91,
+      "maxAnchorError": 1.4978732565396058e-07,
+      "factory": {
+        "records": 1,
+        "realRiders": 14,
+        "disposed": false
+      },
+      "glError": 0,
+      "triangles": 1596978,
+      "screenshot": {
+        "file": "null-ends.png",
+        "sha256": "e2b31758eebc400bda90526cb88bbf30fcdbde9497df130d6da1dc6683554d0d"
+      }
+    }
+  ],
+  "exceptions": [],
+  "consoleErrors": [],
+  "overview": {
+    "file": "overview.png",
+    "sha256": "3ee11b50db4e7bdb474f536a969eb9f6ed06299628ff533bc321561ef2b95b77"
+  },
+  "passed": true
+}

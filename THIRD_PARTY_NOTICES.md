@@ -26,6 +26,13 @@ original manual are observation references; no original sprites, textures, model
 commercial game files or gallery images are included in the game distribution.
 See [art direction and provenance](docs/art-direction.md).
 
+The independent Carousel body and its portals/riders are project geometry,
+with CC0 Wood096, WoodFloor043 and Fabric081C surface inputs from ambientCG.
+Source bundle/member hashes, licence and direct source links are retained in
+`ui/models/carousel/material-provenance.json`; the shipped model manifest lists
+actual texture inputs. Chris Sawyer's original object render was used as an
+external observation reference only and is not included in this distribution.
+
 ## Reference catalogue metadata
 
 `src/content/rct2-reference.ts` contains reference identifiers, English object

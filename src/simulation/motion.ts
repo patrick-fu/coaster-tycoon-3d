@@ -1,4 +1,4 @@
-import type {Element,Ride,Rules,Track,Vector} from './types.js';
+import type {Element,TrackedRide,Rules,Track,Vector} from './types.js';
 import {turn} from './geometry.js';
 import {ensure,integer} from './validation.js';
 
@@ -21,7 +21,7 @@ function rotate(v:Vector,axis:Vector,angle:number){return add(add(scale(v,Math.c
 const stats=():Measurements=>({ticks:0,distance:0,maxSpeed:0,minVerticalG:1000,maxVerticalG:1000,maxLateralG:0});
 
 
-export function compileCourse(ride:Ride,elements:Map<number,Element>,rules:Rules,motion:MotionRules):Course{
+export function compileCourse(ride:TrackedRide,elements:Map<number,Element>,rules:Rules,motion:MotionRules):Course{
   const segments:Segment[]=[],banks:number[]=[];
   let length=0,stationLength=0,initialStation=true;
   for(const id of ride.track){

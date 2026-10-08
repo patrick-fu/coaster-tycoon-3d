@@ -1,0 +1,172 @@
+{
+  "masterSha256": "9c064e645b140823c77c2d92816b5257ba485c69468471bf4495fa8c070abc72",
+  "anchorsBlender": {
+    "CarouselRoot": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "DeckRoot": [
+      0.0,
+      0.0,
+      0.4000000059604645
+    ],
+    "RotorRoot": [
+      0.0,
+      0.0,
+      0.4000000059604645
+    ],
+    "EntranceBuildingRoot": [
+      4.0,
+      8.0,
+      0.0
+    ],
+    "ExitBuildingRoot": [
+      -4.0,
+      8.0,
+      0.0
+    ],
+    "EntranceDeckInterface": [
+      4.0,
+      6.0,
+      0.4000000059604645
+    ],
+    "ExitDeckInterface": [
+      -4.0,
+      6.0,
+      0.4000000059604645
+    ],
+    "Seat_00": [
+      0.0,
+      -4.199999809265137,
+      1.600000023841858
+    ],
+    "Seat_01": [
+      1.0329999923706055,
+      -2.49399995803833,
+      1.600000023841858
+    ],
+    "Seat_02": [
+      2.9700000286102295,
+      -2.9700000286102295,
+      1.600000023841858
+    ],
+    "Seat_03": [
+      2.49399995803833,
+      -1.0329999923706055,
+      1.600000023841858
+    ],
+    "Seat_04": [
+      4.199999809265137,
+      0.0,
+      1.600000023841858
+    ],
+    "Seat_05": [
+      2.49399995803833,
+      1.0329999923706055,
+      1.600000023841858
+    ],
+    "Seat_06": [
+      2.9700000286102295,
+      2.9700000286102295,
+      1.600000023841858
+    ],
+    "Seat_07": [
+      1.0329999923706055,
+      2.49399995803833,
+      1.600000023841858
+    ],
+    "Seat_08": [
+      0.0,
+      4.199999809265137,
+      1.600000023841858
+    ],
+    "Seat_09": [
+      -1.0329999923706055,
+      2.49399995803833,
+      1.600000023841858
+    ],
+    "Seat_10": [
+      -2.9700000286102295,
+      2.9700000286102295,
+      1.600000023841858
+    ],
+    "Seat_11": [
+      -2.49399995803833,
+      1.0329999923706055,
+      1.600000023841858
+    ],
+    "Seat_12": [
+      -4.199999809265137,
+      0.0,
+      1.600000023841858
+    ],
+    "Seat_13": [
+      -2.49399995803833,
+      -1.0329999923706055,
+      1.600000023841858
+    ],
+    "Seat_14": [
+      -2.9700000286102295,
+      -2.9700000286102295,
+      1.600000023841858
+    ],
+    "Seat_15": [
+      -1.0329999923706055,
+      -2.49399995803833,
+      1.600000023841858
+    ]
+  },
+  "rotorVertexRadius": 4.850000139298773,
+  "horseVertexRadius": 4.44821572065997,
+  "columnAndRailSweep": [
+    {
+      "object": "Roof_Column_00",
+      "minimumTriangleRadius": 4.919999931052448,
+      "horseRadialClearance": 0.4717842103924781
+    },
+    {
+      "object": "Roof_Column_01",
+      "minimumTriangleRadius": 4.919999846249089,
+      "horseRadialClearance": 0.4717841255891191
+    },
+    {
+      "object": "Roof_Column_02",
+      "minimumTriangleRadius": 4.92000002797057,
+      "horseRadialClearance": 0.4717843073105996
+    },
+    {
+      "object": "Roof_Column_03",
+      "minimumTriangleRadius": 4.919999931052448,
+      "horseRadialClearance": 0.4717842103924781
+    },
+    {
+      "object": "Roof_Column_04",
+      "minimumTriangleRadius": 4.920000088544395,
+      "horseRadialClearance": 0.4717843678844247
+    },
+    {
+      "object": "Roof_Column_05",
+      "minimumTriangleRadius": 4.919999918937682,
+      "horseRadialClearance": 0.471784198277712
+    },
+    {
+      "object": "Roof_Column_06",
+      "minimumTriangleRadius": 4.919999918937682,
+      "horseRadialClearance": 0.471784198277712
+    },
+    {
+      "object": "Roof_Column_07",
+      "minimumTriangleRadius": 4.920000088544395,
+      "horseRadialClearance": 0.4717843678844247
+    },
+    {
+      "object": "Perimeter_Railings",
+      "minimumTriangleRadius": 5.125201198071079,
+      "horseRadialClearance": 0.676985477411109
+    }
+  ],
+  "staticWalkSamples": 1134,
+  "staticWalkFloorFailures": [],
+  "scope": "Finite actual horizontal-triangle coverage probes and analytic radial separation for actual mesh triangles. Avatar, shaft/deck contacts and full path/portal transitions remain separate."
+}

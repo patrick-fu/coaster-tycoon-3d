@@ -1,0 +1,75 @@
+{
+  "base": "ccba3cfe5f8484954c1a3e2f95863e49b1ef3d63",
+  "files": [
+    {
+      "path": "src/simulation/engine.ts",
+      "sha256": "c173e0061eb5dd136f866af073315b9a1ed1d233de820a95c0db936d859bbe0b",
+      "bytes": 78892
+    },
+    {
+      "path": "src/simulation/view.ts",
+      "sha256": "82e03dd93a62c3a26b6480f1cb1ac2235836d461815e458547a4b8918bb42ed3",
+      "bytes": 7136
+    },
+    {
+      "path": "src/simulation/carousel.ts",
+      "sha256": "0b443ca2d54a0b7c14750fc34caa892e6add233f3f3749ca9f396995b64f6118",
+      "bytes": 4886
+    },
+    {
+      "path": "src/content/carousel.ts",
+      "sha256": "4a8b55a49061f6ee5da899be8dc0b4ecb4d704a7a37703512452a3e3b48abdc2",
+      "bytes": 1247
+    },
+    {
+      "path": "src/content/mixed-park.ts",
+      "sha256": "f55f499fab73db7446c7c4cc7665451b9d82840ef028ae8687902afc43b19a92",
+      "bytes": 3977
+    },
+    {
+      "path": "ui/game.js",
+      "sha256": "36afcfd8ca928268330a17833addd4d6ee201235bb6faa490a11e7e39a886f6f",
+      "bytes": 32373
+    },
+    {
+      "path": "ui/park-scene.js",
+      "sha256": "0ac937d86b24ef298a77dbb15cd0aa563d2d5b5c83b845eb3955bd7a9372810c",
+      "bytes": 14047
+    },
+    {
+      "path": "ui/art/carousel.js",
+      "sha256": "02173c16094d2caf950e1c7908bf51268f36ef955d91af09b7457705272b15e8",
+      "bytes": 11175
+    },
+    {
+      "path": "ui/art/carousel-assets.js",
+      "sha256": "5b437923981d7728133e4fdf3173808dced188f66cc7b18ab653470738c92453",
+      "bytes": 4536
+    },
+    {
+      "path": "ui/art/carousel-portal.js",
+      "sha256": "be22f0a550df9625640910022bbfae67ee19aac0913330bcba9fc482152b4eac",
+      "bytes": 7877
+    },
+    {
+      "path": "ui/models/carousel/body.glb",
+      "sha256": "405e14e1d2f6a54bd7f05676697f1d96193b7f0378c2426601d0de1484a9464f",
+      "bytes": 5369400
+    },
+    {
+      "path": "prototypes/detailed-assets/sources/carousel.py",
+      "sha256": "b1563f36db78dd70cc037a68a882ef5ee510237a8cb38a1ae6209be8b53119ff",
+      "bytes": 55211
+    },
+    {
+      "path": "test/carousel.test.mjs",
+      "sha256": "49ea42249fdfc61217ab1a7dfdd66b09f7d0fda1498220f5f3ec61bebed1dac1",
+      "bytes": 19207
+    },
+    {
+      "path": "test/fixtures/v9-mixed-continuation.json.gz",
+      "sha256": "6148fc5dc7a74a1522b447726549ab365dd40b86e72d3f07e2526a29f981bb76",
+      "bytes": 358539
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+[
+  {
+    "id": "Wood096",
+    "page": "https://ambientcg.com/a/Wood096",
+    "license": "CC0-1.0",
+    "bundle": {
+      "path": "materials/Wood096_1K-PNG.zip",
+      "url": "https://ambientcg.com/get?file=Wood096_1K-PNG.zip",
+      "bytes": 15153371,
+      "sha256": "08bb999fff1a56789e33f77ab94124f1734238185fd2ff40e0ab109ce2f555b5"
+    },
+    "members": [
+      {
+        "name": "Wood096_1K-PNG_Color.png",
+        "bytes": 1076245,
+        "sha256": "2635d3b950808e52d5de4ce4ee4b3aa35430ffd3117e00c1b2cfb155168e6b47"
+      },
+      {
+        "name": "Wood096_1K-PNG_NormalGL.png",
+        "bytes": 5092366,
+        "sha256": "5b9f71b56cc74a397c9263619f7ef0cfc7d668762f4f2c960e4bd883dc2891c5"
+      },
+      {
+        "name": "Wood096_1K-PNG_Roughness.png",
+        "bytes": 609059,
+        "sha256": "bcba2c9b971c17875e0d8b6e11b234ce86a1c4110bd72725c2586b8950738418"
+      }
+    ]
+  },
+  {
+    "id": "WoodFloor043",
+    "page": "https://ambientcg.com/a/WoodFloor043",
+    "license": "CC0-1.0",
+    "bundle": {
+      "path": "materials/WoodFloor043_1K-PNG.zip",
+      "url": "https://ambientcg.com/get?file=WoodFloor043_1K-PNG.zip",
+      "bytes": 7581590,
+      "sha256": "6211c1589cc988b72fc74c3ad638be8db789a7cb619537d02cf7b6e0e6b30bb8"
+    },
+    "members": [
+      {
+        "name": "WoodFloor043_1K-PNG_Color.png",
+        "bytes": 659574,
+        "sha256": "55a7c25c191c8eb501d87a8872438dcfba307b3a043fee00ad9e89f0c413d684"
+      },
+      {
+        "name": "WoodFloor043_1K-PNG_NormalGL.png",
+        "bytes": 2205607,
+        "sha256": "ac8e1221726a512c4eb3cae98674bf0dda774382b2ba2577d36cbf8192986a6e"
+      },
+      {
+        "name": "WoodFloor043_1K-PNG_Roughness.png",
+        "bytes": 190238,
+        "sha256": "c15241e172c474ad147003f8e957cf88d305d9e8d82809de201f04f7b969ec26"
+      }
+    ]
+  },
+  {
+    "id": "Metal049A",
+    "page": "https://ambientcg.com/a/Metal049A",
+    "license": "CC0-1.0",
+    "bundle": {
+      "path": "materials/Metal049A_1K-PNG.zip",
+      "url": "https://ambientcg.com/get?file=Metal049A_1K-PNG.zip",
+      "bytes": 6456067,
+      "sha256": "802ac78fec292e86642630a510f9e6f869bd702fc2f2e81ad3a2160e80047880"
+    },
+    "members": [
+      {
+        "name": "Metal049A_1K-PNG_Color.png",
+        "bytes": 535253,
+        "sha256": "3c5be68c8a56534f120e88cff835a321ca51459c8f31482f984958c7fbfda8e6"
+      },
+      {
+        "name": "Metal049A_1K-PNG_NormalGL.png",
+        "bytes": 1791977,
+        "sha256": "5b80adcc8092618a127bb7dfa547e3a35d156efd027c9daa579ac26f9098a678"
+      },
+      {
+        "name": "Metal049A_1K-PNG_Roughness.png",
+        "bytes": 325089,
+        "sha256": "a42d9eaba9bc232739c7cb86dee03805e66f50a065cecfbbfe906aaeb6b3ded2"
+      }
+    ]
+  },
+  {
+    "id": "Fabric081C",
+    "page": "https://ambientcg.com/a/Fabric081C",
+    "license": "CC0-1.0",
+    "bundle": {
+      "path": "materials/Fabric081C_1K-PNG.zip",
+      "url": "https://ambientcg.com/get?file=Fabric081C_1K-PNG.zip",
+      "bytes": 14421965,
+      "sha256": "c9de806827984e7f80a69c917661a78449fe08f217e87661b182a6e19951f489"
+    },
+    "members": [
+      {
+        "name": "Fabric081C_1K-PNG_Color.png",
+        "bytes": 116823,
+        "sha256": "0723468f450e7e112738a2051e33403e3fa5a606837fcca8dd1f473817956a6d"
+      },
+      {
+        "name": "Fabric081C_1K-PNG_NormalGL.png",
+        "bytes": 5088743,
+        "sha256": "6db4f24cf86fe3f1e4cde6b86b670da0726602929e3ef60d3c137a14cadb5b6f"
+      },
+      {
+        "name": "Fabric081C_1K-PNG_Roughness.png",
+        "bytes": 310712,
+        "sha256": "0a20570d975bfc6adb15b6881ef09e0d213f7f5a99d48735ef1564d464ca800d"
+      }
+    ]
+  }
+]

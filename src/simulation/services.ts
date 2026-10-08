@@ -5,6 +5,7 @@ import type {Guest,PathPoint,PeopleIndex,Routing} from './people.js';
 import {portalApproach} from './operation.js';
 import {ensure,integer,record} from './validation.js';
 import type {ContentIdentity} from '../content/registry.js';
+import {carouselEditable,fixedProfile} from './carousel.js';
 
 export type FacilityKind='food'|'drink'|'restroom';
 export type Facility={id:number,instanceId:number,content:ContentIdentity,name:string,kind:FacilityKind,element:number,open:boolean,price:number,income:number,sales:number};
@@ -74,7 +75,8 @@ export function stepStaff(s:State,rules:Rules,index:ServiceIndex,route:Routing){
     if(!staff.job){
       let choice:{ride:number,kind:'repair'|'inspection',goal:PathPoint,distance:number}|undefined;
       for(const ride of s.rides){
-        if(claimed.has(ride.id)||!ride.track.length||!ride.broken&&s.tick-ride.lastInspection<rules.services.inspectionInterval)continue;
+        const profile=fixedProfile(ride.content,rules);
+        if(claimed.has(ride.id)||(ride.body===undefined&&!ride.track.length)||!ride.broken&&s.tick-ride.lastInspection<(profile?.inspectionInterval??rules.services.inspectionInterval))continue;
         for(const e of index.elements.values())if(e.kind==='portal'&&e.ride===ride.id){const goal=portalApproach(e);if(!accessible(staff,goal,index,route))continue;const distance=route.distance(staff.point,goal,null,staff.patrol)!;
           const kind=ride.broken?'repair':'inspection';if(!choice||kind==='repair'&&choice.kind!=='repair'||kind===choice.kind&&distance<choice.distance)choice={ride:ride.id,kind,goal,distance};}
       }
@@ -85,7 +87,12 @@ export function stepStaff(s:State,rules:Rules,index:ServiceIndex,route:Routing){
       staff.next??=route.next(staff.point,staff.goal,null,staff.patrol);if(!staff.next){claimed.delete(staff.job.ride);clear(staff);continue;}
       staff.progress++;if(staff.progress>=rules.services.staffWalkTicks){staff.point={...staff.next};staff.next=null;staff.progress=0;}continue;
     }
-    staff.work++;const duration=staff.job.kind==='repair'?rules.services.repairTicks:rules.services.inspectionTicks;
+    const ride=index.rides.get(staff.job.ride)!,profile=fixedProfile(ride.content,rules);
+    if(profile&&staff.job.kind==='inspection'){
+      if(ride.broken){claimed.delete(ride.id);clear(staff);continue;}
+      const session=index.carouselSessions.get(ride.id);if(!session||!carouselEditable(session))continue;
+    }
+    staff.work++;const duration=staff.job.kind==='repair'?(profile?.repairTicks??rules.services.repairTicks):(profile?.inspectionTicks??rules.services.inspectionTicks);
     if(staff.work>=duration){const ride=index.rides.get(staff.job.ride)!;ensure(integer(staff.completed+1),'CAPACITY','Staff service counter exhausted.');if(staff.job.kind==='repair')ride.broken=false;ride.lastInspection=s.tick;staff.completed++;claimed.delete(ride.id);clear(staff);}
   }
 }
@@ -94,7 +101,7 @@ export function stepFinance(s:State,rules:Rules){
   // Integer division occurs once per employee, preserving quarter-month rounding.
   const wages=s.staff.reduce((n,t)=>n+BigInt(Math.floor((t.role==='mechanic'?r.mechanicMonthlyWage:r.handymanMonthlyWage)/4)),0n);
   const interest=BigInt(s.loan)*BigInt(r.interestPer10000)/10000n;
-  const upkeep=(s.tick/r.weekTicks)%r.upkeepWeeks===0?BigInt(s.rides.filter(t=>t.status!=='closed').length)*BigInt(r.rideUpkeep)+BigInt(s.facilities.filter(f=>f.open).length)*BigInt(r.facilityUpkeep):0n;
+  const upkeep=(s.tick/r.weekTicks)%r.upkeepWeeks===0?s.rides.filter(t=>t.status!=='closed').reduce((total,t)=>total+BigInt(fixedProfile(t.content,rules)?.upkeep??r.rideUpkeep),0n)+BigInt(s.facilities.filter(f=>f.open).length)*BigInt(r.facilityUpkeep):0n;
   const charges={wages,interest,upkeep};let total=0n;
   for(const [k,v] of Object.entries(charges) as ['wages'|'interest'|'upkeep',bigint][]){ensure(BigInt(s.ledger[k])+v<=BigInt(Number.MAX_SAFE_INTEGER),'CAPACITY','Operating ledger capacity exhausted.');total+=v;}
   const cash=BigInt(s.cash)-total;ensure(cash>=BigInt(-Number.MAX_SAFE_INTEGER),'CAPACITY','Cash capacity exhausted.');

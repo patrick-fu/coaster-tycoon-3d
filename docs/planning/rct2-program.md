@@ -128,9 +128,10 @@ Unobserved is not failed or passed. Shared kits require per-variant seat, pose,
 frontage, parameter and silhouette checks; a catalog row is not a finished ride.
 
 The production candidate contains separate steel and ground-level wooden profiles,
-three generic facilities and six scenery types; its exact original family mapping
-is unresolved. The [finite mixed operating contract](../mixed-coasters.md) is
-the first P3 slice. Carousel, Log Flume and the remaining required families,
+an independent sixteen-seat Carousel session, three generic facilities and six
+scenery types; its exact original family mapping is unresolved. The
+[finite mixed operating contract](../mixed-coasters.md) and
+[Carousel contract](carousel-slice.md) are the first P3 slices. Log Flume and the remaining required families,
 products, staff, finance, research and scenarios still follow their batch gates.
 None of the complete reference catalogue is claimed implemented merely by
 being inventoried. Earlier EFK/AFK research resolves factual contracts, not the
