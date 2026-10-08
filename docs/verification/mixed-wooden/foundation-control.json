@@ -1,0 +1,35 @@
+{
+  "scope": "Actual old Engine admits elevated native intervals without foundations; finite candidate rejects construction and matching legacy-unpublished saved geometry atomically.",
+  "old": {
+    "pathAccepted": true,
+    "trackOrigin": {
+      "x": 704,
+      "y": 640,
+      "z": 64,
+      "direction": 0,
+      "pitch": 0,
+      "bank": 0
+    },
+    "pathQuote": [
+      {
+        "x": 22,
+        "y": 20,
+        "low": 32,
+        "high": 48,
+        "mask": 15
+      }
+    ]
+  },
+  "green": {
+    "rejection": {
+      "code": "GEOMETRY",
+      "message": "The wooden candidate requires level, dry ground beneath its track."
+    },
+    "saveRejection": {
+      "code": "INVALID_SAVE",
+      "message": "The wooden candidate requires level, dry ground beneath its track."
+    },
+    "atomic": true
+  },
+  "passed": true
+}

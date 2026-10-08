@@ -1,0 +1,351 @@
+{
+  "scope": "Actual software WebGL mixed-park loading, controls, saves and resource ownership; no original agreement, continuous triangle or representative GPU/human qualification.",
+  "captures": [
+    {
+      "file": "classic-checked.png",
+      "sha256": "a88195a317e38f6a5c6a9a966b88259adb37d78e5e04d2e6499a2c762c52d4b2"
+    }
+  ],
+  "exceptions": [],
+  "consoleErrors": [],
+  "assetResponses": [
+    {
+      "url": "http://127.0.0.1:4297/models/wooden/link.glb",
+      "status": 200,
+      "bytes": 988980,
+      "sha256": "bd65312ab91197d08d66fd6258e31f31e46b6d529832a0d741fcb729e0fec671"
+    },
+    {
+      "url": "http://127.0.0.1:4297/models/wooden/car.glb",
+      "status": 200,
+      "bytes": 3636520,
+      "sha256": "ed293d53712c1bc02ce01a5c027d69dd7b31e60ae41c8a811d9a9464274f9adc"
+    },
+    {
+      "url": "http://127.0.0.1:4297/models/wooden/station.glb",
+      "status": 200,
+      "bytes": 9199772,
+      "sha256": "32214cdb6f388bcda1bdbbd59b8ac5a59ba454d947d2fde45380898572809cbd"
+    }
+  ],
+  "states": [
+    {
+      "name": "classic-checked",
+      "state": {
+        "protocol": 2,
+        "content": 2,
+        "tick": 3089,
+        "cash": 495804,
+        "sceneTick": 3089,
+        "camera": {
+          "position": [
+            146,
+            64,
+            156
+          ],
+          "target": [
+            74,
+            4,
+            79.99999999999999
+          ],
+          "zoom": 0.98
+        },
+        "rides": [
+          {
+            "id": 0,
+            "name": "Copper Loop",
+            "family": "independent.circuit-coaster",
+            "phase": "running",
+            "status": "open",
+            "cars": 4
+          },
+          {
+            "id": 4,
+            "name": "Juniper Sprint",
+            "family": "independent.circuit-coaster",
+            "phase": "running",
+            "status": "open",
+            "cars": 4
+          },
+          {
+            "id": 5,
+            "name": "Highland Flyer",
+            "family": "independent.circuit-coaster",
+            "phase": "running",
+            "status": "open",
+            "cars": 4
+          },
+          {
+            "id": 6,
+            "name": "Browser Probe",
+            "family": "independent.circuit-coaster",
+            "phase": null,
+            "status": "closed",
+            "cars": 1
+          }
+        ],
+        "cars": [
+          {
+            "id": 3,
+            "ride": 0,
+            "position": {
+              "x": 100.17589843040743,
+              "y": 98.82188614154445,
+              "z": 8
+            },
+            "seats": [
+              null,
+              null
+            ],
+            "rig": null
+          },
+          {
+            "id": 4,
+            "ride": 0,
+            "position": {
+              "x": 101.73246902867909,
+              "y": 97.57743356325142,
+              "z": 8
+            },
+            "seats": [
+              null,
+              null
+            ],
+            "rig": null
+          },
+          {
+            "id": 5,
+            "ride": 0,
+            "position": {
+              "x": 102.93313136311386,
+              "y": 95.98695546840294,
+              "z": 8
+            },
+            "seats": [
+              null,
+              null
+            ],
+            "rig": null
+          },
+          {
+            "id": 6,
+            "ride": 0,
+            "position": {
+              "x": 103.70344020821419,
+              "y": 94.14912574124054,
+              "z": 8
+            },
+            "seats": [
+              null,
+              null
+            ],
+            "rig": null
+          },
+          {
+            "id": 7,
+            "ride": 4,
+            "position": {
+              "x": 32.19993976373924,
+              "y": 72.00490824570458,
+              "z": 4
+            },
+            "seats": [
+              null,
+              null
+            ],
+            "rig": null
+          },
+          {
+            "id": 8,
+            "ride": 4,
+            "position": {
+              "x": 30.2,
+              "y": 72,
+              "z": 4
+            },
+            "seats": [
+              null,
+              null
+            ],
+            "rig": null
+          },
+          {
+            "id": 9,
+            "ride": 4,
+            "position": {
+              "x": 28.2,
+              "y": 72,
+              "z": 4
+            },
+            "seats": [
+              null,
+              null
+            ],
+            "rig": null
+          },
+          {
+            "id": 10,
+            "ride": 4,
+            "position": {
+              "x": 26.2,
+              "y": 72,
+              "z": 4
+            },
+            "seats": [
+              null,
+              null
+            ],
+            "rig": null
+          },
+          {
+            "id": 11,
+            "ride": 5,
+            "position": {
+              "x": 148.1758984304074,
+              "y": 98.82188614154445,
+              "z": 8
+            },
+            "seats": [
+              null,
+              null
+            ],
+            "rig": null
+          },
+          {
+            "id": 12,
+            "ride": 5,
+            "position": {
+              "x": 149.73246902867908,
+              "y": 97.57743356325142,
+              "z": 8
+            },
+            "seats": [
+              null,
+              null
+            ],
+            "rig": null
+          },
+          {
+            "id": 13,
+            "ride": 5,
+            "position": {
+              "x": 150.93313136311386,
+              "y": 95.98695546840294,
+              "z": 8
+            },
+            "seats": [
+              null,
+              null
+            ],
+            "rig": null
+          },
+          {
+            "id": 14,
+            "ride": 5,
+            "position": {
+              "x": 151.70344020821423,
+              "y": 94.14912574124054,
+              "z": 8
+            },
+            "seats": [
+              null,
+              null
+            ],
+            "rig": null
+          }
+        ],
+        "assets": {
+          "ready": true,
+          "error": null,
+          "disposed": false,
+          "geometries": 33,
+          "materials": 51,
+          "textures": 24,
+          "bitmaps": 24
+        },
+        "wooden": {
+          "activeCars": 0,
+          "activeLinks": 0
+        },
+        "renderer": {
+          "geometries": 223,
+          "textures": 48
+        },
+        "drawCalls": 686,
+        "glErrors": [],
+        "feedback": "Your park is ready. Select a tool to build or inspect."
+      }
+    }
+  ],
+  "browser": {
+    "Browser": "Chrome/155.0.8059.39",
+    "Protocol-Version": "1.3",
+    "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+    "V8-Version": "15.5.35.20",
+    "WebKit-Version": "537.36 (@3ff7ac5a9224be9156d7f8703a06e22890aafd34)",
+    "webSocketDebuggerUrl": "ws://127.0.0.1:9237/devtools/browser/cc57baf6-0045-46b1-9a92-5535248985e1"
+  },
+  "browserSha256": "ed05e73a2cdf875326fcfa438b31c71a6a885a353610731dd52090dfc476f778",
+  "reusedClassic": {
+    "path": "/workspace/coaster-mixed-wooden/evidence/browser-classic-final/result.json",
+    "sha256": "f0e4137862df77f75a09b253631febd085fe9e1aa3dde4021859363bafc38954",
+    "scope": "The27 actual product checks already passed; no replay of those checks."
+  },
+  "classic": {
+    "checks": [
+      "WebGL scene and Classic controls render",
+      "Legal elevated paths clear detailed station, portal and shop roofs",
+      "Pause suppresses actual worker updates",
+      "A valid steel-only v7 file import adds current identities and profiles without changing legacy park values",
+      "Unsupported original content cannot allocate a ride through the actual worker",
+      "Speed controls update through worker replies",
+      "Pointer path placement charges the authoritative price",
+      "A shop side wall retains its path border while its real frontage stays open",
+      "Rejected duplicate placement preserves money and state",
+      "New coaster, station, append and partial refund use real commands",
+      "Loan control moves cash and principal without income",
+      "Facility inspection edits current price and opening state",
+      "Staff placement and instanced picking select a real employee",
+      "Patrol painting reaches authoritative staff state",
+      "A rejected patrol tile leaves later valid painting usable",
+      "Rapid valid patrol clicks commit in order without a false stale error",
+      "Scenery clicks pay the quote and batched picking removes the selected lantern",
+      "Focused dialog buttons retain native Space and do not toggle park pause",
+      "Browser save reaches IndexedDB and import preserves state",
+      "Invalid imports report structured failure and keep the park",
+      "Static scene replacement disposes obsolete instanced ground buffers",
+      "Forced static refresh survives an already pending view",
+      "Staff list makes overlapping initial employees individually selectable",
+      "Malformed Worker envelopes return correlated errors and preserve a subsequent save",
+      "Unpause permits real worker guest arrivals",
+      "Only actual employees carry rendered work equipment",
+      "Final saved checkpoint preserves the validated park for page reload",
+      "Actual page reload restores the exact saved Classic park",
+      "Showcase writes only its versioned slot",
+      "Returning to player park resumes exact saved state"
+    ],
+    "errors": [],
+    "currentCheck": "Final saved checkpoint preserves the validated park for page reload",
+    "ok": true,
+    "state": {
+      "tick": 3089,
+      "guests": 8
+    }
+  },
+  "library": {
+    "ok": true,
+    "checks": [
+      "Category counts and memberships come from the actual worker catalogue",
+      "Category names and selected choices remain legible in the Classic stylesheet",
+      "Original variants and modes are inspectable while their construction remains disabled",
+      "Selecting an operating mode preserves the actual detail scroll position",
+      "Search and status filters expose true empty and available states",
+      "Reopening preserves filters and selection without allocating another library window",
+      "Family arrow and Space keys preserve focus and do not pause the park",
+      "Browsing, filtering and cancelling preserve all authoritative park state",
+      "An available selected coaster is created through the actual park click with its exact identity",
+      "An available selected drink facility is placed through the actual park click"
+    ]
+  },
+  "passed": true
+}

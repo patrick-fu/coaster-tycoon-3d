@@ -1,0 +1,110 @@
+{
+  "scope": "Actual software WebGL mixed-park loading, controls, saves and resource ownership; no original agreement, continuous triangle or representative GPU/human qualification.",
+  "captures": [],
+  "exceptions": [],
+  "consoleErrors": [],
+  "assetResponses": [
+    {
+      "url": "http://127.0.0.1:4297/models/wooden/link.glb",
+      "status": 200,
+      "bytes": 988980,
+      "sha256": "bd65312ab91197d08d66fd6258e31f31e46b6d529832a0d741fcb729e0fec671"
+    },
+    {
+      "url": "http://127.0.0.1:4297/models/wooden/car.glb",
+      "status": 200,
+      "bytes": 3636520,
+      "sha256": "ed293d53712c1bc02ce01a5c027d69dd7b31e60ae41c8a811d9a9464274f9adc"
+    },
+    {
+      "url": "http://127.0.0.1:4297/models/wooden/station.glb",
+      "status": 200,
+      "bytes": 9199772,
+      "sha256": "32214cdb6f388bcda1bdbbd59b8ac5a59ba454d947d2fde45380898572809cbd"
+    }
+  ],
+  "states": [],
+  "browser": {
+    "Browser": "Chrome/155.0.8059.39",
+    "Protocol-Version": "1.3",
+    "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+    "V8-Version": "15.5.35.20",
+    "WebKit-Version": "537.36 (@3ff7ac5a9224be9156d7f8703a06e22890aafd34)",
+    "webSocketDebuggerUrl": "ws://127.0.0.1:9237/devtools/browser/c3b611b1-3c65-4b5e-81f7-7b56043434ef"
+  },
+  "browserSha256": "ed05e73a2cdf875326fcfa438b31c71a6a885a353610731dd52090dfc476f778",
+  "controlSave": {
+    "path": "/workspace/coaster-mixed-wooden/evidence/browser-final-issue62/park.json",
+    "sha256": "3eb77fc61e7a1fb86ae34f028bbc6fd64306f117c7240be2e3bdf215f4d859b0"
+  },
+  "storageControls": {
+    "scope": "Real IndexedDB records and page reloads; only the quiet-save 60000 ms timer interval is shortened to 1000 ms. Other timers and worker rules remain unchanged.",
+    "absentNewSlot": {
+      "saveSha256": "3eb77fc61e7a1fb86ae34f028bbc6fd64306f117c7240be2e3bdf215f4d859b0",
+      "callbacks": 13,
+      "legacyRetained": true,
+      "v9Written": true
+    },
+    "invalidNewSlot": {
+      "feedback": "Saved park was not loaded: Unsupported save version.",
+      "callbacks": 10,
+      "newRecordRetained": true,
+      "validLegacyNotUsed": true
+    },
+    "explicitSave": {
+      "saveSha256": "a888874d062b95c177e9d6389ca6facdeee24d098c91ac0809be49e966eb468f",
+      "callbacks": 12,
+      "legacyRetained": true
+    },
+    "cameraProbeBeforeAssertions": {
+      "position": [
+        154,
+        64,
+        150
+      ],
+      "target": [
+        82,
+        4,
+        74
+      ],
+      "zoom": 1.18
+    },
+    "newParkCamera": {
+      "previous": {
+        "position": [
+          154,
+          64,
+          150
+        ],
+        "target": [
+          82,
+          4,
+          74
+        ],
+        "zoom": 1.18
+      },
+      "new": {
+        "position": [
+          146,
+          64,
+          156
+        ],
+        "target": [
+          74,
+          4,
+          80
+        ],
+        "zoom": 0.98
+      },
+      "ordinaryRefreshRetainedOrbit": true,
+      "confirmedHandlerUsed": true
+    },
+    "unguardedNegative": {
+      "callbacks": 6,
+      "invalidRecordOverwritten": true,
+      "builtGreenSha256": "8823206e25ef7c4a04dd6b6635638423d7b6c5fd44c034d7be0e91125299ab76",
+      "builtRedSha256": "2cdc9f22de911ad366f9f8e9c0ff4c4db235595757210d55b6038520cf98a707"
+    }
+  },
+  "passed": true
+}

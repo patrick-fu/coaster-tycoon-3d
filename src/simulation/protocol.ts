@@ -1,1 +1,1 @@
-export const WORKER_PROTOCOL_VERSION=1 as const;
+export const WORKER_PROTOCOL_VERSION=2 as const;

@@ -1,6 +1,9 @@
 import type {Element,Portal,Ride,Rules,Track} from './types.js';
 import {endpoint,same} from './geometry.js';
 import {ensure} from './validation.js';
+import {legacyRideContent} from '../content/registry.js';
+import {resolveRideRules,woodenProfile} from '../content/ride-profiles.js';
+import {portalMountYaw} from './wooden-placement.js';
 
 export type Station={id:number,track:number[]};
 export type Eligibility={circuit:boolean,stations:Station[],issues:string[]};
@@ -8,6 +11,7 @@ type Elements=Pick<ReadonlyMap<number,Element>,'get'|'values'>;
 const directions=[[1,0],[0,1],[-1,0],[0,-1]] as const;
 
 export function stationGroups(ride:Ride,elements:Elements,rules:Rules):Station[]{
+  rules=resolveRideRules(ride.content??legacyRideContent(),rules);
   const groups:Station[]=[];
   let current:Station|undefined;
   for(const id of ride.track){
@@ -27,6 +31,8 @@ export function stationGroups(ride:Ride,elements:Elements,rules:Rules):Station[]
 }
 
 export function validatePortal(portal:Portal,ride:Ride,elements:Elements,rules:Rules){
+  const profile=woodenProfile(ride.content??legacyRideContent(),rules);
+  rules=resolveRideRules(ride.content??legacyRideContent(),rules);
   const track=elements.get(portal.station);
   ensure(track?.kind==='track'&&track.ride===ride.id&&rules.pieces[track.piece]!.station,'GEOMETRY','Portal must reference a station track piece.');
   const [dx,dy]=directions[portal.direction]!;
@@ -34,6 +40,9 @@ export function validatePortal(portal:Portal,ride:Ride,elements:Elements,rules:R
   const group=stationGroups(ride,elements,rules).find(s=>s.track.includes(portal.station));
   ensure(group,'GEOMETRY','Station does not belong to the ride.');
   for(const e of elements.values()){
+    if(profile&&e.kind==='portal'&&e.id!==portal.id&&e.station===portal.station){
+      ensure(portalMountYaw(e,track)===portalMountYaw(portal,track),'GEOMETRY','Wooden station portals must agree on the physical bay orientation.');
+    }
     if(e.kind==='portal'&&e.id!==portal.id&&e.ride===ride.id&&e.role===portal.role){
       ensure(!group.track.includes(e.station),'GEOMETRY','Station already has this portal role.');
     }
@@ -41,6 +50,8 @@ export function validatePortal(portal:Portal,ride:Ride,elements:Elements,rules:R
 }
 
 export function eligibility(ride:Ride,elements:Elements,rules:Rules):Eligibility{
+  const profile=woodenProfile(ride.content??legacyRideContent(),rules);
+  rules=resolveRideRules(ride.content??legacyRideContent(),rules);
   const stations=stationGroups(ride,elements,rules),last=ride.track.at(-1),track=last===undefined?undefined:elements.get(last) as Track;
   const circuit=ride.track.length>1&&!!track&&same(endpoint(track.origin,rules.pieces[track.piece]!),ride.anchor);
   const portals=[...elements.values()].filter((e):e is Portal=>e.kind==='portal'&&e.ride===ride.id);
@@ -51,6 +62,11 @@ export function eligibility(ride:Ride,elements:Elements,rules:Rules):Eligibility
   if(!portals.some(p=>p.role==='exit'))issues.push('An exit is required.');
   for(const station of stations){
     if(!portals.some(p=>station.track.includes(p.station)))issues.push(`Station ${station.id} has no entrance or exit.`);
+  }
+  if(profile){
+    const turns=ride.track.map(id=>rules.pieces[(elements.get(id) as Track).piece]!.end.turn).filter(turn=>turn!==0);
+    if(stations.length!==1)issues.push('The wooden candidate requires one connected station.');
+    if(turns.length!==4||turns.some(turn=>turn!==turns[0]))issues.push('The wooden candidate supports one flat four-turn loop with a single turn direction.');
   }
   return{circuit,stations,issues};
 }

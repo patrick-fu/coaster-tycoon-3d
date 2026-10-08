@@ -17,8 +17,8 @@ export const steelRules:Rules={
  pieces:{station:{...flat,price:101,station:true},flat,right:curve(1),left:curve(-1),brake:{...flat,price:90,motion:{...flat.motion,brake:160}},'lift-start':{...piece(90,8,0,1),motion:{samples:samples(32,t=>8*t*t),chain:true,brake:null}},lift:{...piece(70,16,1,1),motion:{samples:samples(32,t=>16*t),chain:true,brake:null}},'lift-end':{...piece(90,8,1,0),motion:{samples:samples(32,t=>8*(2*t-t*t)),chain:true,brake:null}},'drop-start':{...piece(90,-8,0,-1),motion:{samples:samples(32,t=>-8*t*t),chain:false,brake:null}},drop:piece(70,-16,-1,-1),'drop-end':{...piece(90,-8,-1,0),motion:{samples:samples(32,t=>-8*(2*t-t*t)),chain:false,brake:null}},'bank-start':{...flat,price:70,end:{...flat.end,bank:1}},banked:{...flat,entry:{pitch:0,bank:1},end:{...flat.end,bank:1}},'bank-end':{...flat,price:70,entry:{pitch:0,bank:1}}}
 };
 export const initialWorld:WorldOptions={side:48,cash:500000,maxLoan:200000,seed:20261007,land:Array.from({length:46*46},(_,i)=>({tile:{x:1+i%46,y:1+Math.floor(i/46)},height:32,water:0,owned:true}))};
-export function newPark(){
- const engine=new Engine(initialWorld,steelRules);
+export function newPark(rules:Rules=steelRules){
+ const engine=new Engine(initialWorld,rules);
  const apply=(c:Command)=>{const q=engine.quote(c);if(!q.ok)throw new Error(q.error.message);const r=engine.execute(c,q.value.revision);if(!r.ok)throw new Error(r.error.message);return r.value.id!;};
  const ride=apply({type:'create-ride',name:'Copper Loop',tile:{x:18,y:18},height:32,direction:0});const stations:number[]=[];
  for(const name of ['station','station','station','lift-start','lift','lift-end','right','flat','flat','flat','right','drop-start','drop','drop-end','flat','flat','flat','right','flat','flat','flat','right']){const id=apply({type:'append-track',ride,piece:name});if(name==='station')stations.push(id);}

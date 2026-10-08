@@ -19,7 +19,7 @@ acceptance. Never infer original physics from a matching silhouette.
 
 | ID | Distinguishing input and assertion | Present gap |
 |---|---|---|
-| R01 | Build the same supported/unsupported slope/turn/loop with Wooden versus Looping variants; compare legal pieces, support quotes and failure atomicity. | One steel-family profile; modern enabled track groups are not vanilla proof. |
+| R01 | Build the same supported/unsupported slope/turn/loop with Wooden versus Looping variants; compare legal pieces, support quotes and failure atomicity. | Separate steel and finite ground-level wooden candidates; original family parameters and full track groups remain unqualified. |
 | R02 | Place a low crossing/wall above and below ordinary, suspended and inverted cars at adjacent native height/quarter steps. | Isotropic scale and generic clearance; authored visual bounds are conflated. |
 | R03 | Shortest-station fitting with ordered empty/body/end cars; quarter-load rounding, wait bounds, synchronized stations and a blocked departure. | Uniform car/seats, one train/station and incomplete dispatch/block state. |
 | R04 | Open-ended launch reaches rollback, reverses signed motion and safely re-enters its station; brake/stall limits and tests recorded. | Closed circuit/nonnegative progress cannot describe shuttle operation. |
@@ -54,11 +54,11 @@ acceptance. Never infer original physics from a matching silhouette.
 | F04 | Food/merchandise gross and stock margin versus overall profit and gross ride income objectives. | Aggregated shop/stock accounting obscures distinct metrics. |
 | F05 | Six campaigns with target/duration/upfront payment and voucher redemption; research funding/orders/unlocks and costs. | Campaign/research state absent. |
 | F06 | Identical tick-indexed action stream across speed/render stalls, pause construction eligibility and legacy migration with unknown history. | Existing clock correctness does not prove original pause/build policy or historical reconstruction. |
-| S01 | Ten layouts of one variant fail the ten-subtype objective; ten qualifying distinct variants succeed. | Family/object/mode and constructed-instance identities are saved in v8; E/I/N and scenario objective evaluation remain absent. |
+| S01 | Ten layouts of one variant fail the ten-subtype objective; ten qualifying distinct variants succeed. | Family/object/mode and constructed-instance identities are saved in v9/content2; E/I/N and scenario objective evaluation remain absent. |
 | S02 | Guest/value target attained early versus October deadline; sustained low rating grace/countdown/closure. | Scenario calendar/objective/failure state absent. |
 | S03 | Finish designated five rides with testing/open lifecycle and preserved original protected segments. | Protected ride and protected track not separate. |
 | S04 | Height-dependent construction rights, terrain/water/tree/high-construction/marketing restrictions at boundaries. | Generic owned bit and no recipe policies. |
-| S05 | Recipe seed/content manifest/invented research/weather/objective restored exactly; invalid unavailable content rejects without partial load. | Save v8 preserves content and instance identity; recipe/research/weather/objective/calendar history remain absent, and old monthly history cannot be reconstructed. |
+| S05 | Recipe seed/content manifest/invented research/weather/objective restored exactly; invalid unavailable content rejects without partial load. | Save v9 preserves content, instance identity and complete mixed profiles; recipe/research/weather/objective/calendar history remain absent, and old monthly history cannot be reconstructed. |
 
 ## Asset and frontend cases
 
@@ -66,7 +66,7 @@ acceptance. Never infer original physics from a matching silhouette.
 |---|---|---|
 | A01 | Editable Blender source, UV/material source hashes, actual exported GLB/bounds/anchors and reproducibility. | Editable car/station/kiosk and oak sources, exported assets and source/material hashes are delivered. Most categories and discrete-asset gameplay integration remain absent. |
 | A02 | Four-direction/overview/close captures: car shell, roof/frame/counter, organic foliage and distinct family silhouettes are readable and proportionate. | User rejected both prior art checkpoints. |
-| A03 | Every seat/restraint/guest, bogie/swing/spin/gondola pose and load/unload phase aligns with worker state. | Occupants clipped/generic capacity and no detailed rigs. |
+| A03 | Every seat/restraint/guest, bogie/swing/spin/gondola pose and load/unload phase aligns with worker state. | Detailed wooden worker rigs and ordered null seats are integrated in a finite flat/R16 profile; full boarding animation, other articulated families and original agreement remain open. |
 | A04 | Supported PCF, valid normals/UVs/material color spaces, no GL errors, meaningful LOD/batching/picking/disposal and loading/memory measurements. | Finite GLB, oak LOD/resource lifetime and surface material checks are delivered; full-category integration and representative real-GPU qualification remain open. |
 | U01 | Full catalogue correct category/family/variant/mode; installed/selected/researched/implemented/placeable distinctions; actual thumbnails and untested preset labels. | Six-category modeless library with complete reference membership and explicit implementation availability is delivered. Installed/research/preset distinctions, thumbnails and most executable capabilities remain absent. |
 | U02 | Modeless inspectors/finance, bottom construction, delayed receipt/selection safety, keyboard/input focus and narrow resize. | One inspector and modal finance; new behaviors unexecuted. |

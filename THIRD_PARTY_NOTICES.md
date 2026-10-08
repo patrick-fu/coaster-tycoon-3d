@@ -71,3 +71,17 @@ keeps its acquired 2:1 pixel aspect. Runtime tint, normal strength and repeats
 adapt these maps to the existing park geometry. Provider files remain unchanged.
 Source and derived SHA-256 values and the reproducible preparation recipe are
 retained in [the material evidence](docs/experiments/classic-surfaces/README.md).
+
+## Wooden ride materials
+
+The independently authored wooden car and timber station use ambientCG
+[Wood096](https://ambientcg.com/a/Wood096),
+[WoodFloor043](https://ambientcg.com/a/WoodFloor043),
+[RoofingTiles013A](https://ambientcg.com/a/RoofingTiles013A),
+[Metal049A](https://ambientcg.com/a/Metal049A) and
+[Bricks051](https://ambientcg.com/a/Bricks051), licensed under
+[CC0-1.0](https://docs.ambientcg.com/license/). Blender packs the acquired 1K
+images into the retained editable masters and reduces delivery images to 512
+pixels. UV coordinates, material assignments and source image hashes are
+recorded by the reproducible asset exporter. Authored geometry, including the
+drawbar and the bounded station gate refinement, remains MIT.

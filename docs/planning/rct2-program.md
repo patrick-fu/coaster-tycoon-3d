@@ -92,7 +92,7 @@ ride, commercial, guest, finance, scenario, art and UI cases and their gaps.
 |---|---|---|---|
 | P0 Content/evidence contracts | Audited complete inventory, source-linked native parameters/products, corrected art/UI contracts, gap cases and executable task boundaries. No candidate value is labelled observed original. | Research convergence | Root; independent Sol Max audit |
 | P1 Representative asset pipeline | Editable wooden car, timber station and information kiosk/map/umbrella; real UV/material/anchors; remotely exported/validated/rendered GLBs. Then organic foliage, log/water and articulated flat ride. Patrick reviews actual output before bulk style production. | P0; candidate native/render mapping stated | AGY asset writers in isolated files; root remote integration |
-| P2 Content and save foundation | Stable family/variant/mode/instance identities, separate construction/operation/presentation capabilities, versioned worker projections and a v8 identity schema with explicit migration from validated v6/v7. Native collision/render mapping calibration cases; no global model squash. | P0 | Root; Sol Max logical review/isolated experiments |
+| P2 Content and save foundation | Stable family/variant/mode/instance identities, separate construction/operation/presentation capabilities, versioned worker projections, historical v8 identity and current v9 mixed profiles with explicit migration from validated v6/v7/v8. Native collision/render mapping calibration cases; no global model squash. | P0 | Root; Sol Max logical review/isolated experiments |
 | P3 Contrasting playable slice | Wooden versus steel, Log Flume and Twist/Carousel with actual topology, seats, sessions/dispatch, money, guests and save continuation; comparison traces and actual scene poses. | P1 + P2 | Root simulation/integration; AGY type-specific art |
 | P4 Full commerce and park service | All 41 original shop/service variants, 35 vendor products plus photos, carry/consume/container/voucher/ATM/treatment behavior; four staff roles/local jobs, guest motives/history/navigation and rating/reliability. No fake stock-refill mechanic. | P2; terrain/path and lifecycle contracts from P3 | Root logic; AGY visible models/props after P1 gate |
 | P5 Finance, research and scenarios | Admission policies, authoritative calendar/phases and 14-category monthly ledger, campaign/research state, distinct valuations/objectives; authored scenario recipes/restrictions/climates/rights and tested coaster presets. | P2 + P4 accounting/guest contracts; type/ratings from P3 | Root logic/integration; Sol Max adversarial review |
@@ -127,9 +127,12 @@ agreement, editable art, GLB/runtime validated and human visual/play acceptance.
 Unobserved is not failed or passed. Shared kits require per-variant seat, pose,
 frontage, parameter and silhouette checks; a catalog row is not a finished ride.
 
-The current production game contains one candidate steel-family profile, three
-generic facilities and six scenery types; its exact original family mapping is
-unresolved. None of the new complete catalogue is claimed implemented merely by
+The production candidate contains separate steel and ground-level wooden profiles,
+three generic facilities and six scenery types; its exact original family mapping
+is unresolved. The [finite mixed operating contract](../mixed-coasters.md) is
+the first P3 slice. Carousel, Log Flume and the remaining required families,
+products, staff, finance, research and scenarios still follow their batch gates.
+None of the complete reference catalogue is claimed implemented merely by
 being inventoried. Earlier EFK/AFK research resolves factual contracts, not the
 whole programme or issue24's fidelity/hardware acceptance. These are staged
 deliverables, not a dated promise to complete hundreds of assets in one pass.

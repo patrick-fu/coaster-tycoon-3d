@@ -1,0 +1,65 @@
+[
+  {
+    "name": "final-ground-build",
+    "command": [
+      "npm",
+      "run",
+      "build:web"
+    ],
+    "exitCode": 0
+  },
+  {
+    "name": "final-ground-focused",
+    "command": [
+      "node",
+      "--test",
+      "test/mixed-coasters.test.mjs"
+    ],
+    "exitCode": 0
+  },
+  {
+    "name": "final-ground-tests",
+    "command": [
+      "node",
+      "--test",
+      "test/content-identity.test.mjs",
+      "test/content-migration.test.mjs",
+      "test/guest-recovery-review.test.mjs",
+      "test/housekeeping-review.test.mjs",
+      "test/housekeeping.test.mjs",
+      "test/imported-speed.test.mjs",
+      "test/integrated-park.test.mjs",
+      "test/kernel.test.mjs",
+      "test/mixed-coasters.test.mjs",
+      "test/motion-regressions.test.mjs",
+      "test/navigation-saves.test.mjs",
+      "test/operation.test.mjs",
+      "test/people.test.mjs",
+      "test/presentation.test.mjs",
+      "test/scenery.test.mjs",
+      "test/services-review.test.mjs",
+      "test/services.test.mjs",
+      "test/train.test.mjs",
+      "test/v8-continuation.test.mjs",
+      "test/wooden-poses.test.mjs",
+      "test/worker.test.mjs"
+    ],
+    "exitCode": 0
+  },
+  {
+    "name": "browser-inputs",
+    "command": [
+      "node",
+      "prototypes/mixed-wooden/browser-controls.mjs"
+    ],
+    "exitCode": 0
+  },
+  {
+    "name": "foundation-control",
+    "command": [
+      "node",
+      "prototypes/mixed-wooden/foundation-control.mjs"
+    ],
+    "exitCode": 0
+  }
+]

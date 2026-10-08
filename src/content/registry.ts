@@ -1,12 +1,12 @@
 import {ensure,record} from '../simulation/validation.js';
 import {referenceFamilies,referenceVariants} from './rct2-reference.js';
 
-export const CONTENT_VERSION=1 as const;
+export const CONTENT_VERSION=2 as const;
 export type ContentIdentity={familyId:string,variantId:string,modeId:string};
 type ServiceKind='food'|'drink'|'restroom';
-type Construction={kind:'tracked',profileId:'independent-circuit-v1'}|{kind:'facility',service:ServiceKind,profileId:'independent-services-v1'}|{kind:'unimplemented',referenceShape:string};
-type Operation={kind:'circuit',profileId:'independent-circuit-v1'}|{kind:'service',service:ServiceKind,profileId:'independent-services-v1'}|{kind:'unimplemented'};
-export type Presentation={kind:'procedural-coaster',profileId:'classic-candidate-v1'}|{kind:'procedural-facility',service:ServiceKind,profileId:'classic-candidate-v1'}|{kind:'unimplemented'};
+type Construction={kind:'tracked',profileId:'independent-circuit-v1'|'independent.wooden-circuit-v1'}|{kind:'facility',service:ServiceKind,profileId:'independent-services-v1'}|{kind:'unimplemented',referenceShape:string};
+type Operation={kind:'circuit',profileId:'independent-circuit-v1'|'independent.wooden-circuit-v1'}|{kind:'service',service:ServiceKind,profileId:'independent-services-v1'}|{kind:'unimplemented'};
+export type Presentation={kind:'procedural-coaster',profileId:'classic-candidate-v1'}|{kind:'detailed-wooden-coaster',profileId:'detailed-wooden-candidate-v1'}|{kind:'procedural-facility',service:ServiceKind,profileId:'classic-candidate-v1'}|{kind:'unimplemented'};
 type Capabilities={construction:Construction,operation:Operation,presentation:Presentation};
 type Family={id:string,label:string,category:string,reference:{originalSlot:number,sourceUrl:string}|null};
 type Choice={familyId:string,modeIds:string[],capabilities:Capabilities};
@@ -19,6 +19,9 @@ const families=new Map<string,Family>(),variants=new Map<string,Variant>(),modes
 families.set(rideIdentity.familyId,{id:rideIdentity.familyId,label:'Independent circuit coaster',category:'rollerCoaster',reference:null});
 modes.set(rideIdentity.modeId,{id:rideIdentity.modeId,label:'Independent continuous circuit',evidence:'project-candidate'});
 variants.set(rideIdentity.variantId,{id:rideIdentity.variantId,label:'Independent uniform steel train',reference:null,choices:[{familyId:rideIdentity.familyId,modeIds:[rideIdentity.modeId],capabilities:{construction:{kind:'tracked',profileId:'independent-circuit-v1'},operation:{kind:'circuit',profileId:'independent-circuit-v1'},presentation:{kind:'procedural-coaster',profileId:'classic-candidate-v1'}}}]});
+const woodenIdentity:ContentIdentity={familyId:'independent.wooden-circuit-coaster',variantId:'independent.wooden-four-seat-train',modeId:rideIdentity.modeId};
+families.set(woodenIdentity.familyId,{id:woodenIdentity.familyId,label:'Independent wooden coaster',category:'rollerCoaster',reference:null});
+variants.set(woodenIdentity.variantId,{id:woodenIdentity.variantId,label:'Detailed four-seat wooden train',reference:null,choices:[{familyId:woodenIdentity.familyId,modeIds:[woodenIdentity.modeId],capabilities:{construction:{kind:'tracked',profileId:'independent.wooden-circuit-v1'},operation:{kind:'circuit',profileId:'independent.wooden-circuit-v1'},presentation:{kind:'detailed-wooden-coaster',profileId:'detailed-wooden-candidate-v1'}}}]});
 for(const service of ['food','drink','restroom'] as const){
  const familyId=`independent.${service}-facility`,variantId=`independent.${service==='restroom'?'restroom':service+'-stand'}`,modeId=service==='restroom'?'independent.restroom-service':'independent.retail';
  families.set(familyId,{id:familyId,label:`Independent ${service} facility`,category:'commercial',reference:null});
@@ -36,6 +39,7 @@ for(const v of referenceVariants){
 }
 
 export function legacyRideContent():ContentIdentity{return{...rideIdentity};}
+export function woodenRideContent():ContentIdentity{return{...woodenIdentity};}
 export function legacyFacilityContent(service:ServiceKind):ContentIdentity{return{familyId:`independent.${service}-facility`,variantId:`independent.${service==='restroom'?'restroom':service+'-stand'}`,modeId:service==='restroom'?'independent.restroom-service':'independent.retail'};}
 
 export function resolveContent(value:unknown):ResolvedContent{
@@ -51,8 +55,10 @@ export function resolveContent(value:unknown):ResolvedContent{
 export function executableContent(value:unknown,kind:'ride'|ServiceKind):ContentIdentity{
  const resolved=resolveContent(value),{construction,operation,presentation}=resolved.capabilities;
  ensure(construction.kind!=='unimplemented'&&operation.kind!=='unimplemented'&&presentation.kind!=='unimplemented','UNSUPPORTED_CONTENT','This reference content has no executable construction, operation and presentation implementation yet.');
- ensure(kind==='ride'?construction.kind==='tracked'&&operation.kind==='circuit'&&presentation.kind==='procedural-coaster':construction.kind==='facility'&&construction.service===kind&&operation.kind==='service'&&operation.service===kind&&presentation.kind==='procedural-facility'&&presentation.service===kind,'INVALID_CONTENT','Content capabilities do not match the requested instance kind.');
+ ensure(kind==='ride'?construction.kind==='tracked'&&operation.kind==='circuit'&&(presentation.kind==='procedural-coaster'||presentation.kind==='detailed-wooden-coaster'):construction.kind==='facility'&&construction.service===kind&&operation.kind==='service'&&operation.service===kind&&presentation.kind==='procedural-facility'&&presentation.service===kind,'INVALID_CONTENT','Content capabilities do not match the requested instance kind.');
  return resolved.content;
 }
 
-export function catalogue(){return structuredClone({contentVersion:CONTENT_VERSION,families:[...families.values()],variants:[...variants.values()],modes:[...modes.values()]});}
+export function catalogue(availableProfiles:ReadonlySet<string>=new Set()){
+ return structuredClone({contentVersion:CONTENT_VERSION,families:[...families.values()],variants:[...variants.values()].map(v=>({...v,choices:v.choices.map(c=>({...c,runtimeAvailable:c.capabilities.construction.kind!=='unimplemented'&&c.capabilities.operation.kind!=='unimplemented'&&c.capabilities.presentation.kind!=='unimplemented'&&(c.capabilities.construction.kind!=='tracked'||c.capabilities.construction.profileId==='independent-circuit-v1'||availableProfiles.has(c.capabilities.construction.profileId))}))})),modes:[...modes.values()]});
+}

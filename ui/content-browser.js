@@ -1,4 +1,4 @@
-
+import {CONTENT_VERSION} from './content/registry.js';
 const SVG_ROLLER_COASTER = `
 <svg viewBox="0 0 24 24" class="content-library-category-icon" fill="currentColor" aria-hidden="true">
   <path d="M2 20h20v1.5H2z" opacity="0.5"/>
@@ -143,10 +143,10 @@ export function createContentBrowser({ loadCatalogue, onChoose } = {}) {
 
 
   function isChoiceImplemented(choice) {
-    if (!choice || !choice.capabilities) return false;
+    if (!choice || !choice.capabilities || choice.runtimeAvailable !== true) return false;
     const { construction, operation, presentation } = choice.capabilities;
     if (!choice.modeIds?.length || !construction || !operation || !presentation) return false;
-    return construction.kind === 'tracked' && operation.kind === 'circuit' && presentation.kind === 'procedural-coaster' ||
+    return construction.kind === 'tracked' && operation.kind === 'circuit' && ['procedural-coaster','detailed-wooden-coaster'].includes(presentation.kind) ||
       construction.kind === 'facility' && operation.kind === 'service' && presentation.kind === 'procedural-facility' &&
       ['food','drink','restroom'].includes(construction.service) && operation.service === construction.service && presentation.service === construction.service;
   }
@@ -308,7 +308,7 @@ export function createContentBrowser({ loadCatalogue, onChoose } = {}) {
           throw new Error('The content library is unavailable.');
         }
         const data = await loadCatalogue();
-        if (!data || data.contentVersion !== 1 || !Array.isArray(data.families) || !Array.isArray(data.variants) || !Array.isArray(data.modes)) {
+        if (!data || data.contentVersion !== CONTENT_VERSION || !Array.isArray(data.families) || !Array.isArray(data.variants) || !Array.isArray(data.modes)) {
           throw new Error('The catalogue uses an unsupported format.');
         }
         catalogue = data;
@@ -968,7 +968,7 @@ export function createContentBrowser({ loadCatalogue, onChoose } = {}) {
     const cKind = document.createElement('div');
     cKind.className = 'content-library-capability-kind';
     const cDot = document.createElement('span');
-    const cIsOk = construction && construction.kind && construction.kind !== 'unimplemented';
+    const cIsOk = currentChoice?.runtimeAvailable === true && construction && construction.kind && construction.kind !== 'unimplemented';
     cDot.className = 'content-library-dot ' + (cIsOk ? 'content-library-dot-active' : 'content-library-dot-pending');
     cKind.appendChild(cDot);
     const cText = document.createElement('span');
@@ -995,7 +995,7 @@ export function createContentBrowser({ loadCatalogue, onChoose } = {}) {
     const oKind = document.createElement('div');
     oKind.className = 'content-library-capability-kind';
     const oDot = document.createElement('span');
-    const oIsOk = operation && operation.kind && operation.kind !== 'unimplemented';
+    const oIsOk = currentChoice?.runtimeAvailable === true && operation && operation.kind && operation.kind !== 'unimplemented';
     oDot.className = 'content-library-dot ' + (oIsOk ? 'content-library-dot-active' : 'content-library-dot-pending');
     oKind.appendChild(oDot);
     const oText = document.createElement('span');
@@ -1015,7 +1015,7 @@ export function createContentBrowser({ loadCatalogue, onChoose } = {}) {
     const pKind = document.createElement('div');
     pKind.className = 'content-library-capability-kind';
     const pDot = document.createElement('span');
-    const pIsOk = presentation && presentation.kind && presentation.kind !== 'unimplemented';
+    const pIsOk = currentChoice?.runtimeAvailable === true && presentation && presentation.kind && presentation.kind !== 'unimplemented';
     pDot.className = 'content-library-dot ' + (pIsOk ? 'content-library-dot-active' : 'content-library-dot-pending');
     pKind.appendChild(pDot);
     const pText = document.createElement('span');

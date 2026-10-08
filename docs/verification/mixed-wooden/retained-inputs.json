@@ -1,0 +1,155 @@
+{
+  "browser-functional-partial.json": {
+    "source": "/Volumes/WD/code/workspaces/coaster-mixed-wooden/evidence/browser-final-issue62/result.json",
+    "sha256": "81cd3ec0aec7f3a0d27918bb30160aaeadefb55cc754dccaee63fbd204e32b04"
+  },
+  "browser-lifetime.json": {
+    "source": "/Volumes/WD/code/workspaces/coaster-mixed-wooden/evidence/browser-car-view/result.json",
+    "sha256": "12cff31c9c9e96625b5e8d5f246635426b0cf651213605a5b919afea1e2bd642"
+  },
+  "browser-storage.json": {
+    "source": "/Volumes/WD/code/workspaces/coaster-mixed-wooden/evidence/browser-storage-repaired/result.json",
+    "sha256": "1a723436bd1b1aef4380232790d5965991d781f00c7383568aaf47397eb61118"
+  },
+  "ground-checks.json": {
+    "source": "/Volumes/WD/code/workspaces/coaster-mixed-wooden/evidence/final-ground-checks.json",
+    "sha256": "d2820df91f412fa359ab7c9551bf35e553a9e84e8fdd4e3023578f611939bb43"
+  },
+  "foundation-control.json": {
+    "source": "/Volumes/WD/code/workspaces/coaster-mixed-wooden/evidence/foundation-control.json",
+    "sha256": "96b72ad0c30c56a7ff07934b3e5c60b9aee84ec58b042dafe51f8e4e74725897"
+  },
+  "merged-track-correspondence.json": {
+    "source": "/Volumes/WD/code/workspaces/coaster-mixed-wooden/evidence/merged-track-correspondence.json",
+    "sha256": "35ab6068ccebb51d22fa6155e8e3200a907dc93ab820a2bbeb3c39a9a52da534"
+  },
+  "paid-running-checkpoint.json": {
+    "source": "/Volumes/WD/code/workspaces/coaster-mixed-wooden/evidence/paid-running-checkpoint.json",
+    "sha256": "a4b3e93cf5f85452fd3b2bc8fe11504cef8e02fef1d22d15cfc930a31602592c"
+  },
+  "contact-report.md": {
+    "source": "/Volumes/WD/code/workspaces/coaster-wooden-native-placement/station-contact/new-candidate/REPORT.md",
+    "sha256": "8e15997d8f58f411500a4a63407c40d9dbbd9517557e9fdf1f6044fe8e3eb3f6"
+  },
+  "preservation-report.md": {
+    "source": "/Volumes/WD/code/workspaces/coaster-wooden-running-gear-preservation/evidence/REPORT.md",
+    "sha256": "6a0bf33f118e6a995675eecfab2aa434c0be1df2741d5dc7ab38106c93dd1786"
+  },
+  "portals-report.md": {
+    "source": "/Volumes/WD/code/workspaces/coaster-wooden-native-placement/generated-portals/repaired/REPORT.md",
+    "sha256": "2d433ef06f13dc8317f471696f34e320d3d37b96fe4cd35c20ca4bb5e6518854"
+  },
+  "agy-final-visual-critique.md": {
+    "source": "/Volumes/WD/code/workspaces/coaster-wooden-renderer-authoring/evidence/final-visual-audit/response.md",
+    "sha256": "fc0a1965cd8d35d76c8654123bcda600b0a337d8670d26609fa57729355c6f17"
+  },
+  "agy-final-visual-audit.json": {
+    "source": "/Volumes/WD/code/workspaces/coaster-wooden-renderer-authoring/evidence/final-visual-audit/audit.json",
+    "sha256": "6bf661f4e424414fe31c4121d78bb7e2ce9f0f0303b11dd32c5b2ec7cede5907"
+  },
+  "raw/initial-transport-tests.stdout.log.gz": {
+    "source": "/Volumes/WD/code/workspaces/coaster-mixed-wooden/evidence/final-tests.stdout.log",
+    "uncompressedSha256": "f8b35f33e98e0b1ff8a7332a9e7b87ef8dc6a97f0d05e9e41f403f40721dc9fb",
+    "sha256": "43863c8f36c594049c4075f71f0fe31b9eebb9ed804fce1448aa1e38270ee55a"
+  },
+  "raw/initial-ground-tests.stdout.log.gz": {
+    "source": "/Volumes/WD/code/workspaces/coaster-mixed-wooden/evidence/final-tests-clean.stdout.log",
+    "uncompressedSha256": "4ae78f305f56cdb65e335d574b00e12238d04aa7979dfcdefde85d15ee8e7f0f",
+    "sha256": "38e80a284cbf0b1426a886adb58c81ea5d1cf7f456ca9f44fb6fa6d746e0edf4"
+  },
+  "raw/ground-tests.stdout.log.gz": {
+    "source": "/Volumes/WD/code/workspaces/coaster-mixed-wooden/evidence/final-ground-tests.stdout.log",
+    "uncompressedSha256": "fd3eb4ecd23161a18d211fbfeda8c92ed6dcadc5a4a167c121f1466c0e625ac5",
+    "sha256": "ffb24daaabb28423f49087a5fd980dc83b7e62612d71e054e6a1d07a208ea2f3"
+  },
+  "raw/functional-camera-failure.stderr.log.gz": {
+    "source": "/Volumes/WD/code/workspaces/coaster-mixed-wooden/evidence/browser-final-issue62/driver.stderr.log",
+    "uncompressedSha256": "d34f95aa659cf0adf28b08110d4cd61f6486167200d9ced3b4a532171d566de9",
+    "sha256": "3f8f14d1292138ea12e77afe75a76d93b6eb867c988860bc0553518ddb140028"
+  },
+  "raw/paid-running-park.json.gz": {
+    "source": "/Volumes/WD/code/workspaces/coaster-mixed-wooden/evidence/paid-running-park.json",
+    "uncompressedSha256": "3eb77fc61e7a1fb86ae34f028bbc6fd64306f117c7240be2e3bdf215f4d859b0",
+    "sha256": "134871b36dd9809ba057bf1c235e4ae664fd669a6a4f8654f46fe348ef1065bb"
+  },
+  "raw/contact-primary.json.gz": {
+    "source": "/Volumes/WD/code/workspaces/coaster-wooden-native-placement/station-contact/new-candidate/results.json",
+    "uncompressedSha256": "35e0910c4122b3d4ca521a7ce23ae3ca2ca71ad73727cf54a4c4064cc17b2249",
+    "sha256": "969396e9103efbc8a3f66dde763efdf0260bb8a9408d356a4a4c4091ca8cc60d"
+  },
+  "raw/contact-r16-affected.json.gz": {
+    "source": "/Volumes/WD/code/workspaces/coaster-wooden-native-placement/station-contact/new-candidate/r16-affected-results.json",
+    "uncompressedSha256": "080acfb424e2c061a9b4d8ccaf0a828102ec714e4f4e4b4f141138751eebeb26",
+    "sha256": "0a95b36d7f90d598321e39fa4a73be6e4f15c8a76a9e823ac82c4386ebaacaa7"
+  },
+  "raw/contact-links.json.gz": {
+    "source": "/Volumes/WD/code/workspaces/coaster-wooden-native-placement/station-contact/new-candidate/link-bounds-results.json",
+    "uncompressedSha256": "a4d4afbceab1a7d36f4c269dc625eee41a25b93aa2b6c662e011a29565280b04",
+    "sha256": "ff6c3f3c661a6ea35a8a245a6fd1242ca744ceeb68119a829fe35f603fa23271"
+  },
+  "raw/portal-main.json.gz": {
+    "source": "/Volumes/WD/code/workspaces/coaster-wooden-native-placement/generated-portals/repaired/results.json",
+    "uncompressedSha256": "b6fa978d7bc0d94f83b7a55715b8967af21a82f6f06f28cdec13926cb2d24e01",
+    "sha256": "f880379fa80b2d3195b319ec8ddde16bb69ab662893eaa5193fa98031706cfa5"
+  },
+  "raw/portal-placement.json.gz": {
+    "source": "/Volumes/WD/code/workspaces/coaster-wooden-native-placement/generated-portals/repaired/placement-results.json",
+    "uncompressedSha256": "5b67365ababa0a9f3e6ed08febdac1c5bbf6e324383244c296fa9cf81dd810bd",
+    "sha256": "e6339aecc1c1b73e9c4e68c3c39d06815c729ad1925c4c8eeeefe58a6a6877a1"
+  },
+  "final-checks.json": {
+    "source": "/Volumes/WD/code/workspaces/coaster-mixed-wooden/evidence/final-dry-checks.json",
+    "sha256": "9898bc9af59c0eb6cb93a9d1a6a7a1817536e2c82a7c3beab2515a893c815975"
+  },
+  "source-inputs.json": {
+    "source": "/Volumes/WD/code/workspaces/coaster-mixed-wooden/evidence/final-source-inputs.json",
+    "sha256": "eeb71d255b09a420ee77698becd89aa4ff2cb4e4943a697ede2ff28596ffb2a9"
+  },
+  "raw/final-dry-tests.stdout.log.gz": {
+    "source": "/Volumes/WD/code/workspaces/coaster-mixed-wooden/evidence/final-dry-tests.stdout.log",
+    "uncompressedSha256": "eb74852c163f4e5fe3afe75866e6c9cbe18bb9c00abc2c3981e03df4359a397d",
+    "sha256": "2cf653965009734f535658f98229702af564987f832c23a5b10ce106ac61de2d"
+  },
+  "raw/final-dry-tests.stderr.log.gz": {
+    "source": "/Volumes/WD/code/workspaces/coaster-mixed-wooden/evidence/final-dry-tests.stderr.log",
+    "uncompressedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "sha256": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64"
+  },
+  "raw/final-dry-build.stdout.log.gz": {
+    "source": "/Volumes/WD/code/workspaces/coaster-mixed-wooden/evidence/final-dry-build.stdout.log",
+    "uncompressedSha256": "120b133d25a41fc01f174dbb1129e91fbbc95e7d931def7b534c319a71105eb4",
+    "sha256": "dff9a66b0ad760fee5862eeac469c65957d64fd93b53108c40ba8f2302b894c1"
+  },
+  "raw/final-dry-build.stderr.log.gz": {
+    "source": "/Volumes/WD/code/workspaces/coaster-mixed-wooden/evidence/final-dry-build.stderr.log",
+    "uncompressedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "sha256": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64"
+  },
+  "browser-classic-partial.json": {
+    "sha256": "f0e4137862df77f75a09b253631febd085fe9e1aa3dde4021859363bafc38954"
+  },
+  "wooden-car.png": {
+    "sha256": "656d0f025da89cf8babc9267f3daadcef1a702cd7b29e71f658b6af92550d3ea"
+  },
+  "browser-classic-library.json": {
+    "sha256": "897885b231cac8e632bf06f5e46b24ed778c3d4f962e99cccd46612e22a30620"
+  },
+  "overview.png": {
+    "sha256": "f5b44472b17daaff9ad5d8e66601cad9493706d8560bce5ce261021ccf7fecc9"
+  },
+  "agy-visual-disposition.json": {
+    "sha256": "8033c7a7d5358173ea08d39c2dfc38c96dd5568e2e789d20b4774f3bb85e43c2"
+  },
+  "README.md": {
+    "sha256": "8ad3de843bf562f76023db64a7a09e92d6b1a9f9e9b4b74af9746fd97e44b50b"
+  },
+  "wooden-car-null-slots.png": {
+    "sha256": "c1b32c9f300f397cf797b1d475773aa02668866fa5e3d15d7294b354933ba0b6"
+  },
+  "wooden-station.png": {
+    "sha256": "da2f2533368278c55517a08f95bc66c77f7a0065572f1416728522ab1bd0c994"
+  },
+  "raw/classic-navigation-failure.stderr.log.gz": {
+    "sha256": "070c34ca68a7b30c5e9ca47ce8808b9fb3a905fc620b62a3d42d5200588ccdc7"
+  }
+}

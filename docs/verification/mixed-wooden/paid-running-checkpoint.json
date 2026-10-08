@@ -1,0 +1,72 @@
+{
+  "inputSha256": "8b0b99ecbac00d045a6b236ad8c087d45ed2073c9b0f55c4b717a5154f5da7d9",
+  "outputSha256": "3eb77fc61e7a1fb86ae34f028bbc6fd64306f117c7240be2e3bdf215f4d859b0",
+  "actualAdvanceTicks": 200,
+  "tick": 10166,
+  "car": {
+    "id": 15,
+    "ride": 6,
+    "position": {
+      "x": 57.92082516305789,
+      "y": 148.61154508268808,
+      "z": 4.5
+    },
+    "direction": {
+      "x": 0.08693091336968214,
+      "y": 0.996214342549189,
+      "z": 0
+    },
+    "up": {
+      "x": 0,
+      "y": 0,
+      "z": 1
+    },
+    "occupants": 4,
+    "seatIds": [
+      68,
+      63,
+      46,
+      51
+    ],
+    "rig": {
+      "kind": "wooden-coupled-flat",
+      "bogieFront": {
+        "position": {
+          "x": 57.98602334808515,
+          "y": 149.35870583959993,
+          "z": 4.67
+        },
+        "direction": {
+          "x": 0.03680722294133333,
+          "y": 0.9993223845883505,
+          "z": 0
+        },
+        "up": {
+          "x": 0,
+          "y": 0,
+          "z": 1
+        }
+      },
+      "bogieRear": {
+        "position": {
+          "x": 57.85562697803063,
+          "y": 147.8643843257762,
+          "z": 4.67
+        },
+        "direction": {
+          "x": 0.1345807085071259,
+          "y": 0.99090263542778,
+          "z": 0
+        },
+        "up": {
+          "x": 0,
+          "y": 0,
+          "z": 1
+        }
+      },
+      "link": null,
+      "restraintsClosed": true
+    }
+  },
+  "scope": "Actual Engine restore with exact saved numeric Rules, unpause/advance/pause; no manufactured pose/tick/ledger"
+}
