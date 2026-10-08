@@ -1,0 +1,884 @@
+{
+  "sourceSha256": "f70bd1816e57c2f68cc42d962a30788d9aa44225f0ef0bd5b96d3f40f7d06927",
+  "driverSha256": "5ccfd40e8275f92c60431bfc308ae6db5d0bf46c4291af550262075431c587ac",
+  "helperSha256": "e0821cdf8bd1cd1ae74e4269ac5cc07fb7acdab4d25f394c0e8111c8ce786f2f",
+  "blender": "4.3.2",
+  "meshObjects": 8,
+  "triangles": 1916,
+  "boundsGltf": [
+    [
+      -0.5609999895095825,
+      -0.20000000298023224,
+      -1.899999976158142
+    ],
+    [
+      0.5609999895095825,
+      0.8899999856948853,
+      1.899999976158142
+    ]
+  ],
+  "anchors": {
+    "Seat_00": {
+      "gltfTranslation": [
+        0.0,
+        0.6000000238418579,
+        1.0499999523162842
+      ],
+      "parent": "BoatRoot",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "Seat_01": {
+      "gltfTranslation": [
+        0.0,
+        0.6000000238418579,
+        0.3499999940395355
+      ],
+      "parent": "BoatRoot",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "Seat_02": {
+      "gltfTranslation": [
+        0.0,
+        0.6000000238418579,
+        -0.3499999940395355
+      ],
+      "parent": "BoatRoot",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "Seat_03": {
+      "gltfTranslation": [
+        0.0,
+        0.6000000238418579,
+        -1.0499999523162842
+      ],
+      "parent": "BoatRoot",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "meshes": [
+    {
+      "name": "Hull_OuterBark",
+      "triangles": 272,
+      "materials": [
+        "Bark014"
+      ],
+      "components": [
+        {
+          "vertices": 135,
+          "triangles": 224,
+          "closed": false,
+          "signedVolume": 1.5818930462343515
+        },
+        {
+          "vertices": 10,
+          "triangles": 8,
+          "closed": false,
+          "signedVolume": 0.019175011587018766
+        },
+        {
+          "vertices": 10,
+          "triangles": 8,
+          "closed": false,
+          "signedVolume": 0.03343333773470173
+        },
+        {
+          "vertices": 10,
+          "triangles": 8,
+          "closed": false,
+          "signedVolume": 0.030414982388416927
+        },
+        {
+          "vertices": 10,
+          "triangles": 8,
+          "closed": false,
+          "signedVolume": 0.018454337182144325
+        },
+        {
+          "vertices": 10,
+          "triangles": 8,
+          "closed": false,
+          "signedVolume": -0.0012133368290960789
+        },
+        {
+          "vertices": 10,
+          "triangles": 8,
+          "closed": false,
+          "signedVolume": 0.0009193505781392257
+        }
+      ]
+    },
+    {
+      "name": "Hull_CutEnds",
+      "triangles": 20,
+      "materials": [
+        "cutwood_baked"
+      ],
+      "components": [
+        {
+          "vertices": 12,
+          "triangles": 10,
+          "closed": false,
+          "signedVolume": 0.25363175097542506
+        },
+        {
+          "vertices": 12,
+          "triangles": 10,
+          "closed": false,
+          "signedVolume": 0.24234584458948424
+        }
+      ]
+    },
+    {
+      "name": "Hull_CarvedRim",
+      "triangles": 36,
+      "materials": [
+        "cutwood_baked"
+      ],
+      "components": [
+        {
+          "vertices": 4,
+          "triangles": 2,
+          "closed": false,
+          "signedVolume": 0.004076677529762188
+        },
+        {
+          "vertices": 4,
+          "triangles": 2,
+          "closed": false,
+          "signedVolume": 0.004076677529762188
+        },
+        {
+          "vertices": 4,
+          "triangles": 2,
+          "closed": false,
+          "signedVolume": 0.00522666269292434
+        },
+        {
+          "vertices": 4,
+          "triangles": 2,
+          "closed": false,
+          "signedVolume": 0.00522666269292434
+        },
+        {
+          "vertices": 4,
+          "triangles": 2,
+          "closed": false,
+          "signedVolume": 0.005226668436080217
+        },
+        {
+          "vertices": 4,
+          "triangles": 2,
+          "closed": false,
+          "signedVolume": 0.005226668436080217
+        },
+        {
+          "vertices": 4,
+          "triangles": 2,
+          "closed": false,
+          "signedVolume": 0.005973335976401964
+        },
+        {
+          "vertices": 4,
+          "triangles": 2,
+          "closed": false,
+          "signedVolume": 0.005973335976401964
+        },
+        {
+          "vertices": 4,
+          "triangles": 2,
+          "closed": false,
+          "signedVolume": 0.005973336131622394
+        },
+        {
+          "vertices": 4,
+          "triangles": 2,
+          "closed": false,
+          "signedVolume": 0.005973336131622394
+        },
+        {
+          "vertices": 4,
+          "triangles": 2,
+          "closed": false,
+          "signedVolume": 0.005226670764386654
+        },
+        {
+          "vertices": 4,
+          "triangles": 2,
+          "closed": false,
+          "signedVolume": 0.005226670764386654
+        },
+        {
+          "vertices": 4,
+          "triangles": 2,
+          "closed": false,
+          "signedVolume": 0.004951658193022013
+        },
+        {
+          "vertices": 4,
+          "triangles": 2,
+          "closed": false,
+          "signedVolume": 0.004951658193022013
+        },
+        {
+          "vertices": 4,
+          "triangles": 2,
+          "closed": false,
+          "signedVolume": 0.003783338237553835
+        },
+        {
+          "vertices": 4,
+          "triangles": 2,
+          "closed": false,
+          "signedVolume": 0.003783338237553835
+        },
+        {
+          "vertices": 4,
+          "triangles": 2,
+          "closed": false,
+          "signedVolume": -0.00839998060837388
+        },
+        {
+          "vertices": 4,
+          "triangles": 2,
+          "closed": false,
+          "signedVolume": -0.008026661972204845
+        }
+      ]
+    },
+    {
+      "name": "Cockpit_TimberInterior",
+      "triangles": 52,
+      "materials": [
+        "timber"
+      ],
+      "components": [
+        {
+          "vertices": 8,
+          "triangles": 6,
+          "closed": false,
+          "signedVolume": -0.031696669602145754
+        },
+        {
+          "vertices": 8,
+          "triangles": 6,
+          "closed": false,
+          "signedVolume": -0.033600003380949296
+        },
+        {
+          "vertices": 8,
+          "triangles": 6,
+          "closed": false,
+          "signedVolume": -0.03360000244962673
+        },
+        {
+          "vertices": 8,
+          "triangles": 6,
+          "closed": false,
+          "signedVolume": -0.038400001203020416
+        },
+        {
+          "vertices": 8,
+          "triangles": 6,
+          "closed": false,
+          "signedVolume": -0.03839999895232419
+        },
+        {
+          "vertices": 8,
+          "triangles": 6,
+          "closed": false,
+          "signedVolume": -0.03359999841389557
+        },
+        {
+          "vertices": 8,
+          "triangles": 6,
+          "closed": false,
+          "signedVolume": -0.03594833185585837
+        },
+        {
+          "vertices": 8,
+          "triangles": 6,
+          "closed": false,
+          "signedVolume": -0.035553321397552885
+        },
+        {
+          "vertices": 4,
+          "triangles": 2,
+          "closed": false,
+          "signedVolume": -0.19754000954950848
+        },
+        {
+          "vertices": 4,
+          "triangles": 2,
+          "closed": false,
+          "signedVolume": -0.20033999904990196
+        }
+      ]
+    },
+    {
+      "name": "Seat_Benches_Timber",
+      "triangles": 96,
+      "materials": [
+        "timber"
+      ],
+      "components": [
+        {
+          "vertices": 8,
+          "triangles": 12,
+          "closed": true,
+          "signedVolume": 0.04118400144701202
+        },
+        {
+          "vertices": 8,
+          "triangles": 12,
+          "closed": true,
+          "signedVolume": 0.004560012137517337
+        },
+        {
+          "vertices": 8,
+          "triangles": 12,
+          "closed": true,
+          "signedVolume": 0.04118399632473787
+        },
+        {
+          "vertices": 8,
+          "triangles": 12,
+          "closed": true,
+          "signedVolume": 0.004560001621333262
+        },
+        {
+          "vertices": 8,
+          "triangles": 12,
+          "closed": true,
+          "signedVolume": 0.04118399632473787
+        },
+        {
+          "vertices": 8,
+          "triangles": 12,
+          "closed": true,
+          "signedVolume": 0.004560004803352057
+        },
+        {
+          "vertices": 8,
+          "triangles": 12,
+          "closed": true,
+          "signedVolume": 0.041183998342603445
+        },
+        {
+          "vertices": 8,
+          "triangles": 12,
+          "closed": true,
+          "signedVolume": 0.0045599909499287605
+        }
+      ]
+    },
+    {
+      "name": "Seat_Cushions_Upholstery",
+      "triangles": 368,
+      "materials": [
+        "seat_vinyl"
+      ],
+      "components": [
+        {
+          "vertices": 8,
+          "triangles": 12,
+          "closed": true,
+          "signedVolume": 0.010880004769812027
+        },
+        {
+          "vertices": 24,
+          "triangles": 44,
+          "closed": true,
+          "signedVolume": 0.0019199838279746484
+        },
+        {
+          "vertices": 8,
+          "triangles": 12,
+          "closed": true,
+          "signedVolume": 0.004752007313072681
+        },
+        {
+          "vertices": 8,
+          "triangles": 12,
+          "closed": true,
+          "signedVolume": 0.0007039993846168122
+        },
+        {
+          "vertices": 8,
+          "triangles": 12,
+          "closed": true,
+          "signedVolume": 0.0007039966682593031
+        },
+        {
+          "vertices": 8,
+          "triangles": 12,
+          "closed": true,
+          "signedVolume": 0.010879998366969327
+        },
+        {
+          "vertices": 24,
+          "triangles": 44,
+          "closed": true,
+          "signedVolume": 0.0019199978123651822
+        },
+        {
+          "vertices": 8,
+          "triangles": 12,
+          "closed": true,
+          "signedVolume": 0.004752001414696376
+        },
+        {
+          "vertices": 8,
+          "triangles": 12,
+          "closed": true,
+          "signedVolume": 0.0007039996174474557
+        },
+        {
+          "vertices": 8,
+          "triangles": 12,
+          "closed": true,
+          "signedVolume": 0.0007039994622270266
+        },
+        {
+          "vertices": 8,
+          "triangles": 12,
+          "closed": true,
+          "signedVolume": 0.01087999673715482
+        },
+        {
+          "vertices": 24,
+          "triangles": 44,
+          "closed": true,
+          "signedVolume": 0.001919999962410657
+        },
+        {
+          "vertices": 8,
+          "triangles": 12,
+          "closed": true,
+          "signedVolume": 0.004752004829545815
+        },
+        {
+          "vertices": 8,
+          "triangles": 12,
+          "closed": true,
+          "signedVolume": 0.0007040029546866814
+        },
+        {
+          "vertices": 8,
+          "triangles": 12,
+          "closed": true,
+          "signedVolume": 0.0007040003935496012
+        },
+        {
+          "vertices": 8,
+          "triangles": 12,
+          "closed": true,
+          "signedVolume": 0.010880002596726019
+        },
+        {
+          "vertices": 24,
+          "triangles": 44,
+          "closed": true,
+          "signedVolume": 0.0019200072759607194
+        },
+        {
+          "vertices": 8,
+          "triangles": 12,
+          "closed": true,
+          "signedVolume": 0.004752006692190964
+        },
+        {
+          "vertices": 8,
+          "triangles": 12,
+          "closed": true,
+          "signedVolume": 0.0007040018681436776
+        },
+        {
+          "vertices": 8,
+          "triangles": 12,
+          "closed": true,
+          "signedVolume": 0.000704003420347969
+        }
+      ]
+    },
+    {
+      "name": "Hardware_BrassFasteners",
+      "triangles": 832,
+      "materials": [
+        "brass"
+      ],
+      "components": [
+        {
+          "vertices": 8,
+          "triangles": 12,
+          "closed": true,
+          "signedVolume": 0.00020000000464885247
+        },
+        {
+          "vertices": 96,
+          "triangles": 192,
+          "closed": true,
+          "signedVolume": 7.636878035555117e-05
+        },
+        {
+          "vertices": 8,
+          "triangles": 12,
+          "closed": true,
+          "signedVolume": 0.00020000071769269763
+        },
+        {
+          "vertices": 96,
+          "triangles": 192,
+          "closed": true,
+          "signedVolume": 7.63715003510393e-05
+        },
+        {
+          "vertices": 8,
+          "triangles": 12,
+          "closed": true,
+          "signedVolume": 9.000002561757964e-05
+        },
+        {
+          "vertices": 8,
+          "triangles": 12,
+          "closed": true,
+          "signedVolume": 8.999901668479049e-05
+        },
+        {
+          "vertices": 8,
+          "triangles": 12,
+          "closed": true,
+          "signedVolume": 8.999998681247233e-05
+        },
+        {
+          "vertices": 8,
+          "triangles": 12,
+          "closed": true,
+          "signedVolume": 8.999979278693596e-05
+        },
+        {
+          "vertices": 8,
+          "triangles": 12,
+          "closed": true,
+          "signedVolume": 9.000032635716097e-05
+        },
+        {
+          "vertices": 8,
+          "triangles": 12,
+          "closed": true,
+          "signedVolume": 9.000013233162463e-05
+        },
+        {
+          "vertices": 8,
+          "triangles": 12,
+          "closed": true,
+          "signedVolume": 9.000146140654884e-05
+        },
+        {
+          "vertices": 8,
+          "triangles": 12,
+          "closed": true,
+          "signedVolume": 9.000045247375976e-05
+        },
+        {
+          "vertices": 8,
+          "triangles": 12,
+          "closed": true,
+          "signedVolume": 7.201607028643295e-05
+        },
+        {
+          "vertices": 8,
+          "triangles": 12,
+          "closed": true,
+          "signedVolume": 7.199759905536973e-05
+        },
+        {
+          "vertices": 8,
+          "triangles": 12,
+          "closed": true,
+          "signedVolume": 7.198813060919451e-05
+        },
+        {
+          "vertices": 8,
+          "triangles": 12,
+          "closed": true,
+          "signedVolume": 7.198688884576163e-05
+        },
+        {
+          "vertices": 16,
+          "triangles": 28,
+          "closed": true,
+          "signedVolume": 4.892450912545102e-06
+        },
+        {
+          "vertices": 16,
+          "triangles": 28,
+          "closed": true,
+          "signedVolume": 4.876012098975473e-06
+        },
+        {
+          "vertices": 16,
+          "triangles": 28,
+          "closed": true,
+          "signedVolume": 4.886765964329263e-06
+        },
+        {
+          "vertices": 16,
+          "triangles": 28,
+          "closed": true,
+          "signedVolume": 4.883448127657168e-06
+        },
+        {
+          "vertices": 16,
+          "triangles": 28,
+          "closed": true,
+          "signedVolume": 4.8874759765264245e-06
+        },
+        {
+          "vertices": 16,
+          "triangles": 28,
+          "closed": true,
+          "signedVolume": 4.8874759765264245e-06
+        },
+        {
+          "vertices": 16,
+          "triangles": 28,
+          "closed": true,
+          "signedVolume": 4.883448127657168e-06
+        },
+        {
+          "vertices": 16,
+          "triangles": 28,
+          "closed": true,
+          "signedVolume": 4.886765964329256e-06
+        },
+        {
+          "vertices": 16,
+          "triangles": 28,
+          "closed": true,
+          "signedVolume": 4.876012098975459e-06
+        },
+        {
+          "vertices": 16,
+          "triangles": 28,
+          "closed": true,
+          "signedVolume": 4.892450912545129e-06
+        }
+      ]
+    },
+    {
+      "name": "Hardware_DarkFittings",
+      "triangles": 240,
+      "materials": [
+        "rubber"
+      ],
+      "components": [
+        {
+          "vertices": 20,
+          "triangles": 36,
+          "closed": true,
+          "signedVolume": 0.0002708552589562403
+        },
+        {
+          "vertices": 20,
+          "triangles": 36,
+          "closed": true,
+          "signedVolume": 0.00025580746296327567
+        },
+        {
+          "vertices": 20,
+          "triangles": 36,
+          "closed": true,
+          "signedVolume": 0.0002558050218794958
+        },
+        {
+          "vertices": 20,
+          "triangles": 36,
+          "closed": true,
+          "signedVolume": 0.0002557896647582919
+        },
+        {
+          "vertices": 8,
+          "triangles": 12,
+          "closed": true,
+          "signedVolume": 0.003099996441354355
+        },
+        {
+          "vertices": 8,
+          "triangles": 12,
+          "closed": true,
+          "signedVolume": 0.0031000004770855107
+        },
+        {
+          "vertices": 8,
+          "triangles": 12,
+          "closed": true,
+          "signedVolume": 0.000576001824811101
+        },
+        {
+          "vertices": 8,
+          "triangles": 12,
+          "closed": true,
+          "signedVolume": 0.0007039997144602243
+        },
+        {
+          "vertices": 8,
+          "triangles": 12,
+          "closed": true,
+          "signedVolume": 0.0007039997872197998
+        },
+        {
+          "vertices": 8,
+          "triangles": 12,
+          "closed": true,
+          "signedVolume": 0.0007040005293674767
+        },
+        {
+          "vertices": 8,
+          "triangles": 12,
+          "closed": true,
+          "signedVolume": 0.0013439966520915419
+        },
+        {
+          "vertices": 8,
+          "triangles": 12,
+          "closed": true,
+          "signedVolume": 0.0013440022691308218
+        }
+      ]
+    }
+  ],
+  "issues": [],
+  "textures": [
+    {
+      "path": "/workspace/coaster-carousel/app/ui/models/trees/textures/Bark014_1K-PNG_Color.png",
+      "sha256": "5091ca295325cb289cc40fdd13d182b00a45c767ecc949edd76db4c183de900e",
+      "size": [
+        512,
+        512
+      ]
+    },
+    {
+      "path": "/workspace/coaster-carousel/app/ui/models/trees/textures/Bark014_1K-PNG_NormalGL.png",
+      "sha256": "fad0e06319bf5a7f642a324941d9d71448d61eabe70495babb3e27b3d85a2112",
+      "size": [
+        512,
+        512
+      ]
+    },
+    {
+      "path": "/workspace/coaster-carousel/app/ui/models/trees/textures/Bark014_1K-PNG_Roughness.png",
+      "sha256": "14c8111cb5ef1f5b60c6bd9f30041b468e64d451ac70c04a35982630af104cdd",
+      "size": [
+        512,
+        512
+      ]
+    },
+    {
+      "path": "endgrain-v5-textures/Endgrain_512_Color.png",
+      "sha256": "86ffff7b338e392eba9b219e26dc45214dae3ec274dcc303e2b739f1a5728c64",
+      "size": [
+        512,
+        512
+      ]
+    },
+    {
+      "path": "endgrain-v5-textures/Endgrain_512_NormalGL.png",
+      "sha256": "e0083c919c6059c4da529e5413fc1daf7903a3548074de7fb86b53cffc049e9c",
+      "size": [
+        512,
+        512
+      ]
+    },
+    {
+      "path": "endgrain-v5-textures/Endgrain_512_Roughness.png",
+      "sha256": "6a5ef272a1928170914fba88b78496b98f28947d167ed8eea76962523b703cec",
+      "size": [
+        512,
+        512
+      ]
+    },
+    {
+      "path": "/workspace/coaster-detailed-assets/materials/Wood096/Wood096_1K-PNG_Color.png",
+      "sha256": "2635d3b950808e52d5de4ce4ee4b3aa35430ffd3117e00c1b2cfb155168e6b47",
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "path": "/workspace/coaster-detailed-assets/materials/Wood096/Wood096_1K-PNG_NormalGL.png",
+      "sha256": "5b9f71b56cc74a397c9263619f7ef0cfc7d668762f4f2c960e4bd883dc2891c5",
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "path": "/workspace/coaster-detailed-assets/materials/Wood096/Wood096_1K-PNG_Roughness.png",
+      "sha256": "bcba2c9b971c17875e0d8b6e11b234ce86a1c4110bd72725c2586b8950738418",
+      "size": [
+        1024,
+        1024
+      ]
+    }
+  ],
+  "scope": "Actual isolated mesh/UV/component winding/unit datums and envelope only; rider/channel/simulation/browser/original/GPU/human checks remain.",
+  "outputs": [
+    {
+      "file": "log-boat.blend",
+      "bytes": 10152923,
+      "sha256": "655140c3855deb1c5c7eac94151fc99d653f40cfc479803287b57771750058e3"
+    },
+    {
+      "file": "log-boat.glb",
+      "bytes": 5411656,
+      "sha256": "0336a6e7dc4aaa54136193d47187d67d2710ba53c4ccca3f93cf81e9dc693549"
+    }
+  ],
+  "renders": [
+    {
+      "file": "log-boat-front.png",
+      "sha256": "6b7ae45efd91a7198f847717f38a568ebb6497510f9fff54ac6673af841a9b6f"
+    },
+    {
+      "file": "log-boat-rear.png",
+      "sha256": "8e0c325a00052d52814ff4ab32b5baf174ad548faaf4ea020169f8a1e7b9f5d8"
+    }
+  ]
+}

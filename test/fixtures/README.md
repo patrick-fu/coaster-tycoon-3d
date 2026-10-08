@@ -55,3 +55,31 @@ Original oracle index SHA256:
 Full independent generation/replay records remain at
 `/Volumes/WD/code/workspaces/coaster-v9-mixed-golden/REPORT.md`.
 These are independent project regression fixtures, without original game media.
+
+## Actual pre-Flume v10 mixed and Carousel continuation
+
+`v10-mixed-carousel-continuation.json.gz` is packed byte-for-byte from the
+independently frozen source3387b469 paid Engine oracle. Immutable external
+index SHA256 is `ebbe5dfb3b9f0df9131c9620ff43dfbc92be4d81ee7e266ca326af4b102d4464`;
+fixture SHA256 is `bcdd54f017e0dd769fecf8771fee3a0bd63c6318a8f4ee078729c5c497afff9f`.
+
+The actual controlled park has8 wooden,16 Carousel and10 steel paid owners,
+created by real commands/boarding. The ordered-null case removes wood1/5 and
+Carousel1/14 owners and retires their actual spending90, preserving every
+other field. Two cases ×0/1/17/400/1200 offsets preserve complete authority
+bytes and original public views, including actual rotor/seat and body/bogie/
+link poses. Only random session/restore prefixes are normalized; numeric
+revision suffix remains. Exact serialized receiving Rules come from the
+frozen Node park, rather than regenerated defaults.
+
+The immutable source/master/generation/independent reconstruction, alternate
+17-tick checks and raw passive-search failure remain at
+`/Volumes/WD/code/workspaces/coaster-v10-carousel-golden/REPORT.md`. This is
+matching-runtime evidence. The initial passive search never observed16
+Carousel owners; the successful fixture uses declared real close/breakdown/
+reopen commands and does not mutate owner containers or Rules.
+
+The current production receiver independently passes all20 packaged authority/
+view checkpoints under17 and1200 tick batches. Future Flume changes must
+preserve them and all earlier v7/v8/v9 oracles; this fixture supplies no
+Flume, original, cross-runtime, scale/GPU or human acceptance.

@@ -28,12 +28,14 @@ At task entry, after context compaction, and before resuming interrupted work,
 read root `PROGRESS.md` for the current delivery, evidence, ownership and next
 action, then confirm the recorded versions and process state. Root owns this
 record; delegates return evidence to root.
+When the record names a different active worktree, read that worktree's
+`PROGRESS.md` before continuing; main's committed copy is a dated snapshot.
 
 Update `PROGRESS.md` immediately after each meaningful outcome, failed attempt,
 decision, delegation launch or termination, publication, or cleanup, before
 starting dependent work. Refresh the current state and append a short dated
-entry with the result, reason, evidence location and next action. Distinguish
-planned, running, verified and published work; record actual process identity
+entry to its linked journal with the result, reason, evidence and next action.
+Distinguish planned, running, verified and published work; record actual process identity
 for running work and explicitly retain failed or unexecuted checks. Keep full
 logs in their evidence artifacts and link them from this record. Compact stale
 state into linked history while preserving decisions and unresolved work.
