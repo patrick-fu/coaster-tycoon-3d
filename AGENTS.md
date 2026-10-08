@@ -22,6 +22,22 @@ Before adding simulation code, dependencies or game resources, read
 `docs/adr/0001-independent-mit-implementation.md` for the independent MIT source
 strategy and provenance requirements.
 
+### Progress and recovery
+
+At task entry, after context compaction, and before resuming interrupted work,
+read root `PROGRESS.md` for the current delivery, evidence, ownership and next
+action, then confirm the recorded versions and process state. Root owns this
+record; delegates return evidence to root.
+
+Update `PROGRESS.md` immediately after each meaningful outcome, failed attempt,
+decision, delegation launch or termination, publication, or cleanup, before
+starting dependent work. Refresh the current state and append a short dated
+entry with the result, reason, evidence location and next action. Distinguish
+planned, running, verified and published work; record actual process identity
+for running work and explicitly retain failed or unexecuted checks. Keep full
+logs in their evidence artifacts and link them from this record. Compact stale
+state into linked history while preserving decisions and unresolved work.
+
 ### Issue tracker
 
 Track issues, specifications, and Wayfinder maps in this repository's GitHub Issues. Before tracker operations, read `docs/agents/issue-tracker.md`.
