@@ -1,0 +1,571 @@
+{
+  "scope": "Actual public source-pinned and regular preview; software-WebGL browser, not representative real GPU or original parity",
+  "browser": "Chrome/155.0.8059.39",
+  "profile": "/home/box/.config/google-chrome",
+  "checks": [
+    "Actual separate glTF and shared atlas resources load successfully",
+    "All actual placed vertices fit four cardinal unit poses and the existing ground/height reservation",
+    "Placed trees and perimeter trees share at most six batches with owned alpha-mask shadow materials",
+    "Four real static rebuilds keep GPU resource counts and the paused save unchanged",
+    "Actual worker save/load preserves planted trees and current version 8 park data",
+    "Real zoom selects all three unit LODs, reduces draw triangles and preserves the warmed GPU cache and saved park",
+    "The same actual projected size retains different stable LODs inside the measured hysteresis band",
+    "Actual zoom exchanges tree primitives in place without rebuilding the static park",
+    "Every exchanged LOD preserves mesh identity, exact instance matrices and selections, fixed boundary LOD and all four cardinal reservations",
+    "Demolition removes real selectable instances and preserves authoritative half refunds",
+    "Actual Chrome pointer inspection selects the correct detailed tree instance",
+    "Actual atlas request failure rejects detailed presentation and closes every allocated bitmap",
+    "Actual buffer request failure rejects detailed presentation and closes every allocated bitmap",
+    "Disposal during real loading closes late bitmaps and never installs a model",
+    "The regular public Classic preview loads the same source, detailed trees, version 8 save and six-category Library"
+  ],
+  "faults": [
+    {
+      "case": "atlas",
+      "ready": false,
+      "error": "Tree resources failed to load: https://patrick-fu.github.io/coaster-tycoon-3d/previews/classic-98939b7/models/trees/textures/LeafSet026_1K-PNG_Color-LeafSet026_1K-PNG_Opacity.png, https://patrick-fu.github.io/coaster-tycoon-3d/previews/classic-98939b7/models/trees/textures/LeafSet026_1K-PNG_Color-LeafSet026_1K-PNG_Opacity.png, https://patrick-fu.github.io/coaster-tycoon-3d/previews/classic-98939b7/models/trees/textures/LeafSet026_1K-PNG_Color-LeafSet026_1K-PNG_Opacity.png",
+      "allocated": 12,
+      "closed": 12,
+      "closedAfterDispose": 12
+    },
+    {
+      "case": "buffer",
+      "ready": false,
+      "error": "THREE.GLTFLoader: Failed to load buffer \"organic-tree-lod0.bin\".",
+      "allocated": 15,
+      "closed": 15,
+      "closedAfterDispose": 15
+    },
+    {
+      "case": "dispose during load",
+      "ready": false,
+      "error": null,
+      "allocated": 15,
+      "closed": 15
+    }
+  ],
+  "build": {
+    "build": {
+      "project": "Coaster Tycoon 3D",
+      "status": "Classic detailed oak development preview",
+      "sourceCommit": "98939b740c566b529bb4dae17402ce1324ad5717",
+      "runtimeSourceCommit": "98939b740c566b529bb4dae17402ce1324ad5717",
+      "repositoryCommit": "29f907d06e4f3ced23579aebd5b1bf971976a8e5",
+      "builtOn": "Grok Bot Linux",
+      "packagedAt": "2026-10-08T00:24:31.494711+00:00",
+      "previewPath": "previews/classic-98939b7",
+      "saveVersion": 8,
+      "contentVersion": 1,
+      "protocolVersion": 1,
+      "assetSha256": {
+        "content-browser.js": "81f46b4933f47aa4677083e503bf41e5663fed956dff776fff12daa52277b604",
+        "game.js": "6a1cf09be933f2ba03386e92f1cda9d2201741fa6947a165f809d43a48552bfb",
+        "index.html": "49bf0b71c09eda8a714fa261c0ce98efe75f8a43019da06a0fde696b34700b2d",
+        "LICENSE": "f68cef6a23271aa6fa5022cd7acebc98de572571df4a97077b0ecd7b385aa45d",
+        "park-scene.js": "fe77337a84b2211139734c6f03d105843a4d3591d34fc5a1ab1664f1fcdf4f08",
+        "THIRD_PARTY_NOTICES.md": "11d3db5fadda0217e345f7cf899f0f22ae40e47283b8a19b1950ec1fe95b351f",
+        "content-browser.css": "b0ca6136234806692e643b6117b5b3df9696161a86a8f3590c30dfcd5d1cd566",
+        "style.css": "f33dec5c2b4f693381e9b05308d47c10bf97ad89ba17a5a4642881435f7b20bc",
+        "favicon.svg": "60879a890648c630ab1dc7cdc25975693b3c0610be77a4a11d2e7c7315d5c697",
+        "art/runtime.js": "8b85e50ffed823678e3235639ae726ba7bee3e0c52c527855fce056b98df9e60",
+        "art/tree-assets.js": "daa01cc5d707a402a6523adb3e815a6ce7d1d88e4c9b1f0c72702467f8c6e054",
+        "art/buildings.js": "fd59e83c14589dc1db7cf43ef79a0ad02ebede0569f092465349387a0161e720",
+        "art/coaster.js": "e3637608646d9237c8f4324bba071b55427aa09003cc36c72c222859d54db100",
+        "art/environment.js": "307ff22c269b0855347b1b78a77745cbaca65114b3ca5cbd1d5ef085ea807d65",
+        "simulation/protocol.js": "fc4c64bde30b232f0d0907c505bc7fea1c0effb130c5a5b0f730818495945070",
+        "simulation/geometry.d.ts": "7f9748530e1641db5515ee36491598adfb17c22049dfb22dcfacb5ab818c3107",
+        "simulation/clock.js": "32820b03a12b9bde816654f4e58fd37a24c32b9c8dc035b52d157636e58d9fbd",
+        "simulation/motion.d.ts": "9b8e99db9e77447f15a84b1d92cce8cd14f6bf8f49e43023aa1b44e7b0b943b7",
+        "simulation/housekeeping.d.ts": "990317c2bb8a132cc5e991592594b00977344fb025db0ada0f273e3cd6ae9281",
+        "simulation/clock.d.ts": "3743b968c76cf0406ef9e81b77056b24bb39fec52a1d1ee203ec620667a36567",
+        "simulation/browser-worker.js": "6ec70012f0038ce086121e5ed20998f29d4c5a1758706a9ed8e732b03c43abed",
+        "simulation/host.js": "d2dfa7c018b25214231009e850e56507019cea9a7484459d990247bed9f775b2",
+        "simulation/operation.js": "895e66beed28737a7eba467a38c0989ebdb5f25959c8283ca0537aae2c7e1860",
+        "simulation/host.d.ts": "982e2d1c632e764a64265ff77527e819028db723440872c8e8616bb8a3f16d40",
+        "simulation/scenery.js": "af181426f98f7c6daab583055906264db929940ecb25a3fe50c1ca219d9ee520",
+        "simulation/types.js": "1a6231381895d5abcccbc927e582be7270c22e19c76be7c5c3e560d83ea97d91",
+        "simulation/services.d.ts": "9ff71f82fddd7b1e077e73e2790d488ccdd173fa810f759f90b200658c3b9c70",
+        "simulation/types.d.ts": "d3a6e418a77b976f17bdfdbbf0f2eb78c56fd79e9d2351a72eb66ea2b427d91e",
+        "simulation/patrol.d.ts": "ccd72adedd54103092d2887e31753f8d745417372834c6c4054f3e50979e3273",
+        "simulation/services.js": "274a27fd582abacb8c1be47f70b10b5f4b6a50423dea162244dc1dc9115e9a35",
+        "simulation/view.d.ts": "40ba09fcee342dc5d14e0f83135897ff9f5de5f6f7253b0dd72dd8b1a4802bee",
+        "simulation/scenery.d.ts": "b4c948c6004a2de0dbc5141a1c3fe28038ab036458e5b7824d8a30e0e6286bfb",
+        "simulation/engine.d.ts": "40726180e68ee0291d51433f1680357d7275d526d771842a7fbfe022247c7066",
+        "simulation/index.js": "346366ed60f6c42fcb47aa83210f541b512704500f290f203513ca17b0a809c4",
+        "simulation/validation.js": "10a2f21ddd134f16105bf4f0153d57a6e660d7938157e30c1958487498b66056",
+        "simulation/routes.js": "ec098e36c6a24155b4d10da3118a7240e08850a4b38c52eb7d4891be556c3453",
+        "simulation/validation.d.ts": "b5a15290a701b60b3d0ccfa2c8b0968fefe4b639623effee2e2f8d3cc121a43d",
+        "simulation/protocol.d.ts": "33a7aa9be48784629c89b7723b087067e543b082dfc7b3707bc7f0d58c8aca4c",
+        "simulation/operation.d.ts": "4be5cf50780fee55e4602037219873aff1236a984d140de8a730f4ab92ae03dc",
+        "simulation/engine.js": "a73a54bf1ffdadaf182c3658ad09c93f14faccff9f6c225334c8cd374a7f8692",
+        "simulation/motion.js": "4c3d5c27617302f607d0235a10eeda4cd4fafc9c81cb7859327fba0b407f34e6",
+        "simulation/view.js": "43c2d7b215db799aa2c4ddc5f522a00c8bb9a5447ffb2c500308f609baf42073",
+        "simulation/housekeeping.js": "37f6c3f0c0b89ea42b97b0250c20aa01bc4e2b3c3ae58bfd6b78869d613b2932",
+        "simulation/people.js": "dbc11106f53b7fd7d230ec6b84a3b2daf6ddd5f5644b1717cbf06b1ace888b54",
+        "simulation/people.d.ts": "d0d827823c3cdf19ce7e95fc5ad8e5ebad30bc8c71e3f53eea353094d058bcd9",
+        "simulation/index.d.ts": "ff7c5c26ad7c54ab4e64bdc958da4afc382f8731f870954fef49d518ee5451e5",
+        "simulation/patrol.js": "4a59eec5e274c541fecf413cb62cd27cabfe5fb13aaa6104d5543b8498b16e16",
+        "simulation/browser-worker.d.ts": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
+        "simulation/geometry.js": "262ca58c08300e26a656cbc8dfde01042baf72de546f1f4ce074af2dc65fb74e",
+        "simulation/routes.d.ts": "59198c54257a442d97c716a79d773a68d8c3e0c3475f0148c954d0557c4abaa8",
+        "content/rct2-reference.js": "23ad185689097bbc9b21d87de63f4d62a4d2365fa019f983cf8b8ae85f7836ee",
+        "content/registry.js": "1e4bb13764bfd8e63ae7fb4243390861057875c507c92510cd29fcfe24ef17f2",
+        "content/registry.d.ts": "cb476e7b42e1e423e8b6701075fb076d70634d19f69439f0b3964159c3e66186",
+        "content/steel-coaster.d.ts": "5343013758027f0728ea592f583da67f3c799e44e2014bffbe7ec7c1cab076ba",
+        "content/rct2-reference.d.ts": "e327772f17f7fff8360c33ab5c95ce74c818d5ff121763ed8730d224cc78eb34",
+        "content/steel-coaster.js": "fb1de5ed28b9280d85c2295c13c708c48368a29b63abcf30b1270f2d024769db",
+        "models/trees/ASSET-NOTICES.txt": "db561c35b988de25d8e7bd545b6bdab4a7da81b5b220d11f4c11c7e6f7b40999",
+        "models/trees/organic-tree-lod1.gltf": "0d74981a915d491cf2ad8de496f7340cb7f09c7aa8e2c76a8095d39d3000ea85",
+        "models/trees/organic-tree-lod0.gltf": "852ac0bfce78bd271c8484a724f5c95fc0339786c9553d4d32aae159f43be3fa",
+        "models/trees/organic-tree-lod2.bin": "ccc5f2c623bd5e86c62b52375bd9b9489309bdfcc333bb107200b7ab7c02dd86",
+        "models/trees/organic-tree-lod1.bin": "47fbd4f8e6fea1c5e80998c15dbb058e468e17e6316e6940a83c8c394166ae0e",
+        "models/trees/organic-tree-lod2.gltf": "9f6b829b9a0446f89f413ceb84fa3be6bbec981f91fd6a288ad4264f7edf5a2d",
+        "models/trees/organic-tree-lod0.bin": "f1480d960bc1b380527d1514b4056348db2e5cff9cd8a0f3faaa4e1f1a1a6534",
+        "models/trees/export-manifest.json": "b2a56814faea97e0157c96c7ac5676146aaed0e93096e0deab2ed4b578e26496",
+        "models/trees/textures/Bark014_1K-PNG_Color.png": "5091ca295325cb289cc40fdd13d182b00a45c767ecc949edd76db4c183de900e",
+        "models/trees/textures/LeafSet026_1K-PNG_Color-LeafSet026_1K-PNG_Opacity.png": "ea06aba219626ed20d94ac895eee043ae28dc5dabe29d2ee8ecfcc7534a60752",
+        "models/trees/textures/LeafSet026_1K-PNG_NormalGL.png": "172fdfadddb68ef4a0a95c37d6e484e5c1511074f9c8b160babc30e93c115e30",
+        "models/trees/textures/Bark014_1K-PNG_Roughness.png": "14c8111cb5ef1f5b60c6bd9f30041b468e64d451ac70c04a35982630af104cdd",
+        "models/trees/textures/Bark014_1K-PNG_NormalGL.png": "fad0e06319bf5a7f642a324941d9d71448d61eabe70495babb3e27b3d85a2112",
+        "vendor/three.module.js": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea",
+        "vendor/THREE-LICENSE.txt": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+        "vendor/three.core.js": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
+        "vendor/OrbitControls.js": "3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b",
+        "vendor/addons/utils/SkeletonUtils.js": "b1632a703206c3d830de9fcbe515696770d04b71a15ee6b50afa6d2c3298c86f",
+        "vendor/addons/utils/BufferGeometryUtils.js": "9fb63427ce6641fa14fd0baff9cc4d1b5f9c3d85fd084bf2e90e803c44ec1797",
+        "vendor/addons/loaders/GLTFLoader.js": "131c0f78c01d19368ae495caa65b3adaa10487810a36a05bb5901b769a35ac16"
+      },
+      "sourceInputManifestSha256": "ed8276363be11f99c57cd4201bfed1de3964a10c9cf7f798678af3f6c2393933",
+      "buildArchiveSha256": "32c70bce5b3caef8fd4e1a0abc22b2f8beeaee9c140e7adcf05185eb13b0325f",
+      "dependencies": {
+        "three": "0.186.1",
+        "typescript": "7.0.2"
+      },
+      "qualification": "Actual detailed oak loading, unit placement and camera LOD integration. Original/native ride adapters, original comparisons and representative integrated-GPU/human acceptance remain open."
+    },
+    "save": 8
+  },
+  "functional": {
+    "ok": true,
+    "checks": [
+      "Actual separate glTF and shared atlas resources load successfully",
+      "All actual placed vertices fit four cardinal unit poses and the existing ground/height reservation",
+      "Placed trees and perimeter trees share at most six batches with owned alpha-mask shadow materials",
+      "Four real static rebuilds keep GPU resource counts and the paused save unchanged",
+      "Actual worker save/load preserves planted trees and current version 8 park data",
+      "Real zoom selects all three unit LODs, reduces draw triangles and preserves the warmed GPU cache and saved park",
+      "The same actual projected size retains different stable LODs inside the measured hysteresis band",
+      "Actual zoom exchanges tree primitives in place without rebuilding the static park",
+      "Every exchanged LOD preserves mesh identity, exact instance matrices and selections, fixed boundary LOD and all four cardinal reservations",
+      "Demolition removes real selectable instances and preserves authoritative half refunds"
+    ],
+    "bounds": [
+      {
+        "id": 241,
+        "tile": {
+          "x": 38,
+          "y": 38,
+          "height": 32
+        },
+        "min": [
+          152.33650648593903,
+          4,
+          152.36267387866974
+        ],
+        "max": [
+          155.42947673797607,
+          9.256246566772461,
+          155.5521184206009
+        ]
+      },
+      {
+        "id": 242,
+        "tile": {
+          "x": 37,
+          "y": 38,
+          "height": 32
+        },
+        "min": [
+          148.36267387866974,
+          4,
+          152.57052326202393
+        ],
+        "max": [
+          151.5521184206009,
+          9.256246566772461,
+          155.66349351406097
+        ]
+      },
+      {
+        "id": 243,
+        "tile": {
+          "x": 36,
+          "y": 38,
+          "height": 32
+        },
+        "min": [
+          144.57052326202393,
+          4,
+          152.4478815793991
+        ],
+        "max": [
+          147.66349351406097,
+          9.256246566772461,
+          155.63732612133026
+        ]
+      },
+      {
+        "id": 244,
+        "tile": {
+          "x": 35,
+          "y": 38,
+          "height": 32
+        },
+        "min": [
+          140.4478815793991,
+          4,
+          152.33650648593903
+        ],
+        "max": [
+          143.63732612133026,
+          9.256246566772461,
+          155.42947673797607
+        ]
+      }
+    ],
+    "batches": [
+      {
+        "lod": 2,
+        "instances": 67,
+        "material": "bark",
+        "mask": 0
+      },
+      {
+        "lod": 2,
+        "instances": 67,
+        "material": "foliage_sun",
+        "mask": 0.5
+      },
+      {
+        "lod": 2,
+        "instances": 67,
+        "material": "foliage_shade",
+        "mask": 0.5
+      },
+      {
+        "lod": 1,
+        "instances": 74,
+        "material": "bark",
+        "mask": 0
+      },
+      {
+        "lod": 1,
+        "instances": 74,
+        "material": "foliage_sun",
+        "mask": 0.5
+      },
+      {
+        "lod": 1,
+        "instances": 74,
+        "material": "foliage_shade",
+        "mask": 0.5
+      }
+    ],
+    "memory": [
+      {
+        "geometries": 219,
+        "textures": 45
+      },
+      {
+        "geometries": 219,
+        "textures": 45
+      },
+      {
+        "geometries": 219,
+        "textures": 45
+      },
+      {
+        "geometries": 219,
+        "textures": 45
+      }
+    ],
+    "lodStates": [
+      {
+        "zoom": 4,
+        "lod": 0,
+        "memory": {
+          "geometries": 222,
+          "textures": 50
+        },
+        "triangles": 1463980,
+        "drawCalls": 581
+      },
+      {
+        "zoom": 0.5,
+        "lod": 2,
+        "memory": {
+          "geometries": 223,
+          "textures": 50
+        },
+        "triangles": 809648,
+        "drawCalls": 686
+      },
+      {
+        "zoom": 1.18,
+        "lod": 1,
+        "memory": {
+          "geometries": 223,
+          "textures": 50
+        },
+        "triangles": 953800,
+        "drawCalls": 686
+      },
+      {
+        "zoom": 4,
+        "lod": 0,
+        "memory": {
+          "geometries": 223,
+          "textures": 50
+        },
+        "triangles": 1463980,
+        "drawCalls": 581
+      },
+      {
+        "zoom": 0.5,
+        "lod": 2,
+        "memory": {
+          "geometries": 223,
+          "textures": 50
+        },
+        "triangles": 809648,
+        "drawCalls": 686
+      },
+      {
+        "zoom": 1.18,
+        "lod": 1,
+        "memory": {
+          "geometries": 223,
+          "textures": 50
+        },
+        "triangles": 953800,
+        "drawCalls": 686
+      },
+      {
+        "zoom": 4,
+        "lod": 0,
+        "memory": {
+          "geometries": 223,
+          "textures": 50
+        },
+        "triangles": 1463980,
+        "drawCalls": 581
+      },
+      {
+        "zoom": 0.5,
+        "lod": 2,
+        "memory": {
+          "geometries": 223,
+          "textures": 50
+        },
+        "triangles": 809648,
+        "drawCalls": 686
+      },
+      {
+        "zoom": 1.18,
+        "lod": 1,
+        "memory": {
+          "geometries": 223,
+          "textures": 50
+        },
+        "triangles": 953800,
+        "drawCalls": 686
+      },
+      {
+        "zoom": 4,
+        "lod": 0,
+        "memory": {
+          "geometries": 223,
+          "textures": 50
+        },
+        "triangles": 1463980,
+        "drawCalls": 581
+      },
+      {
+        "zoom": 0.5,
+        "lod": 2,
+        "memory": {
+          "geometries": 223,
+          "textures": 50
+        },
+        "triangles": 809648,
+        "drawCalls": 686
+      },
+      {
+        "zoom": 1.18,
+        "lod": 1,
+        "memory": {
+          "geometries": 223,
+          "textures": 50
+        },
+        "triangles": 953800,
+        "drawCalls": 686
+      },
+      {
+        "zoom": 4,
+        "lod": 0,
+        "memory": {
+          "geometries": 223,
+          "textures": 50
+        },
+        "triangles": 1463980,
+        "drawCalls": 581
+      },
+      {
+        "zoom": 1.9206145966709347,
+        "lod": 0,
+        "memory": {
+          "geometries": 223,
+          "textures": 50
+        },
+        "triangles": 1510132,
+        "drawCalls": 686
+      },
+      {
+        "zoom": 0.5,
+        "lod": 2,
+        "memory": {
+          "geometries": 223,
+          "textures": 50
+        },
+        "triangles": 809648,
+        "drawCalls": 686
+      },
+      {
+        "zoom": 1.9206145966709347,
+        "lod": 1,
+        "memory": {
+          "geometries": 223,
+          "textures": 50
+        },
+        "triangles": 953800,
+        "drawCalls": 686
+      },
+      {
+        "zoom": 1.18,
+        "lod": 1,
+        "memory": {
+          "geometries": 223,
+          "textures": 50
+        },
+        "triangles": 953800,
+        "drawCalls": 686
+      }
+    ],
+    "rebuildCpuMilliseconds": [],
+    "transitionTwoFrameMilliseconds": [
+      2961.4000000059605,
+      1674.4000000059605,
+      3518,
+      2694.800000011921,
+      5977.5,
+      611.8999999761581,
+      4992.4000000059605,
+      1190.9000000059605,
+      3146.9000000059605,
+      2168.4000000059605,
+      6104,
+      637.5999999940395,
+      2564,
+      3821.5,
+      6770.0999999940395,
+      626.4000000059605,
+      2774.300000011921
+    ],
+    "treeExchangeCpuMilliseconds": [
+      {
+        "lod": 0,
+        "milliseconds": 2.0999999940395355
+      },
+      {
+        "lod": 2,
+        "milliseconds": 0.9000000059604645
+      },
+      {
+        "lod": 1,
+        "milliseconds": 0.7000000178813934
+      },
+      {
+        "lod": 0,
+        "milliseconds": 0.7000000178813934
+      },
+      {
+        "lod": 2,
+        "milliseconds": 0.5
+      },
+      {
+        "lod": 1,
+        "milliseconds": 0.5
+      },
+      {
+        "lod": 0,
+        "milliseconds": 0.5
+      },
+      {
+        "lod": 2,
+        "milliseconds": 0.3999999761581421
+      },
+      {
+        "lod": 1,
+        "milliseconds": 0.4000000059604645
+      },
+      {
+        "lod": 0,
+        "milliseconds": 0.5
+      },
+      {
+        "lod": 2,
+        "milliseconds": 0.4000000059604645
+      },
+      {
+        "lod": 1,
+        "milliseconds": 0.5
+      },
+      {
+        "lod": 0,
+        "milliseconds": 0.4000000059604645
+      },
+      {
+        "lod": 2,
+        "milliseconds": 0.30000001192092896
+      },
+      {
+        "lod": 1,
+        "milliseconds": 0.4000000059604645
+      }
+    ],
+    "cadenceScope": "Observed software-WebGL transition plus two frame waits, not isolated CPU rebuild time or representative hardware FPS",
+    "drawCalls": 344,
+    "triangles": 484193
+  },
+  "pointerTree": {
+    "point": {
+      "id": 245,
+      "x": 960.0000000000009,
+      "y": 543.9999999999995
+    },
+    "actualPick": {
+      "kind": "element",
+      "id": 245
+    }
+  },
+  "glErrors": [],
+  "regular": {
+    "source": "98939b740c566b529bb4dae17402ce1324ad5717",
+    "version": 8,
+    "treeReady": true,
+    "categories": 6
+  },
+  "regularGlErrors": [],
+  "exceptions": [],
+  "ok": true
+}

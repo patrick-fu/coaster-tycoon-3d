@@ -1,0 +1,21 @@
+{
+  "sourceCommit": "98939b740c566b529bb4dae17402ce1324ad5717",
+  "repositoryCommit": "29f907d06e4f3ced23579aebd5b1bf971976a8e5",
+  "pagesCommit": "14d66b8aeaaad26184e25c646c6b707361c8c7c0",
+  "pagesStatus": "built",
+  "error": null,
+  "regularUrl": "https://patrick-fu.github.io/coaster-tycoon-3d/?showcase=classic",
+  "pinnedUrl": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/classic-98939b7/?showcase=classic",
+  "exit": 0,
+  "actualBrowserChecks": 15,
+  "httpFiles": 154,
+  "httpBytes": 16647230,
+  "preservedEarlierPreviewFiles": 189,
+  "verifierSha256": "1321d0b6f448512aeba520eb365ca6e48899f0876a2904b12b0e0cd3eb21a789",
+  "runLogSha256": "a88dc09335a291c3fc3eb07ef9cc6de3084632f13808f11e03ff43a928346922",
+  "captureSha256": {
+    "public-oak-park-overview.png": "e128dd20356188a26c33cd1040e6f5adc3ba35906c8320b96d795491e42e22a9",
+    "public-oak-park-close.png": "992be9621172d8e7c085fdf52ee43d33bb74701609340dc1ba881db86e7042e4"
+  },
+  "scope": "Actual HTTP byte correspondence and source-pinned/regular public software-WebGL checks; no original, representative hardware or human visual acceptance."
+}
