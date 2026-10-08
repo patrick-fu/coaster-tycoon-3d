@@ -1,0 +1,284 @@
+{
+  "status": "PASS",
+  "sourceCommit": "9ed66bacb964cb418810d8fe7f40064a18ec4800",
+  "filesCompared": 42,
+  "fullByteIdenticalFiles": 32,
+  "canonicalViews": 10,
+  "initialFullDirectoryDiff": {
+    "exit": 1,
+    "reason": "Only 10 raw view commandRevision tokens differed; save bytes, car poses, canonical fixture and summary were identical.",
+    "stdout": "byte-reproducibility.stdout.log"
+  },
+  "records": [
+    {
+      "file": "legacy-world-1m-1000hz.authored-rules.json",
+      "comparison": "byte-identical complete file",
+      "sha256": "b113e5e9bac09fc23d93f9cfe02e64923463781f68874ce3167326bae896add0"
+    },
+    {
+      "file": "legacy-world-1m-1000hz.commands.json",
+      "comparison": "byte-identical complete file",
+      "sha256": "187bd6dbc78908d4d21bca0017b85f9fffe422b2fef07d0b7fc7ff9d4339149e"
+    },
+    {
+      "file": "legacy-world-1m-1000hz.receiving-rules.json",
+      "comparison": "byte-identical complete file",
+      "sha256": "eef2c3ad51ea28c90d871e8894ed6370e7f1870d9e3424d737aee9fea1706dce"
+    },
+    {
+      "file": "legacy-world-1m-1000hz.setup-progress.json",
+      "comparison": "byte-identical complete file",
+      "sha256": "ea08b2d0b77fc3e88172e53dd1aa1827c9226622e6d5267747c60dfdcd9257ed"
+    },
+    {
+      "file": "legacy-world-1m-1000hz.t0.poses.json",
+      "comparison": "byte-identical complete file",
+      "sha256": "9d2ac6457cae4e6ab8624461d35134f305de4b0f6ff3c8c3ba3b825f9df39136"
+    },
+    {
+      "file": "legacy-world-1m-1000hz.t0.raw-view.json",
+      "comparison": "byte-identical JSON after removing only commandRevision",
+      "canonicalSha256": "d33c4f79eea50534322b931c182842752f05d6a6255116f183e72a2336f3f7b0",
+      "rawSha256": {
+        "first": "32ca231b310ac465e24bb3b5ca913117620a475a89adb3ed8e70018549e14e1f",
+        "second": "533621f88b22dbe0f074eb54e729d93cae2d117b30b42a7ea2ebbd63c2f390ce"
+      },
+      "omittedField": "commandRevision",
+      "omissionReason": "Frozen Engine uses crypto.getRandomValues for its ephemeral per-Engine session quote token."
+    },
+    {
+      "file": "legacy-world-1m-1000hz.t0.save.json.gz",
+      "comparison": "byte-identical complete file",
+      "sha256": "3a74eaa2f50347b97d762abceb54f9a549354985e4398db96c00b640de77be38"
+    },
+    {
+      "file": "legacy-world-1m-1000hz.t1.poses.json",
+      "comparison": "byte-identical complete file",
+      "sha256": "ad524d8b35f4abc19222a94e3a99871a5cee2de7b62adec0fb4d9e2c483b5104"
+    },
+    {
+      "file": "legacy-world-1m-1000hz.t1.raw-view.json",
+      "comparison": "byte-identical JSON after removing only commandRevision",
+      "canonicalSha256": "8e98fedb04eb31c8209f1f7a3b97e88f3f8b62abdeda6ffc0147c6f94f0e8275",
+      "rawSha256": {
+        "first": "d223066cae38849a177dc6283f73d97245fbc58cd90e93c59d5e31f0ac21618d",
+        "second": "06b080a15874ed1e51c92f258e8e7bdab6eeb6887f9e3d198fd0b405a1b89d25"
+      },
+      "omittedField": "commandRevision",
+      "omissionReason": "Frozen Engine uses crypto.getRandomValues for its ephemeral per-Engine session quote token."
+    },
+    {
+      "file": "legacy-world-1m-1000hz.t1.save.json.gz",
+      "comparison": "byte-identical complete file",
+      "sha256": "c5497924ba227f372ed5be306e0e2acc26daf27847d0f513c2392ba25e27ef05"
+    },
+    {
+      "file": "legacy-world-1m-1000hz.t1200.poses.json",
+      "comparison": "byte-identical complete file",
+      "sha256": "8cdf950fce11a38bcc8078805dcf4be20f72e1b752571b382a23863923ee553d"
+    },
+    {
+      "file": "legacy-world-1m-1000hz.t1200.raw-view.json",
+      "comparison": "byte-identical JSON after removing only commandRevision",
+      "canonicalSha256": "90204f6e73b80b986b0795823df05d63b350f5fdea2048b95c55f792ecee8c62",
+      "rawSha256": {
+        "first": "59f6e1ed5a1f97456dabab8378f36df5a607a6ab54e2ab76e6375bed9f9a911d",
+        "second": "59b8b7064f676494d6af43a081bb18dde8c2d040f257d92af486ac3837a36c3e"
+      },
+      "omittedField": "commandRevision",
+      "omissionReason": "Frozen Engine uses crypto.getRandomValues for its ephemeral per-Engine session quote token."
+    },
+    {
+      "file": "legacy-world-1m-1000hz.t1200.save.json.gz",
+      "comparison": "byte-identical complete file",
+      "sha256": "174a4abc3f7987c08a9528d94dacacd219627eef7be3375ff1b7f7cf4b9bb308"
+    },
+    {
+      "file": "legacy-world-1m-1000hz.t17.poses.json",
+      "comparison": "byte-identical complete file",
+      "sha256": "9f2ed48a37e9fa6cdae38480c5194441ecb594843d88a4c7005e3306b60c9b43"
+    },
+    {
+      "file": "legacy-world-1m-1000hz.t17.raw-view.json",
+      "comparison": "byte-identical JSON after removing only commandRevision",
+      "canonicalSha256": "ee826536cd3ad11b16219e24425802a817d13acb260d11282ad4fdd91dc64163",
+      "rawSha256": {
+        "first": "d3976dd3ebf9cb86361ec27266f51582b7cbdaccac489327993eb21509eb6f45",
+        "second": "74493db56040034e2c6d40e76173875b38ed40c7183ccc4cdf27314a4aef56f1"
+      },
+      "omittedField": "commandRevision",
+      "omissionReason": "Frozen Engine uses crypto.getRandomValues for its ephemeral per-Engine session quote token."
+    },
+    {
+      "file": "legacy-world-1m-1000hz.t17.save.json.gz",
+      "comparison": "byte-identical complete file",
+      "sha256": "4067a734b468b6a3d3130fa4a351bdd6b2d4da2fe72c3b726756eeec7db1ef71"
+    },
+    {
+      "file": "legacy-world-1m-1000hz.t400.poses.json",
+      "comparison": "byte-identical complete file",
+      "sha256": "f67de522b622097f371ecab9393593ee730189b4046873f2456525a1782cbed5"
+    },
+    {
+      "file": "legacy-world-1m-1000hz.t400.raw-view.json",
+      "comparison": "byte-identical JSON after removing only commandRevision",
+      "canonicalSha256": "e3158196ecd4b484fcd435a068d5f81313b0397b4558c9c5bf82734bb277b561",
+      "rawSha256": {
+        "first": "2e84eaba2e2ca17d3cd58cb6c6cf06105e3056aa7619dd66b107a4d016816eeb",
+        "second": "82d6b7ae449b6da8f07b3e39e4777cd3e8ddba99bedd302fb54e75bdd48b9c30"
+      },
+      "omittedField": "commandRevision",
+      "omissionReason": "Frozen Engine uses crypto.getRandomValues for its ephemeral per-Engine session quote token."
+    },
+    {
+      "file": "legacy-world-1m-1000hz.t400.save.json.gz",
+      "comparison": "byte-identical complete file",
+      "sha256": "85aaaa23b9ee82e702dcfb03106ce3a3713ce59bd3e32ee8cf53b70b66805dff"
+    },
+    {
+      "file": "runtime-inputs.json",
+      "comparison": "byte-identical complete file",
+      "sha256": "d65234333489c762cb30a202a91d6f0b3f885a4736707a479a1821cf496a558c"
+    },
+    {
+      "file": "source-inputs.json",
+      "comparison": "byte-identical complete file",
+      "sha256": "c92fbe7c5bca004b8e264ab02c95ef479db19c986f7237e05b65872caef85af1"
+    },
+    {
+      "file": "steel-custom.authored-rules.json",
+      "comparison": "byte-identical complete file",
+      "sha256": "45d3f0c2ffe7eae1f4434fb9efba4ab5d18f29f2961c115dc8a915fbd0f1c8a3"
+    },
+    {
+      "file": "steel-custom.commands.json",
+      "comparison": "byte-identical complete file",
+      "sha256": "5eb8d4a23714a3d3daa4074b9e5274c9ffb885c41f5a30150163537c2242742d"
+    },
+    {
+      "file": "steel-custom.receiving-rules.json",
+      "comparison": "byte-identical complete file",
+      "sha256": "bb1edad406d1f27d84831e39ad53835737baf3555847253ba0516a2dcf9bcf48"
+    },
+    {
+      "file": "steel-custom.setup-progress.json",
+      "comparison": "byte-identical complete file",
+      "sha256": "d8d1f466b61596000f9f6cbd967ce149c4e69964f084e075a33bcccd740f1e22"
+    },
+    {
+      "file": "steel-custom.t0.poses.json",
+      "comparison": "byte-identical complete file",
+      "sha256": "130735633154debb306c86bdf474419e6405483139e3fed79c7f891fc197deeb"
+    },
+    {
+      "file": "steel-custom.t0.raw-view.json",
+      "comparison": "byte-identical JSON after removing only commandRevision",
+      "canonicalSha256": "292c813402da3e25b51ccf9c74ca386f37f463400a2fbb519ccca8a9bd61b2c8",
+      "rawSha256": {
+        "first": "0e311cbb472c9608293c404c7a8b3518a7263000257ba8252a052c3978855934",
+        "second": "cb827952dd65109fbcbc1daf3b62a7592973bd78215b5d90486a3f492ac876df"
+      },
+      "omittedField": "commandRevision",
+      "omissionReason": "Frozen Engine uses crypto.getRandomValues for its ephemeral per-Engine session quote token."
+    },
+    {
+      "file": "steel-custom.t0.save.json.gz",
+      "comparison": "byte-identical complete file",
+      "sha256": "ea7345bc4686ba8a307835a1a39a84228656d412ecb041b9803e4cce1ef36546"
+    },
+    {
+      "file": "steel-custom.t1.poses.json",
+      "comparison": "byte-identical complete file",
+      "sha256": "cf56c5850f57fb452decc03e6a4a5a1ab9ace00145135417fd820eb230f44821"
+    },
+    {
+      "file": "steel-custom.t1.raw-view.json",
+      "comparison": "byte-identical JSON after removing only commandRevision",
+      "canonicalSha256": "1e7dfdea207f819da8c90d3cfa0920c619a4f6612cdf3cf97771508313e825ed",
+      "rawSha256": {
+        "first": "2e2fe8e14d8850edceae50d9ba17ebde5a96ff0f466f8173b0ff2092b6289ca6",
+        "second": "3d01da98c4f4bb935fee8ac0920f35f76ffc5ecac3928d2f3ee6e7ebb70e5271"
+      },
+      "omittedField": "commandRevision",
+      "omissionReason": "Frozen Engine uses crypto.getRandomValues for its ephemeral per-Engine session quote token."
+    },
+    {
+      "file": "steel-custom.t1.save.json.gz",
+      "comparison": "byte-identical complete file",
+      "sha256": "0e858297e4265c13cfcc6cb0dce516f0eb567c4811596ff6dabb574648b39f8e"
+    },
+    {
+      "file": "steel-custom.t1200.poses.json",
+      "comparison": "byte-identical complete file",
+      "sha256": "44cc1ec9ff1de4bdbdc7a1a828de9fed7eb3fd444c1fb270d4328efadf4c192f"
+    },
+    {
+      "file": "steel-custom.t1200.raw-view.json",
+      "comparison": "byte-identical JSON after removing only commandRevision",
+      "canonicalSha256": "1e86b8eecd47d94cd6bba372987030b2aacc990964672e330bc3e7f4ca7a288e",
+      "rawSha256": {
+        "first": "de758823eb0881e7a1fd65780511fb9497cb8808a7b8e4a5359b9cee866544f9",
+        "second": "1b394b2f9dbcbd3017ae0ca05c471fe66015211a8cb24aeb19755bddacd21ce1"
+      },
+      "omittedField": "commandRevision",
+      "omissionReason": "Frozen Engine uses crypto.getRandomValues for its ephemeral per-Engine session quote token."
+    },
+    {
+      "file": "steel-custom.t1200.save.json.gz",
+      "comparison": "byte-identical complete file",
+      "sha256": "9ed123c0e2cefe3ae89662603b4f4d70c97ec202d5a9554f849f44572a0b5044"
+    },
+    {
+      "file": "steel-custom.t17.poses.json",
+      "comparison": "byte-identical complete file",
+      "sha256": "8cd881983b8c137db99fc1a4642ce386af7dba5160b28dd35518839bbd519f5b"
+    },
+    {
+      "file": "steel-custom.t17.raw-view.json",
+      "comparison": "byte-identical JSON after removing only commandRevision",
+      "canonicalSha256": "10a33eb6ed09c6f43046b484cf038438695d41ee0bec56ad9aec7586427dc380",
+      "rawSha256": {
+        "first": "86d928d0c3777608aeeb0ab2f0dd9e43014603006250f4ec8d6b7b582b5b6e0e",
+        "second": "6933017ec6be51d4ccb820c0be5da911ad38e99c90f4708feee6299f681ddb91"
+      },
+      "omittedField": "commandRevision",
+      "omissionReason": "Frozen Engine uses crypto.getRandomValues for its ephemeral per-Engine session quote token."
+    },
+    {
+      "file": "steel-custom.t17.save.json.gz",
+      "comparison": "byte-identical complete file",
+      "sha256": "e0eb91cd713dd44ba320708729693c35bece6315c1ab193f3e9c523593ab06c7"
+    },
+    {
+      "file": "steel-custom.t400.poses.json",
+      "comparison": "byte-identical complete file",
+      "sha256": "2fd53bdf432b7830acf99b856656a2517cbbcf651c8b93d264d138188af6b175"
+    },
+    {
+      "file": "steel-custom.t400.raw-view.json",
+      "comparison": "byte-identical JSON after removing only commandRevision",
+      "canonicalSha256": "7f346d136c47d75767614235d90bf748c448f730194e86d2416465b374ec93eb",
+      "rawSha256": {
+        "first": "e0dd3809545ae212d68f82054d30a5fd1ed770f58b928ea46cfcf4b25816e363",
+        "second": "bf10b62718f47705c4eda58ddb4bcd43e25064eda02fd9b4f229531248204b0f"
+      },
+      "omittedField": "commandRevision",
+      "omissionReason": "Frozen Engine uses crypto.getRandomValues for its ephemeral per-Engine session quote token."
+    },
+    {
+      "file": "steel-custom.t400.save.json.gz",
+      "comparison": "byte-identical complete file",
+      "sha256": "5d4b20c7302d3184cb7ff1d98ec48e16d9f799919a6d0a63d9e499c5fcb12b30"
+    },
+    {
+      "file": "summary.json",
+      "comparison": "byte-identical complete file",
+      "sha256": "406fb249965bff6d4666bb6638f2f701878ea0e2284ccf879ae609a78a579aba"
+    },
+    {
+      "file": "v8-continuation.json.gz",
+      "comparison": "byte-identical complete file",
+      "sha256": "f2077d5e44b25411261a8260ec7954c08bd171c9c25a1da64075b78c7c847061"
+    }
+  ]
+}

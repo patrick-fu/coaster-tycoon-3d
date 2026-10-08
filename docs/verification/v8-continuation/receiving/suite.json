@@ -1,0 +1,36 @@
+{
+  "cwd": "/workspace/coaster-v8-regression/app",
+  "command": [
+    "node",
+    "--test",
+    "test/content-identity.test.mjs",
+    "test/content-migration.test.mjs",
+    "test/guest-recovery-review.test.mjs",
+    "test/housekeeping-review.test.mjs",
+    "test/housekeeping.test.mjs",
+    "test/imported-speed.test.mjs",
+    "test/integrated-park.test.mjs",
+    "test/kernel.test.mjs",
+    "test/motion-regressions.test.mjs",
+    "test/navigation-saves.test.mjs",
+    "test/operation.test.mjs",
+    "test/people.test.mjs",
+    "test/presentation.test.mjs",
+    "test/scenery.test.mjs",
+    "test/services-review.test.mjs",
+    "test/services.test.mjs",
+    "test/train.test.mjs",
+    "test/v8-continuation.test.mjs",
+    "test/worker.test.mjs"
+  ],
+  "exit": 0,
+  "stdoutSha256": "48141be5439d76033edd1accc45f0e8d9fe283c05c0bbe55da87d082086ae388",
+  "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdoutBytes": 29054,
+  "stderrBytes": 0,
+  "summary": [
+    "# tests 123",
+    "# pass 123",
+    "# fail 0"
+  ]
+}

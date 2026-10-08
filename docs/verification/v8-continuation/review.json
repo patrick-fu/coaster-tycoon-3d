@@ -1,0 +1,23 @@
+{
+  "reviewer": "Existing GPT 6.1 Sol Max identity-boundary session",
+  "mode": "Read-only independent static/provenance review",
+  "verdict": "No verified actionable findings",
+  "sourceBase": "17634b91913e3df055011e5476e534bbae6e1fda",
+  "inspected": [
+    "test/v8-continuation.test.mjs",
+    "actual historical gzip fixture and separate replayed copy",
+    "Engine/view public APIs",
+    "historical source/archive/generator/comparator/provenance",
+    "current 2880/5760 handoff and retained historical failures",
+    "full programme and updated fidelity gaps"
+  ],
+  "limits": [
+    "Reviewer did not execute receiving-source tests or controls and did not claim runtime acceptance."
+  ],
+  "rootAcceptance": [
+    "Actual remote receiving build/focused tests passed and full suite passed 123/123.",
+    "Both isolated compiled-runtime controls failed at the intended full projection assertion with unchanged fixture and baseline.",
+    "Actual local and remote executed test, fixture and production source bytes agree.",
+    "No production TypeScript, UI, dependency, asset, schema or capability change."
+  ]
+}

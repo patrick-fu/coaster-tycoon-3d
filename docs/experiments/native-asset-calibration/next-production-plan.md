@@ -25,8 +25,8 @@ remain unimplemented; the new candidate does not relabel those entries.
 The unchanged sample already fails a curved multi-car counterexample. Therefore
 do not advertise its operation capability as implemented until the finite curve,
 coupling, bogie and body-clearance qualification passes. This is a qualification
-gate inside the next production batch, not a reason to replace the 2680 mm
-straight coupling with the old 2000 mm value or to squash the geometry.
+gate inside the next production batch, not a reason to replace the delivered
+2880 mm nominal straight pitch with the old 2000 mm value or to squash geometry.
 
 ## Source and evidence inspected
 
@@ -190,7 +190,7 @@ Use distinct proposed candidate IDs, for example
 already registered content. The authoritative profile is selected by the
 family/variant/mode capability combination, not by a model filename.
 
-The first wooden record has `tileMetres=4`, `tickHz=40`, `carLength=2680`,
+The first wooden record has `tileMetres=4`, `tickHz=40`, `carLength=2880`,
 `seatsPerCar=4`, and an explicit small maximum car count such as 2. Store complete
 other motion values rather than implicit inheritance. Initially require the
 same world metres/tile and tick rate as the common rule record; one park cannot
@@ -220,7 +220,7 @@ state and migration; that is outside this first implementation.
 
 The failed 8 m multi-car curve must be unsupported for this candidate. A bounded
 next experiment can try radius 128 native units = 16 candidate metres with 64
-chords, retaining the 4 m station pitch and 2680 mm straight coupling. This is a
+chords, retaining the 4 m station pitch and 2880 mm nominal straight pitch. This is a
 proposed fixture, **not a passed radius**. Qualify its coupling and full body
 sweep, including straight/curve transitions, before putting its left/right
 pieces in the executable profile. If it fails, resolve the authored hull or
@@ -338,7 +338,7 @@ qualification gates pass:
 1. Add canonical mixed rules, the finite per-ride resolver and versioned save
    migration. Thread it through worker construction, course/train validation and
    ordered view projection. Verify an actual legacy steel continuation while a
-   wooden train independently allocates four seats at 2680 mm straight pitch.
+   wooden train independently allocates four seats at 2880 mm straight pitch.
 2. Implement the wooden coupled-flat poses and one proposed broad curve; retain
    the demonstrated 8 m failing fixture as a negative control. Sweep actual
    authored shell/chassis, bogies, couplers, passengers and station interfaces.
@@ -352,7 +352,8 @@ qualification gates pass:
 This batch does not need a universal object scheduler, per-instance arbitrary
 rule editor, new research/scenario systems, nonuniform vehicle composition,
 dynamic swing state or a redesign of steel motion. Further family support and
-bulk model production are optional later work. Production asset LOD/atlas and
+bulk model production remain required in the complete programme; they are
+deferred only within this bounded mixed-coaster batch. Production asset LOD/atlas and
 large-scene optimization follow measured loading/draw/memory evidence, not an
 unmeasured up-front framework.
 
@@ -364,8 +365,8 @@ by this report.
 
 | Case | Exact input and discriminating expectation |
 |---|---|
-| Mixed station fit and seat allocation | One 4 m station: steel two cars at 2000 mm fit; wooden two cars at 2680 mm reject. Two 4 m bays: wooden two cars fit and allocate 8 slots. In the first maxCars=2 wooden profile, requesting three cars rejects the capacity gate; do not misreport that as a station-length test. Include coupler/body overhang checks separately; 2.94 m visual length is not automatically the native spacing. |
-| Straight poses and ordered passengers | Four-direction station sockets retain scale `[1,1,1]` and seam residual ≤`1e-4 m`. Car coupling residual at 2680 mm ≤`1e-4 m`; 2000 mm rejects. `[101,null,103,104]` versus `[101,102,103,null]` leaves the corresponding distinct seat empty. Copied view mutation does not change owners. Guest payments, queue removal, seats and unloading reconcile once. |
+| Mixed station fit and seat allocation | One 4 m station: steel two cars at 2000 mm fit; wooden two cars at 2880 mm reject. Two 4 m bays: wooden two cars reserve 5760 mm, fit logically and allocate 8 slots. In the first maxCars=2 wooden profile, requesting three cars rejects the capacity gate; do not misreport that as a station-length test. Include coupler/body overhang checks separately; 2.94 m visual length is not automatically the native spacing. |
+| Straight poses and ordered passengers | Four-direction station sockets retain scale `[1,1,1]` and seam residual ≤`1e-4 m`. Coupler/link closure at 2880 mm nominal root pitch is ≤`1e-4 m`; 2000 mm rejects. `[101,null,103,104]` versus `[101,102,103,null]` leaves the corresponding distinct seat empty. Copied view mutation does not change owners. Guest payments, queue removal, seats and unloading reconcile once. |
 | Curved negative control and candidate qualification | Replay 8 m/32-chord lead6000/following3320 mm to preserve the shell-intersection/coupler-gap failure. Sweep the proposed 16 m/64-chord curve, both turns and straight/curve joins, using the new coupled poses. Require joint residual ≤`1e-4 m`, finite unit transforms, wheel/bogie contact within the explicitly declared candidate tolerance, and no shell/passenger/roof/support penetration outside named intended joint contacts. Use actual component triangles or independently checked convex component volumes; AABB is only broad phase. A failing phase prevents piece/profile enablement. |
 | Placement and native clearance | Station anchor tile `(20,30)`, height32, all four directions. Check actual quote cells against placement/overhang. Put other-ride track/path/scenery in measured lateral/roof/swept occupancy at adjacent quarter/Z steps; reject intersecting cases and preserve legal touching boundaries. Test connected bays, nonadjacent self-crossing, portal gate/deck approach, both ground and elevated placement. No blanket same-ride exemption or automatic fit scale. |
 | Save/worker/UI integration | Retain real v7/v8 occupied steel train and queue fixtures with nondefault rules. Migrate into matching receiving configurations; legacy future continuation matches the actual previous kernel. Save/reload the mixed park while both trains run and the wood's null-seat pattern is nontrivial. Reject malformed profile numbers, unavailable profile IDs, wrong identities, capacity mismatch and incompatible world scale atomically. Verify versioned real-worker messages, actual file export/import/IndexedDB continuation, asset reload/picking/disposal, finite bounds and cumulative GL errors. |
