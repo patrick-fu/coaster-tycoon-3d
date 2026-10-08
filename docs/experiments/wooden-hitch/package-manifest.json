@@ -306,5 +306,7 @@
       "bytes": 256910,
       "sha256": "2204b4a93d521772f689bcd35a0ef6caf5741b716ed7680e81ff035056b7e00f"
     }
-  ]
+  ],
+  "sourceCommit": "db0b6a4cb6a5ab23ad8e1228d2c238d968b8018a",
+  "identityScope": "Frozen original source delivery at sourceCommit; subsequent public-verification documentation is separate."
 }

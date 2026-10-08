@@ -1,0 +1,94 @@
+{
+  "sourceCommit": "9e944dd798584af3d2619e05fc39d5ba60f20e28",
+  "sourceMergeCommit": "b83ad65407e662f84f70f7072e1b0ad834cd0e39",
+  "publicationCommit": "d02356817c1494bedfff34c4ecf78a49568eb3a4",
+  "pagesBuild": "built",
+  "http": {
+    "files": 172,
+    "bytes": 20504416,
+    "passed": true
+  },
+  "pinnedBrowser": {
+    "checks": 8,
+    "captures": 5,
+    "exceptions": 0,
+    "exit": 0
+  },
+  "regularPublicBootstrap": {
+    "passed": true,
+    "exceptions": 0,
+    "exit": 0,
+    "liveMaterialUsers": [
+      2304,
+      39,
+      14
+    ]
+  },
+  "oldPreviewBlobs": {
+    "files": 283,
+    "byteIdenticalToPriorCommit": "fb300e76d47d200404adb045317eb69f5f860ac3"
+  },
+  "actualEvidenceFiles": [
+    {
+      "path": "public/http.json",
+      "bytes": 33656,
+      "sha256": "b444506a76adc41b95cf8817e50343f8c3a33a2622892a0f3ca1ebe3dd21daeb"
+    },
+    {
+      "path": "public/browser/browser.json",
+      "bytes": 12155,
+      "sha256": "5f87ed8fadb4cfb80159296b8a6827cf190bb2fe149cc4bf0c9cf4ce2889ee3f"
+    },
+    {
+      "path": "public/root.json",
+      "bytes": 1396,
+      "sha256": "ed47b914598e7a78f0cd89ce38563ebe2d57becf2be91aa4ed66a9e4f02cf279"
+    },
+    {
+      "path": "public/run.stdout",
+      "bytes": 293,
+      "sha256": "229c31bbd7f984c94007ca51038e8197f802be290174d84fe7e1d1231719c262"
+    },
+    {
+      "path": "public/run.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "public/run.exit",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "public/root.stdout",
+      "bytes": 261,
+      "sha256": "f9be28c49748546fccf0f32035893923b0b4bde1cf0389ff723f091bcc11e0d0"
+    },
+    {
+      "path": "public/root.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "public/root.exit",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "capture-public.py",
+      "bytes": 16861,
+      "sha256": "3d74b69714d78caa177aa8ca44c7eec9e19a8d75fffcb8589bb03e1990925960"
+    },
+    {
+      "path": "verify-public.py",
+      "bytes": 1449,
+      "sha256": "d800dd9dc9e04267d800e4270cf6fae551146dd46f67c15b44afcb6b800a88c5"
+    },
+    {
+      "path": "verify-root.py",
+      "bytes": 5307,
+      "sha256": "568f96dccb588be7f4f814cc570d54e2d18645a3cbbfb629c011f081bf8b1aae"
+    }
+  ],
+  "scope": "Public source/hash, actual loader/material/lifecycle/geometry/shader and regular bootstrap; softwareWebGL only; human/original/hardware/full-content remain open"
+}

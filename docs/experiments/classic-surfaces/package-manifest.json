@@ -137,5 +137,7 @@
       "sha256": "b08b34f253cf39b8d317f06be49f15c506fb7db82da42aeb81a21d9e57c54314"
     }
   ],
-  "scope": "Source/resource/finite evidence identities; not public or hardware acceptance"
+  "scope": "Source/resource/finite evidence identities; not public or hardware acceptance",
+  "sourceCommit": "9e944dd798584af3d2619e05fc39d5ba60f20e28",
+  "identityScope": "Frozen original source delivery at sourceCommit; subsequent public-verification documentation is separate."
 }

@@ -103,3 +103,17 @@ behavior, original agreement, active mixed-profile gameplay, representative GPU
 performance or human visual acceptance. Continue with the
 [mixed production plan](../native-asset-calibration/next-production-plan.md)
 and keep those gates separate.
+
+## Actual public inspector
+
+The [finite wooden-car/link inspector](https://patrick-fu.github.io/coaster-tycoon-3d/previews/wooden-hitch/)
+was published at `fb300e76d47d200404adb045317eb69f5f860ac3` with source
+`db0b6a4cb6a5ab23ad8e1228d2c238d968b8018a`.
+[All 17 HTTP resources](public-http.json), totaling 6,983,919 bytes, match
+the published inspector, vendor modules, composed car and drawbar. The actual
+[public browser run](public-browser.json) passes 14 captures, pointer selection,
+orbit, narrow layout and repeated loading with no exceptions/GL errors and
+unit scale. Its loaded asset response hashes match the final car/link/index.
+Subsequent Classic publication preserves every inspector blob. This public
+viewer remains a finite experiment; it activates no wooden ride and closes
+none of the continuous/native/station/gameplay/original/hardware/human gates.

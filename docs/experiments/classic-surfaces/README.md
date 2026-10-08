@@ -95,4 +95,25 @@ the actual browser regression supplies picking evidence.
 
 These are software-WebGL checks. Integrated-GPU performance, Patrick's visual
 acceptance, original equivalence and complete content coverage remain open.
-The regular and pinned public builds require separate byte/runtime verification.
+The regular and pinned public builds were separately verified after publication.
+
+## Verified public delivery
+
+The [regular Classic entry](https://patrick-fu.github.io/coaster-tycoon-3d/?showcase=classic)
+and [source-pinned preview](https://patrick-fu.github.io/coaster-tycoon-3d/previews/classic-9e944dd/?showcase=classic)
+serve source `9e944dd798584af3d2619e05fc39d5ba60f20e28`, merged in
+[the material integration](https://github.com/patrick-fu/coaster-tycoon-3d/pull/58).
+GitHub Pages built publication `d02356817c1494bedfff34c4ecf78a49568eb3a4`.
+[All 172 root/pinned HTTP files](public-http.json), totaling 20,504,416 bytes,
+match the source-linked publication manifest. All 283 prior preview blobs are
+byte-identical to the previous publication.
+
+The actual [public pinned material/lifecycle run](public-browser.json) passed
+eight checks and five captures with no exceptions; its live response images,
+bindings, shader status, frozen geometry and resource failures/cancellation
+were exercised on the public URL. A separate [regular-entry bootstrap](public-root.json)
+loaded the expected source/version, tree resources and all six surface maps,
+with live ground/public/queue users 2304/39/14, no GL error or exception.
+[Commands, exits and identities](public-verification.json) retain the scope.
+Public checks use software WebGL; they do not close the remaining human,
+original, hardware or complete-content gates.

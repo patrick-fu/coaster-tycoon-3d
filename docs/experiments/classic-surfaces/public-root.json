@@ -1,0 +1,48 @@
+{
+  "build": {
+    "sourceCommit": "9e944dd798584af3d2619e05fc39d5ba60f20e28",
+    "sourceMergeCommit": "b83ad65407e662f84f70f7072e1b0ad834cd0e39",
+    "saveVersion": 8,
+    "contentVersion": 1,
+    "protocolVersion": 1,
+    "verification": "https://github.com/patrick-fu/coaster-tycoon-3d/blob/9e944dd798584af3d2619e05fc39d5ba60f20e28/docs/experiments/classic-surfaces/README.md",
+    "scope": "Existing playable independent steel/food/drink/restroom slice with CC0 lawn/paving and detailed oak; no new original content availability or human/GPU/original acceptance",
+    "buildHost": "Grok Bot"
+  },
+  "saveVersion": 8,
+  "contentVersion": 1,
+  "protocolVersion": 1,
+  "metresPerTile": 4,
+  "assets": {
+    "ready": true,
+    "error": null,
+    "textures": 6,
+    "bitmaps": 6,
+    "disposed": false
+  },
+  "bindings": [
+    {
+      "role": "ground",
+      "users": 2304,
+      "bound": true
+    },
+    {
+      "role": "path",
+      "users": 39,
+      "bound": true
+    },
+    {
+      "role": "queue",
+      "users": 14,
+      "bound": true
+    }
+  ],
+  "catalogueVersion": 1,
+  "glError": 0,
+  "triangles": 490725,
+  "passed": true,
+  "url": "https://patrick-fu.github.io/coaster-tycoon-3d/?showcase=classic",
+  "browserVersion": "Chrome/155.0.8059.39",
+  "exceptions": [],
+  "scope": "Actual regular public bootstrap, source/version/geometry-profile and live materials; softwareWebGL only"
+}
