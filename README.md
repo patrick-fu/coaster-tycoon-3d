@@ -43,6 +43,7 @@ Golden Carousel adds a separately authored fixed3×3 ride, a sculpted sixteen-ho
 body, connected timber entrances and real paid passengers. Its own session
 handles finite load waits, timed rotation, closure, breakdown, blocked exits,
 mechanic work and safe demolition. [Actual checks and images](docs/verification/carousel/README.md)
+and [the verified frozen preview](https://patrick-fu.github.io/coaster-tycoon-3d/previews/carousel-5498c35/?showcase=classic)
 retain prior steel/wood state and pose continuations. The independent Carousel
 is distinct from the unavailable original MGR1 reference; original timing and
 visual agreement remain unqualified. Existing v9 saves migrate without replacing

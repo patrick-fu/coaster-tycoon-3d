@@ -1,0 +1,10 @@
+{
+  "sourceCommit": "5498c35eb4a4013e29a602657e706d46ac68ddcc",
+  "webFilesPerRoute": 112,
+  "rootAndPinFilesVerified": 224,
+  "previousPreviewFilesPreserved": 582,
+  "bodyGlbSha256": "405e14e1d2f6a54bd7f05676697f1d96193b7f0378c2426601d0de1484a9464f",
+  "gameSha256": "996d6b990691ae3e24289ee1f84ebf2a4af1f62952bcf57dc5670819af03e52f",
+  "passed": true,
+  "scope": "Exact remote repaired build, local file I/O and hashes; actual live HTTP/browser remains required."
+}
