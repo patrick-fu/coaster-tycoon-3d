@@ -1,0 +1,200 @@
+{
+  "scope": "Actual public root and pinned Classic startup/New five-ride park/unit Carousel and paid renderer; default-profile SwiftShader, no representative GPU or human acceptance. Quiet autosave suppressed in this smoke only to preserve existing remote profile records; real storage controls are separately qualified.",
+  "routes": [],
+  "exceptions": [],
+  "consoleErrors": [],
+  "diagnostic": {
+    "feedback": "Fixed-body owner mismatch for ride 7",
+    "initial": {
+      "side": 48,
+      "revision": "a2e8607746221fb4acc1a89a7d2adb13:1:284",
+      "rides": [
+        {
+          "id": 0
+        },
+        {
+          "id": 4
+        },
+        {
+          "id": 5
+        }
+      ],
+      "fixed": []
+    },
+    "failure": {
+      "error": "Fixed-body owner mismatch for ride 7",
+      "stack": "Error: Fixed-body owner mismatch for ride 7\n    at Object.update (https://patrick-fu.github.io/coaster-tycoon-3d/art/carousel.js:131:15)\n    at ParkScene.update (https://patrick-fu.github.io/coaster-tycoon-3d/park-scene.js:94:18)\n    at scene.update (<anonymous>:1:387)\n    at refresh (https://patrick-fu.github.io/coaster-tycoon-3d/game.js:33:464)",
+      "side": 48,
+      "revision": "3acd9da604414d2de73af5c3c2dc0847:0:386",
+      "scenery": false,
+      "sessions": [
+        {
+          "ride": 7,
+          "body": 313
+        }
+      ],
+      "cachedFixed": [],
+      "cachedElements": 244
+    },
+    "wire": [
+      {
+        "event": "ready",
+        "scenery": false
+      },
+      {
+        "send": 1,
+        "type": "load"
+      },
+      {
+        "receive": 1,
+        "type": "load",
+        "ok": true,
+        "scenery": false
+      },
+      {
+        "send": 2,
+        "type": "view",
+        "view": {
+          "bounds": {
+            "x0": 0,
+            "y0": 0,
+            "x1": 47,
+            "y1": 47
+          },
+          "includeStatic": true
+        }
+      },
+      {
+        "receive": 2,
+        "type": "view",
+        "ok": true,
+        "scenery": true,
+        "side": 48,
+        "revision": "a2e8607746221fb4acc1a89a7d2adb13:1:284",
+        "fixed": [],
+        "sessions": []
+      },
+      {
+        "send": 3,
+        "type": "view",
+        "view": {
+          "bounds": {
+            "x0": 0,
+            "y0": 0,
+            "x1": 47,
+            "y1": 47
+          },
+          "includeStatic": false
+        }
+      },
+      {
+        "receive": 3,
+        "type": "view",
+        "ok": true,
+        "scenery": false,
+        "side": 48,
+        "revision": "a2e8607746221fb4acc1a89a7d2adb13:1:284",
+        "sessions": []
+      },
+      {
+        "send": 4,
+        "type": "new-park"
+      },
+      {
+        "send": 5,
+        "type": "view",
+        "view": {
+          "bounds": {
+            "x0": 0,
+            "y0": 0,
+            "x1": 47,
+            "y1": 47
+          },
+          "includeStatic": false
+        }
+      },
+      {
+        "receive": 4,
+        "type": "new-park",
+        "ok": true,
+        "scenery": false
+      },
+      {
+        "receive": 5,
+        "type": "view",
+        "ok": true,
+        "scenery": false,
+        "side": 48,
+        "revision": "3acd9da604414d2de73af5c3c2dc0847:0:386",
+        "sessions": [
+          {
+            "ride": 7,
+            "body": 313
+          }
+        ]
+      },
+      {
+        "send": 6,
+        "type": "view",
+        "view": {
+          "bounds": {
+            "x0": 0,
+            "y0": 0,
+            "x1": 47,
+            "y1": 47
+          },
+          "includeStatic": true
+        }
+      },
+      {
+        "receive": 6,
+        "type": "view",
+        "ok": true,
+        "scenery": true,
+        "side": 48,
+        "revision": "3acd9da604414d2de73af5c3c2dc0847:0:386",
+        "fixed": [
+          {
+            "id": 313,
+            "ride": 7
+          }
+        ],
+        "sessions": [
+          {
+            "ride": 7,
+            "body": 313
+          }
+        ]
+      },
+      {
+        "send": 7,
+        "type": "view",
+        "view": {
+          "bounds": {
+            "x0": 0,
+            "y0": 0,
+            "x1": 47,
+            "y1": 47
+          },
+          "includeStatic": false
+        }
+      },
+      {
+        "receive": 7,
+        "type": "view",
+        "ok": true,
+        "scenery": false,
+        "side": 48,
+        "revision": "3acd9da604414d2de73af5c3c2dc0847:0:386",
+        "sessions": [
+          {
+            "ride": 7,
+            "body": 313
+          }
+        ]
+      }
+    ]
+  },
+  "passed": false,
+  "failure": "Fixed-body owner mismatch for ride 7"
+}
