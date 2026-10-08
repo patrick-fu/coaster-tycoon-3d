@@ -104,3 +104,20 @@ graphics or GPL implementation are shipped.
 ![Detailed oaks in the actual playable park](oak-park-close.png)
 
 ![The actual park overview](oak-park-overview.png)
+
+## Published follow-up
+
+The source-pinned [Classic oak preview](https://patrick-fu.github.io/coaster-tycoon-3d/previews/classic-98939b7/?showcase=classic)
+and [regular Classic preview](https://patrick-fu.github.io/coaster-tycoon-3d/?showcase=classic)
+serve runtime source `98939b740c566b529bb4dae17402ce1324ad5717` from PR53.
+Pages reported `built` for exact publication commit
+`14d66b8aeaaad26184e25c646c6b707361c8c7c0`, without an error. Actual public
+HTTP checks compared **154 files / 16,647,230 bytes** against local manifests,
+including all models, binary buffers, shared images and addon dependencies.
+All **15 public browser checks** passed with actual zoom, instance invariants,
+pointer inspection, loading faults and regular-page Library/tree readiness.
+Both pages retain version 8 saves. No exception or accumulated WebGL error was
+observed. All 189 pre-existing preview files, including the Model Workshop,
+were preserved byte for byte. `publication.json`, `public-http.json` and
+`public-browser.json` retain the exact evidence; raw driver/logs and public
+captures remain in the external evidence workspace.
