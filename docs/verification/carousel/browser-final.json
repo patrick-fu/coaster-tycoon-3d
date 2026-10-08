@@ -1,0 +1,247 @@
+{
+  "scope": "Actual local-served shipping app, current worker, unit Carousel model and paid owner rendering. Default Chrome profile, SwiftShader; no representative GPU, original or human acceptance. Quiet autosave suppressed only for this bounded smoke.",
+  "checks": [
+    {
+      "check": "shipping-new-park",
+      "version": 10,
+      "content": 3,
+      "rides": 5,
+      "assets": {
+        "ready": true,
+        "error": null,
+        "disposed": false,
+        "geometries": 31,
+        "materials": 24,
+        "textures": 8,
+        "bitmaps": 8
+      }
+    },
+    {
+      "check": "carousel-toolbar",
+      "stationValue": "313",
+      "trackBuildVisible": false,
+      "position": "\u2014"
+    },
+    {
+      "check": "current-body-toolbar-and-queue-mode",
+      "body": 313,
+      "queueSelected": true
+    },
+    {
+      "check": "actual-paid-render",
+      "case": "full",
+      "seats": [
+        46,
+        45,
+        44,
+        29,
+        27,
+        26,
+        47,
+        31,
+        30,
+        25,
+        18,
+        17,
+        33,
+        32,
+        48,
+        42
+      ],
+      "renderedOwners": [
+        46,
+        45,
+        44,
+        29,
+        27,
+        26,
+        47,
+        31,
+        30,
+        25,
+        18,
+        17,
+        33,
+        32,
+        48,
+        42
+      ],
+      "phase": "running",
+      "phaseTick": 2,
+      "maxAnchorError": 1.9073486612342094e-07,
+      "factory": {
+        "records": 1,
+        "realRiders": 16,
+        "disposed": false
+      },
+      "glError": 0,
+      "triangles": 1049652,
+      "screenshot": {
+        "file": "full.png",
+        "sha256": "490669c6eb8d0b45edbced40c2093d916ba727aab8833741358ce1861dba4f71"
+      }
+    },
+    {
+      "check": "actual-paid-render",
+      "case": "null-inner",
+      "seats": [
+        46,
+        null,
+        44,
+        29,
+        27,
+        26,
+        47,
+        31,
+        30,
+        25,
+        18,
+        17,
+        33,
+        32,
+        null,
+        42
+      ],
+      "renderedOwners": [
+        46,
+        null,
+        44,
+        29,
+        27,
+        26,
+        47,
+        31,
+        30,
+        25,
+        18,
+        17,
+        33,
+        32,
+        null,
+        42
+      ],
+      "phase": "running",
+      "phaseTick": 2,
+      "maxAnchorError": 1.9073486612342094e-07,
+      "factory": {
+        "records": 1,
+        "realRiders": 14,
+        "disposed": false
+      },
+      "glError": 0,
+      "triangles": 1597330,
+      "screenshot": {
+        "file": "null-inner.png",
+        "sha256": "b77bfdb9c8244fcd220f9e0ce56c0b093e3348e2f50a77896f5dbb364334bab9"
+      }
+    },
+    {
+      "check": "actual-paid-render",
+      "case": "null-ends",
+      "seats": [
+        null,
+        45,
+        44,
+        29,
+        27,
+        26,
+        47,
+        31,
+        30,
+        25,
+        18,
+        17,
+        33,
+        32,
+        48,
+        null
+      ],
+      "renderedOwners": [
+        null,
+        45,
+        44,
+        29,
+        27,
+        26,
+        47,
+        31,
+        30,
+        25,
+        18,
+        17,
+        33,
+        32,
+        48,
+        null
+      ],
+      "phase": "running",
+      "phaseTick": 2,
+      "maxAnchorError": 1.9073486612342094e-07,
+      "factory": {
+        "records": 1,
+        "realRiders": 14,
+        "disposed": false
+      },
+      "glError": 0,
+      "triangles": 1597330,
+      "screenshot": {
+        "file": "null-ends.png",
+        "sha256": "b716e26d83a2825b2479f0505bb8f6222b30f2c72f79d6ed0fdf399eb5e0a26d"
+      }
+    },
+    {
+      "check": "actual-portal-floor-picking-instance-and-cancel",
+      "portalBounds": [
+        {
+          "role": "entrance",
+          "min": [
+            -1.7999999999999998,
+            0,
+            -2
+          ],
+          "max": [
+            1.8699999999999999,
+            2.88,
+            2
+          ],
+          "floorSamples": 123
+        },
+        {
+          "role": "exit",
+          "min": [
+            -1.8599999999999999,
+            0,
+            -2
+          ],
+          "max": [
+            1.7999999999999998,
+            2.88,
+            2
+          ],
+          "floorSamples": 123
+        }
+      ],
+      "picked": {
+        "kind": "guest",
+        "id": 27
+      },
+      "sharedGeometryDisposals": 0,
+      "cancelled": {
+        "ready": false,
+        "error": null,
+        "disposed": true,
+        "geometries": 0,
+        "materials": 0,
+        "textures": 0,
+        "bitmaps": 0
+      }
+    }
+  ],
+  "exceptions": [],
+  "consoleErrors": [],
+  "overview": {
+    "file": "overview.png",
+    "sha256": "0416d4baa775b48cf721e6675116badd1d8cdf40b10c63005f9dc4a676f3e059"
+  },
+  "passed": true
+}

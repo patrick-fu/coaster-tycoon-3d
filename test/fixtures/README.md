@@ -35,3 +35,23 @@ No expected result comes from the receiving implementation. Independent replay,
 source/runtime hashes and original generation scripts are retained in
 [v8 continuation evidence](../../docs/verification/v8-continuation/README.md).
 This is project-candidate regression evidence, not original RCT2 calibration.
+
+## Historical v9 paid mixed park
+
+`v9-mixed-continuation.json.gz` retains actual pre-Carousel source `1fef531`
+(production main `ccba3cf`) for full eight paid wooden seats and an explicitly
+recorded slots1/5 null control, alongside three operating steel coasters.
+It packages unchanged prior-kernel saves and public views at offsets
+0/1/17/400/1200 from the read-only WD oracle. The new implementation never
+generates expected trajectories. Exact receiving browser numeric Rules are
+preserved; tests remove only the new version/profile/session/retired-income
+fields and normalize the quote token's session/generation prefixes. All old
+values, poses, ordered owners, guest history and financial records compare
+exactly. Both receivers with and without the new fixed profile are tested.
+
+Fixture SHA256: `6148fc5dc7a74a1522b447726549ab365dd40b86e72d3f07e2526a29f981bb76`.
+Original oracle index SHA256:
+`ad4a682d30ffb2207227a2dd360f9aca5146741876e4930303bdfbbda8a1e4ab`.
+Full independent generation/replay records remain at
+`/Volumes/WD/code/workspaces/coaster-v9-mixed-golden/REPORT.md`.
+These are independent project regression fixtures, without original game media.

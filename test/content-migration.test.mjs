@@ -6,9 +6,9 @@ import {readFileSync} from 'node:fs';
 import {gunzipSync} from 'node:zlib';
 
 function legacy(state,version=7){
- const s=structuredClone(state);s.version=version;delete s.contentVersion;delete s.nextInstance;
+ const s=structuredClone(state);s.version=version;delete s.contentVersion;delete s.nextInstance;delete s.carouselSessions;delete s.retiredRideIncome;
  for(const r of [...s.rides,...s.facilities]){delete r.content;delete r.instanceId;}
- const profile=JSON.parse(s.rules);delete profile.rideProfiles;if(version===6)delete profile.scenery;s.rules=JSON.stringify(profile);
+ const profile=JSON.parse(s.rules);delete profile.rideProfiles;delete profile.fixedProfiles;if(version===6)delete profile.scenery;s.rules=JSON.stringify(profile);
  return s;
 }
 const tick=(e,n)=>{while(n){const count=Math.min(n,4096);assert(e.advance(count).ok);n-=count;}};
@@ -16,7 +16,7 @@ const tick=(e,n)=>{while(n){const count=Math.min(n,4096);assert(e.advance(count)
 test('v7 imports receive independent content identities without changing their original rules or park state',()=>{
  const e=create();ride(e);apply(e,{type:'place-facility',name:'Old food',kind:'food',tile:{x:5,y:5},height:32,direction:0});
  const original=legacy(e.snapshot()),restored=create();assert(restored.restoreSave(JSON.stringify(original)).ok);
- const s=restored.snapshot();assert.equal(s.version,9);assert.equal(s.contentVersion,2);assert.equal(s.rides[0].content.familyId,'independent.circuit-coaster');assert.equal(s.facilities[0].content.variantId,'independent.food-stand');
+ const s=restored.snapshot();assert.equal(s.version,10);assert.equal(s.contentVersion,3);assert.equal(s.rides[0].content.familyId,'independent.circuit-coaster');assert.equal(s.facilities[0].content.variantId,'independent.food-stand');
  assert.deepEqual(legacy(s),original);assert.equal(s.rides[0].instanceId,1);assert.equal(s.facilities[0].instanceId,2);assert.equal(s.nextInstance,3);
  const saved=restored.exportSave();assert(restored.restoreSave(saved).ok);assert.equal(restored.exportSave(),saved);
 });
@@ -26,7 +26,7 @@ test('v7 passenger and queue migration preserves exact continuation with nondefa
  apply(e,{type:'set-park-entrance',point:{x:10,y:7,z:32}});apply(e,{type:'set-ride-status',ride:id,status:'open'});tick(e,400);apply(e,{type:'set-park-open',open:true});
  let populated=false;for(let n=0;n<1000;n+=4){tick(e,4);const s=e.snapshot();if(s.trains[0].seats.some(id=>id!==null)&&s.rides[0].queue.length){populated=true;break;}}assert(populated,'The fixture must exercise both occupied seats and a queue.');
  const original=legacy(e.snapshot()),restored=create();assert(restored.restoreSave(JSON.stringify(original)).ok);assert.deepEqual(legacy(restored.snapshot()),original);
- tick(e,900);tick(restored,17);tick(restored,883);assert.deepEqual(legacy(restored.snapshot()),legacy(e.snapshot()));assert.equal(restored.snapshot().contentVersion,2);
+ tick(e,900);tick(restored,17);tick(restored,883);assert.deepEqual(legacy(restored.snapshot()),legacy(e.snapshot()));assert.equal(restored.snapshot().contentVersion,3);
 });
 
 test('v7 shop migration preserves retired income and stock when a demolished slot was reused for drinks',()=>{
@@ -44,12 +44,12 @@ test('legacy content fields, malformed ledgers and changed numeric rules are rej
  const bad=structuredClone(original),p=JSON.parse(bad.rules);p.pieces.station.price++;bad.rules=JSON.stringify(p);assert.equal(e.restoreSave(JSON.stringify(bad)).error.code,'WRONG_RULES');assert.equal(e.exportSave(),before);assert(e.execute(c,q.value.revision).ok);assert.equal(e.advance(40).value,0);
 });
 
-test('legal v6 scenery normalization reaches v9 while forbidden v6 scenery is rejected',()=>{
- const e=create();ride(e);const old=legacy(e.snapshot(),6),restored=create();assert(restored.restoreSave(JSON.stringify(old)).ok);assert.equal(restored.snapshot().version,9);assert.deepEqual(legacy(restored.snapshot(),6),old);
+test('legal v6 scenery normalization reaches v10 while forbidden v6 scenery is rejected',()=>{
+ const e=create();ride(e);const old=legacy(e.snapshot(),6),restored=create();assert(restored.restoreSave(JSON.stringify(old)).ok);assert.equal(restored.snapshot().version,10);assert.deepEqual(legacy(restored.snapshot(),6),old);
  apply(e,{type:'place-scenery',sceneryType:'tree',tile:{x:5,y:5},height:16});const before=restored.exportSave();assert.equal(restored.restoreSave(JSON.stringify(legacy(e.snapshot(),6))).error.code,'INVALID_SAVE');assert.equal(restored.exportSave(),before);
 });
 
-test('actual previous-kernel v7 exports continue identically after v9 migration with different tick batches',()=>{
+test('actual previous-kernel v7 exports continue identically after v10 migration with different tick batches',()=>{
  const cases=JSON.parse(gunzipSync(readFileSync(new URL('./fixtures/v7-continuation.json.gz',import.meta.url))));
  for(const c of cases){const e=new Engine(options,c.profile);assert.equal(c.initial.version,7);assert(e.restoreSave(JSON.stringify(c.initial)).ok,c.name);assert.deepEqual(legacy(e.snapshot()),c.initial,c.name);tick(e,17);tick(e,c.ticks-17);assert.deepEqual(legacy(e.snapshot()),c.continuation,c.name);}
 });

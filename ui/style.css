@@ -1277,3 +1277,6 @@ dialog h2 {
     box-shadow: 0 0 0 2px #193827;
   }
 }
+.carousel-seat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin:8px 0 12px}
+.carousel-seat-grid button{padding:7px 3px;font-size:11px}
+.carousel-seat-grid button:disabled{opacity:.55}

@@ -8,7 +8,8 @@ Project code is licensed under [MIT](LICENSE). The implementation and required
 game resources are independent; see the [source strategy decision](docs/adr/0001-independent-mit-implementation.md).
 
 Try the [current Classic showcase](https://patrick-fu.github.io/coaster-tycoon-3d/?showcase=classic)
-in desktop Chrome or Edge. Its three steel layouts and detailed wooden coaster, shops,
+in desktop Chrome or Edge. Its three steel layouts, detailed wooden coaster and
+sixteen-seat Carousel, shops,
 gardens and local save use a separate showcase slot, preserving your existing
 park at the [regular preview](https://patrick-fu.github.io/coaster-tycoon-3d/).
 Build and manage Copper Meadows with mouse/keyboard;
@@ -16,16 +17,16 @@ drag to orbit, right-drag to pan and scroll to zoom. Space pauses the park.
 Saves remain in this browser. Export/Import provides file backups;
 cross-runtime default-rule portability is not yet qualified.
 An earlier local park remains intact; choose **New park** after saving/exporting
-it to start the current four-ride layout.
+it to start the current five-ride layout.
 
-![Actual mixed park with three steel rides and detailed timber coaster](docs/verification/mixed-wooden/overview.png)
+![Actual mixed park with steel, timber and fixed Carousel rides](docs/verification/carousel/overview.png)
 
 The current art iteration adds detailed oak meshes, real CC0 bark and leaf
 surfaces, masked shadows and three camera-selected levels of detail to the
 playable park. Planting, inspection, demolition and save/load use the existing
 simulation. See the [editable asset source](prototypes/organic-tree/README.md)
 and [verification evidence](docs/verification/oak-scenery/README.md). The modeless
-Classic Library exposes the full reference catalogue and the five implemented
+Classic Library exposes the full reference catalogue and the six implemented
 candidate variants; unavailable reference items remain clearly marked.
 
 The [mixed coaster slice](docs/mixed-coasters.md) adds an independently authored
@@ -34,9 +35,18 @@ station and textured track. Cedar Timber Run operates beside the steel rides:
 actual guests board, pay, ride and unload, and their ordered seats survive saving.
 The finite wooden construction profile supports ground-level flat track and
 R16 curves, with two cars at most. This is a project candidate, not the original
-Wooden/PTCT1 entry. Current saves use v9/content2; historical steel continuation
+Wooden/PTCT1 entry. Current saves use v10/content3; historical steel continuation
 and [the measured checks](docs/verification/mixed-wooden/README.md) have distinct
 evidence boundaries.
+
+Golden Carousel adds a separately authored fixed3×3 ride, a sculpted sixteen-horse
+body, connected timber entrances and real paid passengers. Its own session
+handles finite load waits, timed rotation, closure, breakdown, blocked exits,
+mechanic work and safe demolition. [Actual checks and images](docs/verification/carousel/README.md)
+retain prior steel/wood state and pose continuations. The independent Carousel
+is distinct from the unavailable original MGR1 reference; original timing and
+visual agreement remain unqualified. Existing v9 saves migrate without replacing
+their park layout, and previous browser slots remain intact.
 
 The [earlier art checkpoint](https://patrick-fu.github.io/coaster-tycoon-3d/previews/classic-a7d6451/?showcase=classic)
 has procedural materials and composed models, three steel-coaster

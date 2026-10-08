@@ -1,4 +1,4 @@
-import type {Cell,Element,Portal,Ride,Rules,Track} from './types.js';
+import type {Cell,Element,Portal,Ride,TrackedRide,Rules,Track} from './types.js';
 import {endpoint,same} from './geometry.js';
 import {woodenProfile} from '../content/ride-profiles.js';
 import {legacyRideContent} from '../content/registry.js';
@@ -38,7 +38,7 @@ function cellsForBounds(bounds:Bounds):Cell[]{
 
 export function woodenPortalCells(portal:Portal,station:Track):Cell[]{return cellsForBounds(woodenTransition(portal,station).bounds);}
 
-function adjacent(a:Track,b:Track,ride:Ride,elements:ReadonlyMap<number,Element>,rules:Rules){
+function adjacent(a:Track,b:Track,ride:TrackedRide,elements:ReadonlyMap<number,Element>,rules:Rules){
  const i=ride.track.indexOf(a.id),j=ride.track.indexOf(b.id);
  if(i<0||j<0)return false;
  if(j===i+1)return same(endpoint(a.origin,rules.pieces[a.piece]!),b.origin);
@@ -58,10 +58,11 @@ const disjoint=(a:Bounds,b:Bounds)=>a.x1<=b.x0||b.x1<=a.x0||a.y1<=b.y0||b.y1<=a.
 export function woodenInterface(a:Element,b:Element,rides:ReadonlyMap<number,Ride>,elements:ReadonlyMap<number,Element>,common:Rules):boolean{
  if(a.kind==='track'&&b.kind==='track'){
   if(a.ride!==b.ride)return false;const ride=rides.get(a.ride)!;
+  if(ride.body!==undefined)return false;
   const profile=woodenProfile(ride.content??legacyRideContent(),common);return!!profile&&adjacent(a,b,ride,elements,{...common,pieces:profile.pieces});
  }
  const portal=a.kind==='portal'?a:b.kind==='portal'?b:null;if(!portal)return false;
- const ride=rides.get(portal.ride),profile=ride?woodenProfile(ride.content??legacyRideContent(),common):null;if(!ride||!profile)return false;
+ const ride=rides.get(portal.ride),profile=ride?woodenProfile(ride.content??legacyRideContent(),common):null;if(!ride||ride.body!==undefined||!profile)return false;
  const station=elements.get(portal.station);if(station?.kind!=='track'||station.ride!==portal.ride||!profile.pieces[station.piece]?.station)return false;
  const other=portal===a?b:a,transition=woodenTransition(portal,station);
  if(other.kind==='track'){

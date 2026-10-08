@@ -8,20 +8,20 @@ const fixture=JSON.parse(gunzipSync(readFileSync(new URL('./fixtures/v8-continua
 const wire=value=>JSON.parse(JSON.stringify(value,(_key,item)=>ArrayBuffer.isView(item)?Array.from(item):item));
 
 function previousSave(state){
- assert.equal(state.version,9);assert.equal(state.contentVersion,2);
+ assert.equal(state.version,10);assert.equal(state.contentVersion,3);
  const old=structuredClone(state),rules=JSON.parse(old.rules);assert.deepEqual(rules.rideProfiles,{});
- delete rules.rideProfiles;old.rules=JSON.stringify(rules);old.version=8;old.contentVersion=1;return old;
+ assert.deepEqual(rules.fixedProfiles,{});assert.deepEqual(old.carouselSessions,[]);assert.equal(old.retiredRideIncome,0);delete old.carouselSessions;delete old.retiredRideIncome;delete rules.rideProfiles;delete rules.fixedProfiles;old.rules=JSON.stringify(rules);old.version=8;old.contentVersion=1;return old;
 }
 
 function previousView(view,state,receivingRules){
- const old=wire(view);assert.equal(old.protocolVersion,2);assert.equal(old.contentVersion,2);
+ const old=wire(view);assert.equal(old.protocolVersion,3);assert.equal(old.contentVersion,3);
  for(const car of old.cars){
   const train=state.trains.find(t=>t.ride===car.ride),index=train.carIds.indexOf(car.id),seats=receivingRules.motion.seatsPerCar;
   assert.deepEqual(car.seatIds,train.seats.slice(index*seats,(index+1)*seats));assert.equal(car.rig,null);
   delete car.seatIds;delete car.rig;
  }
  for(const ride of old.rides){assert.equal(ride.trackProfile,null);delete ride.trackProfile;}
- old.protocolVersion=1;old.contentVersion=1;return old;
+ assert.deepEqual(old.carouselSessions,[]);delete old.carouselSessions;old.protocolVersion=1;old.contentVersion=1;return old;
 }
 
 function advance(engine,ticks){

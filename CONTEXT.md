@@ -53,3 +53,9 @@ A versioned authored park starting state, selected content/research, climate,
 restrictions, finances and objective/deadline. It is distinct from a saved
 ongoing park and from a reusable coaster track-design preset.
 _Avoid_: Theme pack, mandatory story campaign
+
+**Ride session**:
+One attraction's participant group from admission and loading through its operating
+cycle and return to unloading. Its ordered occupants belong to the attraction
+throughout the cycle, even when operation pauses or its exit becomes unavailable.
+_Avoid_: Cosmetic animation loop, coaster train

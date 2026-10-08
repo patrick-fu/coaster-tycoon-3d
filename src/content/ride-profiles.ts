@@ -6,6 +6,7 @@ import {footprint} from '../simulation/geometry.js';
 
 export function woodenProfile(content:ContentIdentity,rules:Rules):RideProfile|null{
  const {construction,operation}=resolveContent(content).capabilities;
+ if(construction.kind==='fixed')return null;
  ensure(construction.kind==='tracked'&&operation.kind==='circuit'&&construction.profileId===operation.profileId,'INVALID_CONTENT','The ride has no compatible tracked operation profile.');
  if(construction.profileId==='independent-circuit-v1')return null;
  const profile=rules.rideProfiles?.[construction.profileId];
@@ -24,5 +25,9 @@ export function rideFootprint(origin:Connector,piece:PieceRule,profile:RideProfi
 }
 
 export function legacyRuleJSON(rules:Rules):string{
- const {rideProfiles,...common}=rules;return JSON.stringify(common);
+ const {rideProfiles,fixedProfiles,...common}=rules;return JSON.stringify(common);
+}
+
+export function v9RuleJSON(rules:Rules):string{
+ const {fixedProfiles,...previous}=rules;return JSON.stringify(previous);
 }

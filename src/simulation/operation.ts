@@ -4,6 +4,7 @@ import {ensure} from './validation.js';
 import {legacyRideContent} from '../content/registry.js';
 import {resolveRideRules,woodenProfile} from '../content/ride-profiles.js';
 import {portalMountYaw} from './wooden-placement.js';
+import {carouselPortal,fixedProfile} from './carousel.js';
 
 export type Station={id:number,track:number[]};
 export type Eligibility={circuit:boolean,stations:Station[],issues:string[]};
@@ -11,6 +12,7 @@ type Elements=Pick<ReadonlyMap<number,Element>,'get'|'values'>;
 const directions=[[1,0],[0,1],[-1,0],[0,-1]] as const;
 
 export function stationGroups(ride:Ride,elements:Elements,rules:Rules):Station[]{
+  if(ride.body!==undefined)return[];
   rules=resolveRideRules(ride.content??legacyRideContent(),rules);
   const groups:Station[]=[];
   let current:Station|undefined;
@@ -31,6 +33,14 @@ export function stationGroups(ride:Ride,elements:Elements,rules:Rules):Station[]
 }
 
 export function validatePortal(portal:Portal,ride:Ride,elements:Elements,rules:Rules){
+  if(fixedProfile(ride.content,rules)){
+    const body=elements.get(portal.station);
+    ensure(body?.kind==='fixed-body'&&body.ride===ride.id&&ride.body===body.id,'GEOMETRY','Carousel portals must reference their fixed body.');
+    const socket=carouselPortal(body,portal.role);
+    ensure(portal.tile.x===socket.tile.x&&portal.tile.y===socket.tile.y&&portal.height===socket.height&&portal.direction===socket.direction,'GEOMETRY','Carousel portal differs from its authored socket.');
+    ensure(![...elements.values()].some(e=>e.kind==='portal'&&e.id!==portal.id&&e.ride===ride.id&&e.role===portal.role),'GEOMETRY','The Carousel already has this portal role.');
+    return;
+  }
   const profile=woodenProfile(ride.content??legacyRideContent(),rules);
   rules=resolveRideRules(ride.content??legacyRideContent(),rules);
   const track=elements.get(portal.station);
@@ -50,6 +60,13 @@ export function validatePortal(portal:Portal,ride:Ride,elements:Elements,rules:R
 }
 
 export function eligibility(ride:Ride,elements:Elements,rules:Rules):Eligibility{
+  if(fixedProfile(ride.content,rules)){
+    const body=ride.body===undefined?undefined:elements.get(ride.body),issues:string[]=[];
+    if(body?.kind!=='fixed-body'||body.ride!==ride.id)issues.push('A fixed Carousel body is required.');
+    for(const role of ['entrance','exit'])if(![...elements.values()].some(e=>e.kind==='portal'&&e.ride===ride.id&&e.station===ride.body&&e.role===role))issues.push(`A Carousel ${role} is required.`);
+    return{circuit:false,stations:[],issues};
+  }
+  ensure(ride.body===undefined,'INVALID_CONTENT','Tracked eligibility requires a tracked ride.');
   const profile=woodenProfile(ride.content??legacyRideContent(),rules);
   rules=resolveRideRules(ride.content??legacyRideContent(),rules);
   const stations=stationGroups(ride,elements,rules),last=ride.track.at(-1),track=last===undefined?undefined:elements.get(last) as Track;

@@ -1,0 +1,39 @@
+{
+  "scope": "Actual local-served shipping app, current worker, unit Carousel model and paid owner rendering. Default Chrome profile, SwiftShader; no representative GPU, original or human acceptance. Quiet autosave suppressed only for this bounded smoke.",
+  "checks": [
+    {
+      "check": "absent-v10-migrates-real-v9-and-writes-only-new",
+      "callbacks": 14,
+      "saveSha256": "ec064339d31c38aa22f1713c58f6380705c0b206a9dd4839624a12f3287d0a9c"
+    },
+    {
+      "check": "defined-corrupt-v10",
+      "callbacks": 7,
+      "preservedRecords": true,
+      "feedback": "Saved park was not loaded: Unexpected or missing fields."
+    },
+    {
+      "check": "defined-null-v10",
+      "callbacks": 8,
+      "preservedRecords": true,
+      "feedback": "Saved park was not loaded: Invalid or oversized save."
+    },
+    {
+      "check": "defined-corrupt-v9",
+      "callbacks": 7,
+      "preservedRecords": true,
+      "feedback": "Saved park was not loaded: Unexpected or missing fields."
+    },
+    {
+      "check": "both-versioned-absent-legacy-read-and-new-only-write",
+      "callbacks": 15
+    },
+    {
+      "check": "explicit-save-reenables-quiet-after-rejected-restore",
+      "callbacks": 8
+    }
+  ],
+  "exceptions": [],
+  "consoleErrors": [],
+  "passed": true
+}

@@ -1,9 +1,11 @@
 import {newPark,steelRules} from './steel-coaster.js';
 import {withWoodenProfile} from './wooden-coaster.js';
 import {woodenRideContent} from './registry.js';
+import {carouselRideContent} from './registry.js';
+import {withCarouselProfile} from './carousel.js';
 import type {Command} from '../simulation/types.js';
 
-export const mixedRules=withWoodenProfile(steelRules);
+export const mixedRules=withCarouselProfile(withWoodenProfile(steelRules));
 
 export function newMixedPark(){
  const engine=newPark(mixedRules);
@@ -37,6 +39,20 @@ export function newMixedPark(){
  ] as const)apply({type:'place-scenery',sceneryType,tile:{x,y},height:32});
  apply({type:'set-ride-status',ride,status:'testing'});
  const warm=engine.advance(2400);if(!warm.ok)throw new Error(warm.error.message);
+ apply({type:'set-ride-status',ride,status:'open'});
+ return engine;
+}
+
+export function newCarouselPark(){
+ const engine=newMixedPark();
+ const apply=(command:Command)=>{const q=engine.quote(command);if(!q.ok)throw new Error(q.error.message);const r=engine.execute(command,q.value.revision);if(!r.ok)throw new Error(r.error.message);return r.value.id!;};
+ const clear=(x:number,y:number)=>{for(const e of engine.snapshot().elements)if(e.kind==='scenery'&&e.tile.x===x&&e.tile.y===y)apply({type:'remove-scenery',id:e.id});};
+ for(let x=27;x<=30;x++)for(let y=5;y<=7;y++)clear(x,y);
+ const ride=apply({type:'create-ride',name:'Golden Carousel',tile:{x:27,y:5},height:32,direction:2,content:carouselRideContent()}),body=engine.snapshot().rides.find(r=>r.id===ride)!.body!;
+ apply({type:'place-portal',ride,station:body,role:'entrance',tile:{x:30,y:7},height:32,direction:2});
+ apply({type:'place-portal',ride,station:body,role:'exit',tile:{x:30,y:5},height:32,direction:2});
+ const path=(x:number,y:number,queueFor:number|null)=>{if(engine.snapshot().elements.some(e=>e.kind==='path'&&e.tile.x===x&&e.tile.y===y&&e.height===32))return;clear(x,y);apply({type:'place-path',tile:{x,y},height:32,queueFor});};
+ for(let x=31;x<=34;x++)path(x,14,null);for(let y=5;y<=13;y++)path(34,y,null);for(let x=31;x<=33;x++)path(x,5,null);for(let x=31;x<=33;x++)path(x,7,ride);
  apply({type:'set-ride-status',ride,status:'open'});
  return engine;
 }

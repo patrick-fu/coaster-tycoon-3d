@@ -1150,6 +1150,13 @@ export function buildPath(ctx, parent, element, scenery) {
   // 1. Main paving deck
   boxMesh(ctx, parent, deckMat, x, h + 0.07, z, 3.86, 0.14, 3.86);
 
+  for(const portal of elements){
+    if(portal.kind!=='portal'||portal.height!==element.height||!ctx.packet?.rides.some(r=>r.id===portal.ride&&r.presentation.kind==='detailed-carousel'))continue;
+    const [dx,dy]=[[1,0],[0,1],[-1,0],[0,-1]][portal.direction];
+    if(portal.tile.x-dx!==element.tile.x||portal.tile.y-dy!==element.tile.y)continue;
+    boxMesh(ctx,parent,deckMat,x+dx*1.965,h+.07,z+dy*1.965,dx ? .07 : 1.6,.14,dy ? .07 : 1.6);
+  }
+
   // 2. Edge kerbs (true adjacent-edge cuts: omit kerb where paths connect)
   if (!east) boxMesh(ctx, parent, kerbMat, x + 1.93, h + 0.1, z, 0.14, 0.2, 3.86);
   if (!west) boxMesh(ctx, parent, kerbMat, x - 1.93, h + 0.1, z, 0.14, 0.2, 3.86);

@@ -1,0 +1,23 @@
+{
+  "build": "Grok tsc exit0",
+  "fullSuite": {
+    "tests": 148,
+    "pass": 148,
+    "fail": 0,
+    "exit": 0,
+    "stdoutSha256": "70e2a6bb770a11485e693c8b3a9ffc93b27a8a5412fc55ec0d1aa9fba9b62c84"
+  },
+  "protocolSupplement": {
+    "checks": 9,
+    "pass": 9,
+    "exit": 0
+  },
+  "failedAttemptsRetained": [
+    "logic-r2:138/140, missing retained fixture and stale v6 preparation",
+    "logic-r3:143/144, stale v6 preparation",
+    "status-reset-red: actual oldcode fail 1 != 0",
+    "joint-owner first control: invalid portal references rejected before desired joint-owner validator, repaired control uses matching steel portals"
+  ],
+  "remote": "/workspace/coaster-carousel",
+  "local": "/Volumes/WD/code/workspaces/coaster-carousel"
+}
