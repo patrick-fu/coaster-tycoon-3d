@@ -1,0 +1,129 @@
+{
+  "scope": "Actual separate runtime exports versus inspected GLBs: full transformed vertices and exact embedded/external image bytes. No original or real-GPU qualification.",
+  "records": [
+    {
+      "asset": "organic-tree-lod0",
+      "sha256": "852ac0bfce78bd271c8484a724f5c95fc0339786c9553d4d32aae159f43be3fa",
+      "vertexCoordinates": 25668,
+      "vertexResidual": 0,
+      "images": [
+        {
+          "uri": "textures/Bark014_1K-PNG_NormalGL.png",
+          "bytes": 1411595,
+          "sha256": "fad0e06319bf5a7f642a324941d9d71448d61eabe70495babb3e27b3d85a2112",
+          "matchesInspectedGlb": true
+        },
+        {
+          "uri": "textures/Bark014_1K-PNG_Color.png",
+          "bytes": 555611,
+          "sha256": "5091ca295325cb289cc40fdd13d182b00a45c767ecc949edd76db4c183de900e",
+          "matchesInspectedGlb": true
+        },
+        {
+          "uri": "textures/Bark014_1K-PNG_Roughness.png",
+          "bytes": 312830,
+          "sha256": "14c8111cb5ef1f5b60c6bd9f30041b468e64d451ac70c04a35982630af104cdd",
+          "matchesInspectedGlb": true
+        },
+        {
+          "uri": "textures/LeafSet026_1K-PNG_NormalGL.png",
+          "bytes": 1773840,
+          "sha256": "172fdfadddb68ef4a0a95c37d6e484e5c1511074f9c8b160babc30e93c115e30",
+          "matchesInspectedGlb": true
+        },
+        {
+          "uri": "textures/LeafSet026_1K-PNG_Color-LeafSet026_1K-PNG_Opacity.png",
+          "bytes": 601809,
+          "sha256": "ea06aba219626ed20d94ac895eee043ae28dc5dabe29d2ee8ecfcc7534a60752",
+          "matchesInspectedGlb": true
+        }
+      ],
+      "validatorErrors": 0,
+      "validatorWarnings": 0,
+      "issues": []
+    },
+    {
+      "asset": "organic-tree-lod1",
+      "sha256": "0d74981a915d491cf2ad8de496f7340cb7f09c7aa8e2c76a8095d39d3000ea85",
+      "vertexCoordinates": 8529,
+      "vertexResidual": 0,
+      "images": [
+        {
+          "uri": "textures/Bark014_1K-PNG_NormalGL.png",
+          "bytes": 1411595,
+          "sha256": "fad0e06319bf5a7f642a324941d9d71448d61eabe70495babb3e27b3d85a2112",
+          "matchesInspectedGlb": true
+        },
+        {
+          "uri": "textures/Bark014_1K-PNG_Color.png",
+          "bytes": 555611,
+          "sha256": "5091ca295325cb289cc40fdd13d182b00a45c767ecc949edd76db4c183de900e",
+          "matchesInspectedGlb": true
+        },
+        {
+          "uri": "textures/Bark014_1K-PNG_Roughness.png",
+          "bytes": 312830,
+          "sha256": "14c8111cb5ef1f5b60c6bd9f30041b468e64d451ac70c04a35982630af104cdd",
+          "matchesInspectedGlb": true
+        },
+        {
+          "uri": "textures/LeafSet026_1K-PNG_NormalGL.png",
+          "bytes": 1773840,
+          "sha256": "172fdfadddb68ef4a0a95c37d6e484e5c1511074f9c8b160babc30e93c115e30",
+          "matchesInspectedGlb": true
+        },
+        {
+          "uri": "textures/LeafSet026_1K-PNG_Color-LeafSet026_1K-PNG_Opacity.png",
+          "bytes": 601809,
+          "sha256": "ea06aba219626ed20d94ac895eee043ae28dc5dabe29d2ee8ecfcc7534a60752",
+          "matchesInspectedGlb": true
+        }
+      ],
+      "validatorErrors": 0,
+      "validatorWarnings": 0,
+      "issues": []
+    },
+    {
+      "asset": "organic-tree-lod2",
+      "sha256": "9f6b829b9a0446f89f413ceb84fa3be6bbec981f91fd6a288ad4264f7edf5a2d",
+      "vertexCoordinates": 3549,
+      "vertexResidual": 0,
+      "images": [
+        {
+          "uri": "textures/Bark014_1K-PNG_NormalGL.png",
+          "bytes": 1411595,
+          "sha256": "fad0e06319bf5a7f642a324941d9d71448d61eabe70495babb3e27b3d85a2112",
+          "matchesInspectedGlb": true
+        },
+        {
+          "uri": "textures/Bark014_1K-PNG_Color.png",
+          "bytes": 555611,
+          "sha256": "5091ca295325cb289cc40fdd13d182b00a45c767ecc949edd76db4c183de900e",
+          "matchesInspectedGlb": true
+        },
+        {
+          "uri": "textures/Bark014_1K-PNG_Roughness.png",
+          "bytes": 312830,
+          "sha256": "14c8111cb5ef1f5b60c6bd9f30041b468e64d451ac70c04a35982630af104cdd",
+          "matchesInspectedGlb": true
+        },
+        {
+          "uri": "textures/LeafSet026_1K-PNG_NormalGL.png",
+          "bytes": 1773840,
+          "sha256": "172fdfadddb68ef4a0a95c37d6e484e5c1511074f9c8b160babc30e93c115e30",
+          "matchesInspectedGlb": true
+        },
+        {
+          "uri": "textures/LeafSet026_1K-PNG_Color-LeafSet026_1K-PNG_Opacity.png",
+          "bytes": 601809,
+          "sha256": "ea06aba219626ed20d94ac895eee043ae28dc5dabe29d2ee8ecfcc7534a60752",
+          "matchesInspectedGlb": true
+        }
+      ],
+      "validatorErrors": 0,
+      "validatorWarnings": 0,
+      "issues": []
+    }
+  ],
+  "passed": true
+}

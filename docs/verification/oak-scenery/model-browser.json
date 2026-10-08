@@ -1,0 +1,743 @@
+{
+  "scope": "Actual remote model viewer and software WebGL; not original gameplay or real GPU qualification",
+  "browserVersion": "Chrome/155.0.8059.39",
+  "url": "http://127.0.0.1:4181/",
+  "states": [
+    {
+      "ready": true,
+      "asset": "organic-tree-lod0",
+      "frame": 19,
+      "errorCount": 0,
+      "glError": 0,
+      "glErrors": [],
+      "drawCalls": 8,
+      "triangles": 10786,
+      "geometries": 5,
+      "textures": 9,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "anchors": [
+        "TreeRoot",
+        "GroundAnchor",
+        "CrownCenter"
+      ],
+      "camera": [
+        8.15487195880432,
+        8.942737633231097,
+        11.168546960188545
+      ]
+    },
+    {
+      "ready": true,
+      "asset": "organic-tree-lod1",
+      "frame": 124,
+      "errorCount": 0,
+      "glError": 0,
+      "glErrors": [],
+      "drawCalls": 8,
+      "triangles": 3268,
+      "geometries": 8,
+      "textures": 14,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "anchors": [
+        "TreeRoot",
+        "GroundAnchor",
+        "CrownCenter"
+      ],
+      "camera": [
+        8.15777518030433,
+        8.948187367714471,
+        11.168169807436247
+      ]
+    },
+    {
+      "ready": true,
+      "asset": "organic-tree-lod2",
+      "frame": 194,
+      "errorCount": 0,
+      "glError": 0,
+      "glErrors": [],
+      "drawCalls": 8,
+      "triangles": 1320,
+      "geometries": 11,
+      "textures": 19,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "anchors": [
+        "TreeRoot",
+        "GroundAnchor",
+        "CrownCenter"
+      ],
+      "camera": [
+        7.594783942911493,
+        8.415604283337357,
+        10.607905919571808
+      ]
+    },
+    {
+      "ready": true,
+      "asset": "organic-tree-lod2",
+      "frame": 292,
+      "errorCount": 0,
+      "glError": 0,
+      "glErrors": [],
+      "drawCalls": 8,
+      "triangles": 1320,
+      "geometries": 5,
+      "textures": 9,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "anchors": [
+        "TreeRoot",
+        "GroundAnchor",
+        "CrownCenter"
+      ],
+      "camera": [
+        7.594974164602093,
+        8.415538758425443,
+        10.6078056563376
+      ]
+    },
+    {
+      "ready": true,
+      "asset": "organic-tree-lod2",
+      "frame": 305,
+      "errorCount": 0,
+      "glError": 0,
+      "glErrors": [],
+      "drawCalls": 8,
+      "triangles": 1320,
+      "geometries": 5,
+      "textures": 9,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "anchors": [
+        "TreeRoot",
+        "GroundAnchor",
+        "CrownCenter"
+      ],
+      "camera": [
+        7.594976015791779,
+        8.415538120750314,
+        10.607804680579376
+      ]
+    }
+  ],
+  "captures": [
+    {
+      "file": "organic-tree-lod0-front.png",
+      "sha256": "4e38ef82edd960227f1761dfc535b553c62b9c1dbe493be0b03fec7bb230866f",
+      "state": {
+        "ready": true,
+        "asset": "organic-tree-lod0",
+        "frame": 33,
+        "errorCount": 0,
+        "glError": 0,
+        "glErrors": [],
+        "drawCalls": 8,
+        "triangles": 10786,
+        "geometries": 5,
+        "textures": 9,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "anchors": [
+          "TreeRoot",
+          "GroundAnchor",
+          "CrownCenter"
+        ],
+        "camera": [
+          6.495919128618607,
+          9.494516475720932,
+          11.895078946472307
+        ]
+      }
+    },
+    {
+      "file": "organic-tree-lod0-rear.png",
+      "sha256": "072346472dca46d68ac3d7e104b06c218309dd5120cc1e7b770abd3e8c6c4785",
+      "state": {
+        "ready": true,
+        "asset": "organic-tree-lod0",
+        "frame": 43,
+        "errorCount": 0,
+        "glError": 0,
+        "glErrors": [],
+        "drawCalls": 8,
+        "triangles": 10786,
+        "geometries": 5,
+        "textures": 9,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "anchors": [
+          "TreeRoot",
+          "GroundAnchor",
+          "CrownCenter"
+        ],
+        "camera": [
+          -7.40516161506753,
+          9.173273463295981,
+          -11.719276354402169
+        ]
+      }
+    },
+    {
+      "file": "organic-tree-lod0-left.png",
+      "sha256": "161f01b3348441778f398e21f5dbffc2b6021a2d609cae390ee14840c857dfc4",
+      "state": {
+        "ready": true,
+        "asset": "organic-tree-lod0",
+        "frame": 54,
+        "errorCount": 0,
+        "glError": 0,
+        "glErrors": [],
+        "drawCalls": 8,
+        "triangles": 10786,
+        "geometries": 5,
+        "textures": 9,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "anchors": [
+          "TreeRoot",
+          "GroundAnchor",
+          "CrownCenter"
+        ],
+        "camera": [
+          -14.386066651484779,
+          7.629927132164872,
+          -0.2059443163254488
+        ]
+      }
+    },
+    {
+      "file": "organic-tree-lod0-right.png",
+      "sha256": "1aeb4cba9b7d94149008d43c61a399db591e131cc8dd45cb1adb82e42b7fa119",
+      "state": {
+        "ready": true,
+        "asset": "organic-tree-lod0",
+        "frame": 65,
+        "errorCount": 0,
+        "glError": 0,
+        "glErrors": [],
+        "drawCalls": 8,
+        "triangles": 10786,
+        "geometries": 5,
+        "textures": 9,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "anchors": [
+          "TreeRoot",
+          "GroundAnchor",
+          "CrownCenter"
+        ],
+        "camera": [
+          14.462636940111521,
+          7.5481868852811225,
+          0.6846048773877964
+        ]
+      }
+    },
+    {
+      "file": "organic-tree-lod0-overview.png",
+      "sha256": "aaa908b76d36ecc034b8248683b8be7c11a3ab39e16f738262e660923b07425b",
+      "state": {
+        "ready": true,
+        "asset": "organic-tree-lod0",
+        "frame": 75,
+        "errorCount": 0,
+        "glError": 0,
+        "glErrors": [],
+        "drawCalls": 8,
+        "triangles": 10786,
+        "geometries": 5,
+        "textures": 9,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "anchors": [
+          "TreeRoot",
+          "GroundAnchor",
+          "CrownCenter"
+        ],
+        "camera": [
+          8.897270000231641,
+          11.174011137444023,
+          8.913982814221848
+        ]
+      }
+    },
+    {
+      "file": "organic-tree-lod0-close.png",
+      "sha256": "c36bfaafa5a1043c154136af2f90e958e2b4ffca61ce6da32d75aad75a06fb75",
+      "state": {
+        "ready": true,
+        "asset": "organic-tree-lod0",
+        "frame": 90,
+        "errorCount": 0,
+        "glError": 0,
+        "glErrors": [],
+        "drawCalls": 8,
+        "triangles": 10786,
+        "geometries": 5,
+        "textures": 9,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "anchors": [
+          "TreeRoot",
+          "GroundAnchor",
+          "CrownCenter"
+        ],
+        "camera": [
+          5.312398006364876,
+          6.85464486613543,
+          7.4294108989537815
+        ]
+      }
+    },
+    {
+      "file": "organic-tree-lod0-open.png",
+      "sha256": "138f3160500d4d788dcce4f7b2a2853ae339f6845a15547d63e6c226bfeefb2b",
+      "state": {
+        "ready": true,
+        "asset": "organic-tree-lod0",
+        "frame": 102,
+        "errorCount": 0,
+        "glError": 0,
+        "glErrors": [],
+        "drawCalls": 11,
+        "triangles": 11206,
+        "geometries": 8,
+        "textures": 9,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "anchors": [
+          "TreeRoot",
+          "GroundAnchor",
+          "CrownCenter"
+        ],
+        "camera": [
+          8.112749280836505,
+          8.957232782345098,
+          11.19064836731199
+        ]
+      }
+    },
+    {
+      "file": "organic-tree-lod1-front.png",
+      "sha256": "69f031475a585abd8102c927579ac53b60b723a1a80dcaaecb1b680c4dd1f69f",
+      "state": {
+        "ready": true,
+        "asset": "organic-tree-lod1",
+        "frame": 128,
+        "errorCount": 0,
+        "glError": 0,
+        "glErrors": [],
+        "drawCalls": 8,
+        "triangles": 3268,
+        "geometries": 8,
+        "textures": 14,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "anchors": [
+          "TreeRoot",
+          "GroundAnchor",
+          "CrownCenter"
+        ],
+        "camera": [
+          8.157338247840265,
+          8.94833782160917,
+          11.168399734717669
+        ]
+      }
+    },
+    {
+      "file": "organic-tree-lod1-rear.png",
+      "sha256": "377d5a7df1716740cbd6f3e71aa9a4896130c7975fa5478095853c7ff3de6c19",
+      "state": {
+        "ready": true,
+        "asset": "organic-tree-lod1",
+        "frame": 139,
+        "errorCount": 0,
+        "glError": 0,
+        "glErrors": [],
+        "drawCalls": 8,
+        "triangles": 3268,
+        "geometries": 8,
+        "textures": 14,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "anchors": [
+          "TreeRoot",
+          "GroundAnchor",
+          "CrownCenter"
+        ],
+        "camera": [
+          -8.075716610574654,
+          8.947102897745998,
+          -11.400528768437812
+        ]
+      }
+    },
+    {
+      "file": "organic-tree-lod1-left.png",
+      "sha256": "8d5bd46e9dd4da70dd413806bafed6320a10d60814579c7a3257bc651d3fb1a5",
+      "state": {
+        "ready": true,
+        "asset": "organic-tree-lod1",
+        "frame": 150,
+        "errorCount": 0,
+        "glError": 0,
+        "glErrors": [],
+        "drawCalls": 8,
+        "triangles": 3268,
+        "geometries": 8,
+        "textures": 14,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "anchors": [
+          "TreeRoot",
+          "GroundAnchor",
+          "CrownCenter"
+        ],
+        "camera": [
+          -14.435795913714385,
+          7.455135440151978,
+          0.3629463576877013
+        ]
+      }
+    },
+    {
+      "file": "organic-tree-lod1-right.png",
+      "sha256": "f7feab0a6bbefdba68f9014bdf70ac97ab2f163efc55f8b238e2c63112a2551b",
+      "state": {
+        "ready": true,
+        "asset": "organic-tree-lod1",
+        "frame": 161,
+        "errorCount": 0,
+        "glError": 0,
+        "glErrors": [],
+        "drawCalls": 8,
+        "triangles": 3268,
+        "geometries": 8,
+        "textures": 14,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "anchors": [
+          "TreeRoot",
+          "GroundAnchor",
+          "CrownCenter"
+        ],
+        "camera": [
+          14.52099257462257,
+          7.454759650513341,
+          0.36704117223649724
+        ]
+      }
+    },
+    {
+      "file": "organic-tree-lod1-overview.png",
+      "sha256": "d4729cc46e3a6ee342b9a998f8396bbca8d7862f80192342907168d0fdf42eab",
+      "state": {
+        "ready": true,
+        "asset": "organic-tree-lod1",
+        "frame": 172,
+        "errorCount": 0,
+        "glError": 0,
+        "glErrors": [],
+        "drawCalls": 8,
+        "triangles": 3268,
+        "geometries": 8,
+        "textures": 14,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "anchors": [
+          "TreeRoot",
+          "GroundAnchor",
+          "CrownCenter"
+        ],
+        "camera": [
+          9.004660475477921,
+          11.142836223184784,
+          8.84600824973576
+        ]
+      }
+    },
+    {
+      "file": "organic-tree-lod2-front.png",
+      "sha256": "541dc3f517570821cb45990f0eec94c8d742460168135561b534851df04ef311",
+      "state": {
+        "ready": true,
+        "asset": "organic-tree-lod2",
+        "frame": 198,
+        "errorCount": 0,
+        "glError": 0,
+        "glErrors": [],
+        "drawCalls": 8,
+        "triangles": 1320,
+        "geometries": 11,
+        "textures": 19,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "anchors": [
+          "TreeRoot",
+          "GroundAnchor",
+          "CrownCenter"
+        ],
+        "camera": [
+          7.594827442113709,
+          8.41558929939619,
+          10.607882992129396
+        ]
+      }
+    },
+    {
+      "file": "organic-tree-lod2-rear.png",
+      "sha256": "1e74dec62192a3144128990cc950dfa65676b5d42ee0e7319b56a07f44e8846f",
+      "state": {
+        "ready": true,
+        "asset": "organic-tree-lod2",
+        "frame": 209,
+        "errorCount": 0,
+        "glError": 0,
+        "glErrors": [],
+        "drawCalls": 8,
+        "triangles": 1320,
+        "geometries": 11,
+        "textures": 19,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "anchors": [
+          "TreeRoot",
+          "GroundAnchor",
+          "CrownCenter"
+        ],
+        "camera": [
+          -7.687343231307406,
+          8.415565741694865,
+          -10.617793172394581
+        ]
+      }
+    },
+    {
+      "file": "organic-tree-lod2-left.png",
+      "sha256": "c9d70f241238b56e6790bb441e2b6152eaeeeb0d6fbe89dcd63e85b0420ee3a4",
+      "state": {
+        "ready": true,
+        "asset": "organic-tree-lod2",
+        "frame": 219,
+        "errorCount": 0,
+        "glError": 0,
+        "glErrors": [],
+        "drawCalls": 8,
+        "triangles": 1320,
+        "geometries": 11,
+        "textures": 19,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "anchors": [
+          "TreeRoot",
+          "GroundAnchor",
+          "CrownCenter"
+        ],
+        "camera": [
+          -13.666813055062851,
+          7.012596642940813,
+          0.44899314923999123
+        ]
+      }
+    },
+    {
+      "file": "organic-tree-lod2-right.png",
+      "sha256": "6ae44d7d51a723f9e34009efaa9a89c7eaf5e0040fe4227994d19128503265b6",
+      "state": {
+        "ready": true,
+        "asset": "organic-tree-lod2",
+        "frame": 230,
+        "errorCount": 0,
+        "glError": 0,
+        "glErrors": [],
+        "drawCalls": 8,
+        "triangles": 1320,
+        "geometries": 11,
+        "textures": 19,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "anchors": [
+          "TreeRoot",
+          "GroundAnchor",
+          "CrownCenter"
+        ],
+        "camera": [
+          13.574365429550618,
+          7.012589097384088,
+          0.4490753698348717
+        ]
+      }
+    },
+    {
+      "file": "organic-tree-lod2-overview.png",
+      "sha256": "cfa3399cbe0cd387984c1ad5cb8a10cfec80fe1fef363886d937f4d5ad9f204e",
+      "state": {
+        "ready": true,
+        "asset": "organic-tree-lod2",
+        "frame": 241,
+        "errorCount": 0,
+        "glError": 0,
+        "glErrors": [],
+        "drawCalls": 8,
+        "triangles": 1320,
+        "geometries": 11,
+        "textures": 19,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "anchors": [
+          "TreeRoot",
+          "GroundAnchor",
+          "CrownCenter"
+        ],
+        "camera": [
+          8.385281030774976,
+          10.482327282440876,
+          8.426550893510237
+        ]
+      }
+    },
+    {
+      "file": "organic-tree-lod2-wireframe.png",
+      "sha256": "88f516ddfca42d22d1a867e8f1a9862d9fc4fd5f86d76a0c3712ac4adfbcc32e",
+      "state": {
+        "ready": true,
+        "asset": "organic-tree-lod2",
+        "frame": 252,
+        "errorCount": 0,
+        "glError": 0,
+        "glErrors": [],
+        "drawCalls": 8,
+        "triangles": 2,
+        "geometries": 11,
+        "textures": 19,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "anchors": [
+          "TreeRoot",
+          "GroundAnchor",
+          "CrownCenter"
+        ],
+        "camera": [
+          8.385259009971792,
+          10.48233522329728,
+          8.426565370407454
+        ]
+      }
+    },
+    {
+      "file": "workshop-narrow.png",
+      "sha256": "00ee7633655f296ede2897cbeaa6612cdffdd9a7b41ad322d24e5c5205eb8b87",
+      "state": {
+        "ready": true,
+        "asset": "organic-tree-lod2",
+        "frame": 265,
+        "errorCount": 0,
+        "glError": 0,
+        "glErrors": [],
+        "drawCalls": 8,
+        "triangles": 1320,
+        "geometries": 11,
+        "textures": 19,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "anchors": [
+          "TreeRoot",
+          "GroundAnchor",
+          "CrownCenter"
+        ],
+        "camera": [
+          8.385244873586208,
+          10.482340320970298,
+          8.42657466389702
+        ]
+      }
+    }
+  ],
+  "exceptions": [],
+  "pointerSelection": "Selected: Tree_Branch_LOD0",
+  "reloadDuringInitialLoad": true,
+  "narrowLayout": {
+    "canvasClear": true,
+    "buttonsClear": true
+  },
+  "orbitChangedCamera": true,
+  "pageCount": 1,
+  "passed": true
+}

@@ -1,0 +1,547 @@
+{
+  "scope": "Actual unmodified provider source bundles and measured atlas cells; no original RCT2 game media. Preview CDN denied HTTP 403; provider bundle downloads succeeded. LeafSet029 was not acquired.",
+  "assets": [
+    {
+      "assetId": "LeafSet025",
+      "sourcePage": "https://ambientcg.com/a/LeafSet025",
+      "download": "https://ambientcg.com/get?file=LeafSet025_1K-PNG.zip",
+      "license": "CC0-1.0",
+      "licenseSource": "https://docs.ambientcg.com/license/",
+      "bundleBytes": 12185283,
+      "bundleSha256": "4036e9599b69711b8a52e2f7ad46db249f5c8dbe47886fab47f13a14a1cace4c",
+      "files": [
+        {
+          "file": "LeafSet025.png",
+          "bytes": 279036,
+          "sha256": "00739c9fc878f6516a989de795c3109eb7f6640c5fca8a16b8b912a1cebd50c9",
+          "dimensions": [
+            512,
+            512
+          ],
+          "mode": "RGBA"
+        },
+        {
+          "file": "LeafSet025_1K-PNG.blend",
+          "bytes": 841184,
+          "sha256": "1ad9447f9c98fa3d50b4e4a1f41ea5c0acdd05451dbf87cce10b5fdb812bd004"
+        },
+        {
+          "file": "LeafSet025_1K-PNG.mtlx",
+          "bytes": 2626,
+          "sha256": "345f0b46ead73fbd5440c988dab36bd9015effcae9402c9989dc539b6f63c9d0"
+        },
+        {
+          "file": "LeafSet025_1K-PNG.tres",
+          "bytes": 1042,
+          "sha256": "906ff15590511c7558c9498b0ed851054682a818e7097bde12300b3b78072724"
+        },
+        {
+          "file": "LeafSet025_1K-PNG.usdc",
+          "bytes": 2975,
+          "sha256": "d7c9b95e7ec51261c09bda1374ac5e285cfda237b458a82e8b533b5c07d90418"
+        },
+        {
+          "file": "LeafSet025_1K-PNG_Color.png",
+          "bytes": 1047156,
+          "sha256": "ad517e8824e70592cc94e98b9305bafca6eb83b3ce80344f81610b639fcd0f24",
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "mode": "RGBA"
+        },
+        {
+          "file": "LeafSet025_1K-PNG_Displacement.png",
+          "bytes": 1610423,
+          "sha256": "7b494f2ab48261b100db008d6cf5ccbe90f55b2abbf8ef51596bbfccb349d693",
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "mode": "I;16"
+        },
+        {
+          "file": "LeafSet025_1K-PNG_NormalDX.png",
+          "bytes": 3423580,
+          "sha256": "69293f2a621664cdee46e0961f5b87f630e186f95dc9f3088c377c518975ef0c",
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "mode": "RGB"
+        },
+        {
+          "file": "LeafSet025_1K-PNG_NormalGL.png",
+          "bytes": 3423847,
+          "sha256": "3f2cb87f32faa94f2532eee292f6079ed344858c97d32f83d4e4170f30b92732",
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "mode": "RGB"
+        },
+        {
+          "file": "LeafSet025_1K-PNG_Opacity.png",
+          "bytes": 85072,
+          "sha256": "cc4fc2b603f50d63628d9193c5003b891295e66eaaa93219b32524496b1aaf3c",
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "mode": "L"
+        },
+        {
+          "file": "LeafSet025_1K-PNG_Roughness.png",
+          "bytes": 288039,
+          "sha256": "08bcd664b2b94328ab44d095e5a8db39c1b08452ca8031e345842bd7994b1389",
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "mode": "L"
+        },
+        {
+          "file": "LeafSet025_1K-PNG_Scattering.png",
+          "bytes": 1177943,
+          "sha256": "f1627f2b3052fd7fe30a6185b78f1670c1bcc5344384ab148c4b6ccaec98db6e",
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "mode": "RGBA"
+        }
+      ],
+      "atlasTiles": [
+        {
+          "index": 0,
+          "imagePixelCell": [
+            0,
+            0,
+            341,
+            341
+          ],
+          "opaquePixelBounds": [
+            17,
+            13,
+            313,
+            314
+          ],
+          "blenderUvCell": [
+            0.0,
+            0.6666666666666667,
+            0.3333333333333333,
+            1.0
+          ]
+        },
+        {
+          "index": 1,
+          "imagePixelCell": [
+            341,
+            0,
+            683,
+            341
+          ],
+          "opaquePixelBounds": [
+            377,
+            18,
+            657,
+            324
+          ],
+          "blenderUvCell": [
+            0.3333333333333333,
+            0.6666666666666667,
+            0.6666666666666666,
+            1.0
+          ]
+        },
+        {
+          "index": 2,
+          "imagePixelCell": [
+            683,
+            0,
+            1024,
+            341
+          ],
+          "opaquePixelBounds": [
+            711,
+            27,
+            1009,
+            308
+          ],
+          "blenderUvCell": [
+            0.6666666666666666,
+            0.6666666666666667,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "index": 3,
+          "imagePixelCell": [
+            0,
+            341,
+            341,
+            683
+          ],
+          "opaquePixelBounds": [
+            16,
+            355,
+            313,
+            655
+          ],
+          "blenderUvCell": [
+            0.0,
+            0.33333333333333337,
+            0.3333333333333333,
+            0.6666666666666667
+          ]
+        },
+        {
+          "index": 4,
+          "imagePixelCell": [
+            341,
+            341,
+            683,
+            683
+          ],
+          "opaquePixelBounds": [
+            380,
+            363,
+            650,
+            647
+          ],
+          "blenderUvCell": [
+            0.3333333333333333,
+            0.33333333333333337,
+            0.6666666666666666,
+            0.6666666666666667
+          ]
+        },
+        {
+          "index": 5,
+          "imagePixelCell": [
+            683,
+            341,
+            1024,
+            683
+          ],
+          "opaquePixelBounds": [
+            700,
+            348,
+            1013,
+            676
+          ],
+          "blenderUvCell": [
+            0.6666666666666666,
+            0.33333333333333337,
+            1.0,
+            0.6666666666666667
+          ]
+        },
+        {
+          "index": 6,
+          "imagePixelCell": [
+            0,
+            683,
+            341,
+            1024
+          ],
+          "opaquePixelBounds": [
+            14,
+            694,
+            326,
+            982
+          ],
+          "blenderUvCell": [
+            0.0,
+            0.0,
+            0.3333333333333333,
+            0.33333333333333337
+          ]
+        },
+        {
+          "index": 7,
+          "imagePixelCell": [
+            341,
+            683,
+            683,
+            1024
+          ],
+          "opaquePixelBounds": [
+            365,
+            704,
+            666,
+            988
+          ],
+          "blenderUvCell": [
+            0.3333333333333333,
+            0.0,
+            0.6666666666666666,
+            0.33333333333333337
+          ]
+        },
+        {
+          "index": 8,
+          "imagePixelCell": [
+            683,
+            683,
+            1024,
+            1024
+          ],
+          "opaquePixelBounds": [
+            718,
+            714,
+            994,
+            999
+          ],
+          "blenderUvCell": [
+            0.6666666666666666,
+            0.0,
+            1.0,
+            0.33333333333333337
+          ]
+        }
+      ]
+    },
+    {
+      "assetId": "LeafSet026",
+      "sourcePage": "https://ambientcg.com/a/LeafSet026",
+      "download": "https://ambientcg.com/get?file=LeafSet026_1K-PNG.zip",
+      "license": "CC0-1.0",
+      "licenseSource": "https://docs.ambientcg.com/license/",
+      "bundleBytes": 6364629,
+      "bundleSha256": "7cea1372b793000d9c40b6b3c3271af9ca74f06e909ea0ffc87e21b5943e131d",
+      "files": [
+        {
+          "file": "LeafSet026.png",
+          "bytes": 185885,
+          "sha256": "49756486bbfa6eff4b3a09c7ab09aef0f118d6c69e9d2ea72f2d0635e673fe2c",
+          "dimensions": [
+            512,
+            512
+          ],
+          "mode": "RGBA"
+        },
+        {
+          "file": "LeafSet026_1K-PNG.blend",
+          "bytes": 1120548,
+          "sha256": "f4dfdc35c7535fab5497330575e5c1dc8adc86ca8afc3695fe090cc6f088b89f"
+        },
+        {
+          "file": "LeafSet026_1K-PNG.mtlx",
+          "bytes": 2626,
+          "sha256": "842f4d2231127b74697e6c8fff312ad14bf857aacbb6057b2e77801713e98b58"
+        },
+        {
+          "file": "LeafSet026_1K-PNG.tres",
+          "bytes": 1042,
+          "sha256": "1971ae4ffed8daf2ef7f54cb84a3ba92b37c0acbd04c0b8f87e502da2e7f7ed7"
+        },
+        {
+          "file": "LeafSet026_1K-PNG.usdc",
+          "bytes": 3008,
+          "sha256": "bbf31f49fc5f7f952c287b09cd9e60acaed565e9425a16d5339e6a1f31877808"
+        },
+        {
+          "file": "LeafSet026_1K-PNG_Color.png",
+          "bytes": 359613,
+          "sha256": "3549d4212e4d5c2bac2426866b8bbb54655d5e8c4ad7c1854fd2a7bb1d753ebf",
+          "dimensions": [
+            1024,
+            512
+          ],
+          "mode": "RGB"
+        },
+        {
+          "file": "LeafSet026_1K-PNG_Displacement.png",
+          "bytes": 585941,
+          "sha256": "40ba3b84818dbcb1646db3587ec3897f2096c933e5c0c03266033a8824de5293",
+          "dimensions": [
+            1024,
+            512
+          ],
+          "mode": "I;16"
+        },
+        {
+          "file": "LeafSet026_1K-PNG_NormalDX.png",
+          "bytes": 1773764,
+          "sha256": "cfff68b7c5d9055c6d48b2732cc4f56a42428c7f4d33343382d3b1fa27cbd2ee",
+          "dimensions": [
+            1024,
+            512
+          ],
+          "mode": "RGB"
+        },
+        {
+          "file": "LeafSet026_1K-PNG_NormalGL.png",
+          "bytes": 1773840,
+          "sha256": "172fdfadddb68ef4a0a95c37d6e484e5c1511074f9c8b160babc30e93c115e30",
+          "dimensions": [
+            1024,
+            512
+          ],
+          "mode": "RGB"
+        },
+        {
+          "file": "LeafSet026_1K-PNG_Opacity.png",
+          "bytes": 29228,
+          "sha256": "3cb6dcdf3b50578f9ecce0043af3b4f8b4cefe9df2918158ced15d964be2f788",
+          "dimensions": [
+            1024,
+            512
+          ],
+          "mode": "L"
+        },
+        {
+          "file": "LeafSet026_1K-PNG_Roughness.png",
+          "bytes": 121142,
+          "sha256": "358e3ef6f8da60033602a78a4ae88285637701431f57933c5de0085e4cf77554",
+          "dimensions": [
+            1024,
+            512
+          ],
+          "mode": "L"
+        },
+        {
+          "file": "LeafSet026_1K-PNG_Scattering.png",
+          "bytes": 405662,
+          "sha256": "a7f911d449e92e4069a1a0f6227e91431892e0ca7e281f67bc950a26737f6003",
+          "dimensions": [
+            1024,
+            512
+          ],
+          "mode": "RGB"
+        }
+      ],
+      "atlasTiles": [
+        {
+          "index": 0,
+          "imagePixelCell": [
+            0,
+            0,
+            341,
+            256
+          ],
+          "opaquePixelBounds": [
+            22,
+            59,
+            324,
+            193
+          ],
+          "blenderUvCell": [
+            0.0,
+            0.5,
+            0.3333333333333333,
+            1.0
+          ]
+        },
+        {
+          "index": 1,
+          "imagePixelCell": [
+            341,
+            0,
+            683,
+            256
+          ],
+          "opaquePixelBounds": [
+            356,
+            53,
+            672,
+            181
+          ],
+          "blenderUvCell": [
+            0.3333333333333333,
+            0.5,
+            0.6666666666666666,
+            1.0
+          ]
+        },
+        {
+          "index": 2,
+          "imagePixelCell": [
+            683,
+            0,
+            1024,
+            256
+          ],
+          "opaquePixelBounds": [
+            693,
+            56,
+            1009,
+            197
+          ],
+          "blenderUvCell": [
+            0.6666666666666666,
+            0.5,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "index": 3,
+          "imagePixelCell": [
+            0,
+            256,
+            341,
+            512
+          ],
+          "opaquePixelBounds": [
+            17,
+            319,
+            322,
+            454
+          ],
+          "blenderUvCell": [
+            0.0,
+            0.0,
+            0.3333333333333333,
+            0.5
+          ]
+        },
+        {
+          "index": 4,
+          "imagePixelCell": [
+            341,
+            256,
+            683,
+            512
+          ],
+          "opaquePixelBounds": [
+            364,
+            324,
+            665,
+            460
+          ],
+          "blenderUvCell": [
+            0.3333333333333333,
+            0.0,
+            0.6666666666666666,
+            0.5
+          ]
+        },
+        {
+          "index": 5,
+          "imagePixelCell": [
+            683,
+            256,
+            1024,
+            512
+          ],
+          "opaquePixelBounds": [
+            701,
+            315,
+            1010,
+            449
+          ],
+          "blenderUvCell": [
+            0.6666666666666666,
+            0.0,
+            1.0,
+            0.5
+          ]
+        }
+      ]
+    }
+  ],
+  "licenseSha256": "60138e09b277c89977841462634b36e99d7bae5b77174777813502069c59461c"
+}

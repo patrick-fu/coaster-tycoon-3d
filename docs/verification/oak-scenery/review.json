@@ -1,0 +1,30 @@
+{
+  "model": "gpt-6.1-sol",
+  "effort": "max",
+  "mode": "read-only",
+  "scope": "Exact oak loader, batching, camera integration, browser tests, actual glTF inputs and installed Three.js 0.186.1 source",
+  "resolvedFindings": [
+    {
+      "severity": "P2",
+      "problem": "Mesh.clone omits customDepthMaterial",
+      "fix": "Explicitly carry owned mask/depth materials into clones and instanced batches"
+    },
+    {
+      "severity": "P2",
+      "problem": "GLTFLoader swallows image request errors as missing material textures",
+      "fix": "Private LoadingManager records failed resources before ready"
+    },
+    {
+      "severity": "P2",
+      "problem": "Buffer parse failure can lose images created by parallel material dependencies",
+      "fix": "Own texture dependencies before root parsing and close them after all loads settle"
+    },
+    {
+      "severity": "P1",
+      "problem": "The provisional runtime package omitted LOD1",
+      "fix": "Independently checked all eleven delivered runtime files and their exact bytes/hashes"
+    }
+  ],
+  "inPlaceLODReview": "No confirmed P1/P2; primary Three.js geometry/object binding keys support replacement and disposal, source primitive matrices match, boundary and planted batches are separated, aggregate bounds are invalidated. Actual remote tests subsequently cover all requested identity/selection/boundary/vertex invariants.",
+  "runtimeClaimsByReviewer": false
+}

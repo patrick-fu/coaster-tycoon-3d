@@ -1,0 +1,137 @@
+{
+  "scope": "Actual remote GLB structure, full transformed vertex envelope, exact triangle budgets and anchors. No original or GPU/human qualification.",
+  "validatorVersion": "2.0.0-dev.3.10",
+  "threeRevision": "186",
+  "records": [
+    {
+      "asset": "organic-tree-lod0",
+      "sha256": "652b3f8e50dd44c466bb63f13f6594150beae1a7767fec2bf7014410b1f1af77",
+      "bytes": 5103704,
+      "triangles": 5392,
+      "vertices": 8556,
+      "bounds": {
+        "min": [
+          -1.7270729541778564,
+          0,
+          -1.661329984664917
+        ],
+        "max": [
+          1.7970361709594727,
+          5.254534721374512,
+          1.4431729316711426
+        ]
+      },
+      "anchors": {
+        "TreeRoot": [
+          0,
+          0,
+          0
+        ],
+        "GroundAnchor": [
+          0,
+          0,
+          0
+        ],
+        "CrownCenter": [
+          0.039333708584308624,
+          4.056859970092773,
+          -0.04141416773200035
+        ]
+      },
+      "meshNodes": 2,
+      "materials": 3,
+      "images": 5,
+      "errors": 0,
+      "warnings": 0,
+      "warningCodes": [],
+      "issues": []
+    },
+    {
+      "asset": "organic-tree-lod1",
+      "sha256": "847acc3fd32803bcc269d511e554b556e3044f67796e5fb0b996f5e202e4273c",
+      "bytes": 4806916,
+      "triangles": 1633,
+      "vertices": 2843,
+      "bounds": {
+        "min": [
+          -1.5521184206008911,
+          0,
+          -1.6634935140609741
+        ],
+        "max": [
+          1.6373261213302612,
+          5.256246566772461,
+          1.4294767379760742
+        ]
+      },
+      "anchors": {
+        "TreeRoot": [
+          0,
+          0,
+          0
+        ],
+        "GroundAnchor": [
+          0,
+          0,
+          0
+        ],
+        "CrownCenter": [
+          0.025426264852285385,
+          4.060556888580322,
+          -0.030307497829198837
+        ]
+      },
+      "meshNodes": 2,
+      "materials": 3,
+      "images": 5,
+      "errors": 0,
+      "warnings": 0,
+      "warningCodes": [],
+      "issues": []
+    },
+    {
+      "asset": "organic-tree-lod2",
+      "sha256": "88b0a05114467f562c34fde96428e3c26c037ff239b91754da63d392f9a0fbac",
+      "bytes": 4721376,
+      "triangles": 659,
+      "vertices": 1183,
+      "bounds": {
+        "min": [
+          -1.7726237773895264,
+          0,
+          -1.566299319267273
+        ],
+        "max": [
+          1.6801763772964478,
+          4.944765090942383,
+          1.5563530921936035
+        ]
+      },
+      "anchors": {
+        "TreeRoot": [
+          0,
+          0,
+          0
+        ],
+        "GroundAnchor": [
+          0,
+          0,
+          0
+        ],
+        "CrownCenter": [
+          0.045720674097537994,
+          3.984360456466675,
+          -0.02588960900902748
+        ]
+      },
+      "meshNodes": 2,
+      "materials": 3,
+      "images": 5,
+      "errors": 0,
+      "warnings": 0,
+      "warningCodes": [],
+      "issues": []
+    }
+  ],
+  "passed": true
+}

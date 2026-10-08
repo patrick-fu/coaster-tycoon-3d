@@ -1,0 +1,58 @@
+{
+  "host": "grok-bot",
+  "sourceInputCount": 86,
+  "inputBytesAndHashesMatchRemote": true,
+  "commands": [
+    {
+      "command": "npm test",
+      "exit": 0,
+      "passed": 121,
+      "logSha256": "8498352a5071101972b5888d2cc087d3b9dea4a5489a90d1d7dc0e0cdb9277aa"
+    },
+    {
+      "command": "node --check (oak loader, scene, batching and browser test)",
+      "exit": 0
+    },
+    {
+      "command": "npm run build:web",
+      "exit": 0,
+      "logSha256": "120b133d25a41fc01f174dbb1129e91fbbc95e7d931def7b534c319a71105eb4"
+    },
+    {
+      "command": "check-venv/bin/python run-browser-next.py",
+      "exit": 0,
+      "classicChecks": 30,
+      "oakChecks": 13
+    },
+    {
+      "command": "check-venv/bin/python run-browser-next.py --skip-classic",
+      "exit": 0,
+      "oakChecks": 14,
+      "reason": "Added review-requested per-LOD identity, boundary and vertex invariants; runtime source unchanged"
+    }
+  ],
+  "driverSha256": "d8eb1650d95b9e286343b9cd71098b0174b7ef1b8ca770932411291be4c842de",
+  "renderer": "Software WebGL; real integrated-GPU qualification pending",
+  "simulationChanged": false,
+  "version": {
+    "save": 8,
+    "content": 1,
+    "protocol": 1
+  },
+  "externalEvidence": "/Volumes/WD/code/workspaces/coaster-oak-integration/evidence",
+  "evidence": {
+    "classic-browser.json": "f072abed79200a5096db62d65c050e65b6d827f661810b2b48844adef99f4e55",
+    "full-static-lod-baseline.json": "8830f261112dea804619bc9bf90420445e53775019e68ee4fcc2562a63d5fb5d",
+    "lod-browser-timeout.json": "1684fb58a342cd17f2ed086b3cf8d92a56ac1a887edd930226c5007a3fcc61c0",
+    "material-source-manifest.json": "7e06a3a9609818f3a78b379d88c642ef3cd7268df981c31cdfdb3aaaa7cd8409",
+    "model-browser.json": "f7c7ac94f9e5ccce7b61164885c08ef637c77198778defd3074cfbbfc7f31a6f",
+    "oak-browser.json": "9fd3e571a2ea109ee656d1583296a4362b9ef10ebaab515e12986a1536359abf",
+    "retained-masters.json": "2372902427c2416d0d05847c504b5ccff036d69f994a2e29be9287b7d6c6f50d",
+    "review.json": "1bccbb411ae59c6f79d8afa0aeb52260aaedde8583fa08a8ef7cf8661bbc027b",
+    "runtime-validation.json": "77440b9eaac965d0e9808a64ff99699cbbcbbebb2a302aada341d6adbcc932b1",
+    "source-comparison.json": "0b441c2030498502314e0b9b97f73767e0e02c3d7c5159a69f5ad9c295709124",
+    "source-inputs.json": "ed8276363be11f99c57cd4201bfed1de3964a10c9cf7f798678af3f6c2393933",
+    "validation.json": "f154ad31551420ae646a2ed07d6cddf6a890fe3788420fe0ad5d8b7e02c4353a",
+    "agy-lod-review.json": "fb20a931a264ff1e557963ea44f9a4c8cfede3cbf49f2676dc1f1cd46a73b2da"
+  }
+}
