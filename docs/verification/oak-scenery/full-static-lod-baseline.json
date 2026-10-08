@@ -1,0 +1,457 @@
+{
+  "scope": "Actual remote software-WebGL browser, not representative real GPU or original parity",
+  "browser": "Chrome/155.0.8059.39",
+  "profile": "/home/box/.config/google-chrome",
+  "checks": [
+    "Actual separate glTF and shared atlas resources load successfully",
+    "All actual placed vertices fit four cardinal unit poses and the existing ground/height reservation",
+    "Placed trees and perimeter trees share at most six batches with owned alpha-mask shadow materials",
+    "Four real static rebuilds keep GPU resource counts and the paused save unchanged",
+    "Actual worker save/load preserves planted trees and current version 8 park data",
+    "Demolition removes real selectable instances and preserves authoritative half refunds",
+    "Real zoom selects all three unit LODs, reduces draw triangles and preserves the warmed GPU cache and saved park",
+    "The same actual projected size retains different stable LODs inside the measured hysteresis band",
+    "Actual Chrome pointer inspection selects the correct detailed tree instance",
+    "Actual atlas request failure rejects detailed presentation and closes every allocated bitmap",
+    "Actual buffer request failure rejects detailed presentation and closes every allocated bitmap",
+    "Disposal during real loading closes late bitmaps and never installs a model"
+  ],
+  "faults": [
+    {
+      "case": "atlas",
+      "ready": false,
+      "error": "Tree resources failed to load: http://127.0.0.1:4175/models/trees/textures/LeafSet026_1K-PNG_Color-LeafSet026_1K-PNG_Opacity.png, http://127.0.0.1:4175/models/trees/textures/LeafSet026_1K-PNG_Color-LeafSet026_1K-PNG_Opacity.png, http://127.0.0.1:4175/models/trees/textures/LeafSet026_1K-PNG_Color-LeafSet026_1K-PNG_Opacity.png",
+      "allocated": 12,
+      "closed": 12,
+      "closedAfterDispose": 12
+    },
+    {
+      "case": "buffer",
+      "ready": false,
+      "error": "THREE.GLTFLoader: Failed to load buffer \"organic-tree-lod0.bin\".",
+      "allocated": 15,
+      "closed": 15,
+      "closedAfterDispose": 15
+    },
+    {
+      "case": "dispose during load",
+      "ready": false,
+      "error": null,
+      "allocated": 15,
+      "closed": 15
+    }
+  ],
+  "functional": {
+    "ok": true,
+    "checks": [
+      "Actual separate glTF and shared atlas resources load successfully",
+      "All actual placed vertices fit four cardinal unit poses and the existing ground/height reservation",
+      "Placed trees and perimeter trees share at most six batches with owned alpha-mask shadow materials",
+      "Four real static rebuilds keep GPU resource counts and the paused save unchanged",
+      "Actual worker save/load preserves planted trees and current version 8 park data",
+      "Demolition removes real selectable instances and preserves authoritative half refunds",
+      "Real zoom selects all three unit LODs, reduces draw triangles and preserves the warmed GPU cache and saved park",
+      "The same actual projected size retains different stable LODs inside the measured hysteresis band"
+    ],
+    "bounds": [
+      {
+        "id": 241,
+        "tile": {
+          "x": 38,
+          "y": 38,
+          "height": 32
+        },
+        "min": [
+          152.33650648593903,
+          4,
+          152.36267387866974
+        ],
+        "max": [
+          155.42947673797607,
+          9.256246566772461,
+          155.5521184206009
+        ]
+      },
+      {
+        "id": 242,
+        "tile": {
+          "x": 37,
+          "y": 38,
+          "height": 32
+        },
+        "min": [
+          148.36267387866974,
+          4,
+          152.57052326202393
+        ],
+        "max": [
+          151.5521184206009,
+          9.256246566772461,
+          155.66349351406097
+        ]
+      },
+      {
+        "id": 243,
+        "tile": {
+          "x": 36,
+          "y": 38,
+          "height": 32
+        },
+        "min": [
+          144.57052326202393,
+          4,
+          152.4478815793991
+        ],
+        "max": [
+          147.66349351406097,
+          9.256246566772461,
+          155.63732612133026
+        ]
+      },
+      {
+        "id": 244,
+        "tile": {
+          "x": 35,
+          "y": 38,
+          "height": 32
+        },
+        "min": [
+          140.4478815793991,
+          4,
+          152.33650648593903
+        ],
+        "max": [
+          143.63732612133026,
+          9.256246566772461,
+          155.42947673797607
+        ]
+      }
+    ],
+    "batches": [
+      {
+        "lod": 2,
+        "instances": 67,
+        "material": "bark",
+        "mask": 0
+      },
+      {
+        "lod": 2,
+        "instances": 67,
+        "material": "foliage_sun",
+        "mask": 0.5
+      },
+      {
+        "lod": 2,
+        "instances": 67,
+        "material": "foliage_shade",
+        "mask": 0.5
+      },
+      {
+        "lod": 1,
+        "instances": 74,
+        "material": "bark",
+        "mask": 0
+      },
+      {
+        "lod": 1,
+        "instances": 74,
+        "material": "foliage_sun",
+        "mask": 0.5
+      },
+      {
+        "lod": 1,
+        "instances": 74,
+        "material": "foliage_shade",
+        "mask": 0.5
+      }
+    ],
+    "memory": [
+      {
+        "geometries": 220,
+        "textures": 43
+      },
+      {
+        "geometries": 220,
+        "textures": 43
+      },
+      {
+        "geometries": 220,
+        "textures": 43
+      },
+      {
+        "geometries": 220,
+        "textures": 43
+      }
+    ],
+    "lodStates": [
+      {
+        "zoom": 4,
+        "lod": 0,
+        "memory": {
+          "geometries": 223,
+          "textures": 48
+        },
+        "triangles": 1420844,
+        "drawCalls": 581
+      },
+      {
+        "zoom": 0.5,
+        "lod": 2,
+        "memory": {
+          "geometries": 224,
+          "textures": 48
+        },
+        "triangles": 804376,
+        "drawCalls": 680
+      },
+      {
+        "zoom": 1.18,
+        "lod": 1,
+        "memory": {
+          "geometries": 224,
+          "textures": 48
+        },
+        "triangles": 940736,
+        "drawCalls": 686
+      },
+      {
+        "zoom": 4,
+        "lod": 0,
+        "memory": {
+          "geometries": 224,
+          "textures": 48
+        },
+        "triangles": 1420844,
+        "drawCalls": 581
+      },
+      {
+        "zoom": 0.5,
+        "lod": 2,
+        "memory": {
+          "geometries": 224,
+          "textures": 48
+        },
+        "triangles": 804376,
+        "drawCalls": 680
+      },
+      {
+        "zoom": 1.18,
+        "lod": 1,
+        "memory": {
+          "geometries": 224,
+          "textures": 48
+        },
+        "triangles": 940736,
+        "drawCalls": 686
+      },
+      {
+        "zoom": 4,
+        "lod": 0,
+        "memory": {
+          "geometries": 224,
+          "textures": 48
+        },
+        "triangles": 1420844,
+        "drawCalls": 581
+      },
+      {
+        "zoom": 0.5,
+        "lod": 2,
+        "memory": {
+          "geometries": 224,
+          "textures": 48
+        },
+        "triangles": 804376,
+        "drawCalls": 680
+      },
+      {
+        "zoom": 1.18,
+        "lod": 1,
+        "memory": {
+          "geometries": 224,
+          "textures": 48
+        },
+        "triangles": 940736,
+        "drawCalls": 686
+      },
+      {
+        "zoom": 4,
+        "lod": 0,
+        "memory": {
+          "geometries": 224,
+          "textures": 48
+        },
+        "triangles": 1420844,
+        "drawCalls": 581
+      },
+      {
+        "zoom": 0.5,
+        "lod": 2,
+        "memory": {
+          "geometries": 224,
+          "textures": 48
+        },
+        "triangles": 804376,
+        "drawCalls": 680
+      },
+      {
+        "zoom": 1.18,
+        "lod": 1,
+        "memory": {
+          "geometries": 224,
+          "textures": 48
+        },
+        "triangles": 940736,
+        "drawCalls": 686
+      },
+      {
+        "zoom": 4,
+        "lod": 0,
+        "memory": {
+          "geometries": 224,
+          "textures": 48
+        },
+        "triangles": 1420844,
+        "drawCalls": 581
+      },
+      {
+        "zoom": 1.9206145966709347,
+        "lod": 0,
+        "memory": {
+          "geometries": 224,
+          "textures": 48
+        },
+        "triangles": 1466996,
+        "drawCalls": 686
+      },
+      {
+        "zoom": 0.5,
+        "lod": 2,
+        "memory": {
+          "geometries": 224,
+          "textures": 48
+        },
+        "triangles": 804376,
+        "drawCalls": 680
+      },
+      {
+        "zoom": 1.9206145966709347,
+        "lod": 1,
+        "memory": {
+          "geometries": 224,
+          "textures": 48
+        },
+        "triangles": 940736,
+        "drawCalls": 686
+      },
+      {
+        "zoom": 1.18,
+        "lod": 1,
+        "memory": {
+          "geometries": 224,
+          "textures": 48
+        },
+        "triangles": 940736,
+        "drawCalls": 686
+      }
+    ],
+    "rebuildCpuMilliseconds": [
+      {
+        "lod": 0,
+        "milliseconds": 266.89999997615814
+      },
+      {
+        "lod": 2,
+        "milliseconds": 117.5
+      },
+      {
+        "lod": 1,
+        "milliseconds": 141.90000000596046
+      },
+      {
+        "lod": 0,
+        "milliseconds": 179.09999999403954
+      },
+      {
+        "lod": 2,
+        "milliseconds": 144.09999999403954
+      },
+      {
+        "lod": 1,
+        "milliseconds": 148.30000001192093
+      },
+      {
+        "lod": 0,
+        "milliseconds": 146
+      },
+      {
+        "lod": 2,
+        "milliseconds": 189.5
+      },
+      {
+        "lod": 1,
+        "milliseconds": 159
+      },
+      {
+        "lod": 0,
+        "milliseconds": 156.59999999403954
+      },
+      {
+        "lod": 2,
+        "milliseconds": 134.90000000596046
+      },
+      {
+        "lod": 1,
+        "milliseconds": 154
+      },
+      {
+        "lod": 0,
+        "milliseconds": 131.80000001192093
+      },
+      {
+        "lod": 2,
+        "milliseconds": 153.40000000596046
+      },
+      {
+        "lod": 1,
+        "milliseconds": 130.89999997615814
+      }
+    ],
+    "transitionTwoFrameMilliseconds": [
+      2722.7000000178814,
+      4263,
+      1752.7000000178814,
+      3217.5,
+      3990.7000000178814,
+      1967.5,
+      3273.300000011921,
+      6694,
+      3886.4000000059605,
+      3689,
+      3852.699999988079,
+      2087.0999999940395,
+      3307.800000011921,
+      1330.699999988079,
+      7019,
+      1940.699999988079,
+      3188.699999988079
+    ],
+    "cadenceScope": "Observed software-WebGL transition plus two frame waits, not isolated CPU rebuild time or representative hardware FPS",
+    "drawCalls": 686,
+    "triangles": 940736
+  },
+  "pointerTree": {
+    "point": {
+      "id": 245,
+      "x": 960.0000000000009,
+      "y": 543.9999999999995
+    },
+    "actualPick": {
+      "kind": "element",
+      "id": 245
+    }
+  },
+  "glErrors": [],
+  "exceptions": [],
+  "ok": true
+}

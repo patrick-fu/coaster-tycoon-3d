@@ -15,13 +15,14 @@ Add separate dependency and resource permissions here before including further
 third-party code or assets in a distribution.
 
 The browser presentation uses Three.js 0.186.1 (MIT), including its OrbitControls
-addon. The locked registry package supplies the runtime modules; web builds
-include its complete license at `vendor/THREE-LICENSE.txt`. No third-party visual
-assets are included. Source: [Three.js](https://github.com/mrdoob/three.js).
+and GLTFLoader addons. The locked registry package supplies the runtime modules;
+web builds include its complete license at `vendor/THREE-LICENSE.txt`. The detailed
+oak resources below carry a separate CC0 permission.
+Source: [Three.js](https://github.com/mrdoob/three.js).
 
-Park models, canvas surface textures and UI icons are independently authored
-under this project's MIT license. The publisher's Steam gallery and original
-manual are observation references; no original sprites, textures, models,
+Park geometry, procedural canvas surface textures and UI icons are independently
+authored under this project's MIT license. The publisher's Steam gallery and
+original manual are observation references; no original sprites, textures, models,
 commercial game files or gallery images are included in the game distribution.
 See [art direction and provenance](docs/art-direction.md).
 
@@ -45,3 +46,15 @@ then recorded in independently authored project data. No descriptor code is
 copied or linked. These reconstructed facts do not establish original-executable
 parity or supply executable motion, construction, pricing or presentation rules.
 All reference content capabilities are explicitly unimplemented at this stage.
+
+## Oak surface materials
+
+The independently authored oak tree uses ambientCG
+[Bark014](https://ambientcg.com/a/Bark014) and
+[LeafSet026](https://ambientcg.com/a/LeafSet026). These texture sources are
+[CC0-1.0](https://docs.ambientcg.com/license/), separately from MIT source/geometry.
+Runtime changes downsample bark maps, combine leaf albedo with its opacity mask,
+and apply material tint/normal strength; original provider files remain unchanged
+in the retained external authoring corpus. Source bundle/member SHA-256 values
+and export dimensions are recorded with the tree asset evidence.
+No original RCT2 sprites or textures are included.

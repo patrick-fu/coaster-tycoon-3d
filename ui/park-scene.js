@@ -6,6 +6,7 @@ import {buildFacility,buildAmenity} from './art/buildings.js';
 import {buildTrack,buildPortal,createVehicles,createPeople} from './art/coaster.js';
 import {steelRules} from './content/steel-coaster.js';
 import {WORKER_PROTOCOL_VERSION} from './simulation/protocol.js';
+import {createTreeAssets} from './art/tree-assets.js';
 
 export class ParkScene{
  constructor(container){
@@ -15,11 +16,23 @@ export class ParkScene{
   this.controls=new OrbitControls(this.camera,this.renderer.domElement);this.controls.target.set(82,4,74);this.controls.enableDamping=true;this.controls.dampingFactor=.1;this.controls.minPolarAngle=.2;this.controls.maxPolarAngle=Math.PI/2.08;this.controls.minZoom=.5;this.controls.maxZoom=5;
   this.scene.add(new THREE.HemisphereLight('#eff6ff','#596d37',2));const sun=new THREE.DirectionalLight('#fff0ce',3);sun.position.set(30,135,45);sun.target.position.set(90,0,80);sun.castShadow=true;sun.shadow.mapSize.set(2048,2048);sun.shadow.camera.left=-140;sun.shadow.camera.right=140;sun.shadow.camera.top=140;sun.shadow.camera.bottom=-140;sun.shadow.camera.near=1;sun.shadow.camera.far=330;sun.shadow.bias=-.0003;sun.shadow.normalBias=.025;this.scene.add(sun,sun.target);
   this.staticGroup=new THREE.Group();this.scene.add(this.staticGroup);this.art=createArtContext(this);this.art.staticGroup=this.staticGroup;this.art.scene=this.scene;this.art.renderer=this.renderer;this.surfaceMap=new Map();
+  this.treeAssets=createTreeAssets(this.renderer);this.art.treeAssets=this.treeAssets;this.art.treeLod=1;
+  this.treeAssets.readyPromise.then(()=>{if(!this.disposed&&this.treeAssets.ready&&this.scenery)this.setStatic(this.scenery,this.entry);});
   this.people=createPeople(this.art,10000);this.vehicles=createVehicles(this.art,10000);this.scene.add(this.people.group,this.vehicles.group);for(const factory of[this.people,this.vehicles])factory.group.traverse(o=>{if(o.isInstancedMesh)o.count=0;});
   this.litter=new THREE.InstancedMesh(this.art.geometry('litter-box',()=>new THREE.BoxGeometry(1,1,1)),this.art.material('litter',{color:'#fff0be',roughness:1}),10000);this.litter.count=0;this.scene.add(this.litter);
   this.ghost=new THREE.Group();this.scene.add(this.ghost);this.ghostMaterial=new THREE.MeshBasicMaterial({color:'#80bd53',transparent:true,opacity:.48,depthWrite:false});this.selection=new THREE.Mesh(new THREE.BoxGeometry(4.08,.06,4.08),new THREE.MeshBasicMaterial({color:'#ffd35e',transparent:true,opacity:.5,depthWrite:false}));this.selection.visible=false;this.scene.add(this.selection);
   this.ray=new THREE.Raycaster();this.mouse=new THREE.Vector2();this.transform=new THREE.Object3D();this.visibleFacilityState='';this.visibleAmenityState='';
-  this.resizeObserver=new ResizeObserver(()=>this.resize());this.resizeObserver.observe(container);this.resize();this.renderer.setAnimationLoop(()=>{this.controls.update();this.renderer.render(this.scene,this.camera);});
+  this.resizeObserver=new ResizeObserver(()=>this.resize());this.resizeObserver.observe(container);this.resize();this.renderer.setAnimationLoop(()=>{this.controls.update();this.updateTreeLOD();this.renderer.render(this.scene,this.camera);});
+ }
+ updateTreeLOD(){
+  // A 7.1 m sphere encloses the measured near tree. Hysteresis keeps zoom
+  // damping at a boundary from exchanging geometry every frame.
+  const pixels=7.1*this.container.clientHeight*this.camera.zoom/(this.camera.top-this.camera.bottom),current=this.art.treeLod;
+  let next=current;
+  if(current===0&&pixels<95)next=pixels<32?2:1;
+  else if(current===1){if(pixels>115)next=0;else if(pixels<32)next=2;}
+  else if(current===2&&pixels>42)next=pixels>115?0:1;
+  if(next!==current){this.art.treeLod=next;if(this.treeAssets.ready&&this.scenery){this.treeAssets.setLOD(this.staticGroup,next);this.renderer.shadowMap.needsUpdate=true;}}
  }
  resize(){const {clientWidth:w,clientHeight:h}=this.container;if(!w||!h)return;this.camera.left=-60*w/h;this.camera.right=60*w/h;this.camera.top=60;this.camera.bottom=-60;this.camera.updateProjectionMatrix();this.renderer.setSize(w,h,false);}
  clearStatic(){this.staticGroup.traverse(object=>{if(object.isInstancedMesh)object.dispose();});this.staticGroup.clear();this.art.releaseStatic();}
@@ -33,7 +46,7 @@ export class ParkScene{
    else if(e.kind==='facility')buildFacility(this.art,group,e,this.packet?.facilities.find(f=>f.id===e.facility));
    else if(e.kind==='amenity')buildAmenity(this.art,group,e,{...this.packet?.amenities.find(a=>a.id===e.id),capacity:steelRules.housekeeping.binCapacity});
    else if(e.kind==='scenery')buildScenery(this.art,group,e);
-   if(['facility','portal','scenery'].includes(e.kind))fitModel(group,{x:e.tile.x*4+2,z:e.tile.y*4+2,low:e.height/8,height:e.kind==='scenery'?steelRules.scenery[e.sceneryType].height/8:2});
+   if(['facility','portal','scenery'].includes(e.kind)&&!group.userData.detailedTree)fitModel(group,{x:e.tile.x*4+2,z:e.tile.y*4+2,low:e.height/8,height:e.kind==='scenery'?steelRules.scenery[e.sceneryType].height/8:2});
   }
   batchStatic(this.staticGroup);this.renderer.shadowMap.needsUpdate=true;
  }
@@ -63,5 +76,5 @@ export class ParkScene{
  highlight(point){this.selection.visible=!!point;if(point)this.selection.position.set(point.x*4+2,point.z/8+.2,point.y*4+2);}
  overview(){this.controls.target.set(82,4,74);this.camera.position.set(154,64,150);this.camera.zoom=1.18;this.camera.updateProjectionMatrix();}
  close(){this.controls.target.set(82,4,67);this.camera.position.set(124,40,113);this.camera.zoom=2.5;this.camera.updateProjectionMatrix();}
- dispose(){this.renderer.setAnimationLoop(null);this.resizeObserver.disconnect();this.controls.dispose();this.clearStatic();this.people.dispose();this.vehicles.dispose();this.litter.dispose();this.ghostMaterial.dispose();this.selection.geometry.dispose();this.selection.material.dispose();this.art.dispose();this.renderer.dispose();}
+ dispose(){this.disposed=true;this.renderer.setAnimationLoop(null);this.resizeObserver.disconnect();this.controls.dispose();this.clearStatic();this.people.dispose();this.vehicles.dispose();this.litter.dispose();this.ghostMaterial.dispose();this.selection.geometry.dispose();this.selection.material.dispose();this.treeAssets.dispose();this.art.dispose();this.renderer.dispose();}
 }

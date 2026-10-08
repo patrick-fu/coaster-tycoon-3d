@@ -1,0 +1,17 @@
+{
+  "model": "gemini-3.8-flash-high",
+  "effectiveModelVerified": true,
+  "conversationId": "ddc5eb54-073b-4288-aae6-eb666bda21e1",
+  "turns": 3,
+  "exit": 0,
+  "terminalStatus": "SUCCESS",
+  "responseBytes": 2467,
+  "acceptedAsReadOnlyReview": true,
+  "priorFailures": [
+    "first turn empty after read_url permission denial",
+    "second turn timed out with no response after supplied file reads"
+  ],
+  "scope": "Snapshots and supplied installed Three.js source; no runtime claim",
+  "reportSha256": "acac972588f28fd4f378dea5ae6ae73d795562819b6039427cf574f077bda6c4",
+  "normalizedRepositoryReportSha256": "d2ea36518315f52424eaab54e0b329f3c5a8511a9193501d831781abd93b5f5f"
+}

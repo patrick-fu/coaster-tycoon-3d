@@ -16,6 +16,13 @@ Spline-shaped rails, continuous troughs, variable-height supports and repeated
 ties remain topology-driven renderer geometry, with authored structural profiles
 and reusable detailed components. A curved track must follow the actual layout.
 
+The oak scenery pilot retains the validated GLB and editable master for inspection,
+and also exports separate glTF/bin files sharing one texture directory for the
+park runtime. This avoids repeating embedded atlas bytes in each distributed
+LOD. Runtime files use the same authored unit frame, geometry and materials;
+full transformed vertices and shared texture hashes must be checked. No ingestion
+step may fit or rescale them into a different reservation.
+
 Art authoring uses AGY; root owns the shared renderer/worker integration and
 acceptance. All Blender execution, texture processing, exports, render captures,
 GLB/runtime checks and performance work run on Grok Bot. The Mac only edits,

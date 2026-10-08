@@ -1,0 +1,9 @@
+{
+  "scope": "Actual remote software-WebGL browser, not representative real GPU or original parity",
+  "browser": "Chrome/155.0.8059.39",
+  "profile": "/home/box/.config/google-chrome",
+  "checks": [],
+  "faults": [],
+  "failure": "Condition did not complete: !!window.oakTerminal",
+  "exceptions": []
+}

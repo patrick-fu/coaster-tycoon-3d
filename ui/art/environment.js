@@ -975,7 +975,8 @@ export function buildEnvironment(ctx, scenery, entry) {
         const th = (height / 32) * tile;
 
         const isDeciduous = hash2D(x, y, 104) > 0.48;
-        if (isDeciduous) {
+        const detailedTree = isDeciduous && ctx.treeAssets?.add(staticParent, tx, th, tz, i / 5, 2);
+        if (isDeciduous && !detailedTree) {
           // Deciduous boundary tree: bark-grained trunk, boughs, irregular broadleaf canopy lobes
           cylinderMesh(ctx, staticParent, barkMat, tx, th + 1.8, tz, 0.42, 3.6, 0.42);
           cylinderMesh(ctx, staticParent, barkMat, tx + 0.38, th + 2.8, tz + 0.28, 0.2, 1.3, 0.2, 0.35, 0.2, -0.4);
@@ -986,7 +987,7 @@ export function buildEnvironment(ctx, scenery, entry) {
           canopyMesh(ctx, staticParent, leafShade, tx - 0.65, th + 4.0, tz - 0.35, 1.85, 1.25, 1.75, -0.1, -0.5, 0, 0);
           canopyMesh(ctx, staticParent, leafSun, tx + 0.2, th + 5.1, tz - 0.15, 1.95, 1.35, 1.85, 0.05, 0.3, 0, 1);
           canopyMesh(ctx, staticParent, leafSun, tx - 0.1, th + 5.9, tz + 0.1, 1.4, 1.05, 1.35, 0, 0.2, 0, 0);
-        } else {
+        } else if (!isDeciduous) {
           // Tiered conifer boundary tree with irregular drooping needle skirts
           cylinderMesh(ctx, staticParent, barkMat, tx, th + 2.5, tz, 0.32, 5.0, 0.32);
           pineSkirtMesh(ctx, staticParent, pineShade, tx, th + 2.2, tz, 2.2, 1.5, 2.2, 0.0, 0);
@@ -1238,6 +1239,7 @@ export function buildScenery(ctx, parent, e) {
   const waterTex = getTex(ctx, 'tex-water-ripples', 128, 128, paintWaterRipples);
 
   if (type === 'tree') {
+    if (ctx.treeAssets?.add(parent, x, h, z, seed, ctx.treeLod ?? 1)) return;
     const isOak = seed % 2 === 0;
 
     // Shared cached bark materials

@@ -7,7 +7,7 @@ unaffiliated with RollerCoaster Tycoon 2 and OpenRCT2.
 Project code is licensed under [MIT](LICENSE). The implementation and required
 game resources are independent; see the [source strategy decision](docs/adr/0001-independent-mit-implementation.md).
 
-Try the [Classic showcase](https://patrick-fu.github.io/coaster-tycoon-3d/previews/classic-a7d6451/?showcase=classic)
+Try the [current Classic showcase](https://patrick-fu.github.io/coaster-tycoon-3d/?showcase=classic)
 in desktop Chrome or Edge. Its three operating steel-coaster layouts, shops,
 gardens and local save use a separate showcase slot, preserving your existing
 park at the [regular preview](https://patrick-fu.github.io/coaster-tycoon-3d/).
@@ -15,12 +15,22 @@ Build and manage Copper Meadows with mouse/keyboard;
 drag to orbit, right-drag to pan and scroll to zoom. Space pauses the park.
 Saves remain in this browser; Export/Import moves a park between devices.
 
-![Classic park with independently authored art](docs/verification/classic-art/art-overview.png)
+![Classic park with independently authored textured oak trees](docs/verification/oak-scenery/oak-park-close.png)
 
-This checkpoint has procedural materials and composed models, three steel-coaster
+The current art iteration adds detailed oak meshes, real CC0 bark and leaf
+surfaces, masked shadows and three camera-selected levels of detail to the
+playable park. Planting, inspection, demolition and save/load use the existing
+simulation. See the [editable asset source](prototypes/organic-tree/README.md)
+and [verification evidence](docs/verification/oak-scenery/README.md). The modeless
+Classic Library exposes the full reference catalogue and the four implemented
+candidate variants; unavailable reference items remain clearly marked.
+
+The [earlier art checkpoint](https://patrick-fu.github.io/coaster-tycoon-3d/previews/classic-a7d6451/?showcase=classic)
+has procedural materials and composed models, three steel-coaster
 layouts, three generic facilities and six buildable scenery types with real
 construction, money, clearance and saves. Patrick rejected its visual quality;
-it is retained as a measured baseline, not the accepted art direction. See
+it is retained as a measured baseline, not the accepted art direction. The
+current iteration still requires Patrick's visual acceptance. See
 [verification evidence](docs/verification/classic-art/README.md).
 
 The earlier first-playable planning established the architecture. The production
