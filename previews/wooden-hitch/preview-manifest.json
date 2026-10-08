@@ -1,0 +1,13 @@
+{
+  "kind": "finite-wooden-hitch-inspector",
+  "sourceCommit": "db0b6a4cb6a5ab23ad8e1228d2c238d968b8018a",
+  "sourceMergeCommit": "b12cbe4d7cc5a3ebd28a67b7c3cb9f790cecca7a",
+  "sourcePath": "prototypes/wooden-hitch",
+  "sourcePullRequest": "https://github.com/patrick-fu/coaster-tycoon-3d/pull/57",
+  "verification": "https://github.com/patrick-fu/coaster-tycoon-3d/blob/db0b6a4cb6a5ab23ad8e1228d2c238d968b8018a/docs/experiments/wooden-hitch/README.md",
+  "outputManifestSha256": "13011c07a9b451991296cf099530d9b795e43e45b2eb31b95383d3f9c03eca29",
+  "files": 16,
+  "bytes": 6983142,
+  "scope": "Exactly 59 retained flat train poses qualified. No continuous/native/station/gameplay/original/hardware/human acceptance.",
+  "buildHost": "Grok Bot; Blender4.3.2; software WebGL"
+}

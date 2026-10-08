@@ -1,0 +1,6 @@
+Independently authored Coaster Tycoon 3D finite wooden hitch inspector. Project geometry and source: MIT.
+Three.js 0.186.1: MIT; see vendor/THREE-LICENSE.txt.
+The authored car uses ambientCG Metal049A and WoodFloor043 materials, CC0-1.0: https://docs.ambientcg.com/license/
+Source acquisitions and embedded image hashes are retained in asset-index.json and the source experiment.
+Original RCT2 commercial resources and GPL implementation are not bundled.
+This experiment qualifies exactly 59 retained flat train poses. Continuous motion, native placement, stations, production gameplay, original equivalence, hardware performance and human visual acceptance remain open.

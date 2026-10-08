@@ -1,0 +1,1909 @@
+[
+  {
+    "id": "wooden-car-joint",
+    "title": "Wooden Car Joint",
+    "subtitle": "59 retained flat poses passed; production integration pending",
+    "glb": "./models/wooden-car-joint.glb",
+    "report": {
+      "authoring": {
+        "assetId": "wooden-car-joint",
+        "referenceVariant": "PTCT1-inspired wooden train car",
+        "candidateDimensions": {
+          "width": 1.44,
+          "length": 2.68,
+          "height": 1.24
+        },
+        "anchors": [
+          "RailRoot",
+          "BogieFront",
+          "BogieRear",
+          "Seat_FrontLeft",
+          "Seat_FrontRight",
+          "Seat_RearLeft",
+          "Seat_RearRight",
+          "Coupler_Front",
+          "Coupler_Rear"
+        ],
+        "restraints": [
+          "LapBar_Front",
+          "LapBar_Rear"
+        ],
+        "notes": "Four-passenger articulated wooden coaster car with sculpted tub, contoured vinyl seats, hinged lap bars, complete road/guide/upstop wheel groups, couplers, and export-stable UVs.",
+        "geometryIntent": "Independently authored PTC-inspired wooden coaster car geometry featuring shaped prow/nose curvature, closed cowl deck, varnished timber side inserts, recessed cockpit tubs, layered steel undercarriage stringers, fin brake equipment, two articulated two-passenger rows with individual contoured bucket cushions and fluted lumbar backrests, and dual bogie pivot assemblies with differentiated rubber treads and metal hubs.",
+        "jointAuthoring": {
+          "assetId": "coaster-hitch-mounts",
+          "candidateScope": "finite visual candidate mount hardware; unqualified; pending root collision validation",
+          "parts": {
+            "Mount_Carrier_Front": "Mount_Carrier_Front",
+            "Mount_Clevis_Front": "Mount_Clevis_Front",
+            "Mount_Pin_Front": "Mount_Pin_Front",
+            "Mount_Carrier_Rear": "Mount_Carrier_Rear",
+            "Mount_Clevis_Rear": "Mount_Clevis_Rear",
+            "Mount_Pin_Rear": "Mount_Pin_Rear"
+          },
+          "anchors": {
+            "Coupler_Front": "Coupler_Front",
+            "Coupler_Rear": "Coupler_Rear",
+            "Stringer_Front_Left_Face": [
+              -0.46,
+              -1.25,
+              0.22
+            ],
+            "Stringer_Front_Right_Face": [
+              0.46,
+              -1.25,
+              0.22
+            ],
+            "Stringer_Rear_Left_Face": [
+              -0.46,
+              1.25,
+              0.22
+            ],
+            "Stringer_Rear_Right_Face": [
+              0.46,
+              1.25,
+              0.22
+            ]
+          },
+          "candidateDimensions": {
+            "carrier_attachment_width_x": 0.032,
+            "carrier_outer_half_span_x": 0.476,
+            "carrier_height_z": 0.028,
+            "carrier_y_front": [
+              -1.25,
+              -1.3
+            ],
+            "carrier_y_rear": [
+              1.25,
+              1.3
+            ],
+            "clevis_gap_vertical": 0.03,
+            "clevis_plate_thickness": 0.01,
+            "pin_radius": 0.012,
+            "pin_height": 0.06,
+            "eye_hole_clearance_radial": 0.002,
+            "eye_thickness_clearance_vertical": 0.006,
+            "head_envelope_radius": 0.058,
+            "head_envelope_bound": 0.09995
+          },
+          "intendedAttachmentPairs": [
+            [
+              "Mount_Carrier_Front",
+              "Mount_Clevis_Front"
+            ],
+            [
+              "Mount_Clevis_Front",
+              "Mount_Pin_Front"
+            ],
+            [
+              "Mount_Carrier_Rear",
+              "Mount_Clevis_Rear"
+            ],
+            [
+              "Mount_Clevis_Rear",
+              "Mount_Pin_Rear"
+            ]
+          ],
+          "requiredKinematicYaw": {
+            "front_deg": 15.8242714,
+            "rear_deg": 15.1308793
+          },
+          "validationStatus": "unqualified candidate; root validation required on Grok Bot; collision clearance uncertified",
+          "offlineSolidUnion": true,
+          "exportedParts": [
+            "Mount_Assembly_Front",
+            "Mount_Assembly_Rear"
+          ]
+        },
+        "scope": "Finite hardware candidate; no native ride availability"
+      },
+      "geometry": {
+        "meshObjects": 13,
+        "trianglesEvaluated": 19920,
+        "boundsBlender": {
+          "min": [
+            -0.7080000042915344,
+            -1.3799999952316284,
+            -0.19849567115306854
+          ],
+          "max": [
+            0.7080000042915344,
+            1.3799999952316284,
+            0.8999999761581421
+          ]
+        },
+        "materials": [
+          "boards",
+          "brass",
+          "metal",
+          "paint_red",
+          "rubber",
+          "seat_vinyl"
+        ],
+        "anchorsBlender": {
+          "RailRoot": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "BogieFront": [
+            0.0,
+            -0.75,
+            0.17000000178813934
+          ],
+          "BogieRear": [
+            0.0,
+            0.75,
+            0.17000000178813934
+          ],
+          "Seat_FrontLeft": [
+            -0.3199999928474426,
+            -0.41999998688697815,
+            0.46000000834465027
+          ],
+          "Seat_FrontRight": [
+            0.3199999928474426,
+            -0.41999998688697815,
+            0.46000000834465027
+          ],
+          "Seat_RearLeft": [
+            -0.3199999928474426,
+            0.41999998688697815,
+            0.46000000834465027
+          ],
+          "Seat_RearRight": [
+            0.3199999928474426,
+            0.41999998688697815,
+            0.46000000834465027
+          ],
+          "Coupler_Front": [
+            0.0,
+            -1.340000033378601,
+            0.2199999988079071
+          ],
+          "Coupler_Rear": [
+            0.0,
+            1.340000033378601,
+            0.2199999988079071
+          ]
+        },
+        "issues": []
+      },
+      "blender": "4.3.2",
+      "sourceSha256": "705485f5da487145dc9434090f21810f39f8ab47b04b7e25b6513197147ff50a",
+      "driverSha256": "0eb9d0c0c32d0e776fe3e903224805165844aa11a94b9b62b25e09c1a2ada3b6",
+      "textureSources": [
+        {
+          "file": "Metal049A_1K-PNG_Color.png",
+          "sourceSha256": "3c5be68c8a56534f120e88cff835a321ca51459c8f31482f984958c7fbfda8e6",
+          "sourceDimensions": [
+            1024,
+            1024
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "Metal049A_1K-PNG_Metalness.png",
+          "sourceSha256": "61c66550ad5636c9fb8bfb13fc5b2ff4b2ba7cb66831e8c68509124915be045e",
+          "sourceDimensions": [
+            1024,
+            1024
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "Metal049A_1K-PNG_NormalGL.png",
+          "sourceSha256": "5b80adcc8092618a127bb7dfa547e3a35d156efd027c9daa579ac26f9098a678",
+          "sourceDimensions": [
+            1024,
+            1024
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "Metal049A_1K-PNG_Roughness.png",
+          "sourceSha256": "a42d9eaba9bc232739c7cb86dee03805e66f50a065cecfbbfe906aaeb6b3ded2",
+          "sourceDimensions": [
+            1024,
+            1024
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "WoodFloor043_1K-PNG_Color.png",
+          "sourceSha256": "55a7c25c191c8eb501d87a8872438dcfba307b3a043fee00ad9e89f0c413d684",
+          "sourceDimensions": [
+            1024,
+            512
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "WoodFloor043_1K-PNG_Metalness.png",
+          "sourceSha256": "46ca3dbd1939c6c89b437c195afe51d816336baa0376b9289d6e7dc0757a69dc",
+          "sourceDimensions": [
+            1024,
+            512
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "WoodFloor043_1K-PNG_NormalGL.png",
+          "sourceSha256": "ac8e1221726a512c4eb3cae98674bf0dda774382b2ba2577d36cbf8192986a6e",
+          "sourceDimensions": [
+            1024,
+            512
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "WoodFloor043_1K-PNG_Roughness.png",
+          "sourceSha256": "c15241e172c474ad147003f8e957cf88d305d9e8d82809de201f04f7b969ec26",
+          "sourceDimensions": [
+            1024,
+            512
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        }
+      ],
+      "batchStatic": false,
+      "glb": {
+        "file": "wooden-car-joint.glb",
+        "sha256": "7b6ae0f47746d4e8bd624ad2323f7cd20abec214711cbfb4e89329adc687202e",
+        "bytes": 3590960
+      },
+      "editableMaster": {
+        "file": "wooden-car-joint-routed.blend",
+        "sha256": "acb733c31d26dfed819b3ea759de80a484e3d132b4632db470bb680fec32d72f",
+        "bytes": 5854945
+      },
+      "scope": "Actual byte-preserving original car with appended routed hardware; finite candidate, no production/native/original or human visual acceptance.",
+      "composition": {
+        "schemaVersion": 1,
+        "verdict": "preserve-original-bytes-with-exact-hitch-removal",
+        "compositionCompleted": true,
+        "scope": "Immutable original geometry retention and bounded mount composition only; no finite collision, continuous, native/original, production, GPU or human acceptance.",
+        "execution": {
+          "host": "grok-bot-vm-405605737",
+          "platform": "linux",
+          "architecture": "x64",
+          "node": "v20.19.2",
+          "timeUtc": "2026-10-08T01:57:33.729Z",
+          "argv": [
+            "/usr/bin/node",
+            "/workspace/coaster-wooden-hitch-authoring/compose-car.mjs",
+            "--hardware",
+            "outputs/wooden-car-joint-routed.glb",
+            "--hardware-sha",
+            "575eaffa6f934ba52cc34fe34f37109a93aff960c0b8c350970b7ca9715ee1f3",
+            "--output",
+            "outputs/wooden-car-routed-composed.glb"
+          ],
+          "modulePath": "/workspace/coaster-wooden-hitch-authoring/compose-car.mjs",
+          "moduleSha256": "f6384dfd81f9541abfbd16cf5520acc371cad4fa36ba59b18f475a3cedcb0557"
+        },
+        "inputs": {
+          "original": {
+            "path": "/workspace/coaster-detailed-assets/outputs/wooden-car.glb",
+            "sha256": "fc988c55ed60dcd5abf7c5e02ecbc1ac3a8cd828cfe7fe4bb8f30bcf21699b59",
+            "bytes": 3545440
+          },
+          "fixture": {
+            "path": "/workspace/coaster-articulated-wooden-joint/results.json",
+            "sha256": "167ba3e1da273b66a4bc1d9fb1c3a6fe6c1ec0d2ea54673395f94ae73a287ab6",
+            "bytes": 1402538
+          },
+          "hardware": {
+            "path": "/workspace/coaster-wooden-hitch-authoring/outputs/wooden-car-joint-routed.glb",
+            "sha256": "575eaffa6f934ba52cc34fe34f37109a93aff960c0b8c350970b7ca9715ee1f3",
+            "bytes": 3578900
+          }
+        },
+        "output": {
+          "path": "/workspace/coaster-wooden-hitch-authoring/outputs/wooden-car-routed-composed.glb",
+          "sha256": "7b6ae0f47746d4e8bd624ad2323f7cd20abec214711cbfb4e89329adc687202e",
+          "bytes": 3590960
+        },
+        "originalBinaryPrefix": {
+          "bytes": 3533132,
+          "sha256": "a5d9761dc8145a08352e2a59409fd2cd891de13b4ef98da2f95dfe798fb9ebda",
+          "identical": true
+        },
+        "originalInventory": {
+          "nodes": 22,
+          "meshes": 11,
+          "accessors": 41,
+          "bufferViews": 47,
+          "materials": 6,
+          "images": 6,
+          "textures": 6,
+          "samplers": 1
+        },
+        "appendedInventory": {
+          "bufferViews": 9,
+          "accessors": 9,
+          "meshes": 2,
+          "nodes": 2
+        },
+        "appendBytes": 43672,
+        "hardwareGeometryBytes": 39136,
+        "removedChassisComponents": [
+          {
+            "index": 7,
+            "triangles": [
+              74,
+              75,
+              84,
+              85,
+              88,
+              89,
+              90,
+              91,
+              92,
+              93,
+              94,
+              95,
+              442,
+              443,
+              444,
+              445,
+              446,
+              447,
+              448,
+              449,
+              450,
+              451,
+              452,
+              453,
+              454,
+              455,
+              456,
+              457,
+              458,
+              459,
+              460,
+              461,
+              462,
+              463,
+              464,
+              465,
+              466,
+              467,
+              468,
+              469,
+              470,
+              471,
+              472,
+              473,
+              474,
+              475,
+              476,
+              477,
+              478,
+              479,
+              480,
+              481,
+              482,
+              483,
+              484,
+              485,
+              486,
+              487,
+              488,
+              489,
+              874,
+              875,
+              876,
+              877,
+              878,
+              879,
+              880,
+              881,
+              882,
+              883,
+              884,
+              885,
+              886,
+              887,
+              888,
+              889,
+              890,
+              891,
+              892,
+              893,
+              894,
+              895,
+              896,
+              897,
+              898,
+              899,
+              900,
+              901,
+              902,
+              903,
+              904,
+              905,
+              906,
+              907,
+              908,
+              909,
+              910,
+              911,
+              912,
+              913,
+              914,
+              915,
+              916,
+              917,
+              918,
+              919,
+              920,
+              921
+            ],
+            "bounds": {
+              "min": [
+                -0.05000000074505806,
+                0.1899999976158142,
+                1.2100000381469727
+              ],
+              "max": [
+                0.05000000074505806,
+                0.25,
+                1.4700000286102295
+              ]
+            },
+            "indicesSha256": "aa851345cf6c2a5c3137aebade7c5b9422d9cc5065762c501a39ff65341c023c"
+          },
+          {
+            "index": 8,
+            "triangles": [
+              86,
+              87,
+              96,
+              97,
+              98,
+              99,
+              100,
+              101,
+              102,
+              103,
+              104,
+              105,
+              490,
+              491,
+              492,
+              493,
+              494,
+              495,
+              496,
+              497,
+              498,
+              499,
+              500,
+              501,
+              502,
+              503,
+              504,
+              505,
+              506,
+              507,
+              508,
+              509,
+              510,
+              511,
+              512,
+              513,
+              514,
+              515,
+              516,
+              517,
+              518,
+              519,
+              520,
+              521,
+              522,
+              523,
+              524,
+              525,
+              526,
+              527,
+              528,
+              529,
+              530,
+              531,
+              532,
+              533,
+              534,
+              535,
+              536,
+              537,
+              922,
+              923,
+              924,
+              925,
+              926,
+              927,
+              928,
+              929,
+              930,
+              931,
+              932,
+              933,
+              934,
+              935,
+              936,
+              937,
+              938,
+              939,
+              940,
+              941,
+              942,
+              943,
+              944,
+              945,
+              946,
+              947,
+              948,
+              949,
+              950,
+              951,
+              952,
+              953,
+              954,
+              955,
+              956,
+              957,
+              958,
+              959,
+              960,
+              961,
+              962,
+              963,
+              964,
+              965,
+              966,
+              967,
+              968,
+              969
+            ],
+            "bounds": {
+              "min": [
+                -0.05999999865889549,
+                0.18000000715255737,
+                -1.4700000286102295
+              ],
+              "max": [
+                0.05999999865889549,
+                0.25999999046325684,
+                -1.2100000381469727
+              ]
+            },
+            "indicesSha256": "8ef5223619906717399961807998b313f697ff5bedfe4a486e4762dcd30c21d8"
+          }
+        ],
+        "retainedChassisComponents": [
+          {
+            "index": 0,
+            "triangles": [
+              0,
+              1,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              106,
+              107,
+              108,
+              109,
+              110,
+              111,
+              112,
+              113,
+              114,
+              115,
+              116,
+              117,
+              118,
+              119,
+              120,
+              121,
+              122,
+              123,
+              124,
+              125,
+              126,
+              127,
+              128,
+              129,
+              130,
+              131,
+              132,
+              133,
+              134,
+              135,
+              136,
+              137,
+              138,
+              139,
+              140,
+              141,
+              142,
+              143,
+              144,
+              145,
+              146,
+              147,
+              148,
+              149,
+              150,
+              151,
+              152,
+              153,
+              538,
+              539,
+              540,
+              541,
+              542,
+              543,
+              544,
+              545,
+              546,
+              547,
+              548,
+              549,
+              550,
+              551,
+              552,
+              553,
+              554,
+              555,
+              556,
+              557,
+              558,
+              559,
+              560,
+              561,
+              562,
+              563,
+              564,
+              565,
+              566,
+              567,
+              568,
+              569,
+              570,
+              571,
+              572,
+              573,
+              574,
+              575,
+              576,
+              577,
+              578,
+              579,
+              580,
+              581,
+              582,
+              583,
+              584,
+              585,
+              970,
+              971
+            ],
+            "bounds": {
+              "min": [
+                -0.5,
+                0.17000000178813934,
+                -1.25
+              ],
+              "max": [
+                -0.41999998688697815,
+                0.27000001072883606,
+                1.25
+              ]
+            },
+            "indicesSha256": "1b6764e3fe5cf3d6668be2d8c91968f80f364893230d3360a52a7fa2bcfa9bcd"
+          },
+          {
+            "index": 1,
+            "triangles": [
+              2,
+              3,
+              12,
+              13,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              154,
+              155,
+              156,
+              157,
+              158,
+              159,
+              160,
+              161,
+              162,
+              163,
+              164,
+              165,
+              166,
+              167,
+              168,
+              169,
+              170,
+              171,
+              172,
+              173,
+              174,
+              175,
+              176,
+              177,
+              178,
+              179,
+              180,
+              181,
+              182,
+              183,
+              184,
+              185,
+              186,
+              187,
+              188,
+              189,
+              190,
+              191,
+              192,
+              193,
+              194,
+              195,
+              196,
+              197,
+              198,
+              199,
+              200,
+              201,
+              586,
+              587,
+              588,
+              589,
+              590,
+              591,
+              592,
+              593,
+              594,
+              595,
+              596,
+              597,
+              598,
+              599,
+              600,
+              601,
+              602,
+              603,
+              604,
+              605,
+              606,
+              607,
+              608,
+              609,
+              610,
+              611,
+              612,
+              613,
+              614,
+              615,
+              616,
+              617,
+              618,
+              619,
+              620,
+              621,
+              622,
+              623,
+              624,
+              625,
+              626,
+              627,
+              628,
+              629,
+              630,
+              631,
+              632,
+              633
+            ],
+            "bounds": {
+              "min": [
+                0.41999998688697815,
+                0.17000000178813934,
+                -1.25
+              ],
+              "max": [
+                0.5,
+                0.27000001072883606,
+                1.25
+              ]
+            },
+            "indicesSha256": "6587e7cbb7817fc5dcad5042640f2d10481f62e143f5b8025580584af80e0f47"
+          },
+          {
+            "index": 2,
+            "triangles": [
+              14,
+              15,
+              24,
+              25,
+              28,
+              29,
+              30,
+              31,
+              32,
+              33,
+              34,
+              35,
+              202,
+              203,
+              204,
+              205,
+              206,
+              207,
+              208,
+              209,
+              210,
+              211,
+              212,
+              213,
+              214,
+              215,
+              216,
+              217,
+              218,
+              219,
+              220,
+              221,
+              222,
+              223,
+              224,
+              225,
+              226,
+              227,
+              228,
+              229,
+              230,
+              231,
+              232,
+              233,
+              234,
+              235,
+              236,
+              237,
+              238,
+              239,
+              240,
+              241,
+              242,
+              243,
+              244,
+              245,
+              246,
+              247,
+              248,
+              249,
+              634,
+              635,
+              636,
+              637,
+              638,
+              639,
+              640,
+              641,
+              642,
+              643,
+              644,
+              645,
+              646,
+              647,
+              648,
+              649,
+              650,
+              651,
+              652,
+              653,
+              654,
+              655,
+              656,
+              657,
+              658,
+              659,
+              660,
+              661,
+              662,
+              663,
+              664,
+              665,
+              666,
+              667,
+              668,
+              669,
+              670,
+              671,
+              672,
+              673,
+              674,
+              675,
+              676,
+              677,
+              678,
+              679,
+              680,
+              681
+            ],
+            "bounds": {
+              "min": [
+                -0.5199999809265137,
+                0.18000000715255737,
+                0.6899999976158142
+              ],
+              "max": [
+                0.5199999809265137,
+                0.25999999046325684,
+                0.8100000023841858
+              ]
+            },
+            "indicesSha256": "4ceabea3e7d34614d33417fab8d73a3b1616ad35ffdc372805c7c4491b974f00"
+          },
+          {
+            "index": 3,
+            "triangles": [
+              26,
+              27,
+              36,
+              37,
+              40,
+              41,
+              42,
+              43,
+              44,
+              45,
+              46,
+              47,
+              250,
+              251,
+              252,
+              253,
+              254,
+              255,
+              256,
+              257,
+              258,
+              259,
+              260,
+              261,
+              262,
+              263,
+              264,
+              265,
+              266,
+              267,
+              268,
+              269,
+              270,
+              271,
+              272,
+              273,
+              274,
+              275,
+              276,
+              277,
+              278,
+              279,
+              280,
+              281,
+              282,
+              283,
+              284,
+              285,
+              286,
+              287,
+              288,
+              289,
+              290,
+              291,
+              292,
+              293,
+              294,
+              295,
+              296,
+              297,
+              682,
+              683,
+              684,
+              685,
+              686,
+              687,
+              688,
+              689,
+              690,
+              691,
+              692,
+              693,
+              694,
+              695,
+              696,
+              697,
+              698,
+              699,
+              700,
+              701,
+              702,
+              703,
+              704,
+              705,
+              706,
+              707,
+              708,
+              709,
+              710,
+              711,
+              712,
+              713,
+              714,
+              715,
+              716,
+              717,
+              718,
+              719,
+              720,
+              721,
+              722,
+              723,
+              724,
+              725,
+              726,
+              727,
+              728,
+              729
+            ],
+            "bounds": {
+              "min": [
+                -0.5,
+                0.18000000715255737,
+                -0.05000000074505806
+              ],
+              "max": [
+                0.5,
+                0.25999999046325684,
+                0.05000000074505806
+              ]
+            },
+            "indicesSha256": "e69b50498f18ce198d5dbc6db46df6aec8cf7b5ab0ab35aa52bb9d2b12c87720"
+          },
+          {
+            "index": 4,
+            "triangles": [
+              38,
+              39,
+              48,
+              49,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              298,
+              299,
+              300,
+              301,
+              302,
+              303,
+              304,
+              305,
+              306,
+              307,
+              308,
+              309,
+              310,
+              311,
+              312,
+              313,
+              314,
+              315,
+              316,
+              317,
+              318,
+              319,
+              320,
+              321,
+              322,
+              323,
+              324,
+              325,
+              326,
+              327,
+              328,
+              329,
+              330,
+              331,
+              332,
+              333,
+              334,
+              335,
+              336,
+              337,
+              338,
+              339,
+              340,
+              341,
+              342,
+              343,
+              344,
+              345,
+              730,
+              731,
+              732,
+              733,
+              734,
+              735,
+              736,
+              737,
+              738,
+              739,
+              740,
+              741,
+              742,
+              743,
+              744,
+              745,
+              746,
+              747,
+              748,
+              749,
+              750,
+              751,
+              752,
+              753,
+              754,
+              755,
+              756,
+              757,
+              758,
+              759,
+              760,
+              761,
+              762,
+              763,
+              764,
+              765,
+              766,
+              767,
+              768,
+              769,
+              770,
+              771,
+              772,
+              773,
+              774,
+              775,
+              776,
+              777
+            ],
+            "bounds": {
+              "min": [
+                -0.5199999809265137,
+                0.18000000715255737,
+                -0.8100000023841858
+              ],
+              "max": [
+                0.5199999809265137,
+                0.25999999046325684,
+                -0.6899999976158142
+              ]
+            },
+            "indicesSha256": "fe2b5593296d665a3af865951f72ddde0db3f826999c665f033a2bfd0ff6a7ed"
+          },
+          {
+            "index": 5,
+            "triangles": [
+              50,
+              51,
+              60,
+              61,
+              64,
+              65,
+              66,
+              67,
+              68,
+              69,
+              70,
+              71,
+              346,
+              347,
+              348,
+              349,
+              350,
+              351,
+              352,
+              353,
+              354,
+              355,
+              356,
+              357,
+              358,
+              359,
+              360,
+              361,
+              362,
+              363,
+              364,
+              365,
+              366,
+              367,
+              368,
+              369,
+              370,
+              371,
+              372,
+              373,
+              374,
+              375,
+              376,
+              377,
+              378,
+              379,
+              380,
+              381,
+              382,
+              383,
+              384,
+              385,
+              386,
+              387,
+              388,
+              389,
+              390,
+              391,
+              392,
+              393,
+              778,
+              779,
+              780,
+              781,
+              782,
+              783,
+              784,
+              785,
+              786,
+              787,
+              788,
+              789,
+              790,
+              791,
+              792,
+              793,
+              794,
+              795,
+              796,
+              797,
+              798,
+              799,
+              800,
+              801,
+              802,
+              803,
+              804,
+              805,
+              806,
+              807,
+              808,
+              809,
+              810,
+              811,
+              812,
+              813,
+              814,
+              815,
+              816,
+              817,
+              818,
+              819,
+              820,
+              821,
+              822,
+              823,
+              824,
+              825
+            ],
+            "bounds": {
+              "min": [
+                -0.009999999776482582,
+                0.009999999776482582,
+                -0.800000011920929
+              ],
+              "max": [
+                0.009999999776482582,
+                0.15000000596046448,
+                0.800000011920929
+              ]
+            },
+            "indicesSha256": "4384acd22d7e3983a7bf81173af4c95f0a9fe49252b3eddb7270920ac36120ca"
+          },
+          {
+            "index": 6,
+            "triangles": [
+              62,
+              63,
+              72,
+              73,
+              76,
+              77,
+              78,
+              79,
+              80,
+              81,
+              82,
+              83,
+              394,
+              395,
+              396,
+              397,
+              398,
+              399,
+              400,
+              401,
+              402,
+              403,
+              404,
+              405,
+              406,
+              407,
+              408,
+              409,
+              410,
+              411,
+              412,
+              413,
+              414,
+              415,
+              416,
+              417,
+              418,
+              419,
+              420,
+              421,
+              422,
+              423,
+              424,
+              425,
+              426,
+              427,
+              428,
+              429,
+              430,
+              431,
+              432,
+              433,
+              434,
+              435,
+              436,
+              437,
+              438,
+              439,
+              440,
+              441,
+              826,
+              827,
+              828,
+              829,
+              830,
+              831,
+              832,
+              833,
+              834,
+              835,
+              836,
+              837,
+              838,
+              839,
+              840,
+              841,
+              842,
+              843,
+              844,
+              845,
+              846,
+              847,
+              848,
+              849,
+              850,
+              851,
+              852,
+              853,
+              854,
+              855,
+              856,
+              857,
+              858,
+              859,
+              860,
+              861,
+              862,
+              863,
+              864,
+              865,
+              866,
+              867,
+              868,
+              869,
+              870,
+              871,
+              872,
+              873
+            ],
+            "bounds": {
+              "min": [
+                -0.02500000037252903,
+                0,
+                0.10999999940395355
+              ],
+              "max": [
+                0.02500000037252903,
+                0.11999999731779099,
+                0.28999999165534973
+              ]
+            },
+            "indicesSha256": "8cf53e9d820f2ea379a8fa047152dcdf54157d2e62c48ba2a0a2be09a972cf87"
+          }
+        ],
+        "chassisReplacementIndices": {
+          "originalAccessor": 29,
+          "replacementAccessor": 41,
+          "triangles": 756,
+          "bytes": 4536,
+          "sha256": "ab8ed822d0ecd600eede01a6a57db88c6f109da261b8322de66cee2e87857d3d",
+          "preservesOriginalVertexAccessors": true
+        },
+        "hardwareMapping": {
+          "node": [
+            [
+              16,
+              22
+            ],
+            [
+              17,
+              23
+            ]
+          ],
+          "mesh": [
+            [
+              10,
+              11
+            ],
+            [
+              11,
+              12
+            ]
+          ],
+          "accessor": [
+            [
+              37,
+              42
+            ],
+            [
+              38,
+              43
+            ],
+            [
+              39,
+              44
+            ],
+            [
+              40,
+              45
+            ],
+            [
+              41,
+              46
+            ],
+            [
+              42,
+              47
+            ],
+            [
+              43,
+              48
+            ],
+            [
+              44,
+              49
+            ]
+          ],
+          "bufferView": [
+            [
+              43,
+              48
+            ],
+            [
+              44,
+              49
+            ],
+            [
+              45,
+              50
+            ],
+            [
+              46,
+              51
+            ],
+            [
+              47,
+              52
+            ],
+            [
+              48,
+              53
+            ],
+            [
+              49,
+              54
+            ],
+            [
+              50,
+              55
+            ]
+          ],
+          "material": [
+            {
+              "hardwareIndex": 0,
+              "originalIndex": 0,
+              "originalName": "metal",
+              "normalizedSemanticsSha256": "d801feeee87f23862cc5fb9a70feab0a0305032a279e1e6a0fb5ebff6cc524b2",
+              "semantics": {
+                "doubleSided": true,
+                "alphaMode": "OPAQUE",
+                "alphaCutoff": 0.5,
+                "emissiveFactor": [
+                  0,
+                  0,
+                  0
+                ],
+                "emissiveTexture": null,
+                "normalTexture": {
+                  "texCoord": 0,
+                  "image": {
+                    "mimeType": "image/png",
+                    "bytes": 554223,
+                    "sha256": "2477e4e6911cfec3f67e0ef09209f1f7b7a6e573bef90147414a444fd10b3b47"
+                  },
+                  "sampler": {
+                    "magFilter": 9729,
+                    "minFilter": 9987,
+                    "wrapS": 10497,
+                    "wrapT": 10497
+                  },
+                  "scale": 0.4000000059604645
+                },
+                "occlusionTexture": null,
+                "pbrMetallicRoughness": {
+                  "baseColorFactor": [
+                    1,
+                    1,
+                    1,
+                    1
+                  ],
+                  "metallicFactor": 1,
+                  "roughnessFactor": 1,
+                  "baseColorTexture": {
+                    "texCoord": 0,
+                    "image": {
+                      "mimeType": "image/png",
+                      "bytes": 258411,
+                      "sha256": "d07f66e233c8d0e1efa8cf0b795cea1ba505f0018c0588241dc1fa3f9c5912ba"
+                    },
+                    "sampler": {
+                      "magFilter": 9729,
+                      "minFilter": 9987,
+                      "wrapS": 10497,
+                      "wrapT": 10497
+                    }
+                  },
+                  "metallicRoughnessTexture": {
+                    "texCoord": 0,
+                    "image": {
+                      "mimeType": "image/png",
+                      "bytes": 150855,
+                      "sha256": "61dc93e29590020dd590248df65630cc00cdd4b0e32499e2dd5700a859af60cd"
+                    },
+                    "sampler": {
+                      "magFilter": 9729,
+                      "minFilter": 9987,
+                      "wrapS": 10497,
+                      "wrapT": 10497
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "permittedJsonPatches": [
+          {
+            "originalBegin": 12268,
+            "originalEnd": 12275,
+            "replacementBytes": 7
+          },
+          {
+            "originalBegin": 12192,
+            "originalEnd": 12192,
+            "replacementBytes": 603
+          },
+          {
+            "originalBegin": 9090,
+            "originalEnd": 9090,
+            "replacementBytes": 821
+          },
+          {
+            "originalBegin": 4211,
+            "originalEnd": 4211,
+            "replacementBytes": 271
+          },
+          {
+            "originalBegin": 3793,
+            "originalEnd": 3795,
+            "replacementBytes": 2
+          },
+          {
+            "originalBegin": 1528,
+            "originalEnd": 1528,
+            "replacementBytes": 149
+          },
+          {
+            "originalBegin": 1508,
+            "originalEnd": 1508,
+            "replacementBytes": 6
+          }
+        ],
+        "assertions": {
+          "originalBinaryPrefix": true,
+          "originalDefinitionSourceBytes": true,
+          "originalNodeLocalAndGlobalMatrices": true,
+          "importedMountLocalAndGlobalMatrices": true,
+          "frozenExactHitchRemoval": true,
+          "originalResourceReuseBySemanticsAndBitmap": true
+        },
+        "limitations": [
+          "The known baseline carrier interference remains unqualified.",
+          "No old triangle/attribute drift is accepted; all old vertex attributes and original BIN bytes are retained.",
+          "The removed old hitch indices remain in the preserved original BIN but are no longer referenced by any active primitive.",
+          "Only two named mount subtrees and their required geometry views are imported; extension, skin, morph and animation composition is unsupported."
+        ]
+      },
+      "verification": {
+        "finiteCandidateQualified": true,
+        "retainedPoseCount": 59,
+        "resultSha256": "44a67423ea16d317df1b1915afaaf492ff3d28654ad82d72525b591255f89cba",
+        "scope": "Exactly the frozen flat poses and finite exported hardware; not continuous/native/original/production/GPU or human acceptance."
+      }
+    }
+  },
+  {
+    "id": "wooden-drawbar",
+    "title": "Finite Drawbar",
+    "subtitle": "59 retained flat poses passed; production integration pending",
+    "glb": "./models/wooden-drawbar.glb",
+    "report": {
+      "authoring": {
+        "assetId": "wooden-drawbar",
+        "anchors": [
+          "DrawbarRoot",
+          "Joint_EndA",
+          "Joint_EndB"
+        ],
+        "restraints": [],
+        "jointAuthoring": {
+          "assetId": "coaster-drawbar-0.20m",
+          "candidateScope": "finite visual candidate; unqualified; pending root kinematic and collision validation",
+          "endpointNodes": {
+            "Joint_EndA": "Joint_EndA",
+            "Joint_EndB": "Joint_EndB"
+          },
+          "parts": {
+            "Drawbar_Bar": "Drawbar_Bar",
+            "Drawbar_Eye_EndA": "Drawbar_Eye_EndA",
+            "Drawbar_Eye_EndB": "Drawbar_Eye_EndB"
+          },
+          "candidateDimensions": {
+            "length_between_joints": 0.2,
+            "bar_width_mid": 0.025,
+            "bar_thickness_mid": 0.018,
+            "bar_width_end": 0.028,
+            "bar_thickness_end": 0.022,
+            "eye_outer_radius": 0.03,
+            "eye_inner_radius": 0.014,
+            "eye_thickness": 0.024,
+            "head_envelope_radius": 0.03,
+            "head_envelope_bound": 0.09995
+          },
+          "intendedInternalAttachments": [
+            [
+              "Drawbar_Bar",
+              "Drawbar_Eye_EndA"
+            ],
+            [
+              "Drawbar_Bar",
+              "Drawbar_Eye_EndB"
+            ]
+          ],
+          "validationStatus": "unqualified candidate; root validation required; collisions uncertified",
+          "offlineSolidUnion": true,
+          "exportedParts": [
+            "Drawbar_Body"
+          ]
+        },
+        "scope": "Finite hardware candidate; no native ride availability"
+      },
+      "geometry": {
+        "meshObjects": 1,
+        "trianglesEvaluated": 436,
+        "boundsBlender": {
+          "min": [
+            -0.029999999329447746,
+            -0.12999999523162842,
+            -0.012000000104308128
+          ],
+          "max": [
+            0.029999999329447746,
+            0.12999999523162842,
+            0.012000000104308128
+          ]
+        },
+        "materials": [
+          "metal"
+        ],
+        "anchorsBlender": {
+          "DrawbarRoot": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Joint_EndA": [
+            0.0,
+            -0.10000000149011612,
+            0.0
+          ],
+          "Joint_EndB": [
+            0.0,
+            0.10000000149011612,
+            0.0
+          ]
+        },
+        "issues": []
+      },
+      "blender": "4.3.2",
+      "sourceSha256": "c84071a396a32d051258b3e1de6a2feb2f039872231c2294da2590cadb262c6e",
+      "driverSha256": "0eb9d0c0c32d0e776fe3e903224805165844aa11a94b9b62b25e09c1a2ada3b6",
+      "textureSources": [
+        {
+          "file": "Metal049A_1K-PNG_Color.png",
+          "sourceSha256": "3c5be68c8a56534f120e88cff835a321ca51459c8f31482f984958c7fbfda8e6",
+          "sourceDimensions": [
+            1024,
+            1024
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "Metal049A_1K-PNG_Metalness.png",
+          "sourceSha256": "61c66550ad5636c9fb8bfb13fc5b2ff4b2ba7cb66831e8c68509124915be045e",
+          "sourceDimensions": [
+            1024,
+            1024
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "Metal049A_1K-PNG_NormalGL.png",
+          "sourceSha256": "5b80adcc8092618a127bb7dfa547e3a35d156efd027c9daa579ac26f9098a678",
+          "sourceDimensions": [
+            1024,
+            1024
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "Metal049A_1K-PNG_Roughness.png",
+          "sourceSha256": "a42d9eaba9bc232739c7cb86dee03805e66f50a065cecfbbfe906aaeb6b3ded2",
+          "sourceDimensions": [
+            1024,
+            1024
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        }
+      ],
+      "batchStatic": false,
+      "glb": {
+        "file": "wooden-drawbar.glb",
+        "sha256": "bd65312ab91197d08d66fd6258e31f31e46b6d529832a0d741fcb729e0fec671",
+        "bytes": 988980
+      },
+      "editableMaster": {
+        "file": "wooden-drawbar.blend",
+        "sha256": "ea9cc61ef2bc66466fe733d690311ae884ca2084964daae50c710a5224d48e4a",
+        "bytes": 2757150
+      },
+      "scope": "Candidate detailed asset laboratory; no original-metric or gameplay validation",
+      "verification": {
+        "finiteCandidateQualified": true,
+        "retainedPoseCount": 59,
+        "resultSha256": "44a67423ea16d317df1b1915afaaf492ff3d28654ad82d72525b591255f89cba",
+        "scope": "Exactly the frozen flat poses and finite exported hardware; not continuous/native/original/production/GPU or human acceptance."
+      }
+    }
+  }
+]
