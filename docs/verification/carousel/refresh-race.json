@@ -1,0 +1,107 @@
+{
+  "scope": "Actual old v9 Worker load then real New-park/control view ordering against committed baseline and repaired frontend.50ms polling suppressed only to hold this discriminating request order; default-profile SwiftShader, no representative GPU or human acceptance. Quiet autosave suppressed in this smoke only to preserve existing remote profile records; real storage controls are separately qualified.",
+  "routes": [
+    {
+      "label": "baseline",
+      "url": "http://127.0.0.1:8769/release-5343c3f/web-dist/?showcase=classic",
+      "expectedFailure": {
+        "error": "Fixed-body owner mismatch for ride 7",
+        "scenery": false,
+        "revision": "2513ccf5b9b0f71f23634c47887e15e3:0:386",
+        "cachedFixed": [],
+        "sessions": [
+          {
+            "ride": 7,
+            "body": 313
+          }
+        ]
+      }
+    },
+    {
+      "label": "repaired",
+      "url": "http://127.0.0.1:8769/app/web-dist/?showcase=classic",
+      "sceneFailure": null,
+      "result": {
+        "version": 10,
+        "content": 3,
+        "protocol": 3,
+        "carouselSessions": 1,
+        "carousel": {
+          "records": 1,
+          "realRiders": 0,
+          "disposed": false
+        },
+        "carouselAssets": {
+          "ready": true,
+          "error": null,
+          "disposed": false,
+          "geometries": 31,
+          "materials": 24,
+          "textures": 8,
+          "bitmaps": 8
+        },
+        "rides": [
+          {
+            "id": 0,
+            "name": "Copper Loop",
+            "family": "independent.circuit-coaster",
+            "status": "open"
+          },
+          {
+            "id": 4,
+            "name": "Juniper Sprint",
+            "family": "independent.circuit-coaster",
+            "status": "open"
+          },
+          {
+            "id": 5,
+            "name": "Highland Flyer",
+            "family": "independent.circuit-coaster",
+            "status": "open"
+          },
+          {
+            "id": 6,
+            "name": "Cedar Timber Run",
+            "family": "independent.wooden-circuit-coaster",
+            "status": "open"
+          },
+          {
+            "id": 7,
+            "name": "Golden Carousel",
+            "family": "independent.carousel",
+            "status": "open"
+          }
+        ],
+        "wooden": {
+          "activeCars": 2,
+          "activeLinks": 1
+        },
+        "assets": {
+          "ready": true,
+          "error": null,
+          "disposed": false,
+          "geometries": 33,
+          "materials": 51,
+          "textures": 24,
+          "bitmaps": 24
+        },
+        "glError": 0,
+        "triangles": 1263206,
+        "camera": {
+          "target": [
+            74,
+            4,
+            79.99999999999999
+          ],
+          "zoom": 0.98
+        },
+        "rulesSha256": "dcc50781abbc48beca72de791c46661be09f14365ad7dac91be4315360910a47"
+      },
+      "screenshot": "repaired.png",
+      "imageSha256": "61e8e6217bb417309a0adc9a6d754d35382e872c72034ae9c1f5a9e39f3a2f12"
+    }
+  ],
+  "exceptions": [],
+  "consoleErrors": [],
+  "passed": true
+}

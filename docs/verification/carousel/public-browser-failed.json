@@ -1,0 +1,8 @@
+{
+  "scope": "Actual public root and pinned Classic startup/New five-ride park/unit Carousel and paid renderer; default-profile SwiftShader, no representative GPU or human acceptance. Quiet autosave suppressed in this smoke only to preserve existing remote profile records; real storage controls are separately qualified.",
+  "routes": [],
+  "exceptions": [],
+  "consoleErrors": [],
+  "passed": false,
+  "failure": "Actual public New park or model loading failed: {'feedback': 'Fixed-body owner mismatch for ride 7', 'wood': {'ready': True, 'error': None, 'disposed': False, 'geometries': 33, 'materials': 51, 'textures': 24, 'bitmaps': 24}}"
+}
