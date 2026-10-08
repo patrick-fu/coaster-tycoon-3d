@@ -1,0 +1,46 @@
+{
+  "glbSha256": "0336a6e7dc4aaa54136193d47187d67d2710ba53c4ccca3f93cf81e9dc693549",
+  "bytes": 5411656,
+  "meshObjects": 8,
+  "usedMaterials": 6,
+  "anchors": {
+    "Seat_00": [
+      0,
+      0.6000000238418579,
+      1.0499999523162842
+    ],
+    "Seat_01": [
+      0,
+      0.6000000238418579,
+      0.3499999940395355
+    ],
+    "Seat_02": [
+      0,
+      0.6000000238418579,
+      -0.3499999940395355
+    ],
+    "Seat_03": [
+      0,
+      0.6000000238418579,
+      -1.0499999523162842
+    ]
+  },
+  "cutwood": {
+    "doubleSided": true,
+    "name": "cutwood_baked",
+    "normalTexture": {
+      "index": 3
+    },
+    "pbrMetallicRoughness": {
+      "baseColorTexture": {
+        "index": 4
+      },
+      "metallicFactor": 0,
+      "metallicRoughnessTexture": {
+        "index": 5
+      }
+    }
+  },
+  "embeddedPngImages": 9,
+  "scope": "Actual GLB structure, unit root/ordered hip anchors, UV attributes, six-material budget and embedded endgrain color/roughness/normal bindings. No geometry contact or runtime qualification."
+}

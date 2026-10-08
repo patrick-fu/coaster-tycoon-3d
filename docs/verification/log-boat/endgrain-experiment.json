@@ -1,0 +1,101 @@
+{
+  "wrapperSha256": "a90161dbcc6f4c4ee7b1704a27c9920063ce63843b9d07f799072d7e127639be",
+  "shaderSha256": "8008f33fcdbe624d69d6423daaad0a394bb71a090559408791ae9e7b64c86d25",
+  "validatorSha256": "5ccfd40e8275f92c60431bfc308ae6db5d0bf46c4291af550262075431c587ac",
+  "baselineMasterSha256": "59f87c24cb389e719a9b4cbdd9a1219ee6fbf360ee6f373f4a2c4bdab08c1c9a",
+  "boatSourceSha256": "f70bd1816e57c2f68cc42d962a30788d9aa44225f0ef0bd5b96d3f40f7d06927",
+  "blender": "4.3.2",
+  "textures": [
+    {
+      "file": "Endgrain_512_Color.png",
+      "sha256": "86ffff7b338e392eba9b219e26dc45214dae3ec274dcc303e2b739f1a5728c64",
+      "rangesLinear": [
+        [
+          0.529411792755127,
+          0.7568628191947937
+        ],
+        [
+          0.4117647409439087,
+          0.6470588445663452
+        ],
+        [
+          0.29411765933036804,
+          0.49803924560546875
+        ]
+      ]
+    },
+    {
+      "file": "Endgrain_512_Roughness.png",
+      "sha256": "6a5ef272a1928170914fba88b78496b98f28947d167ed8eea76962523b703cec",
+      "rangesLinear": [
+        [
+          0.760784387588501,
+          0.760784387588501
+        ],
+        [
+          0.760784387588501,
+          0.760784387588501
+        ],
+        [
+          0.760784387588501,
+          0.760784387588501
+        ]
+      ]
+    },
+    {
+      "file": "Endgrain_512_NormalGL.png",
+      "sha256": "e0083c919c6059c4da529e5413fc1daf7903a3548074de7fb86b53cffc049e9c",
+      "rangesLinear": [
+        [
+          0.4235294461250305,
+          0.5764706134796143
+        ],
+        [
+          0.4235294461250305,
+          0.5764706134796143
+        ],
+        [
+          0.9921569228172302,
+          1.0
+        ]
+      ]
+    }
+  ],
+  "comparison": {
+    "geometryEqual": true,
+    "geometryFingerprints": {
+      "BoatRoot": "14973ebf0d3d3381f9a5a75abb2d35bdaf4f74bd3397cd2f2aa01b13be6a251d",
+      "Cockpit_TimberInterior": "08c34d3d4be53b4825fc939ae72fe6d6164534922890743cf25d0b86e8ca9f12",
+      "Hardware_BrassFasteners": "b205b78326a458ccaeb83a7da880ec268e52414fdadb3f941d3ed62bfa824078",
+      "Hardware_DarkFittings": "9bad3b1ced8ac7321c6ee0267fbf1dcbab90ac50f37a9619204b9691ccca190d",
+      "Hull_CarvedRim": "71aa8819bff1efe4abb1b617f6b68a2bdf797e2933302c38df0cca00498e9fc9",
+      "Hull_CutEnds": "1cd0e8cc52cf555ae8453f891a09d37dcd3a0108de0e78c78d967a92cda92ece",
+      "Hull_OuterBark": "9add7efefb3662380bed63753e72add9a3bbd7c612e3e8f0ab2cb6b0d3115f38",
+      "Seat_00": "2f92a74388a672eb1ec1cc3c6c5b50355055879698cf71dad0ef244fea8cfbc2",
+      "Seat_01": "6316e778ca33e519162ab40b3df2a59a1ca38c55bc8a4c997e812277fc8ff48c",
+      "Seat_02": "595e568f34303b4d7f971519412c916ccd356696b35738c587479011b96138c1",
+      "Seat_03": "7be11d98d2829a0b2b75096f81f0758e40fbe2074c806c082e5f496e38b5b890",
+      "Seat_Benches_Timber": "dc292e4add58473265b98cea2f221c4607227ccfec5cb5c3c149a5257d13be20",
+      "Seat_Cushions_Upholstery": "2dcbbaa874e4321aac2afed6a9f606469bdd40b9599ca4a1faf58312f28e70f9"
+    },
+    "changedMaterialBindings": {
+      "Hull_CutEnds": {
+        "before": [
+          "boards"
+        ],
+        "after": [
+          "cutwood_baked"
+        ]
+      },
+      "Hull_CarvedRim": {
+        "before": [
+          "boards"
+        ],
+        "after": [
+          "cutwood_baked"
+        ]
+      }
+    }
+  },
+  "scope": "Actual baked maps, unchanged v3 geometry/UV/anchors, native export checks and two rendered views. Rider/channel/operation/browser/original/GPU/human acceptance remain open."
+}
