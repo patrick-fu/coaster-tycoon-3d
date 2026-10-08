@@ -1,0 +1,174 @@
+{
+  "assets": [
+    {
+      "id": "PavingStones150",
+      "role": "cobblestone path",
+      "provider": "ambientCG",
+      "page": "https://ambientcg.com/a/PavingStones150",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://docs.ambientcg.com/license/",
+      "useStatus": "acquired candidate; not approved art or shipped resource",
+      "metadata": {
+        "path": "materials/PavingStones150-metadata.json",
+        "url": "https://ambientcg.com/api/v2/full_json?id=PavingStones150&include=downloadData%2CpreviewData%2CdimensionsData",
+        "bytes": 16132,
+        "sha256": "0695c450ef06585d13ed01c2f55b0b85789a684ceccd731110aeae867b4076f5"
+      },
+      "bundle": {
+        "path": "materials/PavingStones150_1K-PNG.zip",
+        "url": "https://ambientcg.com/get?file=PavingStones150_1K-PNG.zip",
+        "bytes": 10384047,
+        "sha256": "9c78ed11bce2b25c320375143f3e00ec8440834313145039ae2887fb9b000446"
+      },
+      "preview": {
+        "path": "materials/PavingStones150-preview.jpg",
+        "url": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/512-JPG-FFFFFF/PavingStones150.jpg",
+        "bytes": 122357,
+        "sha256": "da37996a46657de5f721c4f5e469871b9963202c0247ba2f27ab62129d4f083b"
+      },
+      "members": [
+        {
+          "name": "PavingStones150_1K-PNG.usdc",
+          "bytes": 3214,
+          "sha256": "e1cbf7611659082dff78216b6c3757f2f830f45060f4af895bf996f35b099ba4"
+        },
+        {
+          "name": "PavingStones150_1K-PNG_AmbientOcclusion.png",
+          "bytes": 342472,
+          "sha256": "f9eb54840d3ccb0e13193d25627957d630a8e753573abd86336b1ca42334879f"
+        },
+        {
+          "name": "PavingStones150_1K-PNG_Color.png",
+          "bytes": 1047783,
+          "sha256": "6edfd5a37c97368fcc52dafbce45ec2af5e8566bd640e9674b1a6fedfc32f79c"
+        },
+        {
+          "name": "PavingStones150_1K-PNG_Displacement.png",
+          "bytes": 874501,
+          "sha256": "86a4da1cb4b6b8fb27cdd8478abf1f6591ee7742431971210288cc3cfa26b055"
+        },
+        {
+          "name": "PavingStones150_1K-PNG_NormalDX.png",
+          "bytes": 3103927,
+          "sha256": "ba5964e707fc173c6144d6bc9ce79dc148134ad25b16dec1cc94c18ca91ef5f5"
+        },
+        {
+          "name": "PavingStones150_1K-PNG_NormalGL.png",
+          "bytes": 3104151,
+          "sha256": "d13f9acb139cfed7c215a12e7c81576fd7fb2bb15c69a1afe500990e1a12c096"
+        },
+        {
+          "name": "PavingStones150_1K-PNG_Roughness.png",
+          "bytes": 332816,
+          "sha256": "71c6dc7d19e24a9c342e8f28e3757aa591b8b8be0d9c00c517674090cc867efb"
+        },
+        {
+          "name": "PavingStones150_1K-PNG.blend",
+          "bytes": 1112340,
+          "sha256": "9eab35e681773a33fc1e6c80154ff57f113a455309dd5125fc3a3fe82a937946"
+        },
+        {
+          "name": "PavingStones150_1K-PNG.mtlx",
+          "bytes": 2362,
+          "sha256": "4ce059531ab78050a5bb58205f9f8390e1b654f6acb591656e67822df394ef24"
+        },
+        {
+          "name": "PavingStones150_1K-PNG.tres",
+          "bytes": 1050,
+          "sha256": "f5d2dc3e5fde91207ae3921d44600cc900a22a9698f09bda3c07a7f7a8707507"
+        },
+        {
+          "name": "PavingStones150.png",
+          "bytes": 457073,
+          "sha256": "de1ff6a6a4e230aea45d8b8b27fa0e36275e0788a738f8d6b4511ffb291753d4"
+        }
+      ]
+    },
+    {
+      "id": "Grass001",
+      "role": "lawn",
+      "provider": "ambientCG",
+      "page": "https://ambientcg.com/a/Grass001",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://docs.ambientcg.com/license/",
+      "useStatus": "acquired candidate; not approved art or shipped resource",
+      "metadata": {
+        "path": "materials/Grass001-metadata.json",
+        "url": "https://ambientcg.com/api/v2/full_json?id=Grass001&include=downloadData%2CpreviewData%2CdimensionsData",
+        "bytes": 13102,
+        "sha256": "10c4ef847713704fbf16f10951f20642f96bf1574e8ba0c0948cd0946bf10aad"
+      },
+      "bundle": {
+        "path": "materials/Grass001_1K-PNG.zip",
+        "url": "https://ambientcg.com/get?file=Grass001_1K-PNG.zip",
+        "bytes": 19229149,
+        "sha256": "43e6807e6fab786978a967a74b0a3abae9b43fadcce0f269e2e8045c758d5a3e"
+      },
+      "preview": {
+        "path": "materials/Grass001-preview.jpg",
+        "url": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/512-JPG-FFFFFF/Grass001.jpg",
+        "bytes": 162795,
+        "sha256": "9886dedc2917a75ad384a26994b167cb3a2a1b1c4227ca35546ceef923ce9d0a"
+      },
+      "members": [
+        {
+          "name": "Grass001_1K-PNG.usdc",
+          "bytes": 2969,
+          "sha256": "980a3f3407758e8d8d57e7f00225ec93459dcdfeffe796d2ebd504dcdbaf5dcc"
+        },
+        {
+          "name": "Grass001_1K-PNG_AmbientOcclusion.png",
+          "bytes": 878336,
+          "sha256": "cd295bfc5c4e87ed561e0084ecf88ec1d811e01cdfc721ff01cd9f05a596bd6e"
+        },
+        {
+          "name": "Grass001_1K-PNG_Color.png",
+          "bytes": 1937763,
+          "sha256": "c79fda29c8a1249157e5e90b033cde2b126905ef2961de3edca1255f322e64ae"
+        },
+        {
+          "name": "Grass001_1K-PNG_Displacement.png",
+          "bytes": 2013981,
+          "sha256": "b6de07741f59f3ede0ed76286b59d1ef849186438829307c29157492b57d460f"
+        },
+        {
+          "name": "Grass001_1K-PNG_NormalDX.png",
+          "bytes": 5985465,
+          "sha256": "c52859929ff1d1d7b775ef28b03ec9c7d8993299980f6ea507bf039675cc02c5"
+        },
+        {
+          "name": "Grass001_1K-PNG_NormalGL.png",
+          "bytes": 5984854,
+          "sha256": "671d017230245d39e16b9a6bdf0b77b4f98f9158850e03745eff0cd7f12a7f5d"
+        },
+        {
+          "name": "Grass001_1K-PNG_Roughness.png",
+          "bytes": 797863,
+          "sha256": "badbb391fa314817d71d43f591ddb5c5caecb8f40dc3394bb49b276d30a3f582"
+        },
+        {
+          "name": "Grass001_1K-PNG.blend",
+          "bytes": 1109012,
+          "sha256": "6fa47592230622937291ba18bd76cf6120ee2f11b5bed48449dbde7ef83d20f0"
+        },
+        {
+          "name": "Grass001_1K-PNG.mtlx",
+          "bytes": 2257,
+          "sha256": "53cf48ceb18f40f786dfb4097ef38f4d3b918ea0b8d5505abaf67e6ea6a40f91"
+        },
+        {
+          "name": "Grass001_1K-PNG.tres",
+          "bytes": 1015,
+          "sha256": "e4ab41bc39572e6098e87af707601ff53e3697a00c317cce0090555b2e1376ca"
+        },
+        {
+          "name": "Grass001.png",
+          "bytes": 513474,
+          "sha256": "e7a25afc56822ebfbc7f860ed5d22338898d3e7e46f98ad39ff47261c1018ef8"
+        }
+      ]
+    }
+  ],
+  "sourceRoot": "/Volumes/WD/code/workspaces/coaster-rct2-program/evidence",
+  "scope": "Actual acquired CC0 inputs; derived runtime surface preparation pending"
+}

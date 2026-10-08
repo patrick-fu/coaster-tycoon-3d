@@ -1,0 +1,142 @@
+{
+  "buildHost": "Grok Bot; Node20.19.2; TypeScript7.0.2; Chrome155 default Linux profile; softwareWebGL",
+  "sourceBase": "b12cbe4d7cc5a3ebd28a67b7c3cb9f790cecca7a",
+  "buildExit": 0,
+  "tunedBuildExit": 0,
+  "tests": {
+    "exit": 0,
+    "passed": 121,
+    "failed": 0,
+    "scope": "Simulation and protocol tests; production TS unchanged by the subsequent two material-colour changes"
+  },
+  "prepareExit": 0,
+  "finalCapture": {
+    "exit": 0,
+    "checks": 8,
+    "captures": 5,
+    "exceptions": 0,
+    "sha256": "fe4aee00cde9fc94471763cd2b411b444ec94b431db23851d1a461c04bc2832e"
+  },
+  "files": [
+    {
+      "path": "capture.stdout",
+      "bytes": 239,
+      "sha256": "efeb6a835aaa1b582c4141e6666af3db8ce87c49f782da73aab74f316bec3e75"
+    },
+    {
+      "path": "capture.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "capture.exit",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "build.stdout",
+      "bytes": 141,
+      "sha256": "120b133d25a41fc01f174dbb1129e91fbbc95e7d931def7b534c319a71105eb4"
+    },
+    {
+      "path": "build.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "build.exit",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "tuned-build.stdout",
+      "bytes": 141,
+      "sha256": "120b133d25a41fc01f174dbb1129e91fbbc95e7d931def7b534c319a71105eb4"
+    },
+    {
+      "path": "tuned-build.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tuned-build.exit",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "tests.stdout",
+      "bytes": 28637,
+      "sha256": "f27007f31c76e6a33be88a57eb0994394f951ac93ed3c179b7a033880c6167ab"
+    },
+    {
+      "path": "tests.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tests.exit",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "prepare.stdout",
+      "bytes": 117,
+      "sha256": "e02e9b0bad89f91d541befbe579d8fcdf0747400156ca5f3a17b2cb0393f93ea"
+    },
+    {
+      "path": "prepare.stderr",
+      "bytes": 703,
+      "sha256": "5144162da33569a39fd07af97604bbc75bbd43abf11867b43c8620dfb19667a1"
+    },
+    {
+      "path": "prepare.exit",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "regression.stdout",
+      "bytes": 4990,
+      "sha256": "e67f8b37116d123f9960b6bde89f7caec5734f1ae7bde792fc6a931ee7188a8e"
+    },
+    {
+      "path": "regression.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "regression.exit",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "final-build.stdout",
+      "bytes": 141,
+      "sha256": "120b133d25a41fc01f174dbb1129e91fbbc95e7d931def7b534c319a71105eb4"
+    },
+    {
+      "path": "final-build.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "final-build.exit",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    }
+  ],
+  "limitations": [
+    "SoftwareWebGL does not establish representative integrated-GPU performance.",
+    "Human visual/original/full-content acceptance remain open.",
+    "First two capture attempts failed because rawCDP response extraction returnedemptybytes; finalproofclonesactualloaderresponses.",
+    "Initial classicregression passed27checks and actualIndexedDBrestore, thenfailed itsfreshshowcase116assumption on theexisting saved120scenery showcase; finalverification explicitly createsfreshshowcase."
+  ],
+  "regression": {
+    "exit": 0,
+    "classicChecks": 30,
+    "libraryChecks": 15,
+    "exceptions": 0,
+    "classicSha256": "381484f72f121685378c0a0278b20317823fda7259502d4e1a84b1c8700525c6",
+    "librarySha256": "f73a1d63f21407b022b193eff594fdaabe560f9f0e445e4bbefb97ea395b0c20"
+  },
+  "finalBuildExit": 0
+}

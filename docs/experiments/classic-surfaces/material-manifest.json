@@ -1,0 +1,142 @@
+{
+  "license": "CC0-1.0",
+  "provider": "ambientCG",
+  "pillowVersion": "12.3.0",
+  "preparationSourceSha256": "10fb6c295a3450fead2c5d32df36dbd26f0ca7c5e96ca945c2647610c84a5135",
+  "files": [
+    {
+      "path": "paving-color.png",
+      "bytes": 249959,
+      "sha256": "b34277b63dc34dc1c90639329843c75137532fc9c3066a4f1a6edcb3bf92802b",
+      "assetId": "PavingStones150",
+      "purpose": "color",
+      "sourceBundleSha256": "9c78ed11bce2b25c320375143f3e00ec8440834313145039ae2887fb9b000446",
+      "sourceMember": "PavingStones150_1K-PNG_Color.png",
+      "sourceSha256": "6edfd5a37c97368fcc52dafbce45ec2af5e8566bd640e9674b1a6fedfc32f79c",
+      "sourceSize": [
+        1024,
+        512
+      ],
+      "sourcePngBits": 8,
+      "size": [
+        512,
+        256
+      ],
+      "mode": "RGB",
+      "operation": "sRGB decode; linear-light Lanczos downsample; sRGB encode to RGB8",
+      "colorSpace": "sRGB"
+    },
+    {
+      "path": "paving-normal.png",
+      "bytes": 256304,
+      "sha256": "0b3097df90811489d17d1ae9c7fa6437cf26c9c65370bd6785b607e15ad3fafb",
+      "assetId": "PavingStones150",
+      "purpose": "normal",
+      "sourceBundleSha256": "9c78ed11bce2b25c320375143f3e00ec8440834313145039ae2887fb9b000446",
+      "sourceMember": "PavingStones150_1K-PNG_NormalGL.png",
+      "sourceSha256": "d13f9acb139cfed7c215a12e7c81576fd7fb2bb15c69a1afe500990e1a12c096",
+      "sourceSize": [
+        1024,
+        512
+      ],
+      "sourcePngBits": 16,
+      "size": [
+        512,
+        256
+      ],
+      "mode": "RGB",
+      "operation": "Pillow 16-bit RGB decode to RGB8; BOX downsample; tangent-vector renormalization; no Y flip",
+      "colorSpace": "linear data"
+    },
+    {
+      "path": "paving-roughness.png",
+      "bytes": 83498,
+      "sha256": "7b0958ee8f21e7844a0f9d441bf4e1e0e0c288eec59a24da479235c255fdc654",
+      "assetId": "PavingStones150",
+      "purpose": "roughness",
+      "sourceBundleSha256": "9c78ed11bce2b25c320375143f3e00ec8440834313145039ae2887fb9b000446",
+      "sourceMember": "PavingStones150_1K-PNG_Roughness.png",
+      "sourceSha256": "71c6dc7d19e24a9c342e8f28e3757aa591b8b8be0d9c00c517674090cc867efb",
+      "sourceSize": [
+        1024,
+        512
+      ],
+      "sourcePngBits": 8,
+      "size": [
+        512,
+        256
+      ],
+      "mode": "L",
+      "operation": "linear 8-bit scalar BOX downsample",
+      "colorSpace": "linear data"
+    },
+    {
+      "path": "grass-color.png",
+      "bytes": 509645,
+      "sha256": "fdfda01eb989b5eff677408c822f37097394711e569fe4b28f02787aa723af92",
+      "assetId": "Grass001",
+      "purpose": "color",
+      "sourceBundleSha256": "43e6807e6fab786978a967a74b0a3abae9b43fadcce0f269e2e8045c758d5a3e",
+      "sourceMember": "Grass001_1K-PNG_Color.png",
+      "sourceSha256": "c79fda29c8a1249157e5e90b033cde2b126905ef2961de3edca1255f322e64ae",
+      "sourceSize": [
+        1024,
+        1024
+      ],
+      "sourcePngBits": 8,
+      "size": [
+        512,
+        512
+      ],
+      "mode": "RGB",
+      "operation": "sRGB decode; linear-light Lanczos downsample; sRGB encode to RGB8",
+      "colorSpace": "sRGB"
+    },
+    {
+      "path": "grass-normal.png",
+      "bytes": 636185,
+      "sha256": "9c72876ec82f95e6ca3b50d14199055bba17248a358520b9948da0a497ff22b0",
+      "assetId": "Grass001",
+      "purpose": "normal",
+      "sourceBundleSha256": "43e6807e6fab786978a967a74b0a3abae9b43fadcce0f269e2e8045c758d5a3e",
+      "sourceMember": "Grass001_1K-PNG_NormalGL.png",
+      "sourceSha256": "671d017230245d39e16b9a6bdf0b77b4f98f9158850e03745eff0cd7f12a7f5d",
+      "sourceSize": [
+        1024,
+        1024
+      ],
+      "sourcePngBits": 16,
+      "size": [
+        512,
+        512
+      ],
+      "mode": "RGB",
+      "operation": "Pillow 16-bit RGB decode to RGB8; BOX downsample; tangent-vector renormalization; no Y flip",
+      "colorSpace": "linear data"
+    },
+    {
+      "path": "grass-roughness.png",
+      "bytes": 194627,
+      "sha256": "4cd9ae5b58a46cd172816974664f19b1aaf540c0ef1cfed8719bf59b702ec4e3",
+      "assetId": "Grass001",
+      "purpose": "roughness",
+      "sourceBundleSha256": "43e6807e6fab786978a967a74b0a3abae9b43fadcce0f269e2e8045c758d5a3e",
+      "sourceMember": "Grass001_1K-PNG_Roughness.png",
+      "sourceSha256": "badbb391fa314817d71d43f591ddb5c5caecb8f40dc3394bb49b276d30a3f582",
+      "sourceSize": [
+        1024,
+        1024
+      ],
+      "sourcePngBits": 8,
+      "size": [
+        512,
+        512
+      ],
+      "mode": "L",
+      "operation": "linear 8-bit scalar BOX downsample",
+      "colorSpace": "linear data"
+    }
+  ],
+  "totalBytes": 1930218,
+  "scope": "Derived image resources only; no geometry, original or human visual acceptance"
+}

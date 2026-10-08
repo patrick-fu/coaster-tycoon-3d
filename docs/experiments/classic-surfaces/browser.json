@@ -1,0 +1,520 @@
+{
+  "browserVersion": "Chrome/155.0.8059.39",
+  "scope": "Software-WebGL source comparison and resource lifecycle; no representative GPU FPS or human visual acceptance",
+  "captures": [
+    {
+      "file": "baseline-overview.png",
+      "bytes": 1777768,
+      "sha256": "1925767854cf4391de5561520f3daf267dadd6a0dfbe28c5b3e9e8cff4223f97"
+    },
+    {
+      "file": "baseline-close.png",
+      "bytes": 2328304,
+      "sha256": "44555c05d67d149bf168c1eedf64ec4a95ca2b82af1dc8f28c1a220e787f0b12"
+    },
+    {
+      "file": "candidate-overview.png",
+      "bytes": 1750004,
+      "sha256": "b52fb19c6fdc22e21a18c3238450430e3c1e5873e8e4b8d336f49fb9f086b8f0"
+    },
+    {
+      "file": "candidate-close.png",
+      "bytes": 2530227,
+      "sha256": "f0045c6a9646eee1013637da10dd96d06befc65a8af6f46ea7a90ee47ab80ed9"
+    },
+    {
+      "file": "candidate-narrow.png",
+      "bytes": 1112831,
+      "sha256": "e7a591a7c1242e827629fd4f390d5288023b735cfa34f05af0fca9dc4471fbc1"
+    }
+  ],
+  "checks": [
+    "Exact frozen version8 save plus full static vertex/index/instance colour/matrix/selection correspondence with published baseline",
+    "All six actual maps bind with sRGB albedo, linear normal/roughness and integer tiled repeats",
+    "All three live mesh material roles use the actual maps; every rendered shader compiles and links",
+    "Four actual static rebuilds preserve the paused save and warmed GPU/owned resource counts",
+    "Actual loader fetch Response.clone bytes match all six SHA-pinned derived PNGs",
+    "Injected HTTP404 and invalid-PNG responses leave no partially owned textures or bitmaps",
+    "Immediate fetch cancellation and artificially delayed real bitmap completions release every owned resource",
+    "Real ParkScene destruction disposes all six bound textures and closes all six actual bitmaps exactly once"
+  ],
+  "baseline": {
+    "sha256": "ddab6696c576c57dc4f87df09d9a018ee7896aaf65466cb69d404583f4a958dd",
+    "meshes": 333,
+    "geometries": 207,
+    "render": {
+      "memory": {
+        "geometries": 220,
+        "textures": 43
+      },
+      "calls": 686,
+      "triangles": 953800,
+      "programs": 18
+    }
+  },
+  "candidate": {
+    "sha256": "ddab6696c576c57dc4f87df09d9a018ee7896aaf65466cb69d404583f4a958dd",
+    "meshes": 333,
+    "geometries": 207,
+    "render": {
+      "memory": {
+        "geometries": 219,
+        "textures": 46
+      },
+      "calls": 686,
+      "triangles": 953800,
+      "programs": 19,
+      "assets": {
+        "ready": true,
+        "error": null,
+        "textures": 6,
+        "bitmaps": 6,
+        "disposed": false
+      },
+      "maps": [
+        {
+          "colour": {
+            "isColor": true,
+            "r": 1.25,
+            "g": 1.35,
+            "b": 1.15
+          },
+          "metalness": 0,
+          "normalScale": [
+            0.35,
+            0.35
+          ],
+          "maps": [
+            {
+              "name": "grass-color",
+              "colourSpace": "srgb",
+              "repeat": [
+                3,
+                3
+              ],
+              "flipY": false,
+              "width": 512,
+              "height": 512
+            },
+            {
+              "name": "grass-normal",
+              "colourSpace": "",
+              "repeat": [
+                3,
+                3
+              ],
+              "flipY": false,
+              "width": 512,
+              "height": 512
+            },
+            {
+              "name": "grass-roughness",
+              "colourSpace": "",
+              "repeat": [
+                3,
+                3
+              ],
+              "flipY": false,
+              "width": 512,
+              "height": 512
+            }
+          ]
+        },
+        {
+          "colour": "#dfd4c4",
+          "metalness": 0,
+          "normalScale": [
+            0.45,
+            0.45
+          ],
+          "maps": [
+            {
+              "name": "paving-color",
+              "colourSpace": "srgb",
+              "repeat": [
+                4,
+                4
+              ],
+              "flipY": false,
+              "width": 512,
+              "height": 256
+            },
+            {
+              "name": "paving-normal",
+              "colourSpace": "",
+              "repeat": [
+                4,
+                4
+              ],
+              "flipY": false,
+              "width": 512,
+              "height": 256
+            },
+            {
+              "name": "paving-roughness",
+              "colourSpace": "",
+              "repeat": [
+                4,
+                4
+              ],
+              "flipY": false,
+              "width": 512,
+              "height": 256
+            }
+          ]
+        },
+        {
+          "colour": "#7e93a6",
+          "metalness": 0,
+          "normalScale": [
+            0.45,
+            0.45
+          ],
+          "maps": [
+            {
+              "name": "paving-color",
+              "colourSpace": "srgb",
+              "repeat": [
+                4,
+                4
+              ],
+              "flipY": false,
+              "width": 512,
+              "height": 256
+            },
+            {
+              "name": "paving-normal",
+              "colourSpace": "",
+              "repeat": [
+                4,
+                4
+              ],
+              "flipY": false,
+              "width": 512,
+              "height": 256
+            },
+            {
+              "name": "paving-roughness",
+              "colourSpace": "",
+              "repeat": [
+                4,
+                4
+              ],
+              "flipY": false,
+              "width": 512,
+              "height": 256
+            }
+          ]
+        }
+      ],
+      "glError": 0
+    },
+    "liveBindings": {
+      "bindings": [
+        {
+          "role": "ground",
+          "users": 2304,
+          "bound": true,
+          "colour": [
+            1.25,
+            1.35,
+            1.15
+          ]
+        },
+        {
+          "role": "path",
+          "users": 39,
+          "bound": true,
+          "colour": [
+            0.7379104087672317,
+            0.6583748172725346,
+            0.55201140150344
+          ]
+        },
+        {
+          "role": "queue",
+          "users": 14,
+          "bound": true,
+          "colour": [
+            0.20863687013464577,
+            0.2917706498067337,
+            0.3813260114221238
+          ]
+        }
+      ],
+      "shaders": [
+        {
+          "linked": true,
+          "compiled": [
+            true,
+            true
+          ]
+        },
+        {
+          "linked": true,
+          "compiled": [
+            true,
+            true
+          ]
+        },
+        {
+          "linked": true,
+          "compiled": [
+            true,
+            true
+          ]
+        },
+        {
+          "linked": true,
+          "compiled": [
+            true,
+            true
+          ]
+        },
+        {
+          "linked": true,
+          "compiled": [
+            true,
+            true
+          ]
+        },
+        {
+          "linked": true,
+          "compiled": [
+            true,
+            true
+          ]
+        },
+        {
+          "linked": true,
+          "compiled": [
+            true,
+            true
+          ]
+        },
+        {
+          "linked": true,
+          "compiled": [
+            true,
+            true
+          ]
+        },
+        {
+          "linked": true,
+          "compiled": [
+            true,
+            true
+          ]
+        },
+        {
+          "linked": true,
+          "compiled": [
+            true,
+            true
+          ]
+        },
+        {
+          "linked": true,
+          "compiled": [
+            true,
+            true
+          ]
+        },
+        {
+          "linked": true,
+          "compiled": [
+            true,
+            true
+          ]
+        },
+        {
+          "linked": true,
+          "compiled": [
+            true,
+            true
+          ]
+        },
+        {
+          "linked": true,
+          "compiled": [
+            true,
+            true
+          ]
+        },
+        {
+          "linked": true,
+          "compiled": [
+            true,
+            true
+          ]
+        },
+        {
+          "linked": true,
+          "compiled": [
+            true,
+            true
+          ]
+        },
+        {
+          "linked": true,
+          "compiled": [
+            true,
+            true
+          ]
+        },
+        {
+          "linked": true,
+          "compiled": [
+            true,
+            true
+          ]
+        },
+        {
+          "linked": true,
+          "compiled": [
+            true,
+            true
+          ]
+        }
+      ]
+    }
+  },
+  "rebuild": [
+    {
+      "memory": {
+        "geometries": 222,
+        "textures": 51
+      },
+      "assets": {
+        "ready": true,
+        "error": null,
+        "textures": 6,
+        "bitmaps": 6,
+        "disposed": false
+      }
+    },
+    {
+      "memory": {
+        "geometries": 222,
+        "textures": 51
+      },
+      "assets": {
+        "ready": true,
+        "error": null,
+        "textures": 6,
+        "bitmaps": 6,
+        "disposed": false
+      }
+    },
+    {
+      "memory": {
+        "geometries": 222,
+        "textures": 51
+      },
+      "assets": {
+        "ready": true,
+        "error": null,
+        "textures": 6,
+        "bitmaps": 6,
+        "disposed": false
+      }
+    },
+    {
+      "memory": {
+        "geometries": 222,
+        "textures": 51
+      },
+      "assets": {
+        "ready": true,
+        "error": null,
+        "textures": 6,
+        "bitmaps": 6,
+        "disposed": false
+      }
+    }
+  ],
+  "loadedNetworkMaps": [
+    {
+      "url": "http://127.0.0.1:4175/textures/surfaces/paving-color.png",
+      "status": 200,
+      "bytes": 249959,
+      "sha256": "b34277b63dc34dc1c90639329843c75137532fc9c3066a4f1a6edcb3bf92802b"
+    },
+    {
+      "url": "http://127.0.0.1:4175/textures/surfaces/paving-normal.png",
+      "status": 200,
+      "bytes": 256304,
+      "sha256": "0b3097df90811489d17d1ae9c7fa6437cf26c9c65370bd6785b607e15ad3fafb"
+    },
+    {
+      "url": "http://127.0.0.1:4175/textures/surfaces/paving-roughness.png",
+      "status": 200,
+      "bytes": 83498,
+      "sha256": "7b0958ee8f21e7844a0f9d441bf4e1e0e0c288eec59a24da479235c255fdc654"
+    },
+    {
+      "url": "http://127.0.0.1:4175/textures/surfaces/grass-color.png",
+      "status": 200,
+      "bytes": 509645,
+      "sha256": "fdfda01eb989b5eff677408c822f37097394711e569fe4b28f02787aa723af92"
+    },
+    {
+      "url": "http://127.0.0.1:4175/textures/surfaces/grass-normal.png",
+      "status": 200,
+      "bytes": 636185,
+      "sha256": "9c72876ec82f95e6ca3b50d14199055bba17248a358520b9948da0a497ff22b0"
+    },
+    {
+      "url": "http://127.0.0.1:4175/textures/surfaces/grass-roughness.png",
+      "status": 200,
+      "bytes": 194627,
+      "sha256": "4cd9ae5b58a46cd172816974664f19b1aaf540c0ef1cfed8719bf59b702ec4e3"
+    }
+  ],
+  "httpFailure": {
+    "ready": false,
+    "error": "grass normal: HTTP 404",
+    "textures": 0,
+    "bitmaps": 0,
+    "disposed": false
+  },
+  "decodeFailure": {
+    "ready": false,
+    "error": "The source image could not be decoded.",
+    "textures": 0,
+    "bitmaps": 0,
+    "disposed": false
+  },
+  "fetchCancellation": {
+    "ready": false,
+    "error": null,
+    "textures": 0,
+    "bitmaps": 0,
+    "disposed": true
+  },
+  "decodeCancellation": {
+    "status": {
+      "ready": false,
+      "error": null,
+      "textures": 0,
+      "bitmaps": 0,
+      "disposed": true
+    },
+    "decoded": 6,
+    "allClosed": true
+  },
+  "sceneDisposal": {
+    "status": {
+      "ready": false,
+      "error": null,
+      "textures": 0,
+      "bitmaps": 0,
+      "disposed": true
+    },
+    "disposedTextures": 6,
+    "imagesCleared": true,
+    "bitmapsClosed": true
+  },
+  "exceptions": [],
+  "passed": true
+}

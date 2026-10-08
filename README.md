@@ -62,6 +62,10 @@ original-scale or frame-rate goals. The concrete
 checks and human review required before completion.
 
 Current work: [Plan the complete RCT2 catalogue and detailed 3D production programme](https://github.com/patrick-fu/coaster-tycoon-3d/issues/27).
+The Classic park now uses [acquired CC0 lawn and paving maps](docs/experiments/classic-surfaces/README.md)
+with owned loading/cancellation/disposal and unchanged native geometry. The
+[finite wooden-car inspector](https://patrick-fu.github.io/coaster-tycoon-3d/previews/wooden-hitch/)
+shows the qualified detailed car/link; it does not activate a wooden ride.
 The [programme](docs/planning/rct2-program.md) covers all original ride categories,
 physics/operation, products/services, guests/staff, admission/finance, research,
 scenarios and authored presets. Its [source-linked inventory](docs/research/rct2-program/README.md)

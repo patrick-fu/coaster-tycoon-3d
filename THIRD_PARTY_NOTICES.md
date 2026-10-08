@@ -58,3 +58,16 @@ and apply material tint/normal strength; original provider files remain unchange
 in the retained external authoring corpus. Source bundle/member SHA-256 values
 and export dimensions are recorded with the tree asset evidence.
 No original RCT2 sprites or textures are included.
+
+## Lawn and paving materials
+
+The Classic park uses ambientCG [Grass001](https://ambientcg.com/a/Grass001)
+and [PavingStones150](https://ambientcg.com/a/PavingStones150), licensed under
+[CC0-1.0](https://docs.ambientcg.com/license/). Six derived 512-pixel colour,
+OpenGL normal and scalar roughness maps are distributed in `textures/surfaces`.
+Colour maps are downsampled in linear light; normal maps are reduced to RGB8,
+averaged and renormalized; roughness maps are averaged as linear data. Paving
+keeps its acquired 2:1 pixel aspect. Runtime tint, normal strength and repeats
+adapt these maps to the existing park geometry. Provider files remain unchanged.
+Source and derived SHA-256 values and the reproducible preparation recipe are
+retained in [the material evidence](docs/experiments/classic-surfaces/README.md).

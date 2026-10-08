@@ -1,0 +1,141 @@
+{
+  "sourceBase": "b12cbe4d7cc5a3ebd28a67b7c3cb9f790cecca7a",
+  "files": [
+    {
+      "path": "docs/experiments/classic-surfaces/README.md",
+      "bytes": 5994,
+      "sha256": "546d403f98772ecde010a4b61ec61fb46be866525320294066b6b83dff2b9e41"
+    },
+    {
+      "path": "docs/experiments/classic-surfaces/agy-palette-audit.json",
+      "bytes": 4126,
+      "sha256": "7e3785c9aac19d606d84baf586419bde85c550cf999148ba9115eb46ac8aaafc"
+    },
+    {
+      "path": "docs/experiments/classic-surfaces/agy-tuning-audit.json",
+      "bytes": 3443,
+      "sha256": "468a3a06eae5d4a95d090f7434a089eac2c5474506eaf1fad1a3c1f116208a7f"
+    },
+    {
+      "path": "docs/experiments/classic-surfaces/browser.json",
+      "bytes": 11855,
+      "sha256": "fe4aee00cde9fc94471763cd2b411b444ec94b431db23851d1a461c04bc2832e"
+    },
+    {
+      "path": "docs/experiments/classic-surfaces/classic-close.png",
+      "bytes": 2530227,
+      "sha256": "f0045c6a9646eee1013637da10dd96d06befc65a8af6f46ea7a90ee47ab80ed9"
+    },
+    {
+      "path": "docs/experiments/classic-surfaces/classic-regression.json",
+      "bytes": 2284,
+      "sha256": "381484f72f121685378c0a0278b20317823fda7259502d4e1a84b1c8700525c6"
+    },
+    {
+      "path": "docs/experiments/classic-surfaces/execution.json",
+      "bytes": 4526,
+      "sha256": "6ab801219391d26b166b151fc50aff96a0a79c48d52944f18d63644c68f698c1"
+    },
+    {
+      "path": "docs/experiments/classic-surfaces/library-regression.json",
+      "bytes": 2811,
+      "sha256": "f73a1d63f21407b022b193eff594fdaabe560f9f0e445e4bbefb97ea395b0c20"
+    },
+    {
+      "path": "docs/experiments/classic-surfaces/material-inputs.json",
+      "bytes": 6744,
+      "sha256": "9d24e2d9119addaf835b44abd48b107efb6d5ebdf4a0823c8a32d9a0f52efc76"
+    },
+    {
+      "path": "docs/experiments/classic-surfaces/material-manifest.json",
+      "bytes": 4696,
+      "sha256": "39c45bf79548ac62dfc8534c683dc56ce215f8fb81909b25e29a23eb6a79677f"
+    },
+    {
+      "path": "docs/experiments/classic-surfaces/review.json",
+      "bytes": 1777,
+      "sha256": "3c6c3b3ed9c14ac3b58f1d15a45609fd9501c851756a8fbfd82a71c7035954ae"
+    },
+    {
+      "path": "prototypes/classic-surfaces/README.md",
+      "bytes": 1413,
+      "sha256": "72ef959d028aa9aa851a2eaa214a903d7e02f60f0930cb53739a5bff09d57246"
+    },
+    {
+      "path": "prototypes/classic-surfaces/capture.py",
+      "bytes": 16789,
+      "sha256": "0b2d694d97266ee2b139364a3a49f4de56318f59a33d1d92224b0afe883265bd"
+    },
+    {
+      "path": "prototypes/classic-surfaces/prepare-surfaces.py",
+      "bytes": 5022,
+      "sha256": "10fb6c295a3450fead2c5d32df36dbd26f0ca7c5e96ca945c2647610c84a5135"
+    },
+    {
+      "path": "ui/textures/surfaces/grass-color.png",
+      "bytes": 509645,
+      "sha256": "fdfda01eb989b5eff677408c822f37097394711e569fe4b28f02787aa723af92"
+    },
+    {
+      "path": "ui/textures/surfaces/grass-normal.png",
+      "bytes": 636185,
+      "sha256": "9c72876ec82f95e6ca3b50d14199055bba17248a358520b9948da0a497ff22b0"
+    },
+    {
+      "path": "ui/textures/surfaces/grass-roughness.png",
+      "bytes": 194627,
+      "sha256": "4cd9ae5b58a46cd172816974664f19b1aaf540c0ef1cfed8719bf59b702ec4e3"
+    },
+    {
+      "path": "ui/textures/surfaces/paving-color.png",
+      "bytes": 249959,
+      "sha256": "b34277b63dc34dc1c90639329843c75137532fc9c3066a4f1a6edcb3bf92802b"
+    },
+    {
+      "path": "ui/textures/surfaces/paving-normal.png",
+      "bytes": 256304,
+      "sha256": "0b3097df90811489d17d1ae9c7fa6437cf26c9c65370bd6785b607e15ad3fafb"
+    },
+    {
+      "path": "ui/textures/surfaces/paving-roughness.png",
+      "bytes": 83498,
+      "sha256": "7b0958ee8f21e7844a0f9d441bf4e1e0e0c288eec59a24da479235c255fdc654"
+    },
+    {
+      "path": "ui/art/surface-assets.js",
+      "bytes": 2332,
+      "sha256": "11495b97bf3daaffcf49f7fd991da882fdf2321347739fda88d6fcf35ced2927"
+    },
+    {
+      "path": "ui/art/surface-palette.js",
+      "bytes": 2093,
+      "sha256": "91adbb55a95dc3b0b2ad670084a7f93366c266a09df6ed36bf414cb23b538768"
+    },
+    {
+      "path": "ui/art/environment.js",
+      "bytes": 60634,
+      "sha256": "fe32698008e3f040fd3abf7fa93e9f24b0854473a21117aae222f3f63529bb00"
+    },
+    {
+      "path": "ui/park-scene.js",
+      "bytes": 10835,
+      "sha256": "60d6acb0535a26e04ffeccdb75d8473649284315f1a34060216f915bbafc3786"
+    },
+    {
+      "path": "scripts/verify-browser-cdp.py",
+      "bytes": 6999,
+      "sha256": "72e14860fc2f03ae4de1d1568522c59243722d1694c01ec07f79fed89a77d8ed"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 4435,
+      "sha256": "b41fd33a71b6f62bcae4a42ed6b8b1663093e546fd5570310cd830b8b7f7d74f"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6760,
+      "sha256": "b08b34f253cf39b8d317f06be49f15c506fb7db82da42aeb81a21d9e57c54314"
+    }
+  ],
+  "scope": "Source/resource/finite evidence identities; not public or hardware acceptance"
+}

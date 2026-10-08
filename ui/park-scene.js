@@ -7,6 +7,7 @@ import {buildTrack,buildPortal,createVehicles,createPeople} from './art/coaster.
 import {steelRules} from './content/steel-coaster.js';
 import {WORKER_PROTOCOL_VERSION} from './simulation/protocol.js';
 import {createTreeAssets} from './art/tree-assets.js';
+import {createSurfaceAssets} from './art/surface-assets.js';
 
 export class ParkScene{
  constructor(container){
@@ -18,6 +19,14 @@ export class ParkScene{
   this.staticGroup=new THREE.Group();this.scene.add(this.staticGroup);this.art=createArtContext(this);this.art.staticGroup=this.staticGroup;this.art.scene=this.scene;this.art.renderer=this.renderer;this.surfaceMap=new Map();
   this.treeAssets=createTreeAssets(this.renderer);this.art.treeAssets=this.treeAssets;this.art.treeLod=1;
   this.treeAssets.readyPromise.then(()=>{if(!this.disposed&&this.treeAssets.ready&&this.scenery)this.setStatic(this.scenery,this.entry);});
+  this.surfaceAssets=createSurfaceAssets(this.renderer);
+  this.surfaceAssets.readyPromise.then(()=>{
+   if(this.disposed||!this.surfaceAssets.ready)return;
+   const palette=this.surfaceAssets.palette;this.art.surfacePalette=palette;
+   for(const [key,props]of[['mat-ground-turf',palette.ground],['mat-path-public-deck',palette.path],['mat-path-queue-deck',palette.queue]]){
+    const material=this.art.material(key,props);material.setValues(props);material.needsUpdate=true;
+   }
+  });
   this.people=createPeople(this.art,10000);this.vehicles=createVehicles(this.art,10000);this.scene.add(this.people.group,this.vehicles.group);for(const factory of[this.people,this.vehicles])factory.group.traverse(o=>{if(o.isInstancedMesh)o.count=0;});
   this.litter=new THREE.InstancedMesh(this.art.geometry('litter-box',()=>new THREE.BoxGeometry(1,1,1)),this.art.material('litter',{color:'#fff0be',roughness:1}),10000);this.litter.count=0;this.scene.add(this.litter);
   this.ghost=new THREE.Group();this.scene.add(this.ghost);this.ghostMaterial=new THREE.MeshBasicMaterial({color:'#80bd53',transparent:true,opacity:.48,depthWrite:false});this.selection=new THREE.Mesh(new THREE.BoxGeometry(4.08,.06,4.08),new THREE.MeshBasicMaterial({color:'#ffd35e',transparent:true,opacity:.5,depthWrite:false}));this.selection.visible=false;this.scene.add(this.selection);
@@ -76,5 +85,5 @@ export class ParkScene{
  highlight(point){this.selection.visible=!!point;if(point)this.selection.position.set(point.x*4+2,point.z/8+.2,point.y*4+2);}
  overview(){this.controls.target.set(82,4,74);this.camera.position.set(154,64,150);this.camera.zoom=1.18;this.camera.updateProjectionMatrix();}
  close(){this.controls.target.set(82,4,67);this.camera.position.set(124,40,113);this.camera.zoom=2.5;this.camera.updateProjectionMatrix();}
- dispose(){this.disposed=true;this.renderer.setAnimationLoop(null);this.resizeObserver.disconnect();this.controls.dispose();this.clearStatic();this.people.dispose();this.vehicles.dispose();this.litter.dispose();this.ghostMaterial.dispose();this.selection.geometry.dispose();this.selection.material.dispose();this.treeAssets.dispose();this.art.dispose();this.renderer.dispose();}
+ dispose(){this.disposed=true;this.renderer.setAnimationLoop(null);this.resizeObserver.disconnect();this.controls.dispose();this.clearStatic();this.people.dispose();this.vehicles.dispose();this.litter.dispose();this.ghostMaterial.dispose();this.selection.geometry.dispose();this.selection.material.dispose();this.treeAssets.dispose();this.surfaceAssets.dispose();this.art.surfacePalette=null;this.art.dispose();this.renderer.dispose();}
 }

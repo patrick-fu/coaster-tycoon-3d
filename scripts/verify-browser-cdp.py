@@ -70,7 +70,8 @@ async def run():
     await asyncio.sleep(.1)
     if await evaluate('document.readyState==="complete"&&!document.body.inert'):break
    else:raise RuntimeError('Showcase startup did not complete')
-   demo=await evaluate("(async()=>{const game=await import('./game.js');await game.execute({type:'set-paused',paused:true});await game.refresh(true);const s=JSON.parse(await game.request('save',null));document.getElementById('save').click();return {rides:s.rides.length,probe:s.rides.some(r=>r.name==='Browser Probe'),scenery:s.elements.filter(e=>e.kind==='scenery').length};})()")
+   # The default profile may contain an earlier saved showcase.
+   demo=await evaluate("(async()=>{const game=await import('./game.js');await game.request('new-park',null);await game.execute({type:'set-paused',paused:true});await game.refresh(true);const s=JSON.parse(await game.request('save',null));document.getElementById('save').click();return {rides:s.rides.length,probe:s.rides.some(r=>r.name==='Browser Probe'),scenery:s.elements.filter(e=>e.kind==='scenery').length};})()")
    for n in range(100):
     await asyncio.sleep(.1)
     if await evaluate("document.getElementById('feedback').textContent==='Your park has been saved in this browser.'"):break
