@@ -1,0 +1,414 @@
+{
+  "scope": "Actual indexed triangle/normal/metre-UV correspondence for generated flat/left/right track, four directions, ground and elevated supports; no station, dynamics or GPU qualification.",
+  "cases": [
+    {
+      "direction": 0,
+      "piece": "flat",
+      "z": 32,
+      "oldMeshes": 135,
+      "newMeshes": 3,
+      "triangleVertices": {
+        "head": 1152,
+        "structure": 2304,
+        "timber": 1404
+      },
+      "residuals": {
+        "position": 0.00000335872172740892,
+        "normal": 0,
+        "uv": 0
+      }
+    },
+    {
+      "direction": 0,
+      "piece": "flat",
+      "z": 64,
+      "oldMeshes": 145,
+      "newMeshes": 3,
+      "triangleVertices": {
+        "head": 1152,
+        "structure": 2304,
+        "timber": 1980
+      },
+      "residuals": {
+        "position": 0.000003662109378410605,
+        "normal": 8.624762570796918e-9,
+        "uv": 0
+      }
+    },
+    {
+      "direction": 0,
+      "piece": "left",
+      "z": 32,
+      "oldMeshes": 551,
+      "newMeshes": 3,
+      "triangleVertices": {
+        "head": 4608,
+        "structure": 9216,
+        "timber": 6012
+      },
+      "residuals": {
+        "position": 0.0000038145542760048556,
+        "normal": 1.9223800107326383e-8,
+        "uv": 0
+      }
+    },
+    {
+      "direction": 0,
+      "piece": "left",
+      "z": 64,
+      "oldMeshes": 616,
+      "newMeshes": 3,
+      "triangleVertices": {
+        "head": 4608,
+        "structure": 9216,
+        "timber": 9756
+      },
+      "residuals": {
+        "position": 0.0000038145542760048556,
+        "normal": 3.139629345394468e-8,
+        "uv": 0
+      }
+    },
+    {
+      "direction": 0,
+      "piece": "right",
+      "z": 32,
+      "oldMeshes": 551,
+      "newMeshes": 3,
+      "triangleVertices": {
+        "head": 4608,
+        "structure": 9216,
+        "timber": 6012
+      },
+      "residuals": {
+        "position": 0.0000038145542760048556,
+        "normal": 1.9223800329370988e-8,
+        "uv": 0
+      }
+    },
+    {
+      "direction": 0,
+      "piece": "right",
+      "z": 64,
+      "oldMeshes": 616,
+      "newMeshes": 3,
+      "triangleVertices": {
+        "head": 4608,
+        "structure": 9216,
+        "timber": 9756
+      },
+      "residuals": {
+        "position": 0.0000038145542760048556,
+        "normal": 3.139629345394468e-8,
+        "uv": 0
+      }
+    },
+    {
+      "direction": 1,
+      "piece": "flat",
+      "z": 32,
+      "oldMeshes": 135,
+      "newMeshes": 3,
+      "triangleVertices": {
+        "head": 1152,
+        "structure": 2304,
+        "timber": 1404
+      },
+      "residuals": {
+        "position": 0.00000335872172740892,
+        "normal": 0,
+        "uv": 0
+      }
+    },
+    {
+      "direction": 1,
+      "piece": "flat",
+      "z": 64,
+      "oldMeshes": 145,
+      "newMeshes": 3,
+      "triangleVertices": {
+        "head": 1152,
+        "structure": 2304,
+        "timber": 1980
+      },
+      "residuals": {
+        "position": 0.000003662109378410605,
+        "normal": 8.624762570796918e-9,
+        "uv": 0
+      }
+    },
+    {
+      "direction": 1,
+      "piece": "left",
+      "z": 32,
+      "oldMeshes": 551,
+      "newMeshes": 3,
+      "triangleVertices": {
+        "head": 4608,
+        "structure": 9216,
+        "timber": 6012
+      },
+      "residuals": {
+        "position": 0.0000038145542760048556,
+        "normal": 1.9223800329370988e-8,
+        "uv": 0
+      }
+    },
+    {
+      "direction": 1,
+      "piece": "left",
+      "z": 64,
+      "oldMeshes": 616,
+      "newMeshes": 3,
+      "triangleVertices": {
+        "head": 4608,
+        "structure": 9216,
+        "timber": 9756
+      },
+      "residuals": {
+        "position": 0.0000038145542760048556,
+        "normal": 3.139629345394468e-8,
+        "uv": 0
+      }
+    },
+    {
+      "direction": 1,
+      "piece": "right",
+      "z": 32,
+      "oldMeshes": 551,
+      "newMeshes": 3,
+      "triangleVertices": {
+        "head": 4608,
+        "structure": 9216,
+        "timber": 6012
+      },
+      "residuals": {
+        "position": 0.0000038145542760048556,
+        "normal": 1.9223800329370988e-8,
+        "uv": 0
+      }
+    },
+    {
+      "direction": 1,
+      "piece": "right",
+      "z": 64,
+      "oldMeshes": 616,
+      "newMeshes": 3,
+      "triangleVertices": {
+        "head": 4608,
+        "structure": 9216,
+        "timber": 9756
+      },
+      "residuals": {
+        "position": 0.0000038145542760048556,
+        "normal": 3.139629345394468e-8,
+        "uv": 0
+      }
+    },
+    {
+      "direction": 2,
+      "piece": "flat",
+      "z": 32,
+      "oldMeshes": 135,
+      "newMeshes": 3,
+      "triangleVertices": {
+        "head": 1152,
+        "structure": 2304,
+        "timber": 1404
+      },
+      "residuals": {
+        "position": 0.00000335872172740892,
+        "normal": 0,
+        "uv": 0
+      }
+    },
+    {
+      "direction": 2,
+      "piece": "flat",
+      "z": 64,
+      "oldMeshes": 145,
+      "newMeshes": 3,
+      "triangleVertices": {
+        "head": 1152,
+        "structure": 2304,
+        "timber": 1980
+      },
+      "residuals": {
+        "position": 0.000003662109378410605,
+        "normal": 8.624762570796918e-9,
+        "uv": 0
+      }
+    },
+    {
+      "direction": 2,
+      "piece": "left",
+      "z": 32,
+      "oldMeshes": 551,
+      "newMeshes": 3,
+      "triangleVertices": {
+        "head": 4608,
+        "structure": 9216,
+        "timber": 6012
+      },
+      "residuals": {
+        "position": 0.0000038145542760048556,
+        "normal": 1.9223800329370988e-8,
+        "uv": 0
+      }
+    },
+    {
+      "direction": 2,
+      "piece": "left",
+      "z": 64,
+      "oldMeshes": 616,
+      "newMeshes": 3,
+      "triangleVertices": {
+        "head": 4608,
+        "structure": 9216,
+        "timber": 9756
+      },
+      "residuals": {
+        "position": 0.0000038145542760048556,
+        "normal": 3.139629345394468e-8,
+        "uv": 0
+      }
+    },
+    {
+      "direction": 2,
+      "piece": "right",
+      "z": 32,
+      "oldMeshes": 551,
+      "newMeshes": 3,
+      "triangleVertices": {
+        "head": 4608,
+        "structure": 9216,
+        "timber": 6012
+      },
+      "residuals": {
+        "position": 0.0000038145542760048556,
+        "normal": 1.9223800107326383e-8,
+        "uv": 0
+      }
+    },
+    {
+      "direction": 2,
+      "piece": "right",
+      "z": 64,
+      "oldMeshes": 616,
+      "newMeshes": 3,
+      "triangleVertices": {
+        "head": 4608,
+        "structure": 9216,
+        "timber": 9756
+      },
+      "residuals": {
+        "position": 0.0000038145542760048556,
+        "normal": 3.139629345394468e-8,
+        "uv": 0
+      }
+    },
+    {
+      "direction": 3,
+      "piece": "flat",
+      "z": 32,
+      "oldMeshes": 135,
+      "newMeshes": 3,
+      "triangleVertices": {
+        "head": 1152,
+        "structure": 2304,
+        "timber": 1404
+      },
+      "residuals": {
+        "position": 0.00000335872172740892,
+        "normal": 0,
+        "uv": 0
+      }
+    },
+    {
+      "direction": 3,
+      "piece": "flat",
+      "z": 64,
+      "oldMeshes": 145,
+      "newMeshes": 3,
+      "triangleVertices": {
+        "head": 1152,
+        "structure": 2304,
+        "timber": 1980
+      },
+      "residuals": {
+        "position": 0.000003662109378410605,
+        "normal": 8.624762570796918e-9,
+        "uv": 0
+      }
+    },
+    {
+      "direction": 3,
+      "piece": "left",
+      "z": 32,
+      "oldMeshes": 551,
+      "newMeshes": 3,
+      "triangleVertices": {
+        "head": 4608,
+        "structure": 9216,
+        "timber": 6012
+      },
+      "residuals": {
+        "position": 0.0000038145542760048556,
+        "normal": 1.9223800107326383e-8,
+        "uv": 0
+      }
+    },
+    {
+      "direction": 3,
+      "piece": "left",
+      "z": 64,
+      "oldMeshes": 616,
+      "newMeshes": 3,
+      "triangleVertices": {
+        "head": 4608,
+        "structure": 9216,
+        "timber": 9756
+      },
+      "residuals": {
+        "position": 0.0000038145542760048556,
+        "normal": 3.139629345394468e-8,
+        "uv": 0
+      }
+    },
+    {
+      "direction": 3,
+      "piece": "right",
+      "z": 32,
+      "oldMeshes": 551,
+      "newMeshes": 3,
+      "triangleVertices": {
+        "head": 4608,
+        "structure": 9216,
+        "timber": 6012
+      },
+      "residuals": {
+        "position": 0.0000038145542760048556,
+        "normal": 1.9223800107326383e-8,
+        "uv": 0
+      }
+    },
+    {
+      "direction": 3,
+      "piece": "right",
+      "z": 64,
+      "oldMeshes": 616,
+      "newMeshes": 3,
+      "triangleVertices": {
+        "head": 4608,
+        "structure": 9216,
+        "timber": 9756
+      },
+      "residuals": {
+        "position": 0.0000038145542760048556,
+        "normal": 3.139629345394468e-8,
+        "uv": 0
+      }
+    }
+  ],
+  "passed": true
+}

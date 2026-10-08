@@ -1,5 +1,12 @@
 # Next production slice: mixed steel and detailed wooden candidates
 
+This is the retained design proposal. The implemented finite contract is in
+[mixed-coasters.md](../../mixed-coasters.md); its measured checks are in the
+[integration record](../../verification/mixed-wooden/README.md). The production
+wooden candidate requires level, dry ground beneath its reserved footprint.
+Elevated geometry below remains an authoring experiment until station foundations
+and complete ground-to-track support reservations are qualified.
+
 ## Decision
 
 The next playable destination must contain steel and wooden coasters in the

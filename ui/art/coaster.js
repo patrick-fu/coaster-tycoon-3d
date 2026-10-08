@@ -1314,7 +1314,7 @@ export function createVehicles(ctx, capacity) {
 
   const carColors=['#c72c35','#167e9a','#d79326'].map(c=>new THREE.Color(c));
   function update(packet) {
-    const cars = packet?.cars || [];
+    const cars = (packet?.cars || []).filter(car=>car.rig===null);
     const carCount = Math.min(cars.length, maxCars);
     selections.length = 0;
 

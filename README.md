@@ -8,22 +8,35 @@ Project code is licensed under [MIT](LICENSE). The implementation and required
 game resources are independent; see the [source strategy decision](docs/adr/0001-independent-mit-implementation.md).
 
 Try the [current Classic showcase](https://patrick-fu.github.io/coaster-tycoon-3d/?showcase=classic)
-in desktop Chrome or Edge. Its three operating steel-coaster layouts, shops,
+in desktop Chrome or Edge. Its three steel layouts and detailed wooden coaster, shops,
 gardens and local save use a separate showcase slot, preserving your existing
 park at the [regular preview](https://patrick-fu.github.io/coaster-tycoon-3d/).
 Build and manage Copper Meadows with mouse/keyboard;
 drag to orbit, right-drag to pan and scroll to zoom. Space pauses the park.
-Saves remain in this browser; Export/Import moves a park between devices.
+Saves remain in this browser. Export/Import provides file backups;
+cross-runtime default-rule portability is not yet qualified.
+An earlier local park remains intact; choose **New park** after saving/exporting
+it to start the current four-ride layout.
 
-![Classic park with independently authored textured oak trees](docs/verification/oak-scenery/oak-park-close.png)
+![Actual mixed park with three steel rides and detailed timber coaster](docs/verification/mixed-wooden/overview.png)
 
 The current art iteration adds detailed oak meshes, real CC0 bark and leaf
 surfaces, masked shadows and three camera-selected levels of detail to the
 playable park. Planting, inspection, demolition and save/load use the existing
 simulation. See the [editable asset source](prototypes/organic-tree/README.md)
 and [verification evidence](docs/verification/oak-scenery/README.md). The modeless
-Classic Library exposes the full reference catalogue and the four implemented
+Classic Library exposes the full reference catalogue and the five implemented
 candidate variants; unavailable reference items remain clearly marked.
+
+The [mixed coaster slice](docs/mixed-coasters.md) adds an independently authored
+four-seat wooden car, articulated bogies and restraints, a real drawbar, timber
+station and textured track. Cedar Timber Run operates beside the steel rides:
+actual guests board, pay, ride and unload, and their ordered seats survive saving.
+The finite wooden construction profile supports ground-level flat track and
+R16 curves, with two cars at most. This is a project candidate, not the original
+Wooden/PTCT1 entry. Current saves use v9/content2; historical steel continuation
+and [the measured checks](docs/verification/mixed-wooden/README.md) have distinct
+evidence boundaries.
 
 The [earlier art checkpoint](https://patrick-fu.github.io/coaster-tycoon-3d/previews/classic-a7d6451/?showcase=classic)
 has procedural materials and composed models, three steel-coaster
@@ -65,7 +78,8 @@ Current work: [Plan the complete RCT2 catalogue and detailed 3D production progr
 The Classic park now uses [acquired CC0 lawn and paving maps](docs/experiments/classic-surfaces/README.md)
 with owned loading/cancellation/disposal and unchanged native geometry. The
 [finite wooden-car inspector](https://patrick-fu.github.io/coaster-tycoon-3d/previews/wooden-hitch/)
-shows the qualified detailed car/link; it does not activate a wooden ride.
+retains the earlier qualified car/link experiment. The playable park uses its
+separately integrated and revised assets.
 The [programme](docs/planning/rct2-program.md) covers all original ride categories,
 physics/operation, products/services, guests/staff, admission/finance, research,
 scenarios and authored presets. Its [source-linked inventory](docs/research/rct2-program/README.md)
@@ -86,8 +100,9 @@ open.
 The [finite wooden joint experiment](docs/experiments/wooden-hitch/README.md)
 now qualifies replacement mounts and a real drawbar at 59 frozen flat poses,
 preserving the original car's UVs, bitmap resources, seats and bogie frames.
-This clears the measured hardware interference for that fixture; wood remains
-unavailable while continuous motion and native/game integration are completed.
+This clears the measured hardware interference for that frozen fixture. The
+current mixed park has a separately verified finite operation/placement contract;
+the inspector's fixture is not replayed as its train motion.
 
 [Qualify the Classic first playable against original RCT2 and representative hardware](https://github.com/patrick-fu/coaster-tycoon-3d/issues/24)
 remains open for its original fidelity, scale and representative-hardware gates.

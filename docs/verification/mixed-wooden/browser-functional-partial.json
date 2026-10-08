@@ -1,0 +1,2187 @@
+{
+  "scope": "Actual software WebGL mixed-park loading, controls, saves and resource ownership; no original agreement, continuous triangle or representative GPU/human qualification.",
+  "captures": [
+    {
+      "file": "overview.png",
+      "sha256": "f5b44472b17daaff9ad5d8e66601cad9493706d8560bce5ce261021ccf7fecc9"
+    },
+    {
+      "file": "wooden-station.png",
+      "sha256": "da2f2533368278c55517a08f95bc66c77f7a0065572f1416728522ab1bd0c994"
+    },
+    {
+      "file": "wooden-course.png",
+      "sha256": "89d749b7c512cc3bc9e08c85784864b8fc28c56f53d50652e26159642bb0ec68"
+    },
+    {
+      "file": "wooden-car.png",
+      "sha256": "656d0f025da89cf8babc9267f3daadcef1a702cd7b29e71f658b6af92550d3ea"
+    },
+    {
+      "file": "wooden-car-null-slots.png",
+      "sha256": "c1b32c9f300f397cf797b1d475773aa02668866fa5e3d15d7294b354933ba0b6"
+    },
+    {
+      "file": "reloaded-overview.png",
+      "sha256": "719fc08fcf8b4ead78a0ac4a9a9052d770c3f6a29ff55008ff0f3c399656dd5a"
+    },
+    {
+      "file": "narrow.png",
+      "sha256": "c54fe55a2baa55de16e7c08b9ad4ae673c2b27c2130cb966fb477870aa2ba9ea"
+    }
+  ],
+  "exceptions": [],
+  "consoleErrors": [],
+  "assetResponses": [
+    {
+      "url": "http://127.0.0.1:4297/models/wooden/link.glb",
+      "status": 200,
+      "bytes": 988980,
+      "sha256": "bd65312ab91197d08d66fd6258e31f31e46b6d529832a0d741fcb729e0fec671"
+    },
+    {
+      "url": "http://127.0.0.1:4297/models/wooden/car.glb",
+      "status": 200,
+      "bytes": 3636520,
+      "sha256": "ed293d53712c1bc02ce01a5c027d69dd7b31e60ae41c8a811d9a9464274f9adc"
+    },
+    {
+      "url": "http://127.0.0.1:4297/models/wooden/station.glb",
+      "status": 200,
+      "bytes": 9199772,
+      "sha256": "32214cdb6f388bcda1bdbbd59b8ac5a59ba454d947d2fde45380898572809cbd"
+    },
+    {
+      "url": "http://127.0.0.1:4297/models/wooden/link.glb",
+      "status": 200,
+      "bytes": 988980,
+      "sha256": "bd65312ab91197d08d66fd6258e31f31e46b6d529832a0d741fcb729e0fec671"
+    },
+    {
+      "url": "http://127.0.0.1:4297/models/wooden/car.glb",
+      "status": 200,
+      "bytes": 3636520,
+      "sha256": "ed293d53712c1bc02ce01a5c027d69dd7b31e60ae41c8a811d9a9464274f9adc"
+    },
+    {
+      "url": "http://127.0.0.1:4297/models/wooden/station.glb",
+      "status": 200,
+      "bytes": 9199772,
+      "sha256": "32214cdb6f388bcda1bdbbd59b8ac5a59ba454d947d2fde45380898572809cbd"
+    }
+  ],
+  "states": [
+    {
+      "name": "overview",
+      "state": {
+        "protocol": 2,
+        "content": 2,
+        "tick": 5071,
+        "cash": 483048,
+        "sceneTick": 5071,
+        "camera": {
+          "position": [
+            146,
+            64,
+            156
+          ],
+          "target": [
+            74,
+            4,
+            79.99999999999999
+          ],
+          "zoom": 0.98
+        },
+        "rides": [
+          {
+            "id": 0,
+            "name": "Copper Loop",
+            "family": "independent.circuit-coaster",
+            "phase": "running",
+            "status": "open",
+            "cars": 4
+          },
+          {
+            "id": 4,
+            "name": "Juniper Sprint",
+            "family": "independent.circuit-coaster",
+            "phase": "unloading",
+            "status": "open",
+            "cars": 4
+          },
+          {
+            "id": 5,
+            "name": "Highland Flyer",
+            "family": "independent.circuit-coaster",
+            "phase": "running",
+            "status": "open",
+            "cars": 4
+          },
+          {
+            "id": 6,
+            "name": "Cedar Timber Run",
+            "family": "independent.wooden-circuit-coaster",
+            "phase": "running",
+            "status": "open",
+            "cars": 2
+          }
+        ],
+        "cars": [
+          {
+            "id": 3,
+            "ride": 0,
+            "position": {
+              "x": 97.44183931437269,
+              "y": 72.13308955402455,
+              "z": 8
+            },
+            "seats": [
+              32,
+              33
+            ],
+            "rig": null
+          },
+          {
+            "id": 4,
+            "ride": 0,
+            "position": {
+              "x": 95.45138635255255,
+              "y": 72,
+              "z": 7.980577058793167
+            },
+            "seats": [
+              46,
+              45
+            ],
+            "rig": null
+          },
+          {
+            "id": 5,
+            "ride": 0,
+            "position": {
+              "x": 93.49133999587328,
+              "y": 72,
+              "z": 7.606533436145917
+            },
+            "seats": [
+              44,
+              29
+            ],
+            "rig": null
+          },
+          {
+            "id": 6,
+            "ride": 0,
+            "position": {
+              "x": 91.65294704966098,
+              "y": 72,
+              "z": 6.826473524830493
+            },
+            "seats": [
+              27,
+              26
+            ],
+            "rig": null
+          },
+          {
+            "id": 7,
+            "ride": 4,
+            "position": {
+              "x": 31,
+              "y": 72,
+              "z": 4
+            },
+            "seats": [
+              null,
+              null
+            ],
+            "rig": null
+          },
+          {
+            "id": 8,
+            "ride": 4,
+            "position": {
+              "x": 29,
+              "y": 72,
+              "z": 4
+            },
+            "seats": [
+              null,
+              null
+            ],
+            "rig": null
+          },
+          {
+            "id": 9,
+            "ride": 4,
+            "position": {
+              "x": 27,
+              "y": 72,
+              "z": 4
+            },
+            "seats": [
+              null,
+              null
+            ],
+            "rig": null
+          },
+          {
+            "id": 10,
+            "ride": 4,
+            "position": {
+              "x": 25,
+              "y": 72,
+              "z": 4
+            },
+            "seats": [
+              null,
+              null
+            ],
+            "rig": null
+          },
+          {
+            "id": 11,
+            "ride": 5,
+            "position": {
+              "x": 145.44183931437266,
+              "y": 72.13308955402455,
+              "z": 8
+            },
+            "seats": [
+              35,
+              36
+            ],
+            "rig": null
+          },
+          {
+            "id": 12,
+            "ride": 5,
+            "position": {
+              "x": 143.45138635255253,
+              "y": 72,
+              "z": 7.980577058793167
+            },
+            "seats": [
+              37,
+              34
+            ],
+            "rig": null
+          },
+          {
+            "id": 13,
+            "ride": 5,
+            "position": {
+              "x": 141.4913399958733,
+              "y": 72,
+              "z": 7.606533436145917
+            },
+            "seats": [
+              28,
+              38
+            ],
+            "rig": null
+          },
+          {
+            "id": 14,
+            "ride": 5,
+            "position": {
+              "x": 139.65294704966098,
+              "y": 72,
+              "z": 6.826473524830493
+            },
+            "seats": [
+              null,
+              null
+            ],
+            "rig": null
+          },
+          {
+            "id": 15,
+            "ride": 6,
+            "position": {
+              "x": 40.54400000000001,
+              "y": 182,
+              "z": 4.5
+            },
+            "seats": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "rig": "wooden-coupled-flat"
+          },
+          {
+            "id": 16,
+            "ride": 6,
+            "position": {
+              "x": 43.415200551610894,
+              "y": 181.9185220979045,
+              "z": 4.5
+            },
+            "seats": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "rig": "wooden-coupled-flat"
+          }
+        ],
+        "assets": {
+          "ready": true,
+          "error": null,
+          "disposed": false,
+          "geometries": 33,
+          "materials": 51,
+          "textures": 24,
+          "bitmaps": 24
+        },
+        "wooden": {
+          "activeCars": 2,
+          "activeLinks": 1
+        },
+        "renderer": {
+          "geometries": 325,
+          "textures": 70
+        },
+        "drawCalls": 464,
+        "glErrors": [],
+        "feedback": "Park updated."
+      }
+    },
+    {
+      "name": "wooden-station",
+      "state": {
+        "protocol": 2,
+        "content": 2,
+        "tick": 5071,
+        "cash": 483048,
+        "sceneTick": 5071,
+        "camera": {
+          "position": [
+            63.999999999999986,
+            27.999999999999996,
+            169
+          ],
+          "target": [
+            30.999999999999982,
+            4.8,
+            136
+          ],
+          "zoom": 4
+        },
+        "rides": [
+          {
+            "id": 0,
+            "name": "Copper Loop",
+            "family": "independent.circuit-coaster",
+            "phase": "running",
+            "status": "open",
+            "cars": 4
+          },
+          {
+            "id": 4,
+            "name": "Juniper Sprint",
+            "family": "independent.circuit-coaster",
+            "phase": "unloading",
+            "status": "open",
+            "cars": 4
+          },
+          {
+            "id": 5,
+            "name": "Highland Flyer",
+            "family": "independent.circuit-coaster",
+            "phase": "running",
+            "status": "open",
+            "cars": 4
+          },
+          {
+            "id": 6,
+            "name": "Cedar Timber Run",
+            "family": "independent.wooden-circuit-coaster",
+            "phase": "running",
+            "status": "open",
+            "cars": 2
+          }
+        ],
+        "cars": [
+          {
+            "id": 3,
+            "ride": 0,
+            "position": {
+              "x": 97.44183931437269,
+              "y": 72.13308955402455,
+              "z": 8
+            },
+            "seats": [
+              32,
+              33
+            ],
+            "rig": null
+          },
+          {
+            "id": 4,
+            "ride": 0,
+            "position": {
+              "x": 95.45138635255255,
+              "y": 72,
+              "z": 7.980577058793167
+            },
+            "seats": [
+              46,
+              45
+            ],
+            "rig": null
+          },
+          {
+            "id": 5,
+            "ride": 0,
+            "position": {
+              "x": 93.49133999587328,
+              "y": 72,
+              "z": 7.606533436145917
+            },
+            "seats": [
+              44,
+              29
+            ],
+            "rig": null
+          },
+          {
+            "id": 6,
+            "ride": 0,
+            "position": {
+              "x": 91.65294704966098,
+              "y": 72,
+              "z": 6.826473524830493
+            },
+            "seats": [
+              27,
+              26
+            ],
+            "rig": null
+          },
+          {
+            "id": 7,
+            "ride": 4,
+            "position": {
+              "x": 31,
+              "y": 72,
+              "z": 4
+            },
+            "seats": [
+              null,
+              null
+            ],
+            "rig": null
+          },
+          {
+            "id": 8,
+            "ride": 4,
+            "position": {
+              "x": 29,
+              "y": 72,
+              "z": 4
+            },
+            "seats": [
+              null,
+              null
+            ],
+            "rig": null
+          },
+          {
+            "id": 9,
+            "ride": 4,
+            "position": {
+              "x": 27,
+              "y": 72,
+              "z": 4
+            },
+            "seats": [
+              null,
+              null
+            ],
+            "rig": null
+          },
+          {
+            "id": 10,
+            "ride": 4,
+            "position": {
+              "x": 25,
+              "y": 72,
+              "z": 4
+            },
+            "seats": [
+              null,
+              null
+            ],
+            "rig": null
+          },
+          {
+            "id": 11,
+            "ride": 5,
+            "position": {
+              "x": 145.44183931437266,
+              "y": 72.13308955402455,
+              "z": 8
+            },
+            "seats": [
+              35,
+              36
+            ],
+            "rig": null
+          },
+          {
+            "id": 12,
+            "ride": 5,
+            "position": {
+              "x": 143.45138635255253,
+              "y": 72,
+              "z": 7.980577058793167
+            },
+            "seats": [
+              37,
+              34
+            ],
+            "rig": null
+          },
+          {
+            "id": 13,
+            "ride": 5,
+            "position": {
+              "x": 141.4913399958733,
+              "y": 72,
+              "z": 7.606533436145917
+            },
+            "seats": [
+              28,
+              38
+            ],
+            "rig": null
+          },
+          {
+            "id": 14,
+            "ride": 5,
+            "position": {
+              "x": 139.65294704966098,
+              "y": 72,
+              "z": 6.826473524830493
+            },
+            "seats": [
+              null,
+              null
+            ],
+            "rig": null
+          },
+          {
+            "id": 15,
+            "ride": 6,
+            "position": {
+              "x": 40.54400000000001,
+              "y": 182,
+              "z": 4.5
+            },
+            "seats": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "rig": "wooden-coupled-flat"
+          },
+          {
+            "id": 16,
+            "ride": 6,
+            "position": {
+              "x": 43.415200551610894,
+              "y": 181.9185220979045,
+              "z": 4.5
+            },
+            "seats": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "rig": "wooden-coupled-flat"
+          }
+        ],
+        "assets": {
+          "ready": true,
+          "error": null,
+          "disposed": false,
+          "geometries": 33,
+          "materials": 51,
+          "textures": 24,
+          "bitmaps": 24
+        },
+        "wooden": {
+          "activeCars": 2,
+          "activeLinks": 1
+        },
+        "renderer": {
+          "geometries": 328,
+          "textures": 75
+        },
+        "drawCalls": 144,
+        "glErrors": [],
+        "feedback": "Park updated."
+      }
+    },
+    {
+      "name": "wooden-course",
+      "state": {
+        "protocol": 2,
+        "content": 2,
+        "tick": 5071,
+        "cash": 483048,
+        "sceneTick": 5071,
+        "camera": {
+          "position": [
+            64,
+            25.000000000000004,
+            190
+          ],
+          "target": [
+            38.00000000000001,
+            4.7,
+            164
+          ],
+          "zoom": 3.5
+        },
+        "rides": [
+          {
+            "id": 0,
+            "name": "Copper Loop",
+            "family": "independent.circuit-coaster",
+            "phase": "running",
+            "status": "open",
+            "cars": 4
+          },
+          {
+            "id": 4,
+            "name": "Juniper Sprint",
+            "family": "independent.circuit-coaster",
+            "phase": "unloading",
+            "status": "open",
+            "cars": 4
+          },
+          {
+            "id": 5,
+            "name": "Highland Flyer",
+            "family": "independent.circuit-coaster",
+            "phase": "running",
+            "status": "open",
+            "cars": 4
+          },
+          {
+            "id": 6,
+            "name": "Cedar Timber Run",
+            "family": "independent.wooden-circuit-coaster",
+            "phase": "running",
+            "status": "open",
+            "cars": 2
+          }
+        ],
+        "cars": [
+          {
+            "id": 3,
+            "ride": 0,
+            "position": {
+              "x": 97.44183931437269,
+              "y": 72.13308955402455,
+              "z": 8
+            },
+            "seats": [
+              32,
+              33
+            ],
+            "rig": null
+          },
+          {
+            "id": 4,
+            "ride": 0,
+            "position": {
+              "x": 95.45138635255255,
+              "y": 72,
+              "z": 7.980577058793167
+            },
+            "seats": [
+              46,
+              45
+            ],
+            "rig": null
+          },
+          {
+            "id": 5,
+            "ride": 0,
+            "position": {
+              "x": 93.49133999587328,
+              "y": 72,
+              "z": 7.606533436145917
+            },
+            "seats": [
+              44,
+              29
+            ],
+            "rig": null
+          },
+          {
+            "id": 6,
+            "ride": 0,
+            "position": {
+              "x": 91.65294704966098,
+              "y": 72,
+              "z": 6.826473524830493
+            },
+            "seats": [
+              27,
+              26
+            ],
+            "rig": null
+          },
+          {
+            "id": 7,
+            "ride": 4,
+            "position": {
+              "x": 31,
+              "y": 72,
+              "z": 4
+            },
+            "seats": [
+              null,
+              null
+            ],
+            "rig": null
+          },
+          {
+            "id": 8,
+            "ride": 4,
+            "position": {
+              "x": 29,
+              "y": 72,
+              "z": 4
+            },
+            "seats": [
+              null,
+              null
+            ],
+            "rig": null
+          },
+          {
+            "id": 9,
+            "ride": 4,
+            "position": {
+              "x": 27,
+              "y": 72,
+              "z": 4
+            },
+            "seats": [
+              null,
+              null
+            ],
+            "rig": null
+          },
+          {
+            "id": 10,
+            "ride": 4,
+            "position": {
+              "x": 25,
+              "y": 72,
+              "z": 4
+            },
+            "seats": [
+              null,
+              null
+            ],
+            "rig": null
+          },
+          {
+            "id": 11,
+            "ride": 5,
+            "position": {
+              "x": 145.44183931437266,
+              "y": 72.13308955402455,
+              "z": 8
+            },
+            "seats": [
+              35,
+              36
+            ],
+            "rig": null
+          },
+          {
+            "id": 12,
+            "ride": 5,
+            "position": {
+              "x": 143.45138635255253,
+              "y": 72,
+              "z": 7.980577058793167
+            },
+            "seats": [
+              37,
+              34
+            ],
+            "rig": null
+          },
+          {
+            "id": 13,
+            "ride": 5,
+            "position": {
+              "x": 141.4913399958733,
+              "y": 72,
+              "z": 7.606533436145917
+            },
+            "seats": [
+              28,
+              38
+            ],
+            "rig": null
+          },
+          {
+            "id": 14,
+            "ride": 5,
+            "position": {
+              "x": 139.65294704966098,
+              "y": 72,
+              "z": 6.826473524830493
+            },
+            "seats": [
+              null,
+              null
+            ],
+            "rig": null
+          },
+          {
+            "id": 15,
+            "ride": 6,
+            "position": {
+              "x": 40.54400000000001,
+              "y": 182,
+              "z": 4.5
+            },
+            "seats": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "rig": "wooden-coupled-flat"
+          },
+          {
+            "id": 16,
+            "ride": 6,
+            "position": {
+              "x": 43.415200551610894,
+              "y": 181.9185220979045,
+              "z": 4.5
+            },
+            "seats": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "rig": "wooden-coupled-flat"
+          }
+        ],
+        "assets": {
+          "ready": true,
+          "error": null,
+          "disposed": false,
+          "geometries": 33,
+          "materials": 51,
+          "textures": 24,
+          "bitmaps": 24
+        },
+        "wooden": {
+          "activeCars": 2,
+          "activeLinks": 1
+        },
+        "renderer": {
+          "geometries": 328,
+          "textures": 75
+        },
+        "drawCalls": 631,
+        "glErrors": [],
+        "feedback": "Park updated."
+      }
+    },
+    {
+      "name": "wooden-car",
+      "state": {
+        "protocol": 2,
+        "content": 2,
+        "tick": 10166,
+        "cash": 483804,
+        "sceneTick": 10166,
+        "camera": {
+          "position": [
+            69.92082516305788,
+            12.500000000000002,
+            134.61154508268808
+          ],
+          "target": [
+            57.92082516305789,
+            5.05,
+            148.61154508268808
+          ],
+          "zoom": 5
+        },
+        "rides": [
+          {
+            "id": 0,
+            "name": "Copper Loop",
+            "family": "independent.circuit-coaster",
+            "phase": "running",
+            "status": "open",
+            "cars": 4
+          },
+          {
+            "id": 4,
+            "name": "Juniper Sprint",
+            "family": "independent.circuit-coaster",
+            "phase": "unloading",
+            "status": "open",
+            "cars": 4
+          },
+          {
+            "id": 5,
+            "name": "Highland Flyer",
+            "family": "independent.circuit-coaster",
+            "phase": "running",
+            "status": "open",
+            "cars": 4
+          },
+          {
+            "id": 6,
+            "name": "Cedar Timber Run",
+            "family": "independent.wooden-circuit-coaster",
+            "phase": "running",
+            "status": "open",
+            "cars": 2
+          }
+        ],
+        "cars": [
+          {
+            "id": 3,
+            "ride": 0,
+            "position": {
+              "x": 104,
+              "y": 89.885,
+              "z": 8
+            },
+            "seats": [
+              91,
+              90
+            ],
+            "rig": null
+          },
+          {
+            "id": 4,
+            "ride": 0,
+            "position": {
+              "x": 104,
+              "y": 87.885,
+              "z": 8
+            },
+            "seats": [
+              107,
+              null
+            ],
+            "rig": null
+          },
+          {
+            "id": 5,
+            "ride": 0,
+            "position": {
+              "x": 104,
+              "y": 85.885,
+              "z": 8
+            },
+            "seats": [
+              null,
+              null
+            ],
+            "rig": null
+          },
+          {
+            "id": 6,
+            "ride": 0,
+            "position": {
+              "x": 104,
+              "y": 83.885,
+              "z": 8
+            },
+            "seats": [
+              null,
+              null
+            ],
+            "rig": null
+          },
+          {
+            "id": 7,
+            "ride": 4,
+            "position": {
+              "x": 31,
+              "y": 72,
+              "z": 4
+            },
+            "seats": [
+              58,
+              57
+            ],
+            "rig": null
+          },
+          {
+            "id": 8,
+            "ride": 4,
+            "position": {
+              "x": 29,
+              "y": 72,
+              "z": 4
+            },
+            "seats": [
+              null,
+              null
+            ],
+            "rig": null
+          },
+          {
+            "id": 9,
+            "ride": 4,
+            "position": {
+              "x": 27,
+              "y": 72,
+              "z": 4
+            },
+            "seats": [
+              null,
+              null
+            ],
+            "rig": null
+          },
+          {
+            "id": 10,
+            "ride": 4,
+            "position": {
+              "x": 25,
+              "y": 72,
+              "z": 4
+            },
+            "seats": [
+              null,
+              null
+            ],
+            "rig": null
+          },
+          {
+            "id": 11,
+            "ride": 5,
+            "position": {
+              "x": 152,
+              "y": 89.885,
+              "z": 8
+            },
+            "seats": [
+              69,
+              62
+            ],
+            "rig": null
+          },
+          {
+            "id": 12,
+            "ride": 5,
+            "position": {
+              "x": 152,
+              "y": 87.885,
+              "z": 8
+            },
+            "seats": [
+              55,
+              76
+            ],
+            "rig": null
+          },
+          {
+            "id": 13,
+            "ride": 5,
+            "position": {
+              "x": 152,
+              "y": 85.885,
+              "z": 8
+            },
+            "seats": [
+              75,
+              74
+            ],
+            "rig": null
+          },
+          {
+            "id": 14,
+            "ride": 5,
+            "position": {
+              "x": 152,
+              "y": 83.885,
+              "z": 8
+            },
+            "seats": [
+              null,
+              null
+            ],
+            "rig": null
+          },
+          {
+            "id": 15,
+            "ride": 6,
+            "position": {
+              "x": 57.92082516305789,
+              "y": 148.61154508268808,
+              "z": 4.5
+            },
+            "seats": [
+              68,
+              63,
+              46,
+              51
+            ],
+            "rig": "wooden-coupled-flat"
+          },
+          {
+            "id": 16,
+            "ride": 6,
+            "position": {
+              "x": 57.416624550393635,
+              "y": 145.78706274148206,
+              "z": 4.5
+            },
+            "seats": [
+              99,
+              94,
+              26,
+              88
+            ],
+            "rig": "wooden-coupled-flat"
+          }
+        ],
+        "assets": {
+          "ready": true,
+          "error": null,
+          "disposed": false,
+          "geometries": 33,
+          "materials": 51,
+          "textures": 24,
+          "bitmaps": 24
+        },
+        "wooden": {
+          "activeCars": 2,
+          "activeLinks": 1
+        },
+        "renderer": {
+          "geometries": 328,
+          "textures": 75
+        },
+        "drawCalls": 801,
+        "glErrors": [],
+        "feedback": "Park updated."
+      }
+    },
+    {
+      "name": "wooden-car-null-slots",
+      "state": {
+        "protocol": 2,
+        "content": 2,
+        "tick": 10166,
+        "cash": 483804,
+        "sceneTick": 10166,
+        "camera": {
+          "position": [
+            77.99999999999999,
+            12.5,
+            88.69600000000001
+          ],
+          "target": [
+            65.99999999999999,
+            5.049999999999999,
+            102.69600000000001
+          ],
+          "zoom": 5
+        },
+        "rides": [
+          {
+            "id": 0,
+            "name": "Copper Loop",
+            "family": "independent.circuit-coaster",
+            "phase": "running",
+            "status": "open",
+            "cars": 4
+          },
+          {
+            "id": 4,
+            "name": "Juniper Sprint",
+            "family": "independent.circuit-coaster",
+            "phase": "unloading",
+            "status": "open",
+            "cars": 4
+          },
+          {
+            "id": 5,
+            "name": "Highland Flyer",
+            "family": "independent.circuit-coaster",
+            "phase": "running",
+            "status": "open",
+            "cars": 4
+          },
+          {
+            "id": 6,
+            "name": "Cedar Timber Run",
+            "family": "independent.wooden-circuit-coaster",
+            "phase": "running",
+            "status": "open",
+            "cars": 2
+          }
+        ],
+        "cars": [
+          {
+            "id": 3,
+            "ride": 0,
+            "position": {
+              "x": 104,
+              "y": 89.885,
+              "z": 8
+            },
+            "seats": [
+              91,
+              90
+            ],
+            "rig": null
+          },
+          {
+            "id": 4,
+            "ride": 0,
+            "position": {
+              "x": 104,
+              "y": 87.885,
+              "z": 8
+            },
+            "seats": [
+              107,
+              null
+            ],
+            "rig": null
+          },
+          {
+            "id": 5,
+            "ride": 0,
+            "position": {
+              "x": 104,
+              "y": 85.885,
+              "z": 8
+            },
+            "seats": [
+              null,
+              null
+            ],
+            "rig": null
+          },
+          {
+            "id": 6,
+            "ride": 0,
+            "position": {
+              "x": 104,
+              "y": 83.885,
+              "z": 8
+            },
+            "seats": [
+              null,
+              null
+            ],
+            "rig": null
+          },
+          {
+            "id": 7,
+            "ride": 4,
+            "position": {
+              "x": 31,
+              "y": 72,
+              "z": 4
+            },
+            "seats": [
+              58,
+              57
+            ],
+            "rig": null
+          },
+          {
+            "id": 8,
+            "ride": 4,
+            "position": {
+              "x": 29,
+              "y": 72,
+              "z": 4
+            },
+            "seats": [
+              null,
+              null
+            ],
+            "rig": null
+          },
+          {
+            "id": 9,
+            "ride": 4,
+            "position": {
+              "x": 27,
+              "y": 72,
+              "z": 4
+            },
+            "seats": [
+              null,
+              null
+            ],
+            "rig": null
+          },
+          {
+            "id": 10,
+            "ride": 4,
+            "position": {
+              "x": 25,
+              "y": 72,
+              "z": 4
+            },
+            "seats": [
+              null,
+              null
+            ],
+            "rig": null
+          },
+          {
+            "id": 11,
+            "ride": 5,
+            "position": {
+              "x": 152,
+              "y": 89.885,
+              "z": 8
+            },
+            "seats": [
+              69,
+              62
+            ],
+            "rig": null
+          },
+          {
+            "id": 12,
+            "ride": 5,
+            "position": {
+              "x": 152,
+              "y": 87.885,
+              "z": 8
+            },
+            "seats": [
+              55,
+              76
+            ],
+            "rig": null
+          },
+          {
+            "id": 13,
+            "ride": 5,
+            "position": {
+              "x": 152,
+              "y": 85.885,
+              "z": 8
+            },
+            "seats": [
+              75,
+              74
+            ],
+            "rig": null
+          },
+          {
+            "id": 14,
+            "ride": 5,
+            "position": {
+              "x": 152,
+              "y": 83.885,
+              "z": 8
+            },
+            "seats": [
+              null,
+              null
+            ],
+            "rig": null
+          },
+          {
+            "id": 15,
+            "ride": 6,
+            "position": {
+              "x": 57.92082516305789,
+              "y": 148.61154508268808,
+              "z": 4.5
+            },
+            "seats": [
+              68,
+              null,
+              46,
+              51
+            ],
+            "rig": "wooden-coupled-flat"
+          },
+          {
+            "id": 16,
+            "ride": 6,
+            "position": {
+              "x": 57.416624550393635,
+              "y": 145.78706274148206,
+              "z": 4.5
+            },
+            "seats": [
+              99,
+              null,
+              26,
+              88
+            ],
+            "rig": "wooden-coupled-flat"
+          }
+        ],
+        "assets": {
+          "ready": true,
+          "error": null,
+          "disposed": false,
+          "geometries": 33,
+          "materials": 51,
+          "textures": 24,
+          "bitmaps": 24
+        },
+        "wooden": {
+          "activeCars": 2,
+          "activeLinks": 1
+        },
+        "renderer": {
+          "geometries": 328,
+          "textures": 75
+        },
+        "drawCalls": 658,
+        "glErrors": [],
+        "feedback": "Track piece definition missing for piece: lift-start"
+      }
+    },
+    {
+      "name": "reloaded-overview",
+      "state": {
+        "protocol": 2,
+        "content": 2,
+        "tick": 10166,
+        "cash": 483804,
+        "sceneTick": 10166,
+        "camera": {
+          "position": [
+            146,
+            64,
+            156
+          ],
+          "target": [
+            74,
+            4,
+            79.99999999999999
+          ],
+          "zoom": 0.98
+        },
+        "rides": [
+          {
+            "id": 0,
+            "name": "Copper Loop",
+            "family": "independent.circuit-coaster",
+            "phase": "running",
+            "status": "open",
+            "cars": 4
+          },
+          {
+            "id": 4,
+            "name": "Juniper Sprint",
+            "family": "independent.circuit-coaster",
+            "phase": "unloading",
+            "status": "open",
+            "cars": 4
+          },
+          {
+            "id": 5,
+            "name": "Highland Flyer",
+            "family": "independent.circuit-coaster",
+            "phase": "running",
+            "status": "open",
+            "cars": 4
+          },
+          {
+            "id": 6,
+            "name": "Cedar Timber Run",
+            "family": "independent.wooden-circuit-coaster",
+            "phase": "running",
+            "status": "open",
+            "cars": 2
+          }
+        ],
+        "cars": [
+          {
+            "id": 3,
+            "ride": 0,
+            "position": {
+              "x": 104,
+              "y": 89.885,
+              "z": 8
+            },
+            "seats": [
+              91,
+              90
+            ],
+            "rig": null
+          },
+          {
+            "id": 4,
+            "ride": 0,
+            "position": {
+              "x": 104,
+              "y": 87.885,
+              "z": 8
+            },
+            "seats": [
+              107,
+              null
+            ],
+            "rig": null
+          },
+          {
+            "id": 5,
+            "ride": 0,
+            "position": {
+              "x": 104,
+              "y": 85.885,
+              "z": 8
+            },
+            "seats": [
+              null,
+              null
+            ],
+            "rig": null
+          },
+          {
+            "id": 6,
+            "ride": 0,
+            "position": {
+              "x": 104,
+              "y": 83.885,
+              "z": 8
+            },
+            "seats": [
+              null,
+              null
+            ],
+            "rig": null
+          },
+          {
+            "id": 7,
+            "ride": 4,
+            "position": {
+              "x": 31,
+              "y": 72,
+              "z": 4
+            },
+            "seats": [
+              58,
+              57
+            ],
+            "rig": null
+          },
+          {
+            "id": 8,
+            "ride": 4,
+            "position": {
+              "x": 29,
+              "y": 72,
+              "z": 4
+            },
+            "seats": [
+              null,
+              null
+            ],
+            "rig": null
+          },
+          {
+            "id": 9,
+            "ride": 4,
+            "position": {
+              "x": 27,
+              "y": 72,
+              "z": 4
+            },
+            "seats": [
+              null,
+              null
+            ],
+            "rig": null
+          },
+          {
+            "id": 10,
+            "ride": 4,
+            "position": {
+              "x": 25,
+              "y": 72,
+              "z": 4
+            },
+            "seats": [
+              null,
+              null
+            ],
+            "rig": null
+          },
+          {
+            "id": 11,
+            "ride": 5,
+            "position": {
+              "x": 152,
+              "y": 89.885,
+              "z": 8
+            },
+            "seats": [
+              69,
+              62
+            ],
+            "rig": null
+          },
+          {
+            "id": 12,
+            "ride": 5,
+            "position": {
+              "x": 152,
+              "y": 87.885,
+              "z": 8
+            },
+            "seats": [
+              55,
+              76
+            ],
+            "rig": null
+          },
+          {
+            "id": 13,
+            "ride": 5,
+            "position": {
+              "x": 152,
+              "y": 85.885,
+              "z": 8
+            },
+            "seats": [
+              75,
+              74
+            ],
+            "rig": null
+          },
+          {
+            "id": 14,
+            "ride": 5,
+            "position": {
+              "x": 152,
+              "y": 83.885,
+              "z": 8
+            },
+            "seats": [
+              null,
+              null
+            ],
+            "rig": null
+          },
+          {
+            "id": 15,
+            "ride": 6,
+            "position": {
+              "x": 57.92082516305789,
+              "y": 148.61154508268808,
+              "z": 4.5
+            },
+            "seats": [
+              68,
+              63,
+              46,
+              51
+            ],
+            "rig": "wooden-coupled-flat"
+          },
+          {
+            "id": 16,
+            "ride": 6,
+            "position": {
+              "x": 57.416624550393635,
+              "y": 145.78706274148206,
+              "z": 4.5
+            },
+            "seats": [
+              99,
+              94,
+              26,
+              88
+            ],
+            "rig": "wooden-coupled-flat"
+          }
+        ],
+        "assets": {
+          "ready": true,
+          "error": null,
+          "disposed": false,
+          "geometries": 33,
+          "materials": 51,
+          "textures": 24,
+          "bitmaps": 24
+        },
+        "wooden": {
+          "activeCars": 2,
+          "activeLinks": 1
+        },
+        "renderer": {
+          "geometries": 325,
+          "textures": 70
+        },
+        "drawCalls": 1136,
+        "glErrors": [],
+        "feedback": "Your park is ready. Select a tool to build or inspect."
+      }
+    },
+    {
+      "name": "narrow",
+      "state": {
+        "protocol": 2,
+        "content": 2,
+        "tick": 10166,
+        "cash": 483804,
+        "sceneTick": 10166,
+        "camera": {
+          "position": [
+            146,
+            64,
+            156
+          ],
+          "target": [
+            74,
+            4,
+            79.99999999999999
+          ],
+          "zoom": 0.98
+        },
+        "rides": [
+          {
+            "id": 0,
+            "name": "Copper Loop",
+            "family": "independent.circuit-coaster",
+            "phase": "running",
+            "status": "open",
+            "cars": 4
+          },
+          {
+            "id": 4,
+            "name": "Juniper Sprint",
+            "family": "independent.circuit-coaster",
+            "phase": "unloading",
+            "status": "open",
+            "cars": 4
+          },
+          {
+            "id": 5,
+            "name": "Highland Flyer",
+            "family": "independent.circuit-coaster",
+            "phase": "running",
+            "status": "open",
+            "cars": 4
+          },
+          {
+            "id": 6,
+            "name": "Cedar Timber Run",
+            "family": "independent.wooden-circuit-coaster",
+            "phase": "running",
+            "status": "open",
+            "cars": 2
+          }
+        ],
+        "cars": [
+          {
+            "id": 3,
+            "ride": 0,
+            "position": {
+              "x": 104,
+              "y": 89.885,
+              "z": 8
+            },
+            "seats": [
+              91,
+              90
+            ],
+            "rig": null
+          },
+          {
+            "id": 4,
+            "ride": 0,
+            "position": {
+              "x": 104,
+              "y": 87.885,
+              "z": 8
+            },
+            "seats": [
+              107,
+              null
+            ],
+            "rig": null
+          },
+          {
+            "id": 5,
+            "ride": 0,
+            "position": {
+              "x": 104,
+              "y": 85.885,
+              "z": 8
+            },
+            "seats": [
+              null,
+              null
+            ],
+            "rig": null
+          },
+          {
+            "id": 6,
+            "ride": 0,
+            "position": {
+              "x": 104,
+              "y": 83.885,
+              "z": 8
+            },
+            "seats": [
+              null,
+              null
+            ],
+            "rig": null
+          },
+          {
+            "id": 7,
+            "ride": 4,
+            "position": {
+              "x": 31,
+              "y": 72,
+              "z": 4
+            },
+            "seats": [
+              58,
+              57
+            ],
+            "rig": null
+          },
+          {
+            "id": 8,
+            "ride": 4,
+            "position": {
+              "x": 29,
+              "y": 72,
+              "z": 4
+            },
+            "seats": [
+              null,
+              null
+            ],
+            "rig": null
+          },
+          {
+            "id": 9,
+            "ride": 4,
+            "position": {
+              "x": 27,
+              "y": 72,
+              "z": 4
+            },
+            "seats": [
+              null,
+              null
+            ],
+            "rig": null
+          },
+          {
+            "id": 10,
+            "ride": 4,
+            "position": {
+              "x": 25,
+              "y": 72,
+              "z": 4
+            },
+            "seats": [
+              null,
+              null
+            ],
+            "rig": null
+          },
+          {
+            "id": 11,
+            "ride": 5,
+            "position": {
+              "x": 152,
+              "y": 89.885,
+              "z": 8
+            },
+            "seats": [
+              69,
+              62
+            ],
+            "rig": null
+          },
+          {
+            "id": 12,
+            "ride": 5,
+            "position": {
+              "x": 152,
+              "y": 87.885,
+              "z": 8
+            },
+            "seats": [
+              55,
+              76
+            ],
+            "rig": null
+          },
+          {
+            "id": 13,
+            "ride": 5,
+            "position": {
+              "x": 152,
+              "y": 85.885,
+              "z": 8
+            },
+            "seats": [
+              75,
+              74
+            ],
+            "rig": null
+          },
+          {
+            "id": 14,
+            "ride": 5,
+            "position": {
+              "x": 152,
+              "y": 83.885,
+              "z": 8
+            },
+            "seats": [
+              null,
+              null
+            ],
+            "rig": null
+          },
+          {
+            "id": 15,
+            "ride": 6,
+            "position": {
+              "x": 57.92082516305789,
+              "y": 148.61154508268808,
+              "z": 4.5
+            },
+            "seats": [
+              68,
+              63,
+              46,
+              51
+            ],
+            "rig": "wooden-coupled-flat"
+          },
+          {
+            "id": 16,
+            "ride": 6,
+            "position": {
+              "x": 57.416624550393635,
+              "y": 145.78706274148206,
+              "z": 4.5
+            },
+            "seats": [
+              99,
+              94,
+              26,
+              88
+            ],
+            "rig": "wooden-coupled-flat"
+          }
+        ],
+        "assets": {
+          "ready": true,
+          "error": null,
+          "disposed": false,
+          "geometries": 33,
+          "materials": 51,
+          "textures": 24,
+          "bitmaps": 24
+        },
+        "wooden": {
+          "activeCars": 2,
+          "activeLinks": 1
+        },
+        "renderer": {
+          "geometries": 325,
+          "textures": 70
+        },
+        "drawCalls": 1136,
+        "glErrors": [],
+        "feedback": "Your park is ready. Select a tool to build or inspect."
+      }
+    }
+  ],
+  "browser": {
+    "Browser": "Chrome/155.0.8059.39",
+    "Protocol-Version": "1.3",
+    "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+    "V8-Version": "15.5.35.20",
+    "WebKit-Version": "537.36 (@3ff7ac5a9224be9156d7f8703a06e22890aafd34)",
+    "webSocketDebuggerUrl": "ws://127.0.0.1:9237/devtools/browser/206c23d9-a41b-4150-b274-e0d6dbcc6532"
+  },
+  "browserSha256": "ed05e73a2cdf875326fcfa438b31c71a6a885a353610731dd52090dfc476f778",
+  "runningCheckpoint": {
+    "path": "/workspace/coaster-mixed-wooden/evidence/paid-running-park.json",
+    "sha256": "3eb77fc61e7a1fb86ae34f028bbc6fd64306f117c7240be2e3bdf215f4d859b0",
+    "scope": "Complete real Engine-advanced park with exact saved Rules; no injected renderer pose."
+  },
+  "pickingProbe": {
+    "clientX": 703.3918142435568,
+    "clientY": 459.73300415750583,
+    "mesh": "BogieFront_Metal",
+    "pick": {
+      "kind": "ride",
+      "id": 6
+    },
+    "wrapperPosition": [
+      57.92082516305789,
+      4.5,
+      148.61154508268808
+    ]
+  },
+  "picking": {
+    "point": {
+      "clientX": 703.3918142435568,
+      "clientY": 459.73300415750583,
+      "mesh": "BogieFront_Metal",
+      "pick": {
+        "kind": "ride",
+        "id": 6
+      },
+      "wrapperPosition": [
+        57.92082516305789,
+        4.5,
+        148.61154508268808
+      ]
+    },
+    "inspection": "Cedar Timber Runopen \u00b7 8 in queueTicket sales$62.00Track pieces20TestOpenCloseTicketSetCarsSetBuild / edit trackTest measurementsLength164.6 mMax speed28.8 km/hDuration20.6 sVertical forces1.00 to 1.00 gLateral force0.41 g"
+  },
+  "saveSha256": "3eb77fc61e7a1fb86ae34f028bbc6fd64306f117c7240be2e3bdf215f4d859b0",
+  "crossSaveVehicleSelection": {
+    "green": {
+      "sameWrapper": true,
+      "cars": [
+        {
+          "name": "WoodenCar_1",
+          "selection": {
+            "kind": "ride",
+            "id": 1
+          }
+        },
+        {
+          "name": "WoodenCar_2",
+          "selection": {
+            "kind": "ride",
+            "id": 1
+          }
+        },
+        {
+          "name": "WoodenLink_2",
+          "selection": {
+            "kind": "ride",
+            "id": 1
+          }
+        }
+      ]
+    },
+    "oldNegative": [
+      {
+        "name": "WoodenCar_1",
+        "selection": {
+          "kind": "ride",
+          "id": 0
+        }
+      },
+      {
+        "name": "WoodenCar_2",
+        "selection": {
+          "kind": "ride",
+          "id": 0
+        }
+      },
+      {
+        "name": "WoodenLink_2",
+        "selection": {
+          "kind": "ride",
+          "id": 0
+        }
+      }
+    ],
+    "inputs": [
+      {
+        "file": "selection-park-a.json",
+        "sha256": "7cd17b29cc22f4e4e19e9507f45fc6a8cc7df269e03bcb117e467ae07305386d"
+      },
+      {
+        "file": "selection-park-b.json",
+        "sha256": "1d1c67c5cc528ade84a6461b94345514193f30154ae0faee1a38cea68e51c039"
+      }
+    ],
+    "actualPick": {
+      "clientX": 735.1308994328502,
+      "clientY": 472.4410643248653,
+      "pick": {
+        "kind": "ride",
+        "id": 1
+      }
+    }
+  },
+  "orderedNullSeats": [
+    {
+      "id": 15,
+      "expected": [
+        68,
+        null,
+        46,
+        51
+      ],
+      "rendered": [
+        68,
+        null,
+        46,
+        51
+      ]
+    },
+    {
+      "id": 16,
+      "expected": [
+        99,
+        null,
+        26,
+        88
+      ],
+      "rendered": [
+        99,
+        null,
+        26,
+        88
+      ]
+    }
+  ],
+  "preReloadDisposed": {
+    "ready": false,
+    "error": null,
+    "disposed": true,
+    "geometries": 0,
+    "materials": 0,
+    "textures": 0,
+    "bitmaps": 0
+  },
+  "indexedDBReloadSha256": "3eb77fc61e7a1fb86ae34f028bbc6fd64306f117c7240be2e3bdf215f4d859b0",
+  "passed": false,
+  "failure": ""
+}
