@@ -1,0 +1,626 @@
+{
+  "scope": "Actual isolated exported hitch inspector and software WebGL; no finite collision/native/original/hardware/visual acceptance",
+  "browserVersion": "Chrome/155.0.8059.39",
+  "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/wooden-hitch/",
+  "states": [
+    {
+      "ready": true,
+      "asset": "wooden-car-joint",
+      "frame": 17,
+      "errorCount": 0,
+      "glError": 0,
+      "glErrors": [],
+      "drawCalls": 28,
+      "triangles": 39842,
+      "geometries": 15,
+      "textures": 10,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "anchors": [
+        "RailRoot",
+        "BogieFront",
+        "BogieRear",
+        "Seat_FrontLeft",
+        "Seat_FrontRight",
+        "Seat_RearLeft",
+        "Seat_RearRight",
+        "Coupler_Front",
+        "Coupler_Rear"
+      ],
+      "camera": [
+        4.5432144539326345,
+        3.8843633944501414,
+        6.310020074906436
+      ]
+    },
+    {
+      "ready": true,
+      "asset": "wooden-drawbar",
+      "frame": 117,
+      "errorCount": 0,
+      "glError": 0,
+      "glErrors": [],
+      "drawCalls": 4,
+      "triangles": 874,
+      "geometries": 16,
+      "textures": 13,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "anchors": [
+        "DrawbarRoot",
+        "Joint_EndA",
+        "Joint_EndB"
+      ],
+      "camera": [
+        0.5311785406316238,
+        0.41400311092060693,
+        0.7392230936060629
+      ]
+    },
+    {
+      "ready": true,
+      "asset": "wooden-drawbar",
+      "frame": 216,
+      "errorCount": 0,
+      "glError": 0,
+      "glErrors": [],
+      "drawCalls": 4,
+      "triangles": 874,
+      "geometries": 3,
+      "textures": 7,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "anchors": [
+        "DrawbarRoot",
+        "Joint_EndA",
+        "Joint_EndB"
+      ],
+      "camera": [
+        0.5319408536730419,
+        0.4137405941658471,
+        0.7388217978192626
+      ]
+    },
+    {
+      "ready": true,
+      "asset": "wooden-drawbar",
+      "frame": 228,
+      "errorCount": 0,
+      "glError": 0,
+      "glErrors": [],
+      "drawCalls": 4,
+      "triangles": 874,
+      "geometries": 3,
+      "textures": 7,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "anchors": [
+        "DrawbarRoot",
+        "Joint_EndA",
+        "Joint_EndB"
+      ],
+      "camera": [
+        0.5319478530942383,
+        0.4137381830986731,
+        0.7388181084912847
+      ]
+    }
+  ],
+  "actualNetworkAssets": [
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/wooden-hitch/models/wooden-car-joint.glb",
+      "bytes": 3590960,
+      "sha256": "7b6ae0f47746d4e8bd624ad2323f7cd20abec214711cbfb4e89329adc687202e"
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/wooden-hitch/models/wooden-drawbar.glb",
+      "bytes": 988980,
+      "sha256": "bd65312ab91197d08d66fd6258e31f31e46b6d529832a0d741fcb729e0fec671"
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/wooden-hitch/asset-index.json",
+      "bytes": 46703,
+      "sha256": "323b9efff54301ba74d7910ab56a70063f56ae59df6941e642f4d5a7462b5028"
+    }
+  ],
+  "captures": [
+    {
+      "file": "wooden-car-joint-front.png",
+      "sha256": "2ee0283516261362c6453c182784ace9dfa52e50e760e7cc1122af9c198ee847",
+      "state": {
+        "ready": true,
+        "asset": "wooden-car-joint",
+        "frame": 27,
+        "errorCount": 0,
+        "glError": 0,
+        "glErrors": [],
+        "drawCalls": 28,
+        "triangles": 39842,
+        "geometries": 15,
+        "textures": 10,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "anchors": [
+          "RailRoot",
+          "BogieFront",
+          "BogieRear",
+          "Seat_FrontLeft",
+          "Seat_FrontRight",
+          "Seat_RearLeft",
+          "Seat_RearRight",
+          "Coupler_Front",
+          "Coupler_Rear"
+        ],
+        "camera": [
+          3.795107379869581,
+          4.134698394581697,
+          6.649997755012973
+        ]
+      }
+    },
+    {
+      "file": "wooden-car-joint-rear.png",
+      "sha256": "775527050266344b56a372c4a331b3e695806533b92da6e185c38525eae94650",
+      "state": {
+        "ready": true,
+        "asset": "wooden-car-joint",
+        "frame": 37,
+        "errorCount": 0,
+        "glError": 0,
+        "glErrors": [],
+        "drawCalls": 28,
+        "triangles": 39842,
+        "geometries": 15,
+        "textures": 10,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "anchors": [
+          "RailRoot",
+          "BogieFront",
+          "BogieRear",
+          "Seat_FrontLeft",
+          "Seat_FrontRight",
+          "Seat_RearLeft",
+          "Seat_RearRight",
+          "Coupler_Front",
+          "Coupler_Rear"
+        ],
+        "camera": [
+          -4.12130132093373,
+          4.027226950905398,
+          -6.514750018852732
+        ]
+      }
+    },
+    {
+      "file": "wooden-car-joint-left.png",
+      "sha256": "571cfea5fc65ec27c7cd7f3cb863693a94f31010297783f8338c85ee07dc3ea4",
+      "state": {
+        "ready": true,
+        "asset": "wooden-car-joint",
+        "frame": 47,
+        "errorCount": 0,
+        "glError": 0,
+        "glErrors": [],
+        "drawCalls": 28,
+        "triangles": 39842,
+        "geometries": 15,
+        "textures": 10,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "anchors": [
+          "RailRoot",
+          "BogieFront",
+          "BogieRear",
+          "Seat_FrontLeft",
+          "Seat_FrontRight",
+          "Seat_RearLeft",
+          "Seat_RearRight",
+          "Coupler_Front",
+          "Coupler_Rear"
+        ],
+        "camera": [
+          -8.07408859710432,
+          3.135103424259151,
+          -0.006375809006304421
+        ]
+      }
+    },
+    {
+      "file": "wooden-car-joint-right.png",
+      "sha256": "c15183bca405cfc221b609290286de058e4ac33c75a3cdc99efd3d24e32ef483",
+      "state": {
+        "ready": true,
+        "asset": "wooden-car-joint",
+        "frame": 60,
+        "errorCount": 0,
+        "glError": 0,
+        "glErrors": [],
+        "drawCalls": 28,
+        "triangles": 39842,
+        "geometries": 15,
+        "textures": 10,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "anchors": [
+          "RailRoot",
+          "BogieFront",
+          "BogieRear",
+          "Seat_FrontLeft",
+          "Seat_FrontRight",
+          "Seat_RearLeft",
+          "Seat_RearRight",
+          "Coupler_Front",
+          "Coupler_Rear"
+        ],
+        "camera": [
+          8.07885493649406,
+          3.091647765509188,
+          0.4039226201261173
+        ]
+      }
+    },
+    {
+      "file": "wooden-car-joint-overview.png",
+      "sha256": "7d9ca6a1631519bdfd9e73468058617f9e004423031a3e378944e8c81c750f56",
+      "state": {
+        "ready": true,
+        "asset": "wooden-car-joint",
+        "frame": 70,
+        "errorCount": 0,
+        "glError": 0,
+        "glErrors": [],
+        "drawCalls": 28,
+        "triangles": 39842,
+        "geometries": 15,
+        "textures": 10,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "anchors": [
+          "RailRoot",
+          "BogieFront",
+          "BogieRear",
+          "Seat_FrontLeft",
+          "Seat_FrontRight",
+          "Seat_RearLeft",
+          "Seat_RearRight",
+          "Coupler_Front",
+          "Coupler_Rear"
+        ],
+        "camera": [
+          4.955721963432196,
+          5.133828288116603,
+          5.050402145516545
+        ]
+      }
+    },
+    {
+      "file": "wooden-car-joint-close.png",
+      "sha256": "562e07620b1ea3b0aa554b8efddc34a67499cf479714c40f5d6a19fe7b74f823",
+      "state": {
+        "ready": true,
+        "asset": "wooden-car-joint",
+        "frame": 83,
+        "errorCount": 0,
+        "glError": 0,
+        "glErrors": [],
+        "drawCalls": 28,
+        "triangles": 39842,
+        "geometries": 15,
+        "textures": 10,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "anchors": [
+          "RailRoot",
+          "BogieFront",
+          "BogieRear",
+          "Seat_FrontLeft",
+          "Seat_FrontRight",
+          "Seat_RearLeft",
+          "Seat_RearRight",
+          "Coupler_Front",
+          "Coupler_Rear"
+        ],
+        "camera": [
+          2.952272525496534,
+          2.7162217769639994,
+          4.218180432151223
+        ]
+      }
+    },
+    {
+      "file": "wooden-car-joint-open.png",
+      "sha256": "cc310ef4b9d36dfdcb3b5bebf4fe2d146933b0e53a51ebcf1f01e976330a4ed7",
+      "state": {
+        "ready": true,
+        "asset": "wooden-car-joint",
+        "frame": 95,
+        "errorCount": 0,
+        "glError": 0,
+        "glErrors": [],
+        "drawCalls": 37,
+        "triangles": 41102,
+        "geometries": 24,
+        "textures": 10,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "anchors": [
+          "RailRoot",
+          "BogieFront",
+          "BogieRear",
+          "Seat_FrontLeft",
+          "Seat_FrontRight",
+          "Seat_RearLeft",
+          "Seat_RearRight",
+          "Coupler_Front",
+          "Coupler_Rear"
+        ],
+        "camera": [
+          4.515721947588545,
+          3.8938224501780443,
+          6.324434163398325
+        ]
+      }
+    },
+    {
+      "file": "wooden-drawbar-front.png",
+      "sha256": "0ad36fe6d3a9dfbeedc13a2960a40658bde58764109112d419d80d9a2178d217",
+      "state": {
+        "ready": true,
+        "asset": "wooden-drawbar",
+        "frame": 121,
+        "errorCount": 0,
+        "glError": 0,
+        "glErrors": [],
+        "drawCalls": 4,
+        "triangles": 874,
+        "geometries": 16,
+        "textures": 13,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "anchors": [
+          "DrawbarRoot",
+          "Joint_EndA",
+          "Joint_EndB"
+        ],
+        "camera": [
+          0.5313527975297361,
+          0.4139431153331295,
+          0.7391314509785298
+        ]
+      }
+    },
+    {
+      "file": "wooden-drawbar-rear.png",
+      "sha256": "0dcf42be9c619dfdd1623f23599faeaa777119d259119a7cdceaaf8333148a81",
+      "state": {
+        "ready": true,
+        "asset": "wooden-drawbar",
+        "frame": 132,
+        "errorCount": 0,
+        "glError": 0,
+        "glErrors": [],
+        "drawCalls": 4,
+        "triangles": 874,
+        "geometries": 16,
+        "textures": 13,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "anchors": [
+          "DrawbarRoot",
+          "Joint_EndA",
+          "Joint_EndB"
+        ],
+        "camera": [
+          -0.5316267286702056,
+          0.41384878690206245,
+          -0.7389872819900941
+        ]
+      }
+    },
+    {
+      "file": "wooden-drawbar-left.png",
+      "sha256": "e08331d08cebce38f69de4576430cc5707ef5eda0801803172b0486e519d0091",
+      "state": {
+        "ready": true,
+        "asset": "wooden-drawbar",
+        "frame": 142,
+        "errorCount": 0,
+        "glError": 0,
+        "glErrors": [],
+        "drawCalls": 4,
+        "triangles": 874,
+        "geometries": 16,
+        "textures": 13,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "anchors": [
+          "DrawbarRoot",
+          "Joint_EndA",
+          "Joint_EndB"
+        ],
+        "camera": [
+          -0.9481945146760972,
+          0.3161355079500074,
+          0.031392721311654326
+        ]
+      }
+    },
+    {
+      "file": "wooden-drawbar-right.png",
+      "sha256": "2badce7196ae041c759223d49d3a2278958c8485d3481dfcbd4bd34b1d0409b2",
+      "state": {
+        "ready": true,
+        "asset": "wooden-drawbar",
+        "frame": 153,
+        "errorCount": 0,
+        "glError": 0,
+        "glErrors": [],
+        "drawCalls": 4,
+        "triangles": 874,
+        "geometries": 16,
+        "textures": 13,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "anchors": [
+          "DrawbarRoot",
+          "Joint_EndA",
+          "Joint_EndB"
+        ],
+        "camera": [
+          0.9481936305136939,
+          0.31610529263810944,
+          0.03172196430607248
+        ]
+      }
+    },
+    {
+      "file": "wooden-drawbar-overview.png",
+      "sha256": "014f42bf937770720e65bca649d9dbe3fa9063fb17b7b7b798dc1074f5a8a85d",
+      "state": {
+        "ready": true,
+        "asset": "wooden-drawbar",
+        "frame": 164,
+        "errorCount": 0,
+        "glError": 0,
+        "glErrors": [],
+        "drawCalls": 4,
+        "triangles": 874,
+        "geometries": 16,
+        "textures": 13,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "anchors": [
+          "DrawbarRoot",
+          "Joint_EndA",
+          "Joint_EndB"
+        ],
+        "camera": [
+          0.586920697236217,
+          0.5576357017271946,
+          0.5869978869765822
+        ]
+      }
+    },
+    {
+      "file": "drawbar-wireframe.png",
+      "sha256": "08a4e4aba5c4405151adcfdd9526f2e0b875ded0d793f916d413ccffcbd1b55a",
+      "state": {
+        "ready": true,
+        "asset": "wooden-drawbar",
+        "frame": 175,
+        "errorCount": 0,
+        "glError": 0,
+        "glErrors": [],
+        "drawCalls": 4,
+        "triangles": 2,
+        "geometries": 16,
+        "textures": 13,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "anchors": [
+          "DrawbarRoot",
+          "Joint_EndA",
+          "Joint_EndB"
+        ],
+        "camera": [
+          0.5868325096674774,
+          0.5576674996999326,
+          0.5870558451934498
+        ]
+      }
+    },
+    {
+      "file": "workshop-narrow.png",
+      "sha256": "e2f259af96ca6dc0a58f374db7f84eece8503aeb4b5678503daccab91801a714",
+      "state": {
+        "ready": true,
+        "asset": "wooden-drawbar",
+        "frame": 189,
+        "errorCount": 0,
+        "glError": 0,
+        "glErrors": [],
+        "drawCalls": 4,
+        "triangles": 874,
+        "geometries": 16,
+        "textures": 13,
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "anchors": [
+          "DrawbarRoot",
+          "Joint_EndA",
+          "Joint_EndB"
+        ],
+        "camera": [
+          0.5867729078506536,
+          0.557688988721054,
+          0.587095006342054
+        ]
+      }
+    }
+  ],
+  "exceptions": [],
+  "pointerSelection": "Selected: CarBody_Tub",
+  "reloadDuringInitialLoad": true,
+  "narrowLayout": {
+    "canvasClear": true,
+    "buttonsClear": true
+  },
+  "orbitChangedCamera": true,
+  "pageCount": 1,
+  "passed": true
+}
