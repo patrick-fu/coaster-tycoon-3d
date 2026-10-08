@@ -1,0 +1,1220 @@
+{
+  "source": "1fef53101191044a93e669fd8276eb265e090ff9",
+  "publishedBranch": "43e48dfd4bfa2a8ccd9b337a834d92bb35809e61",
+  "files": [
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/content-browser.js?verify=1fef531",
+      "bytes": 48441,
+      "sha256": "4b4bc07fe21d1b3b6661f98bda8e0a31ec006cbbdd3a0686303c73986ae10196",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/game.js?verify=1fef531",
+      "bytes": 29311,
+      "sha256": "8823206e25ef7c4a04dd6b6635638423d7b6c5fd44c034d7be0e91125299ab76",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/content-browser.css?verify=1fef531",
+      "bytes": 22049,
+      "sha256": "b0ca6136234806692e643b6117b5b3df9696161a86a8f3590c30dfcd5d1cd566",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/style.css?verify=1fef531",
+      "bytes": 27464,
+      "sha256": "f33dec5c2b4f693381e9b05308d47c10bf97ad89ba17a5a4642881435f7b20bc",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/LICENSE?verify=1fef531",
+      "bytes": 1067,
+      "sha256": "f68cef6a23271aa6fa5022cd7acebc98de572571df4a97077b0ecd7b385aa45d",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/favicon.svg?verify=1fef531",
+      "bytes": 213,
+      "sha256": "60879a890648c630ab1dc7cdc25975693b3c0610be77a4a11d2e7c7315d5c697",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/park-scene.js?verify=1fef531",
+      "bytes": 12785,
+      "sha256": "9aa9fa2e68dbfe7ab035afdd351a2a2c3a7b59bd03801051c929a7e7eb61349f",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/THIRD_PARTY_NOTICES.md?verify=1fef531",
+      "bytes": 5175,
+      "sha256": "6835c9f7721b9d77657de4c02f9773761eb1b019b72b8401e8c29d8e3de1bc40",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/index.html?verify=1fef531",
+      "bytes": 11476,
+      "sha256": "49bf0b71c09eda8a714fa261c0ce98efe75f8a43019da06a0fde696b34700b2d",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/art/buildings.js?verify=1fef531",
+      "bytes": 33871,
+      "sha256": "fd59e83c14589dc1db7cf43ef79a0ad02ebede0569f092465349387a0161e720",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/art/surface-assets.js?verify=1fef531",
+      "bytes": 2332,
+      "sha256": "11495b97bf3daaffcf49f7fd991da882fdf2321347739fda88d6fcf35ced2927",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/art/wooden-coaster.js?verify=1fef531",
+      "bytes": 38791,
+      "sha256": "9ebceda15d406332d37ab8dae756a1725b7a36cc7278ab7ac8b6d7438c920898",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/art/runtime.js?verify=1fef531",
+      "bytes": 5320,
+      "sha256": "8b85e50ffed823678e3235639ae726ba7bee3e0c52c527855fce056b98df9e60",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/art/wooden-assets.js?verify=1fef531",
+      "bytes": 5815,
+      "sha256": "3475acd3d3975ad8951135e0e3382ab7f530b5fa87824ec0013575086522a237",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/art/surface-palette.js?verify=1fef531",
+      "bytes": 2093,
+      "sha256": "91adbb55a95dc3b0b2ad670084a7f93366c266a09df6ed36bf414cb23b538768",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/art/coaster.js?verify=1fef531",
+      "bytes": 65435,
+      "sha256": "acea0401e86ca920fefdca2d25ac43c6ca88f6ad78d980b995967c9a19d42951",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/art/environment.js?verify=1fef531",
+      "bytes": 60634,
+      "sha256": "fe32698008e3f040fd3abf7fa93e9f24b0854473a21117aae222f3f63529bb00",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/art/tree-assets.js?verify=1fef531",
+      "bytes": 5027,
+      "sha256": "daa01cc5d707a402a6523adb3e815a6ce7d1d88e4c9b1f0c72702467f8c6e054",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/scenery.d.ts?verify=1fef531",
+      "bytes": 299,
+      "sha256": "b4c948c6004a2de0dbc5141a1c3fe28038ab036458e5b7824d8a30e0e6286bfb",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/host.js?verify=1fef531",
+      "bytes": 2139,
+      "sha256": "d2dfa7c018b25214231009e850e56507019cea9a7484459d990247bed9f775b2",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/operation.d.ts?verify=1fef531",
+      "bytes": 715,
+      "sha256": "4be5cf50780fee55e4602037219873aff1236a984d140de8a730f4ab92ae03dc",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/protocol.js?verify=1fef531",
+      "bytes": 42,
+      "sha256": "7a6137244c462f6128cf52ecced16e166005389312219dc9c95493bacbd7e813",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/clock.d.ts?verify=1fef531",
+      "bytes": 298,
+      "sha256": "3743b968c76cf0406ef9e81b77056b24bb39fec52a1d1ee203ec620667a36567",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/people.d.ts?verify=1fef531",
+      "bytes": 3516,
+      "sha256": "d0d827823c3cdf19ce7e95fc5ad8e5ebad30bc8c71e3f53eea353094d058bcd9",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/protocol.d.ts?verify=1fef531",
+      "bytes": 49,
+      "sha256": "bff2fbe07d03750518a73163afc04bb1cbaaaf95b3fc19de7f1c29fda98fb2cc",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/host.d.ts?verify=1fef531",
+      "bytes": 7473,
+      "sha256": "c2fea4cb6a623598b8060996b5ed5b114d838b5a240bcd15a0d4faedeb06198c",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/operation.js?verify=1fef531",
+      "bytes": 4436,
+      "sha256": "b85251b571225c3a89ec340114d6b7e3be5ab28040c90beda07b64fa837a9363",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/patrol.d.ts?verify=1fef531",
+      "bytes": 193,
+      "sha256": "ccd72adedd54103092d2887e31753f8d745417372834c6c4054f3e50979e3273",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/geometry.d.ts?verify=1fef531",
+      "bytes": 564,
+      "sha256": "7f9748530e1641db5515ee36491598adfb17c22049dfb22dcfacb5ab818c3107",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/motion.d.ts?verify=1fef531",
+      "bytes": 1849,
+      "sha256": "9b8e99db9e77447f15a84b1d92cce8cd14f6bf8f49e43023aa1b44e7b0b943b7",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/index.d.ts?verify=1fef531",
+      "bytes": 312,
+      "sha256": "ff7c5c26ad7c54ab4e64bdc958da4afc382f8731f870954fef49d518ee5451e5",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/view.d.ts?verify=1fef531",
+      "bytes": 3867,
+      "sha256": "551a1baaae65baf4f4eb0d129630d3e99b099b7047625726421870d07c0cb2ab",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/wooden-motion.js?verify=1fef531",
+      "bytes": 5888,
+      "sha256": "aaed1ed31a0764f8ecc8b07db1d2c6bc6e2a0230b2002daff30729a20c5da12d",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/wooden-motion.d.ts?verify=1fef531",
+      "bytes": 630,
+      "sha256": "afffebbc06f9be5967f5f607eadbfc6f01fda2aa22d77c6ab0c82c9b90e28c4d",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/wooden-placement.js?verify=1fef531",
+      "bytes": 5861,
+      "sha256": "c0ce952233aa5e32448b21309e72d2b6e6cba11d85fb30109921ac2e9ac36670",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/validation.js?verify=1fef531",
+      "bytes": 1191,
+      "sha256": "10a2f21ddd134f16105bf4f0153d57a6e660d7938157e30c1958487498b66056",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/housekeeping.d.ts?verify=1fef531",
+      "bytes": 1865,
+      "sha256": "990317c2bb8a132cc5e991592594b00977344fb025db0ada0f273e3cd6ae9281",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/engine.js?verify=1fef531",
+      "bytes": 81816,
+      "sha256": "ae54ab209021ccb0f3929deb29bf585f3bb4bf05b9d675f92a91549f2b0d23fd",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/patrol.js?verify=1fef531",
+      "bytes": 562,
+      "sha256": "4a59eec5e274c541fecf413cb62cd27cabfe5fb13aaa6104d5543b8498b16e16",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/routes.js?verify=1fef531",
+      "bytes": 3156,
+      "sha256": "ec098e36c6a24155b4d10da3118a7240e08850a4b38c52eb7d4891be556c3453",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/routes.d.ts?verify=1fef531",
+      "bytes": 707,
+      "sha256": "59198c54257a442d97c716a79d773a68d8c3e0c3475f0148c954d0557c4abaa8",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/clock.js?verify=1fef531",
+      "bytes": 834,
+      "sha256": "32820b03a12b9bde816654f4e58fd37a24c32b9c8dc035b52d157636e58d9fbd",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/types.d.ts?verify=1fef531",
+      "bytes": 7428,
+      "sha256": "e4a8afe9d838f88a543c4262e3672f776f20cfb7763f2b8fc65298eb0ce030c4",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/people.js?verify=1fef531",
+      "bytes": 18862,
+      "sha256": "dbc11106f53b7fd7d230ec6b84a3b2daf6ddd5f5644b1717cbf06b1ace888b54",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/geometry.js?verify=1fef531",
+      "bytes": 14234,
+      "sha256": "2496cb72ebf3e5c854769fdbef90e45d7ce9bf0fede0855cae84310da60113f7",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/services.d.ts?verify=1fef531",
+      "bytes": 2764,
+      "sha256": "9ff71f82fddd7b1e077e73e2790d488ccdd173fa810f759f90b200658c3b9c70",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/housekeeping.js?verify=1fef531",
+      "bytes": 6841,
+      "sha256": "37f6c3f0c0b89ea42b97b0250c20aa01bc4e2b3c3ae58bfd6b78869d613b2932",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/services.js?verify=1fef531",
+      "bytes": 9458,
+      "sha256": "274a27fd582abacb8c1be47f70b10b5f4b6a50423dea162244dc1dc9115e9a35",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/motion.js?verify=1fef531",
+      "bytes": 8356,
+      "sha256": "4c3d5c27617302f607d0235a10eeda4cd4fafc9c81cb7859327fba0b407f34e6",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/view.js?verify=1fef531",
+      "bytes": 5938,
+      "sha256": "c9c84395fad293ac2fb2ca365e8af86014d15f69b90bb7edffbac033e7aebe07",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/wooden-placement.d.ts?verify=1fef531",
+      "bytes": 1098,
+      "sha256": "d409be26409dee0a62273c78f9b0c0f7f89e6ce565cc9bcce94e26843d6e0eb5",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/validation.d.ts?verify=1fef531",
+      "bytes": 518,
+      "sha256": "b5a15290a701b60b3d0ccfa2c8b0968fefe4b639623effee2e2f8d3cc121a43d",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/types.js?verify=1fef531",
+      "bytes": 147,
+      "sha256": "1a6231381895d5abcccbc927e582be7270c22e19c76be7c5c3e560d83ea97d91",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/index.js?verify=1fef531",
+      "bytes": 132,
+      "sha256": "346366ed60f6c42fcb47aa83210f541b512704500f290f203513ca17b0a809c4",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/scenery.js?verify=1fef531",
+      "bytes": 408,
+      "sha256": "af181426f98f7c6daab583055906264db929940ecb25a3fe50c1ca219d9ee520",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/engine.d.ts?verify=1fef531",
+      "bytes": 7741,
+      "sha256": "f4298e29d4b2238d4410cc2ed5d21c0240393170ade8bc92fdcae72da2f2cf3e",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js?verify=1fef531",
+      "bytes": 2942,
+      "sha256": "30155c29a86a08be5e22ea9e54f862e5490daab1db705de19ee154ee1cd06e18",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.d.ts?verify=1fef531",
+      "bytes": 11,
+      "sha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/content/registry.js?verify=1fef531",
+      "bytes": 6700,
+      "sha256": "23a369f28e7d5e021d56bd5cd1a6576ea7913ed758bf3c2b233469234b2f12f0",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/content/ride-profiles.js?verify=1fef531",
+      "bytes": 1400,
+      "sha256": "463213ddc03167e4eb47338881ab4b896131f27c49645a74ee4ad99293a1b068",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/content/mixed-park.js?verify=1fef531",
+      "bytes": 2989,
+      "sha256": "6ee32ad1482c465cf2e85011caa37e6f8f740cf1e1138dac672e9db2c2437e7c",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/content/registry.d.ts?verify=1fef531",
+      "bytes": 2478,
+      "sha256": "2b6bfd2cceaf0036c7add117fae97f8774fcdd9871d615e8f0f8d385fd5a3984",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/content/wooden-coaster.js?verify=1fef531",
+      "bytes": 1734,
+      "sha256": "c3a0c2c2f43aeb88a1ad81f64e45dd185f894b84d2e9400b4da944e12f6a3c70",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/content/rct2-reference.d.ts?verify=1fef531",
+      "bytes": 384,
+      "sha256": "e327772f17f7fff8360c33ab5c95ce74c818d5ff121763ed8730d224cc78eb34",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/content/wooden-coaster.d.ts?verify=1fef531",
+      "bytes": 341,
+      "sha256": "1d18eb70495ec22dff370d91b6067aeba342afa4f0973ca74da91ffb7d8c798e",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/content/rct2-reference.js?verify=1fef531",
+      "bytes": 113071,
+      "sha256": "23ad185689097bbc9b21d87de63f4d62a4d2365fa019f983cf8b8ae85f7836ee",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/content/steel-coaster.d.ts?verify=1fef531",
+      "bytes": 262,
+      "sha256": "fc52bfae7e5a3859038b4287c6587f198a5dea994f009024cac097ad87f66bbc",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/content/ride-profiles.d.ts?verify=1fef531",
+      "bytes": 528,
+      "sha256": "7a15efb8f9cf893133c19a44ab16b7694c24700b1e930fd66c0c4e2b280e7516",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/content/steel-coaster.js?verify=1fef531",
+      "bytes": 9691,
+      "sha256": "d248ab39ba5695c5402872b634d514cc81517673c44d77e9e0da3deaaf683335",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/content/wooden-footprints.js?verify=1fef531",
+      "bytes": 10283,
+      "sha256": "ef471c76a23274bf86a3f17acc00bcd69ed9f8eca1a3fb17b74b8c0c9c86f9d2",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/content/mixed-park.d.ts?verify=1fef531",
+      "bytes": 155,
+      "sha256": "6cbe3e50867ed748889ffeb7b4ec1755379697e5c4e09051200c5b073b08af5f",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/content/wooden-footprints.d.ts?verify=1fef531",
+      "bytes": 125,
+      "sha256": "ba3813d9ef80c8ade8a7156e5d23151699fe3bcf44f520559b64e9481528af43",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/vendor/THREE-LICENSE.txt?verify=1fef531",
+      "bytes": 1081,
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/vendor/OrbitControls.js?verify=1fef531",
+      "bytes": 40755,
+      "sha256": "3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/vendor/three.module.js?verify=1fef531",
+      "bytes": 662772,
+      "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/vendor/three.core.js?verify=1fef531",
+      "bytes": 1458113,
+      "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/textures/surfaces/grass-roughness.png?verify=1fef531",
+      "bytes": 194627,
+      "sha256": "4cd9ae5b58a46cd172816974664f19b1aaf540c0ef1cfed8719bf59b702ec4e3",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/textures/surfaces/grass-color.png?verify=1fef531",
+      "bytes": 509645,
+      "sha256": "fdfda01eb989b5eff677408c822f37097394711e569fe4b28f02787aa723af92",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/textures/surfaces/grass-normal.png?verify=1fef531",
+      "bytes": 636185,
+      "sha256": "9c72876ec82f95e6ca3b50d14199055bba17248a358520b9948da0a497ff22b0",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/textures/surfaces/paving-normal.png?verify=1fef531",
+      "bytes": 256304,
+      "sha256": "0b3097df90811489d17d1ae9c7fa6437cf26c9c65370bd6785b607e15ad3fafb",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/textures/surfaces/paving-roughness.png?verify=1fef531",
+      "bytes": 83498,
+      "sha256": "7b0958ee8f21e7844a0f9d441bf4e1e0e0c288eec59a24da479235c255fdc654",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/textures/surfaces/paving-color.png?verify=1fef531",
+      "bytes": 249959,
+      "sha256": "b34277b63dc34dc1c90639329843c75137532fc9c3066a4f1a6edcb3bf92802b",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/vendor/addons/utils/SkeletonUtils.js?verify=1fef531",
+      "bytes": 11535,
+      "sha256": "b1632a703206c3d830de9fcbe515696770d04b71a15ee6b50afa6d2c3298c86f",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/vendor/addons/utils/BufferGeometryUtils.js?verify=1fef531",
+      "bytes": 37712,
+      "sha256": "9fb63427ce6641fa14fd0baff9cc4d1b5f9c3d85fd084bf2e90e803c44ec1797",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/vendor/addons/loaders/GLTFLoader.js?verify=1fef531",
+      "bytes": 117570,
+      "sha256": "131c0f78c01d19368ae495caa65b3adaa10487810a36a05bb5901b769a35ac16",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/models/wooden/station.glb?verify=1fef531",
+      "bytes": 9199772,
+      "sha256": "32214cdb6f388bcda1bdbbd59b8ac5a59ba454d947d2fde45380898572809cbd",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/models/wooden/link.glb?verify=1fef531",
+      "bytes": 988980,
+      "sha256": "bd65312ab91197d08d66fd6258e31f31e46b6d529832a0d741fcb729e0fec671",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/models/wooden/car.glb?verify=1fef531",
+      "bytes": 3636520,
+      "sha256": "ed293d53712c1bc02ce01a5c027d69dd7b31e60ae41c8a811d9a9464274f9adc",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/models/trees/organic-tree-lod2.gltf?verify=1fef531",
+      "bytes": 6519,
+      "sha256": "9f6b829b9a0446f89f413ceb84fa3be6bbec981f91fd6a288ad4264f7edf5a2d",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/models/trees/organic-tree-lod2.bin?verify=1fef531",
+      "bytes": 60740,
+      "sha256": "ccc5f2c623bd5e86c62b52375bd9b9489309bdfcc333bb107200b7ab7c02dd86",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/models/trees/organic-tree-lod0.gltf?verify=1fef531",
+      "bytes": 6555,
+      "sha256": "852ac0bfce78bd271c8484a724f5c95fc0339786c9553d4d32aae159f43be3fa",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/models/trees/export-manifest.json?verify=1fef531",
+      "bytes": 18321,
+      "sha256": "b2a56814faea97e0157c96c7ac5676146aaed0e93096e0deab2ed4b578e26496",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/models/trees/organic-tree-lod0.bin?verify=1fef531",
+      "bytes": 443040,
+      "sha256": "f1480d960bc1b380527d1514b4056348db2e5cff9cd8a0f3faaa4e1f1a1a6534",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/models/trees/ASSET-NOTICES.txt?verify=1fef531",
+      "bytes": 392,
+      "sha256": "db561c35b988de25d8e7bd545b6bdab4a7da81b5b220d11f4c11c7e6f7b40999",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/models/trees/organic-tree-lod1.bin?verify=1fef531",
+      "bytes": 146264,
+      "sha256": "47fbd4f8e6fea1c5e80998c15dbb058e468e17e6316e6940a83c8c394166ae0e",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/models/trees/organic-tree-lod1.gltf?verify=1fef531",
+      "bytes": 6543,
+      "sha256": "0d74981a915d491cf2ad8de496f7340cb7f09c7aa8e2c76a8095d39d3000ea85",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/models/trees/textures/Bark014_1K-PNG_Roughness.png?verify=1fef531",
+      "bytes": 312830,
+      "sha256": "14c8111cb5ef1f5b60c6bd9f30041b468e64d451ac70c04a35982630af104cdd",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/models/trees/textures/LeafSet026_1K-PNG_Color-LeafSet026_1K-PNG_Opacity.png?verify=1fef531",
+      "bytes": 601809,
+      "sha256": "ea06aba219626ed20d94ac895eee043ae28dc5dabe29d2ee8ecfcc7534a60752",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/models/trees/textures/Bark014_1K-PNG_NormalGL.png?verify=1fef531",
+      "bytes": 1411595,
+      "sha256": "fad0e06319bf5a7f642a324941d9d71448d61eabe70495babb3e27b3d85a2112",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/models/trees/textures/Bark014_1K-PNG_Color.png?verify=1fef531",
+      "bytes": 555611,
+      "sha256": "5091ca295325cb289cc40fdd13d182b00a45c767ecc949edd76db4c183de900e",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/models/trees/textures/LeafSet026_1K-PNG_NormalGL.png?verify=1fef531",
+      "bytes": 1773840,
+      "sha256": "172fdfadddb68ef4a0a95c37d6e484e5c1511074f9c8b160babc30e93c115e30",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/content-browser.js?verify=1fef531",
+      "bytes": 48441,
+      "sha256": "4b4bc07fe21d1b3b6661f98bda8e0a31ec006cbbdd3a0686303c73986ae10196",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/game.js?verify=1fef531",
+      "bytes": 29311,
+      "sha256": "8823206e25ef7c4a04dd6b6635638423d7b6c5fd44c034d7be0e91125299ab76",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/content-browser.css?verify=1fef531",
+      "bytes": 22049,
+      "sha256": "b0ca6136234806692e643b6117b5b3df9696161a86a8f3590c30dfcd5d1cd566",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/style.css?verify=1fef531",
+      "bytes": 27464,
+      "sha256": "f33dec5c2b4f693381e9b05308d47c10bf97ad89ba17a5a4642881435f7b20bc",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/LICENSE?verify=1fef531",
+      "bytes": 1067,
+      "sha256": "f68cef6a23271aa6fa5022cd7acebc98de572571df4a97077b0ecd7b385aa45d",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/favicon.svg?verify=1fef531",
+      "bytes": 213,
+      "sha256": "60879a890648c630ab1dc7cdc25975693b3c0610be77a4a11d2e7c7315d5c697",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/park-scene.js?verify=1fef531",
+      "bytes": 12785,
+      "sha256": "9aa9fa2e68dbfe7ab035afdd351a2a2c3a7b59bd03801051c929a7e7eb61349f",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/THIRD_PARTY_NOTICES.md?verify=1fef531",
+      "bytes": 5175,
+      "sha256": "6835c9f7721b9d77657de4c02f9773761eb1b019b72b8401e8c29d8e3de1bc40",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/index.html?verify=1fef531",
+      "bytes": 11476,
+      "sha256": "49bf0b71c09eda8a714fa261c0ce98efe75f8a43019da06a0fde696b34700b2d",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/art/buildings.js?verify=1fef531",
+      "bytes": 33871,
+      "sha256": "fd59e83c14589dc1db7cf43ef79a0ad02ebede0569f092465349387a0161e720",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/art/surface-assets.js?verify=1fef531",
+      "bytes": 2332,
+      "sha256": "11495b97bf3daaffcf49f7fd991da882fdf2321347739fda88d6fcf35ced2927",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/art/wooden-coaster.js?verify=1fef531",
+      "bytes": 38791,
+      "sha256": "9ebceda15d406332d37ab8dae756a1725b7a36cc7278ab7ac8b6d7438c920898",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/art/runtime.js?verify=1fef531",
+      "bytes": 5320,
+      "sha256": "8b85e50ffed823678e3235639ae726ba7bee3e0c52c527855fce056b98df9e60",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/art/wooden-assets.js?verify=1fef531",
+      "bytes": 5815,
+      "sha256": "3475acd3d3975ad8951135e0e3382ab7f530b5fa87824ec0013575086522a237",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/art/surface-palette.js?verify=1fef531",
+      "bytes": 2093,
+      "sha256": "91adbb55a95dc3b0b2ad670084a7f93366c266a09df6ed36bf414cb23b538768",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/art/coaster.js?verify=1fef531",
+      "bytes": 65435,
+      "sha256": "acea0401e86ca920fefdca2d25ac43c6ca88f6ad78d980b995967c9a19d42951",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/art/environment.js?verify=1fef531",
+      "bytes": 60634,
+      "sha256": "fe32698008e3f040fd3abf7fa93e9f24b0854473a21117aae222f3f63529bb00",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/art/tree-assets.js?verify=1fef531",
+      "bytes": 5027,
+      "sha256": "daa01cc5d707a402a6523adb3e815a6ce7d1d88e4c9b1f0c72702467f8c6e054",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/simulation/scenery.d.ts?verify=1fef531",
+      "bytes": 299,
+      "sha256": "b4c948c6004a2de0dbc5141a1c3fe28038ab036458e5b7824d8a30e0e6286bfb",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/simulation/host.js?verify=1fef531",
+      "bytes": 2139,
+      "sha256": "d2dfa7c018b25214231009e850e56507019cea9a7484459d990247bed9f775b2",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/simulation/operation.d.ts?verify=1fef531",
+      "bytes": 715,
+      "sha256": "4be5cf50780fee55e4602037219873aff1236a984d140de8a730f4ab92ae03dc",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/simulation/protocol.js?verify=1fef531",
+      "bytes": 42,
+      "sha256": "7a6137244c462f6128cf52ecced16e166005389312219dc9c95493bacbd7e813",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/simulation/clock.d.ts?verify=1fef531",
+      "bytes": 298,
+      "sha256": "3743b968c76cf0406ef9e81b77056b24bb39fec52a1d1ee203ec620667a36567",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/simulation/people.d.ts?verify=1fef531",
+      "bytes": 3516,
+      "sha256": "d0d827823c3cdf19ce7e95fc5ad8e5ebad30bc8c71e3f53eea353094d058bcd9",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/simulation/protocol.d.ts?verify=1fef531",
+      "bytes": 49,
+      "sha256": "bff2fbe07d03750518a73163afc04bb1cbaaaf95b3fc19de7f1c29fda98fb2cc",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/simulation/host.d.ts?verify=1fef531",
+      "bytes": 7473,
+      "sha256": "c2fea4cb6a623598b8060996b5ed5b114d838b5a240bcd15a0d4faedeb06198c",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/simulation/operation.js?verify=1fef531",
+      "bytes": 4436,
+      "sha256": "b85251b571225c3a89ec340114d6b7e3be5ab28040c90beda07b64fa837a9363",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/simulation/patrol.d.ts?verify=1fef531",
+      "bytes": 193,
+      "sha256": "ccd72adedd54103092d2887e31753f8d745417372834c6c4054f3e50979e3273",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/simulation/geometry.d.ts?verify=1fef531",
+      "bytes": 564,
+      "sha256": "7f9748530e1641db5515ee36491598adfb17c22049dfb22dcfacb5ab818c3107",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/simulation/motion.d.ts?verify=1fef531",
+      "bytes": 1849,
+      "sha256": "9b8e99db9e77447f15a84b1d92cce8cd14f6bf8f49e43023aa1b44e7b0b943b7",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/simulation/index.d.ts?verify=1fef531",
+      "bytes": 312,
+      "sha256": "ff7c5c26ad7c54ab4e64bdc958da4afc382f8731f870954fef49d518ee5451e5",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/simulation/view.d.ts?verify=1fef531",
+      "bytes": 3867,
+      "sha256": "551a1baaae65baf4f4eb0d129630d3e99b099b7047625726421870d07c0cb2ab",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/simulation/wooden-motion.js?verify=1fef531",
+      "bytes": 5888,
+      "sha256": "aaed1ed31a0764f8ecc8b07db1d2c6bc6e2a0230b2002daff30729a20c5da12d",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/simulation/wooden-motion.d.ts?verify=1fef531",
+      "bytes": 630,
+      "sha256": "afffebbc06f9be5967f5f607eadbfc6f01fda2aa22d77c6ab0c82c9b90e28c4d",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/simulation/wooden-placement.js?verify=1fef531",
+      "bytes": 5861,
+      "sha256": "c0ce952233aa5e32448b21309e72d2b6e6cba11d85fb30109921ac2e9ac36670",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/simulation/validation.js?verify=1fef531",
+      "bytes": 1191,
+      "sha256": "10a2f21ddd134f16105bf4f0153d57a6e660d7938157e30c1958487498b66056",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/simulation/housekeeping.d.ts?verify=1fef531",
+      "bytes": 1865,
+      "sha256": "990317c2bb8a132cc5e991592594b00977344fb025db0ada0f273e3cd6ae9281",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/simulation/engine.js?verify=1fef531",
+      "bytes": 81816,
+      "sha256": "ae54ab209021ccb0f3929deb29bf585f3bb4bf05b9d675f92a91549f2b0d23fd",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/simulation/patrol.js?verify=1fef531",
+      "bytes": 562,
+      "sha256": "4a59eec5e274c541fecf413cb62cd27cabfe5fb13aaa6104d5543b8498b16e16",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/simulation/routes.js?verify=1fef531",
+      "bytes": 3156,
+      "sha256": "ec098e36c6a24155b4d10da3118a7240e08850a4b38c52eb7d4891be556c3453",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/simulation/routes.d.ts?verify=1fef531",
+      "bytes": 707,
+      "sha256": "59198c54257a442d97c716a79d773a68d8c3e0c3475f0148c954d0557c4abaa8",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/simulation/clock.js?verify=1fef531",
+      "bytes": 834,
+      "sha256": "32820b03a12b9bde816654f4e58fd37a24c32b9c8dc035b52d157636e58d9fbd",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/simulation/types.d.ts?verify=1fef531",
+      "bytes": 7428,
+      "sha256": "e4a8afe9d838f88a543c4262e3672f776f20cfb7763f2b8fc65298eb0ce030c4",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/simulation/people.js?verify=1fef531",
+      "bytes": 18862,
+      "sha256": "dbc11106f53b7fd7d230ec6b84a3b2daf6ddd5f5644b1717cbf06b1ace888b54",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/simulation/geometry.js?verify=1fef531",
+      "bytes": 14234,
+      "sha256": "2496cb72ebf3e5c854769fdbef90e45d7ce9bf0fede0855cae84310da60113f7",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/simulation/services.d.ts?verify=1fef531",
+      "bytes": 2764,
+      "sha256": "9ff71f82fddd7b1e077e73e2790d488ccdd173fa810f759f90b200658c3b9c70",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/simulation/housekeeping.js?verify=1fef531",
+      "bytes": 6841,
+      "sha256": "37f6c3f0c0b89ea42b97b0250c20aa01bc4e2b3c3ae58bfd6b78869d613b2932",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/simulation/services.js?verify=1fef531",
+      "bytes": 9458,
+      "sha256": "274a27fd582abacb8c1be47f70b10b5f4b6a50423dea162244dc1dc9115e9a35",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/simulation/motion.js?verify=1fef531",
+      "bytes": 8356,
+      "sha256": "4c3d5c27617302f607d0235a10eeda4cd4fafc9c81cb7859327fba0b407f34e6",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/simulation/view.js?verify=1fef531",
+      "bytes": 5938,
+      "sha256": "c9c84395fad293ac2fb2ca365e8af86014d15f69b90bb7edffbac033e7aebe07",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/simulation/wooden-placement.d.ts?verify=1fef531",
+      "bytes": 1098,
+      "sha256": "d409be26409dee0a62273c78f9b0c0f7f89e6ce565cc9bcce94e26843d6e0eb5",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/simulation/validation.d.ts?verify=1fef531",
+      "bytes": 518,
+      "sha256": "b5a15290a701b60b3d0ccfa2c8b0968fefe4b639623effee2e2f8d3cc121a43d",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/simulation/types.js?verify=1fef531",
+      "bytes": 147,
+      "sha256": "1a6231381895d5abcccbc927e582be7270c22e19c76be7c5c3e560d83ea97d91",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/simulation/index.js?verify=1fef531",
+      "bytes": 132,
+      "sha256": "346366ed60f6c42fcb47aa83210f541b512704500f290f203513ca17b0a809c4",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/simulation/scenery.js?verify=1fef531",
+      "bytes": 408,
+      "sha256": "af181426f98f7c6daab583055906264db929940ecb25a3fe50c1ca219d9ee520",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/simulation/engine.d.ts?verify=1fef531",
+      "bytes": 7741,
+      "sha256": "f4298e29d4b2238d4410cc2ed5d21c0240393170ade8bc92fdcae72da2f2cf3e",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/simulation/browser-worker.js?verify=1fef531",
+      "bytes": 2942,
+      "sha256": "30155c29a86a08be5e22ea9e54f862e5490daab1db705de19ee154ee1cd06e18",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/simulation/browser-worker.d.ts?verify=1fef531",
+      "bytes": 11,
+      "sha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/content/registry.js?verify=1fef531",
+      "bytes": 6700,
+      "sha256": "23a369f28e7d5e021d56bd5cd1a6576ea7913ed758bf3c2b233469234b2f12f0",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/content/ride-profiles.js?verify=1fef531",
+      "bytes": 1400,
+      "sha256": "463213ddc03167e4eb47338881ab4b896131f27c49645a74ee4ad99293a1b068",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/content/mixed-park.js?verify=1fef531",
+      "bytes": 2989,
+      "sha256": "6ee32ad1482c465cf2e85011caa37e6f8f740cf1e1138dac672e9db2c2437e7c",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/content/registry.d.ts?verify=1fef531",
+      "bytes": 2478,
+      "sha256": "2b6bfd2cceaf0036c7add117fae97f8774fcdd9871d615e8f0f8d385fd5a3984",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/content/wooden-coaster.js?verify=1fef531",
+      "bytes": 1734,
+      "sha256": "c3a0c2c2f43aeb88a1ad81f64e45dd185f894b84d2e9400b4da944e12f6a3c70",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/content/rct2-reference.d.ts?verify=1fef531",
+      "bytes": 384,
+      "sha256": "e327772f17f7fff8360c33ab5c95ce74c818d5ff121763ed8730d224cc78eb34",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/content/wooden-coaster.d.ts?verify=1fef531",
+      "bytes": 341,
+      "sha256": "1d18eb70495ec22dff370d91b6067aeba342afa4f0973ca74da91ffb7d8c798e",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/content/rct2-reference.js?verify=1fef531",
+      "bytes": 113071,
+      "sha256": "23ad185689097bbc9b21d87de63f4d62a4d2365fa019f983cf8b8ae85f7836ee",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/content/steel-coaster.d.ts?verify=1fef531",
+      "bytes": 262,
+      "sha256": "fc52bfae7e5a3859038b4287c6587f198a5dea994f009024cac097ad87f66bbc",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/content/ride-profiles.d.ts?verify=1fef531",
+      "bytes": 528,
+      "sha256": "7a15efb8f9cf893133c19a44ab16b7694c24700b1e930fd66c0c4e2b280e7516",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/content/steel-coaster.js?verify=1fef531",
+      "bytes": 9691,
+      "sha256": "d248ab39ba5695c5402872b634d514cc81517673c44d77e9e0da3deaaf683335",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/content/wooden-footprints.js?verify=1fef531",
+      "bytes": 10283,
+      "sha256": "ef471c76a23274bf86a3f17acc00bcd69ed9f8eca1a3fb17b74b8c0c9c86f9d2",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/content/mixed-park.d.ts?verify=1fef531",
+      "bytes": 155,
+      "sha256": "6cbe3e50867ed748889ffeb7b4ec1755379697e5c4e09051200c5b073b08af5f",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/content/wooden-footprints.d.ts?verify=1fef531",
+      "bytes": 125,
+      "sha256": "ba3813d9ef80c8ade8a7156e5d23151699fe3bcf44f520559b64e9481528af43",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/vendor/THREE-LICENSE.txt?verify=1fef531",
+      "bytes": 1081,
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/vendor/OrbitControls.js?verify=1fef531",
+      "bytes": 40755,
+      "sha256": "3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/vendor/three.module.js?verify=1fef531",
+      "bytes": 662772,
+      "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/vendor/three.core.js?verify=1fef531",
+      "bytes": 1458113,
+      "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/textures/surfaces/grass-roughness.png?verify=1fef531",
+      "bytes": 194627,
+      "sha256": "4cd9ae5b58a46cd172816974664f19b1aaf540c0ef1cfed8719bf59b702ec4e3",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/textures/surfaces/grass-color.png?verify=1fef531",
+      "bytes": 509645,
+      "sha256": "fdfda01eb989b5eff677408c822f37097394711e569fe4b28f02787aa723af92",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/textures/surfaces/grass-normal.png?verify=1fef531",
+      "bytes": 636185,
+      "sha256": "9c72876ec82f95e6ca3b50d14199055bba17248a358520b9948da0a497ff22b0",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/textures/surfaces/paving-normal.png?verify=1fef531",
+      "bytes": 256304,
+      "sha256": "0b3097df90811489d17d1ae9c7fa6437cf26c9c65370bd6785b607e15ad3fafb",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/textures/surfaces/paving-roughness.png?verify=1fef531",
+      "bytes": 83498,
+      "sha256": "7b0958ee8f21e7844a0f9d441bf4e1e0e0c288eec59a24da479235c255fdc654",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/textures/surfaces/paving-color.png?verify=1fef531",
+      "bytes": 249959,
+      "sha256": "b34277b63dc34dc1c90639329843c75137532fc9c3066a4f1a6edcb3bf92802b",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/vendor/addons/utils/SkeletonUtils.js?verify=1fef531",
+      "bytes": 11535,
+      "sha256": "b1632a703206c3d830de9fcbe515696770d04b71a15ee6b50afa6d2c3298c86f",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/vendor/addons/utils/BufferGeometryUtils.js?verify=1fef531",
+      "bytes": 37712,
+      "sha256": "9fb63427ce6641fa14fd0baff9cc4d1b5f9c3d85fd084bf2e90e803c44ec1797",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/vendor/addons/loaders/GLTFLoader.js?verify=1fef531",
+      "bytes": 117570,
+      "sha256": "131c0f78c01d19368ae495caa65b3adaa10487810a36a05bb5901b769a35ac16",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/models/wooden/station.glb?verify=1fef531",
+      "bytes": 9199772,
+      "sha256": "32214cdb6f388bcda1bdbbd59b8ac5a59ba454d947d2fde45380898572809cbd",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/models/wooden/link.glb?verify=1fef531",
+      "bytes": 988980,
+      "sha256": "bd65312ab91197d08d66fd6258e31f31e46b6d529832a0d741fcb729e0fec671",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/models/wooden/car.glb?verify=1fef531",
+      "bytes": 3636520,
+      "sha256": "ed293d53712c1bc02ce01a5c027d69dd7b31e60ae41c8a811d9a9464274f9adc",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/models/trees/organic-tree-lod2.gltf?verify=1fef531",
+      "bytes": 6519,
+      "sha256": "9f6b829b9a0446f89f413ceb84fa3be6bbec981f91fd6a288ad4264f7edf5a2d",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/models/trees/organic-tree-lod2.bin?verify=1fef531",
+      "bytes": 60740,
+      "sha256": "ccc5f2c623bd5e86c62b52375bd9b9489309bdfcc333bb107200b7ab7c02dd86",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/models/trees/organic-tree-lod0.gltf?verify=1fef531",
+      "bytes": 6555,
+      "sha256": "852ac0bfce78bd271c8484a724f5c95fc0339786c9553d4d32aae159f43be3fa",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/models/trees/export-manifest.json?verify=1fef531",
+      "bytes": 18321,
+      "sha256": "b2a56814faea97e0157c96c7ac5676146aaed0e93096e0deab2ed4b578e26496",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/models/trees/organic-tree-lod0.bin?verify=1fef531",
+      "bytes": 443040,
+      "sha256": "f1480d960bc1b380527d1514b4056348db2e5cff9cd8a0f3faaa4e1f1a1a6534",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/models/trees/ASSET-NOTICES.txt?verify=1fef531",
+      "bytes": 392,
+      "sha256": "db561c35b988de25d8e7bd545b6bdab4a7da81b5b220d11f4c11c7e6f7b40999",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/models/trees/organic-tree-lod1.bin?verify=1fef531",
+      "bytes": 146264,
+      "sha256": "47fbd4f8e6fea1c5e80998c15dbb058e468e17e6316e6940a83c8c394166ae0e",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/models/trees/organic-tree-lod1.gltf?verify=1fef531",
+      "bytes": 6543,
+      "sha256": "0d74981a915d491cf2ad8de496f7340cb7f09c7aa8e2c76a8095d39d3000ea85",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/models/trees/textures/Bark014_1K-PNG_Roughness.png?verify=1fef531",
+      "bytes": 312830,
+      "sha256": "14c8111cb5ef1f5b60c6bd9f30041b468e64d451ac70c04a35982630af104cdd",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/models/trees/textures/LeafSet026_1K-PNG_Color-LeafSet026_1K-PNG_Opacity.png?verify=1fef531",
+      "bytes": 601809,
+      "sha256": "ea06aba219626ed20d94ac895eee043ae28dc5dabe29d2ee8ecfcc7534a60752",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/models/trees/textures/Bark014_1K-PNG_NormalGL.png?verify=1fef531",
+      "bytes": 1411595,
+      "sha256": "fad0e06319bf5a7f642a324941d9d71448d61eabe70495babb3e27b3d85a2112",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/models/trees/textures/Bark014_1K-PNG_Color.png?verify=1fef531",
+      "bytes": 555611,
+      "sha256": "5091ca295325cb289cc40fdd13d182b00a45c767ecc949edd76db4c183de900e",
+      "status": 200
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/models/trees/textures/LeafSet026_1K-PNG_NormalGL.png?verify=1fef531",
+      "bytes": 1773840,
+      "sha256": "172fdfadddb68ef4a0a95c37d6e484e5c1511074f9c8b160babc30e93c115e30",
+      "status": 200
+    }
+  ],
+  "elapsedSeconds": 4.8604765640047844,
+  "passed": true
+}

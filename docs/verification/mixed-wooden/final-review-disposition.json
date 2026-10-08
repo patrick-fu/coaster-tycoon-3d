@@ -1,0 +1,45 @@
+{
+  "design": [
+    {
+      "round": 1,
+      "findings": [
+        "Cross-save reused car IDs retained old ride selection.",
+        "Elevated wooden supports were not reserved to the ground."
+      ],
+      "disposition": "Root repaired both and actual red/green controls passed."
+    },
+    {
+      "round": 2,
+      "verdict": "No new P0/P1/P2 in cumulative design; finite ground-only contract accepted."
+    },
+    {
+      "supplement": "Explicit water===0 construction/load and after-build terrain condition; no new P0/P1/P2."
+    }
+  ],
+  "drift": [
+    {
+      "round": 1,
+      "findings": [
+        "Stale browser version assertions and invalid legacy fixture."
+      ],
+      "disposition": "Valid steel-only v7 input/current v9 versions and actual30Classic/10Library passed."
+    },
+    {
+      "round": 2,
+      "findings": [
+        "Dry-ground wording allowed equal-height water."
+      ],
+      "disposition": "Explicit water0 repaired and final131 tests passed; no remaining verified P0/P1/P2."
+    }
+  ],
+  "reviewers": "Independent established GPT6.1 Sol Max Design/Drift sessions; readonly, separate judgment before reconciliation.",
+  "rootTerminalEvidence": {
+    "source": "1fef53101191044a93e669fd8276eb265e090ff9",
+    "fullTests": 131,
+    "classic": 30,
+    "library": 10,
+    "storage": "actual guard-removed negative/green timer controls exit0",
+    "nativePortal": "16 actual mounts + valid/order controls, raw failed test premises retained"
+  },
+  "scope": "Finite issue62, not original/full catalogue/GPU/human acceptance."
+}

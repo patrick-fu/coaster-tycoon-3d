@@ -31,6 +31,24 @@ their own hashes; later admission restrictions do not relabel earlier execution.
 Geometry, model datums and preserved material bytes did not change when the
 final ground/water and picking predicates were repaired.
 
+The production source is merged at `10fba9b69b9182c95080391eecbb8df496c17487`
+from [PR63](https://github.com/patrick-fu/coaster-tycoon-3d/pull/63), source
+`1fef53101191044a93e669fd8276eb265e090ff9`. Published `gh-pages` is
+`43e48dfd4bfa2a8ccd9b337a834d92bb35809e61`, with a frozen
+[mixed preview](https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/?showcase=classic)
+and the [current Classic page](https://patrick-fu.github.io/coaster-tycoon-3d/?showcase=classic).
+[All202 actual HTTP responses](public-http.json) match the101 built files on both
+routes; all369 preceding preview files remain byte-identical.
+
+[Actual public Chrome execution](public-browser.json) and its
+[exit0](public-browser-exit.json) load both routes, complete the real confirmed
+New park handler, render four rides/two wooden cars/one link with v9/content2/
+protocol2, ready assets, nonzero geometry and zero GL errors/exceptions/console
+errors. Quiet autosaving is suppressed only in this public smoke to preserve
+the default profile's older records; actual quiet-save behavior is established
+by the separate green/red storage controls. Save or Export before selecting
+New park if an old browser park should be retained.
+
 ## Executed checks and boundaries
 
 | Check | Actual result and scope |
