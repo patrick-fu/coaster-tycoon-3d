@@ -793,14 +793,14 @@ export function buildEnvironment(ctx, scenery, entry) {
   const staticParent = ctx.staticGroup || ctx.parent || ctx.scene;
 
   // Textures
-  const turfTex = getTex(ctx, 'tex-turf-mottled', 128, 128, paintTurf);
+  const turfTex = ctx.surfacePalette ? null : getTex(ctx, 'tex-turf-mottled', 128, 128, paintTurf);
   const soilTex = getTex(ctx, 'tex-soil-strata', 64, 128, paintSoilStrata);
   const waterTex = getTex(ctx, 'tex-water-ripples', 128, 128, paintWaterRipples);
   const barkTex = getTex(ctx, 'tex-bark-grain', 64, 128, paintBarkGrain);
   const foliageTex = getTex(ctx, 'tex-foliage-leaf', 64, 64, paintFoliageCluster);
 
   // Materials
-  const groundMat = getMat(ctx, 'mat-ground-turf', {
+  const groundMat = getMat(ctx, 'mat-ground-turf', ctx.surfacePalette?.ground ?? {
     map: turfTex,
     roughness: 0.86,
     metalness: 0.02
@@ -1075,17 +1075,17 @@ export function buildPath(ctx, parent, element, scenery) {
   const isQueue = element.queueFor !== null;
 
   // Textures
-  const publicPavingTex = getTex(ctx, 'tex-paving-public', 128, 128, paintPublicPaving);
-  const queuePavingTex = getTex(ctx, 'tex-paving-queue', 128, 128, paintQueuePaving);
+  const publicPavingTex = ctx.surfacePalette ? null : getTex(ctx, 'tex-paving-public', 128, 128, paintPublicPaving);
+  const queuePavingTex = ctx.surfacePalette ? null : getTex(ctx, 'tex-paving-queue', 128, 128, paintQueuePaving);
 
   // Materials
   const deckMat = isQueue
-    ? getMat(ctx, 'mat-path-queue-deck', {
+    ? getMat(ctx, 'mat-path-queue-deck', ctx.surfacePalette?.queue ?? {
         map: queuePavingTex,
         roughness: 0.72,
         metalness: 0.04
       })
-    : getMat(ctx, 'mat-path-public-deck', {
+    : getMat(ctx, 'mat-path-public-deck', ctx.surfacePalette?.path ?? {
         map: publicPavingTex,
         roughness: 0.76,
         metalness: 0.04
