@@ -151,5 +151,26 @@
   },
   "raw/classic-navigation-failure.stderr.log.gz": {
     "sha256": "070c34ca68a7b30c5e9ca47ce8808b9fb3a905fc620b62a3d42d5200588ccdc7"
+  },
+  "public-http.json": {
+    "sha256": "449c7a41cbcbb574271563fe661a0db17a448c214f8b28793248a1d55bd161cd"
+  },
+  "final-review-disposition.json": {
+    "sha256": "6bfaca75604c84fa53f136dbb98b3a8cfd3cc34b01df6b6976ae8eabe75724e9"
+  },
+  "publication-build.json": {
+    "sha256": "76bcd3b1cc1973929bcaacc42b4b78ccff591b9b34607ca56474039786c8334a"
+  },
+  "publication-local-verification.json": {
+    "sha256": "76e7ee91327bbf785c3fbfcb7c17bc5e567beef14a6b48ff87f691e92efcdb68"
+  },
+  "public-browser-exit.json": {
+    "sha256": "c8c6d195e6351a57228438e701b14606633fd7612f3df787170619818fee96e7"
+  },
+  "public-overview.png": {
+    "sha256": "c4db77308194c49b154c8d1f74374c0b326f2c3dfd7b65331171ee5d077c67c0"
+  },
+  "public-browser.json": {
+    "sha256": "c9101e741cb1539e6dc7c1323dc8982dc9c7b52678865d46adc5fecab39e58cd"
   }
 }

@@ -1,0 +1,130 @@
+{
+  "scope": "Actual public root and pinned Classic startup/New park/render; default-profile SwiftShader, no representative GPU or human acceptance. Quiet autosave suppressed in this smoke only to preserve existing remote profile records; real storage controls are separately qualified.",
+  "routes": [
+    {
+      "label": "root",
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/?showcase=classic",
+      "result": {
+        "version": 9,
+        "content": 2,
+        "protocol": 2,
+        "rides": [
+          {
+            "id": 0,
+            "name": "Copper Loop",
+            "family": "independent.circuit-coaster",
+            "status": "open"
+          },
+          {
+            "id": 4,
+            "name": "Juniper Sprint",
+            "family": "independent.circuit-coaster",
+            "status": "open"
+          },
+          {
+            "id": 5,
+            "name": "Highland Flyer",
+            "family": "independent.circuit-coaster",
+            "status": "open"
+          },
+          {
+            "id": 6,
+            "name": "Cedar Timber Run",
+            "family": "independent.wooden-circuit-coaster",
+            "status": "open"
+          }
+        ],
+        "wooden": {
+          "activeCars": 2,
+          "activeLinks": 1
+        },
+        "assets": {
+          "ready": true,
+          "error": null,
+          "disposed": false,
+          "geometries": 33,
+          "materials": 51,
+          "textures": 24,
+          "bitmaps": 24
+        },
+        "glError": 0,
+        "triangles": 1241084,
+        "camera": {
+          "target": [
+            74,
+            4,
+            79.99999999999999
+          ],
+          "zoom": 0.98
+        },
+        "rulesSha256": "771f3148bc99cddf5b70babcf1b6a90ce797e3167dd6179bb5db8446c7b7f8af"
+      },
+      "screenshot": "root.png",
+      "imageSha256": "c4db77308194c49b154c8d1f74374c0b326f2c3dfd7b65331171ee5d077c67c0"
+    },
+    {
+      "label": "pin",
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/mixed-1fef531/?showcase=classic",
+      "result": {
+        "version": 9,
+        "content": 2,
+        "protocol": 2,
+        "rides": [
+          {
+            "id": 0,
+            "name": "Copper Loop",
+            "family": "independent.circuit-coaster",
+            "status": "open"
+          },
+          {
+            "id": 4,
+            "name": "Juniper Sprint",
+            "family": "independent.circuit-coaster",
+            "status": "open"
+          },
+          {
+            "id": 5,
+            "name": "Highland Flyer",
+            "family": "independent.circuit-coaster",
+            "status": "open"
+          },
+          {
+            "id": 6,
+            "name": "Cedar Timber Run",
+            "family": "independent.wooden-circuit-coaster",
+            "status": "open"
+          }
+        ],
+        "wooden": {
+          "activeCars": 2,
+          "activeLinks": 1
+        },
+        "assets": {
+          "ready": true,
+          "error": null,
+          "disposed": false,
+          "geometries": 33,
+          "materials": 51,
+          "textures": 24,
+          "bitmaps": 24
+        },
+        "glError": 0,
+        "triangles": 1241084,
+        "camera": {
+          "target": [
+            74,
+            4,
+            79.99999999999999
+          ],
+          "zoom": 0.98
+        },
+        "rulesSha256": "771f3148bc99cddf5b70babcf1b6a90ce797e3167dd6179bb5db8446c7b7f8af"
+      },
+      "screenshot": "pin.png",
+      "imageSha256": "c4db77308194c49b154c8d1f74374c0b326f2c3dfd7b65331171ee5d077c67c0"
+    }
+  ],
+  "exceptions": [],
+  "consoleErrors": [],
+  "passed": true
+}
