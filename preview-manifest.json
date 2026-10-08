@@ -1,0 +1,8 @@
+{
+  "kind": "classic-playable-candidate",
+  "sourceCommit": "9e944dd798584af3d2619e05fc39d5ba60f20e28",
+  "sourcePullRequest": "https://github.com/patrick-fu/coaster-tycoon-3d/pull/58",
+  "runtimeFiles": 84,
+  "runtimeBytes": 10251216,
+  "scope": "Existing playable independent steel/food/drink/restroom slice with CC0 lawn/paving and detailed oak; no new original content availability or human/GPU/original acceptance"
+}
