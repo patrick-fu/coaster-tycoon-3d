@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "sourceReviewModel": "gpt-6.1-sol",
+  "effort": "max",
+  "scope": "Independent read-only source/control and final actual evidence review, not new runtime execution or gameplay acceptance",
+  "checkerSha256": "63245e82459d7314b368c7c042b2eea54bd99b0a6c731f5516eaf991081610d8",
+  "finalResultSha256": "44a67423ea16d317df1b1915afaaf492ff3d28654ad82d72525b591255f89cba",
+  "compositionVerifierSha256": "7336160344a96a3506299b9eac3fb5f9bb478703306c79203c8286c2cbb8dfc7",
+  "reviews": [
+    {
+      "owner": "oak_resource_review_sol_max",
+      "verdict": "No verified P1/P2 in final finite evidence",
+      "verified": [
+        "All 12 final source/input/run hashes and terminal exit0/empty stderr",
+        "All59 exact fixture IDs/body/link/bogie matrices",
+        "Nonempty single closed positive mount/drawbar solids, no new self/nonmanifold geometry",
+        "Physical eye/pin/outer-rim/core/span binding",
+        "Eight bounded contact applications perpose,472 total, zero plane/opposed-normal residual",
+        "Underlying intersection/containment and exact summary reductions",
+        "Original11 mesh fingerprints/22 frames/material resource invariants",
+        "Old8m30pairs strict87/11 negative witness"
+      ],
+      "closedFindings": [
+        "Vacuous missing hardware acceptance",
+        "Resource bitmap fingerprint omissions",
+        "Vertex manifold and self/component intersection gaps",
+        "Unbound semantic markers versus actual finite hardware",
+        "Actual outer-rim measurement omission",
+        "Numeric reducer initial value bug"
+      ]
+    },
+    {
+      "owner": "identity_boundary_sol_max",
+      "verdict": "No verified findings after exact appended-dependency repair",
+      "verified": [
+        "Actual routed car/run/structural/independent hashes",
+        "Original BIN prefix,41accessors/47views/resources/frames",
+        "Exact216 oldhitch triangle removal",
+        "Actual duplicate-unused-mesh/accessor red and green exits",
+        "Unchanged routed positive SHA and complete appended closure"
+      ],
+      "closedFindings": [
+        "P3 independent verifier ignored extra unreferenced appended mesh/accessor definitions"
+      ]
+    },
+    {
+      "owner": "mixed_profiles_sol_max",
+      "verdict": "No verified findings after package documentation corrections",
+      "scope": "Read-only staged Design/Drift and source/document/provenance review; no geometry/rendering rerun",
+      "closedFindings": [
+        "Shared material retention wording",
+        "Composition-phase statement versus subsequent finite59-pose qualification"
+      ],
+      "verified": [
+        "Isolated prototype/evidence-only diff",
+        "Honest finite/native/original/production/GPU/human boundaries",
+        "2880mm nominal pitch and5760mm limited station reservation",
+        "Corrected staged package annotations and manifest entries"
+      ]
+    }
+  ],
+  "remainingGates": [
+    "Continuous swept motion/minimum radius",
+    "Grades/Z/native occupancy and guide/upstop mechanics",
+    "Station/passenger/roof/support interfaces",
+    "Manufacturing, forces and fatigue",
+    "Production mixed rides/saves and boarding",
+    "Original agreement",
+    "Representative integrated GPU",
+    "Patrick visual/play acceptance"
+  ]
+}

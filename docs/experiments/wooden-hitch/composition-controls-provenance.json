@@ -1,0 +1,50 @@
+{
+  "source": {
+    "path": "/workspace/coaster-wooden-hitch-authoring/outputs/wooden-car-routed-composed.glb",
+    "sha256": "7b6ae0f47746d4e8bd624ad2323f7cd20abec214711cbfb4e89329adc687202e"
+  },
+  "previousVerifier": {
+    "path": "/workspace/coaster-wooden-hitch-authoring/evidence/composition/new-closure-controls/previous-verifier.mjs",
+    "sha256": "99873f1dd311aa8fb771819da643828277ed7b988c4d4d0646ec788d6c65f845"
+  },
+  "controls": [
+    {
+      "name": "duplicate-mesh",
+      "output": {
+        "path": "/workspace/coaster-wooden-hitch-authoring/evidence/composition/new-closure-controls/duplicate-mesh-composed.glb",
+        "sha256": "f6d09846ece5984971c7fe87882d96b5bafd73e08a506087da1bb01995d0c3e8",
+        "bytes": 3591096
+      },
+      "sidecarSha256": "2f9ed9a8d36665e2a833f1d5427475df5c6a3f54cc4ff4932d73d0686b05a38c",
+      "controlledDifference": {
+        "kind": "duplicate-mesh",
+        "sourceModel": {
+          "path": "/workspace/coaster-wooden-hitch-authoring/outputs/wooden-car-routed-composed.glb",
+          "sha256": "7b6ae0f47746d4e8bd624ad2323f7cd20abec214711cbfb4e89329adc687202e"
+        },
+        "appendedArray": "meshes",
+        "appendedIndex": 13,
+        "reuseExistingView": false
+      }
+    },
+    {
+      "name": "duplicate-accessor",
+      "output": {
+        "path": "/workspace/coaster-wooden-hitch-authoring/evidence/composition/new-closure-controls/duplicate-accessor-composed.glb",
+        "sha256": "bcc5dced3b424f7096ebbbe0246668ba8b4efc299ece73fddc822e05dc4965cb",
+        "bytes": 3591028
+      },
+      "sidecarSha256": "90b45f8dc0bba476d0428b60b4a08a3205cfaf295f3098b8588792367815d7b7",
+      "controlledDifference": {
+        "kind": "duplicate-accessor",
+        "sourceModel": {
+          "path": "/workspace/coaster-wooden-hitch-authoring/outputs/wooden-car-routed-composed.glb",
+          "sha256": "7b6ae0f47746d4e8bd624ad2323f7cd20abec214711cbfb4e89329adc687202e"
+        },
+        "appendedArray": "accessors",
+        "appendedIndex": 50,
+        "reuseExistingView": true
+      }
+    }
+  ]
+}

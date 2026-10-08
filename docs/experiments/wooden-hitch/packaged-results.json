@@ -1,0 +1,29 @@
+[
+  {
+    "file": "finite-results.json.gz",
+    "bytes": 1628835,
+    "sha256": "d0752830f436c1f4f889612f87b3ffc16494e8e2a84fc0f4546ccbb252b29004",
+    "uncompressedFile": "finite-results.json",
+    "uncompressedBytes": 32137457,
+    "uncompressedSha256": "44a67423ea16d317df1b1915afaaf492ff3d28654ad82d72525b591255f89cba",
+    "sourcePath": "/workspace/coaster-wooden-hitch-authoring/checks/20261008T020522Z-7b6ae0f47746-2595499/results.json"
+  },
+  {
+    "file": "rejected-results.json.gz",
+    "bytes": 1994607,
+    "sha256": "862e47effc2b88ed3fd2a1f6115792a80b154ffb99f85d2adef38554d9b4e24b",
+    "uncompressedFile": "rejected-results.json",
+    "uncompressedBytes": 36159169,
+    "uncompressedSha256": "81f36246f6f915511504e431ef8646aee1e2a1023da811dccdbcd7081df10fc4",
+    "sourcePath": "/workspace/coaster-wooden-hitch-authoring/checks/20261008T012845Z-8eb82e43eac1-2559489/results.json"
+  },
+  {
+    "file": "frozen-poses.json.gz",
+    "bytes": 118785,
+    "sha256": "9376acb231b8e7ccffd0781e072ee6cfd281df8714dcb4bc602fb315475249a7",
+    "uncompressedFile": "frozen-poses.json",
+    "uncompressedBytes": 1402538,
+    "uncompressedSha256": "167ba3e1da273b66a4bc1d9fb1c3a6fe6c1ec0d2ea54673395f94ae73a287ab6",
+    "sourcePath": "/workspace/coaster-articulated-wooden-joint/results.json"
+  }
+]

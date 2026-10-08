@@ -1,0 +1,42 @@
+[
+  {
+    "file": "prototypes/wooden-hitch/sources/car-adapter-routed.py",
+    "bytes": 2137,
+    "sha256": "705485f5da487145dc9434090f21810f39f8ab47b04b7e25b6513197147ff50a"
+  },
+  {
+    "file": "prototypes/wooden-hitch/sources/mount-parts-routed.py",
+    "bytes": 6000,
+    "sha256": "5b45a16ce13b851c0770b73aace3e75505e2a9d80c042feb27ac31ba48700d7f"
+  },
+  {
+    "file": "prototypes/wooden-hitch/sources/hitch_geometry.py",
+    "bytes": 2585,
+    "sha256": "5d7444145660bdd5b92d3d2705756f0f512ddd7bc2bceb01d195630f6ad51ee5"
+  },
+  {
+    "file": "prototypes/wooden-hitch/sources/drawbar-part.py",
+    "bytes": 2953,
+    "sha256": "51557a5730832fd4830203b6d2ff91ffea7ca4587f14dc4ec32448e840ef4c32"
+  },
+  {
+    "file": "prototypes/wooden-hitch/sources/union-parts.py",
+    "bytes": 661,
+    "sha256": "915cf25e9ca7ff6d163ac933df695333181bd2f6f29e9b4c6640458e13815091"
+  },
+  {
+    "file": "prototypes/wooden-hitch/sources/candidate-export.py",
+    "bytes": 11936,
+    "sha256": "0eb9d0c0c32d0e776fe3e903224805165844aa11a94b9b62b25e09c1a2ada3b6"
+  },
+  {
+    "file": "prototypes/wooden-hitch/sources/wooden-car-reference.py",
+    "bytes": 23221,
+    "sha256": "568a3a3429d2d1ea3edabeadedf253c2b73305626fa58f665b9959b4edf171f2"
+  },
+  {
+    "file": "prototypes/wooden-hitch/sources/drawbar-adapter.py",
+    "bytes": 1596,
+    "sha256": "c84071a396a32d051258b3e1de6a2feb2f039872231c2294da2590cadb262c6e"
+  }
+]

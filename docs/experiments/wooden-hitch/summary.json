@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "verdict": "preserve-finite-exported-joint",
+  "measurementCompleted": true,
+  "finiteCandidateQualified": true,
+  "scope": "Finite exported hardware qualification at exactly 59 retained flat poses; no production/native/original/GPU/human acceptance.",
+  "execution": {
+    "host": "grok-bot-vm-405605737",
+    "node": "v20.19.2",
+    "nodeBinary": "/usr/bin/node",
+    "nodeBinarySha256": "ca0728526aa1cc4e3056decec848ecc6d2c5391cecdd4e21a0ebd221d665c84e",
+    "threeRevision": "186",
+    "runtimeFiles": {
+      "/workspace/coaster-classic-game/app/node_modules/three/build/three.module.js": {
+        "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea",
+        "bytes": 662772
+      },
+      "/workspace/coaster-classic-game/app/node_modules/three/build/three.core.js": {
+        "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
+        "bytes": 1458113
+      },
+      "/workspace/coaster-classic-game/app/node_modules/three/package.json": {
+        "sha256": "f9c474a27c920b9435353a6235968f4453436bee0444fac7e5fd289c8fa463de",
+        "bytes": 3672
+      }
+    },
+    "timeUtc": "2026-10-08T02:05:23.521Z",
+    "argv": [
+      "/usr/bin/node",
+      "/workspace/coaster-wooden-hitch-authoring/check-joint.mjs",
+      "7b6ae0f47746d4e8bd624ad2323f7cd20abec214711cbfb4e89329adc687202e",
+      "bd65312ab91197d08d66fd6258e31f31e46b6d529832a0d741fcb729e0fec671",
+      "6f2b596f104e959580f715be6e72b9a4697b31e6c8548137dca1d2d14705c1f7"
+    ],
+    "runnerSha256": "63245e82459d7314b368c7c042b2eea54bd99b0a6c731f5516eaf991081610d8",
+    "contractSha256": "21b38219c1e77b0d1b0cdb2bebce8917237084fa35025c5d929449283d70170d",
+    "shellSha256": "5b7ba0da8d7f76741be5ba1862a2fe1be001065f6b31ff20c4499bd113576946"
+  },
+  "provenance": {
+    "original": {
+      "path": "/workspace/coaster-detailed-assets/outputs/wooden-car.glb",
+      "sha256": "fc988c55ed60dcd5abf7c5e02ecbc1ac3a8cd828cfe7fe4bb8f30bcf21699b59",
+      "bytes": 3545440
+    },
+    "fixture": {
+      "path": "/workspace/coaster-articulated-wooden-joint/results.json",
+      "sha256": "167ba3e1da273b66a4bc1d9fb1c3a6fe6c1ec0d2ea54673395f94ae73a287ab6",
+      "bytes": 1402538
+    },
+    "fixtureRunner": {
+      "path": "/workspace/coaster-articulated-wooden-joint/measure-articulated-joint.mjs",
+      "sha256": "81cb9539c0284d8ee255dfaeae917c4cc15d68e1fb4fa48d102e91b7d81009ee",
+      "bytes": 42602
+    },
+    "fixtureContract": {
+      "path": "/workspace/coaster-articulated-wooden-joint/FROZEN-CONTRACT.md",
+      "sha256": "e434bd011890328af693c1e1162bb804479e6ad5eb93a91cf2f0e264287c8107",
+      "bytes": 2360
+    },
+    "negative": {
+      "path": "/workspace/coaster-native-calibration/curved-counterexample-result.json",
+      "sha256": "b8eef0231d5eedce48b17a9c00465d18c8995296bb7c6845519955c92e8f2311",
+      "bytes": 20808
+    },
+    "reference": {
+      "path": "/workspace/coaster-wooden-hitch-authoring/sources/wooden-car-reference.py",
+      "sha256": "568a3a3429d2d1ea3edabeadedf253c2b73305626fa58f665b9959b4edf171f2",
+      "bytes": 23221
+    },
+    "car": {
+      "path": "/workspace/coaster-wooden-hitch-authoring/outputs/wooden-car-joint.glb",
+      "sha256": "7b6ae0f47746d4e8bd624ad2323f7cd20abec214711cbfb4e89329adc687202e",
+      "bytes": 3590960
+    },
+    "link": {
+      "path": "/workspace/coaster-wooden-hitch-authoring/outputs/wooden-drawbar.glb",
+      "sha256": "bd65312ab91197d08d66fd6258e31f31e46b6d529832a0d741fcb729e0fec671",
+      "bytes": 988980
+    },
+    "metadata": {
+      "path": "/workspace/coaster-wooden-hitch-authoring/outputs/hitch-metadata.json",
+      "sha256": "6f2b596f104e959580f715be6e72b9a4697b31e6c8548137dca1d2d14705c1f7",
+      "bytes": 8447
+    }
+  },
+  "summary": {
+    "cases": 59,
+    "passedCases": 59,
+    "failedCases": [],
+    "failedContactCases": [],
+    "staticFailures": 0,
+    "totalUnexemptedIntersectionPairs": 0,
+    "totalClosedContainments": 0,
+    "totalAmbiguousContainments": 0,
+    "maximumRunningContactResidualMetres": 3.612903817412319e-05,
+    "maximumEndpointClosureMetres": 1.4901216522946713e-09,
+    "totalExactTriangleTests": 46205,
+    "totalExactDistanceTests": 45131175
+  },
+  "limitations": [
+    "Exactly 59 retained flat poses, not a continuous sweep or safe minimum radius.",
+    "Open original components receive surface checks only; no invented watertight solids.",
+    "No manufacturing/force/fatigue/native hinge-angle agreement.",
+    "No grades/Z/native occupancy, guide/upstop rail mechanics, station/passenger clearance, production integration, original agreement, GPU or human acceptance."
+  ],
+  "fullResultSha256": "44a67423ea16d317df1b1915afaaf492ff3d28654ad82d72525b591255f89cba",
+  "inventoryPassed": true,
+  "framesPassed": true,
+  "mechanicalBindingPassed": true
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "scope": "Isolated logical phase regression controls using actual synthetic GLB buffers. No candidate/production qualification. Positive capsule-link geometry is a test fixture, not an authored destination.",
+  "measurementCompleted": true,
+  "passed": true,
+  "checks": {
+    "emptyVacuousRedReproduced": true,
+    "emptyRejected": true,
+    "zeroTrianglePartRejected": true,
+    "textureBindingRedReproduced": true,
+    "textureBindingRejected": true,
+    "equivalentResourceReorderPreserved": true,
+    "coherentTopologySelfPreserved": true,
+    "vertexTouchRedReproduced": true,
+    "vertexTouchRejected": true,
+    "actualSelfCrossingRejected": true,
+    "actualNestedContainmentRejected": true,
+    "distantCubeBindingRejected": true,
+    "finiteBindingPositivePreserved": true,
+    "smaller-outer-rimRedReproduced": true,
+    "smaller-outer-rimRejected": true,
+    "larger-outer-rimRedReproduced": true,
+    "larger-outer-rimRejected": true
+  },
+  "provenance": {
+    "controlRunnerSha256": "7f14416af287a622d6b46569f8807795b5676f1a6302261295ffc9846ffa7778",
+    "currentRunnerSha256": "63245e82459d7314b368c7c042b2eea54bd99b0a6c731f5516eaf991081610d8",
+    "c75RunnerSha256": "c75a7e379f26f3e3884ae57c5b2f96a5aab9b2960bae3e75db6051cdbd88be1a",
+    "beforeInventorySha256": "cf415b0dedd0f9f1b0537e8a368d88dc5d0e71de2f848ab655aa3bad2d841751",
+    "originalSha256": "fc988c55ed60dcd5abf7c5e02ecbc1ac3a8cd828cfe7fe4bb8f30bcf21699b59",
+    "fixtureSha256": "167ba3e1da273b66a4bc1d9fb1c3a6fe6c1ec0d2ea54673395f94ae73a287ab6"
+  }
+}

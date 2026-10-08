@@ -1,0 +1,2 @@
+# Preserve the executed artist source's checksum, including its trailing blank line.
+sources/mount-parts-routed.py -text whitespace=-blank-at-eof

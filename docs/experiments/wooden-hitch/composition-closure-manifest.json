@@ -1,0 +1,270 @@
+{
+  "schemaVersion": 1,
+  "host": "grok-bot-vm-405605737",
+  "node": "v20.19.2",
+  "timeUtc": "2026-10-08T02:09:12.978Z",
+  "verdict": "exact-appended-mesh-accessor-closure-repair-with-actual-red-green-positive",
+  "oldExitCodes": [
+    {
+      "name": "duplicate-mesh",
+      "exitCode": 0,
+      "inputSha256": "f6d09846ece5984971c7fe87882d96b5bafd73e08a506087da1bb01995d0c3e8"
+    },
+    {
+      "name": "duplicate-accessor",
+      "exitCode": 0,
+      "inputSha256": "bcc5dced3b424f7096ebbbe0246668ba8b4efc299ece73fddc822e05dc4965cb"
+    }
+  ],
+  "newExitCodes": [
+    {
+      "name": "duplicate-mesh",
+      "exitCode": 1,
+      "inputSha256": "f6d09846ece5984971c7fe87882d96b5bafd73e08a506087da1bb01995d0c3e8"
+    },
+    {
+      "name": "duplicate-accessor",
+      "exitCode": 1,
+      "inputSha256": "bcc5dced3b424f7096ebbbe0246668ba8b4efc299ece73fddc822e05dc4965cb"
+    },
+    {
+      "name": "routed-positive",
+      "exitCode": 0,
+      "inputSha256": "7b6ae0f47746d4e8bd624ad2323f7cd20abec214711cbfb4e89329adc687202e"
+    }
+  ],
+  "dependencyClosure": {
+    "requiredHardwareMeshes": [
+      10,
+      11
+    ],
+    "requiredHardwareAccessors": [
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44
+    ],
+    "hardwareMeshMapping": [
+      [
+        10,
+        11
+      ],
+      [
+        11,
+        12
+      ]
+    ],
+    "hardwareAccessorMapping": [
+      [
+        37,
+        42
+      ],
+      [
+        38,
+        43
+      ],
+      [
+        39,
+        44
+      ],
+      [
+        40,
+        45
+      ],
+      [
+        41,
+        46
+      ],
+      [
+        42,
+        47
+      ],
+      [
+        43,
+        48
+      ],
+      [
+        44,
+        49
+      ]
+    ],
+    "filteredChassisIndicesAccessor": 41,
+    "exactAppendedMeshes": [
+      11,
+      12
+    ],
+    "exactAppendedAccessors": [
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49
+    ],
+    "everyAppendedMeshAccessorReachable": true
+  },
+  "files": [
+    {
+      "path": "/workspace/coaster-wooden-hitch-authoring/COMPOSITION.md",
+      "sha256": "fbe4e4a96f582d6d5259985df7189c4244ef7515a2c3845f433cab09ee7003a8",
+      "bytes": 10270
+    },
+    {
+      "path": "/workspace/coaster-wooden-hitch-authoring/evidence/composition/verify-composition.mjs",
+      "sha256": "7336160344a96a3506299b9eac3fb5f9bb478703306c79203c8286c2cbb8dfc7",
+      "bytes": 20877
+    },
+    {
+      "path": "/workspace/coaster-wooden-hitch-authoring/outputs/wooden-car-routed-composed.glb",
+      "sha256": "7b6ae0f47746d4e8bd624ad2323f7cd20abec214711cbfb4e89329adc687202e",
+      "bytes": 3590960
+    },
+    {
+      "path": "/workspace/coaster-wooden-hitch-authoring/outputs/wooden-car-routed-composed.json",
+      "sha256": "a3054adf85bf98983f53cf853cfc1323993fbd620bc2f6a6db7c54992ed22030",
+      "bytes": 23381
+    },
+    {
+      "path": "/workspace/coaster-wooden-hitch-authoring/evidence/composition/new-closure-controls/check-closure-controls.mjs",
+      "sha256": "2784002671b4fc513f6343927c21053c2c6f2070e7baff1abd85034f090ef6a9",
+      "bytes": 8235
+    },
+    {
+      "path": "/workspace/coaster-wooden-hitch-authoring/evidence/composition/new-closure-controls/controls-provenance.json",
+      "sha256": "a976b363127e3a4ad92bb3045e593f66cd6037afbccaa94dc68563dfa9da626f",
+      "bytes": 2070
+    },
+    {
+      "path": "/workspace/coaster-wooden-hitch-authoring/evidence/composition/new-closure-controls/duplicate-accessor-composed.glb",
+      "sha256": "bcc5dced3b424f7096ebbbe0246668ba8b4efc299ece73fddc822e05dc4965cb",
+      "bytes": 3591028
+    },
+    {
+      "path": "/workspace/coaster-wooden-hitch-authoring/evidence/composition/new-closure-controls/duplicate-accessor-composed.json",
+      "sha256": "90b45f8dc0bba476d0428b60b4a08a3205cfaf295f3098b8588792367815d7b7",
+      "bytes": 23777
+    },
+    {
+      "path": "/workspace/coaster-wooden-hitch-authoring/evidence/composition/new-closure-controls/duplicate-accessor-new.stderr",
+      "sha256": "93cc92f7d1ab2d231dbd3bf1d323e426b4a36e226c34abb6febb0b11f36dbb2c",
+      "bytes": 108
+    },
+    {
+      "path": "/workspace/coaster-wooden-hitch-authoring/evidence/composition/new-closure-controls/duplicate-accessor-new.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/workspace/coaster-wooden-hitch-authoring/evidence/composition/new-closure-controls/duplicate-accessor-old-verifier.json",
+      "sha256": "aa070f0d42a16405f37382156bf0d0d32f9a0e2889a1eaa5a0b1588090a89c52",
+      "bytes": 58671
+    },
+    {
+      "path": "/workspace/coaster-wooden-hitch-authoring/evidence/composition/new-closure-controls/duplicate-accessor-old.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/workspace/coaster-wooden-hitch-authoring/evidence/composition/new-closure-controls/duplicate-accessor-old.stdout",
+      "sha256": "7ef0239501219bdad8a6b1200b491af63e9f26e0cbcf3d343f7abf8077b8b1c5",
+      "bytes": 800
+    },
+    {
+      "path": "/workspace/coaster-wooden-hitch-authoring/evidence/composition/new-closure-controls/duplicate-mesh-composed.glb",
+      "sha256": "f6d09846ece5984971c7fe87882d96b5bafd73e08a506087da1bb01995d0c3e8",
+      "bytes": 3591096
+    },
+    {
+      "path": "/workspace/coaster-wooden-hitch-authoring/evidence/composition/new-closure-controls/duplicate-mesh-composed.json",
+      "sha256": "2f9ed9a8d36665e2a833f1d5427475df5c6a3f54cc4ff4932d73d0686b05a38c",
+      "bytes": 23767
+    },
+    {
+      "path": "/workspace/coaster-wooden-hitch-authoring/evidence/composition/new-closure-controls/duplicate-mesh-new.stderr",
+      "sha256": "afcd52a1f3262ebc0848f17307d21a11037e61d05acbb744e9f9a929b86873e0",
+      "bytes": 104
+    },
+    {
+      "path": "/workspace/coaster-wooden-hitch-authoring/evidence/composition/new-closure-controls/duplicate-mesh-new.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/workspace/coaster-wooden-hitch-authoring/evidence/composition/new-closure-controls/duplicate-mesh-old-verifier.json",
+      "sha256": "88d5032aaa0ed46a70a6cc9cbe5fe83687e715d7cdc544be43d11e4b555374e8",
+      "bytes": 58659
+    },
+    {
+      "path": "/workspace/coaster-wooden-hitch-authoring/evidence/composition/new-closure-controls/duplicate-mesh-old.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/workspace/coaster-wooden-hitch-authoring/evidence/composition/new-closure-controls/duplicate-mesh-old.stdout",
+      "sha256": "71eefbddc83bbb011b8efa787c3efdc88c6f5fc5c674238e4683940f2c995bc0",
+      "bytes": 796
+    },
+    {
+      "path": "/workspace/coaster-wooden-hitch-authoring/evidence/composition/new-closure-controls/new-execution.json",
+      "sha256": "fdab03d741e4595bbd84a649ba34619265b4088c71e2d6e5c0da580b3083244a",
+      "bytes": 5214
+    },
+    {
+      "path": "/workspace/coaster-wooden-hitch-authoring/evidence/composition/new-closure-controls/old-execution.json",
+      "sha256": "e0ceb6c616c15cde9bd094f75d962647ffb060ae0eefbfb36c4457ab7f0cd615",
+      "bytes": 4052
+    },
+    {
+      "path": "/workspace/coaster-wooden-hitch-authoring/evidence/composition/new-closure-controls/previous-verifier.mjs",
+      "sha256": "99873f1dd311aa8fb771819da643828277ed7b988c4d4d0646ec788d6c65f845",
+      "bytes": 17586
+    },
+    {
+      "path": "/workspace/coaster-wooden-hitch-authoring/evidence/composition/new-closure-controls/previous-wooden-car-baseline-composed-independent.json",
+      "sha256": "3a1c10d3c532df5cd7487b0fc1349253ac7b425c55d61275efbc40da5e64edfb",
+      "bytes": 58566
+    },
+    {
+      "path": "/workspace/coaster-wooden-hitch-authoring/evidence/composition/new-closure-controls/previous-wooden-car-baseline-composed-run.json",
+      "sha256": "6c28036bae4a44398a7e129fff1afbf348dbb044b92103e93e99c626f58d6f96",
+      "bytes": 8673
+    },
+    {
+      "path": "/workspace/coaster-wooden-hitch-authoring/evidence/composition/new-closure-controls/previous-wooden-car-routed-composed-independent.json",
+      "sha256": "f0a5ae4eea9d98546580704a8238ad678a7116a44f1c904c6f1ecdc16454d2fa",
+      "bytes": 58567
+    },
+    {
+      "path": "/workspace/coaster-wooden-hitch-authoring/evidence/composition/new-closure-controls/previous-wooden-car-routed-composed-run.json",
+      "sha256": "6bb261a53b2444c47ed743cf0a54ab4469a9f92c1bfeac056fffd7c9df1add08",
+      "bytes": 8668
+    },
+    {
+      "path": "/workspace/coaster-wooden-hitch-authoring/evidence/composition/new-closure-controls/repaired-verifier.mjs",
+      "sha256": "7336160344a96a3506299b9eac3fb5f9bb478703306c79203c8286c2cbb8dfc7",
+      "bytes": 20877
+    },
+    {
+      "path": "/workspace/coaster-wooden-hitch-authoring/evidence/composition/new-closure-controls/routed-positive-new-verifier.json",
+      "sha256": "a6210963c01ea03eacf3250b9f838d482e4f7eb67a1f36fb93d7890902e411c1",
+      "bytes": 59589
+    },
+    {
+      "path": "/workspace/coaster-wooden-hitch-authoring/evidence/composition/new-closure-controls/routed-positive-new.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/workspace/coaster-wooden-hitch-authoring/evidence/composition/new-closure-controls/routed-positive-new.stdout",
+      "sha256": "b484ec61190a89d9ed1cce6efb1fb47a1cf890c2c72fbc3047f48e68797e7da7",
+      "bytes": 815
+    }
+  ]
+}

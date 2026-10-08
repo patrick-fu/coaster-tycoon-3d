@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "verdict": "red-confirmed-previous-verifier-false-accepts-unused-duplicates",
+  "phase": "--old",
+  "host": "grok-bot-vm-405605737",
+  "node": "v20.19.2",
+  "argv": [
+    "/usr/bin/node",
+    "/workspace/coaster-wooden-hitch-authoring/evidence/composition/new-closure-controls/check-closure-controls.mjs",
+    "--old"
+  ],
+  "timeUtc": "2026-10-08T02:05:52.501Z",
+  "controlsRunnerSha256": "2784002671b4fc513f6343927c21053c2c6f2070e7baff1abd85034f090ef6a9",
+  "acceptedModelUnchanged": {
+    "path": "/workspace/coaster-wooden-hitch-authoring/outputs/wooden-car-routed-composed.glb",
+    "sha256": "7b6ae0f47746d4e8bd624ad2323f7cd20abec214711cbfb4e89329adc687202e"
+  },
+  "steps": [
+    {
+      "name": "duplicate-mesh",
+      "command": [
+        "/usr/bin/node",
+        "/workspace/coaster-wooden-hitch-authoring/evidence/composition/new-closure-controls/previous-verifier.mjs",
+        "/workspace/coaster-wooden-hitch-authoring/evidence/composition/new-closure-controls/duplicate-mesh-composed.glb",
+        "/workspace/coaster-wooden-hitch-authoring/evidence/composition/new-closure-controls/duplicate-mesh-old-verifier.json"
+      ],
+      "cwd": "/workspace/coaster-wooden-hitch-authoring",
+      "verifierSha256": "99873f1dd311aa8fb771819da643828277ed7b988c4d4d0646ec788d6c65f845",
+      "input": {
+        "path": "/workspace/coaster-wooden-hitch-authoring/evidence/composition/new-closure-controls/duplicate-mesh-composed.glb",
+        "sha256": "f6d09846ece5984971c7fe87882d96b5bafd73e08a506087da1bb01995d0c3e8",
+        "bytes": 3591096
+      },
+      "exitCode": 0,
+      "signal": null,
+      "stdout": {
+        "path": "/workspace/coaster-wooden-hitch-authoring/evidence/composition/new-closure-controls/duplicate-mesh-old.stdout",
+        "sha256": "71eefbddc83bbb011b8efa787c3efdc88c6f5fc5c674238e4683940f2c995bc0"
+      },
+      "stderr": {
+        "path": "/workspace/coaster-wooden-hitch-authoring/evidence/composition/new-closure-controls/duplicate-mesh-old.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "report": {
+        "path": "/workspace/coaster-wooden-hitch-authoring/evidence/composition/new-closure-controls/duplicate-mesh-old-verifier.json",
+        "sha256": "88d5032aaa0ed46a70a6cc9cbe5fe83687e715d7cdc544be43d11e4b555374e8"
+      }
+    },
+    {
+      "name": "duplicate-accessor",
+      "command": [
+        "/usr/bin/node",
+        "/workspace/coaster-wooden-hitch-authoring/evidence/composition/new-closure-controls/previous-verifier.mjs",
+        "/workspace/coaster-wooden-hitch-authoring/evidence/composition/new-closure-controls/duplicate-accessor-composed.glb",
+        "/workspace/coaster-wooden-hitch-authoring/evidence/composition/new-closure-controls/duplicate-accessor-old-verifier.json"
+      ],
+      "cwd": "/workspace/coaster-wooden-hitch-authoring",
+      "verifierSha256": "99873f1dd311aa8fb771819da643828277ed7b988c4d4d0646ec788d6c65f845",
+      "input": {
+        "path": "/workspace/coaster-wooden-hitch-authoring/evidence/composition/new-closure-controls/duplicate-accessor-composed.glb",
+        "sha256": "bcc5dced3b424f7096ebbbe0246668ba8b4efc299ece73fddc822e05dc4965cb",
+        "bytes": 3591028
+      },
+      "exitCode": 0,
+      "signal": null,
+      "stdout": {
+        "path": "/workspace/coaster-wooden-hitch-authoring/evidence/composition/new-closure-controls/duplicate-accessor-old.stdout",
+        "sha256": "7ef0239501219bdad8a6b1200b491af63e9f26e0cbcf3d343f7abf8077b8b1c5"
+      },
+      "stderr": {
+        "path": "/workspace/coaster-wooden-hitch-authoring/evidence/composition/new-closure-controls/duplicate-accessor-old.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "report": {
+        "path": "/workspace/coaster-wooden-hitch-authoring/evidence/composition/new-closure-controls/duplicate-accessor-old-verifier.json",
+        "sha256": "aa070f0d42a16405f37382156bf0d0d32f9a0e2889a1eaa5a0b1588090a89c52"
+      }
+    }
+  ]
+}

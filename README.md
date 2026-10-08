@@ -79,6 +79,12 @@ The samples precede bulk art production and do not add those rides/services to
 the playable park. Original comparisons and Patrick's visual acceptance remain
 open.
 
+The [finite wooden joint experiment](docs/experiments/wooden-hitch/README.md)
+now qualifies replacement mounts and a real drawbar at 59 frozen flat poses,
+preserving the original car's UVs, bitmap resources, seats and bogie frames.
+This clears the measured hardware interference for that fixture; wood remains
+unavailable while continuous motion and native/game integration are completed.
+
 [Qualify the Classic first playable against original RCT2 and representative hardware](https://github.com/patrick-fu/coaster-tycoon-3d/issues/24)
 remains open for its original fidelity, scale and representative-hardware gates.
 
