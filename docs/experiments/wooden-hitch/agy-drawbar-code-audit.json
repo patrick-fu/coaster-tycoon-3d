@@ -1,0 +1,11 @@
+{
+  "conversationId": "5903caec-3535-4938-95ac-589e9d26d57a",
+  "model": "gemini-3.8-flash-high",
+  "effectiveModelVerified": true,
+  "turns": 3,
+  "status": "SUCCESS",
+  "exit": 0,
+  "responseBytes": 2967,
+  "codeSha256": "51557a5730832fd4830203b6d2ff91ffea7ca4587f14dc4ec32448e840ef4c32",
+  "scope": "AGY returned visual implementation in final response after completed helper reads; root applied exact extracted code. No collision/availability acceptance."
+}

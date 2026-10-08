@@ -1,0 +1,299 @@
+{
+  "authoring": {
+    "assetId": "wooden-car-joint",
+    "referenceVariant": "PTCT1-inspired wooden train car",
+    "candidateDimensions": {
+      "width": 1.44,
+      "length": 2.68,
+      "height": 1.24
+    },
+    "anchors": [
+      "RailRoot",
+      "BogieFront",
+      "BogieRear",
+      "Seat_FrontLeft",
+      "Seat_FrontRight",
+      "Seat_RearLeft",
+      "Seat_RearRight",
+      "Coupler_Front",
+      "Coupler_Rear"
+    ],
+    "restraints": [
+      "LapBar_Front",
+      "LapBar_Rear"
+    ],
+    "notes": "Four-passenger articulated wooden coaster car with sculpted tub, contoured vinyl seats, hinged lap bars, complete road/guide/upstop wheel groups, couplers, and export-stable UVs.",
+    "geometryIntent": "Independently authored PTC-inspired wooden coaster car geometry featuring shaped prow/nose curvature, closed cowl deck, varnished timber side inserts, recessed cockpit tubs, layered steel undercarriage stringers, fin brake equipment, two articulated two-passenger rows with individual contoured bucket cushions and fluted lumbar backrests, and dual bogie pivot assemblies with differentiated rubber treads and metal hubs.",
+    "jointAuthoring": {
+      "assetId": "coaster-hitch-mounts",
+      "candidateScope": "finite visual candidate mount hardware; unqualified; pending root collision validation",
+      "parts": {
+        "Mount_Carrier_Front": "Mount_Carrier_Front",
+        "Mount_Clevis_Front": "Mount_Clevis_Front",
+        "Mount_Pin_Front": "Mount_Pin_Front",
+        "Mount_Carrier_Rear": "Mount_Carrier_Rear",
+        "Mount_Clevis_Rear": "Mount_Clevis_Rear",
+        "Mount_Pin_Rear": "Mount_Pin_Rear"
+      },
+      "anchors": {
+        "Coupler_Front": "Coupler_Front",
+        "Coupler_Rear": "Coupler_Rear",
+        "Stringer_Front_Left_Face": [
+          -0.46,
+          -1.25,
+          0.22
+        ],
+        "Stringer_Front_Right_Face": [
+          0.46,
+          -1.25,
+          0.22
+        ],
+        "Stringer_Rear_Left_Face": [
+          -0.46,
+          1.25,
+          0.22
+        ],
+        "Stringer_Rear_Right_Face": [
+          0.46,
+          1.25,
+          0.22
+        ]
+      },
+      "candidateDimensions": {
+        "carrier_attachment_width_x": 0.032,
+        "carrier_outer_half_span_x": 0.476,
+        "carrier_height_z": 0.028,
+        "carrier_y_front": [
+          -1.25,
+          -1.3
+        ],
+        "carrier_y_rear": [
+          1.25,
+          1.3
+        ],
+        "clevis_gap_vertical": 0.03,
+        "clevis_plate_thickness": 0.01,
+        "pin_radius": 0.012,
+        "pin_height": 0.06,
+        "eye_hole_clearance_radial": 0.002,
+        "eye_thickness_clearance_vertical": 0.006,
+        "head_envelope_radius": 0.058,
+        "head_envelope_bound": 0.09995
+      },
+      "intendedAttachmentPairs": [
+        [
+          "Mount_Carrier_Front",
+          "Mount_Clevis_Front"
+        ],
+        [
+          "Mount_Clevis_Front",
+          "Mount_Pin_Front"
+        ],
+        [
+          "Mount_Carrier_Rear",
+          "Mount_Clevis_Rear"
+        ],
+        [
+          "Mount_Clevis_Rear",
+          "Mount_Pin_Rear"
+        ]
+      ],
+      "requiredKinematicYaw": {
+        "front_deg": 15.8242714,
+        "rear_deg": 15.1308793
+      },
+      "validationStatus": "unqualified candidate; root validation required on Grok Bot; collision clearance uncertified",
+      "offlineSolidUnion": true,
+      "exportedParts": [
+        "Mount_Assembly_Front",
+        "Mount_Assembly_Rear"
+      ]
+    },
+    "scope": "Finite hardware candidate; no native ride availability"
+  },
+  "geometry": {
+    "meshObjects": 13,
+    "trianglesEvaluated": 19920,
+    "boundsBlender": {
+      "min": [
+        -0.7080000042915344,
+        -1.3799999952316284,
+        -0.19849567115306854
+      ],
+      "max": [
+        0.7080000042915344,
+        1.3799999952316284,
+        0.8999999761581421
+      ]
+    },
+    "materials": [
+      "boards",
+      "brass",
+      "metal",
+      "paint_red",
+      "rubber",
+      "seat_vinyl"
+    ],
+    "anchorsBlender": {
+      "RailRoot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "BogieFront": [
+        0.0,
+        -0.75,
+        0.17000000178813934
+      ],
+      "BogieRear": [
+        0.0,
+        0.75,
+        0.17000000178813934
+      ],
+      "Seat_FrontLeft": [
+        -0.3199999928474426,
+        -0.41999998688697815,
+        0.46000000834465027
+      ],
+      "Seat_FrontRight": [
+        0.3199999928474426,
+        -0.41999998688697815,
+        0.46000000834465027
+      ],
+      "Seat_RearLeft": [
+        -0.3199999928474426,
+        0.41999998688697815,
+        0.46000000834465027
+      ],
+      "Seat_RearRight": [
+        0.3199999928474426,
+        0.41999998688697815,
+        0.46000000834465027
+      ],
+      "Coupler_Front": [
+        0.0,
+        -1.340000033378601,
+        0.2199999988079071
+      ],
+      "Coupler_Rear": [
+        0.0,
+        1.340000033378601,
+        0.2199999988079071
+      ]
+    },
+    "issues": []
+  },
+  "blender": "4.3.2",
+  "sourceSha256": "705485f5da487145dc9434090f21810f39f8ab47b04b7e25b6513197147ff50a",
+  "driverSha256": "0eb9d0c0c32d0e776fe3e903224805165844aa11a94b9b62b25e09c1a2ada3b6",
+  "textureSources": [
+    {
+      "file": "Metal049A_1K-PNG_Color.png",
+      "sourceSha256": "3c5be68c8a56534f120e88cff835a321ca51459c8f31482f984958c7fbfda8e6",
+      "sourceDimensions": [
+        1024,
+        1024
+      ],
+      "runtimeDimensions": [
+        512,
+        512
+      ]
+    },
+    {
+      "file": "Metal049A_1K-PNG_Metalness.png",
+      "sourceSha256": "61c66550ad5636c9fb8bfb13fc5b2ff4b2ba7cb66831e8c68509124915be045e",
+      "sourceDimensions": [
+        1024,
+        1024
+      ],
+      "runtimeDimensions": [
+        512,
+        512
+      ]
+    },
+    {
+      "file": "Metal049A_1K-PNG_NormalGL.png",
+      "sourceSha256": "5b80adcc8092618a127bb7dfa547e3a35d156efd027c9daa579ac26f9098a678",
+      "sourceDimensions": [
+        1024,
+        1024
+      ],
+      "runtimeDimensions": [
+        512,
+        512
+      ]
+    },
+    {
+      "file": "Metal049A_1K-PNG_Roughness.png",
+      "sourceSha256": "a42d9eaba9bc232739c7cb86dee03805e66f50a065cecfbbfe906aaeb6b3ded2",
+      "sourceDimensions": [
+        1024,
+        1024
+      ],
+      "runtimeDimensions": [
+        512,
+        512
+      ]
+    },
+    {
+      "file": "WoodFloor043_1K-PNG_Color.png",
+      "sourceSha256": "55a7c25c191c8eb501d87a8872438dcfba307b3a043fee00ad9e89f0c413d684",
+      "sourceDimensions": [
+        1024,
+        512
+      ],
+      "runtimeDimensions": [
+        512,
+        512
+      ]
+    },
+    {
+      "file": "WoodFloor043_1K-PNG_Metalness.png",
+      "sourceSha256": "46ca3dbd1939c6c89b437c195afe51d816336baa0376b9289d6e7dc0757a69dc",
+      "sourceDimensions": [
+        1024,
+        512
+      ],
+      "runtimeDimensions": [
+        512,
+        512
+      ]
+    },
+    {
+      "file": "WoodFloor043_1K-PNG_NormalGL.png",
+      "sourceSha256": "ac8e1221726a512c4eb3cae98674bf0dda774382b2ba2577d36cbf8192986a6e",
+      "sourceDimensions": [
+        1024,
+        512
+      ],
+      "runtimeDimensions": [
+        512,
+        512
+      ]
+    },
+    {
+      "file": "WoodFloor043_1K-PNG_Roughness.png",
+      "sourceSha256": "c15241e172c474ad147003f8e957cf88d305d9e8d82809de201f04f7b969ec26",
+      "sourceDimensions": [
+        1024,
+        512
+      ],
+      "runtimeDimensions": [
+        512,
+        512
+      ]
+    }
+  ],
+  "batchStatic": false,
+  "glb": {
+    "file": "wooden-car-joint-routed.glb",
+    "sha256": "575eaffa6f934ba52cc34fe34f37109a93aff960c0b8c350970b7ca9715ee1f3",
+    "bytes": 3578900
+  },
+  "editableMaster": {
+    "file": "wooden-car-joint-routed.blend",
+    "sha256": "acb733c31d26dfed819b3ea759de80a484e3d132b4632db470bb680fec32d72f",
+    "bytes": 5854945
+  },
+  "scope": "Candidate detailed asset laboratory; no original-metric or gameplay validation"
+}

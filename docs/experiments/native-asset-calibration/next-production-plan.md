@@ -144,6 +144,25 @@ solution. Rotating bogies alone cannot remove this inter-car shell intersection.
 
 ## Small authoritative contract
 
+### Subsequent finite joint evidence
+
+The [finite replacement-hitch experiment](../wooden-hitch/README.md) supersedes
+the direct-coupler 2680 mm nominal-pitch proposal below. Its unchanged coupler
+span is 2680 mm, and its fixed finite drawbar is 200 mm, giving approximately
+2880 mm straight root pitch. Preserve the steel meanings and numbers; for the
+new wooden profile `carLength` must represent this 2880 mm nominal centre pitch
+and station reservation, rather than the visible body length. Two cars reserve
+5760 mm and allocate eight slots: one 4 m bay rejects logical fit, two bays pass
+that limited fit calculation. Actual end/roof/boarding clearance is separate.
+
+The revised car retains original position, normal, UV, bitmap and node data,
+removes exactly the two old hitch solids and appends actual carrier/pin geometry.
+All 59 frozen flat poses pass finite body/bogie/hardware/eye/pin/contact checks.
+That result does not qualify continuous motion or enable a 16 m piece, native
+placement or wooden availability. The earlier 2680 mm direct-contact and 8 m
+failure measurements remain historical controls; do not use the superseded
+pitch in the next saved numeric profile or station-fit expectations.
+
 Use one shared resolver for the two real adapters. A proposed interface is
 `resolveRideRules(content, canonicalRules)`, returning the selected complete
 motion, piece and wooden pose records. Its steel branch returns the existing

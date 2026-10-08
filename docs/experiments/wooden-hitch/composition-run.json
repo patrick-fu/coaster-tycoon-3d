@@ -1,0 +1,235 @@
+{
+  "schemaVersion": 1,
+  "verdict": "preserve-exact-original-with-bounded-mount-composition",
+  "execution": {
+    "host": "grok-bot-vm-405605737",
+    "platform": "linux",
+    "architecture": "x64",
+    "node": "v20.19.2",
+    "timeUtc": "2026-10-08T01:57:33.443Z",
+    "argv": [
+      "/usr/bin/node",
+      "/workspace/coaster-wooden-hitch-authoring/evidence/composition/run-composition-check.mjs",
+      "--hardware",
+      "outputs/wooden-car-joint-routed.glb",
+      "--hardware-sha",
+      "575eaffa6f934ba52cc34fe34f37109a93aff960c0b8c350970b7ca9715ee1f3",
+      "--output",
+      "outputs/wooden-car-routed-composed.glb"
+    ],
+    "runnerSha256": "fdfbb08710353bdfd6ce21ee889f93af6a24f83dcffb010e86aa2d4302578104"
+  },
+  "steps": [
+    {
+      "name": "compose",
+      "command": [
+        "/usr/bin/node",
+        "/workspace/coaster-wooden-hitch-authoring/compose-car.mjs",
+        "--hardware",
+        "outputs/wooden-car-joint-routed.glb",
+        "--hardware-sha",
+        "575eaffa6f934ba52cc34fe34f37109a93aff960c0b8c350970b7ca9715ee1f3",
+        "--output",
+        "outputs/wooden-car-routed-composed.glb"
+      ],
+      "cwd": "/workspace/coaster-wooden-hitch-authoring",
+      "startUtc": "2026-10-08T01:57:33.446Z",
+      "completedUtc": "2026-10-08T01:57:33.761Z",
+      "exitCode": 0,
+      "signal": null,
+      "stdout": {
+        "path": "/workspace/coaster-wooden-hitch-authoring/evidence/composition/wooden-car-routed-composed-compose.stdout",
+        "sha256": "d7ed570b44737130b1f3cc8c6ed670aa8b7d24939cb3a867988f727c3ef5a3c1"
+      },
+      "stderr": {
+        "path": "/workspace/coaster-wooden-hitch-authoring/evidence/composition/wooden-car-routed-composed-compose.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "error": null
+    },
+    {
+      "name": "structural",
+      "command": [
+        "/usr/bin/node",
+        "/workspace/coaster-wooden-hitch-authoring/evidence/composition/run-composition-check.mjs",
+        "gltf-validator.validateBytes",
+        "/workspace/coaster-wooden-hitch-authoring/outputs/wooden-car-routed-composed.glb",
+        "--maxIssues=1000"
+      ],
+      "libraryPath": "/workspace/coaster-detailed-assets/checks/node_modules/gltf-validator/index.js",
+      "librarySha256": "78deff9ea85743e86461c2d14fae76e7fc3ca0432e652f62948066b55fa16f0d",
+      "cwd": "/workspace/coaster-wooden-hitch-authoring",
+      "startUtc": "2026-10-08T01:57:33.773Z",
+      "completedUtc": "2026-10-08T01:57:33.897Z",
+      "exitCode": 0,
+      "stdout": {
+        "path": "/workspace/coaster-wooden-hitch-authoring/evidence/composition/wooden-car-routed-composed-structural.stdout",
+        "sha256": "6153af3ad5e162953abea703c74cb8f92043d9451e6f5eeeb4c6a4a3b55543fb"
+      },
+      "stderr": {
+        "path": "/workspace/coaster-wooden-hitch-authoring/evidence/composition/wooden-car-routed-composed-structural.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "reportPath": "/workspace/coaster-wooden-hitch-authoring/evidence/composition/wooden-car-routed-composed-structural.json",
+      "reportSha256": "5b56afa4ab329bab4d459d51c709e1cdc91d82534f8e6c71b5574d4d90039966",
+      "summary": {
+        "errors": 0,
+        "warnings": 6,
+        "infos": 14,
+        "hints": 0,
+        "truncated": false,
+        "messages": [
+          {
+            "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+            "severity": 1,
+            "pointer": "/meshes/0/primitives/0/material"
+          },
+          {
+            "code": "UNUSED_OBJECT",
+            "severity": 2,
+            "pointer": "/meshes/1/primitives/0/attributes/TEXCOORD_0"
+          },
+          {
+            "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+            "severity": 1,
+            "pointer": "/meshes/2/primitives/0/material"
+          },
+          {
+            "code": "UNUSED_OBJECT",
+            "severity": 2,
+            "pointer": "/meshes/3/primitives/0/attributes/TEXCOORD_0"
+          },
+          {
+            "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+            "severity": 1,
+            "pointer": "/meshes/4/primitives/0/material"
+          },
+          {
+            "code": "UNUSED_OBJECT",
+            "severity": 2,
+            "pointer": "/meshes/5/primitives/0/attributes/TEXCOORD_0"
+          },
+          {
+            "code": "UNUSED_OBJECT",
+            "severity": 2,
+            "pointer": "/meshes/6/primitives/0/attributes/TEXCOORD_0"
+          },
+          {
+            "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+            "severity": 1,
+            "pointer": "/meshes/7/primitives/0/material"
+          },
+          {
+            "code": "UNUSED_OBJECT",
+            "severity": 2,
+            "pointer": "/meshes/8/primitives/0/attributes/TEXCOORD_0"
+          },
+          {
+            "code": "UNUSED_OBJECT",
+            "severity": 2,
+            "pointer": "/meshes/9/primitives/0/attributes/TEXCOORD_0"
+          },
+          {
+            "code": "UNUSED_OBJECT",
+            "severity": 2,
+            "pointer": "/meshes/10/primitives/0/attributes/TEXCOORD_0"
+          },
+          {
+            "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+            "severity": 1,
+            "pointer": "/meshes/11/primitives/0/material"
+          },
+          {
+            "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+            "severity": 1,
+            "pointer": "/meshes/12/primitives/0/material"
+          },
+          {
+            "code": "NODE_EMPTY",
+            "severity": 2,
+            "pointer": "/nodes/10"
+          },
+          {
+            "code": "NODE_EMPTY",
+            "severity": 2,
+            "pointer": "/nodes/11"
+          },
+          {
+            "code": "NODE_EMPTY",
+            "severity": 2,
+            "pointer": "/nodes/16"
+          },
+          {
+            "code": "NODE_EMPTY",
+            "severity": 2,
+            "pointer": "/nodes/17"
+          },
+          {
+            "code": "NODE_EMPTY",
+            "severity": 2,
+            "pointer": "/nodes/18"
+          },
+          {
+            "code": "NODE_EMPTY",
+            "severity": 2,
+            "pointer": "/nodes/19"
+          },
+          {
+            "code": "UNUSED_OBJECT",
+            "severity": 2,
+            "pointer": "/accessors/29"
+          }
+        ]
+      }
+    },
+    {
+      "name": "independent",
+      "command": [
+        "/usr/bin/node",
+        "/workspace/coaster-wooden-hitch-authoring/evidence/composition/verify-composition.mjs",
+        "/workspace/coaster-wooden-hitch-authoring/outputs/wooden-car-routed-composed.glb",
+        "/workspace/coaster-wooden-hitch-authoring/evidence/composition/wooden-car-routed-composed-independent.json"
+      ],
+      "cwd": "/workspace/coaster-wooden-hitch-authoring",
+      "startUtc": "2026-10-08T01:57:33.898Z",
+      "completedUtc": "2026-10-08T01:57:34.511Z",
+      "exitCode": 0,
+      "signal": null,
+      "stdout": {
+        "path": "/workspace/coaster-wooden-hitch-authoring/evidence/composition/wooden-car-routed-composed-independent.stdout",
+        "sha256": "7e804701a64cdcb8e989f6c30925b9d5ba72649c71e3c9de8f437d52157bb458"
+      },
+      "stderr": {
+        "path": "/workspace/coaster-wooden-hitch-authoring/evidence/composition/wooden-car-routed-composed-independent.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "error": null
+    }
+  ],
+  "scope": "Composition preservation and GLB structure only; no 59-pose rerun or collision acceptance.",
+  "inputs": {
+    "original": {
+      "path": "/workspace/coaster-detailed-assets/outputs/wooden-car.glb",
+      "sha256": "fc988c55ed60dcd5abf7c5e02ecbc1ac3a8cd828cfe7fe4bb8f30bcf21699b59",
+      "bytes": 3545440
+    },
+    "fixture": {
+      "path": "/workspace/coaster-articulated-wooden-joint/results.json",
+      "sha256": "167ba3e1da273b66a4bc1d9fb1c3a6fe6c1ec0d2ea54673395f94ae73a287ab6",
+      "bytes": 1402538
+    },
+    "hardware": {
+      "path": "/workspace/coaster-wooden-hitch-authoring/outputs/wooden-car-joint-routed.glb",
+      "sha256": "575eaffa6f934ba52cc34fe34f37109a93aff960c0b8c350970b7ca9715ee1f3",
+      "bytes": 3578900
+    }
+  },
+  "output": {
+    "path": "/workspace/coaster-wooden-hitch-authoring/outputs/wooden-car-routed-composed.glb",
+    "sha256": "7b6ae0f47746d4e8bd624ad2323f7cd20abec214711cbfb4e89329adc687202e",
+    "bytes": 3590960
+  },
+  "composerSha256": "f6384dfd81f9541abfbd16cf5520acc371cad4fa36ba59b18f475a3cedcb0557",
+  "verificationCompleted": true,
+  "completedUtc": "2026-10-08T01:57:34.511Z"
+}

@@ -1,0 +1,319 @@
+{
+  "schemaVersion": 1,
+  "carParts": [
+    {
+      "name": "Mount_Assembly_Front",
+      "end": "front",
+      "kind": "unified-mount"
+    },
+    {
+      "name": "Mount_Assembly_Rear",
+      "end": "rear",
+      "kind": "unified-mount"
+    }
+  ],
+  "drawbarParts": [
+    {
+      "name": "Drawbar_Body",
+      "end": "span",
+      "kind": "unified-link"
+    }
+  ],
+  "contacts": [
+    {
+      "id": "front-carrier-stringer-left-face",
+      "kind": "planar-mating",
+      "a": {
+        "asset": "car",
+        "mesh": "Mount_Assembly_Front",
+        "component": 0,
+        "outwardNormal": [
+          0,
+          0,
+          -1
+        ]
+      },
+      "b": {
+        "asset": "car",
+        "mesh": "Chassis_Frame",
+        "originalComponent": 0,
+        "outwardNormal": [
+          0,
+          0,
+          1
+        ]
+      },
+      "patch": {
+        "centreInA": [
+          -0.46,
+          0.22,
+          1.25
+        ],
+        "radiusMetres": 0.023
+      }
+    },
+    {
+      "id": "front-carrier-stringer-right-face",
+      "kind": "planar-mating",
+      "a": {
+        "asset": "car",
+        "mesh": "Mount_Assembly_Front",
+        "component": 0,
+        "outwardNormal": [
+          0,
+          0,
+          -1
+        ]
+      },
+      "b": {
+        "asset": "car",
+        "mesh": "Chassis_Frame",
+        "originalComponent": 1,
+        "outwardNormal": [
+          0,
+          0,
+          1
+        ]
+      },
+      "patch": {
+        "centreInA": [
+          0.46,
+          0.22,
+          1.25
+        ],
+        "radiusMetres": 0.023
+      }
+    },
+    {
+      "id": "rear-carrier-stringer-left-face",
+      "kind": "planar-mating",
+      "a": {
+        "asset": "car",
+        "mesh": "Mount_Assembly_Rear",
+        "component": 0,
+        "outwardNormal": [
+          0,
+          0,
+          1
+        ]
+      },
+      "b": {
+        "asset": "car",
+        "mesh": "Chassis_Frame",
+        "originalComponent": 0,
+        "outwardNormal": [
+          0,
+          0,
+          -1
+        ]
+      },
+      "patch": {
+        "centreInA": [
+          -0.46,
+          0.22,
+          -1.25
+        ],
+        "radiusMetres": 0.023
+      }
+    },
+    {
+      "id": "rear-carrier-stringer-right-face",
+      "kind": "planar-mating",
+      "a": {
+        "asset": "car",
+        "mesh": "Mount_Assembly_Rear",
+        "component": 0,
+        "outwardNormal": [
+          0,
+          0,
+          1
+        ]
+      },
+      "b": {
+        "asset": "car",
+        "mesh": "Chassis_Frame",
+        "originalComponent": 1,
+        "outwardNormal": [
+          0,
+          0,
+          -1
+        ]
+      },
+      "patch": {
+        "centreInA": [
+          0.46,
+          0.22,
+          -1.25
+        ],
+        "radiusMetres": 0.023
+      }
+    }
+  ],
+  "joints": [
+    {
+      "end": "front",
+      "carrier": "Mount_Assembly_Front",
+      "pin": "Mount_Assembly_Front",
+      "eye": "Drawbar_Body",
+      "attachmentContact": "front-carrier-stringer-left-face"
+    },
+    {
+      "end": "rear",
+      "carrier": "Mount_Assembly_Rear",
+      "pin": "Mount_Assembly_Rear",
+      "eye": "Drawbar_Body",
+      "attachmentContact": "rear-carrier-stringer-left-face"
+    }
+  ],
+  "authorDimensions": {
+    "car": {
+      "assetId": "coaster-hitch-mounts",
+      "candidateScope": "finite visual candidate mount hardware; unqualified; pending root collision validation",
+      "parts": {
+        "Mount_Carrier_Front": "Mount_Carrier_Front",
+        "Mount_Clevis_Front": "Mount_Clevis_Front",
+        "Mount_Pin_Front": "Mount_Pin_Front",
+        "Mount_Carrier_Rear": "Mount_Carrier_Rear",
+        "Mount_Clevis_Rear": "Mount_Clevis_Rear",
+        "Mount_Pin_Rear": "Mount_Pin_Rear"
+      },
+      "anchors": {
+        "Coupler_Front": "Coupler_Front",
+        "Coupler_Rear": "Coupler_Rear",
+        "Stringer_Front_Left_Face": [
+          -0.46,
+          -1.25,
+          0.22
+        ],
+        "Stringer_Front_Right_Face": [
+          0.46,
+          -1.25,
+          0.22
+        ],
+        "Stringer_Rear_Left_Face": [
+          -0.46,
+          1.25,
+          0.22
+        ],
+        "Stringer_Rear_Right_Face": [
+          0.46,
+          1.25,
+          0.22
+        ]
+      },
+      "candidateDimensions": {
+        "carrier_attachment_width_x": 0.032,
+        "carrier_outer_half_span_x": 0.476,
+        "carrier_height_z": 0.028,
+        "carrier_y_front": [
+          -1.25,
+          -1.3
+        ],
+        "carrier_y_rear": [
+          1.25,
+          1.3
+        ],
+        "clevis_gap_vertical": 0.03,
+        "clevis_plate_thickness": 0.01,
+        "pin_radius": 0.012,
+        "pin_height": 0.06,
+        "eye_hole_clearance_radial": 0.002,
+        "eye_thickness_clearance_vertical": 0.006,
+        "head_envelope_radius": 0.058,
+        "head_envelope_bound": 0.09995
+      },
+      "intendedAttachmentPairs": [
+        [
+          "Mount_Carrier_Front",
+          "Mount_Clevis_Front"
+        ],
+        [
+          "Mount_Clevis_Front",
+          "Mount_Pin_Front"
+        ],
+        [
+          "Mount_Carrier_Rear",
+          "Mount_Clevis_Rear"
+        ],
+        [
+          "Mount_Clevis_Rear",
+          "Mount_Pin_Rear"
+        ]
+      ],
+      "requiredKinematicYaw": {
+        "front_deg": 15.8242714,
+        "rear_deg": 15.1308793
+      },
+      "validationStatus": "unqualified candidate; root validation required on Grok Bot; collision clearance uncertified",
+      "offlineSolidUnion": true,
+      "exportedParts": [
+        "Mount_Assembly_Front",
+        "Mount_Assembly_Rear"
+      ]
+    },
+    "link": {
+      "assetId": "coaster-drawbar-0.20m",
+      "candidateScope": "finite visual candidate; unqualified; pending root kinematic and collision validation",
+      "endpointNodes": {
+        "Joint_EndA": "Joint_EndA",
+        "Joint_EndB": "Joint_EndB"
+      },
+      "parts": {
+        "Drawbar_Bar": "Drawbar_Bar",
+        "Drawbar_Eye_EndA": "Drawbar_Eye_EndA",
+        "Drawbar_Eye_EndB": "Drawbar_Eye_EndB"
+      },
+      "candidateDimensions": {
+        "length_between_joints": 0.2,
+        "bar_width_mid": 0.025,
+        "bar_thickness_mid": 0.018,
+        "bar_width_end": 0.028,
+        "bar_thickness_end": 0.022,
+        "eye_outer_radius": 0.03,
+        "eye_inner_radius": 0.014,
+        "eye_thickness": 0.024,
+        "head_envelope_radius": 0.03,
+        "head_envelope_bound": 0.09995
+      },
+      "intendedInternalAttachments": [
+        [
+          "Drawbar_Bar",
+          "Drawbar_Eye_EndA"
+        ],
+        [
+          "Drawbar_Bar",
+          "Drawbar_Eye_EndB"
+        ]
+      ],
+      "validationStatus": "unqualified candidate; root validation required; collisions uncertified",
+      "offlineSolidUnion": true,
+      "exportedParts": [
+        "Drawbar_Body"
+      ]
+    },
+    "scope": "Author dimensions and proposed planar contacts require actual finite geometry checks; no accepted hardware availability"
+  },
+  "authorSourceHashes": {
+    "candidate-export.py": "0eb9d0c0c32d0e776fe3e903224805165844aa11a94b9b62b25e09c1a2ada3b6",
+    "car-adapter-routed.py": "705485f5da487145dc9434090f21810f39f8ab47b04b7e25b6513197147ff50a",
+    "mount-parts-routed.py": "5b45a16ce13b851c0770b73aace3e75505e2a9d80c042feb27ac31ba48700d7f",
+    "hitch_geometry.py": "5d7444145660bdd5b92d3d2705756f0f512ddd7bc2bceb01d195630f6ad51ee5",
+    "union-parts.py": "915cf25e9ca7ff6d163ac933df695333181bd2f6f29e9b4c6640458e13815091",
+    "wooden-car-reference.py": "568a3a3429d2d1ea3edabeadedf253c2b73305626fa58f665b9959b4edf171f2",
+    "drawbar-adapter.py": "c84071a396a32d051258b3e1de6a2feb2f039872231c2294da2590cadb262c6e",
+    "drawbar-part.py": "51557a5730832fd4830203b6d2ff91ffea7ca4587f14dc4ec32448e840ef4c32"
+  },
+  "candidateOutputHashes": {
+    "car": "7b6ae0f47746d4e8bd624ad2323f7cd20abec214711cbfb4e89329adc687202e",
+    "link": "bd65312ab91197d08d66fd6258e31f31e46b6d529832a0d741fcb729e0fec671"
+  },
+  "structuralWarnings": {
+    "car": 6,
+    "link": 1
+  },
+  "compositionInputHashes": {
+    "originalCar": "fc988c55ed60dcd5abf7c5e02ecbc1ac3a8cd828cfe7fe4bb8f30bcf21699b59",
+    "routedHardware": "575eaffa6f934ba52cc34fe34f37109a93aff960c0b8c350970b7ca9715ee1f3"
+  },
+  "scope": "Four finite planar stringer/end-carrier attachment patches require exact measured opposed support/contact. All original attributes, texture resources, node frames and retained chassis surfaces are preserved by append composition; no native ride availability."
+}

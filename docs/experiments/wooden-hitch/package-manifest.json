@@ -1,0 +1,310 @@
+{
+  "scope": "Exact copied executable source and retained proof with documented package-stage annotations; no production code changed",
+  "files": [
+    {
+      "file": "prototypes/wooden-hitch/.gitattributes",
+      "bytes": 146,
+      "sha256": "62ea3148ed2990d797fbc41187d030cd58875aec83a2fd816e65239430bd0645"
+    },
+    {
+      "file": "prototypes/wooden-hitch/COMPOSITION.md",
+      "bytes": 10410,
+      "sha256": "0539e81f9582ece6add9326c0844dc6fe698aa3f879e6b92f1e68a32cfe96903"
+    },
+    {
+      "file": "prototypes/wooden-hitch/README.md",
+      "bytes": 4295,
+      "sha256": "f1d4bba204ea481bab92874db35e4e3852d46c58649ec49cd8874050e7134330"
+    },
+    {
+      "file": "prototypes/wooden-hitch/ROUTED-CONTRACT.md",
+      "bytes": 2528,
+      "sha256": "908124912ec4e97665149b5c22dc507e9bb2186429957947ad5851e973b1b293"
+    },
+    {
+      "file": "prototypes/wooden-hitch/VALIDATION-CONTRACT.md",
+      "bytes": 11124,
+      "sha256": "21b38219c1e77b0d1b0cdb2bebce8917237084fa35025c5d929449283d70170d"
+    },
+    {
+      "file": "prototypes/wooden-hitch/capture.py",
+      "bytes": 14918,
+      "sha256": "13d426d4413292fe016c61d8442d16606bbfb654df6c8581f035b2d222a32520"
+    },
+    {
+      "file": "prototypes/wooden-hitch/check-joint.mjs",
+      "bytes": 81991,
+      "sha256": "63245e82459d7314b368c7c042b2eea54bd99b0a6c731f5516eaf991081610d8"
+    },
+    {
+      "file": "prototypes/wooden-hitch/checks/attribute-diff.mjs",
+      "bytes": 4388,
+      "sha256": "d8fa34076d0f6b809252ceb80e55699726de79b1d1d319fd269d1ce772eb2593"
+    },
+    {
+      "file": "prototypes/wooden-hitch/checks/check-joint-before-inventory.mjs",
+      "bytes": 63245,
+      "sha256": "cf415b0dedd0f9f1b0537e8a368d88dc5d0e71de2f848ab655aa3bad2d841751"
+    },
+    {
+      "file": "prototypes/wooden-hitch/checks/check-joint-c75a7e.mjs",
+      "bytes": 79734,
+      "sha256": "c75a7e379f26f3e3884ae57c5b2f96a5aab9b2960bae3e75db6051cdbd88be1a"
+    },
+    {
+      "file": "prototypes/wooden-hitch/checks/regression-controls.mjs",
+      "bytes": 20480,
+      "sha256": "7f14416af287a622d6b46569f8807795b5676f1a6302261295ffc9846ffa7778"
+    },
+    {
+      "file": "prototypes/wooden-hitch/compose-car.mjs",
+      "bytes": 31043,
+      "sha256": "f6384dfd81f9541abfbd16cf5520acc371cad4fa36ba59b18f475a3cedcb0557"
+    },
+    {
+      "file": "prototypes/wooden-hitch/evidence/composition/check-closure-controls.mjs",
+      "bytes": 8235,
+      "sha256": "2784002671b4fc513f6343927c21053c2c6f2070e7baff1abd85034f090ef6a9"
+    },
+    {
+      "file": "prototypes/wooden-hitch/evidence/composition/previous-verifier.mjs",
+      "bytes": 17586,
+      "sha256": "99873f1dd311aa8fb771819da643828277ed7b988c4d4d0646ec788d6c65f845"
+    },
+    {
+      "file": "prototypes/wooden-hitch/evidence/composition/repaired-verifier.mjs",
+      "bytes": 20877,
+      "sha256": "7336160344a96a3506299b9eac3fb5f9bb478703306c79203c8286c2cbb8dfc7"
+    },
+    {
+      "file": "prototypes/wooden-hitch/evidence/composition/run-composition-check.mjs",
+      "bytes": 5374,
+      "sha256": "fdfbb08710353bdfd6ce21ee889f93af6a24f83dcffb010e86aa2d4302578104"
+    },
+    {
+      "file": "prototypes/wooden-hitch/evidence/composition/verify-composition.mjs",
+      "bytes": 20877,
+      "sha256": "7336160344a96a3506299b9eac3fb5f9bb478703306c79203c8286c2cbb8dfc7"
+    },
+    {
+      "file": "prototypes/wooden-hitch/inspector/asset-index.json",
+      "bytes": 46703,
+      "sha256": "323b9efff54301ba74d7910ab56a70063f56ae59df6941e642f4d5a7462b5028"
+    },
+    {
+      "file": "prototypes/wooden-hitch/inspector/index.html",
+      "bytes": 3680,
+      "sha256": "39a5bc01d0ea8c8e4606fdea7a39336b942c7404af46f5d07df5672b3dfa1cbf"
+    },
+    {
+      "file": "prototypes/wooden-hitch/inspector/style.css",
+      "bytes": 5762,
+      "sha256": "44313e216bd7de13bd74f82faf5674426f6f6dcda45144f1ab6abc3aa4251eff"
+    },
+    {
+      "file": "prototypes/wooden-hitch/inspector/viewer.js",
+      "bytes": 9365,
+      "sha256": "5f88a9531dbedbc96d8bd362bc6987f88ab7f6c3558835a6210a7a6f5ac9c111"
+    },
+    {
+      "file": "prototypes/wooden-hitch/run-check.sh",
+      "bytes": 1782,
+      "sha256": "5b7ba0da8d7f76741be5ba1862a2fe1be001065f6b31ff20c4499bd113576946"
+    },
+    {
+      "file": "prototypes/wooden-hitch/sources/candidate-export.py",
+      "bytes": 11936,
+      "sha256": "0eb9d0c0c32d0e776fe3e903224805165844aa11a94b9b62b25e09c1a2ada3b6"
+    },
+    {
+      "file": "prototypes/wooden-hitch/sources/car-adapter-routed.py",
+      "bytes": 2137,
+      "sha256": "705485f5da487145dc9434090f21810f39f8ab47b04b7e25b6513197147ff50a"
+    },
+    {
+      "file": "prototypes/wooden-hitch/sources/drawbar-adapter.py",
+      "bytes": 1596,
+      "sha256": "c84071a396a32d051258b3e1de6a2feb2f039872231c2294da2590cadb262c6e"
+    },
+    {
+      "file": "prototypes/wooden-hitch/sources/drawbar-part.py",
+      "bytes": 2953,
+      "sha256": "51557a5730832fd4830203b6d2ff91ffea7ca4587f14dc4ec32448e840ef4c32"
+    },
+    {
+      "file": "prototypes/wooden-hitch/sources/hitch_geometry.py",
+      "bytes": 2585,
+      "sha256": "5d7444145660bdd5b92d3d2705756f0f512ddd7bc2bceb01d195630f6ad51ee5"
+    },
+    {
+      "file": "prototypes/wooden-hitch/sources/mount-parts-routed.py",
+      "bytes": 6000,
+      "sha256": "5b45a16ce13b851c0770b73aace3e75505e2a9d80c042feb27ac31ba48700d7f"
+    },
+    {
+      "file": "prototypes/wooden-hitch/sources/union-parts.py",
+      "bytes": 661,
+      "sha256": "915cf25e9ca7ff6d163ac933df695333181bd2f6f29e9b4c6640458e13815091"
+    },
+    {
+      "file": "prototypes/wooden-hitch/sources/wooden-car-reference.py",
+      "bytes": 23221,
+      "sha256": "568a3a3429d2d1ea3edabeadedf253c2b73305626fa58f665b9959b4edf171f2"
+    },
+    {
+      "file": "docs/experiments/wooden-hitch/README.md",
+      "bytes": 6102,
+      "sha256": "fad51619fbe0562564c6d30a394c33b388c18054616814d9851eac0a304baffb"
+    },
+    {
+      "file": "docs/experiments/wooden-hitch/agy-drawbar-code-audit.json",
+      "bytes": 462,
+      "sha256": "7ab0877e615eb75d318bc91d233c6578fbae27cb3e85a738f9cd208de26e1957"
+    },
+    {
+      "file": "docs/experiments/wooden-hitch/agy-mount-code-audit.json",
+      "bytes": 426,
+      "sha256": "ad2bdd46adf24f0c6d1f07d7f7de0e3c55c19e650821f9a6e2c1e653db9ce801"
+    },
+    {
+      "file": "docs/experiments/wooden-hitch/agy-routed-carrier-audit.json",
+      "bytes": 3247,
+      "sha256": "3536d6139fe8d3f1ee830488026aeb3f0a2faec1e5d6260c72b3dd241e36842c"
+    },
+    {
+      "file": "docs/experiments/wooden-hitch/browser.json",
+      "bytes": 14281,
+      "sha256": "1e21a8d8650d67f050148cc9c3b3352bad0b0ca8014cdafdd11668890c144a41"
+    },
+    {
+      "file": "docs/experiments/wooden-hitch/composition-closure-manifest.json",
+      "bytes": 9580,
+      "sha256": "0dc53d589b744997d4cb11385b82c587593609aa807c7f0c166f219c8271c0f7"
+    },
+    {
+      "file": "docs/experiments/wooden-hitch/composition-controls-provenance.json",
+      "bytes": 2070,
+      "sha256": "a976b363127e3a4ad92bb3045e593f66cd6037afbccaa94dc68563dfa9da626f"
+    },
+    {
+      "file": "docs/experiments/wooden-hitch/composition-new-execution.json",
+      "bytes": 5214,
+      "sha256": "fdab03d741e4595bbd84a649ba34619265b4088c71e2d6e5c0da580b3083244a"
+    },
+    {
+      "file": "docs/experiments/wooden-hitch/composition-old-execution.json",
+      "bytes": 4052,
+      "sha256": "e0ceb6c616c15cde9bd094f75d962647ffb060ae0eefbfb36c4457ab7f0cd615"
+    },
+    {
+      "file": "docs/experiments/wooden-hitch/composition-routed-positive-new-verifier.json",
+      "bytes": 59589,
+      "sha256": "a6210963c01ea03eacf3250b9f838d482e4f7eb67a1f36fb93d7890902e411c1"
+    },
+    {
+      "file": "docs/experiments/wooden-hitch/composition-run.json",
+      "bytes": 8668,
+      "sha256": "6bb261a53b2444c47ed743cf0a54ab4469a9f92c1bfeac056fffd7c9df1add08"
+    },
+    {
+      "file": "docs/experiments/wooden-hitch/drawbar-front.png",
+      "bytes": 99254,
+      "sha256": "5dced15d8b263933f3f9b4ade1e7ba18463f0552d3193febcb58ef1c8a76690e"
+    },
+    {
+      "file": "docs/experiments/wooden-hitch/finite-command.txt",
+      "bytes": 258,
+      "sha256": "819cd3c706d01492b065b9a49f84611116e49a9bba6da5424bf11ee1fbd11df1"
+    },
+    {
+      "file": "docs/experiments/wooden-hitch/finite-exit.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "file": "docs/experiments/wooden-hitch/finite-input-sha256.txt",
+      "bytes": 508,
+      "sha256": "540741b16211c9bf390a438675dd4cad5cfd3a0345ab7704af1978f0374b0414"
+    },
+    {
+      "file": "docs/experiments/wooden-hitch/finite-results.json.gz",
+      "bytes": 1628835,
+      "sha256": "d0752830f436c1f4f889612f87b3ffc16494e8e2a84fc0f4546ccbb252b29004"
+    },
+    {
+      "file": "docs/experiments/wooden-hitch/finite-sha256.txt",
+      "bytes": 2039,
+      "sha256": "725511a3094b8e34e0c06d608f384da5987da16d73ed98f6c3adb910108765c2"
+    },
+    {
+      "file": "docs/experiments/wooden-hitch/finite-stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "docs/experiments/wooden-hitch/finite-stdout.jsonl",
+      "bytes": 12598,
+      "sha256": "45c42622b9095aa67ed88a93c00d508f12606010254656458b4fb3eda2edfa96"
+    },
+    {
+      "file": "docs/experiments/wooden-hitch/frozen-poses.json.gz",
+      "bytes": 118785,
+      "sha256": "9376acb231b8e7ccffd0781e072ee6cfd281df8714dcb4bc602fb315475249a7"
+    },
+    {
+      "file": "docs/experiments/wooden-hitch/hardware-export.json",
+      "bytes": 7875,
+      "sha256": "7283575a7d8072abb732af266e449fbc73a44d94a56fa36b4646047681089ec2"
+    },
+    {
+      "file": "docs/experiments/wooden-hitch/hitch-metadata.json",
+      "bytes": 8447,
+      "sha256": "6f2b596f104e959580f715be6e72b9a4697b31e6c8548137dca1d2d14705c1f7"
+    },
+    {
+      "file": "docs/experiments/wooden-hitch/packaged-results.json",
+      "bytes": 1299,
+      "sha256": "bada457cf23564903cbdc43ba88ecc5db93c95ecf85e79fbd5cc144809a77278"
+    },
+    {
+      "file": "docs/experiments/wooden-hitch/regression-controls.json.gz",
+      "bytes": 204314,
+      "sha256": "129be19555c039f89fddbe9acd9e3e97e1246d5da032767f3936ba8676507858"
+    },
+    {
+      "file": "docs/experiments/wooden-hitch/regression-summary.json",
+      "bytes": 1559,
+      "sha256": "8b10c9904ee9ab78ce4f70ec86f3988be084ef98669da0908cf0a0696f5426eb"
+    },
+    {
+      "file": "docs/experiments/wooden-hitch/rejected-results.json.gz",
+      "bytes": 1994607,
+      "sha256": "862e47effc2b88ed3fd2a1f6115792a80b154ffb99f85d2adef38554d9b4e24b"
+    },
+    {
+      "file": "docs/experiments/wooden-hitch/review.json",
+      "bytes": 3303,
+      "sha256": "2cc2ebc16d0115e098f89c5ea85fa49fab23c2d267f07b8f32af5db01dd8f074"
+    },
+    {
+      "file": "docs/experiments/wooden-hitch/source-manifest.json",
+      "bytes": 1408,
+      "sha256": "de4d0c97f43939cae023580c675e3c0142b7bcef1cab7014451d309b66b79608"
+    },
+    {
+      "file": "docs/experiments/wooden-hitch/structural.json",
+      "bytes": 7026,
+      "sha256": "5b56afa4ab329bab4d459d51c709e1cdc91d82534f8e6c71b5574d4d90039966"
+    },
+    {
+      "file": "docs/experiments/wooden-hitch/summary.json",
+      "bytes": 4820,
+      "sha256": "c0a36af4a741eadae8c1c3152acd515a14865cab3ebafbcf2bf7d2f09ae2ccd6"
+    },
+    {
+      "file": "docs/experiments/wooden-hitch/wooden-car-close.png",
+      "bytes": 256910,
+      "sha256": "2204b4a93d521772f689bcd35a0ef6caf5741b716ed7680e81ff035056b7e00f"
+    }
+  ]
+}
