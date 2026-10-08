@@ -3,6 +3,9 @@
 This context describes the player-facing concepts of a 3D park-management game
 whose gameplay reference is RollerCoaster Tycoon 2.
 
+For current progress, verification evidence, ownership and the next action,
+read [PROGRESS.md](PROGRESS.md). Domain decisions are under [docs/adr](docs/adr/).
+
 ## Language
 
 **Money-enabled sandbox**:

@@ -10,6 +10,9 @@ Read `CONTEXT.md` and any ADRs relevant to the topic. If they do not exist, proc
 
 Use the canonical terms from `CONTEXT.md` in issue titles, hypotheses, code, and documentation. Keep `CONTEXT.md` a glossary of domain concepts; record specifications and implementation decisions in their appropriate artifacts.
 
+Current execution state and recovery context live in root `PROGRESS.md`;
+follow the update triggers in `AGENTS.md`.
+
 ## Flag ADR conflicts
 
 When a proposed change contradicts an existing ADR, identify the conflict and explain why the decision should be revisited.
