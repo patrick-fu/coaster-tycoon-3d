@@ -1,0 +1,51 @@
+{
+  "baselineUnchanged": true,
+  "records": [
+    {
+      "name": "car-spacing",
+      "cwd": "/workspace/coaster-v8-regression/controls/car-spacing",
+      "command": [
+        "node",
+        "--test",
+        "test/v8-continuation.test.mjs"
+      ],
+      "changedFile": "dist/simulation/view.js",
+      "before": "carPose(c, t.position - i * rules.motion.carLength)",
+      "after": "carPose(c, t.position - i * 2000)",
+      "baselineFileSha256": "43c2d7b215db799aa2c4ddc5f522a00c8bb9a5447ffb2c500308f609baf42073",
+      "changedFileSha256": "3e655b7816e0f710cbcd9bec9fad7ed69781a616434df4c39f614f350ba566db",
+      "fixtureSha256": "f2077d5e44b25411261a8260ec7954c08bd171c9c25a1da64075b78c7c847061",
+      "exit": 1,
+      "expectedFailedTests": 2,
+      "assertion": "offset 0: complete public projection",
+      "stdoutSha256": "def346bd4ef3346439335558bb5b5b3638b46c60a77dbc6880a39aac8a28efb1",
+      "stdoutBytes": 679152,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrBytes": 0,
+      "caught": true
+    },
+    {
+      "name": "world-metric",
+      "cwd": "/workspace/coaster-v8-regression/controls/world-metric",
+      "command": [
+        "node",
+        "--test",
+        "test/v8-continuation.test.mjs"
+      ],
+      "changedFile": "dist/simulation/view.js",
+      "before": "metres = rules.motion.tileMetres",
+      "after": "metres = 4",
+      "baselineFileSha256": "43c2d7b215db799aa2c4ddc5f522a00c8bb9a5447ffb2c500308f609baf42073",
+      "changedFileSha256": "e33743b9b3c33a7361a39dc098693edcc1a8a49f0b5be2595a81f17bd2378c5d",
+      "fixtureSha256": "f2077d5e44b25411261a8260ec7954c08bd171c9c25a1da64075b78c7c847061",
+      "exit": 1,
+      "expectedFailedTests": 1,
+      "assertion": "offset 0: complete public projection",
+      "stdoutSha256": "26d1f3149e2d16e5730f05e3bf8ee7fc39871721e88a6079a0e2e7fe5e9c7179",
+      "stdoutBytes": 375457,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrBytes": 0,
+      "caught": true
+    }
+  ]
+}

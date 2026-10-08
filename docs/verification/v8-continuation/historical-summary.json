@@ -1,0 +1,579 @@
+{
+  "schema": 1,
+  "purpose": "Frozen historical v8 save, view and car-pose continuation evidence for future migration regressions",
+  "sourceCommit": "9ed66bacb964cb418810d8fe7f40064a18ec4800",
+  "archiveHash": "37187ba89de1ec8c26a42632920c9cb916720ec44fd2eb673648e58986154bbf",
+  "generatorSha256": "6e10a301b390a0e23028b035be2d121e7673e16d6ff21f5cb8d665ffcd7e9688",
+  "sourceInputsCanonicalSha256": "2ff3174141c2eadd2c934c9d24c0eba2146e3119923f4b1d11585eafb4d2bef3",
+  "runtimeInputsCanonicalSha256": "e9849d41e03a7184eed1060da8498bc09fff29e52948a2cf3ed904d3c827543b",
+  "node": {
+    "version": "v20.19.2",
+    "versions": {
+      "node": "20.19.2",
+      "acorn": "8.8.1",
+      "ada": "2.9.2",
+      "ares": "1.34.5",
+      "brotli": "1.1.0",
+      "cjs_module_lexer": "1.2.3",
+      "cldr": "46.0",
+      "icu": "76.1",
+      "llhttp": "9.2.1",
+      "modules": "115",
+      "napi": "9",
+      "nghttp2": "1.64.0",
+      "openssl": "3.5.7",
+      "simdutf": "6.0.3",
+      "tz": "2024b",
+      "unicode": "16.0",
+      "uv": "1.50.0",
+      "uvwasi": "0.0.21",
+      "v8": "11.3.244.8-node.38",
+      "zlib": "1.3.1"
+    },
+    "platform": "linux",
+    "arch": "x64",
+    "executableSha256": "ca0728526aa1cc4e3056decec848ecc6d2c5391cecdd4e21a0ebd221d665c84e"
+  },
+  "excludedViewFields": {
+    "commandRevision": "Engine-session and restore-generation quote token; raw views retain it, but it is not a persisted park field."
+  },
+  "worldProfileOrigin": {
+    "path": "test/motion-regressions.test.mjs",
+    "line": 7,
+    "existingValues": {
+      "tileMetres": 1,
+      "tickHz": 1000
+    },
+    "secondaryAdaptations": {
+      "carLength": "700 mm permits the same three-car train to fit a 3000 mm three-tile platform; 2300 mm would require 6900 mm.",
+      "stationSpeed": "7 mm/tick gives 7 m/s at 1000 Hz and naturally acceptable guest forces.",
+      "chainSpeed": "5 mm/tick; valid nondefault receiving rule.",
+      "brakeDeceleration": "1 mm/tick squared; valid nondefault receiving rule.",
+      "brakeSpeed": "3 mm/tick; makes the same authored brake section meaningful."
+    }
+  },
+  "limits": [
+    "These are independently authored project-candidate rules, not original RCT2 calibration.",
+    "The 1 m / 1000 Hz case uses an intentional legal world-metric boundary from existing tests, not a default shipping world.",
+    "No browser or GPU was used; this evidence covers the historical simulation, its actual projection and source car-pose function.",
+    "The historical frozen kernel cannot execute new per-ride profiles; no migration or production source was edited."
+  ],
+  "cases": [
+    {
+      "name": "steel-custom",
+      "options": {
+        "side": 40,
+        "cash": 200000,
+        "maxLoan": 50000,
+        "seed": 20261007
+      },
+      "receivingRulesSha256": "2fd99b7052aac42b2f6c65c6bde8763e21a7c59d165ed1973a54411342fe4a90",
+      "initialRawSha256": "e0c29fb69e977794e72dac463ccf8cb9a97d5d1810f94033191e2ee2500221a1",
+      "preconditions": {
+        "version": 8,
+        "contentVersion": 1,
+        "tick": 3096,
+        "revision": 54,
+        "topologyRevision": 16,
+        "rng": 2852739959,
+        "cash": 201720,
+        "loan": 7321,
+        "ledger": {
+          "rideSales": 243,
+          "shopSales": 1572,
+          "stock": 834,
+          "wages": 1728,
+          "upkeep": 592,
+          "interest": 1512
+        },
+        "nextInstance": 4,
+        "ride": {
+          "id": 0,
+          "instanceId": 1,
+          "content": {
+            "familyId": "independent.circuit-coaster",
+            "variantId": "independent.steel-train",
+            "modeId": "independent.continuous-circuit"
+          },
+          "cars": 3,
+          "price": 27,
+          "income": 243,
+          "queue": [
+            15,
+            18,
+            21,
+            11
+          ]
+        },
+        "train": {
+          "carIds": [
+            3,
+            4,
+            5
+          ],
+          "seats": [
+            6,
+            7,
+            9,
+            8,
+            13,
+            16,
+            19,
+            22,
+            12
+          ],
+          "phase": "running",
+          "position": 11124,
+          "speed": 137,
+          "occupied": 9,
+          "occupiedCars": [
+            {
+              "id": 3,
+              "occupants": 3
+            },
+            {
+              "id": 4,
+              "occupants": 3
+            },
+            {
+              "id": 5,
+              "occupants": 3
+            }
+          ]
+        },
+        "retiredShopIncome": 51,
+        "retiredStock": 15,
+        "facility": {
+          "id": 1,
+          "instanceId": 3,
+          "content": {
+            "familyId": "independent.drink-facility",
+            "variantId": "independent.drink-stand",
+            "modeId": "independent.retail"
+          },
+          "name": "Replacement drink vendor",
+          "kind": "drink",
+          "element": 41,
+          "open": true,
+          "price": 13,
+          "income": 1521,
+          "sales": 117
+        },
+        "guests": 120
+      },
+      "setupProgress": [
+        {
+          "stage": "measured-empty-train",
+          "tick": 1536,
+          "measured": {
+            "ticks": 1449,
+            "distance": 123904,
+            "maxSpeed": 215,
+            "minVerticalG": 783,
+            "maxVerticalG": 1920,
+            "maxLateralG": 220
+          }
+        },
+        {
+          "stage": "sold-retired-and-slot-reused",
+          "tick": 1588,
+          "retired": {
+            "id": 1,
+            "instanceId": 2,
+            "content": {
+              "familyId": "independent.food-facility",
+              "variantId": "independent.food-stand",
+              "modeId": "independent.retail"
+            },
+            "name": "Retired food vendor",
+            "kind": "food",
+            "element": 39,
+            "open": true,
+            "price": 17,
+            "income": 51,
+            "sales": 3
+          },
+          "replacement": {
+            "id": 1,
+            "instanceId": 3,
+            "content": {
+              "familyId": "independent.drink-facility",
+              "variantId": "independent.drink-stand",
+              "modeId": "independent.retail"
+            },
+            "name": "Replacement drink vendor",
+            "kind": "drink",
+            "element": 41,
+            "open": true,
+            "price": 13,
+            "income": 0,
+            "sales": 0
+          },
+          "retiredShopIncome": 51,
+          "retiredStock": 15
+        }
+      ],
+      "checkpoints": [
+        {
+          "afterTicks": 0,
+          "tick": 3096,
+          "hashes": {
+            "rawSave": "e0c29fb69e977794e72dac463ccf8cb9a97d5d1810f94033191e2ee2500221a1",
+            "canonicalSave": "1bec2acb9e536a8b3122eee67020db2db7264034b2764556f0d984aec61bd83a",
+            "canonicalView": "292c813402da3e25b51ccf9c74ca386f37f463400a2fbb519ccca8a9bd61b2c8",
+            "canonicalPoses": "cc399545f731e9fa5eec04ac30ff92656c55fbe227e0b5f1348d889a13d76ee6"
+          }
+        },
+        {
+          "afterTicks": 1,
+          "tick": 3097,
+          "hashes": {
+            "rawSave": "295050f4993bffa1f58b1631158011c9ede2e923576f2834a14659b7fdf75da7",
+            "canonicalSave": "2d5027bc12da00cdf3ed5d8cffe8e1192fdd859712a8e7dc6ad9ae06c545b5b9",
+            "canonicalView": "1e7dfdea207f819da8c90d3cfa0920c619a4f6612cdf3cf97771508313e825ed",
+            "canonicalPoses": "4cb136ef615d868e298c7b51a0044aa1f1c175c2c0834c9097d2410d9e233eba"
+          }
+        },
+        {
+          "afterTicks": 17,
+          "tick": 3113,
+          "hashes": {
+            "rawSave": "d03948e3d88bfadd6e78dba628d34701a9f251cfd17655b3a7f5bcf7dc01bd78",
+            "canonicalSave": "b8fcfbaa7a7cd11f3c18baf7f1dcbcad2beaf11e0b76e30821cfb483bd6a7b60",
+            "canonicalView": "10a33eb6ed09c6f43046b484cf038438695d41ee0bec56ad9aec7586427dc380",
+            "canonicalPoses": "fcfd64956d5489a431a6148f59815f7bf8900b3e278f2d92c746c8603a30c23a"
+          }
+        },
+        {
+          "afterTicks": 400,
+          "tick": 3496,
+          "hashes": {
+            "rawSave": "99fbe571c58e27456804ffe9aa5057064c3f6d7af4e0778a919ce5abc51459d4",
+            "canonicalSave": "e388118283fc70b1e198d31f154ededde5535a0f64cdc2f7b4fb2710252c57eb",
+            "canonicalView": "7f346d136c47d75767614235d90bf748c448f730194e86d2416465b374ec93eb",
+            "canonicalPoses": "e7169407f1ca5f30f2eb487a01bbb8b4b8effd034de324117b083295db5ffa1d"
+          }
+        },
+        {
+          "afterTicks": 1200,
+          "tick": 4296,
+          "hashes": {
+            "rawSave": "11d63264101922111849fb7bea7c9302a4faf91efe8bc2daa0cfa862cc74feb0",
+            "canonicalSave": "ff1acefb736e5cea46b365a7413754fb975b868044d511e023efc5631e7bb2fd",
+            "canonicalView": "1e86b8eecd47d94cd6bba372987030b2aacc990964672e330bc3e7f4ca7a288e",
+            "canonicalPoses": "8dcfad566273cbc1d7d078e49f5a0aed63e816b5b427dae3eba80e2e4abd378c"
+          }
+        }
+      ],
+      "restoreChecks": [
+        {
+          "afterTicks": 0,
+          "batches": [],
+          "rawSaveIdentical": true,
+          "canonicalViewIdentical": true,
+          "posesIdentical": true
+        },
+        {
+          "afterTicks": 1,
+          "batches": [
+            1
+          ],
+          "rawSaveIdentical": true,
+          "canonicalViewIdentical": true,
+          "posesIdentical": true
+        },
+        {
+          "afterTicks": 17,
+          "batches": [
+            7,
+            10
+          ],
+          "rawSaveIdentical": true,
+          "canonicalViewIdentical": true,
+          "posesIdentical": true
+        },
+        {
+          "afterTicks": 400,
+          "batches": [
+            7,
+            10,
+            383
+          ],
+          "rawSaveIdentical": true,
+          "canonicalViewIdentical": true,
+          "posesIdentical": true
+        },
+        {
+          "afterTicks": 1200,
+          "batches": [
+            7,
+            10,
+            383,
+            800
+          ],
+          "rawSaveIdentical": true,
+          "canonicalViewIdentical": true,
+          "posesIdentical": true
+        }
+      ]
+    },
+    {
+      "name": "legacy-world-1m-1000hz",
+      "options": {
+        "side": 40,
+        "cash": 200000,
+        "maxLoan": 50000,
+        "seed": 20261007
+      },
+      "receivingRulesSha256": "1e058d16da97b4fcb8d48168af7f6f12a6953c9d8f6cfea1ada32fffbf2d333b",
+      "initialRawSha256": "468985d1b4816672897e030d2081048da7b3184563fcbef82f9903299a72e994",
+      "preconditions": {
+        "version": 8,
+        "contentVersion": 1,
+        "tick": 13760,
+        "revision": 54,
+        "topologyRevision": 16,
+        "rng": 586612990,
+        "cash": 190959,
+        "loan": 7321,
+        "ledger": {
+          "rideSales": 243,
+          "shopSales": 6863,
+          "stock": 3683,
+          "wages": 7704,
+          "upkeep": 2590,
+          "interest": 6741
+        },
+        "nextInstance": 4,
+        "ride": {
+          "id": 0,
+          "instanceId": 1,
+          "content": {
+            "familyId": "independent.circuit-coaster",
+            "variantId": "independent.steel-train",
+            "modeId": "independent.continuous-circuit"
+          },
+          "cars": 3,
+          "price": 27,
+          "income": 243,
+          "queue": [
+            16,
+            19,
+            22,
+            12
+          ]
+        },
+        "train": {
+          "carIds": [
+            3,
+            4,
+            5
+          ],
+          "seats": [
+            6,
+            7,
+            9,
+            10,
+            11,
+            14,
+            17,
+            20,
+            13
+          ],
+          "phase": "running",
+          "position": 2688,
+          "speed": 7,
+          "occupied": 9,
+          "occupiedCars": [
+            {
+              "id": 3,
+              "occupants": 3
+            },
+            {
+              "id": 4,
+              "occupants": 3
+            },
+            {
+              "id": 5,
+              "occupants": 3
+            }
+          ]
+        },
+        "retiredShopIncome": 51,
+        "retiredStock": 15,
+        "facility": {
+          "id": 1,
+          "instanceId": 3,
+          "content": {
+            "familyId": "independent.drink-facility",
+            "variantId": "independent.drink-stand",
+            "modeId": "independent.retail"
+          },
+          "name": "Replacement drink vendor",
+          "kind": "drink",
+          "element": 41,
+          "open": true,
+          "price": 13,
+          "income": 6812,
+          "sales": 524
+        },
+        "guests": 527
+      },
+      "setupProgress": [
+        {
+          "stage": "measured-empty-train",
+          "tick": 6912,
+          "measured": {
+            "ticks": 6781,
+            "distance": 31044,
+            "maxSpeed": 7,
+            "minVerticalG": -1472,
+            "maxVerticalG": 3470,
+            "maxLateralG": 2501
+          }
+        },
+        {
+          "stage": "sold-retired-and-slot-reused",
+          "tick": 6960,
+          "retired": {
+            "id": 1,
+            "instanceId": 2,
+            "content": {
+              "familyId": "independent.food-facility",
+              "variantId": "independent.food-stand",
+              "modeId": "independent.retail"
+            },
+            "name": "Retired food vendor",
+            "kind": "food",
+            "element": 39,
+            "open": true,
+            "price": 17,
+            "income": 51,
+            "sales": 3
+          },
+          "replacement": {
+            "id": 1,
+            "instanceId": 3,
+            "content": {
+              "familyId": "independent.drink-facility",
+              "variantId": "independent.drink-stand",
+              "modeId": "independent.retail"
+            },
+            "name": "Replacement drink vendor",
+            "kind": "drink",
+            "element": 41,
+            "open": true,
+            "price": 13,
+            "income": 0,
+            "sales": 0
+          },
+          "retiredShopIncome": 51,
+          "retiredStock": 15
+        }
+      ],
+      "checkpoints": [
+        {
+          "afterTicks": 0,
+          "tick": 13760,
+          "hashes": {
+            "rawSave": "468985d1b4816672897e030d2081048da7b3184563fcbef82f9903299a72e994",
+            "canonicalSave": "efad8598c7716e975580b18d3daf60a57b2c1a492b9bcd6edaf25099885bc310",
+            "canonicalView": "d33c4f79eea50534322b931c182842752f05d6a6255116f183e72a2336f3f7b0",
+            "canonicalPoses": "a1d619c303affe15202ad700b7fa0c04f11ff33fb06095dd2499762a8a2f47c0"
+          }
+        },
+        {
+          "afterTicks": 1,
+          "tick": 13761,
+          "hashes": {
+            "rawSave": "e6f59c4391f7c82ae19114d69c80a1decd9aba0254910eef8d2e0e9bdec3a2e1",
+            "canonicalSave": "af740bcedd883c443b14d2ee820d577b4588e65538c2b1555859121da7e527b0",
+            "canonicalView": "8e98fedb04eb31c8209f1f7a3b97e88f3f8b62abdeda6ffc0147c6f94f0e8275",
+            "canonicalPoses": "04f30d032c2693d3af3c04ebac2c3a0392f9ed8ad172c7d2cb20b269ae738dc3"
+          }
+        },
+        {
+          "afterTicks": 17,
+          "tick": 13777,
+          "hashes": {
+            "rawSave": "59cc0702c1a515bd6532691c8fac76a8ccd64932151c578703761a1c81e728fb",
+            "canonicalSave": "2a7445088148943844af42f47a1ebe8162cf883b83f55875dc9dc4e5820eaef4",
+            "canonicalView": "ee826536cd3ad11b16219e24425802a817d13acb260d11282ad4fdd91dc64163",
+            "canonicalPoses": "a8b409ffedfebe08d2f422e7bbda2dcde538c9b268640febee6ecca76ef62e95"
+          }
+        },
+        {
+          "afterTicks": 400,
+          "tick": 14160,
+          "hashes": {
+            "rawSave": "e73558d7e1d47d249c0df2c882f3a37351098f9ef469589768de9cf029090b04",
+            "canonicalSave": "d1f6569828394e414f29868a5ce3c85c79315c4e0701434e6d4cd67d8e9371d3",
+            "canonicalView": "e3158196ecd4b484fcd435a068d5f81313b0397b4558c9c5bf82734bb277b561",
+            "canonicalPoses": "57213451d98290a34ab62c28b52779c9ff7c55538f1eb0fdf3894fee8ebdf6aa"
+          }
+        },
+        {
+          "afterTicks": 1200,
+          "tick": 14960,
+          "hashes": {
+            "rawSave": "9efecce33fbf12b46fd4416974acc368c888f5f538945adccf22add4f9cf58b8",
+            "canonicalSave": "43f04d64a7cd1e583c7c1c56cdd037b635ff4b117e54c8b62ecc152648cff305",
+            "canonicalView": "90204f6e73b80b986b0795823df05d63b350f5fdea2048b95c55f792ecee8c62",
+            "canonicalPoses": "e7a45f826f2c75ed8f66e614a1db4cbf145181bfb251387c57c9ea81c43652ab"
+          }
+        }
+      ],
+      "restoreChecks": [
+        {
+          "afterTicks": 0,
+          "batches": [],
+          "rawSaveIdentical": true,
+          "canonicalViewIdentical": true,
+          "posesIdentical": true
+        },
+        {
+          "afterTicks": 1,
+          "batches": [
+            1
+          ],
+          "rawSaveIdentical": true,
+          "canonicalViewIdentical": true,
+          "posesIdentical": true
+        },
+        {
+          "afterTicks": 17,
+          "batches": [
+            7,
+            10
+          ],
+          "rawSaveIdentical": true,
+          "canonicalViewIdentical": true,
+          "posesIdentical": true
+        },
+        {
+          "afterTicks": 400,
+          "batches": [
+            7,
+            10,
+            383
+          ],
+          "rawSaveIdentical": true,
+          "canonicalViewIdentical": true,
+          "posesIdentical": true
+        },
+        {
+          "afterTicks": 1200,
+          "batches": [
+            7,
+            10,
+            383,
+            800
+          ],
+          "rawSaveIdentical": true,
+          "canonicalViewIdentical": true,
+          "posesIdentical": true
+        }
+      ]
+    }
+  ]
+}

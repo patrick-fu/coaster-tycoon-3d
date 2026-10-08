@@ -1,0 +1,20 @@
+TAP version 13
+# Subtest: historical v8 steel-custom retains complete park state and projected car trajectories through 1200 ticks
+ok 1 - historical v8 steel-custom retains complete park state and projected car trajectories through 1200 ticks
+  ---
+  duration_ms: 453.330626
+  ...
+# Subtest: historical v8 legacy-world-1m-1000hz retains complete park state and projected car trajectories through 1200 ticks
+ok 2 - historical v8 legacy-world-1m-1000hz retains complete park state and projected car trajectories through 1200 ticks
+  ---
+  duration_ms: 587.331631
+  ...
+1..2
+# tests 2
+# suites 0
+# pass 2
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1356.760581

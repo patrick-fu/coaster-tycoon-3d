@@ -3,8 +3,8 @@
 This register is a test-design contract. None of its future cases is reported
 as executed merely because research found a plausible rule. Exact-original
 cases need original inputs/observations; candidate correctness cases run remotely
-first. The existing 106 kernel / 28 browser checkpoint cases cover only their
-recorded narrow profile and do not qualify the full content programme.
+first. The delivered kernel, Classic library and asset/surface checkpoint cases
+cover only their recorded profiles and do not qualify the full content programme.
 
 ## Required evidence per case
 
@@ -54,21 +54,21 @@ acceptance. Never infer original physics from a matching silhouette.
 | F04 | Food/merchandise gross and stock margin versus overall profit and gross ride income objectives. | Aggregated shop/stock accounting obscures distinct metrics. |
 | F05 | Six campaigns with target/duration/upfront payment and voucher redemption; research funding/orders/unlocks and costs. | Campaign/research state absent. |
 | F06 | Identical tick-indexed action stream across speed/render stalls, pause construction eligibility and legacy migration with unknown history. | Existing clock correctness does not prove original pause/build policy or historical reconstruction. |
-| S01 | Ten layouts of one variant fail the ten-subtype objective; ten qualifying distinct variants succeed. | No family/object identities or E/I/N objective evaluation. |
+| S01 | Ten layouts of one variant fail the ten-subtype objective; ten qualifying distinct variants succeed. | Family/object/mode and constructed-instance identities are saved in v8; E/I/N and scenario objective evaluation remain absent. |
 | S02 | Guest/value target attained early versus October deadline; sustained low rating grace/countdown/closure. | Scenario calendar/objective/failure state absent. |
 | S03 | Finish designated five rides with testing/open lifecycle and preserved original protected segments. | Protected ride and protected track not separate. |
 | S04 | Height-dependent construction rights, terrain/water/tree/high-construction/marketing restrictions at boundaries. | Generic owned bit and no recipe policies. |
-| S05 | Recipe seed/content manifest/invented research/weather/objective restored exactly; invalid unavailable content rejects without partial load. | Save v7 lacks those states and cannot reconstruct old monthly history. |
+| S05 | Recipe seed/content manifest/invented research/weather/objective restored exactly; invalid unavailable content rejects without partial load. | Save v8 preserves content and instance identity; recipe/research/weather/objective/calendar history remain absent, and old monthly history cannot be reconstructed. |
 
 ## Asset and frontend cases
 
 | ID | Acceptance | Present gap |
 |---|---|---|
-| A01 | Editable Blender source, UV/material source hashes, actual exported GLB/bounds/anchors and reproducibility. | Runtime primitive factories are the only current sources. |
+| A01 | Editable Blender source, UV/material source hashes, actual exported GLB/bounds/anchors and reproducibility. | Editable car/station/kiosk and oak sources, exported assets and source/material hashes are delivered. Most categories and discrete-asset gameplay integration remain absent. |
 | A02 | Four-direction/overview/close captures: car shell, roof/frame/counter, organic foliage and distinct family silhouettes are readable and proportionate. | User rejected both prior art checkpoints. |
 | A03 | Every seat/restraint/guest, bogie/swing/spin/gondola pose and load/unload phase aligns with worker state. | Occupants clipped/generic capacity and no detailed rigs. |
-| A04 | Supported PCF, valid normals/UVs/material color spaces, no GL errors, meaningful LOD/batching/picking/disposal and loading/memory measurements. | Existing software-renderer checks do not cover new GLB pipeline or real GPU. |
-| U01 | Full catalogue correct category/family/variant/mode; installed/selected/researched/implemented/placeable distinctions; actual thumbnails and untested preset labels. | Tiny generic catalogue and proposal taxonomy errors. |
+| A04 | Supported PCF, valid normals/UVs/material color spaces, no GL errors, meaningful LOD/batching/picking/disposal and loading/memory measurements. | Finite GLB, oak LOD/resource lifetime and surface material checks are delivered; full-category integration and representative real-GPU qualification remain open. |
+| U01 | Full catalogue correct category/family/variant/mode; installed/selected/researched/implemented/placeable distinctions; actual thumbnails and untested preset labels. | Six-category modeless library with complete reference membership and explicit implementation availability is delivered. Installed/research/preset distinctions, thumbnails and most executable capabilities remain absent. |
 | U02 | Modeless inspectors/finance, bottom construction, delayed receipt/selection safety, keyboard/input focus and narrow resize. | One inspector and modal finance; new behaviors unexecuted. |
 | U03 | Actual operations/products/staff/finance/research/scenario telemetry and controls, source-bound ranges, no fabricated data. | Worker features missing; visual tables cannot establish them. |
 
