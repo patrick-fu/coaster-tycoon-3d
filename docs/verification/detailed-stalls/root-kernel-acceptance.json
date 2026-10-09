@@ -1,0 +1,65 @@
+{
+  "20OwnedFilesMatch": true,
+  "canonical": {
+    "label": "canonical-r2",
+    "runnerPid": 901395,
+    "childPid": 901404,
+    "childActualExit": 0,
+    "outerActualExit": 0,
+    "utcStart": "2026-10-09T21:40:09Z",
+    "utcEnd": "2026-10-09T21:41:29Z",
+    "stdoutSha256": "8a5c13aa58b45dce51a9da94349be871d77597341571b6fb819515aee963c6d0",
+    "stderrBytes": 0,
+    "counts": {
+      "tests": 312,
+      "pass": 312,
+      "fail": 0,
+      "skipped": 0
+    },
+    "inputPins": "/workspace/coaster-detailed-stalls-kernel-evidence/canonical-r2/input-hashes.json",
+    "command": {
+      "cwd": "/workspace/coaster-detailed-stalls-kernel",
+      "argv": [
+        "/usr/bin/npm",
+        "test"
+      ],
+      "utc": "2026-10-09T21:40:09.379203+00:00"
+    },
+    "runnerSha256": "8eb4182e73f50750e7e7673180438513fcff512f289f5c9f6d3ad497372f964f"
+  },
+  "targeted": {
+    "label": "targeted-r2",
+    "runnerPid": 898314,
+    "childPid": 898320,
+    "childActualExit": 0,
+    "outerActualExit": 0,
+    "utcStart": "2026-10-09T21:33:58Z",
+    "utcEnd": "2026-10-09T21:35:04Z",
+    "stdoutSha256": "9327010dc5380aa79d4c37cee5d974f574ac2023f86d80e0acf94b934d09bfe4",
+    "stderrBytes": 0,
+    "counts": {
+      "tests": 61,
+      "pass": 61,
+      "fail": 0,
+      "skipped": 0
+    },
+    "inputPins": "/workspace/coaster-detailed-stalls-kernel-evidence/targeted-r2/input-hashes.json",
+    "command": {
+      "cwd": "/workspace/coaster-detailed-stalls-kernel",
+      "argv": [
+        "/usr/bin/node",
+        "--test",
+        "test/detailed-facilities.test.mjs",
+        "test/v12-stalls-continuation.test.mjs",
+        "test/v11-consumables-continuation.test.mjs",
+        "test/worker.test.mjs"
+      ],
+      "utc": "2026-10-09T21:33:58.094449+00:00"
+    },
+    "runnerSha256": "15eb8e6770ebff959af6dbc04f734a1709bc533bd6b226497d27ddfc34d6ca9b"
+  },
+  "independentDesignReview": "terminal consumed no findings",
+  "independentDriftReview": "terminal consumed including actual canonical evidence supplement; stale browser-check expectations remain Root gate",
+  "acceptedScope": "Kernel13/6/6 only; current main/public12/5/5; actual models/integrated UI/storage/public/human/GPU pending",
+  "retainedNativeAbortRisk": "one initial Node20 native worker SIGABRT; later unchanged checks pass but no root cause/runtime fix claimed"
+}

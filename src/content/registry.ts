@@ -2,12 +2,12 @@ import {ensure,record} from '../simulation/validation.js';
 import {referenceFamilies,referenceVariants} from './rct2-reference.js';
 import type {ProductId} from './consumables.js';
 
-export const CONTENT_VERSION=5 as const;
+export const CONTENT_VERSION=6 as const;
 export type ContentIdentity={familyId:string,variantId:string,modeId:string};
 type ServiceKind='food'|'drink'|'restroom';
-type Construction={kind:'tracked',profileId:'independent-circuit-v1'|'independent.wooden-circuit-v1'}|{kind:'channel',profileId:'independent.log-flume-v1'}|{kind:'fixed',profileId:'independent.carousel-v1'}|{kind:'facility',service:ServiceKind,profileId:'independent-services-v1'}|{kind:'facility',service:'food'|'drink',profileId:'independent.consumables-v1',productId:ProductId}|{kind:'unimplemented',referenceShape:string};
+type Construction={kind:'tracked',profileId:'independent-circuit-v1'|'independent.wooden-circuit-v1'}|{kind:'channel',profileId:'independent.log-flume-v1'}|{kind:'fixed',profileId:'independent.carousel-v1'}|{kind:'facility',service:ServiceKind,profileId:'independent-services-v1'}|{kind:'facility',service:'food'|'drink',profileId:'independent.consumables-v1'|'independent.detailed-stalls-v1',productId:ProductId}|{kind:'unimplemented',referenceShape:string};
 type Operation={kind:'circuit',profileId:'independent-circuit-v1'|'independent.wooden-circuit-v1'}|{kind:'channel-circuit',profileId:'independent.log-flume-v1'}|{kind:'rotation',profileId:'independent.carousel-v1'}|{kind:'service',service:ServiceKind,profileId:'independent-services-v1'}|{kind:'service',service:'food'|'drink',profileId:'independent.consumables-v1',productId:ProductId}|{kind:'unimplemented'};
-export type Presentation={kind:'procedural-coaster',profileId:'classic-candidate-v1'}|{kind:'detailed-wooden-coaster',profileId:'detailed-wooden-candidate-v1'}|{kind:'detailed-carousel',profileId:'detailed-carousel-candidate-v1'}|{kind:'detailed-log-flume',profileId:'detailed-log-flume-candidate-v1'}|{kind:'procedural-facility',service:ServiceKind,profileId:'classic-candidate-v1'}|{kind:'unimplemented'};
+export type Presentation={kind:'procedural-coaster',profileId:'classic-candidate-v1'}|{kind:'detailed-wooden-coaster',profileId:'detailed-wooden-candidate-v1'}|{kind:'detailed-carousel',profileId:'detailed-carousel-candidate-v1'}|{kind:'detailed-log-flume',profileId:'detailed-log-flume-candidate-v1'}|{kind:'detailed-facility',service:'food'|'drink',profileId:'detailed-consumable-stalls-v1'}|{kind:'procedural-facility',service:ServiceKind,profileId:'classic-candidate-v1'}|{kind:'unimplemented'};
 type Capabilities={construction:Construction,operation:Operation,presentation:Presentation};
 type Family={id:string,label:string,category:string,reference:{originalSlot:number,sourceUrl:string}|null};
 type Choice={familyId:string,modeIds:string[],capabilities:Capabilities};
@@ -41,6 +41,10 @@ for(const [service,variantId,productId,label] of [['food','independent.burger-st
  const familyId='independent.'+service+'-facility',modeId='independent.retail',profileId='independent.consumables-v1' as const;
  variants.set(variantId,{id:variantId,label,reference:null,choices:[{familyId,modeIds:[modeId],capabilities:{construction:{kind:'facility',service,profileId,productId},operation:{kind:'service',service,profileId,productId},presentation:{kind:'procedural-facility',service,profileId:'classic-candidate-v1'}}}]});
 }
+for(const [service,variantId,productId,label] of [['food','independent.detailed-burger-stand','independent.burger','Detailed Burger stand'],['drink','independent.detailed-soft-drink-stand','independent.soft-drink','Detailed Soft-drink stand']] as const){
+ const familyId='independent.'+service+'-facility',modeId='independent.retail';
+ variants.set(variantId,{id:variantId,label,reference:null,choices:[{familyId,modeIds:[modeId],capabilities:{construction:{kind:'facility',service,profileId:'independent.detailed-stalls-v1',productId},operation:{kind:'service',service,profileId:'independent.consumables-v1',productId},presentation:{kind:'detailed-facility',service,profileId:'detailed-consumable-stalls-v1'}}}]});
+}
 for(const f of referenceFamilies)families.set(f.id,{id:f.id,label:f.label,category:f.category,reference:{originalSlot:f.originalSlot,sourceUrl:f.sourceUrl}});
 for(const v of referenceVariants){
  const choices:Choice[]=v.choices.map(c=>{
@@ -56,6 +60,7 @@ export function woodenRideContent():ContentIdentity{return{...woodenIdentity};}
 export function carouselRideContent():ContentIdentity{return{...carouselIdentity};}
 export function flumeRideContent():ContentIdentity{return{...flumeIdentity};}
 export function consumableFacilityContent(product:ProductId):ContentIdentity{return{familyId:'independent.'+(product==='independent.burger'?'food':'drink')+'-facility',variantId:product==='independent.burger'?'independent.burger-stand':'independent.soft-drink-stand',modeId:'independent.retail'};}
+export function detailedFacilityContent(product:ProductId):ContentIdentity{return{...consumableFacilityContent(product),variantId:product==='independent.burger'?'independent.detailed-burger-stand':'independent.detailed-soft-drink-stand'};}
 export function legacyFacilityContent(service:ServiceKind):ContentIdentity{return{familyId:`independent.${service}-facility`,variantId:`independent.${service==='restroom'?'restroom':service+'-stand'}`,modeId:service==='restroom'?'independent.restroom-service':'independent.retail'};}
 
 export function resolveContent(value:unknown):ResolvedContent{
@@ -71,7 +76,7 @@ export function resolveContent(value:unknown):ResolvedContent{
 export function executableContent(value:unknown,kind:'ride'|ServiceKind):ContentIdentity{
  const resolved=resolveContent(value),{construction,operation,presentation}=resolved.capabilities;
  ensure(construction.kind!=='unimplemented'&&operation.kind!=='unimplemented'&&presentation.kind!=='unimplemented','UNSUPPORTED_CONTENT','This reference content has no executable construction, operation and presentation implementation yet.');
- ensure(kind==='ride'?(construction.kind==='tracked'&&operation.kind==='circuit'&&(presentation.kind==='procedural-coaster'||presentation.kind==='detailed-wooden-coaster'))||(construction.kind==='fixed'&&operation.kind==='rotation'&&presentation.kind==='detailed-carousel')||(construction.kind==='channel'&&operation.kind==='channel-circuit'&&presentation.kind==='detailed-log-flume'):construction.kind==='facility'&&construction.service===kind&&operation.kind==='service'&&operation.service===kind&&presentation.kind==='procedural-facility'&&presentation.service===kind,'INVALID_CONTENT','Content capabilities do not match the requested instance kind.');
+ ensure(kind==='ride'?(construction.kind==='tracked'&&operation.kind==='circuit'&&(presentation.kind==='procedural-coaster'||presentation.kind==='detailed-wooden-coaster'))||(construction.kind==='fixed'&&operation.kind==='rotation'&&presentation.kind==='detailed-carousel')||(construction.kind==='channel'&&operation.kind==='channel-circuit'&&presentation.kind==='detailed-log-flume'):construction.kind==='facility'&&construction.service===kind&&operation.kind==='service'&&operation.service===kind&&(presentation.kind==='procedural-facility'||presentation.kind==='detailed-facility')&&presentation.service===kind,'INVALID_CONTENT','Content capabilities do not match the requested instance kind.');
  return resolved.content;
 }
 

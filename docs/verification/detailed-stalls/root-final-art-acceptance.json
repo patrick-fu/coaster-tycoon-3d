@@ -1,0 +1,108 @@
+{
+  "scope": "Actual final artifact correspondence, four inspected CPU pixel poses per building, GLB headers/anchors/default packed masters; integrated browser/GPU/original/human still pending",
+  "structureTerminalSha256": "6d885a83673a40568f0c3225077528adbc3e89af0d46f76cb1dbdd582733d12a",
+  "runs": [
+    {
+      "startedUTC": "2026-10-09T23:21:36.924611+00:00",
+      "runnerPid": 940022,
+      "childPid": 940026,
+      "command": [
+        "python3",
+        "/workspace/coaster-consumable-art/evidence/final-art-structure-r1/inputs/inspect-stall-glb.py",
+        "/workspace/coaster-consumable-art/evidence/export-r8/burger-stall.glb",
+        "/workspace/coaster-consumable-art/evidence/final-art-structure-r1/burger-glb.json"
+      ],
+      "finishedUTC": "2026-10-09T23:21:36.976617+00:00",
+      "actualExit": 0,
+      "stderrBytes": 0,
+      "stdoutSha256": "b5471307d286cd040e9d6eecca0763006876e87f3f302ff0d32ec097abb9a6fb",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "startedUTC": "2026-10-09T23:21:36.976954+00:00",
+      "runnerPid": 940022,
+      "childPid": 940027,
+      "command": [
+        "blender",
+        "--background",
+        "/workspace/coaster-consumable-art/evidence/export-r8/burger-stall.blend",
+        "--python-exit-code",
+        "1",
+        "--threads",
+        "2",
+        "--python",
+        "/workspace/coaster-consumable-art/evidence/final-art-structure-r1/inputs/inspect-stall-master.py",
+        "--",
+        "/workspace/coaster-consumable-art/evidence/final-art-structure-r1/burger-master.json"
+      ],
+      "finishedUTC": "2026-10-09T23:21:38.752875+00:00",
+      "actualExit": 0,
+      "stderrBytes": 0,
+      "stdoutSha256": "1325d46f9c077395b6e7de724fd4eb36279d1ce7e5a1f79fbbeee9ddcbe468d5",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "startedUTC": "2026-10-09T23:21:38.820044+00:00",
+      "runnerPid": 940022,
+      "childPid": 940058,
+      "command": [
+        "python3",
+        "/workspace/coaster-consumable-art/evidence/final-art-structure-r1/inputs/inspect-stall-glb.py",
+        "/workspace/coaster-soft-drink-art/evidence/export-r4/soft-drink-stall.glb",
+        "/workspace/coaster-consumable-art/evidence/final-art-structure-r1/soft-drink-glb.json"
+      ],
+      "finishedUTC": "2026-10-09T23:21:38.873492+00:00",
+      "actualExit": 0,
+      "stderrBytes": 0,
+      "stdoutSha256": "7f48b764ee91b421d355984c03f3a26d4e22475793e7d8e0d5f1bb4c5327960c",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "startedUTC": "2026-10-09T23:21:38.873855+00:00",
+      "runnerPid": 940022,
+      "childPid": 940060,
+      "command": [
+        "blender",
+        "--background",
+        "/workspace/coaster-soft-drink-art/evidence/export-r4/soft-drink-stall.blend",
+        "--python-exit-code",
+        "1",
+        "--threads",
+        "2",
+        "--python",
+        "/workspace/coaster-consumable-art/evidence/final-art-structure-r1/inputs/inspect-stall-master.py",
+        "--",
+        "/workspace/coaster-consumable-art/evidence/final-art-structure-r1/soft-drink-master.json"
+      ],
+      "finishedUTC": "2026-10-09T23:21:40.602404+00:00",
+      "actualExit": 0,
+      "stderrBytes": 0,
+      "stdoutSha256": "767ce4fa34c3069ea8727e2651f126fb7fcbed2ea60b580740e543c7ecdb89cf",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "models": [
+    {
+      "kind": "burger",
+      "glbSha256": "791873b3e107d09b8c9dee437b6ec67570493674fd283bdfaf18e5c4c738bf31",
+      "nodes": 43,
+      "meshes": 31,
+      "images": 15,
+      "materials": 13,
+      "defaultOpenVisible": true,
+      "defaultClosedHidden": true,
+      "packedFileImages": 17
+    },
+    {
+      "kind": "soft-drink",
+      "glbSha256": "b5f526da18b3aedcd689a5278347e64fddccd274859cf39239ae45f2748e0ea8",
+      "nodes": 49,
+      "meshes": 36,
+      "images": 15,
+      "materials": 11,
+      "defaultOpenVisible": true,
+      "defaultClosedHidden": true,
+      "packedFileImages": 17
+    }
+  ]
+}

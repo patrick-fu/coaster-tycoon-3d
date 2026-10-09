@@ -1,0 +1,24 @@
+{
+  "scope": "Actual isolated fixed loader/picking controls and final Burger artifact correspondence; integrated/public still pending",
+  "burgerArtifactsMatched": 9,
+  "checks": {
+    "loader-root-green-r1": {
+      "actualExit": 0,
+      "stdoutSha256": "2d7128ba31c7017813b1eb71d28f7f1f63f3e283a7dce904257a145aa2e42243",
+      "tests": 9,
+      "stdoutTail": " nonunit root quaternion\nok 8 - asset qualification rejects nonunit root quaternion\n  ---\n  duration_ms: 2.327781\n  ...\n# Subtest: asset qualification rejects duplicate original shutter roots\nok 9 - asset qualification rejects duplicate original shutter roots\n  ---\n  duration_ms: 1.729322\n  ...\n1..9\n# tests 9\n# suites 0\n# pass 9\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 286.507265\n"
+    },
+    "picking-red-r1": {
+      "actualExit": 1,
+      "stdoutSha256": "3426cdfb3857760e1124ee9b4cc37ed9bdd7245e27a84514f1ceefae29c3919c",
+      "tests": 3,
+      "stdoutTail": "ernal/test_runner/test:796:25)\n    Test.processPendingSubtests (node:internal/test_runner/test:526:18)\n    Test.postRun (node:internal/test_runner/test:889:19)\n    Test.run (node:internal/test_runner/test:835:12)\n    async Test.processPendingSubtests (node:internal/test_runner/test:526:7)\n  ...\n1..3\n# tests 3\n# suites 0\n# pass 1\n# fail 2\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 245.931458\n"
+    },
+    "picking-green-r1": {
+      "actualExit": 0,
+      "stdoutSha256": "ebb0e25ad9b2a8d57a3eb88a4e3cb910ddd6f05c69940d20d0fcd165d62b71f4",
+      "tests": 3,
+      "stdoutTail": "behind it\nok 2 - an inactive ancestor cannot intercept a visible element behind it\n  ---\n  duration_ms: 2.42435\n  ...\n# Subtest: an inactive mesh cannot intercept a visible element behind it\nok 3 - an inactive mesh cannot intercept a visible element behind it\n  ---\n  duration_ms: 1.203026\n  ...\n1..3\n# tests 3\n# suites 0\n# pass 3\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 219.853088\n"
+    }
+  }
+}

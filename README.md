@@ -77,6 +77,14 @@ Exact new sourcefddd files are published at the root and
 Actual public root8/pin8 player/source flows and Root raw/retention audits qualify.
 Both whole-delivery Design/Drift closure rounds are accepted; source and proof are integrated in PR74/main1373dbd. This finite candidate does not qualify full commercial or original-game behaviour.
 
+The current detailed-building branch adds two separate variants with authored
+Burger/Soft-drink models, unit-scale placement, a 32-unit dry-ground reservation
+and real open/closed shutters. Old identities keep their 16-unit reservation.
+This branch uses save13/content6/protocol6 and validates historical v12 before
+migration. [Resource provenance](ui/models/detailed-stalls/README.md) retains
+editable source and exact model identity. Integrated browser and public
+acceptance remain pending in [the live record](PROGRESS.md).
+
 The [earlier art checkpoint](https://patrick-fu.github.io/coaster-tycoon-3d/previews/classic-a7d6451/?showcase=classic)
 has procedural materials and composed models, three steel-coaster
 layouts, three generic facilities and six buildable scenery types with real

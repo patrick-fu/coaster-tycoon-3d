@@ -42,6 +42,15 @@ and hashes are recorded in `ui/models/flume/material-provenance.json`;
 the resource manifest distinguishes exact authored exports from unmodified
 channel maps. Original RCT2 media are observation references only.
 
+The independent detailed Burger and Soft-drink buildings are project art under
+MIT, with ambientCG Wood096, WoodFloor043, RoofingTiles013A, Metal049A and
+Bricks051 source maps under [CC0-1.0](https://docs.ambientcg.com/license/).
+Painted siding/roof tints and sculpted product landmarks are independently
+authored. Blender packs the acquired maps into editable masters and resizes
+delivery images to 512 pixels. Exact bundle/member permissions, transformations
+and resource hashes are in `ui/models/detailed-stalls/material-provenance.json`
+and `source-manifest.json`. Original game media are observation references only.
+
 ## Reference catalogue metadata
 
 `src/content/rct2-reference.ts` contains reference identifiers, English object

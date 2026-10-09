@@ -1,0 +1,17 @@
+{
+  "scope": "Static source inspection only; no Mac execution/export/test",
+  "assets": [
+    {
+      "kind": "burger",
+      "exportSourceSha256": "04b1a0d3bc1d922e37a2feaaa3a7ca8a568f6f0b90faa4273d9934f20ff6b881",
+      "repositorySourceSha256": "f3657aec2605dbb424aa4247fd1b0387f690ff1cdc51246425da5d536d44ef7d",
+      "change": "Only return-metadata notes normalized; complete source AST identical after that note value is excluded."
+    },
+    {
+      "kind": "soft-drink",
+      "exportSourceSha256": "bcf509b884d5b9520cf7205f7767331855768f8f2ae2c5087921fbd2a7f7a211",
+      "repositorySourceSha256": "48b13d539ac62a2bcae6e390c2d2441fb5990b3e97755e173e7ce1b9d732650a",
+      "change": "Only return-metadata notes and trailing whitespace normalized; complete source AST identical after that note value is excluded."
+    }
+  ]
+}

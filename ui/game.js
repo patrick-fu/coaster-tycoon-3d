@@ -1,7 +1,7 @@
 import {flumePieceChoices,flumeInspection} from './flume-controls.js';
 import {facilityInspection,bindFacilityControls,guestHeldHtml} from './consumable-controls.js';
 import {ParkScene} from './park-scene.js';
-const legacySaveSlot=new URLSearchParams(location.search).get('showcase')==='classic'?'showcase-classic':'current',saveSlots=[legacySaveSlot+'-v12',legacySaveSlot+'-v11',legacySaveSlot+'-v10',legacySaveSlot+'-v9',legacySaveSlot],saveSlot=saveSlots[0];
+const legacySaveSlot=new URLSearchParams(location.search).get('showcase')==='classic'?'showcase-classic':'current',saveSlots=[legacySaveSlot+'-v13',legacySaveSlot+'-v12',legacySaveSlot+'-v11',legacySaveSlot+'-v10',legacySaveSlot+'-v9',legacySaveSlot],saveSlot=saveSlots[0];
 import {steelRules} from './content/steel-coaster.js';
 import {WORKER_PROTOCOL_VERSION} from './simulation/protocol.js';
 import {createContentBrowser} from './content-browser.js';
@@ -18,7 +18,7 @@ const contentLibrary=createContentBrowser({loadCatalogue:async()=>{libraryCatalo
  if(choice?.runtimeAvailable&&capabilities?.construction.kind==='fixed'&&capabilities.operation.kind==='rotation'&&capabilities.presentation.kind==='detailed-carousel'){selectedRideContent={...content};setTool('track');subtool='create-ride';contentLibrary.close();renderPalette();$('new-ride-name').value=variant.label;}
  else if(choice?.runtimeAvailable&&capabilities?.construction.kind==='channel'&&capabilities.operation.kind==='channel-circuit'&&capabilities.presentation.kind==='detailed-log-flume'){selectedRideContent={...content};setTool('track');subtool='create-ride';contentLibrary.close();renderPalette();$('new-ride-name').value=variant.label;}
  else if(choice?.runtimeAvailable&&capabilities?.construction.kind==='tracked'&&capabilities.operation.kind==='circuit'&&['procedural-coaster','detailed-wooden-coaster'].includes(capabilities.presentation.kind)){selectedRideContent={...content};setTool('track');subtool='create-ride';contentLibrary.close();renderPalette();$('new-ride-name').value=variant.label;}
- else if(choice?.runtimeAvailable&&capabilities?.construction.kind==='facility'&&capabilities.operation.kind==='service'&&capabilities.presentation.kind==='procedural-facility'){const kind=capabilities.construction.service;if(!Object.hasOwn(selectedFacilityContent,kind))return;selectedFacilityContent[kind]={...content};if(variant?.label)selectedFacilityNames[kind]=variant.label;setTool('facility');subtool=kind;contentLibrary.close();renderPalette();}
+ else if(choice?.runtimeAvailable&&capabilities?.construction.kind==='facility'&&capabilities.operation.kind==='service'&&['procedural-facility','detailed-facility'].includes(capabilities.presentation.kind)){const kind=capabilities.construction.service;if(!Object.hasOwn(selectedFacilityContent,kind))return;selectedFacilityContent[kind]={...content};if(variant?.label)selectedFacilityNames[kind]=variant.label;setTool('facility');subtool=kind;contentLibrary.close();renderPalette();}
  else{feedback('This content is not available for construction.',true);return;}
  schedulePreview();feedback('Content selected. Click the park to place it.');
 }});

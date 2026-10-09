@@ -32,7 +32,7 @@ export function fitModel(group,{x,z,low,height,tile=4}){
 
 export function batchStatic(root){
  root.updateMatrixWorld(true);const buckets=new Map();
- root.traverse(mesh=>{if(!mesh.isMesh||mesh.isInstancedMesh||Array.isArray(mesh.material)||mesh.material.transparent||mesh.matrixWorld.determinant()<0)return;const key=`${mesh.geometry.uuid}:${mesh.material.uuid}:${mesh.castShadow}:${mesh.receiveShadow}:${mesh.customDepthMaterial?.uuid??''}:${mesh.userData.treePlacement??''}`,batch=buckets.get(key)??[];let parent=mesh,selection=null;while(parent&&parent!==root){if(parent.userData.selection){selection=parent.userData.selection;break;}parent=parent.parent;}batch.push({mesh,selection});buckets.set(key,batch);});
+ root.traverse(mesh=>{if(!mesh.isMesh||mesh.isInstancedMesh||Array.isArray(mesh.material)||mesh.material.transparent||mesh.matrixWorld.determinant()<0)return;for(let ancestor=mesh;ancestor;ancestor=ancestor.parent)if(!ancestor.visible)return;const key=`${mesh.geometry.uuid}:${mesh.material.uuid}:${mesh.castShadow}:${mesh.receiveShadow}:${mesh.customDepthMaterial?.uuid??''}:${mesh.userData.treePlacement??''}`,batch=buckets.get(key)??[];let parent=mesh,selection=null;while(parent&&parent!==root){if(parent.userData.selection){selection=parent.userData.selection;break;}parent=parent.parent;}batch.push({mesh,selection});buckets.set(key,batch);});
  for(const batch of buckets.values()){
   if(batch.length<2)continue;const first=batch[0].mesh,instances=new THREE.InstancedMesh(first.geometry,first.material,batch.length);instances.castShadow=first.castShadow;instances.receiveShadow=first.receiveShadow;instances.userData.selections=[];
   instances.customDepthMaterial=first.customDepthMaterial;
