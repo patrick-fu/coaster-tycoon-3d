@@ -1,0 +1,44 @@
+{
+  "recordedUTC": "2026-10-09T21:28:11.292523+00:00",
+  "url": "https://github.com/patrick-fu/coaster-tycoon-3d/issues/75",
+  "number": 75,
+  "id": 5784868953,
+  "title": "Integrate detailed Burger and Soft-drink buildings at authored scale",
+  "state": "open",
+  "assignees": [
+    "patrick-fu"
+  ],
+  "parentMap": 27,
+  "closedNativeBlockers": [
+    {
+      "number": 73,
+      "id": 5780178307,
+      "state": "closed"
+    },
+    {
+      "number": 35,
+      "id": 5746559042,
+      "state": "closed"
+    },
+    {
+      "number": 37,
+      "id": 5746562761,
+      "state": "closed"
+    }
+  ],
+  "nativeDependencySummary": {
+    "blocked_by": 0,
+    "total_blocked_by": 2,
+    "blocking": 0,
+    "total_blocking": 0
+  },
+  "actualExit": 0,
+  "bodyTempFile": "/var/folders/5c/f170nvbx6t7105zg26q08zvh0000gn/T/coaster-detailed-stalls-ticket-5wk8lt8z/body.md",
+  "verifiedNativeBlockerNumbers": [
+    73,
+    35,
+    37
+  ],
+  "verifiedParentMap": 27,
+  "note": "Initial dependency summary total2 was a transient read; direct blocked_by enumeration confirms all3 exact closed edges."
+}

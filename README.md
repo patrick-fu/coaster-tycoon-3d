@@ -75,7 +75,7 @@ actual two-buyer ownership/disposal and protected historical browser persistence
 Exact new sourcefddd files are published at the root and
 [pinned consumables candidate](https://patrick-fu.github.io/coaster-tycoon-3d/previews/consumables-fddd5b0/?showcase=classic).
 Actual public root8/pin8 player/source flows and Root raw/retention audits qualify.
-Both whole-delivery Design/Drift closure rounds are accepted; source integration remains pending. This finite candidate does not qualify full commercial or original-game behaviour.
+Both whole-delivery Design/Drift closure rounds are accepted; source and proof are integrated in PR74/main1373dbd. This finite candidate does not qualify full commercial or original-game behaviour.
 
 The [earlier art checkpoint](https://patrick-fu.github.io/coaster-tycoon-3d/previews/classic-a7d6451/?showcase=classic)
 has procedural materials and composed models, three steel-coaster

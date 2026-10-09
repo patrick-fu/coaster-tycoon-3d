@@ -1,123 +1,90 @@
 # Project progress and recovery
 
-Last updated: 2026-10-09 20:02 UTC (2026-10-10 04:02 Asia/Shanghai).
-Root owns this record. Update triggers are in [AGENTS.md](AGENTS.md).
-The [domain glossary](CONTEXT.md), [programme](docs/planning/rct2-program.md),
-[fidelity gaps](docs/planning/fidelity-gaps.md) and
-[GitHub map #27](https://github.com/patrick-fu/coaster-tycoon-3d/issues/27)
-remain the sources for vocabulary, full scope and ticket dependencies.
+Last updated: 2026-10-09 21:33 UTC.
+Root owns this live record and its [dated journal](docs/progress/2026-10-10.md).
+Active worktree: `/Volumes/WD/code/workspaces/coaster-consumable-art/coaster-tycoon-3d`.
+Branch: `p/patrick/feature/detailed-consumable-stalls`, from main1373dbd.
+Active finite task: [Integrate detailed Burger and Soft-drink buildings at authored scale](https://github.com/patrick-fu/coaster-tycoon-3d/issues/75), OPEN/assigned Patrick; native73/35/37 are CLOSED and map27 parent is actual.
+`CONTEXT.md` remains the domain glossary; the programme, fidelity register and
+[map27](https://github.com/patrick-fu/coaster-tycoon-3d/issues/27) retain full scope.
 
-## Current target and constraints
+## Target and standing constraints
 
-Build an independent MIT browser park-management game with Classic controls,
-substantially detailed 3D art and the original RCT2 gameplay/content breadth.
-The finite playable slices are progress toward that target, not full fidelity
-or Patrick's visual/play acceptance.
+Deliver a substantially detailed independent MIT browser RCT2-style park game
+with Classic controls, original content/gameplay breadth and real management.
+Finite slices qualify their actual mechanics, not the full programme or art.
+All repository artifacts are English; chat with Patrick is Chinese.
+Root owns production, integration, acceptance and context. Logical work uses
+Sol Max; visual authoring uses AGY; requested adversarial checks use Luna Max.
+Run every build/test/simulation/Blender/image/browser check only on Grok Bot via
+`ssh grok-build`. Mac is for editing, orchestration, Git, hashes and viewing
+transferred images. Sources/masters/evidence stay on WD. Clean only exact
+owned disposable files after retention; keep failures and immutable oracles.
 
-- Communicate with Patrick in Chinese; all repository artifacts use English.
-- Root owns production code, integration and acceptance. Logical investigation
-  uses existing GPT 6.1 Sol Max agents; visual authoring uses AGY CLI.
-- Execute builds, tests, simulations, Blender, image processing and browser
-  runtime checks only on Grok Bot via `ssh grok-build`.
-- Local editing and orchestration use WD. Preserve editable masters, source
-  provenance and failed evidence; remove only disposable task-owned artifacts.
-- Original screenshots/metadata inform references. Original numerical agreement
-  requires direct evidence; candidate values are explicitly labelled.
+## Verified milestone and current work
 
-## Delivery and working state
-
-| Area | Observed state | Evidence / next action |
+| Area | Actual state | Evidence / next action |
 | --- | --- | --- |
-| Published game | New sourcefddd5b0/save12/content5/protocol5, corrected Pages524c8a9 and matching deploy37973293652 are actual. Grok complete242 HTTP files pass, actual0/blankstderr. Sol public r1 reports actualexit0 at18:43:59Z: root8/pin8 groups, genuine27 revenue/8stock/net19 and actual current719 worker/source, disposal/malformed guard/storage/resources pass. Chrome832077 exits0 and ports arefree. Root raw audit37493 exits1 because it incorrectly assumes both paid checkpoints tick6502. Named diagnosis proves exact full paid/reload equality for each route; root6502/pin6508 legitimately differ. Corrected Root Grok audit25406 exits0:265 files/55 encoded-decoded records, full per-route exported/reloaded authority/root6502/pin6508, stores/source/resource/finances all exact. WD265/archive700/report hashes independently pass; audit943cc6a5 transfer actual0/hashmatch is integrated into repo. Actual finite public behavior is Root-accepted; final cumulative rounds and main integration remain pending. | Pinned consumables-fddd5b0 is staged and file-verified; all812 prior previews stay exact. Prior Flume890 root/pin evidence remains dated, and its pin is preserved. Source PR74 remains draft/unmerged; Root accepts the finite actual public gameplay/source scope; broader original/human/GPU/full-programme acceptance remains open. |
-| Source integration | Main9172 remains clean. Sourcefddd5b0 is pushed on the consumables branch and draft PR74 is attached; integration reviews/material repairs are consumed. | Actual public flow is accepted. Final cumulative closure is accepted. Commit proof/context, make PR74 ready and integrate once. Current public files are fddd/Pages524; finite69 is closed and broad39/40/41/42 remain open. |
-| Carousel | Finite source/public outcome and ticket #65 are closed. | Kernel 148 plus separate protocol 9, paid seats/storage/Classic controls and historical source versions remain scoped prior evidence. |
-| Log Flume | Kernel 238; current local paid 7; Classic 27/Library 10/canonical 3; finite native/art/terrain/composition; real public root 9/pin 9/source 24; root retained-evidence audit 0. Source integration and two-round finite review closure are complete. | Finite implementation/distribution qualify; original LFB1, human/hardware acceptance and the expanded programme are unqualified. |
-| Historical continuation | Immutable v7–v10 fixtures and old source are preserved. R5 historical full 233 remains dated evidence; final full 238 also passes. The separate immutable pre-commerce v11 oracle is accepted; the new receiving Engine passes its complete declared projection. | Keep complete receiving Rules and actual runtime identities. No cross-runtime default or original agreement is inferred; declared null-fixture controls differ from real loading witnesses. |
-| Boat and rider art | Independently authored unit GLBs and literal four Hips, finite fit/composition and actual paid Scene/source/pixel checks qualify. Editable masters and failed authoring attempts remain retained. | Varied/continuous contact, representative GPU and Patrick's visual acceptance remain open. Shipped finite candidate art is not human acceptance. |
-| Channel and pedestrian access | Native channel/Portal/approach and whole-footprint terrain gates qualify within their finite static fixtures; unchanged flat buffers have complete byte comparisons. | Continuous NPC traversal, exhaustive varied-ground composition and original/human/GPU gates remain open. Actual public paid gameplay has separate accepted groups. |
-| Flume public retention and cleanup | Dated manifest3a15d2d4 has209 exact files and its actor/children are terminal. | [Flume retention](docs/verification/log-flume/public-retention.json). Keep raw failures, original stores/source/pixels; current consumables public actor has separate ownership and evidence. |
-| Flume cumulative finite review | Both cumulative clean-context Design/Drift rounds are terminal and root-consumed. Confirmed doc findings are repaired and independently re-reviewed; no verified P0/P1/P2 remains within this finite delivery. | [Review disposition](docs/verification/log-flume/cumulative-review.json). Proof is committed and source integrated; original/human/GPU/full-programme closure remains open. |
-| Commerce prerequisite | Root accepts the immutable old890/Node20.19.2 v11 oracle; WD336 and remote404 match and all11 process groups are terminal. Current complete historical receiving matrix and matching-Chrome v9/v10/v11 pairs also pass. | Retain old inputs, failures and exact runtime scopes; no cross-runtime or original numerical agreement is inferred. |
-| Finite consumables / ticket #73 | Two independent Burger/Soft drink stalls implement real purchase, guest-owned use, box/can disposal, derived stock and atomic save12/content5/protocol5 authority. Closed prerequisites69/31/33 and parent27 are confirmed. Grok focused45/45 and full-r2 262/262 pass; after the confirmed import repair, canonical full passes263/263. | [Contract](docs/planning/consumables-slice.md). Preserve full-r1 environment failure and all immutable historical inputs. Classic27/Library10/canonical3, player34 and storage13/15 pass in their scopes. Both final cumulative source/public review rounds qualify; source integration remains pending; public files are fddd/12/5/5; actual public root8/pin8 and Root raw/retention audit qualify. |
-| Frontend execution | AGY isolated r1/r2 authoring and the minimal typed-waste height repair are terminal actual0. Root integrated candidate controls, held-item inspector and meshes. Classic27/Library10/canonical3 pass with protected stores restored; compiled Engine/Product remain unchanged after the visual repair. | Preserve raw AGY read/edit failures. Luna independently closes wording and height findings. Candidate art and finite browser proof do not qualify original/human/GPU fidelity. |
-| Current player experiment | Root independently accepts scoped r4 player evidence: actual27 revenue/8 stock/net19, two held inspectors, exact mid-use export/import/reload, vendor reuse/stale guards, bin and typed ground outcomes. 34 orchestration checks plus239 driver predicates pass;93 executed sources and174 frozen/175 transfer files are independently verified. | Six resource disposal events each1 and exact protected stores/process cleanup qualify. R1/r2/r3 whole failures remain retained. Additional visual extension closes the buried-prop defect in actual pixels; final extension retention is accepted. |
-| Current storage experiment | Root accepts storage-r1 actual0/blank output:13 controls and15 complete same-Chrome v9/v10/v11 authority/view pairs. Original full stores are restored byte for byte; Chrome0/HTTP-15; source unchanged. | WD archive3ba381af is verified. Protected-directory extraction-r1 failure and safe exact input clone repair remain retained. Lower versions and invalid-current no-overwrite behavior are explicit. |
-| Typed-waste visibility repair | Red run2 proves opaque paving hides the can and box; Root confirms the source defect. AGY changes only two typed roots from h+.01 to h+.142 plus one reason comment; all other bytes and legacy/resource/authority branches stay exact. Grok affected syntax/web build exits0. Luna independent source review finds no new defect. Green run3 actual0/20 targeted checks loads6a61d96a; unchanged authority/Rules/points, actual .48m field, ghost0, typed bases2mm above deck, all6 disposal events1 and exact stores/process cleanup qualify. | Root independently views both exact red/green PNG pairs and accepts bounded can/tab and folded-box visibility. Green hashes50e681f3/d0529c78 match viewed paths; Root independently verifies all290 files/d5d51ed2, archive7391b9cd, report/transfer receipts,93 executed bodies and all27 encoded/decoded records on Grok. All3 protected stores and complete paused18131 authority/Rules/points compareexact. Actor terminal handoff is consumed; local finite visual gap is closed. Preserve both red failures, initial clamped-camera evidence and earlier frozen player corpus. Detailed art/original/human/GPU acceptance remains open. |
-| Commerce cumulative integration review | Both clean-context whole-local Design SolMax/Drift LunaMax and both material-repair re-reviews are terminal and Root-consumed; no verified local P0/P1/P2 remains. | [Disposition](docs/verification/consumables/integration-review.json) and actual [import red/green](docs/verification/consumables/wrapper-admission-repair.md). Final whole-public two-round closure remains pending; prior browserf6ad and repaired Engine719 are explicit. |
-| Consumables public preparation | Immutable sourcefddd build116 inputs/154 outputs/119 shipping files passes. Corrected Pages524 and deploy37973293652 pass; Root verifies242 first-request HTTP200/exact hashes and812 unchanged old previews plus hosting flag. | Readiness2128b095 is on WD/Grok and explicitly signalled. Public r1 actualexit0 at18:43:59Z; root8/pin8, both27/8/net19 and finalcash499529 after490 construction, source719/b1c/6a61 and exact stores/resources qualify reported outcomes. Chrome832077 exits0/portsfree; early PNGs transferred, producer terminal/retention and audit943cc6a5 transfer are consumed; Root actual raw audit0/WD265 passes; final cumulative review closure pending. Root owns source/publish/context; actor writes only public-browser-sol. |
-| Final cumulative closure | Both final whole-delivery Design/Drift rounds and repair re-verifications are terminal/Root-consumed. No unresolved verified P0/P1/P2 remains; next-art liveness P3 is closed against actual receipts. | [Cumulative disposition](docs/verification/consumables/cumulative-review.json) records two qualified rounds per lens, complete source/public/retention scope and the excluded contaminated attempt. Final proof/context commit and single PR74 integration follow; next-art and broader acceptance remain separate. |
-| Next representative art samples | AGY r1 terminal ERROR/exit3 is retained; retryable=false and no source generated. A separate fresh narrower r2 requests only Burger-stall source/notes; runner93816/child93819, exec27731, live=True, terminal receipt=False. | Same verified gemini-3.8-flash-high, normal monitored accept-edits. Do not resume failed r1 or claim code/art acceptance. Root consumes r2 tools/files/actual exit and performs all model execution on Grok. Separate from finite PR74. |
+| Current source and public game | PR74 merged1373dbd at20:06:10Z; canonical main is clean and its tree matches qualified6a4. Shipping runtime remainsfddd5b0/save12/content5/protocol5, Pages524c8a9/deploy37973293652. | [Public game](https://patrick-fu.github.io/coaster-tycoon-3d/?showcase=classic), [frozen preview](https://patrick-fu.github.io/coaster-tycoon-3d/previews/consumables-fddd5b0/?showcase=classic). No repeated build/redeployment is needed for documentation. |
+| Finite consumables | Two real purchases/use/typed disposal, exact save authority/stock/retirement and strict imports qualify. Canonical263; actual public root8/pin8,242 HTTP/372 source records, Root265-file/55-record audit; paid ticks6502/6508 remain distinct. Both whole final Design/Drift lenses have two terminal consumed rounds and repairs closed. | [Proof index](docs/verification/consumables/README.md), [review disposition](docs/verification/consumables/cumulative-review.json). Finite73 is CLOSED, resolution6088491273/map27 pointer actual. Procedural props do not qualify final detailed art. |
+| Next editable Burger model | Repaired sourcefd975310 is frozen, r3 authoring actual0/blankstderr. Guarded Grok export71210/Blender884806 actually exits1 at20:59:28Z, UV now passes but all-state raw bounds y=-2.515/top4.46 violate the one-tile envelope; no GLB. Independent source review identifies parent translation applied twice and wall/cylinder winding. | AGY r4 is terminal actual0/SUCCESS/blankstderr at21:12:01Z, session15211/runner13810/child13812, same conversation1398043a/model. Visual r5 is live from21:26:24Z,session11213/runner20825/child20827; actual init confirms same1398043a/effective gemini-3.8-flash-high/request-review; sourceb1585ad8 is frozen under author-r4; scoped101-line diff and six immutable input hashes match. Actual Grok export-r4 session75967/runner890112/Blender890113 exits0/blankstderr at21:14:56Z. UV/all-state envelope passes,15010 triangles; packed master/GLB/four poses are retained remotely and WD transfer29347 is pending. Runtime and human/art acceptance remain pending. The failed cwd invocation remains retained. No whole-module rewrite. Hidden viewport objects need explicit transform/bounds evaluation; existing partial closed-state preflight is not accepted as full proof. Root driveref9b6334 now measures both hidden/visible states through explicit depsgraph evaluation and respects authoredEdgeFinish; post-repair export/budget/pixels remain unqualified. |
+| Detailed facility placement | Read-only SolMax design is terminal/Root-consumed. Recommend two NEW variants, optional fixed32 native placement profile, old five facility identities/reservations unchanged, shared existing product economics; save13/content6/protocol6 with explicit validated v12 continuation. | Root accepts the bounded direction. [Frozen Root contract](docs/planning/detailed-consumable-stalls.md)/ADR0004 and old-v12 oracle/independent challenge precede production. Dry ground and unit-scale/+Z frontage avoid support invention or nonuniform fit. Current shipped source remains12/5/5. |
+| Workspace and cleanup | New task worktree97854 actually starts from1373. Eight live factual doc/context files carried; no production changes. Old consumables milestone remains as recovery pointer. Exact source/web archive duplicates on WD/Grok are removed after116/119/hash guards, freeing234,174,364 bytes. | [Cleanup receipt](docs/verification/consumables/publication-transport-cleanup.json). Frozen public265/archive700, old science/oracles/failed archives and editable masters are retained. No broad caches/profiles are deleted. |
 
-| Live context | This PROGRESS and linked journal are root-owned in the active consumables worktree from main9172. Canonical main and the Flume source copies are dated snapshots with an active-worktree pointer. | Record meaningful results/failures/reviews/launches/cleanup before dependent work; CONTEXT stays the domain glossary. |
+## Current ownership and recovery
 
-### Acceptance evidence that still applies
+- Logical source owner: `/root/detailed_stalls_kernel_sol_max`, sole writer of
+  the frozen content/simulation profile/migration seams and logical tests; remote
+  runtime only in `/workspace/coaster-detailed-stalls-kernel`, evidence in parent
+  `kernel-evidence`. No UI/docs/Git/art writes. Root owns browser integration/acceptance.
+- Root source/integration/context: active worktree above; clean canonical
+  `/Volumes/WD/code/projects/coaster-tycoon-3d` is main1373.
+- Isolated art source/captures: `/Volumes/WD/code/workspaces/coaster-consumable-art`;
+  matching Grok `/workspace/coaster-consumable-art`. Author r2/red diagnostic are terminal. AGY repair r3 is terminal actual0/blankstderr/SUCCESS at20:35:41Z, same conversation1398043a/effective model,turns2; only two source/note writes. Repaired sourcefd975310 is frozen; independent material re-review finds double-applied state transforms and wrong wall/cylinder winding. Narrow r4 is terminal as above; Root driver edits are separately owned. Actual guarded export verifies them before further repair; export/runtime/art remain unqualified. Root owns separate driver budget diagnostic.
+- New isolated oracle writer: `/root/old_v12_stalls_oracle_sol_max`, WD/Grok
+  coaster-v12-stalls-golden only. Five genuine cases/25 checkpoints/85 comparisons are frozen; base245+supplement73 files match WD. Final Sol packaging is terminal. Root independently verifies487 common files/148 gzip records; all11 owned scientific processes have actual0/blankstderr/absent PIDs. Read-only `/root/v12_stalls_oracle_audit_luna_max` is terminal/Root-consumed with no confirmed blocker. Root additionally matches42 source/test recipe files to actual HEAD1373 and confirms src/ui/test unchanged. The old-v12 prerequisite is accepted; future migration remains unverified.
+- New read-only contract reviewer: `/root/detailed_stalls_contract_drift_luna_max`;
+  terminal findings consumed; explicit receiver→Library→worker→scene path and hidden-ancestor batching gates are added, material contract re-review is terminal and consumed; production remains gated by the old-v12 oracle.
+- Isolated UI asset-loader author: AGY r1 in WD
+  `/Volumes/WD/code/workspaces/coaster-detailed-stalls-ui`, sole detailed-facility-assets.js
+  writer; six immutable inputs and current AGY1.3.2/model catalogue verified. Actual session7807/runner21913/child21915 starts21:30:32Z; init confirms new conversation711e403e/effective gemini-3.8-flash-high/request-review.
+  Root owns all production UI integration and remote acceptance.
+- Terminal read-only contributors: `/root/burger_asset_source_audit_luna_max`
+  and `/root/detailed_stall_clearance_design_sol_max`; outcomes consumed.
+- Current immutable public/runtime proof: WD `/Volumes/WD/code/workspaces/coaster-consumables`
+  and matching Grok root; publication release-fddd5b0 and final public-browser-sol
+  corpus remain. Old source checkout's PROGRESS points here.
+- Detailed car/station/kiosk, organic tree, Flume Boat/Rider and texture masters
+  stay in their recorded external workspaces; do not replace or delete them.
 
-- [Carousel evidence index](docs/verification/carousel/README.md): native body
-  qualification, literal 16 seats, real owners, close/pause/breakdown/unload,
-  mechanic work and retirement; historical v9 authority/view continuation;
-  actual editable model exports, floor coverage, seat-anchor/owner pose
-  alignment and loader disposal. Full rider/model contact remains unqualified.
-- [Public distribution](docs/verification/carousel/public-publication.md):
-  remote build exit 0; 224 root/pinned files fetched with HTTP 200 and exact
-  build hashes; 582 older preview files preserved byte for byte. Both actual
-  public browser routes reached five rides and a real paid 16-seat session;
-  exceptions, console errors and WebGL errors were zero.
-- [Refresh repair](docs/verification/carousel/refresh-fix.md) and
-  [Classic rerun](docs/verification/carousel/refresh-classic.json): generation
-  race repaired; 27 controls and ten Library checks passed. Public checks
-  suppressed quiet autosave to preserve stored parks; separate
-  [storage controls](docs/verification/carousel/browser-storage.json) apply.
-- V10 oracle: immutable simulation source
-  `3387b469f81b15f055b92651308daa439c52488d`, engine SHA256
-  `666722f6b77159b7cae8df8b61f2d3d26360dbeb47fefa66c00cf8230a29e6fb`.
-  Full case has eight wooden, 16 Carousel and ten steel paid owners; ordered
-  holes preserve the declared 90 spending transfer. Checkpoints are tick offsets
-  0/1/17/400/1200 from saved tick 7888 under Node 20.19.2. Fixture expectations
-  predate Flume code; no cross-runtime or original-game agreement is claimed.
+## Evidence retained from earlier milestones
 
-### Recovery locations and ownership
+[Carousel](docs/verification/carousel/README.md),
+[Log Flume](docs/verification/log-flume/README.md),
+[mixed coasters](docs/verification/mixed-wooden/README.md),
+[oak scenery](docs/verification/oak-scenery/README.md) and
+[model workshop](prototypes/detailed-assets/evidence/README.md) retain exact
+profiles, checks, captures and limits. The dated journal keeps full prior
+steps, failures, version/process pins and decisions; this record compacts
+completed state without discarding its evidence. Existing v7-v11 immutable
+fixtures and matching-runtime oracle bytes are unchanged.
 
-| Location | Purpose / owner |
-| --- | --- |
-| `/Volumes/WD/code/projects/coaster-tycoon-3d` | Canonical main checkout; root. |
-| `/Volumes/WD/code/workspaces/coaster-content-library-publication/coaster-tycoon-3d` | Reused clean Pages checkout on `p/patrick/publish/consumables-fddd5b0`, head524c8a9. Root owns root/pin/provenance; all812 prior preview hashes are preserved. |
-| `/Volumes/WD/code/workspaces/coaster-log-flume/coaster-tycoon-3d` | Merged Flume source on `p/patrick/feature/log-flume`, head9172; runtime inputs remain exact source890. Post-merge recovery points to the active consumables worktree. |
-| `/Volumes/WD/code/workspaces/coaster-consumables/coaster-tycoon-3d` | Active Root-owned source from9172, branch `p/patrick/feature/consumables`; production/UI/tests and accepted local proof committed asfddd5b0 after0931; further live-context updates are Root-owned and not integrated. |
-| `/Volumes/WD/code/workspaces/coaster-v11-consumables-golden` and matching Grok directory | Immutable accepted old-v11 corpus; Sol scientific outcome and Luna independent scientific/retention review are terminal. WD336 and remote404 file hashes are verified; do not change masters. |
-| `/Volumes/WD/code/workspaces/coaster-log-flume-model-authoring` | Isolated AGY boat source, input contracts, prompts and raw/repaired evidence. Current material candidate: `evidence/endgrain-v5/` with reports, packed master, GLB and front/rear PNGs; original v3 baseline and failed v4 stay retained. |
-| `/Volumes/WD/code/workspaces/coaster-log-flume-channel-authoring` | Root-frozen native visual API and copied read-only reference inputs; AGY returns isolated source, root owns writes and Grok qualification. |
-| `/workspace/coaster-log-flume-model-authoring` on Grok Bot | Remote Blender execution and editable/export artifacts. |
-| `/Volumes/WD/code/workspaces/coaster-v10-carousel-golden/REPORT.md` | Frozen oracle source, receiving rules, actual setup commands, full/null masters, checks, hashes and retained passive-search failure; isolated Sol oracle outcome accepted by root. |
-| `/workspace/coaster-log-flume/app` on Grok Bot | Restored path currently contains only test inputs; do not use it as an old Engine recovery source. |
-| `/workspace/coaster-log-flume/fixture-qualification` on Grok Bot | Current save11 source/compiled Engine2b24637b and Native735c2d79, with independent pinned node_modules. Earlier r5 Engine c4746856 stays retained in raw evidence. Old Engine recovery uses WD v10 source/archive and pre-integration-dist.tar d428df65…. |
-| `/Volumes/WD/code/workspaces/coaster-log-flume-channel-authoring/evidence/shared-integration-r1` through `shared-integration-r5` | Actual compile/test/access failure/pass logs and pins retained. R5 red4fail/green4pass/full233 with independent repair review; earlier r4 full229/79focused remains finite pre-repair evidence. |
-| `/Volumes/WD/code/workspaces/coaster-carousel/publication-request` | Raw Carousel public delivery, failed attempts and repair evidence. |
+## Next actions and remaining gates
 
-Retained v3 baseline GLB SHA256:
-`0c002ea3cc773e87c252bb56d0e45c179549b3853ac8c29cf6a42fdb8de87744`.
-Retained v3 baseline packed master SHA256:
-`59f87c24cb389e719a9b4cbdd9a1219ee6fbf360ee6f373f4a2c4bdab08c1c9a`.
-Current isolated v5 GLB SHA256:
-`0336a6e7dc4aaa54136193d47187d67d2710ba53c4ccca3f93cf81e9dc693549`.
-Current packed master SHA256:
-`655140c3855deb1c5c7eac94151fc99d653f40cfc479803287b57771750058e3`.
-These identify isolated candidates, not a shipped asset or Patrick's approval.
+1. Consume actual geometry/header diagnostic, disposition the independent
+   source findings, then request one bounded AGY repair. Actual r4 export/all-state geometry/four renders pass mechanical guards; Root
+   pixel inspection requests brighter coherent paint,exposed signage,solid curtain
+   and bun crown cleanup before art acceptance.
+2. Freeze the separate detailed-stall identity/placement/receiving contract,
+   preserve actual old-v12 continuation before new code, and independently
+   challenge material changes. SolMax logical owner now implements only the frozen seams; first source checkpoint is uncompiled/unverified13/6/6.
+3. Integrate actual qualified representative assets at unit scale; verify
+   four frontages, ground/clearance, real Library purchase, save continuation,
+   picking, loading/disposal and public paths. Review actual output before bulk art.
 
-## Recorded progress
-
-[Detailed progress for 2026-10-10](docs/progress/2026-10-10.md) retains each
-meaningful step, decision, failure, review, source pin and result. File date
-uses Asia/Shanghai; entry timestamps use UTC. Append new entries there and
-refresh this current-state record before dependent work.
-
-## Next actions and unresolved gates
-
-1. Both whole-delivery closure rounds and material repairs are accepted. Final source/public/retention proof and failures are retained. Exact source/web duplicate transports on WD/Grok are removed after116/119/hash guards, freeing234,174,364 bytes.
-2. Commit final proof/context, integrate PR74 once, then resolve finite ticket73 and append the scoped map27 pointer. Runtimefddd/public524 are unchanged; no local runtime or repeated passed matrix is needed.
-3. Continue the separate representative detailed-stall authoring and measured clearance/asset integration. Broad original, human, hardware and full-programme gates remain open.
-
-Direct original execution/metrics are unavailable. Representative integrated
-GPU/park-scale qualification and Patrick's visual/play acceptance remain open.
-The next bounded slice can proceed without a new Patrick decision; revisit
-these gates when actual acceptance requires them. Independent end-to-end
-Design/Drift closure rounds for the expanded programme are not complete.
+No new Patrick decision is needed yet. Direct original numerical/art agreement,
+P1 human style approval, remaining41 shops/35 products and full catalogue,
+finance/research/scenarios, representative integrated GPU/scale and Patrick's
+visual/play acceptance remain OPEN. Broad39-42/native edges and overall goal
+are unchanged. Update this record and append the journal after each meaningful
+result/failure/decision/delegation/cleanup before dependent work.
