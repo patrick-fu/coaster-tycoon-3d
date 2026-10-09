@@ -1,0 +1,25 @@
+{
+  "actualExit": 0,
+  "started": "2026-10-09T17:32:15Z",
+  "finished": "2026-10-09T17:32:17Z",
+  "runnerPid": 805308,
+  "npmPid": 805319,
+  "stderrBytes": 0,
+  "rawLocation": "/workspace/coaster-consumables/evidence/visual-fix-web-r1",
+  "files": {
+    "stdout": "120b133d25a41fc01f174dbb1129e91fbbc95e7d931def7b534c319a71105eb4",
+    "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "inputs.sha256": "98113ed28e34a30372952eb423903b9736c719a144a7c030e3d90c8f8721a288"
+  },
+  "compiled": {
+    "dist/simulation/engine.js": "f6ad3fdae3725aedd49c4fcb9bb005a11677e903442a7e31e265e3ed6939f1a1",
+    "dist/content/consumables.js": "b1c162502f7a79c58c67a3d57e30c5d7db29f6972d87bc6fba65e1a3f56db4eb",
+    "ui/consumable-waste.js": "6a61d96ab774507781b9bfce61198b9599230f0c176df05f8d8f28a8e9d02bac",
+    "web-dist/consumable-waste.js": "6a61d96ab774507781b9bfce61198b9599230f0c176df05f8d8f28a8e9d02bac"
+  },
+  "packagingFailure": {
+    "actualExit": 1,
+    "path": "app/web/consumable-waste.js",
+    "reason": "Root guessed the output path; raw build remained actual0. Corrected after build-script and actual inventory inspection."
+  }
+}

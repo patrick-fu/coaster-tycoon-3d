@@ -1,0 +1,60 @@
+{
+  "utc": "2026-10-09T17:49:20.102044+00:00",
+  "checks": [
+    {
+      "name": "Actual red1/red2 exit1 and green exit0 are retained",
+      "passed": true
+    },
+    {
+      "name": "Green targeted checks all pass",
+      "passed": true
+    },
+    {
+      "name": "Exact full original stores remain equal/restored across all actual visual runs",
+      "passed": true
+    },
+    {
+      "name": "Red2 and green use precisely the same complete actual authority/Rules",
+      "passed": true
+    },
+    {
+      "name": "Red2 actual observed field is corrected and equal to green",
+      "passed": true
+    },
+    {
+      "name": "Actual green geometry minimum clears the opaque deck by2mm",
+      "passed": true
+    },
+    {
+      "name": "All actual x/z geometry bounds are unchanged",
+      "passed": true
+    },
+    {
+      "name": "Green can and box are the exact expected pixels",
+      "passed": true
+    },
+    {
+      "name": "Every actual green new disposal event occurs exactly once",
+      "passed": true
+    },
+    {
+      "name": "All owned visual processes are terminal, browser exits0 and terminal ports free",
+      "passed": true
+    },
+    {
+      "name": "Green actually executes new6a61 waste and every captured body matches served bytes",
+      "passed": true
+    },
+    {
+      "name": "Green contains no runtime/console/network/HTTP errors",
+      "passed": true
+    }
+  ],
+  "greenEndUTC": "2026-10-09T17:40:30.933066+00:00",
+  "greenRunnerExit": 0,
+  "actualExecutedSourceRecords": 93,
+  "compressedFileCount": 27,
+  "originalBytes": 156715579,
+  "retainedGzipBytes": 22812609,
+  "frozenOriginal174Touched": false
+}

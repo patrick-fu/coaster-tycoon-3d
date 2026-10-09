@@ -1,0 +1,210 @@
+{
+  "startUTC": "2026-10-09T16:43:17.398949+00:00",
+  "endUTC": "2026-10-09T16:45:23.653965+00:00",
+  "passed": true,
+  "runnerExit": 0,
+  "continuationFrom": {
+    "path": "/workspace/coaster-consumables/consumer-browser-sol/r3/04-two-paid-items.json",
+    "fileSha256": "c00538f8ff79401bcdbeff94c9d2d3846110d8c7d7c060f39b4c46b67437d7d9",
+    "tick": 6502,
+    "origin": "Complete real request-save authority from the retained r3 paid checkpoint; no state or Rules fields are edited."
+  },
+  "originalStoreCount": 2,
+  "originalKeys": [
+    "current-v10",
+    "showcase-classic-v10"
+  ],
+  "originalRecordsRestored": true,
+  "originalRecordsRestoredUTC": "2026-10-09T16:45:23.611940+00:00",
+  "terminalPorts": {
+    "8769": false,
+    "9237": false
+  },
+  "ownedProcesses": [
+    {
+      "pid": 784130,
+      "command": [
+        "/usr/bin/python3",
+        "/workspace/coaster-consumables/consumer-browser-sol/server.py"
+      ],
+      "startUTC": "2026-10-09T16:43:17.414173+00:00",
+      "returncode": -15,
+      "endUTC": "2026-10-09T16:45:23.653744+00:00"
+    },
+    {
+      "pid": 784131,
+      "command": [
+        "/workspace/coaster-content-identity/chrome-linux64/chrome",
+        "--headless=new",
+        "--no-sandbox",
+        "--disable-dev-shm-usage",
+        "--use-gl=angle",
+        "--use-angle=swiftshader",
+        "--enable-unsafe-swiftshader",
+        "--no-startup-window",
+        "--user-data-dir=/home/box/.config/google-chrome",
+        "--remote-debugging-address=127.0.0.1",
+        "--remote-debugging-port=9237"
+      ],
+      "startUTC": "2026-10-09T16:43:17.414364+00:00",
+      "returncode": 0,
+      "endUTC": "2026-10-09T16:45:23.653781+00:00"
+    }
+  ],
+  "browserVersion": {
+    "Browser": "Chrome/155.0.8059.39",
+    "Protocol-Version": "1.3",
+    "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+    "V8-Version": "15.5.35.20",
+    "WebKit-Version": "537.36 (@3ff7ac5a9224be9156d7f8703a06e22890aafd34)",
+    "webSocketDebuggerUrl": "ws://127.0.0.1:9237/devtools/browser/21d978a9-27cc-416a-8f10-6a2a88dacd15"
+  },
+  "primaryCDPReaderTerminal": [
+    null
+  ],
+  "checkNames": [
+    {
+      "name": "Retained paid checkpoint uses exactly the actual current receiving Rules",
+      "passed": true
+    },
+    {
+      "name": "Actual UI File import preserves complete generated authority retained-paid-request-save.json",
+      "passed": true
+    },
+    {
+      "name": "Real scene-picked drink inspector shows the authority owner and progress",
+      "passed": true
+    },
+    {
+      "name": "Real scene-picked burger inspector shows the authority owner and progress",
+      "passed": true
+    },
+    {
+      "name": "Actual pause suspends use and all authoritative time",
+      "passed": true
+    },
+    {
+      "name": "Actual exported Blob equals the worker save mid-use",
+      "passed": true
+    },
+    {
+      "name": "Actual UI File import preserves complete generated authority mid-use-actual-export.json",
+      "passed": true
+    },
+    {
+      "name": "Actual Save button stores the complete current-v12 paid checkpoint",
+      "passed": true
+    },
+    {
+      "name": "Actual IndexedDB reload preserves the complete paused paid authority",
+      "passed": true
+    },
+    {
+      "name": "Actual pointer lands on declared tile (14, 9)",
+      "passed": true
+    },
+    {
+      "name": "Replacement reused the slot with a new constructed instance and retained the original paid holder",
+      "passed": true
+    },
+    {
+      "name": "Genuine stale toggle callback refuses same-slot replacement without any mutation",
+      "passed": true
+    },
+    {
+      "name": "Genuine stale price callback refuses same-slot replacement without any mutation",
+      "passed": true
+    },
+    {
+      "name": "Genuine stale remove callback refuses same-slot replacement without any mutation",
+      "passed": true
+    },
+    {
+      "name": "Real use completes into the owned can while the Burger remains unfinished",
+      "passed": true
+    },
+    {
+      "name": "Actual exported Blob equals the worker save mid-container",
+      "passed": true
+    },
+    {
+      "name": "Actual pointer lands on declared tile (14, 10)",
+      "passed": true
+    },
+    {
+      "name": "Real bin choice deposits the can, clears its ownership and allocates no litter/entity",
+      "passed": true
+    },
+    {
+      "name": "Actual UI File import preserves complete generated authority mid-container-actual-export.json",
+      "passed": true
+    },
+    {
+      "name": "No-bin actual timeout creates one typed empty can with one new entity",
+      "passed": true
+    },
+    {
+      "name": "Rendered can mesh corresponds one-to-one to actual typed litter; generic litter absent",
+      "passed": true
+    },
+    {
+      "name": "Actual Burger use and no-bin timeout create its typed empty box",
+      "passed": true
+    },
+    {
+      "name": "Both actual typed litter owners have exactly one matching rendered mesh and no generic wrapper",
+      "passed": true
+    },
+    {
+      "name": "Complete active-plus-retired accounting preserves 27 revenue,8 stock and original wallets",
+      "passed": true
+    },
+    {
+      "name": "Actual executed game.js equals its served compiled bytes",
+      "passed": true
+    },
+    {
+      "name": "Actual executed consumable-controls.js equals its served compiled bytes",
+      "passed": true
+    },
+    {
+      "name": "Actual executed consumable-waste.js equals its served compiled bytes",
+      "passed": true
+    },
+    {
+      "name": "Actual executed park-scene.js equals its served compiled bytes",
+      "passed": true
+    },
+    {
+      "name": "Actual executed simulation/browser-worker.js equals its served compiled bytes",
+      "passed": true
+    },
+    {
+      "name": "Actual executed simulation/engine.js equals its served compiled bytes",
+      "passed": true
+    },
+    {
+      "name": "Actual executed content/consumables.js equals its served compiled bytes",
+      "passed": true
+    },
+    {
+      "name": "Engine and product implementation are actually executed in the worker session",
+      "passed": true
+    },
+    {
+      "name": "Actual final scene.dispose emits every new resource disposal exactly once and removes both meshes",
+      "passed": true
+    },
+    {
+      "name": "Actual finite player has no runtime exception, console error or failed HTTP request",
+      "passed": true
+    }
+  ],
+  "failure": null,
+  "runtimeErrorCounts": {
+    "exceptions": 0,
+    "consoleErrors": 0,
+    "failedRequests": 0,
+    "httpErrors": 0
+  }
+}

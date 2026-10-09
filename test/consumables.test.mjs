@@ -96,6 +96,16 @@ test('unavailable or changed profiles and malformed held items reject without ch
  p.commerceProfiles[commerceProfileId].products[burger].stockCost=6;const other=new Engine(options,p),otherBefore=other.exportSave();assert.equal(other.restoreSave(original).error.code,'WRONG_RULES');assert.equal(other.exportSave(),otherBefore);assert(e.execute({type:'set-paused',paused:false},q.value.revision).ok);
 });
 
+test('a legacy wrapper cannot target a product counter in a current save',()=>{
+ for(const id of [burger,drink]){
+  const {e}=counter(id);until(e,()=>guest(e).phase==='buying');
+  const before=e.exportSave(),bad=JSON.parse(before),revision=e.revision;
+  bad.people.guests[0].wrapper=true;bad.people.guests[0].wrapperTick=bad.tick;
+  const result=e.restoreSave(JSON.stringify(bad));assert.equal(result.ok,false);assert.equal(result.error.code,'INVALID_SAVE');
+  assert.equal(e.exportSave(),before);assert.equal(e.revision,revision);
+ }
+});
+
 test('a later compulsory-finance failure rolls back earlier held consumption time needs RNG and the whole batch',()=>{
  const {e,facility}=sold(burger,p=>{p.services.weekTicks=1000;p.services.mechanicMonthlyWage=4;});apply(e,{type:'set-facility-open',facility,open:false});apply(e,{type:'hire-staff',role:'mechanic',point:{x:10,y:10,z:32}});
  const s=e.snapshot(),extra=BigInt(Number.MAX_SAFE_INTEGER)-BigInt(s.ledger.wages);s.ledger.wages=Number.MAX_SAFE_INTEGER;s.cash=Number(BigInt(s.cash)-extra);assert(e.restoreSave(JSON.stringify(s)).ok);const before=e.exportSave();assert.equal(e.advance(1000).error.code,'CAPACITY');assert.equal(e.exportSave(),before);assert.equal(guest(e).held.remaining,150);

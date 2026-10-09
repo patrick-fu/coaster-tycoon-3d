@@ -2,8 +2,12 @@
 
 Status: finite contract accepted by Root after independent Design/Drift review
 and actual old-v11 oracle/retention acceptance. Working authority is implemented
-and passes262 canonical kernel checks; frontend/player proof remains pending.
+and passes263 canonical kernel checks after the narrow malformed-import repair. Scoped current-browser player, storage,
+Classic controls and corrected typed-waste visibility are accepted; cumulative
+integration review and actual public delivery remain pending.
 Current public implementation remains save11/content4/protocol4, source89030f9.
+The procedural can/box meshes are finite mechanical and pixel candidates; they
+do not qualify ADR0003's final detailed editable Blender/GLB props or human art acceptance.
 
 ## Player outcome and applicable prerequisites
 

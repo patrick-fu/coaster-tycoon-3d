@@ -1,0 +1,140 @@
+{
+  "scope": "Real frozen historical factories and current Engine executed in this current Chrome. Separate matching-runtime migration/continuation evidence; it does not accept older-browser or Node-origin trajectory masters, universal portability, Flume visuals, GPU or original agreement.",
+  "cases": [
+    {
+      "version": 9,
+      "inputSha256": "aca742ddf72115b41911decfb9740599bc3b92572265f468050d394f257aea0e",
+      "rides": 4,
+      "paidOwners": 16,
+      "paidSales": 600,
+      "checkpoints": [
+        {
+          "offset": 0,
+          "oldSaveSha256": "6b689301a97cd98356442fc334a76b0af901f0f3ff023f3a118cb5c1aa5ee767",
+          "inverseCurrentSaveSha256": "6b689301a97cd98356442fc334a76b0af901f0f3ff023f3a118cb5c1aa5ee767",
+          "exactAuthority": true,
+          "exactPublicView": true
+        },
+        {
+          "offset": 1,
+          "oldSaveSha256": "f689c0675bbdd48e9dee5a61be1dbe59123d8e9846ee7dedee85659b3a163edc",
+          "inverseCurrentSaveSha256": "f689c0675bbdd48e9dee5a61be1dbe59123d8e9846ee7dedee85659b3a163edc",
+          "exactAuthority": true,
+          "exactPublicView": true
+        },
+        {
+          "offset": 17,
+          "oldSaveSha256": "e3868a3977f6aec590360b206b8407586a34a37dcd7b8c122035e641270e102d",
+          "inverseCurrentSaveSha256": "e3868a3977f6aec590360b206b8407586a34a37dcd7b8c122035e641270e102d",
+          "exactAuthority": true,
+          "exactPublicView": true
+        },
+        {
+          "offset": 400,
+          "oldSaveSha256": "5ce99ceb6fdeaaaac55fd235dd55d4a5aae5e7f42eba4d650b241cfb7d3f6e78",
+          "inverseCurrentSaveSha256": "5ce99ceb6fdeaaaac55fd235dd55d4a5aae5e7f42eba4d650b241cfb7d3f6e78",
+          "exactAuthority": true,
+          "exactPublicView": true
+        },
+        {
+          "offset": 1200,
+          "oldSaveSha256": "89c0908303084831ac9b16d1f11f4c69974eda279d981b44846c68bd09c4c040",
+          "inverseCurrentSaveSha256": "89c0908303084831ac9b16d1f11f4c69974eda279d981b44846c68bd09c4c040",
+          "exactAuthority": true,
+          "exactPublicView": true
+        }
+      ],
+      "currentVersion": 12
+    },
+    {
+      "version": 10,
+      "inputSha256": "3148fa6854c05c806343c224865816b09f8f5401cf18f43a2d4dcea412b0cead",
+      "rides": 5,
+      "paidOwners": 16,
+      "paidSales": 600,
+      "checkpoints": [
+        {
+          "offset": 0,
+          "oldSaveSha256": "6a81368afb377b46b958499a2f37fc33d4e1d580fcdc8121ab661123d6f74d55",
+          "inverseCurrentSaveSha256": "6a81368afb377b46b958499a2f37fc33d4e1d580fcdc8121ab661123d6f74d55",
+          "exactAuthority": true,
+          "exactPublicView": true
+        },
+        {
+          "offset": 1,
+          "oldSaveSha256": "526aa063175c6840e3685b2224eef4ad3280722395f4ba72218ba14f6e7888b9",
+          "inverseCurrentSaveSha256": "526aa063175c6840e3685b2224eef4ad3280722395f4ba72218ba14f6e7888b9",
+          "exactAuthority": true,
+          "exactPublicView": true
+        },
+        {
+          "offset": 17,
+          "oldSaveSha256": "577a628be21d7dcc2a7f0b6b728a30593b4c7d347d736ed6bed47ebed3e3b872",
+          "inverseCurrentSaveSha256": "577a628be21d7dcc2a7f0b6b728a30593b4c7d347d736ed6bed47ebed3e3b872",
+          "exactAuthority": true,
+          "exactPublicView": true
+        },
+        {
+          "offset": 400,
+          "oldSaveSha256": "dfb3f677f576d8e379ce13b1ea28a7b8d77f2ead080ec562f75ca57fb1ba63e1",
+          "inverseCurrentSaveSha256": "dfb3f677f576d8e379ce13b1ea28a7b8d77f2ead080ec562f75ca57fb1ba63e1",
+          "exactAuthority": true,
+          "exactPublicView": true
+        },
+        {
+          "offset": 1200,
+          "oldSaveSha256": "1a2c9534b109bd81cde7e2eb17c401b2020821d0624ea1f019ecf63e8e467f58",
+          "inverseCurrentSaveSha256": "1a2c9534b109bd81cde7e2eb17c401b2020821d0624ea1f019ecf63e8e467f58",
+          "exactAuthority": true,
+          "exactPublicView": true
+        }
+      ],
+      "currentVersion": 12
+    },
+    {
+      "version": 11,
+      "inputSha256": "f28fae06a7d9f5eab32f28d93bf1533212454e584e97eb2ed491d3cb4439b351",
+      "rides": 5,
+      "paidOwners": 16,
+      "paidSales": 600,
+      "checkpoints": [
+        {
+          "offset": 0,
+          "oldSaveSha256": "3591dde245d38664943787a9cf7686b9d83b38423f89ac8a1d99027cf70d3383",
+          "inverseCurrentSaveSha256": "3591dde245d38664943787a9cf7686b9d83b38423f89ac8a1d99027cf70d3383",
+          "exactAuthority": true,
+          "exactPublicView": true
+        },
+        {
+          "offset": 1,
+          "oldSaveSha256": "202d910a052d961dec31fb9813c3d9277f4dc04b7bdc5ffe5b8f5f2518bf5820",
+          "inverseCurrentSaveSha256": "202d910a052d961dec31fb9813c3d9277f4dc04b7bdc5ffe5b8f5f2518bf5820",
+          "exactAuthority": true,
+          "exactPublicView": true
+        },
+        {
+          "offset": 17,
+          "oldSaveSha256": "bae0d744d246c62fea6546c64b952ca261b4e50509e086caa9cb6af8b3565cf0",
+          "inverseCurrentSaveSha256": "bae0d744d246c62fea6546c64b952ca261b4e50509e086caa9cb6af8b3565cf0",
+          "exactAuthority": true,
+          "exactPublicView": true
+        },
+        {
+          "offset": 400,
+          "oldSaveSha256": "184cd6ef3f9b10881cb9c62e54f7bd86bf9b3346105c02c3e6634ebd7075c1fd",
+          "inverseCurrentSaveSha256": "184cd6ef3f9b10881cb9c62e54f7bd86bf9b3346105c02c3e6634ebd7075c1fd",
+          "exactAuthority": true,
+          "exactPublicView": true
+        },
+        {
+          "offset": 1200,
+          "oldSaveSha256": "c36e1e848a0d5f8e8bf434b81fc83ce58bdbebea6d7c6a8396128bb9e2386e82",
+          "inverseCurrentSaveSha256": "c36e1e848a0d5f8e8bf434b81fc83ce58bdbebea6d7c6a8396128bb9e2386e82",
+          "exactAuthority": true,
+          "exactPublicView": true
+        }
+      ],
+      "currentVersion": 12
+    }
+  ]
+}

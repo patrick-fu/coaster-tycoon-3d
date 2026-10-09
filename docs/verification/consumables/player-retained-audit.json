@@ -1,0 +1,365 @@
+{
+  "auditUTC": "2026-10-09T16:49:29.149545+00:00",
+  "sourceCommit": "0931ff3c746280b4645a1086c3290b38730ada48",
+  "retainedFiniteFlow": "R3 actual empty-start construction and payments; R4 unchanged paid-checkpoint continuation through UI File import. Raw failed R1/R2/R3 are retained.",
+  "paid": {
+    "tick": 6502,
+    "cash": 499559,
+    "spent": 460,
+    "refunded": 0,
+    "ledger": {
+      "rideSales": 0,
+      "shopSales": 27,
+      "stock": 8,
+      "wages": 0,
+      "upkeep": 0,
+      "interest": 0
+    }
+  },
+  "final": {
+    "tick": 14033,
+    "cash": 499459,
+    "spent": 660,
+    "refunded": 100,
+    "ledger": {
+      "rideSales": 0,
+      "shopSales": 27,
+      "stock": 8,
+      "wages": 0,
+      "upkeep": 0,
+      "interest": 0
+    },
+    "retiredShopIncome": 12,
+    "retiredStock": 3,
+    "nextEntity": 5,
+    "litter": [
+      {
+        "id": 3,
+        "point": {
+          "x": 14,
+          "y": 10,
+          "z": 32
+        },
+        "containerId": "emptyCan"
+      },
+      {
+        "id": 4,
+        "point": {
+          "x": 10,
+          "y": 10,
+          "z": 32
+        },
+        "containerId": "emptyBurgerBox"
+      }
+    ]
+  },
+  "bin": {
+    "tick": 7760,
+    "nextEntity": 3,
+    "litter": [],
+    "amenities": [
+      {
+        "id": 9,
+        "kind": "bin",
+        "path": 5,
+        "occupant": null,
+        "fill": 1
+      }
+    ]
+  },
+  "actualReceivingRulesSha256": "57cc1b924785a73d53b29f08d6030986b30c5956d62e1c8c024bccbbeebcabc4",
+  "actualExecutedSourceCount": 93,
+  "actualExecutedSourcesByTarget": {
+    "page": 59,
+    "worker": 34
+  },
+  "actualProductionModules": {
+    "game.js": "6d429cff46bde002b0b2a9f984d3ed50953033ae6f5821fb51adf13f9ecb009a",
+    "consumable-controls.js": "4e77687b8a5578a9fd15e89db3ef22bf0156304b22542be8e833b062862a118e",
+    "park-scene.js": "752be64288e176a44187765165f9c027b505f0da9d6de4fd07f5196c5929cac9",
+    "simulation/engine.js": "f6ad3fdae3725aedd49c4fcb9bb005a11677e903442a7e31e265e3ed6939f1a1",
+    "content/consumables.js": "b1c162502f7a79c58c67a3d57e30c5d7db29f6972d87bc6fba65e1a3f56db4eb",
+    "consumable-waste.js": "91444431b3af61da27eb48f04c8d6b36797fdeb7d2a59fed8958008bca5d0f85",
+    "simulation/browser-worker.js": "d5c82ceefac477eb9baecd5065933a6db0a216654c2a406058f1c28317127e1c"
+  },
+  "actualDisposal": {
+    "before": {
+      "counts": {
+        "can": 1,
+        "box": 1
+      },
+      "memory": {
+        "geometries": 28,
+        "textures": 26
+      }
+    },
+    "events": {
+      "canMesh": 1,
+      "canGeometry": 1,
+      "canMaterial": 1,
+      "boxMesh": 1,
+      "boxGeometry": 1,
+      "boxMaterial": 1
+    },
+    "disposed": true,
+    "canAbsent": true,
+    "boxAbsent": true,
+    "memoryAfter": {
+      "geometries": 0,
+      "textures": 3
+    }
+  },
+  "auditChecks": [
+    {
+      "name": "Successful continuation has actual runner exit0 and34 strict orchestration checks",
+      "passed": true
+    },
+    {
+      "name": "R3 generated complete paid authority is unchanged by R4 File import",
+      "passed": true
+    },
+    {
+      "name": "Construction carried full exact family/variant/mode identities and facing South",
+      "passed": true
+    },
+    {
+      "name": "Immutable receiving Rules remain byteexact through paid/import/reuse/container/bin/final checkpoints",
+      "passed": true
+    },
+    {
+      "name": "Descriptors remain complete and unchanged after vendor retirement/slot reuse",
+      "passed": true
+    },
+    {
+      "name": "All three runs preserved exactly the same full original IndexedDB records",
+      "passed": true
+    },
+    {
+      "name": "Each navigated run exactly restored the full original records",
+      "passed": true
+    },
+    {
+      "name": "Final complete ledger and cash independently reconcile construction/refund/ownership",
+      "passed": true
+    },
+    {
+      "name": "Actual can and box each match exactly one typed rendered mesh",
+      "passed": true
+    },
+    {
+      "name": "Each actual new disposal resource is released once and renderer geometries reach zero",
+      "passed": true
+    },
+    {
+      "name": "All actual captured script bodies match the served executed bytes",
+      "passed": true
+    },
+    {
+      "name": "Owned processes are terminal and actual browser exit is zero",
+      "passed": true
+    },
+    {
+      "name": "Lossless retained gzip r2/00-empty-start.json",
+      "passed": true
+    },
+    {
+      "name": "Lossless retained gzip r2/01-constructed.json",
+      "passed": true
+    },
+    {
+      "name": "Lossless retained gzip r2/02-two-real-arrivals.json",
+      "passed": true
+    },
+    {
+      "name": "Lossless retained gzip r2/declared-empty-start.json",
+      "passed": true
+    },
+    {
+      "name": "Lossless retained gzip r2/protected-original-records.json",
+      "passed": true
+    },
+    {
+      "name": "Lossless retained gzip r2/raw-cdp.jsonl",
+      "passed": true
+    },
+    {
+      "name": "Lossless retained gzip r2/restored-original-records.json",
+      "passed": true
+    },
+    {
+      "name": "Lossless retained gzip r2/result.json",
+      "passed": true
+    },
+    {
+      "name": "Lossless retained gzip r2/summary.json",
+      "passed": true
+    },
+    {
+      "name": "Lossless retained gzip r3/00-empty-start.json",
+      "passed": true
+    },
+    {
+      "name": "Lossless retained gzip r3/01-constructed.json",
+      "passed": true
+    },
+    {
+      "name": "Lossless retained gzip r3/02-two-real-arrivals.json",
+      "passed": true
+    },
+    {
+      "name": "Lossless retained gzip r3/02b-real-price-selected-service.json",
+      "passed": true
+    },
+    {
+      "name": "Lossless retained gzip r3/03-drink-paid.json",
+      "passed": true
+    },
+    {
+      "name": "Lossless retained gzip r3/04-two-paid-items.json",
+      "passed": true
+    },
+    {
+      "name": "Lossless retained gzip r3/declared-empty-start.json",
+      "passed": true
+    },
+    {
+      "name": "Lossless retained gzip r3/protected-original-records.json",
+      "passed": true
+    },
+    {
+      "name": "Lossless retained gzip r3/raw-cdp.jsonl",
+      "passed": true
+    },
+    {
+      "name": "Lossless retained gzip r3/restored-original-records.json",
+      "passed": true
+    },
+    {
+      "name": "Lossless retained gzip r3/result.json",
+      "passed": true
+    },
+    {
+      "name": "Lossless retained gzip r4/04-retained-paid-items-imported.json",
+      "passed": true
+    },
+    {
+      "name": "Lossless retained gzip r4/05-burger-inspector.json",
+      "passed": true
+    },
+    {
+      "name": "Lossless retained gzip r4/05-drink-inspector.json",
+      "passed": true
+    },
+    {
+      "name": "Lossless retained gzip r4/06-mid-use-reloaded.json",
+      "passed": true
+    },
+    {
+      "name": "Lossless retained gzip r4/07-vendor-slot-reused.json",
+      "passed": true
+    },
+    {
+      "name": "Lossless retained gzip r4/08-stale-controls-refused.json",
+      "passed": true
+    },
+    {
+      "name": "Lossless retained gzip r4/09-mid-can-checkpoint.json",
+      "passed": true
+    },
+    {
+      "name": "Lossless retained gzip r4/10-bin-placed.json",
+      "passed": true
+    },
+    {
+      "name": "Lossless retained gzip r4/11-can-in-bin.json",
+      "passed": true
+    },
+    {
+      "name": "Lossless retained gzip r4/12-typed-can-ground.json",
+      "passed": true
+    },
+    {
+      "name": "Lossless retained gzip r4/13-both-typed-waste.json",
+      "passed": true
+    },
+    {
+      "name": "Lossless retained gzip r4/14-box-mesh-close.json",
+      "passed": true
+    },
+    {
+      "name": "Lossless retained gzip r4/14-can-mesh-close.json",
+      "passed": true
+    },
+    {
+      "name": "Lossless retained gzip r4/15-finance.json",
+      "passed": true
+    },
+    {
+      "name": "Lossless retained gzip r4/downloads/coaster-park.json",
+      "passed": true
+    },
+    {
+      "name": "Lossless retained gzip r4/final-player-observations.json",
+      "passed": true
+    },
+    {
+      "name": "Lossless retained gzip r4/mid-container-actual-export.json",
+      "passed": true
+    },
+    {
+      "name": "Lossless retained gzip r4/mid-use-actual-export.json",
+      "passed": true
+    },
+    {
+      "name": "Lossless retained gzip r4/mid-use-full-store.json",
+      "passed": true
+    },
+    {
+      "name": "Lossless retained gzip r4/pre-reload-driver.json",
+      "passed": true
+    },
+    {
+      "name": "Lossless retained gzip r4/protected-original-records.json",
+      "passed": true
+    },
+    {
+      "name": "Lossless retained gzip r4/raw-cdp.jsonl",
+      "passed": true
+    },
+    {
+      "name": "Lossless retained gzip r4/restored-original-records.json",
+      "passed": true
+    },
+    {
+      "name": "Lossless retained gzip r4/result.json",
+      "passed": true
+    },
+    {
+      "name": "Lossless retained gzip r4/retained-paid-request-save.json",
+      "passed": true
+    },
+    {
+      "name": "Lossless retained gzip runner-r2.stdout.log",
+      "passed": true
+    }
+  ],
+  "r3AdvanceTelemetry": {
+    "count": 127,
+    "requested": 6413,
+    "wallClockTicks": 89,
+    "maxExtraTicks": 23
+  },
+  "r4AdvanceTelemetry": {
+    "count": 78,
+    "requested": 7520,
+    "wallClockTicks": 44,
+    "maxExtraTicks": 2
+  },
+  "replacementDirection": [
+    0
+  ],
+  "compressedFileCount": 46,
+  "decodedBytes": 1640783769,
+  "retainedGzipBytes": 92598946,
+  "losslessCompressionChecks": 46
+}

@@ -70,8 +70,9 @@ unfinished items; use changes their needs over time and ends in an empty box or
 can, which goes to a bin or becomes typed ground litter. Stock expense and gross
 margin reflect each selected product. This working source uses save12/content5/
 protocol5 and retains complete historical continuation checks. [Current finite
-evidence](docs/verification/consumables/README.md) records262 passing kernel checks;
-the new-product player/public path remains pending. These changes are not yet
+evidence](docs/verification/consumables/README.md) records263 passing kernel checks,
+actual two-buyer ownership/disposal and protected historical browser persistence.
+The new source is still awaiting integration and public delivery. These changes are not yet
 available in the current public preview and do not qualify full commercial or
 original-game behaviour.
 

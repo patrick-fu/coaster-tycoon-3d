@@ -1,0 +1,18 @@
+{
+  "runner": 786395,
+  "python": 786401,
+  "started": "2026-10-09T16:48:31Z",
+  "finished": "2026-10-09T16:51:26Z",
+  "exit": 0,
+  "stderrBytes": 0,
+  "controls": 13,
+  "historicalCompleteAuthorityViewPairs": 15,
+  "oldEngineSha256": {
+    "9": "ae54ab209021ccb0f3929deb29bf585f3bb4bf05b9d675f92a91549f2b0d23fd",
+    "10": "666722f6b77159b7cae8df8b61f2d3d26360dbeb47fefa66c00cf8230a29e6fb",
+    "11": "2b24637ba88a62d0a41666d1a57f5c55ab5677298c781a65067453dbb4edc8b6"
+  },
+  "wholeStoreByteExact": true,
+  "archiveSha256": "3ba381af7a3bb4715fd0e165e30e02467be8e2bf9e1d8e434038b63da4f5b338",
+  "scope": "Current Chrome same-runtime reconstruction/continuation and storage; no Node-origin default portability, cross-runtime, original, human or GPU claim."
+}

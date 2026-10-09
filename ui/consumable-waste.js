@@ -136,13 +136,14 @@ export function createConsumableWaste(scene, maxCount = 10000) {
       const containerId = typeMap.get(id);
 
       if (containerId === 'emptyCan') {
-        transform.position.set(x + 2, y + 0.01, z + 2);
+        // +0.14m public deck top + 0.002m presentation clearance against z-fighting
+        transform.position.set(x + 2, y + 0.142, z + 2);
         transform.scale.set(1, 1, 1);
         transform.rotation.set(0, (id % 8) * 0.785, 0);
         transform.updateMatrix();
         canMesh.setMatrixAt(canCount++, transform.matrix);
       } else if (containerId === 'emptyBurgerBox') {
-        transform.position.set(x + 2, y + 0.01, z + 2);
+        transform.position.set(x + 2, y + 0.142, z + 2);
         transform.scale.set(1, 1, 1);
         transform.rotation.set(0, (id % 7) * 0.9, 0);
         transform.updateMatrix();
