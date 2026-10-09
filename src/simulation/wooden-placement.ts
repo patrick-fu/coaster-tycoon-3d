@@ -38,7 +38,7 @@ function cellsForBounds(bounds:Bounds):Cell[]{
 
 export function woodenPortalCells(portal:Portal,station:Track):Cell[]{return cellsForBounds(woodenTransition(portal,station).bounds);}
 
-function adjacent(a:Track,b:Track,ride:TrackedRide,elements:ReadonlyMap<number,Element>,rules:Rules){
+function adjacent(a:Track,b:Track,ride:Pick<TrackedRide,'id'|'track'|'anchor'>,elements:ReadonlyMap<number,Element>,rules:Rules){
  const i=ride.track.indexOf(a.id),j=ride.track.indexOf(b.id);
  if(i<0||j<0)return false;
  if(j===i+1)return same(endpoint(a.origin,rules.pieces[a.piece]!),b.origin);

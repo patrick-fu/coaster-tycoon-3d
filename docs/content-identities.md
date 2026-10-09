@@ -31,13 +31,17 @@ and form a supported combination. Unknown IDs return `UNKNOWN_CONTENT`, a wrong
 combination or service kind returns `INVALID_CONTENT`, and a valid reference
 selection without executable capabilities returns `UNSUPPORTED_CONTENT`.
 Quotation and execution check this before allocating, charging or changing any
-state. Pending reference wood, water, free-water, shuttle and fixed rides cannot borrow
-the candidate circuit adapter. Candidate identities describe independently
+state. Unavailable original-reference wood, water, free-water, shuttle and fixed rides
+cannot borrow an independent candidate adapter. Candidate identities describe independently
 authored algorithms; they never relabel an old park as an original object.
 
-The five executable variants are the candidate uniform steel train, detailed
-independent wooden train and candidate food, drink and restroom facilities. Their capability profile IDs
-identify the construction/operation/presentation implementation. Numeric rules
+The seven implemented variants are the candidate uniform steel train, detailed
+independent wooden train, sixteen-seat Carousel, four-seat Log Flume, and
+candidate food, drink and restroom facilities. Catalogue availability also
+requires the actual receiving numeric profile: the browser explicitly selects
+the complete Flume profile, while zero-argument park factories retain their
+previous configuration. Their capability profile IDs identify the verified
+construction/operation/presentation implementation. Numeric rules
 remain the complete canonical `Rules` record, not defaults looked up by name.
 New adapters and independently authored art must supply their own verified
 capabilities before catalogue controls can create them.
@@ -59,10 +63,15 @@ are attached. Surviving instances receive deterministic IDs in slot order;
 unknown demolished-instance history is never fabricated. Full v8 validation
 then checks capabilities and all existing geometry, ownership, money, stock,
 queue, train, seat, guest, staff and housekeeping invariants before atomic load.
-V8 input must contain its complete identity schema before migration to v9. Current
-saves use `version: 9` / `contentVersion: 2` and retain complete per-ride profiles;
-see [the mixed coaster contract](mixed-coasters.md). Versions 1–5, future save
-or content versions, incompatible profiles, and unavailable content reject.
+V8 input must contain its complete identity schema before migration to v9.
+The declared sequence then validates v9/content 2 before adding v10/content 3
+Carousel fields, and validates v10 before adding v11/content 4 Boat fields.
+Current saves use **version 11 / content version 4**. Matching historical
+receivers keep their complete old Rules, owner and accounting behavior; only
+declared later fields are added. See the [mixed coaster contract](mixed-coasters.md),
+[Carousel contract](planning/carousel-slice.md) and
+[finite Log Flume contract](planning/log-flume-slice.md). Versions 1–5, future
+save or content versions, incompatible profiles, and unavailable content reject.
 
 The full canonical rule JSON must match the receiving engine, including prices,
 motion, services, scenery and wages. A matching `Rules.id` never substitutes
@@ -77,7 +86,7 @@ scenario histories. Those remain explicit implementation work in the programme.
 ## Worker and presentation
 
 Requests, replies, ready/error events and view packets use
-`protocolVersion: 2`. Requests require `{id, protocolVersion, request}`; an
+`protocolVersion: 4`. Requests require `{id, protocolVersion, request}`; an
 unsupported or missing version receives a correlated structured rejection.
 Browser `speed` and `new-park` controls use the same version gate. Older save
 formats are migrated independently of this current message protocol.
@@ -101,10 +110,13 @@ Remote checks cover populated v7 train/queue continuation with nondefault rules,
 demolished/reused shop stock and income, restricted v6 normalization, malformed
 identities and versions, failed-load quote/pause preservation, capability
 rejection in both quote and execute, instance lifecycle, copied projections and
-versioned real worker messages. Browser checks must also cover a valid steel-only
-v7 file import, v9/content-2 export, IndexedDB reload/continuation and visible
-failed-import errors.
-Retained run evidence records what actually passed.
+versioned real worker messages. Current [Classic/Library checks](verification/log-flume/classic-library-browser.json)
+cover the historical v7 steel-only projection, v11/content-4 export and canonical
+reload/showcase separation. [Storage controls](verification/log-flume/production-storage.json)
+cover same-Chrome historical admission, explicit incompatible Rules refusal,
+quiet saving and unchanged existing slots. [The verification index](verification/log-flume/README.md)
+records each actual source/version, result and retained failure; it does not
+claim cross-runtime default-rule portability or original numerical agreement.
 
 R01–R03 still require contrasting family geometry, suspended/inverted clearance,
 ordered nonuniform vehicle/dispatch implementations and original comparison;

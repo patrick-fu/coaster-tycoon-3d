@@ -1,0 +1,1722 @@
+{
+  "scope": "Actual production worker and current UI; commands from real initial five-ride park, unchanged guest Rules/economics. Task-only named UI exports/quiet-save suppression. Real wall clock may add ticks; no Node trajectory equality, public/GPU/human/original/continuous acceptance.",
+  "checks": [
+    {
+      "name": "actual completed Test remains openable after4000 extra ticks without Pause timing",
+      "passed": true
+    },
+    {
+      "name": "complete real worker channel/test/admission commands",
+      "passed": true
+    },
+    {
+      "name": "actual inspector ordered four paid owners and real rendered riders",
+      "passed": true
+    },
+    {
+      "name": "actual passenger button selects real guest and wallet",
+      "passed": true
+    },
+    {
+      "name": "actual occupied paid Boat exact save/restore",
+      "passed": true
+    },
+    {
+      "name": "actual close retains paid participants and Boat pose",
+      "passed": true
+    },
+    {
+      "name": "original four stored parks preserved",
+      "passed": true
+    }
+  ],
+  "exceptions": [],
+  "consoleErrors": [],
+  "failedRequests": [],
+  "browserVersion": "Chrome/155.0.8059.39",
+  "ownedPids": [
+    389665,
+    389666
+  ],
+  "actualEvaluateParameterNames": [
+    "expression",
+    "objectGroup",
+    "includeCommandLineAPI",
+    "silent",
+    "contextId",
+    "returnByValue",
+    "generatePreview",
+    "userGesture",
+    "awaitPromise",
+    "throwOnSideEffect",
+    "timeout",
+    "disableBreaks",
+    "replMode",
+    "allowUnsafeEvalBlockedByCSP",
+    "uniqueContextId",
+    "serializationOptions"
+  ],
+  "actionsSha256": "af6ded381f118253406565f797561c30889dfc41eb35798366881882a0a9e2c3",
+  "replay": [
+    {
+      "index": 0,
+      "command": {
+        "type": "set-paused",
+        "paused": true
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:388",
+        "cost": 0
+      }
+    },
+    {
+      "index": 1,
+      "command": {
+        "type": "set-park-open",
+        "open": false
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:389",
+        "cost": 0
+      }
+    },
+    {
+      "index": 2,
+      "command": {
+        "type": "set-ride-status",
+        "ride": 0,
+        "status": "closed"
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:390",
+        "cost": 0
+      }
+    },
+    {
+      "index": 3,
+      "command": {
+        "type": "set-ride-status",
+        "ride": 4,
+        "status": "closed"
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:391",
+        "cost": 0
+      }
+    },
+    {
+      "index": 4,
+      "command": {
+        "type": "set-ride-status",
+        "ride": 5,
+        "status": "closed"
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:392",
+        "cost": 0
+      }
+    },
+    {
+      "index": 5,
+      "command": {
+        "type": "set-ride-status",
+        "ride": 6,
+        "status": "closed"
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:393",
+        "cost": 0
+      }
+    },
+    {
+      "index": 6,
+      "command": {
+        "type": "set-ride-status",
+        "ride": 7,
+        "status": "closed"
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:394",
+        "cost": 0
+      }
+    },
+    {
+      "index": 7,
+      "command": {
+        "type": "remove-scenery",
+        "id": 236
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:395",
+        "cost": -15
+      }
+    },
+    {
+      "index": 8,
+      "command": {
+        "type": "remove-scenery",
+        "id": 237
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:396",
+        "cost": -15
+      }
+    },
+    {
+      "index": 9,
+      "command": {
+        "type": "remove-scenery",
+        "id": 238
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:397",
+        "cost": -30
+      }
+    },
+    {
+      "index": 10,
+      "command": {
+        "type": "create-ride",
+        "name": "Southeast Timber Splash",
+        "tile": {
+          "x": 30,
+          "y": 38
+        },
+        "height": 32,
+        "direction": 0,
+        "content": {
+          "familyId": "independent.log-flume",
+          "variantId": "independent.four-seat-log",
+          "modeId": "independent.channel-circuit"
+        }
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:398",
+        "cost": 0,
+        "id": 8
+      }
+    },
+    {
+      "index": 11,
+      "command": {
+        "type": "append-track",
+        "ride": 8,
+        "piece": "station"
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:399",
+        "cost": 300,
+        "id": 334
+      }
+    },
+    {
+      "index": 12,
+      "command": {
+        "type": "append-track",
+        "ride": 8,
+        "piece": "station"
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:400",
+        "cost": 300,
+        "id": 335
+      }
+    },
+    {
+      "index": 13,
+      "command": {
+        "type": "append-track",
+        "ride": 8,
+        "piece": "lift-start"
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:401",
+        "cost": 200,
+        "id": 336
+      }
+    },
+    {
+      "index": 14,
+      "command": {
+        "type": "append-track",
+        "ride": 8,
+        "piece": "lift"
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:402",
+        "cost": 150,
+        "id": 337
+      }
+    },
+    {
+      "index": 15,
+      "command": {
+        "type": "append-track",
+        "ride": 8,
+        "piece": "lift-end"
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:403",
+        "cost": 200,
+        "id": 338
+      }
+    },
+    {
+      "index": 16,
+      "command": {
+        "type": "append-track",
+        "ride": 8,
+        "piece": "left"
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:404",
+        "cost": 250,
+        "id": 339
+      }
+    },
+    {
+      "index": 17,
+      "command": {
+        "type": "append-track",
+        "ride": 8,
+        "piece": "channel"
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:405",
+        "cost": 100,
+        "id": 340
+      }
+    },
+    {
+      "index": 18,
+      "command": {
+        "type": "append-track",
+        "ride": 8,
+        "piece": "channel"
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:406",
+        "cost": 100,
+        "id": 341
+      }
+    },
+    {
+      "index": 19,
+      "command": {
+        "type": "append-track",
+        "ride": 8,
+        "piece": "left"
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:407",
+        "cost": 250,
+        "id": 342
+      }
+    },
+    {
+      "index": 20,
+      "command": {
+        "type": "append-track",
+        "ride": 8,
+        "piece": "drop-start"
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:408",
+        "cost": 180,
+        "id": 343
+      }
+    },
+    {
+      "index": 21,
+      "command": {
+        "type": "append-track",
+        "ride": 8,
+        "piece": "drop"
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:409",
+        "cost": 140,
+        "id": 344
+      }
+    },
+    {
+      "index": 22,
+      "command": {
+        "type": "append-track",
+        "ride": 8,
+        "piece": "drop-end"
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:410",
+        "cost": 180,
+        "id": 345
+      }
+    },
+    {
+      "index": 23,
+      "command": {
+        "type": "append-track",
+        "ride": 8,
+        "piece": "splash"
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:411",
+        "cost": 180,
+        "id": 346
+      }
+    },
+    {
+      "index": 24,
+      "command": {
+        "type": "append-track",
+        "ride": 8,
+        "piece": "splash"
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:412",
+        "cost": 180,
+        "id": 347
+      }
+    },
+    {
+      "index": 25,
+      "command": {
+        "type": "append-track",
+        "ride": 8,
+        "piece": "left"
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:413",
+        "cost": 250,
+        "id": 348
+      }
+    },
+    {
+      "index": 26,
+      "command": {
+        "type": "append-track",
+        "ride": 8,
+        "piece": "channel"
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:414",
+        "cost": 100,
+        "id": 349
+      }
+    },
+    {
+      "index": 27,
+      "command": {
+        "type": "append-track",
+        "ride": 8,
+        "piece": "channel"
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:415",
+        "cost": 100,
+        "id": 350
+      }
+    },
+    {
+      "index": 28,
+      "command": {
+        "type": "append-track",
+        "ride": 8,
+        "piece": "left"
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:416",
+        "cost": 250,
+        "id": 351
+      }
+    },
+    {
+      "index": 29,
+      "command": {
+        "type": "place-portal",
+        "ride": 8,
+        "role": "entrance",
+        "station": 334,
+        "tile": {
+          "x": 30,
+          "y": 39
+        },
+        "height": 32,
+        "direction": 3
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:417",
+        "cost": 50,
+        "id": 352
+      }
+    },
+    {
+      "index": 30,
+      "command": {
+        "type": "place-portal",
+        "ride": 8,
+        "role": "exit",
+        "station": 335,
+        "tile": {
+          "x": 31,
+          "y": 39
+        },
+        "height": 32,
+        "direction": 3
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:418",
+        "cost": 50,
+        "id": 353
+      }
+    },
+    {
+      "index": 31,
+      "command": {
+        "type": "place-path",
+        "tile": {
+          "x": 8,
+          "y": 29
+        },
+        "height": 32,
+        "queueFor": null
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:419",
+        "cost": 12,
+        "id": 354
+      }
+    },
+    {
+      "index": 32,
+      "command": {
+        "type": "place-path",
+        "tile": {
+          "x": 9,
+          "y": 29
+        },
+        "height": 32,
+        "queueFor": null
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:420",
+        "cost": 12,
+        "id": 355
+      }
+    },
+    {
+      "index": 33,
+      "command": {
+        "type": "place-path",
+        "tile": {
+          "x": 10,
+          "y": 29
+        },
+        "height": 32,
+        "queueFor": null
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:421",
+        "cost": 12,
+        "id": 356
+      }
+    },
+    {
+      "index": 34,
+      "command": {
+        "type": "place-path",
+        "tile": {
+          "x": 11,
+          "y": 29
+        },
+        "height": 32,
+        "queueFor": null
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:422",
+        "cost": 12,
+        "id": 357
+      }
+    },
+    {
+      "index": 35,
+      "command": {
+        "type": "place-path",
+        "tile": {
+          "x": 12,
+          "y": 29
+        },
+        "height": 32,
+        "queueFor": null
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:423",
+        "cost": 12,
+        "id": 358
+      }
+    },
+    {
+      "index": 36,
+      "command": {
+        "type": "place-path",
+        "tile": {
+          "x": 13,
+          "y": 29
+        },
+        "height": 32,
+        "queueFor": null
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:424",
+        "cost": 12,
+        "id": 359
+      }
+    },
+    {
+      "index": 37,
+      "command": {
+        "type": "place-path",
+        "tile": {
+          "x": 14,
+          "y": 29
+        },
+        "height": 32,
+        "queueFor": null
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:425",
+        "cost": 12,
+        "id": 360
+      }
+    },
+    {
+      "index": 38,
+      "command": {
+        "type": "place-path",
+        "tile": {
+          "x": 15,
+          "y": 29
+        },
+        "height": 32,
+        "queueFor": null
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:426",
+        "cost": 12,
+        "id": 361
+      }
+    },
+    {
+      "index": 39,
+      "command": {
+        "type": "place-path",
+        "tile": {
+          "x": 16,
+          "y": 29
+        },
+        "height": 32,
+        "queueFor": null
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:427",
+        "cost": 12,
+        "id": 362
+      }
+    },
+    {
+      "index": 40,
+      "command": {
+        "type": "place-path",
+        "tile": {
+          "x": 17,
+          "y": 29
+        },
+        "height": 32,
+        "queueFor": null
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:428",
+        "cost": 12,
+        "id": 363
+      }
+    },
+    {
+      "index": 41,
+      "command": {
+        "type": "place-path",
+        "tile": {
+          "x": 18,
+          "y": 29
+        },
+        "height": 32,
+        "queueFor": null
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:429",
+        "cost": 12,
+        "id": 364
+      }
+    },
+    {
+      "index": 42,
+      "command": {
+        "type": "place-path",
+        "tile": {
+          "x": 19,
+          "y": 29
+        },
+        "height": 32,
+        "queueFor": null
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:430",
+        "cost": 12,
+        "id": 365
+      }
+    },
+    {
+      "index": 43,
+      "command": {
+        "type": "place-path",
+        "tile": {
+          "x": 20,
+          "y": 29
+        },
+        "height": 32,
+        "queueFor": null
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:431",
+        "cost": 12,
+        "id": 366
+      }
+    },
+    {
+      "index": 44,
+      "command": {
+        "type": "place-path",
+        "tile": {
+          "x": 21,
+          "y": 29
+        },
+        "height": 32,
+        "queueFor": null
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:432",
+        "cost": 12,
+        "id": 367
+      }
+    },
+    {
+      "index": 45,
+      "command": {
+        "type": "place-path",
+        "tile": {
+          "x": 22,
+          "y": 29
+        },
+        "height": 32,
+        "queueFor": null
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:433",
+        "cost": 12,
+        "id": 368
+      }
+    },
+    {
+      "index": 46,
+      "command": {
+        "type": "place-path",
+        "tile": {
+          "x": 23,
+          "y": 29
+        },
+        "height": 32,
+        "queueFor": null
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:434",
+        "cost": 12,
+        "id": 369
+      }
+    },
+    {
+      "index": 47,
+      "command": {
+        "type": "place-path",
+        "tile": {
+          "x": 24,
+          "y": 29
+        },
+        "height": 32,
+        "queueFor": null
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:435",
+        "cost": 12,
+        "id": 370
+      }
+    },
+    {
+      "index": 48,
+      "command": {
+        "type": "place-path",
+        "tile": {
+          "x": 25,
+          "y": 29
+        },
+        "height": 32,
+        "queueFor": null
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:436",
+        "cost": 12,
+        "id": 371
+      }
+    },
+    {
+      "index": 49,
+      "command": {
+        "type": "place-path",
+        "tile": {
+          "x": 26,
+          "y": 29
+        },
+        "height": 32,
+        "queueFor": null
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:437",
+        "cost": 12,
+        "id": 372
+      }
+    },
+    {
+      "index": 50,
+      "command": {
+        "type": "place-path",
+        "tile": {
+          "x": 27,
+          "y": 29
+        },
+        "height": 32,
+        "queueFor": null
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:438",
+        "cost": 12,
+        "id": 373
+      }
+    },
+    {
+      "index": 51,
+      "command": {
+        "type": "place-path",
+        "tile": {
+          "x": 27,
+          "y": 30
+        },
+        "height": 32,
+        "queueFor": null
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:439",
+        "cost": 12,
+        "id": 374
+      }
+    },
+    {
+      "index": 52,
+      "command": {
+        "type": "place-path",
+        "tile": {
+          "x": 27,
+          "y": 31
+        },
+        "height": 32,
+        "queueFor": null
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:440",
+        "cost": 12,
+        "id": 375
+      }
+    },
+    {
+      "index": 53,
+      "command": {
+        "type": "place-path",
+        "tile": {
+          "x": 27,
+          "y": 32
+        },
+        "height": 32,
+        "queueFor": null
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:441",
+        "cost": 12,
+        "id": 376
+      }
+    },
+    {
+      "index": 54,
+      "command": {
+        "type": "place-path",
+        "tile": {
+          "x": 27,
+          "y": 33
+        },
+        "height": 32,
+        "queueFor": null
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:442",
+        "cost": 12,
+        "id": 377
+      }
+    },
+    {
+      "index": 55,
+      "command": {
+        "type": "place-path",
+        "tile": {
+          "x": 27,
+          "y": 34
+        },
+        "height": 32,
+        "queueFor": null
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:443",
+        "cost": 12,
+        "id": 378
+      }
+    },
+    {
+      "index": 56,
+      "command": {
+        "type": "place-path",
+        "tile": {
+          "x": 27,
+          "y": 35
+        },
+        "height": 32,
+        "queueFor": null
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:444",
+        "cost": 12,
+        "id": 379
+      }
+    },
+    {
+      "index": 57,
+      "command": {
+        "type": "place-path",
+        "tile": {
+          "x": 27,
+          "y": 36
+        },
+        "height": 32,
+        "queueFor": null
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:445",
+        "cost": 12,
+        "id": 380
+      }
+    },
+    {
+      "index": 58,
+      "command": {
+        "type": "place-path",
+        "tile": {
+          "x": 27,
+          "y": 37
+        },
+        "height": 32,
+        "queueFor": null
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:446",
+        "cost": 12,
+        "id": 381
+      }
+    },
+    {
+      "index": 59,
+      "command": {
+        "type": "place-path",
+        "tile": {
+          "x": 27,
+          "y": 38
+        },
+        "height": 32,
+        "queueFor": null
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:447",
+        "cost": 12,
+        "id": 382
+      }
+    },
+    {
+      "index": 60,
+      "command": {
+        "type": "place-path",
+        "tile": {
+          "x": 27,
+          "y": 39
+        },
+        "height": 32,
+        "queueFor": null
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:448",
+        "cost": 12,
+        "id": 383
+      }
+    },
+    {
+      "index": 61,
+      "command": {
+        "type": "place-path",
+        "tile": {
+          "x": 27,
+          "y": 40
+        },
+        "height": 32,
+        "queueFor": null
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:449",
+        "cost": 12,
+        "id": 384
+      }
+    },
+    {
+      "index": 62,
+      "command": {
+        "type": "place-path",
+        "tile": {
+          "x": 27,
+          "y": 41
+        },
+        "height": 32,
+        "queueFor": null
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:450",
+        "cost": 12,
+        "id": 385
+      }
+    },
+    {
+      "index": 63,
+      "command": {
+        "type": "place-path",
+        "tile": {
+          "x": 27,
+          "y": 42
+        },
+        "height": 32,
+        "queueFor": null
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:451",
+        "cost": 12,
+        "id": 386
+      }
+    },
+    {
+      "index": 64,
+      "command": {
+        "type": "place-path",
+        "tile": {
+          "x": 27,
+          "y": 43
+        },
+        "height": 32,
+        "queueFor": null
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:452",
+        "cost": 12,
+        "id": 387
+      }
+    },
+    {
+      "index": 65,
+      "command": {
+        "type": "place-path",
+        "tile": {
+          "x": 28,
+          "y": 43
+        },
+        "height": 32,
+        "queueFor": null
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:453",
+        "cost": 12,
+        "id": 388
+      }
+    },
+    {
+      "index": 66,
+      "command": {
+        "type": "place-path",
+        "tile": {
+          "x": 29,
+          "y": 43
+        },
+        "height": 32,
+        "queueFor": null
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:454",
+        "cost": 12,
+        "id": 389
+      }
+    },
+    {
+      "index": 67,
+      "command": {
+        "type": "place-path",
+        "tile": {
+          "x": 30,
+          "y": 43
+        },
+        "height": 32,
+        "queueFor": null
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:455",
+        "cost": 12,
+        "id": 390
+      }
+    },
+    {
+      "index": 68,
+      "command": {
+        "type": "place-path",
+        "tile": {
+          "x": 31,
+          "y": 43
+        },
+        "height": 32,
+        "queueFor": null
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:456",
+        "cost": 12,
+        "id": 391
+      }
+    },
+    {
+      "index": 69,
+      "command": {
+        "type": "place-path",
+        "tile": {
+          "x": 31,
+          "y": 40
+        },
+        "height": 32,
+        "queueFor": null
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:457",
+        "cost": 12,
+        "id": 392
+      }
+    },
+    {
+      "index": 70,
+      "command": {
+        "type": "place-path",
+        "tile": {
+          "x": 31,
+          "y": 41
+        },
+        "height": 32,
+        "queueFor": null
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:458",
+        "cost": 12,
+        "id": 393
+      }
+    },
+    {
+      "index": 71,
+      "command": {
+        "type": "place-path",
+        "tile": {
+          "x": 31,
+          "y": 42
+        },
+        "height": 32,
+        "queueFor": null
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:459",
+        "cost": 12,
+        "id": 394
+      }
+    },
+    {
+      "index": 72,
+      "command": {
+        "type": "place-path",
+        "tile": {
+          "x": 28,
+          "y": 40
+        },
+        "height": 32,
+        "queueFor": 8
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:460",
+        "cost": 12,
+        "id": 395
+      }
+    },
+    {
+      "index": 73,
+      "command": {
+        "type": "place-path",
+        "tile": {
+          "x": 29,
+          "y": 40
+        },
+        "height": 32,
+        "queueFor": 8
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:461",
+        "cost": 12,
+        "id": 396
+      }
+    },
+    {
+      "index": 74,
+      "command": {
+        "type": "place-path",
+        "tile": {
+          "x": 30,
+          "y": 40
+        },
+        "height": 32,
+        "queueFor": 8
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:462",
+        "cost": 12,
+        "id": 397
+      }
+    },
+    {
+      "index": 75,
+      "command": {
+        "type": "set-ride-status",
+        "ride": 8,
+        "status": "testing"
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:463",
+        "cost": 0
+      }
+    },
+    {
+      "index": 76,
+      "command": {
+        "type": "set-paused",
+        "paused": false
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:464",
+        "cost": 0
+      }
+    },
+    {
+      "index": 77,
+      "advanced": 2336
+    },
+    {
+      "index": 78,
+      "command": {
+        "type": "set-ride-status",
+        "ride": 8,
+        "status": "open"
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:466",
+        "cost": 0
+      }
+    },
+    {
+      "index": 79,
+      "command": {
+        "type": "set-park-open",
+        "open": true
+      },
+      "receipt": {
+        "revision": "5325d54aac22694dd2628649b692cdf3:0:467",
+        "cost": 0
+      }
+    },
+    {
+      "index": 80,
+      "advanced": 992
+    }
+  ],
+  "qualificationObservations": [
+    {
+      "tick": 7159,
+      "boat": {
+        "id": 47,
+        "ride": 8,
+        "seats": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "phase": "loading",
+        "position": 6100,
+        "travelled": 107776,
+        "speed": 0,
+        "wait": 0,
+        "laps": 1,
+        "docking": false,
+        "mode": null,
+        "stats": {
+          "ticks": 2217,
+          "distance": 107776,
+          "maxSpeed": 231
+        },
+        "measured": {
+          "ticks": 2217,
+          "distance": 107776,
+          "maxSpeed": 231,
+          "courseKey": "[8,[960,1216,32,0,0,0],[[334,\"station\",[960,1216,32,0,0,0]],[335,\"station\",[992,1216,32,0,0,0]],[336,\"lift-start\",[1024,1216,32,0,0,0]],[337,\"lift\",[1056,1216,40,0,1,0]],[338,\"lift-end\",[1088,1216,56,0,1,0]],[339,\"left\",[1120,1216,64,0,0,0]],[340,\"channel\",[1184,1152,64,3,0,0]],[341,\"channel\",[1184,1120,64,3,0,0]],[342,\"left\",[1184,1088,64,3,0,0]],[343,\"drop-start\",[1120,1024,64,2,0,0]],[344,\"drop\",[1088,1024,56,2,-1,0]],[345,\"drop-end\",[1056,1024,40,2,-1,0]],[346,\"splash\",[1024,1024,32,2,0,0]],[347,\"splash\",[992,1024,32,2,0,0]],[348,\"left\",[960,1024,32,2,0,0]],[349,\"channel\",[896,1088,32,1,0,0]],[350,\"channel\",[896,1120,32,1,0,0]],[351,\"left\",[896,1152,32,1,0,0]]]]"
+        }
+      },
+      "feedback": "Park updated."
+    }
+  ],
+  "qualificationAfterDelay": {
+    "tick": 11239,
+    "boat": {
+      "id": 47,
+      "ride": 8,
+      "seats": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "phase": "loading",
+      "position": 6100,
+      "travelled": 107776,
+      "speed": 0,
+      "wait": 0,
+      "laps": 1,
+      "docking": false,
+      "mode": null,
+      "stats": {
+        "ticks": 2217,
+        "distance": 107776,
+        "maxSpeed": 231
+      },
+      "measured": {
+        "ticks": 2217,
+        "distance": 107776,
+        "maxSpeed": 231,
+        "courseKey": "[8,[960,1216,32,0,0,0],[[334,\"station\",[960,1216,32,0,0,0]],[335,\"station\",[992,1216,32,0,0,0]],[336,\"lift-start\",[1024,1216,32,0,0,0]],[337,\"lift\",[1056,1216,40,0,1,0]],[338,\"lift-end\",[1088,1216,56,0,1,0]],[339,\"left\",[1120,1216,64,0,0,0]],[340,\"channel\",[1184,1152,64,3,0,0]],[341,\"channel\",[1184,1120,64,3,0,0]],[342,\"left\",[1184,1088,64,3,0,0]],[343,\"drop-start\",[1120,1024,64,2,0,0]],[344,\"drop\",[1088,1024,56,2,-1,0]],[345,\"drop-end\",[1056,1024,40,2,-1,0]],[346,\"splash\",[1024,1024,32,2,0,0]],[347,\"splash\",[992,1024,32,2,0,0]],[348,\"left\",[960,1024,32,2,0,0]],[349,\"channel\",[896,1088,32,1,0,0]],[350,\"channel\",[896,1120,32,1,0,0]],[351,\"left\",[896,1152,32,1,0,0]]]]"
+      }
+    }
+  },
+  "paid": {
+    "tick": 12911,
+    "boat": {
+      "id": 47,
+      "ride": 8,
+      "seats": [
+        24,
+        23,
+        22,
+        21
+      ],
+      "phase": "running",
+      "position": 27716,
+      "travelled": 21616,
+      "speed": 50,
+      "wait": 0,
+      "laps": 1,
+      "docking": false,
+      "mode": "paid",
+      "stats": {
+        "ticks": 692,
+        "distance": 21616,
+        "maxSpeed": 50
+      },
+      "measured": {
+        "ticks": 2217,
+        "distance": 107776,
+        "maxSpeed": 231,
+        "courseKey": "[8,[960,1216,32,0,0,0],[[334,\"station\",[960,1216,32,0,0,0]],[335,\"station\",[992,1216,32,0,0,0]],[336,\"lift-start\",[1024,1216,32,0,0,0]],[337,\"lift\",[1056,1216,40,0,1,0]],[338,\"lift-end\",[1088,1216,56,0,1,0]],[339,\"left\",[1120,1216,64,0,0,0]],[340,\"channel\",[1184,1152,64,3,0,0]],[341,\"channel\",[1184,1120,64,3,0,0]],[342,\"left\",[1184,1088,64,3,0,0]],[343,\"drop-start\",[1120,1024,64,2,0,0]],[344,\"drop\",[1088,1024,56,2,-1,0]],[345,\"drop-end\",[1056,1024,40,2,-1,0]],[346,\"splash\",[1024,1024,32,2,0,0]],[347,\"splash\",[992,1024,32,2,0,0]],[348,\"left\",[960,1024,32,2,0,0]],[349,\"channel\",[896,1088,32,1,0,0]],[350,\"channel\",[896,1120,32,1,0,0]],[351,\"left\",[896,1152,32,1,0,0]]]]"
+      }
+    },
+    "ride": {
+      "id": 8,
+      "instanceId": 9,
+      "content": {
+        "familyId": "independent.log-flume",
+        "variantId": "independent.four-seat-log",
+        "modeId": "independent.channel-circuit"
+      },
+      "name": "Southeast Timber Splash",
+      "anchor": {
+        "x": 960,
+        "y": 1216,
+        "z": 32,
+        "direction": 0,
+        "pitch": 0,
+        "bank": 0
+      },
+      "track": [
+        334,
+        335,
+        336,
+        337,
+        338,
+        339,
+        340,
+        341,
+        342,
+        343,
+        344,
+        345,
+        346,
+        347,
+        348,
+        349,
+        350,
+        351
+      ],
+      "status": "open",
+      "price": 20,
+      "income": 80,
+      "broken": false,
+      "lastInspection": 4800,
+      "queue": [
+        20,
+        19,
+        46,
+        45,
+        44,
+        39
+      ]
+    },
+    "guests": [
+      {
+        "id": 24,
+        "navigationRide": null,
+        "amenity": null,
+        "restProgress": 0,
+        "wrapper": false,
+        "wrapperTick": 0,
+        "facility": null,
+        "serviceProgress": 0,
+        "bladder": 392,
+        "point": {
+          "x": 30,
+          "y": 40,
+          "z": 32
+        },
+        "phase": "riding",
+        "goal": null,
+        "next": null,
+        "walkProgress": 0,
+        "destination": null,
+        "entrance": 352,
+        "exit": 353,
+        "queueRide": null,
+        "seat": {
+          "ride": 8,
+          "slot": 0
+        },
+        "initialCash": 295,
+        "cash": 235,
+        "spent": 60,
+        "fareLimit": 100,
+        "forceTolerance": 6561,
+        "hunger": 112,
+        "thirst": 208,
+        "nausea": 78,
+        "happiness": 840,
+        "energy": 488,
+        "queuedAt": 12117,
+        "lastRide": 5,
+        "lastRideTick": 4812,
+        "ridesTaken": 1,
+        "thought": "none"
+      },
+      {
+        "id": 23,
+        "navigationRide": null,
+        "amenity": null,
+        "restProgress": 0,
+        "wrapper": false,
+        "wrapperTick": 0,
+        "facility": null,
+        "serviceProgress": 0,
+        "bladder": 392,
+        "point": {
+          "x": 30,
+          "y": 40,
+          "z": 32
+        },
+        "phase": "riding",
+        "goal": null,
+        "next": null,
+        "walkProgress": 0,
+        "destination": null,
+        "entrance": 352,
+        "exit": 353,
+        "queueRide": null,
+        "seat": {
+          "ride": 8,
+          "slot": 1
+        },
+        "initialCash": 287,
+        "cash": 227,
+        "spent": 60,
+        "fareLimit": 74,
+        "forceTolerance": 4948,
+        "hunger": 112,
+        "thirst": 208,
+        "nausea": 78,
+        "happiness": 840,
+        "energy": 488,
+        "queuedAt": 12118,
+        "lastRide": 5,
+        "lastRideTick": 4812,
+        "ridesTaken": 1,
+        "thought": "none"
+      },
+      {
+        "id": 22,
+        "navigationRide": null,
+        "amenity": null,
+        "restProgress": 0,
+        "wrapper": false,
+        "wrapperTick": 0,
+        "facility": null,
+        "serviceProgress": 0,
+        "bladder": 392,
+        "point": {
+          "x": 30,
+          "y": 40,
+          "z": 32
+        },
+        "phase": "riding",
+        "goal": null,
+        "next": null,
+        "walkProgress": 0,
+        "destination": null,
+        "entrance": 352,
+        "exit": 353,
+        "queueRide": null,
+        "seat": {
+          "ride": 8,
+          "slot": 2
+        },
+        "initialCash": 224,
+        "cash": 164,
+        "spent": 60,
+        "fareLimit": 66,
+        "forceTolerance": 2731,
+        "hunger": 112,
+        "thirst": 208,
+        "nausea": 78,
+        "happiness": 840,
+        "energy": 488,
+        "queuedAt": 12119,
+        "lastRide": 5,
+        "lastRideTick": 4812,
+        "ridesTaken": 1,
+        "thought": "none"
+      },
+      {
+        "id": 21,
+        "navigationRide": null,
+        "amenity": null,
+        "restProgress": 0,
+        "wrapper": false,
+        "wrapperTick": 0,
+        "facility": null,
+        "serviceProgress": 0,
+        "bladder": 392,
+        "point": {
+          "x": 30,
+          "y": 40,
+          "z": 32
+        },
+        "phase": "riding",
+        "goal": null,
+        "next": null,
+        "walkProgress": 0,
+        "destination": null,
+        "entrance": 352,
+        "exit": 353,
+        "queueRide": null,
+        "seat": {
+          "ride": 8,
+          "slot": 3
+        },
+        "initialCash": 183,
+        "cash": 123,
+        "spent": 60,
+        "fareLimit": 35,
+        "forceTolerance": 5021,
+        "hunger": 112,
+        "thirst": 208,
+        "nausea": 78,
+        "happiness": 840,
+        "energy": 488,
+        "queuedAt": 12120,
+        "lastRide": 5,
+        "lastRideTick": 4812,
+        "ridesTaken": 1,
+        "thought": "none"
+      }
+    ]
+  },
+  "publicBoat": {
+    "id": 47,
+    "ride": 8,
+    "instanceId": 9,
+    "phase": "running",
+    "mode": "paid",
+    "position": {
+      "x": 148.0941644403901,
+      "y": 151.18277529644928,
+      "z": 8.6
+    },
+    "direction": {
+      "x": 0.6478469120561597,
+      "y": -0.7617705550487617,
+      "z": 0
+    },
+    "up": {
+      "x": 0,
+      "y": 0,
+      "z": 1
+    },
+    "seatIds": [
+      24,
+      23,
+      22,
+      21
+    ],
+    "seats": [
+      {
+        "slot": 0,
+        "guest": 24,
+        "position": {
+          "x": 148.77440369804907,
+          "y": 150.3829162136481,
+          "z": 9.2
+        },
+        "direction": {
+          "x": 0.6478469120561597,
+          "y": -0.7617705550487617,
+          "z": 0
+        },
+        "up": {
+          "x": 0,
+          "y": 0,
+          "z": 1
+        }
+      },
+      {
+        "slot": 1,
+        "guest": 23,
+        "position": {
+          "x": 148.32091085960974,
+          "y": 150.91615560218222,
+          "z": 9.2
+        },
+        "direction": {
+          "x": 0.6478469120561597,
+          "y": -0.7617705550487617,
+          "z": 0
+        },
+        "up": {
+          "x": 0,
+          "y": 0,
+          "z": 1
+        }
+      },
+      {
+        "slot": 2,
+        "guest": 22,
+        "position": {
+          "x": 147.86741802117047,
+          "y": 151.44939499071637,
+          "z": 9.2
+        },
+        "direction": {
+          "x": 0.6478469120561597,
+          "y": -0.7617705550487617,
+          "z": 0
+        },
+        "up": {
+          "x": 0,
+          "y": 0,
+          "z": 1
+        }
+      },
+      {
+        "slot": 3,
+        "guest": 21,
+        "position": {
+          "x": 147.41392518273113,
+          "y": 151.9826343792505,
+          "z": 9.2
+        },
+        "direction": {
+          "x": 0.6478469120561597,
+          "y": -0.7617705550487617,
+          "z": 0
+        },
+        "up": {
+          "x": 0,
+          "y": 0,
+          "z": 1
+        }
+      }
+    ]
+  },
+  "renderStatus": {
+    "records": 1,
+    "realRiders": 4,
+    "maxAnchorError": 5.3312040165638816e-08,
+    "disposed": false
+  },
+  "actualRenderedBodyErrorMetres": 0,
+  "screenshot": {
+    "file": "actual-four-paid-Flume.png",
+    "sha256": "a5c689895b7ece658d1ab2cface82d4cc98fa0ffc19549381ebdbf3ea9e61f32"
+  },
+  "passed": true,
+  "ownedProcessesTerminal": [
+    -15,
+    0
+  ]
+}

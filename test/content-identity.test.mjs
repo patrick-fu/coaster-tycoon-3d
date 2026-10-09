@@ -44,7 +44,7 @@ test('instance identities survive save and distinguish a replacement using the s
 
 test('invalid current identity, duplicate instance and unavailable content imports leave the live park and pending quote intact',()=>{
  const e=create();ride(e);apply(e,{type:'place-facility',name:'Food',kind:'food',tile:{x:5,y:5},height:32,direction:0});apply(e,{type:'set-paused',paused:true});const before=e.exportSave(),command={type:'place-path',tile:{x:6,y:5},height:16,queueFor:null},q=e.quote(command);
- for(const mutate of [s=>s.contentVersion=4,s=>s.nextInstance=2,s=>s.rides[0].instanceId=0,s=>s.facilities[0].instanceId=s.rides[0].instanceId,s=>delete s.rides[0].content,s=>s.rides[0].content=wood,s=>s.rides[0].content.modeId='unknown',s=>s.facilities[0].content=legacyFacilityContent('drink'),s=>s.rides[0].content.extra=true]){const s=e.snapshot();mutate(s);const r=e.restoreSave(JSON.stringify(s));assert.equal(r.error.code,'INVALID_SAVE');assert.equal(e.exportSave(),before);assert.equal(e.revision,q.value.revision);}
+ for(const mutate of [s=>s.contentVersion=5,s=>s.nextInstance=2,s=>s.rides[0].instanceId=0,s=>s.facilities[0].instanceId=s.rides[0].instanceId,s=>delete s.rides[0].content,s=>s.rides[0].content=wood,s=>s.rides[0].content.modeId='unknown',s=>s.facilities[0].content=legacyFacilityContent('drink'),s=>s.rides[0].content.extra=true]){const s=e.snapshot();mutate(s);const r=e.restoreSave(JSON.stringify(s));assert.equal(r.error.code,'INVALID_SAVE');assert.equal(e.exportSave(),before);assert.equal(e.revision,q.value.revision);}
  assert(e.execute(command,q.value.revision).ok);assert.equal(e.advance(40).value,0);
 });
 
@@ -60,11 +60,11 @@ test('caller changes to content directories, identities and presentation capabil
 
 test('versioned worker requests reject missing or incompatible protocols with correlated errors before mutation',()=>{
  const e=create(),handle=createHost(e),before=e.exportSave(),request={type:'execute',payload:{command:{type:'set-loan',amount:100},revision:e.revision}};
- for(const envelope of [{id:7,request},{id:7,protocolVersion:1,request},{id:7,protocolVersion:2,request}]){const response=handle(envelope);assert(response.ok);assert.equal(response.value.id,7);assert.equal(response.value.protocolVersion,3);assert.equal(response.value.result.error.code,'INVALID_COMMAND');assert.equal(e.exportSave(),before);}
- const response=handle({id:8,protocolVersion:3,request:{type:'catalogue',payload:null}});assert(response.value.result.ok);assert.equal(response.value.result.value.contentVersion,3);assert.equal(response.value.result.value.variants.length,161);
+ for(const envelope of [{id:7,request},{id:7,protocolVersion:1,request},{id:7,protocolVersion:2,request},{id:7,protocolVersion:3,request}]){const response=handle(envelope);assert(response.ok);assert.equal(response.value.id,7);assert.equal(response.value.protocolVersion,4);assert.equal(response.value.result.error.code,'INVALID_COMMAND');assert.equal(e.exportSave(),before);}
+ const response=handle({id:8,protocolVersion:4,request:{type:'catalogue',payload:null}});assert(response.value.result.ok);assert.equal(response.value.result.value.contentVersion,4);assert.equal(response.value.result.value.variants.length,162);
 });
 
 test('native station geometry and car seats retain their own units in the versioned presentation',()=>{
- const e=create(),id=ride(e);apply(e,{type:'append-track',ride:id,piece:'station'});const view=e.view(request).value;assert.equal(view.protocolVersion,3);assert.equal(view.coordinates.nativeUnitsPerTile,32);assert.equal(view.coordinates.nativeHeightStep,8);assert.equal(view.coordinates.nativeLandStep,16);assert.equal(view.coordinates.evidence,'project-candidate');assert.equal(view.rides[0].tip.x,352);assert.equal(view.rides[0].tip.z,32);assert.equal(view.scenery.elements[0].origin.x,320);assert.equal(view.rides[0].content.variantId,'independent.steel-train');
+ const e=create(),id=ride(e);apply(e,{type:'append-track',ride:id,piece:'station'});const view=e.view(request).value;assert.equal(view.protocolVersion,4);assert.equal(view.coordinates.nativeUnitsPerTile,32);assert.equal(view.coordinates.nativeHeightStep,8);assert.equal(view.coordinates.nativeLandStep,16);assert.equal(view.coordinates.evidence,'project-candidate');assert.equal(view.rides[0].tip.x,352);assert.equal(view.rides[0].tip.z,32);assert.equal(view.scenery.elements[0].origin.x,320);assert.equal(view.rides[0].content.variantId,'independent.steel-train');
  const circuit=e.quote({type:'set-ride-status',ride:id,status:'testing'});assert.equal(circuit.error.code,'OPERATING_REQUIREMENTS');assert.equal(e.snapshot().trains.length,0);
 });

@@ -1,0 +1,360 @@
+{
+  "runPassed": false,
+  "failure": "{'code': -32000, 'message': 'No resource with given identifier found'}",
+  "chromeTerminal": 0,
+  "store": {
+    "originalRecordCount": 2,
+    "originalSnapshotSha256": "d57fbd5b9e9a6602326084897768dec432e9b8aa55c07567fd952a3a9fd1a7c5",
+    "allRecordsUnchangedOnFailure": true
+  },
+  "rootChecks": [
+    {
+      "name": "real New park and explicit 11/4/4 browser receiving profile; old factories unchanged",
+      "passed": true
+    },
+    {
+      "name": "real Water Rides cards and Choose; original reference disabled",
+      "passed": true
+    },
+    {
+      "name": "empty Test succeeds and retains same witness/lap/loading/wait0 after 4000 extra testing ticks; normal UI Open",
+      "passed": true
+    },
+    {
+      "name": "real legal construction and four ordered paid owner slots with actual 20-tenths fares and riding phases",
+      "passed": true
+    },
+    {
+      "name": "actual paid inspector and Scene Boat/four Rider clones match body/public frames and literal Hips",
+      "passed": true
+    },
+    {
+      "name": "actual paid owner button selects actual riding guest and wallet",
+      "passed": true
+    },
+    {
+      "name": "occupied paid authority save/restore exact",
+      "passed": true
+    },
+    {
+      "name": "actual UI Close retains paid participants and position",
+      "passed": true
+    },
+    {
+      "name": "all original public-origin parks records unchanged before cleanup",
+      "passed": true
+    }
+  ],
+  "newParkTick": 4823,
+  "testAfterDelay": {
+    "tick": 11316,
+    "boat": {
+      "id": 47,
+      "ride": 8,
+      "seats": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "phase": "loading",
+      "position": 6100,
+      "travelled": 107776,
+      "speed": 0,
+      "wait": 0,
+      "laps": 1,
+      "docking": false,
+      "mode": null,
+      "stats": {
+        "ticks": 2217,
+        "distance": 107776,
+        "maxSpeed": 231
+      },
+      "measured": {
+        "ticks": 2217,
+        "distance": 107776,
+        "maxSpeed": 231,
+        "courseKey": "[8,[960,1216,32,0,0,0],[[334,\"station\",[960,1216,32,0,0,0]],[335,\"station\",[992,1216,32,0,0,0]],[336,\"lift-start\",[1024,1216,32,0,0,0]],[337,\"lift\",[1056,1216,40,0,1,0]],[338,\"lift-end\",[1088,1216,56,0,1,0]],[339,\"left\",[1120,1216,64,0,0,0]],[340,\"channel\",[1184,1152,64,3,0,0]],[341,\"channel\",[1184,1120,64,3,0,0]],[342,\"left\",[1184,1088,64,3,0,0]],[343,\"drop-start\",[1120,1024,64,2,0,0]],[344,\"drop\",[1088,1024,56,2,-1,0]],[345,\"drop-end\",[1056,1024,40,2,-1,0]],[346,\"splash\",[1024,1024,32,2,0,0]],[347,\"splash\",[992,1024,32,2,0,0]],[348,\"left\",[960,1024,32,2,0,0]],[349,\"channel\",[896,1088,32,1,0,0]],[350,\"channel\",[896,1120,32,1,0,0]],[351,\"left\",[896,1152,32,1,0,0]]]]"
+      }
+    }
+  },
+  "firstPaid": {
+    "tick": 12341,
+    "boat": {
+      "id": 47,
+      "ride": 8,
+      "seats": [
+        46,
+        45,
+        44,
+        43
+      ],
+      "phase": "running",
+      "position": 6900,
+      "travelled": 800,
+      "speed": 50,
+      "wait": 0,
+      "laps": 1,
+      "docking": false,
+      "mode": "paid",
+      "stats": {
+        "ticks": 16,
+        "distance": 800,
+        "maxSpeed": 50
+      },
+      "measured": {
+        "ticks": 2217,
+        "distance": 107776,
+        "maxSpeed": 231,
+        "courseKey": "[8,[960,1216,32,0,0,0],[[334,\"station\",[960,1216,32,0,0,0]],[335,\"station\",[992,1216,32,0,0,0]],[336,\"lift-start\",[1024,1216,32,0,0,0]],[337,\"lift\",[1056,1216,40,0,1,0]],[338,\"lift-end\",[1088,1216,56,0,1,0]],[339,\"left\",[1120,1216,64,0,0,0]],[340,\"channel\",[1184,1152,64,3,0,0]],[341,\"channel\",[1184,1120,64,3,0,0]],[342,\"left\",[1184,1088,64,3,0,0]],[343,\"drop-start\",[1120,1024,64,2,0,0]],[344,\"drop\",[1088,1024,56,2,-1,0]],[345,\"drop-end\",[1056,1024,40,2,-1,0]],[346,\"splash\",[1024,1024,32,2,0,0]],[347,\"splash\",[992,1024,32,2,0,0]],[348,\"left\",[960,1024,32,2,0,0]],[349,\"channel\",[896,1088,32,1,0,0]],[350,\"channel\",[896,1120,32,1,0,0]],[351,\"left\",[896,1152,32,1,0,0]]]]"
+      }
+    },
+    "ride": {
+      "id": 8,
+      "instanceId": 9,
+      "content": {
+        "familyId": "independent.log-flume",
+        "variantId": "independent.four-seat-log",
+        "modeId": "independent.channel-circuit"
+      },
+      "name": "Southeast Timber Splash",
+      "anchor": {
+        "x": 960,
+        "y": 1216,
+        "z": 32,
+        "direction": 0,
+        "pitch": 0,
+        "bank": 0
+      },
+      "track": [
+        334,
+        335,
+        336,
+        337,
+        338,
+        339,
+        340,
+        341,
+        342,
+        343,
+        344,
+        345,
+        346,
+        347,
+        348,
+        349,
+        350,
+        351
+      ],
+      "status": "open",
+      "price": 20,
+      "income": 80,
+      "broken": false,
+      "lastInspection": 4823,
+      "queue": [
+        42,
+        41,
+        21,
+        48
+      ]
+    },
+    "faresTenths": 80,
+    "fareEachTenths": 20
+  },
+  "paid": {
+    "tick": 12947,
+    "owners": [
+      46,
+      45,
+      44,
+      43
+    ],
+    "rideIncome": 80
+  },
+  "render": {
+    "tick": 12947,
+    "boatStatus": {
+      "records": 1,
+      "realRiders": 4,
+      "maxAnchorError": 5.3312035795379034e-08,
+      "disposed": false
+    },
+    "assetStatus": {
+      "ready": true,
+      "error": null,
+      "disposed": false,
+      "geometries": 23,
+      "materials": 46,
+      "textures": 26,
+      "bitmaps": 11
+    },
+    "bodyName": "FlumeBoat_47",
+    "bodySelection": {
+      "kind": "ride",
+      "id": 8
+    },
+    "bodyWorld": [
+      145.31868031669543,
+      8.6,
+      153.27917309559118
+    ],
+    "bodyErrorMetres": 0,
+    "seats": [
+      {
+        "slot": 0,
+        "guest": 46,
+        "anchorName": "Seat_00",
+        "riderName": "FlumeGuest_46",
+        "riderSelection": {
+          "kind": "guest",
+          "id": 46
+        },
+        "hipName": "Hip",
+        "hipWorld": {
+          "x": 146.27407174210452,
+          "y": 9.200000023841858,
+          "z": 152.84359632380577
+        },
+        "errorMetres": 5.331203579537903e-08,
+        "riderPosition": [
+          0,
+          0,
+          0
+        ],
+        "riderScale": [
+          1,
+          1,
+          1
+        ],
+        "riderQuaternion": [
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "slot": 1,
+        "guest": 45,
+        "anchorName": "Seat_01",
+        "riderName": "FlumeGuest_45",
+        "riderSelection": {
+          "kind": "guest",
+          "id": 45
+        },
+        "hipName": "Hip",
+        "hipWorld": {
+          "x": 145.63714413420414,
+          "y": 9.200000023841858,
+          "z": 153.13398083420836
+        },
+        "errorMetres": 2.457563251171051e-08,
+        "riderPosition": [
+          0,
+          0,
+          0
+        ],
+        "riderScale": [
+          1,
+          1,
+          1
+        ],
+        "riderQuaternion": [
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "slot": 2,
+        "guest": 44,
+        "anchorName": "Seat_02",
+        "riderName": "FlumeGuest_44",
+        "riderSelection": {
+          "kind": "guest",
+          "id": 44
+        },
+        "hipName": "Hip",
+        "hipWorld": {
+          "x": 145.00021649918673,
+          "y": 9.200000023841858,
+          "z": 153.424365356974
+        },
+        "errorMetres": 2.4575623379948514e-08,
+        "riderPosition": [
+          0,
+          0,
+          0
+        ],
+        "riderScale": [
+          1,
+          1,
+          1
+        ],
+        "riderQuaternion": [
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "slot": 3,
+        "guest": 43,
+        "anchorName": "Seat_03",
+        "riderName": "FlumeGuest_43",
+        "riderSelection": {
+          "kind": "guest",
+          "id": 43
+        },
+        "hipName": "Hip",
+        "hipWorld": {
+          "x": 144.36328889128635,
+          "y": 9.200000023841858,
+          "z": 153.71474986737658
+        },
+        "errorMetres": 5.331200211917845e-08,
+        "riderPosition": [
+          0,
+          0,
+          0
+        ],
+        "riderScale": [
+          1,
+          1,
+          1
+        ],
+        "riderQuaternion": [
+          0,
+          0,
+          0,
+          1
+        ]
+      }
+    ],
+    "webgl": {
+      "error": 0,
+      "contextLost": false,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "vendor": "Google Inc. (Google)"
+    }
+  },
+  "screenshot": {
+    "file": "root/actual-four-paid-Flume.png",
+    "sha256": "fe27dc0245c3ae456280ea08a591b23dfd15cb9cbf231b5b9cb600ccfc8546a6"
+  },
+  "errorCounts": {
+    "exceptions": 0,
+    "consoleErrors": 0,
+    "failedRequests": 0
+  },
+  "sourceSha": "89030f9062bf4cff6245722dd8d3846d06d3c83c",
+  "readinessSha256": "e285dca791ed4f40248bcbbed6df660c9f8f3365763426c2b2ccd45f8cebc27c",
+  "driverSha256": "7d5b1268b7011fd11824578568581d3614824f9b5feeace38665a26eb1ead096",
+  "actionsSha256": "af6ded381f118253406565f797561c30889dfc41eb35798366881882a0a9e2c3",
+  "originalRun": "public-r4",
+  "originalRunExit": 1,
+  "rawEvidenceDirectory": "/Volumes/WD/code/workspaces/coaster-log-flume-publication/public-browser-sol/evidence/public-r4",
+  "scope": "Nine root gameplay groups qualify inside the retained overall source-capture failure. Pinned gameplay and residual actual script capture remain separate; no original/GPU/human/continuous/full-programme acceptance."
+}

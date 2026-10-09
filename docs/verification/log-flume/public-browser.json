@@ -1,0 +1,284 @@
+{
+  "scope": "Qualified finite public application groups; failed whole browser runs and host-root favicon error remain unchanged. This is a retained-evidence audit, not a new gameplay run or global browser-log pass.",
+  "checkedUtc": "2026-10-09T13:13:37.237048+00:00",
+  "sourceSha": "89030f9062bf4cff6245722dd8d3846d06d3c83c",
+  "applicationGroupsQualified": true,
+  "rootGameplayGroups": 9,
+  "pinnedGameplayGroups": 9,
+  "actualSourceFiles": 24,
+  "sources": [
+    {
+      "route": "root-source-probe",
+      "path": "index.html",
+      "sha256": "fd88b27beca574ed17a2fb04dfaa08194bb886c386b762667dc8da9a5151ad6a",
+      "method": "Network.getResponseBody",
+      "sessionId": "2383A7871F9C945349BDD0110BF425A3"
+    },
+    {
+      "route": "root-source-probe",
+      "path": "game.js",
+      "sha256": "cb19aa0db2f0b49a2b60fe1b7c82a5183c0d0f3036f1f3ba7b228c3a1c130b53",
+      "method": "Debugger.getScriptSource",
+      "sessionId": "2383A7871F9C945349BDD0110BF425A3"
+    },
+    {
+      "route": "root-source-probe",
+      "path": "simulation/browser-worker.js",
+      "sha256": "6736fcb62b9c0b4e9d6169c095c0e5cf50ea6f30dbf32c3b5c6dba38e0f2a97c",
+      "method": "Debugger.getScriptSource",
+      "sessionId": "7045E0AA2398CA0EDB23D28A21299206"
+    },
+    {
+      "route": "root-source-probe",
+      "path": "simulation/engine.js",
+      "sha256": "2b24637ba88a62d0a41666d1a57f5c55ab5677298c781a65067453dbb4edc8b6",
+      "method": "Debugger.getScriptSource",
+      "sessionId": "7045E0AA2398CA0EDB23D28A21299206"
+    },
+    {
+      "route": "root-source-probe",
+      "path": "simulation/flume-native.js",
+      "sha256": "735c2d793a1daf76844e1eeac6ea3342e37f84b1f49e5de6edc8e914073f02ae",
+      "method": "Debugger.getScriptSource",
+      "sessionId": "7045E0AA2398CA0EDB23D28A21299206"
+    },
+    {
+      "route": "root-source-probe",
+      "path": "simulation/protocol.js",
+      "sha256": "daeea6d9e3b31d9c63c03094bd56ee1256c89fd5af4fed25c1ed611483085933",
+      "method": "Debugger.getScriptSource",
+      "sessionId": "7045E0AA2398CA0EDB23D28A21299206"
+    },
+    {
+      "route": "root-source-probe",
+      "path": "content/registry.js",
+      "sha256": "084a597b70b91bd27b2d4cd58ffc717a7ad8c30e899e308da312600991fb807f",
+      "method": "Debugger.getScriptSource",
+      "sessionId": "7045E0AA2398CA0EDB23D28A21299206"
+    },
+    {
+      "route": "root-source-probe",
+      "path": "content/log-flume.js",
+      "sha256": "6f71b4fc57dd403647c725f0e018a0439ce226108dc5459d837cfc9d0e469aa1",
+      "method": "Debugger.getScriptSource",
+      "sessionId": "7045E0AA2398CA0EDB23D28A21299206"
+    },
+    {
+      "route": "root-source-probe",
+      "path": "content/mixed-park.js",
+      "sha256": "5c1ccc0fd7a8b0778ba81de453580ee25aebac14670cebbb0db24b87311b4875",
+      "method": "Debugger.getScriptSource",
+      "sessionId": "7045E0AA2398CA0EDB23D28A21299206"
+    },
+    {
+      "route": "root-source-probe",
+      "path": "content-browser.js",
+      "sha256": "e45ea2cf6c24685abaec5e63ddc0101928a698ff1d531e39c73aab6eca38471b",
+      "method": "Debugger.getScriptSource",
+      "sessionId": "2383A7871F9C945349BDD0110BF425A3"
+    },
+    {
+      "route": "root-source-probe",
+      "path": "art/flume-boats.js",
+      "sha256": "cc5840239a11dec4468376741c99eadaaddf7168d31c1e2fb9ecc36df1b28781",
+      "method": "Debugger.getScriptSource",
+      "sessionId": "2383A7871F9C945349BDD0110BF425A3"
+    },
+    {
+      "route": "root-source-probe",
+      "path": "art/flume-assets.js",
+      "sha256": "f45315ab423b590a61d3715a33f928d09db2b810046e48c3d91b0157892186bb",
+      "method": "Debugger.getScriptSource",
+      "sessionId": "2383A7871F9C945349BDD0110BF425A3"
+    },
+    {
+      "route": "pin",
+      "path": "index.html",
+      "sha256": "fd88b27beca574ed17a2fb04dfaa08194bb886c386b762667dc8da9a5151ad6a",
+      "method": "Network.getResponseBody",
+      "sessionId": "2383A7871F9C945349BDD0110BF425A3"
+    },
+    {
+      "route": "pin",
+      "path": "game.js",
+      "sha256": "cb19aa0db2f0b49a2b60fe1b7c82a5183c0d0f3036f1f3ba7b228c3a1c130b53",
+      "method": "Debugger.getScriptSource",
+      "sessionId": "2383A7871F9C945349BDD0110BF425A3"
+    },
+    {
+      "route": "pin",
+      "path": "simulation/browser-worker.js",
+      "sha256": "6736fcb62b9c0b4e9d6169c095c0e5cf50ea6f30dbf32c3b5c6dba38e0f2a97c",
+      "method": "Debugger.getScriptSource",
+      "sessionId": "8A3C63A5060449A8A2CE71068427BDBB"
+    },
+    {
+      "route": "pin",
+      "path": "simulation/engine.js",
+      "sha256": "2b24637ba88a62d0a41666d1a57f5c55ab5677298c781a65067453dbb4edc8b6",
+      "method": "Debugger.getScriptSource",
+      "sessionId": "8A3C63A5060449A8A2CE71068427BDBB"
+    },
+    {
+      "route": "pin",
+      "path": "simulation/flume-native.js",
+      "sha256": "735c2d793a1daf76844e1eeac6ea3342e37f84b1f49e5de6edc8e914073f02ae",
+      "method": "Debugger.getScriptSource",
+      "sessionId": "8A3C63A5060449A8A2CE71068427BDBB"
+    },
+    {
+      "route": "pin",
+      "path": "simulation/protocol.js",
+      "sha256": "daeea6d9e3b31d9c63c03094bd56ee1256c89fd5af4fed25c1ed611483085933",
+      "method": "Debugger.getScriptSource",
+      "sessionId": "8A3C63A5060449A8A2CE71068427BDBB"
+    },
+    {
+      "route": "pin",
+      "path": "content/registry.js",
+      "sha256": "084a597b70b91bd27b2d4cd58ffc717a7ad8c30e899e308da312600991fb807f",
+      "method": "Debugger.getScriptSource",
+      "sessionId": "8A3C63A5060449A8A2CE71068427BDBB"
+    },
+    {
+      "route": "pin",
+      "path": "content/log-flume.js",
+      "sha256": "6f71b4fc57dd403647c725f0e018a0439ce226108dc5459d837cfc9d0e469aa1",
+      "method": "Debugger.getScriptSource",
+      "sessionId": "8A3C63A5060449A8A2CE71068427BDBB"
+    },
+    {
+      "route": "pin",
+      "path": "content/mixed-park.js",
+      "sha256": "5c1ccc0fd7a8b0778ba81de453580ee25aebac14670cebbb0db24b87311b4875",
+      "method": "Debugger.getScriptSource",
+      "sessionId": "8A3C63A5060449A8A2CE71068427BDBB"
+    },
+    {
+      "route": "pin",
+      "path": "content-browser.js",
+      "sha256": "e45ea2cf6c24685abaec5e63ddc0101928a698ff1d531e39c73aab6eca38471b",
+      "method": "Debugger.getScriptSource",
+      "sessionId": "2383A7871F9C945349BDD0110BF425A3"
+    },
+    {
+      "route": "pin",
+      "path": "art/flume-boats.js",
+      "sha256": "cc5840239a11dec4468376741c99eadaaddf7168d31c1e2fb9ecc36df1b28781",
+      "method": "Debugger.getScriptSource",
+      "sessionId": "2383A7871F9C945349BDD0110BF425A3"
+    },
+    {
+      "route": "pin",
+      "path": "art/flume-assets.js",
+      "sha256": "f45315ab423b590a61d3715a33f928d09db2b810046e48c3d91b0157892186bb",
+      "method": "Debugger.getScriptSource",
+      "sessionId": "2383A7871F9C945349BDD0110BF425A3"
+    }
+  ],
+  "originalParkRecords": 2,
+  "rawWholeRunExits": {
+    "public-r4": 1,
+    "residual-r1": 1
+  },
+  "sourceProbeExit": 0,
+  "ownedChromeExits": [
+    0,
+    0
+  ],
+  "siteRootFavicon404": {
+    "log": {
+      "route": "root-source-probe",
+      "sessionId": "2383A7871F9C945349BDD0110BF425A3",
+      "entry": {
+        "source": "network",
+        "level": "error",
+        "text": "Failed to load resource: the server responded with a status of 404 ()",
+        "timestamp": 1791550483666.417,
+        "url": "https://patrick-fu.github.io/favicon.ico",
+        "networkRequestId": "440596.2"
+      }
+    },
+    "request": {
+      "route": "root-source-probe",
+      "message": {
+        "method": "Network.requestWillBeSent",
+        "params": {
+          "requestId": "440596.2",
+          "loaderId": "036A44E10DADDC786E078A337D6D2663",
+          "documentURL": "https://patrick-fu.github.io/coaster-tycoon-3d/build.json",
+          "request": {
+            "url": "https://patrick-fu.github.io/favicon.ico",
+            "method": "GET",
+            "headers": {
+              "sec-ch-ua-platform": "\"Linux\"",
+              "Referer": "https://patrick-fu.github.io/coaster-tycoon-3d/build.json",
+              "Accept-Language": "en-US,en;q=0.9",
+              "sec-ch-ua": "\"Chromium\";v=\"155\", \"Not(A:Brand\";v=\"24\"",
+              "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+              "sec-ch-ua-mobile": "?0"
+            },
+            "mixedContentType": "none",
+            "initialPriority": "High",
+            "referrerPolicy": "strict-origin-when-cross-origin",
+            "isSameSite": true
+          },
+          "timestamp": 47697.049602,
+          "wallTime": 1791550483.655959,
+          "initiator": {
+            "type": "other"
+          },
+          "redirectHasExtraInfo": false,
+          "type": "Other",
+          "frameId": "76E5C258E1CA532A288E699EBE0065BC",
+          "hasUserGesture": false
+        },
+        "sessionId": "2383A7871F9C945349BDD0110BF425A3"
+      }
+    },
+    "disposition": "Browser-generated neutral metadata navigation outside project distribution; retain as optional host-root icon limitation, with no ignored application error."
+  },
+  "unqualified": [
+    "original-game agreement",
+    "representative integrated GPU/park scale",
+    "human visual/play acceptance",
+    "continuous contact/traversal",
+    "full catalogue/management programme"
+  ],
+  "evidenceAuditExit": 0,
+  "rawEvidenceDirectory": "/Volumes/WD/code/workspaces/coaster-log-flume-publication/public-browser-sol/evidence",
+  "routes": [
+    {
+      "route": "root",
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/?showcase=classic",
+      "run": "public-r4",
+      "tick": 12947,
+      "owners": [
+        46,
+        45,
+        44,
+        43
+      ],
+      "incomeTenths": 80,
+      "image": "public-four-paid-riders.png",
+      "imageSha256": "fe27dc0245c3ae456280ea08a591b23dfd15cb9cbf231b5b9cb600ccfc8546a6"
+    },
+    {
+      "route": "pin",
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/log-flume-89030f9/?showcase=classic",
+      "run": "residual-r1",
+      "tick": 12910,
+      "owners": [
+        18,
+        17,
+        46,
+        45
+      ],
+      "incomeTenths": 80,
+      "bodyErrorMetres": 0,
+      "maxHipErrorMetres": 5.331201565507474e-08,
+      "image": "public-pinned-four-paid-riders.png",
+      "imageSha256": "03af46b955bc509f7aa4c6c01f21002a5ef70dd64d1c0d014747e673cd494b53"
+    }
+  ]
+}

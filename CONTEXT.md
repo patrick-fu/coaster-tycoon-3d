@@ -62,3 +62,15 @@ One attraction's participant group from admission and loading through its operat
 cycle and return to unloading. Its ordered occupants belong to the attraction
 throughout the cycle, even when operation pauses or its exit becomes unavailable.
 _Avoid_: Cosmetic animation loop, coaster train
+
+**Channel ride**:
+An attraction whose vehicle follows a constructed watercourse, with station,
+flow, lift and drop sections. The watercourse belongs to the attraction and
+does not make all park water navigable.
+_Avoid_: Coaster with decorative water, free-water boating
+
+**Boat**:
+A channel ride's moving vehicle, carrying its ordered boarding guests through
+the operating circuit and back to unloading. Its occupied seats remain owned
+by those guests when the attraction closes or pauses.
+_Avoid_: Coaster train, cosmetic vehicle, ride session

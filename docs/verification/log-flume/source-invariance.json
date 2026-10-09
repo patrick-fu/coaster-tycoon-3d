@@ -1,0 +1,6 @@
+{
+  "scope": "Actual build:web source dependencies only, after rejecting the first overbroad source list. All113 authored production inputs match the actual remote app. No rerun or expanded qualification is claimed.",
+  "sourceInputCount": 113,
+  "mismatches": [],
+  "passed": true
+}

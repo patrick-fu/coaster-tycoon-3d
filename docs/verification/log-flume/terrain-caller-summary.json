@@ -1,0 +1,2766 @@
+{
+  "status": "Finite caller diagnostic groups passed across immutable attempts; earlier attempt exits remain failed.",
+  "sourcePins": {
+    "inputs/current/flume-channel.js": "931974b2615e49f9a1ffe59b5514b5811e8c68ac10bf48eb6ecc4ba9cd4649e8",
+    "inputs/current/flume-terrain.js": "c541601fa7f37777d1a259c9e3c8103d7d3bba87ad24b4376b1dba7b6f7f7808",
+    "inputs/current/flume-support-box.js": "554a01c412ec368a02841eb525fba61f1541453467e25877d7d42081d33ab26d",
+    "inputs/current/runtime.js": "8b85e50ffed823678e3235639ae726ba7bee3e0c52c527855fce056b98df9e60",
+    "inputs/reference/flume-channel-r2.js": "0c3373ffd35068dff26ea16579b41b00549fa6e35c34068d5290cdb8c54e17a3",
+    "inputs/reference/park-scene.js": "91c706ba8fb2cd82411b66a9089c09f7d1bf8575fda4bfbaccbf99323515d52a",
+    "inputs/runtime-pins.json": "d4b10c706be5be60c087942cbddfb6ddb2a4a9613eafaa6507ff91713c5ea277",
+    "driver.mjs": "e300e174fc6886c07cb50bcf33c783da66bbd0d2628f2e969d8df08aec0ca072"
+  },
+  "frozenRuntime": {
+    "node": "v20.19.2",
+    "fixtureRoot": "/workspace/coaster-log-flume/fixture-qualification",
+    "compiled": {
+      "simulation/index.js": "346366ed60f6c42fcb47aa83210f541b512704500f290f203513ca17b0a809c4",
+      "simulation/engine.js": "c4746856289fb00195dac90305ae2865d5a5579c2c38b4e37c2dfc09c7c73902",
+      "simulation/types.js": "1a6231381895d5abcccbc927e582be7270c22e19c76be7c5c3e560d83ea97d91",
+      "simulation/validation.js": "10a2f21ddd134f16105bf4f0153d57a6e660d7938157e30c1958487498b66056",
+      "simulation/geometry.js": "3d81c54efaf4ab87867311eaf48b9741c14016908ae433e51502787a7e57da38",
+      "simulation/housekeeping.js": "37f6c3f0c0b89ea42b97b0250c20aa01bc4e2b3c3ae58bfd6b78869d613b2932",
+      "simulation/services.js": "37d856418bdd5286784ac47f9572fdfc25ad9616e9a15c4f58195c0e34e71cb2",
+      "simulation/patrol.js": "4a59eec5e274c541fecf413cb62cd27cabfe5fb13aaa6104d5543b8498b16e16",
+      "simulation/operation.js": "90a079ea7b4ed724d214a334b8cd006bcb07a40774b7f431051c554e9c620e69",
+      "content/registry.js": "084a597b70b91bd27b2d4cd58ffc717a7ad8c30e899e308da312600991fb807f",
+      "content/rct2-reference.js": "23ad185689097bbc9b21d87de63f4d62a4d2365fa019f983cf8b8ae85f7836ee",
+      "content/ride-profiles.js": "82762bf5de5b1fba937970a64fea5e889cc3dde1221805061a39daa6d032a33f",
+      "simulation/flume-profile.js": "e89e86ea002b94f7339ef7c5e4bcc73c33998abf0252c17ed2b430b2394f7f58",
+      "content/log-flume.js": "6f71b4fc57dd403647c725f0e018a0439ce226108dc5459d837cfc9d0e469aa1",
+      "simulation/wooden-placement.js": "66b9590399dfd6235cbf6c04401744df1611d7fa1b55a72c1daf6950393a586c",
+      "simulation/carousel.js": "c707db6b92deb1742b2c84f9cdb7c65a50fbdd9908387e64b29e53e0f3b29f6a",
+      "content/carousel.js": "29f71f912001cf341916541fbf678bf8fb1985d6c1979cf1e541e8e79318ceb9",
+      "simulation/flume-native.js": "0089a88d8dd3c78e1b3b8beaf21a80051611dcd9c7930f67272ad6b7f9ddc02c",
+      "simulation/flume-portal.js": "877ba9c562c874ee742a77ec67aa64cb68012885ce96f288e6d4f9b128e621c3",
+      "simulation/boat.js": "d4ca78dc773f712086b995b5bf870d48dd9a3feb35fb9765f8296b499fb80199",
+      "simulation/scenery.js": "af181426f98f7c6daab583055906264db929940ecb25a3fe50c1ca219d9ee520",
+      "simulation/motion.js": "4c3d5c27617302f607d0235a10eeda4cd4fafc9c81cb7859327fba0b407f34e6",
+      "simulation/people.js": "dfb0767fe6e59029ba9a8a4f439eeb8c1617f479814884fee8ecda004d17f085",
+      "simulation/view.js": "4ccde15137e521cc233279c86631b0fdd468625b02a53e701ab52a7db1e4dbda",
+      "simulation/protocol.js": "daeea6d9e3b31d9c63c03094bd56ee1256c89fd5af4fed25c1ed611483085933",
+      "simulation/wooden-motion.js": "aaed1ed31a0764f8ecc8b07db1d2c6bc6e2a0230b2002daff30729a20c5da12d",
+      "simulation/routes.js": "ec098e36c6a24155b4d10da3118a7240e08850a4b38c52eb7d4891be556c3453"
+    },
+    "sources": {
+      "simulation/index.ts": "e0ac89bbfd4857f1cf8dd8f0ddc38be51c286c2e86ee21e7e920088cf7e29221",
+      "simulation/engine.ts": "f17f9495cf856f52c35b09ce50d690b9785add39906b143f7600d7cd5107d2da",
+      "simulation/types.ts": "5b6796dc77421c3b780c627d32a7b2bd931cd525b0fd2d613d441a626fe3c162",
+      "simulation/validation.ts": "3ba84d2cf10371c7a08040a08a1571bc337ba9b99078108731440b3f57ac2ebc",
+      "simulation/geometry.ts": "0762a61b52826abbdcb25a83c7194d10ddf3e76bc1f1210b7124a399a3194617",
+      "simulation/housekeeping.ts": "89135443aa2a1a044af35feabb5661e1faaea326da3017f7e2f81fbfcd3b6507",
+      "simulation/services.ts": "95d7b2428ca35708152c341c55c6f7c2d3ad7c88caf26e5aae6d5de77116d536",
+      "simulation/patrol.ts": "c623d0ca7b38435d3462e82d68a16007894ca835a81a638aeb73edffdbe9c20e",
+      "simulation/operation.ts": "9c7f2583a451cdea67e334dafe2d8d2f020939b25e3ee590174107d79310b90f",
+      "content/registry.ts": "9aad14593cda7c38397bae09c24ad5c3e562eef57ed801df3c661ca3500d1701",
+      "content/rct2-reference.ts": "54a1c17ca07be6851c23e3ee2b5962907f3ccd0419eb92dfeafea271a160c818",
+      "content/ride-profiles.ts": "5b856aec8fc2aba9e9c7e28f05f4a5255482e86541069ef256e1c0dda330f913",
+      "simulation/flume-profile.ts": "0e798c7098e84b7455b363e2f0218cbce173126dfd7f8259df17c591cfb03b3b",
+      "content/log-flume.ts": "07c2cecf3fa5f14edc8bcb5617c36ba68d4e229ee2ce804a526dd20764b83a0e",
+      "simulation/wooden-placement.ts": "fb6a7c1db9cb2e83d14f14ddbe9f4b957bca293e03a8c10667e035f050cb6a5c",
+      "simulation/carousel.ts": "0b443ca2d54a0b7c14750fc34caa892e6add233f3f3749ca9f396995b64f6118",
+      "content/carousel.ts": "4a8b55a49061f6ee5da899be8dc0b4ecb4d704a7a37703512452a3e3b48abdc2",
+      "simulation/flume-native.ts": "4643337936b8c5d5ff80aebb4363df640eecd0fac8bbe5bb998c44d7d9c615c5",
+      "simulation/flume-portal.ts": "84c351a0b6185b99a0d42ff6341213bc9a163b61e2bc49583b015aa80513e533",
+      "simulation/boat.ts": "662927f3711ee61793b0504de3832b846fa057a7945aae8b539f13eb5b847fa0",
+      "simulation/scenery.ts": "1d62468ccb3deb0417f6d890f08b190407dbdbd049d630a3cfa3cbbce4130b1a",
+      "simulation/motion.ts": "3adf215794e1d2bc0bfad345016dcc9182a33b67cdc9fdfa7346e1a2501ef282",
+      "simulation/people.ts": "649e724452bffc8d9187a005ec8d3b919be2bc0776e7101e6260821086e72bf6",
+      "simulation/view.ts": "06efcd52f20b3a029d937727b02076a10d6250092b72318ccedf05f8d1e55257",
+      "simulation/protocol.ts": "7184b654c83e27f286f65c26241e2cf348401d16589173cf91c9de5bb9b56bd8",
+      "simulation/wooden-motion.ts": "3f2c1a710feb77de5861d5733683c028173f8fe9f00a6087124b710d1453436a",
+      "simulation/routes.ts": "4a7574de36341cb50471526aa9efbbba6f2b899e47fba177495bd142324870d9"
+    }
+  },
+  "threePins": {
+    "package.json": "f9c474a27c920b9435353a6235968f4453436bee0444fac7e5fd289c8fa463de",
+    "build/three.module.js": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea",
+    "build/three.core.js": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6"
+  },
+  "rawAttemptExits": {
+    "001": 1,
+    "002": 1,
+    "003": 0,
+    "004": 0
+  },
+  "attempt001Failures": [
+    {
+      "phase": "exact-original-equivalence",
+      "message": "Tile is outside usable land.",
+      "stack": "Error: Tile is outside usable land.\n    at ensure (file:///workspace/coaster-log-flume-terrain-authoring/caller-sol/inputs/dist/simulation/validation.js:9:11)\n    at Engine.bounds (file:///workspace/coaster-log-flume-terrain-authoring/caller-sol/inputs/dist/simulation/engine.js:404:41)\n    at new Engine (file:///workspace/coaster-log-flume-terrain-authoring/caller-sol/inputs/dist/simulation/engine.js:189:22)\n    at course (file:///workspace/coaster-log-flume-terrain-authoring/caller-sol/driver.mjs:98:18)\n    at file:///workspace/coaster-log-flume-terrain-authoring/caller-sol/driver.mjs:252:15\n    at phase (file:///workspace/coaster-log-flume-terrain-authoring/caller-sol/driver.mjs:28:15)\n    at file:///workspace/coaster-log-flume-terrain-authoring/caller-sol/driver.mjs:250:7"
+    },
+    {
+      "phase": "actual-station-portals-and-preflight",
+      "message": "Tile is outside usable land.",
+      "stack": "Error: Tile is outside usable land.\n    at ensure (file:///workspace/coaster-log-flume-terrain-authoring/caller-sol/inputs/dist/simulation/validation.js:9:11)\n    at Engine.bounds (file:///workspace/coaster-log-flume-terrain-authoring/caller-sol/inputs/dist/simulation/engine.js:404:41)\n    at new Engine (file:///workspace/coaster-log-flume-terrain-authoring/caller-sol/inputs/dist/simulation/engine.js:189:22)\n    at course (file:///workspace/coaster-log-flume-terrain-authoring/caller-sol/driver.mjs:98:18)\n    at file:///workspace/coaster-log-flume-terrain-authoring/caller-sol/driver.mjs:265:15\n    at phase (file:///workspace/coaster-log-flume-terrain-authoring/caller-sol/driver.mjs:28:15)\n    at file:///workspace/coaster-log-flume-terrain-authoring/caller-sol/driver.mjs:263:7"
+    },
+    {
+      "phase": "actual-engine-varied-courses-and-native",
+      "message": "Tile is outside usable land.",
+      "stack": "Error: Tile is outside usable land.\n    at ensure (file:///workspace/coaster-log-flume-terrain-authoring/caller-sol/inputs/dist/simulation/validation.js:9:11)\n    at Engine.bounds (file:///workspace/coaster-log-flume-terrain-authoring/caller-sol/inputs/dist/simulation/engine.js:404:41)\n    at new Engine (file:///workspace/coaster-log-flume-terrain-authoring/caller-sol/inputs/dist/simulation/engine.js:189:22)\n    at course (file:///workspace/coaster-log-flume-terrain-authoring/caller-sol/driver.mjs:98:18)\n    at file:///workspace/coaster-log-flume-terrain-authoring/caller-sol/driver.mjs:287:63\n    at phase (file:///workspace/coaster-log-flume-terrain-authoring/caller-sol/driver.mjs:28:15)\n    at file:///workspace/coaster-log-flume-terrain-authoring/caller-sol/driver.mjs:279:7"
+    },
+    {
+      "phase": "positive-area-native-control",
+      "message": "Cannot read properties of undefined (reading 'tracks')",
+      "stack": "TypeError: Cannot read properties of undefined (reading 'tracks')\n    at file:///workspace/coaster-log-flume-terrain-authoring/caller-sol/driver.mjs:317:63\n    at phase (file:///workspace/coaster-log-flume-terrain-authoring/caller-sol/driver.mjs:28:15)\n    at file:///workspace/coaster-log-flume-terrain-authoring/caller-sol/driver.mjs:316:7"
+    },
+    {
+      "phase": "late-missing-terrain-and-controlled-cleanup",
+      "message": "Cannot read properties of undefined (reading 'tracks')",
+      "stack": "TypeError: Cannot read properties of undefined (reading 'tracks')\n    at file:///workspace/coaster-log-flume-terrain-authoring/caller-sol/driver.mjs:334:63\n    at phase (file:///workspace/coaster-log-flume-terrain-authoring/caller-sol/driver.mjs:28:15)\n    at file:///workspace/coaster-log-flume-terrain-authoring/caller-sol/driver.mjs:333:7"
+    }
+  ],
+  "attempt002Failures": [
+    {
+      "phase": "actual-r8-support-contact-and-centre-only-control",
+      "message": "Actual old buffers discriminate floating/buried uneven support.",
+      "stack": "AssertionError [ERR_ASSERTION]: Actual old buffers discriminate floating/buried uneven support.\n    at file:///workspace/coaster-log-flume-terrain-authoring/caller-sol/driver.mjs:313:55\n    at phase (file:///workspace/coaster-log-flume-terrain-authoring/caller-sol/driver.mjs:28:15)\n    at file:///workspace/coaster-log-flume-terrain-authoring/caller-sol/driver.mjs:304:7"
+    }
+  ],
+  "acceptedGroupsFrom002": [
+    {
+      "name": "exact-original-equivalence",
+      "passed": true,
+      "elapsedMs": 2192
+    },
+    {
+      "name": "actual-station-portals-and-preflight",
+      "passed": true,
+      "elapsedMs": 2433
+    },
+    {
+      "name": "actual-engine-varied-courses-and-native",
+      "passed": true,
+      "elapsedMs": 25362
+    },
+    {
+      "name": "positive-area-native-control",
+      "passed": true,
+      "elapsedMs": 31
+    },
+    {
+      "name": "late-missing-terrain-and-controlled-cleanup",
+      "passed": true,
+      "elapsedMs": 10
+    }
+  ],
+  "matrixCountsFrom002": {
+    "courses": 44,
+    "equalityCases": 320,
+    "nativeCases": 536,
+    "nativeTriangles": 442904,
+    "positiveAreaPartitions": 386344,
+    "contactCases": 2,
+    "lifecycleCases": 37,
+    "helperParts": 42
+  },
+  "equalityPieces": [
+    "station",
+    "lift-start",
+    "lift",
+    "lift-end",
+    "right",
+    "channel",
+    "drop-start",
+    "drop",
+    "drop-end",
+    "splash",
+    "left"
+  ],
+  "equalityPortalRoles": 32,
+  "nativeDirections": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "nativeTurns": [
+    "right",
+    "left"
+  ],
+  "nativeVariedPieces": [
+    {
+      "course": "r8-2-4",
+      "track": 3,
+      "piece": "right",
+      "helperParts": 9,
+      "triangles": 1512,
+      "positiveAreaPartitions": 1398,
+      "boundaryPartitions": 141,
+      "vertexMisses": 0,
+      "errorCount": 0,
+      "errors": []
+    },
+    {
+      "course": "r8-4-2",
+      "track": 3,
+      "piece": "right",
+      "helperParts": 9,
+      "triangles": 1500,
+      "positiveAreaPartitions": 1390,
+      "boundaryPartitions": 142,
+      "vertexMisses": 0,
+      "errorCount": 0,
+      "errors": []
+    },
+    {
+      "course": "r8-low-lateral-high-centre",
+      "track": 3,
+      "piece": "right",
+      "helperParts": 3,
+      "triangles": 1180,
+      "positiveAreaPartitions": 1249,
+      "boundaryPartitions": 80,
+      "vertexMisses": 0,
+      "errorCount": 0,
+      "errors": []
+    },
+    {
+      "course": "r8-tie-low-legs",
+      "track": 3,
+      "piece": "right",
+      "helperParts": 15,
+      "triangles": 1408,
+      "positiveAreaPartitions": 1335,
+      "boundaryPartitions": 227,
+      "vertexMisses": 0,
+      "errorCount": 0,
+      "errors": []
+    },
+    {
+      "course": "r8-high-lateral-short-post",
+      "track": 3,
+      "piece": "right",
+      "helperParts": 6,
+      "triangles": 1296,
+      "positiveAreaPartitions": 1297,
+      "boundaryPartitions": 129,
+      "vertexMisses": 0,
+      "errorCount": 0,
+      "errors": []
+    }
+  ],
+  "helperOwnership": [
+    {
+      "course": "r8-2-4",
+      "track": 3,
+      "piece": "right",
+      "mergedHelper": {
+        "parts": 9,
+        "triangles": 108
+      },
+      "allocations": 27,
+      "temporary": 24,
+      "owned": 3,
+      "temporaryDisposals": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "ownCalls": 3,
+      "materialCalls": 1,
+      "textureCalls": 1,
+      "children": 1
+    },
+    {
+      "course": "r8-4-2",
+      "track": 3,
+      "piece": "right",
+      "mergedHelper": {
+        "parts": 9,
+        "triangles": 108
+      },
+      "allocations": 26,
+      "temporary": 23,
+      "owned": 3,
+      "temporaryDisposals": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "ownCalls": 3,
+      "materialCalls": 1,
+      "textureCalls": 1,
+      "children": 1
+    },
+    {
+      "course": "r8-low-lateral-high-centre",
+      "track": 3,
+      "piece": "right",
+      "mergedHelper": {
+        "parts": 3,
+        "triangles": 28
+      },
+      "allocations": 8,
+      "temporary": 5,
+      "owned": 3,
+      "temporaryDisposals": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "ownCalls": 3,
+      "materialCalls": 1,
+      "textureCalls": 1,
+      "children": 1
+    },
+    {
+      "course": "r8-tie-low-legs",
+      "track": 3,
+      "piece": "right",
+      "mergedHelper": {
+        "parts": 15,
+        "triangles": 184
+      },
+      "allocations": 24,
+      "temporary": 21,
+      "owned": 3,
+      "temporaryDisposals": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "ownCalls": 3,
+      "materialCalls": 1,
+      "textureCalls": 1,
+      "children": 1
+    },
+    {
+      "course": "r8-high-lateral-short-post",
+      "track": 3,
+      "piece": "right",
+      "mergedHelper": {
+        "parts": 6,
+        "triangles": 72
+      },
+      "allocations": 15,
+      "temporary": 12,
+      "owned": 3,
+      "temporaryDisposals": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "ownCalls": 3,
+      "materialCalls": 1,
+      "textureCalls": 1,
+      "children": 1
+    }
+  ],
+  "preflightAndCleanup": [
+    {
+      "kind": "stale-station-shared-ground",
+      "course": "portal16-d0-s1",
+      "role": "entrance",
+      "allocations": 0,
+      "temporary": 0,
+      "owned": 0,
+      "temporaryDisposals": [],
+      "ownCalls": 0,
+      "materialCalls": 0,
+      "textureCalls": 0,
+      "children": 0,
+      "error": "Passage support terrain differs from shared ground."
+    },
+    {
+      "kind": "stale-station-shared-ground",
+      "course": "portal16-d0-s1",
+      "role": "exit",
+      "allocations": 0,
+      "temporary": 0,
+      "owned": 0,
+      "temporaryDisposals": [],
+      "ownCalls": 0,
+      "materialCalls": 0,
+      "textureCalls": 0,
+      "children": 0,
+      "error": "Passage support terrain differs from shared ground."
+    },
+    {
+      "kind": "stale-station-shared-ground",
+      "course": "portal16-d0-s3",
+      "role": "entrance",
+      "allocations": 0,
+      "temporary": 0,
+      "owned": 0,
+      "temporaryDisposals": [],
+      "ownCalls": 0,
+      "materialCalls": 0,
+      "textureCalls": 0,
+      "children": 0,
+      "error": "Passage support terrain differs from shared ground."
+    },
+    {
+      "kind": "stale-station-shared-ground",
+      "course": "portal16-d0-s3",
+      "role": "exit",
+      "allocations": 0,
+      "temporary": 0,
+      "owned": 0,
+      "temporaryDisposals": [],
+      "ownCalls": 0,
+      "materialCalls": 0,
+      "textureCalls": 0,
+      "children": 0,
+      "error": "Passage support terrain differs from shared ground."
+    },
+    {
+      "kind": "stale-station-shared-ground",
+      "course": "portal16-d1-s1",
+      "role": "entrance",
+      "allocations": 0,
+      "temporary": 0,
+      "owned": 0,
+      "temporaryDisposals": [],
+      "ownCalls": 0,
+      "materialCalls": 0,
+      "textureCalls": 0,
+      "children": 0,
+      "error": "Passage support terrain differs from shared ground."
+    },
+    {
+      "kind": "stale-station-shared-ground",
+      "course": "portal16-d1-s1",
+      "role": "exit",
+      "allocations": 0,
+      "temporary": 0,
+      "owned": 0,
+      "temporaryDisposals": [],
+      "ownCalls": 0,
+      "materialCalls": 0,
+      "textureCalls": 0,
+      "children": 0,
+      "error": "Passage support terrain differs from shared ground."
+    },
+    {
+      "kind": "stale-station-shared-ground",
+      "course": "portal16-d1-s3",
+      "role": "entrance",
+      "allocations": 0,
+      "temporary": 0,
+      "owned": 0,
+      "temporaryDisposals": [],
+      "ownCalls": 0,
+      "materialCalls": 0,
+      "textureCalls": 0,
+      "children": 0,
+      "error": "Passage support terrain differs from shared ground."
+    },
+    {
+      "kind": "stale-station-shared-ground",
+      "course": "portal16-d1-s3",
+      "role": "exit",
+      "allocations": 0,
+      "temporary": 0,
+      "owned": 0,
+      "temporaryDisposals": [],
+      "ownCalls": 0,
+      "materialCalls": 0,
+      "textureCalls": 0,
+      "children": 0,
+      "error": "Passage support terrain differs from shared ground."
+    },
+    {
+      "kind": "stale-station-shared-ground",
+      "course": "portal16-d2-s1",
+      "role": "entrance",
+      "allocations": 0,
+      "temporary": 0,
+      "owned": 0,
+      "temporaryDisposals": [],
+      "ownCalls": 0,
+      "materialCalls": 0,
+      "textureCalls": 0,
+      "children": 0,
+      "error": "Passage support terrain differs from shared ground."
+    },
+    {
+      "kind": "stale-station-shared-ground",
+      "course": "portal16-d2-s1",
+      "role": "exit",
+      "allocations": 0,
+      "temporary": 0,
+      "owned": 0,
+      "temporaryDisposals": [],
+      "ownCalls": 0,
+      "materialCalls": 0,
+      "textureCalls": 0,
+      "children": 0,
+      "error": "Passage support terrain differs from shared ground."
+    },
+    {
+      "kind": "stale-station-shared-ground",
+      "course": "portal16-d2-s3",
+      "role": "entrance",
+      "allocations": 0,
+      "temporary": 0,
+      "owned": 0,
+      "temporaryDisposals": [],
+      "ownCalls": 0,
+      "materialCalls": 0,
+      "textureCalls": 0,
+      "children": 0,
+      "error": "Passage support terrain differs from shared ground."
+    },
+    {
+      "kind": "stale-station-shared-ground",
+      "course": "portal16-d2-s3",
+      "role": "exit",
+      "allocations": 0,
+      "temporary": 0,
+      "owned": 0,
+      "temporaryDisposals": [],
+      "ownCalls": 0,
+      "materialCalls": 0,
+      "textureCalls": 0,
+      "children": 0,
+      "error": "Passage support terrain differs from shared ground."
+    },
+    {
+      "kind": "stale-station-shared-ground",
+      "course": "portal16-d3-s1",
+      "role": "entrance",
+      "allocations": 0,
+      "temporary": 0,
+      "owned": 0,
+      "temporaryDisposals": [],
+      "ownCalls": 0,
+      "materialCalls": 0,
+      "textureCalls": 0,
+      "children": 0,
+      "error": "Passage support terrain differs from shared ground."
+    },
+    {
+      "kind": "stale-station-shared-ground",
+      "course": "portal16-d3-s1",
+      "role": "exit",
+      "allocations": 0,
+      "temporary": 0,
+      "owned": 0,
+      "temporaryDisposals": [],
+      "ownCalls": 0,
+      "materialCalls": 0,
+      "textureCalls": 0,
+      "children": 0,
+      "error": "Passage support terrain differs from shared ground."
+    },
+    {
+      "kind": "stale-station-shared-ground",
+      "course": "portal16-d3-s3",
+      "role": "entrance",
+      "allocations": 0,
+      "temporary": 0,
+      "owned": 0,
+      "temporaryDisposals": [],
+      "ownCalls": 0,
+      "materialCalls": 0,
+      "textureCalls": 0,
+      "children": 0,
+      "error": "Passage support terrain differs from shared ground."
+    },
+    {
+      "kind": "stale-station-shared-ground",
+      "course": "portal16-d3-s3",
+      "role": "exit",
+      "allocations": 0,
+      "temporary": 0,
+      "owned": 0,
+      "temporaryDisposals": [],
+      "ownCalls": 0,
+      "materialCalls": 0,
+      "textureCalls": 0,
+      "children": 0,
+      "error": "Passage support terrain differs from shared ground."
+    },
+    {
+      "kind": "stale-station-shared-ground",
+      "course": "portal32-d0-s1",
+      "role": "entrance",
+      "allocations": 0,
+      "temporary": 0,
+      "owned": 0,
+      "temporaryDisposals": [],
+      "ownCalls": 0,
+      "materialCalls": 0,
+      "textureCalls": 0,
+      "children": 0,
+      "error": "Passage support terrain differs from shared ground."
+    },
+    {
+      "kind": "stale-station-shared-ground",
+      "course": "portal32-d0-s1",
+      "role": "exit",
+      "allocations": 0,
+      "temporary": 0,
+      "owned": 0,
+      "temporaryDisposals": [],
+      "ownCalls": 0,
+      "materialCalls": 0,
+      "textureCalls": 0,
+      "children": 0,
+      "error": "Passage support terrain differs from shared ground."
+    },
+    {
+      "kind": "stale-station-shared-ground",
+      "course": "portal32-d0-s3",
+      "role": "entrance",
+      "allocations": 0,
+      "temporary": 0,
+      "owned": 0,
+      "temporaryDisposals": [],
+      "ownCalls": 0,
+      "materialCalls": 0,
+      "textureCalls": 0,
+      "children": 0,
+      "error": "Passage support terrain differs from shared ground."
+    },
+    {
+      "kind": "stale-station-shared-ground",
+      "course": "portal32-d0-s3",
+      "role": "exit",
+      "allocations": 0,
+      "temporary": 0,
+      "owned": 0,
+      "temporaryDisposals": [],
+      "ownCalls": 0,
+      "materialCalls": 0,
+      "textureCalls": 0,
+      "children": 0,
+      "error": "Passage support terrain differs from shared ground."
+    },
+    {
+      "kind": "stale-station-shared-ground",
+      "course": "portal32-d1-s1",
+      "role": "entrance",
+      "allocations": 0,
+      "temporary": 0,
+      "owned": 0,
+      "temporaryDisposals": [],
+      "ownCalls": 0,
+      "materialCalls": 0,
+      "textureCalls": 0,
+      "children": 0,
+      "error": "Passage support terrain differs from shared ground."
+    },
+    {
+      "kind": "stale-station-shared-ground",
+      "course": "portal32-d1-s1",
+      "role": "exit",
+      "allocations": 0,
+      "temporary": 0,
+      "owned": 0,
+      "temporaryDisposals": [],
+      "ownCalls": 0,
+      "materialCalls": 0,
+      "textureCalls": 0,
+      "children": 0,
+      "error": "Passage support terrain differs from shared ground."
+    },
+    {
+      "kind": "stale-station-shared-ground",
+      "course": "portal32-d1-s3",
+      "role": "entrance",
+      "allocations": 0,
+      "temporary": 0,
+      "owned": 0,
+      "temporaryDisposals": [],
+      "ownCalls": 0,
+      "materialCalls": 0,
+      "textureCalls": 0,
+      "children": 0,
+      "error": "Passage support terrain differs from shared ground."
+    },
+    {
+      "kind": "stale-station-shared-ground",
+      "course": "portal32-d1-s3",
+      "role": "exit",
+      "allocations": 0,
+      "temporary": 0,
+      "owned": 0,
+      "temporaryDisposals": [],
+      "ownCalls": 0,
+      "materialCalls": 0,
+      "textureCalls": 0,
+      "children": 0,
+      "error": "Passage support terrain differs from shared ground."
+    },
+    {
+      "kind": "stale-station-shared-ground",
+      "course": "portal32-d2-s1",
+      "role": "entrance",
+      "allocations": 0,
+      "temporary": 0,
+      "owned": 0,
+      "temporaryDisposals": [],
+      "ownCalls": 0,
+      "materialCalls": 0,
+      "textureCalls": 0,
+      "children": 0,
+      "error": "Passage support terrain differs from shared ground."
+    },
+    {
+      "kind": "stale-station-shared-ground",
+      "course": "portal32-d2-s1",
+      "role": "exit",
+      "allocations": 0,
+      "temporary": 0,
+      "owned": 0,
+      "temporaryDisposals": [],
+      "ownCalls": 0,
+      "materialCalls": 0,
+      "textureCalls": 0,
+      "children": 0,
+      "error": "Passage support terrain differs from shared ground."
+    },
+    {
+      "kind": "stale-station-shared-ground",
+      "course": "portal32-d2-s3",
+      "role": "entrance",
+      "allocations": 0,
+      "temporary": 0,
+      "owned": 0,
+      "temporaryDisposals": [],
+      "ownCalls": 0,
+      "materialCalls": 0,
+      "textureCalls": 0,
+      "children": 0,
+      "error": "Passage support terrain differs from shared ground."
+    },
+    {
+      "kind": "stale-station-shared-ground",
+      "course": "portal32-d2-s3",
+      "role": "exit",
+      "allocations": 0,
+      "temporary": 0,
+      "owned": 0,
+      "temporaryDisposals": [],
+      "ownCalls": 0,
+      "materialCalls": 0,
+      "textureCalls": 0,
+      "children": 0,
+      "error": "Passage support terrain differs from shared ground."
+    },
+    {
+      "kind": "stale-station-shared-ground",
+      "course": "portal32-d3-s1",
+      "role": "entrance",
+      "allocations": 0,
+      "temporary": 0,
+      "owned": 0,
+      "temporaryDisposals": [],
+      "ownCalls": 0,
+      "materialCalls": 0,
+      "textureCalls": 0,
+      "children": 0,
+      "error": "Passage support terrain differs from shared ground."
+    },
+    {
+      "kind": "stale-station-shared-ground",
+      "course": "portal32-d3-s1",
+      "role": "exit",
+      "allocations": 0,
+      "temporary": 0,
+      "owned": 0,
+      "temporaryDisposals": [],
+      "ownCalls": 0,
+      "materialCalls": 0,
+      "textureCalls": 0,
+      "children": 0,
+      "error": "Passage support terrain differs from shared ground."
+    },
+    {
+      "kind": "stale-station-shared-ground",
+      "course": "portal32-d3-s3",
+      "role": "entrance",
+      "allocations": 0,
+      "temporary": 0,
+      "owned": 0,
+      "temporaryDisposals": [],
+      "ownCalls": 0,
+      "materialCalls": 0,
+      "textureCalls": 0,
+      "children": 0,
+      "error": "Passage support terrain differs from shared ground."
+    },
+    {
+      "kind": "stale-station-shared-ground",
+      "course": "portal32-d3-s3",
+      "role": "exit",
+      "allocations": 0,
+      "temporary": 0,
+      "owned": 0,
+      "temporaryDisposals": [],
+      "ownCalls": 0,
+      "materialCalls": 0,
+      "textureCalls": 0,
+      "children": 0,
+      "error": "Passage support terrain differs from shared ground."
+    },
+    {
+      "kind": "removed-quarter-vertices-centroid-still-pass",
+      "material": "concrete",
+      "triangle": 403,
+      "points": [
+        [
+          43.9719123840332,
+          41.21868133544922,
+          6.099999904632568
+        ],
+        [
+          43.700862884521484,
+          43.209781646728516,
+          6.099999904632568
+        ],
+        [
+          44.18682098388672,
+          41.269718170166016,
+          6.099999904632568
+        ]
+      ],
+      "centroid": [
+        43.953198750813804,
+        41.899393717447914,
+        6.099999904632568
+      ],
+      "removedCell": {
+        "x": 11,
+        "y": 10,
+        "low": 16,
+        "high": 72,
+        "mask": 15
+      },
+      "bit": 3,
+      "quarter": [
+        22,
+        21
+      ],
+      "positiveAreaM2": 0.000030296447580191228,
+      "modifiedNative": {
+        "errorCount": 194,
+        "vertexMisses": 357,
+        "errors": [
+          {
+            "material": "concrete",
+            "triangle": 24,
+            "quarter": [
+              22,
+              21
+            ],
+            "kind": "interior",
+            "projectedAreaM2": 0,
+            "polygon": [
+              [
+                44,
+                43.501063075769416,
+                6
+              ],
+              [
+                44.13303756713867,
+                43.543209075927734,
+                6
+              ],
+              [
+                44,
+                43.501063075769416,
+                6.8361705188453055
+              ]
+            ]
+          },
+          {
+            "material": "concrete",
+            "triangle": 25,
+            "quarter": [
+              22,
+              21
+            ],
+            "kind": "interior",
+            "projectedAreaM2": 0,
+            "polygon": [
+              [
+                44,
+                43.501063075769416,
+                6.8361705188453055
+              ],
+              [
+                44.13303756713867,
+                43.543209075927734,
+                6
+              ],
+              [
+                44.13303756713867,
+                43.543209075927734,
+                7
+              ],
+              [
+                44,
+                43.501063075769416,
+                7
+              ]
+            ]
+          },
+          {
+            "material": "concrete",
+            "triangle": 26,
+            "quarter": [
+              22,
+              21
+            ],
+            "kind": "interior",
+            "projectedAreaM2": 0,
+            "polygon": [
+              [
+                44.13303756713867,
+                43.543209075927734,
+                6
+              ],
+              [
+                44.29085159301758,
+                43.59749984741211,
+                6
+              ],
+              [
+                44.13303756713867,
+                43.543209075927734,
+                7
+              ]
+            ]
+          },
+          {
+            "material": "concrete",
+            "triangle": 27,
+            "quarter": [
+              22,
+              21
+            ],
+            "kind": "interior",
+            "projectedAreaM2": 0,
+            "polygon": [
+              [
+                44.13303756713867,
+                43.543209075927734,
+                7
+              ],
+              [
+                44.29085159301758,
+                43.59749984741211,
+                6
+              ],
+              [
+                44.29085159301758,
+                43.59749984741211,
+                7
+              ]
+            ]
+          },
+          {
+            "material": "concrete",
+            "triangle": 28,
+            "quarter": [
+              22,
+              21
+            ],
+            "kind": "interior",
+            "projectedAreaM2": 0,
+            "polygon": [
+              [
+                44.29085159301758,
+                43.59749984741211,
+                6
+              ],
+              [
+                44.44728469848633,
+                43.65564727783203,
+                6
+              ],
+              [
+                44.29085159301758,
+                43.59749984741211,
+                7
+              ]
+            ]
+          },
+          {
+            "material": "concrete",
+            "triangle": 29,
+            "quarter": [
+              22,
+              21
+            ],
+            "kind": "interior",
+            "projectedAreaM2": 0,
+            "polygon": [
+              [
+                44.29085159301758,
+                43.59749984741211,
+                7
+              ],
+              [
+                44.44728469848633,
+                43.65564727783203,
+                6
+              ],
+              [
+                44.44728469848633,
+                43.65564727783203,
+                7
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "kind": "missing-late-support-sample",
+      "tile": "12,12",
+      "firstSampleIndex": 34,
+      "totalSamples": 42,
+      "allocations": 0,
+      "temporary": 0,
+      "owned": 0,
+      "temporaryDisposals": [],
+      "ownCalls": 0,
+      "materialCalls": 0,
+      "textureCalls": 0,
+      "children": 0,
+      "error": "Missing or non-finite support terrain at tile 12,12."
+    },
+    {
+      "kind": "controlled-build-error",
+      "allocations": 24,
+      "temporary": 24,
+      "owned": 0,
+      "temporaryDisposals": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "ownCalls": 0,
+      "materialCalls": 0,
+      "textureCalls": 1,
+      "children": 0,
+      "error": "Controlled texture-stage build failure."
+    }
+  ],
+  "contactsFrom003": [
+    {
+      "course": "r8-2-4",
+      "track": 3,
+      "distance": 5.8,
+      "bentPosition": [
+        47.304795872634216,
+        6,
+        44.01254943081722
+      ],
+      "oldInterpolatedGround": 3.0797977498602664,
+      "top": 5.84,
+      "patches": [
+        {
+          "sign": -1,
+          "width": 0.28,
+          "tile": [
+            11,
+            11
+          ],
+          "ground": 4,
+          "expectedArea": 0.07840000000000122,
+          "bottom": 4,
+          "top": 4.14,
+          "coveredBottom": 0.0783995508512102,
+          "coveredTop": 0.07839955085121023
+        },
+        {
+          "sign": -1,
+          "width": 0.14,
+          "tile": [
+            11,
+            11
+          ],
+          "ground": 4,
+          "expectedArea": 0.019600000000000305,
+          "bottom": 4.14,
+          "top": 5.84,
+          "coveredBottom": 0.019599917327344722,
+          "coveredTop": 0.019599917327344722,
+          "capContactArea": 0.019600000000000013
+        },
+        {
+          "sign": 1,
+          "width": 0.28,
+          "tile": [
+            11,
+            10
+          ],
+          "ground": 2,
+          "expectedArea": 0.046182681984408544,
+          "bottom": 2,
+          "top": 2.14,
+          "coveredBottom": 0.04618248117941795,
+          "coveredTop": 0.04618248117941793
+        },
+        {
+          "sign": 1,
+          "width": 0.28,
+          "tile": [
+            12,
+            10
+          ],
+          "ground": 4,
+          "expectedArea": 0.032217318015592356,
+          "bottom": 4,
+          "top": 4.14,
+          "coveredBottom": 0.0322171937782043,
+          "coveredTop": 0.0322171937782043
+        },
+        {
+          "sign": 1,
+          "width": 0.14,
+          "tile": [
+            11,
+            10
+          ],
+          "ground": 2,
+          "expectedArea": 0.013149421764652055,
+          "bottom": 2.14,
+          "top": 5.84,
+          "coveredBottom": 0.01314942172530897,
+          "coveredTop": 0.01314942172530897,
+          "capContactArea": 0.013149421764651913
+        },
+        {
+          "sign": 1,
+          "width": 0.14,
+          "tile": [
+            12,
+            10
+          ],
+          "ground": 4,
+          "expectedArea": 0.0064505782353481205,
+          "bottom": 4.14,
+          "top": 5.84,
+          "coveredBottom": 0.006450469153037877,
+          "coveredTop": 0.006450469153037879,
+          "capContactArea": 0.006450578235348095
+        }
+      ]
+    },
+    {
+      "course": "r8-4-2",
+      "track": 3,
+      "distance": 5.8,
+      "bentPosition": [
+        47.304795872634216,
+        6,
+        44.01254943081722
+      ],
+      "oldInterpolatedGround": 4,
+      "top": 5.84,
+      "patches": [
+        {
+          "sign": -1,
+          "width": 0.28,
+          "tile": [
+            11,
+            11
+          ],
+          "ground": 4,
+          "expectedArea": 0.07840000000000122,
+          "bottom": 4,
+          "top": 4.14,
+          "coveredBottom": 0.0783995508512102,
+          "coveredTop": 0.07839955085121023
+        },
+        {
+          "sign": -1,
+          "width": 0.14,
+          "tile": [
+            11,
+            11
+          ],
+          "ground": 4,
+          "expectedArea": 0.019600000000000305,
+          "bottom": 4.14,
+          "top": 5.84,
+          "coveredBottom": 0.019599917327344722,
+          "coveredTop": 0.019599917327344722,
+          "capContactArea": 0.019600000000000013
+        },
+        {
+          "sign": 1,
+          "width": 0.28,
+          "tile": [
+            11,
+            10
+          ],
+          "ground": 4,
+          "expectedArea": 0.046182681984408544,
+          "bottom": 4,
+          "top": 4.14,
+          "coveredBottom": 0.04618248117941792,
+          "coveredTop": 0.04618248117941793
+        },
+        {
+          "sign": 1,
+          "width": 0.28,
+          "tile": [
+            12,
+            10
+          ],
+          "ground": 2,
+          "expectedArea": 0.032217318015592356,
+          "bottom": 2,
+          "top": 2.14,
+          "coveredBottom": 0.0322171937782043,
+          "coveredTop": 0.0322171937782043
+        },
+        {
+          "sign": 1,
+          "width": 0.14,
+          "tile": [
+            11,
+            10
+          ],
+          "ground": 4,
+          "expectedArea": 0.013149421764652055,
+          "bottom": 4.14,
+          "top": 5.84,
+          "coveredBottom": 0.01314942172530897,
+          "coveredTop": 0.01314942172530897,
+          "capContactArea": 0.013149421764651913
+        },
+        {
+          "sign": 1,
+          "width": 0.14,
+          "tile": [
+            12,
+            10
+          ],
+          "ground": 2,
+          "expectedArea": 0.0064505782353481205,
+          "bottom": 2.14,
+          "top": 5.84,
+          "coveredBottom": 0.006450469153037877,
+          "coveredTop": 0.006450469153037879,
+          "capContactArea": 0.006450578235348095
+        }
+      ]
+    },
+    {
+      "course": "r8-low-lateral-high-centre",
+      "track": 3,
+      "distance": 5.8,
+      "bentPosition": [
+        47.304795872634216,
+        6,
+        44.01254943081722
+      ],
+      "oldInterpolatedGround": 6,
+      "top": 5.84,
+      "patches": [
+        {
+          "sign": -1,
+          "width": 0.28,
+          "tile": [
+            11,
+            11
+          ],
+          "ground": 6,
+          "expectedArea": 0,
+          "bottom": 6,
+          "top": 5.84,
+          "coveredBottom": 0,
+          "coveredTop": 0
+        },
+        {
+          "sign": -1,
+          "width": 0.14,
+          "tile": [
+            11,
+            11
+          ],
+          "ground": 6,
+          "expectedArea": 0,
+          "bottom": 6.14,
+          "top": 5.84,
+          "coveredBottom": 0,
+          "coveredTop": 0,
+          "capContactArea": 0
+        },
+        {
+          "sign": 1,
+          "width": 0.28,
+          "tile": [
+            11,
+            10
+          ],
+          "ground": 6,
+          "expectedArea": 0,
+          "bottom": 6,
+          "top": 5.84,
+          "coveredBottom": 0,
+          "coveredTop": 0
+        },
+        {
+          "sign": 1,
+          "width": 0.28,
+          "tile": [
+            12,
+            10
+          ],
+          "ground": 2,
+          "expectedArea": 0.032217318015592356,
+          "bottom": 2,
+          "top": 2.14,
+          "coveredBottom": 0.0322171937782043,
+          "coveredTop": 0.0322171937782043
+        },
+        {
+          "sign": 1,
+          "width": 0.14,
+          "tile": [
+            11,
+            10
+          ],
+          "ground": 6,
+          "expectedArea": 0,
+          "bottom": 6.14,
+          "top": 5.84,
+          "coveredBottom": 0,
+          "coveredTop": 8.673617379884035e-19,
+          "capContactArea": 3.7092656760200082e-19
+        },
+        {
+          "sign": 1,
+          "width": 0.14,
+          "tile": [
+            12,
+            10
+          ],
+          "ground": 2,
+          "expectedArea": 0.0064505782353481205,
+          "bottom": 2.14,
+          "top": 5.84,
+          "coveredBottom": 0.006450469153037877,
+          "coveredTop": 0.006450469153037878,
+          "capContactArea": 0.0064505782353480945
+        }
+      ]
+    },
+    {
+      "course": "r8-tie-low-legs",
+      "track": 3,
+      "distance": 5.8,
+      "bentPosition": [
+        47.304795872634216,
+        6,
+        44.01254943081722
+      ],
+      "oldInterpolatedGround": 0,
+      "top": 5.84,
+      "patches": [
+        {
+          "sign": -1,
+          "width": 0.28,
+          "tile": [
+            11,
+            11
+          ],
+          "ground": 0,
+          "expectedArea": 0.07840000000000122,
+          "bottom": 0,
+          "top": 0.14,
+          "coveredBottom": 0.0783995508512102,
+          "coveredTop": 0.07839955085121023
+        },
+        {
+          "sign": -1,
+          "width": 0.14,
+          "tile": [
+            11,
+            11
+          ],
+          "ground": 0,
+          "expectedArea": 0.019600000000000305,
+          "bottom": 0.14,
+          "top": 5.84,
+          "coveredBottom": 0.019599917327344722,
+          "coveredTop": 0.019599917327344722,
+          "capContactArea": 0.019600000000000013
+        },
+        {
+          "sign": 1,
+          "width": 0.28,
+          "tile": [
+            11,
+            10
+          ],
+          "ground": 0,
+          "expectedArea": 0.046182681984408544,
+          "bottom": 0,
+          "top": 0.14,
+          "coveredBottom": 0.04618248117941795,
+          "coveredTop": 0.04618248117941793
+        },
+        {
+          "sign": 1,
+          "width": 0.28,
+          "tile": [
+            12,
+            10
+          ],
+          "ground": 2,
+          "expectedArea": 0.032217318015592356,
+          "bottom": 2,
+          "top": 2.14,
+          "coveredBottom": 0.0322171937782043,
+          "coveredTop": 0.0322171937782043
+        },
+        {
+          "sign": 1,
+          "width": 0.14,
+          "tile": [
+            11,
+            10
+          ],
+          "ground": 0,
+          "expectedArea": 0.013149421764652055,
+          "bottom": 0.14,
+          "top": 5.84,
+          "coveredBottom": 0.01314942172530897,
+          "coveredTop": 0.01314942172530897,
+          "capContactArea": 0.013149421764651913
+        },
+        {
+          "sign": 1,
+          "width": 0.14,
+          "tile": [
+            12,
+            10
+          ],
+          "ground": 2,
+          "expectedArea": 0.0064505782353481205,
+          "bottom": 2.14,
+          "top": 5.84,
+          "coveredBottom": 0.006450469153037877,
+          "coveredTop": 0.006450469153037879,
+          "capContactArea": 0.006450578235348095
+        }
+      ]
+    },
+    {
+      "course": "r8-high-lateral-short-post",
+      "track": 3,
+      "distance": 5.8,
+      "bentPosition": [
+        47.304795872634216,
+        6,
+        44.01254943081722
+      ],
+      "oldInterpolatedGround": 4.159595499720533,
+      "top": 5.84,
+      "patches": [
+        {
+          "sign": -1,
+          "width": 0.28,
+          "tile": [
+            11,
+            11
+          ],
+          "ground": 6,
+          "expectedArea": 0,
+          "bottom": 6,
+          "top": 5.84,
+          "coveredBottom": 0,
+          "coveredTop": 0
+        },
+        {
+          "sign": -1,
+          "width": 0.14,
+          "tile": [
+            11,
+            11
+          ],
+          "ground": 6,
+          "expectedArea": 0,
+          "bottom": 6.14,
+          "top": 5.84,
+          "coveredBottom": 0,
+          "coveredTop": 0,
+          "capContactArea": 0
+        },
+        {
+          "sign": 1,
+          "width": 0.28,
+          "tile": [
+            11,
+            10
+          ],
+          "ground": 2,
+          "expectedArea": 0.046182681984408544,
+          "bottom": 2,
+          "top": 2.14,
+          "coveredBottom": 0.04618248117941795,
+          "coveredTop": 0.04618248117941793
+        },
+        {
+          "sign": 1,
+          "width": 0.28,
+          "tile": [
+            12,
+            10
+          ],
+          "ground": 4,
+          "expectedArea": 0.032217318015592356,
+          "bottom": 4,
+          "top": 4.14,
+          "coveredBottom": 0.0322171937782043,
+          "coveredTop": 0.0322171937782043
+        },
+        {
+          "sign": 1,
+          "width": 0.14,
+          "tile": [
+            11,
+            10
+          ],
+          "ground": 2,
+          "expectedArea": 0.013149421764652055,
+          "bottom": 2.14,
+          "top": 5.84,
+          "coveredBottom": 0.01314942172530897,
+          "coveredTop": 0.01314942172530897,
+          "capContactArea": 0.013149421764651913
+        },
+        {
+          "sign": 1,
+          "width": 0.14,
+          "tile": [
+            12,
+            10
+          ],
+          "ground": 4,
+          "expectedArea": 0.0064505782353481205,
+          "bottom": 4.14,
+          "top": 5.84,
+          "coveredBottom": 0.006450469153037877,
+          "coveredTop": 0.006450469153037879,
+          "capContactArea": 0.006450578235348095
+        }
+      ]
+    }
+  ],
+  "oldContactControlsFrom003": [
+    {
+      "kind": "original-centre-frame-ground",
+      "course": "r8-2-4",
+      "currentFingerprint": "81396f39ffa1edacc45757ce6feba177559ee6faa80a2cf58cd72b3933cd89fb",
+      "originalFingerprint": "2a6e1b02e0f6ca6b873abc2abe7ba46448ca79a7cae41b98ce3dc86a900553ae",
+      "originalNative": {
+        "triangles": 1476,
+        "positiveAreaPartitions": 1407,
+        "boundaryPartitions": 48,
+        "vertexMisses": 68,
+        "errorCount": 35,
+        "errors": [
+          {
+            "material": "concrete",
+            "triangle": 1072,
+            "quarter": [
+              23,
+              22
+            ],
+            "kind": "interior",
+            "projectedAreaM2": 0,
+            "polygon": [
+              [
+                46.826011657714844,
+                44.764060974121094,
+                3.2197978496551514
+              ],
+              [
+                46.826011657714844,
+                44.764060974121094,
+                3.0797977447509766
+              ],
+              [
+                46.61643600463867,
+                44.57837677001953,
+                3.2197978496551514
+              ]
+            ]
+          },
+          {
+            "material": "concrete",
+            "triangle": 1073,
+            "quarter": [
+              23,
+              22
+            ],
+            "kind": "interior",
+            "projectedAreaM2": 0,
+            "polygon": [
+              [
+                46.826011657714844,
+                44.764060974121094,
+                3.0797977447509766
+              ],
+              [
+                46.61643600463867,
+                44.57837677001953,
+                3.0797977447509766
+              ],
+              [
+                46.61643600463867,
+                44.57837677001953,
+                3.2197978496551514
+              ]
+            ]
+          },
+          {
+            "material": "concrete",
+            "triangle": 1074,
+            "quarter": [
+              23,
+              22
+            ],
+            "kind": "interior",
+            "projectedAreaM2": 0,
+            "polygon": [
+              [
+                46.430755615234375,
+                44.7879524230957,
+                3.2197978496551514
+              ],
+              [
+                46.430755615234375,
+                44.7879524230957,
+                3.0797977447509766
+              ],
+              [
+                46.64033126831055,
+                44.973636627197266,
+                3.2197978496551514
+              ]
+            ]
+          },
+          {
+            "material": "concrete",
+            "triangle": 1075,
+            "quarter": [
+              23,
+              22
+            ],
+            "kind": "interior",
+            "projectedAreaM2": 0,
+            "polygon": [
+              [
+                46.430755615234375,
+                44.7879524230957,
+                3.0797977447509766
+              ],
+              [
+                46.64033126831055,
+                44.973636627197266,
+                3.0797977447509766
+              ],
+              [
+                46.64033126831055,
+                44.973636627197266,
+                3.2197978496551514
+              ]
+            ]
+          },
+          {
+            "material": "concrete",
+            "triangle": 1076,
+            "quarter": [
+              23,
+              22
+            ],
+            "kind": "interior",
+            "projectedAreaM2": 0.03919993484305451,
+            "polygon": [
+              [
+                46.430755615234375,
+                44.7879524230957,
+                3.2197978496551514
+              ],
+              [
+                46.64033126831055,
+                44.973636627197266,
+                3.2197978496551514
+              ],
+              [
+                46.61643600463867,
+                44.57837677001953,
+                3.2197978496551514
+              ]
+            ]
+          },
+          {
+            "material": "concrete",
+            "triangle": 1077,
+            "quarter": [
+              23,
+              22
+            ],
+            "kind": "interior",
+            "projectedAreaM2": 0.03919993484305451,
+            "polygon": [
+              [
+                46.64033126831055,
+                44.973636627197266,
+                3.2197978496551514
+              ],
+              [
+                46.826011657714844,
+                44.764060974121094,
+                3.2197978496551514
+              ],
+              [
+                46.61643600463867,
+                44.57837677001953,
+                3.2197978496551514
+              ]
+            ]
+          }
+        ]
+      },
+      "actualOldContact": {
+        "distance": 5.8,
+        "bentPosition": [
+          47.304795872634216,
+          6,
+          44.01254943081722
+        ],
+        "oldInterpolatedGround": 3.0797977498602664,
+        "top": 5.84,
+        "patches": [
+          {
+            "sign": -1,
+            "width": 0.28,
+            "tile": [
+              11,
+              11
+            ],
+            "ground": 4,
+            "expectedArea": 0.07840000000000122,
+            "bottom": 4,
+            "top": 4.14,
+            "coveredBottom": 0,
+            "coveredTop": 0
+          },
+          {
+            "sign": -1,
+            "width": 0.14,
+            "tile": [
+              11,
+              11
+            ],
+            "ground": 4,
+            "expectedArea": 0.019600000000000305,
+            "bottom": 4.14,
+            "top": 5.84,
+            "coveredBottom": 0,
+            "coveredTop": 0.019599917327344722,
+            "capContactArea": 0.019600000000000006
+          },
+          {
+            "sign": 1,
+            "width": 0.28,
+            "tile": [
+              11,
+              10
+            ],
+            "ground": 2,
+            "expectedArea": 0.046182681984408544,
+            "bottom": 2,
+            "top": 2.14,
+            "coveredBottom": 0,
+            "coveredTop": 0
+          },
+          {
+            "sign": 1,
+            "width": 0.28,
+            "tile": [
+              12,
+              10
+            ],
+            "ground": 4,
+            "expectedArea": 0.032217318015592356,
+            "bottom": 4,
+            "top": 4.14,
+            "coveredBottom": 0,
+            "coveredTop": 0
+          },
+          {
+            "sign": 1,
+            "width": 0.14,
+            "tile": [
+              11,
+              10
+            ],
+            "ground": 2,
+            "expectedArea": 0.013149421764652055,
+            "bottom": 2.14,
+            "top": 5.84,
+            "coveredBottom": 0,
+            "coveredTop": 0.013149421764651906,
+            "capContactArea": 0.013149421764651911
+          },
+          {
+            "sign": 1,
+            "width": 0.14,
+            "tile": [
+              12,
+              10
+            ],
+            "ground": 4,
+            "expectedArea": 0.0064505782353481205,
+            "bottom": 4.14,
+            "top": 5.84,
+            "coveredBottom": 0,
+            "coveredTop": 0.0064505106594321335,
+            "capContactArea": 0.006450578235348095
+          }
+        ]
+      }
+    },
+    {
+      "kind": "original-centre-frame-ground",
+      "course": "r8-4-2",
+      "currentFingerprint": "cb343e701992c41cf814e37027d335d0124d087079a8741c83508fbf38b9d031",
+      "originalFingerprint": "64db6fd10137a9e727922067c83aacedb95c7bb8e5a53ae631a4b03519d67819",
+      "originalNative": {
+        "triangles": 1452,
+        "positiveAreaPartitions": 1388,
+        "boundaryPartitions": 48,
+        "vertexMisses": 0,
+        "errorCount": 0,
+        "errors": []
+      },
+      "actualOldContact": {
+        "distance": 5.8,
+        "bentPosition": [
+          47.304795872634216,
+          6,
+          44.01254943081722
+        ],
+        "oldInterpolatedGround": 4,
+        "top": 5.84,
+        "patches": [
+          {
+            "sign": -1,
+            "width": 0.28,
+            "tile": [
+              11,
+              11
+            ],
+            "ground": 4,
+            "expectedArea": 0.07840000000000122,
+            "bottom": 4,
+            "top": 4.14,
+            "coveredBottom": 0.07839955085121023,
+            "coveredTop": 0.07839955085121024
+          },
+          {
+            "sign": -1,
+            "width": 0.14,
+            "tile": [
+              11,
+              11
+            ],
+            "ground": 4,
+            "expectedArea": 0.019600000000000305,
+            "bottom": 4.14,
+            "top": 5.84,
+            "coveredBottom": 0.019599917327344715,
+            "coveredTop": 0.019599917327344722,
+            "capContactArea": 0.019600000000000006
+          },
+          {
+            "sign": 1,
+            "width": 0.28,
+            "tile": [
+              11,
+              10
+            ],
+            "ground": 4,
+            "expectedArea": 0.046182681984408544,
+            "bottom": 4,
+            "top": 4.14,
+            "coveredBottom": 0.04618247609839256,
+            "coveredTop": 0.046182476098392565
+          },
+          {
+            "sign": 1,
+            "width": 0.28,
+            "tile": [
+              12,
+              10
+            ],
+            "ground": 2,
+            "expectedArea": 0.032217318015592356,
+            "bottom": 2,
+            "top": 2.14,
+            "coveredBottom": 0,
+            "coveredTop": 0
+          },
+          {
+            "sign": 1,
+            "width": 0.14,
+            "tile": [
+              11,
+              10
+            ],
+            "ground": 4,
+            "expectedArea": 0.013149421764652055,
+            "bottom": 4.14,
+            "top": 5.84,
+            "coveredBottom": 0.01314942176465191,
+            "coveredTop": 0.013149421764651906,
+            "capContactArea": 0.013149421764651911
+          },
+          {
+            "sign": 1,
+            "width": 0.14,
+            "tile": [
+              12,
+              10
+            ],
+            "ground": 2,
+            "expectedArea": 0.0064505782353481205,
+            "bottom": 2.14,
+            "top": 5.84,
+            "coveredBottom": 0,
+            "coveredTop": 0.0064505106594321335,
+            "capContactArea": 0.006450578235348095
+          }
+        ]
+      }
+    },
+    {
+      "kind": "original-centre-frame-ground",
+      "course": "r8-low-lateral-high-centre",
+      "currentFingerprint": "cc7ed7a4a4abff2ba098d90f5fdeb8a9ed9a102708025abc603096e65b950a75",
+      "originalFingerprint": "14b68c40e73bf64198a94a4409cb77c2956830602e312293aa51e11798aa5f90",
+      "originalNative": {
+        "triangles": 1152,
+        "positiveAreaPartitions": 1241,
+        "boundaryPartitions": 48,
+        "vertexMisses": 0,
+        "errorCount": 0,
+        "errors": []
+      },
+      "actualOldContact": {
+        "distance": 5.8,
+        "bentPosition": [
+          47.304795872634216,
+          6,
+          44.01254943081722
+        ],
+        "oldInterpolatedGround": 6,
+        "top": 5.84,
+        "patches": [
+          {
+            "sign": -1,
+            "width": 0.28,
+            "tile": [
+              11,
+              11
+            ],
+            "ground": 6,
+            "expectedArea": 0,
+            "bottom": 6,
+            "top": 5.84,
+            "coveredBottom": 0,
+            "coveredTop": 0
+          },
+          {
+            "sign": -1,
+            "width": 0.14,
+            "tile": [
+              11,
+              11
+            ],
+            "ground": 6,
+            "expectedArea": 0,
+            "bottom": 6.14,
+            "top": 5.84,
+            "coveredBottom": 0,
+            "coveredTop": 0,
+            "capContactArea": 0
+          },
+          {
+            "sign": 1,
+            "width": 0.28,
+            "tile": [
+              11,
+              10
+            ],
+            "ground": 6,
+            "expectedArea": 0,
+            "bottom": 6,
+            "top": 5.84,
+            "coveredBottom": 0,
+            "coveredTop": 0
+          },
+          {
+            "sign": 1,
+            "width": 0.28,
+            "tile": [
+              12,
+              10
+            ],
+            "ground": 2,
+            "expectedArea": 0.032217318015592356,
+            "bottom": 2,
+            "top": 2.14,
+            "coveredBottom": 0,
+            "coveredTop": 0
+          },
+          {
+            "sign": 1,
+            "width": 0.14,
+            "tile": [
+              11,
+              10
+            ],
+            "ground": 6,
+            "expectedArea": 0,
+            "bottom": 6.14,
+            "top": 5.84,
+            "coveredBottom": 0,
+            "coveredTop": 0,
+            "capContactArea": 0
+          },
+          {
+            "sign": 1,
+            "width": 0.14,
+            "tile": [
+              12,
+              10
+            ],
+            "ground": 2,
+            "expectedArea": 0.0064505782353481205,
+            "bottom": 2.14,
+            "top": 5.84,
+            "coveredBottom": 0,
+            "coveredTop": 0,
+            "capContactArea": 0
+          }
+        ]
+      }
+    },
+    {
+      "kind": "original-centre-frame-ground",
+      "course": "r8-tie-low-legs",
+      "currentFingerprint": "3b82c78e7ed89f7a83a605a7afefdb17771033b7176eafddb68b7a8c000310e6",
+      "originalFingerprint": "9679b69e45b5ad94ddc6044d01695385039482b1c47303986226d88ca84708c1",
+      "originalNative": {
+        "triangles": 1296,
+        "positiveAreaPartitions": 1318,
+        "boundaryPartitions": 48,
+        "vertexMisses": 14,
+        "errorCount": 13,
+        "errors": [
+          {
+            "material": "concrete",
+            "triangle": 1060,
+            "quarter": [
+              24,
+              21
+            ],
+            "kind": "interior",
+            "projectedAreaM2": 0,
+            "polygon": [
+              [
+                48.178836822509766,
+                43.237144470214844,
+                0.14000000059604645
+              ],
+              [
+                48.178836822509766,
+                43.237144470214844,
+                -2.98023217215615e-10
+              ],
+              [
+                48,
+                43.0786981509214,
+                0.11946595361294858
+              ],
+              [
+                48,
+                43.0786981509214,
+                0.14000000059604645
+              ]
+            ]
+          },
+          {
+            "material": "concrete",
+            "triangle": 1061,
+            "quarter": [
+              24,
+              21
+            ],
+            "kind": "interior",
+            "projectedAreaM2": 0,
+            "polygon": [
+              [
+                48.178836822509766,
+                43.237144470214844,
+                -2.98023217215615e-10
+              ],
+              [
+                48,
+                43.0786981509214,
+                -2.98023217215615e-10
+              ],
+              [
+                48,
+                43.0786981509214,
+                0.11946595361294858
+              ]
+            ]
+          },
+          {
+            "material": "concrete",
+            "triangle": 1065,
+            "quarter": [
+              24,
+              21
+            ],
+            "kind": "interior",
+            "projectedAreaM2": 0.032217248346281986,
+            "polygon": [
+              [
+                48,
+                43.43899585576932,
+                0.14000000059604645
+              ],
+              [
+                48.178836822509766,
+                43.237144470214844,
+                0.14000000059604645
+              ],
+              [
+                48,
+                43.0786981509214,
+                0.14000000059604645
+              ]
+            ]
+          },
+          {
+            "material": "concrete",
+            "triangle": 1066,
+            "quarter": [
+              24,
+              21
+            ],
+            "kind": "interior",
+            "projectedAreaM2": 0.01708248280776572,
+            "polygon": [
+              [
+                48,
+                43.24795597295287,
+                -2.98023217215615e-10
+              ],
+              [
+                48.178836822509766,
+                43.237144470214844,
+                -2.98023217215615e-10
+              ],
+              [
+                48,
+                43.43899585576932,
+                -2.98023217215615e-10
+              ]
+            ]
+          },
+          {
+            "material": "concrete",
+            "triangle": 1067,
+            "quarter": [
+              24,
+              21
+            ],
+            "kind": "interior",
+            "projectedAreaM2": 0.015134765538516264,
+            "polygon": [
+              [
+                48,
+                43.0786981509214,
+                -2.98023217215615e-10
+              ],
+              [
+                48.178836822509766,
+                43.237144470214844,
+                -2.98023217215615e-10
+              ],
+              [
+                48,
+                43.24795597295287,
+                -2.98023217215615e-10
+              ]
+            ]
+          },
+          {
+            "material": "concrete",
+            "triangle": 1068,
+            "quarter": [
+              24,
+              21
+            ],
+            "kind": "interior",
+            "projectedAreaM2": 0,
+            "polygon": [
+              [
+                48,
+                43.43899585576932,
+                0.00515993810164727
+              ],
+              [
+                48.178836822509766,
+                43.237144470214844,
+                0.14000000059604645
+              ],
+              [
+                48,
+                43.43899585576932,
+                0.14000000059604645
+              ]
+            ]
+          }
+        ]
+      },
+      "actualOldContact": {
+        "distance": 5.8,
+        "bentPosition": [
+          47.304795872634216,
+          6,
+          44.01254943081722
+        ],
+        "oldInterpolatedGround": 0,
+        "top": 5.84,
+        "patches": [
+          {
+            "sign": -1,
+            "width": 0.28,
+            "tile": [
+              11,
+              11
+            ],
+            "ground": 0,
+            "expectedArea": 0.07840000000000122,
+            "bottom": 0,
+            "top": 0.14,
+            "coveredBottom": 0.07839955085121023,
+            "coveredTop": 0.07839955085121024
+          },
+          {
+            "sign": -1,
+            "width": 0.14,
+            "tile": [
+              11,
+              11
+            ],
+            "ground": 0,
+            "expectedArea": 0.019600000000000305,
+            "bottom": 0.14,
+            "top": 5.84,
+            "coveredBottom": 0.019599917327344715,
+            "coveredTop": 0.019599917327344722,
+            "capContactArea": 0.019600000000000006
+          },
+          {
+            "sign": 1,
+            "width": 0.28,
+            "tile": [
+              11,
+              10
+            ],
+            "ground": 0,
+            "expectedArea": 0.046182681984408544,
+            "bottom": 0,
+            "top": 0.14,
+            "coveredBottom": 0.04618247609839256,
+            "coveredTop": 0.046182476098392565
+          },
+          {
+            "sign": 1,
+            "width": 0.28,
+            "tile": [
+              12,
+              10
+            ],
+            "ground": 2,
+            "expectedArea": 0.032217318015592356,
+            "bottom": 2,
+            "top": 2.14,
+            "coveredBottom": 0,
+            "coveredTop": 0
+          },
+          {
+            "sign": 1,
+            "width": 0.14,
+            "tile": [
+              11,
+              10
+            ],
+            "ground": 0,
+            "expectedArea": 0.013149421764652055,
+            "bottom": 0.14,
+            "top": 5.84,
+            "coveredBottom": 0.01314942176465191,
+            "coveredTop": 0.013149421764651906,
+            "capContactArea": 0.013149421764651911
+          },
+          {
+            "sign": 1,
+            "width": 0.14,
+            "tile": [
+              12,
+              10
+            ],
+            "ground": 2,
+            "expectedArea": 0.0064505782353481205,
+            "bottom": 2.14,
+            "top": 5.84,
+            "coveredBottom": 0,
+            "coveredTop": 0.0064505106594321335,
+            "capContactArea": 0.006450578235348095
+          }
+        ]
+      }
+    },
+    {
+      "kind": "original-centre-frame-ground",
+      "course": "r8-high-lateral-short-post",
+      "currentFingerprint": "04150ee5417c9a734df512037fc0fe83b4989c35b4ed2cf0369e2f7ae5ee6b5a",
+      "originalFingerprint": "d57ddfdab69eab07b15b79548b694f06dbab38da18db9700439ef764a1919166",
+      "originalNative": {
+        "triangles": 1284,
+        "positiveAreaPartitions": 1307,
+        "boundaryPartitions": 48,
+        "vertexMisses": 81,
+        "errorCount": 32,
+        "errors": [
+          {
+            "material": "concrete",
+            "triangle": 1048,
+            "quarter": [
+              23,
+              22
+            ],
+            "kind": "interior",
+            "projectedAreaM2": 0,
+            "polygon": [
+              [
+                46.826011657714844,
+                44.764060974121094,
+                4.299595355987549
+              ],
+              [
+                46.826011657714844,
+                44.764060974121094,
+                4.159595489501953
+              ],
+              [
+                46.61643600463867,
+                44.57837677001953,
+                4.299595355987549
+              ]
+            ]
+          },
+          {
+            "material": "concrete",
+            "triangle": 1049,
+            "quarter": [
+              23,
+              22
+            ],
+            "kind": "interior",
+            "projectedAreaM2": 0,
+            "polygon": [
+              [
+                46.826011657714844,
+                44.764060974121094,
+                4.159595489501953
+              ],
+              [
+                46.61643600463867,
+                44.57837677001953,
+                4.159595489501953
+              ],
+              [
+                46.61643600463867,
+                44.57837677001953,
+                4.299595355987549
+              ]
+            ]
+          },
+          {
+            "material": "concrete",
+            "triangle": 1050,
+            "quarter": [
+              23,
+              22
+            ],
+            "kind": "interior",
+            "projectedAreaM2": 0,
+            "polygon": [
+              [
+                46.430755615234375,
+                44.7879524230957,
+                4.299595355987549
+              ],
+              [
+                46.430755615234375,
+                44.7879524230957,
+                4.159595489501953
+              ],
+              [
+                46.64033126831055,
+                44.973636627197266,
+                4.299595355987549
+              ]
+            ]
+          },
+          {
+            "material": "concrete",
+            "triangle": 1051,
+            "quarter": [
+              23,
+              22
+            ],
+            "kind": "interior",
+            "projectedAreaM2": 0,
+            "polygon": [
+              [
+                46.430755615234375,
+                44.7879524230957,
+                4.159595489501953
+              ],
+              [
+                46.64033126831055,
+                44.973636627197266,
+                4.159595489501953
+              ],
+              [
+                46.64033126831055,
+                44.973636627197266,
+                4.299595355987549
+              ]
+            ]
+          },
+          {
+            "material": "concrete",
+            "triangle": 1052,
+            "quarter": [
+              23,
+              22
+            ],
+            "kind": "interior",
+            "projectedAreaM2": 0.03919993484305451,
+            "polygon": [
+              [
+                46.430755615234375,
+                44.7879524230957,
+                4.299595355987549
+              ],
+              [
+                46.64033126831055,
+                44.973636627197266,
+                4.299595355987549
+              ],
+              [
+                46.61643600463867,
+                44.57837677001953,
+                4.299595355987549
+              ]
+            ]
+          },
+          {
+            "material": "concrete",
+            "triangle": 1053,
+            "quarter": [
+              23,
+              22
+            ],
+            "kind": "interior",
+            "projectedAreaM2": 0.03919993484305451,
+            "polygon": [
+              [
+                46.64033126831055,
+                44.973636627197266,
+                4.299595355987549
+              ],
+              [
+                46.826011657714844,
+                44.764060974121094,
+                4.299595355987549
+              ],
+              [
+                46.61643600463867,
+                44.57837677001953,
+                4.299595355987549
+              ]
+            ]
+          }
+        ]
+      },
+      "actualOldContact": {
+        "distance": 5.8,
+        "bentPosition": [
+          47.304795872634216,
+          6,
+          44.01254943081722
+        ],
+        "oldInterpolatedGround": 4.159595499720533,
+        "top": 5.84,
+        "patches": [
+          {
+            "sign": -1,
+            "width": 0.28,
+            "tile": [
+              11,
+              11
+            ],
+            "ground": 6,
+            "expectedArea": 0,
+            "bottom": 6,
+            "top": 5.84,
+            "coveredBottom": 0,
+            "coveredTop": 0
+          },
+          {
+            "sign": -1,
+            "width": 0.14,
+            "tile": [
+              11,
+              11
+            ],
+            "ground": 6,
+            "expectedArea": 0,
+            "bottom": 6.14,
+            "top": 5.84,
+            "coveredBottom": 0,
+            "coveredTop": 0.019599917327344722,
+            "capContactArea": 0.019600000000000006
+          },
+          {
+            "sign": 1,
+            "width": 0.28,
+            "tile": [
+              11,
+              10
+            ],
+            "ground": 2,
+            "expectedArea": 0.046182681984408544,
+            "bottom": 2,
+            "top": 2.14,
+            "coveredBottom": 0,
+            "coveredTop": 0
+          },
+          {
+            "sign": 1,
+            "width": 0.28,
+            "tile": [
+              12,
+              10
+            ],
+            "ground": 4,
+            "expectedArea": 0.032217318015592356,
+            "bottom": 4,
+            "top": 4.14,
+            "coveredBottom": 0,
+            "coveredTop": 0
+          },
+          {
+            "sign": 1,
+            "width": 0.14,
+            "tile": [
+              11,
+              10
+            ],
+            "ground": 2,
+            "expectedArea": 0.013149421764652055,
+            "bottom": 2.14,
+            "top": 5.84,
+            "coveredBottom": 0,
+            "coveredTop": 0.013149421764651906,
+            "capContactArea": 0.013149421764651911
+          },
+          {
+            "sign": 1,
+            "width": 0.14,
+            "tile": [
+              12,
+              10
+            ],
+            "ground": 4,
+            "expectedArea": 0.0064505782353481205,
+            "bottom": 4.14,
+            "top": 5.84,
+            "coveredBottom": 0,
+            "coveredTop": 0.0064505106594321335,
+            "capContactArea": 0.006450578235348095
+          }
+        ]
+      }
+    }
+  ],
+  "tieContactsFrom004": [
+    {
+      "course": "r8-2-4",
+      "kind": "tie-contact",
+      "expectedTie": false,
+      "parts": 0
+    },
+    {
+      "course": "r8-4-2",
+      "kind": "tie-contact",
+      "expectedTie": false,
+      "parts": 0
+    },
+    {
+      "course": "r8-low-lateral-high-centre",
+      "kind": "tie-contact",
+      "expectedTie": false,
+      "parts": 0
+    },
+    {
+      "course": "r8-tie-low-legs",
+      "kind": "tie-contact",
+      "expectedTie": true,
+      "parts": 3,
+      "low": 3.930000066757202,
+      "high": 4.050000190734863,
+      "joints": [
+        {
+          "sign": -1,
+          "projectedContactAreaM2": 0.008400174958573935,
+          "expectedAreaM2": 0.0084,
+          "postParts": 1,
+          "verticalJoint": [
+            3.930000066757202,
+            4.050000190734863
+          ]
+        },
+        {
+          "sign": 1,
+          "projectedContactAreaM2": 0.008399790316001623,
+          "expectedAreaM2": 0.0084,
+          "postParts": 2,
+          "verticalJoint": [
+            3.930000066757202,
+            4.050000190734863
+          ]
+        }
+      ]
+    },
+    {
+      "course": "r8-high-lateral-short-post",
+      "kind": "tie-contact",
+      "expectedTie": false,
+      "parts": 0
+    }
+  ],
+  "notes": [
+    "attempt-002 remains exit1 and passed:false; only named passing groups are consumed.",
+    "The phase actual-engine-varied-courses-and-native in focused attempts003/004 only constructs five actual courses. Their nativeCases and nativeTriangles are zero; no accepted matrix rerun occurred.",
+    "No half-grid translated orientation fixture is used. Actual Engine commands, quotes, receipts, origins and surface values are retained in every result.",
+    "The quarter-removal control concerns the retained real triangle whose three vertices and centroid still pass; it does not claim that every vertex of the entire mutated mesh remains contained.",
+    "Real THREE.Texture metadata replaces channel painting in this geometry diagnostic. Canvas pixels and ctx.text are outside scope."
+  ]
+}

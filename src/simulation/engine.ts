@@ -1,18 +1,22 @@
-import {LIMITS,type Cell,type Command,type Connector,type Element,type ErrorCode,type FixedBody,type Path,type Portal,type Quote,type Scenery,type Receipt,type Result,type Ride,type TrackedRide,type Rules,type State,type Tile,type Track,type WorldOptions} from './types.js';
+import {LIMITS,type Cell,type ChannelRide,type Command,type Connector,type Element,type ErrorCode,type FixedBody,type Path,type Portal,type Quote,type Scenery,type Receipt,type Result,type Ride,type TrackedRide,type Rules,type State,type Tile,type Track,type WorldOptions} from './types.js';
 import {Fault,ensure,integer,record,result} from './validation.js';
 import {endpoint,same,validateRules} from './geometry.js';
 import {eligibility,portalApproach,validatePortal} from './operation.js';
 import {compileCourse,createTrain,stepTrain,type Course,type Measurements,type Train} from './motion.js';
-import {boardCarousel,boardGuests,detachRideGuests,recoverPeople,stepPeople,unloadGuests,type Guest,type PathPoint,type PeopleIndex,type Routing} from './people.js';
+import {boardBoat,boardCarousel,boardGuests,detachRideGuests,recoverPeople,stepPeople,unloadBoat,unloadGuests,type Guest,type PathPoint,type PeopleIndex,type Routing} from './people.js';
 import {facilityApproach,recoverStaff,sharedCount,stepFinance,stepStaff,type Facility,type FacilityElement,type ServiceIndex,type Staff} from './services.js';
 import {amenityPoint,recoverCleanup,stepHandymen,type Amenity,type AmenityElement} from './housekeeping.js';
 import {encodePatrol,inPatrol} from './patrol.js';
 import {project,validateView} from './view.js';
-import {legacyRuleJSON,v9RuleJSON,resolveRideRules,rideFootprint,woodenProfile} from '../content/ride-profiles.js';
+import {legacyRuleJSON,v9RuleJSON,v10RuleJSON,resolveRideRules,rideFootprint,woodenProfile} from '../content/ride-profiles.js';
 import {carouselCycleTicks,carouselEditable,fixedBodyCells,fixedProfile,newCarouselSession,type CarouselSession} from './carousel.js';
 import {qualifyWoodenCourse} from './wooden-motion.js';
 import {woodenInterface,woodenPortalCells} from './wooden-placement.js';
 import {Routes} from './routes.js';
+import {flumeProfile} from './flume-profile.js';
+import {compileFlumeCourse,flumeGroundCells,flumeInterface,type FlumeCourse} from './flume-native.js';
+import {flumePortalCells,flumePortalInterface} from './flume-portal.js';
+import {boatEditable,boatQualified,createBoat,finishBoatUnloading,stepBoat,type Boat} from './boat.js';
 import {sceneryTypes} from './scenery.js';
 import {CONTENT_VERSION,catalogue,executableContent,legacyRideContent,legacyFacilityContent,resolveContent} from '../content/registry.js';
 type Index=ServiceIndex&{cells:Map<number,{id:number,cell:Cell}[]>,records:number};
@@ -65,6 +69,7 @@ export class Engine{
   private session=Array.from(globalThis.crypto.getRandomValues(new Uint32Array(4)),n=>n.toString(16).padStart(8,'0')).join('');
   private generation=0n;
   private courses=new Map<number,Course>();
+  private channels=new Map<number,FlumeCourse>();
   private routes=new Routes();
   private state:State;
   private rules:Rules;
@@ -78,14 +83,14 @@ export class Engine{
     if(options.land){ensure(Array.isArray(options.land)&&options.land.length<=65536,'INVALID_COMMAND','Invalid land setup.');const seen=new Set<number>();
       for(const l of options.land){record(l,['tile','height','water','owned']);validTile(l.tile);this.bounds(l.tile,options.side);ensure(!seen.has(at(l.tile))&&integer(l.height,0,this.rules.maxHeight)&&l.height%16===0&&integer(l.water,0,this.rules.maxHeight)&&l.water%16===0&&(l.water===0||l.water>=l.height)&&typeof l.owned==='boolean','INVALID_COMMAND','Invalid land setup.');seen.add(at(l.tile));terrain[at(l.tile)]=l.height;water[at(l.tile)]=l.water;owned[at(l.tile)]=l.owned;}
     }
-    this.state={version:10,contentVersion:CONTENT_VERSION,nextInstance:1,amenities:[],litter:[],facilities:[],retiredShopIncome:0,retiredStock:0,retiredRideIncome:0,staff:[],rules:JSON.stringify(this.rules),side:options.side,tick:0,revision:0,topologyRevision:0,rng:options.seed,paused:false,initialCash:options.cash,cash:options.cash,loan:0,maxLoan:options.maxLoan,spent:0,refunded:0,nextElement:1,nextEntity:1,people:{entry:null,open:false,guests:[],departedSpent:0},ledger:{rideSales:0,shopSales:0,stock:0,wages:0,upkeep:0,interest:0},trains:[],carouselSessions:[],terrain,water,owned,rides:[],elements:[]};
+    this.state={version:11,contentVersion:CONTENT_VERSION,nextInstance:1,amenities:[],litter:[],facilities:[],retiredShopIncome:0,retiredStock:0,retiredRideIncome:0,staff:[],rules:JSON.stringify(this.rules),side:options.side,tick:0,revision:0,topologyRevision:0,rng:options.seed,paused:false,initialCash:options.cash,cash:options.cash,loan:0,maxLoan:options.maxLoan,spent:0,refunded:0,nextElement:1,nextEntity:1,people:{entry:null,open:false,guests:[],departedSpent:0},ledger:{rideSales:0,shopSales:0,stock:0,wages:0,upkeep:0,interest:0},trains:[],carouselSessions:[],boats:[],terrain,water,owned,rides:[],elements:[]};
     this.index=this.indexState(this.state);
   }
   get revision():string{return `${this.session}:${this.generation}:${this.state.revision}`;}
-  view(input:unknown){return result(()=>({...project(this.state,this.rules,validateView(input,this.state.side),this.index.elements,id=>this.course(this.ride(id))),commandRevision:this.revision}));}
+  view(input:unknown){return result(()=>({...project(this.state,this.rules,validateView(input,this.state.side),this.index.elements,id=>this.course(this.ride(id)),id=>this.channelCourse(this.ride(id))),commandRevision:this.revision}));}
   inspect(kind:unknown,id:unknown){return result(()=>{ensure(integer(id,0),'INVALID_COMMAND','Invalid selection identifier.');const selected=kind==='guest'?this.index.guests.get(id):kind==='staff'?this.index.staff.get(id):kind==='element'?this.index.elements.get(id):undefined;ensure(selected,'UNKNOWN_ELEMENT','Selection is unavailable.');return structuredClone(selected);});}
   snapshot():State{return structuredClone(this.state);}
-  catalogue(){return catalogue(new Set([...Object.keys(this.rules.rideProfiles??{}),...Object.keys(this.rules.fixedProfiles??{})]));}
+  catalogue(){return catalogue(new Set([...Object.keys(this.rules.rideProfiles??{}),...Object.keys(this.rules.fixedProfiles??{}),...Object.keys(this.rules.channelProfiles??{})]));}
   exportSave():string{return JSON.stringify(this.state);}
   restoreSave(input:unknown):Result<void>{return result(()=>{
     ensure(typeof input==='string'&&input.length<=64*1024*1024,'INVALID_SAVE','Invalid or oversized save.');let candidate:State;
@@ -96,7 +101,7 @@ export class Engine{
       if(legacy?.version===6){
         ensure(typeof legacy.rules==='string'&&Array.isArray(legacy.elements)&&!legacy.elements.some(e=>e?.kind==='scenery'),'INVALID_SAVE','Invalid legacy park.');
         let previous:Rules;try{previous=JSON.parse(legacy.rules);}catch{throw new Fault('INVALID_SAVE','Legacy rule profile is not JSON.');}
-        ensure(previous!==null&&typeof previous==='object'&&!Array.isArray(previous),'INVALID_SAVE','Invalid legacy rule profile.');ensure(!Object.hasOwn(previous,'scenery')&&!Object.hasOwn(previous,'rideProfiles')&&!Object.hasOwn(previous,'fixedProfiles'),'INVALID_SAVE','Invalid legacy rule profile.');
+        ensure(previous!==null&&typeof previous==='object'&&!Array.isArray(previous),'INVALID_SAVE','Invalid legacy rule profile.');ensure(!Object.hasOwn(previous,'scenery')&&!Object.hasOwn(previous,'rideProfiles')&&!Object.hasOwn(previous,'fixedProfiles')&&!Object.hasOwn(previous,'channelProfiles'),'INVALID_SAVE','Invalid legacy rule profile.');
         legacy.rules=legacyRuleJSON(validateRules(previous));legacy.version=7;
       }
       if(legacy?.version===7){
@@ -112,11 +117,15 @@ export class Engine{
       }
       if(legacy?.version===9){
         this.indexState(candidate,9);
-        Object.assign(candidate,{version:10,contentVersion:CONTENT_VERSION,rules:JSON.stringify(this.rules),carouselSessions:[],retiredRideIncome:0});
+        Object.assign(candidate,{version:10,contentVersion:3,rules:v10RuleJSON(this.rules),carouselSessions:[],retiredRideIncome:0});
+      }
+      if(legacy?.version===10){
+        this.indexState(candidate,10);
+        Object.assign(candidate,{version:11,contentVersion:CONTENT_VERSION,rules:JSON.stringify(this.rules),boats:[]});
       }
       index=this.indexState(candidate);
     }catch(e){if(e instanceof Fault)throw new Fault(e.code==='WRONG_RULES'?'WRONG_RULES':'INVALID_SAVE',e.message);throw e;}
-    this.state=candidate;this.index=index;this.courses.clear();this.routes=new Routes();this.generation++;
+    this.state=candidate;this.index=index;this.courses.clear();this.channels.clear();this.routes=new Routes();this.generation++;
   });}
   quote(input:unknown):Result<Quote>{return result(()=>{const p=this.plan(command(input));this.finances(p);return{revision:this.revision,cost:p.cost,cells:structuredClone(p.cells),...(p.endpoint?{endpoint:{...p.endpoint}}:{})};});}
   execute(input:unknown,expectedRevision:string):Result<Receipt>{return result(()=>{
@@ -133,8 +142,8 @@ export class Engine{
   advance(ticks:number):Result<number>{return result(()=>{
     ensure(integer(ticks,0,4096),'INVALID_COMMAND','Invalid tick batch.');if(this.state.paused)return 0;
     ensure(integer(this.state.tick+ticks),'CAPACITY','Clock capacity exhausted.');
-    const candidate:State={...this.state,amenities:this.state.amenities.map(a=>({...a})),litter:[...this.state.litter],facilities:this.state.facilities.map(f=>({...f})),staff:this.state.staff.map(t=>({...t})),ledger:{...this.state.ledger},rides:this.state.rides.map(r=>({...r,queue:[...r.queue]})),trains:this.state.trains.map(t=>({...t,seats:[...t.seats],stats:{...t.stats}})),carouselSessions:this.state.carouselSessions.map(t=>({...t,seats:[...t.seats]})),people:{...this.state.people,guests:this.state.people.guests.map(g=>({...g}))}};
-    const index:Index={...this.index,amenities:new Map(candidate.amenities.map(a=>[a.id,a])),litter:new Map(candidate.litter.map(l=>[l.id,l])),facilities:new Map(candidate.facilities.map(f=>[f.id,f])),staff:new Map(candidate.staff.map(t=>[t.id,t])),rides:new Map(candidate.rides.map(r=>[r.id,r])),trains:new Map(candidate.trains.map(t=>[t.ride,t])),carouselSessions:new Map(candidate.carouselSessions.map(t=>[t.ride,t])),guests:new Map(candidate.people.guests.map(g=>[g.id,g]))};
+    const candidate:State={...this.state,amenities:this.state.amenities.map(a=>({...a})),litter:[...this.state.litter],facilities:this.state.facilities.map(f=>({...f})),staff:this.state.staff.map(t=>({...t})),ledger:{...this.state.ledger},rides:this.state.rides.map(r=>({...r,queue:[...r.queue]})),trains:this.state.trains.map(t=>({...t,seats:[...t.seats],stats:{...t.stats}})),carouselSessions:this.state.carouselSessions.map(t=>({...t,seats:[...t.seats]})),boats:this.state.boats.map(b=>({...b,seats:[...b.seats],stats:{...b.stats},measured:b.measured?{...b.measured}:null})),people:{...this.state.people,guests:this.state.people.guests.map(g=>({...g}))}};
+    const index:Index={...this.index,amenities:new Map(candidate.amenities.map(a=>[a.id,a])),litter:new Map(candidate.litter.map(l=>[l.id,l])),facilities:new Map(candidate.facilities.map(f=>[f.id,f])),staff:new Map(candidate.staff.map(t=>[t.id,t])),rides:new Map(candidate.rides.map(r=>[r.id,r])),trains:new Map(candidate.trains.map(t=>[t.ride,t])),carouselSessions:new Map(candidate.carouselSessions.map(t=>[t.ride,t])),boats:new Map(candidate.boats.map(b=>[b.ride,b])),guests:new Map(candidate.people.guests.map(g=>[g.id,g]))};
     const route=this.navigation(candidate,index);
     for(let i=0;i<ticks;i++){
       candidate.tick++;stepFinance(candidate,this.rules);stepStaff(candidate,this.rules,index,route);stepHandymen(candidate,this.rules,index,route);stepPeople(candidate,this.rules,index,route);
@@ -165,6 +174,17 @@ export class Engine{
           session.phaseTick=Math.min(profile.unloadTicks,session.phaseTick+1);
           if(session.phaseTick===profile.unloadTicks&&unloadGuests(session,candidate,this.rules,index,route)){session.phase='loading';session.phaseTick=0;}
         }
+      }
+      for(const boat of candidate.boats){
+        const ride=index.rides.get(boat.ride)!,p=flumeProfile(ride.content,this.rules)!.vehicle,course=this.channelCourse(ride);
+        if(ride.broken)continue;
+        const inspection=boatEditable(boat,course)&&candidate.staff.some(t=>t.job?.ride===ride.id&&t.job.kind==='inspection'&&t.goal&&t.point.x===t.goal.x&&t.point.y===t.goal.y&&t.point.z===t.goal.z);
+        if(inspection)continue;
+        if(boat.phase==='loading'&&boat.wait%p.boardTicks===0)boardBoat(boat,candidate,this.rules,index,route);
+        // Keep a successful qualification available until an explicit new Test intent.
+        const dispatch=boat.phase==='loading'?(boat.seats.some(id=>id!==null)?'paid':ride.status==='testing'&&boat.measured===null?'testing':null):null;
+        stepBoat(boat,course,p,dispatch);
+        if(boat.phase==='unloading'&&boat.wait===p.unloadTicks&&unloadBoat(boat,candidate,this.rules,index,route))finishBoatUnloading(boat,course,p);
       }
     }
     this.state=candidate;this.index=index;
@@ -197,15 +217,18 @@ export class Engine{
     distance:(from,to,ride,patrol)=>this.routes.distance(index.paths,state.topologyRevision,from,to,ride,patrol),
   };}
   private rideRules(ride:Ride){return resolveRideRules(ride.content??legacyRideContent(),this.rules);}
-  private course(ride:Ride){ensure(ride.body===undefined,'INVALID_CONTENT','Fixed rides do not have a track course.');let course=this.courses.get(ride.id);if(!course){const selected=this.rideRules(ride),profile=woodenProfile(ride.content??legacyRideContent(),this.rules);course=compileCourse(ride,this.index.elements,selected,selected.motion);if(profile)qualifyWoodenCourse(ride,course,profile);this.courses.set(ride.id,course);}return course;}
-  private tracked(ride:Ride):TrackedRide{ensure(ride.body===undefined,'INVALID_CONTENT','This command requires a tracked ride.');return ride;}
-  private editable(ride:Ride){if(ride.body!==undefined){const session=this.index.carouselSessions.get(ride.id);ensure(ride.status==='closed'&&session&&carouselEditable(session),'RIDE_ACTIVE','Close the Carousel and wait for an empty loading session at home before editing.');return;}const train=this.index.trains.get(ride.id);ensure(ride.status==='closed'&&(!train||train.phase==='waiting'&&!train.seats.some(id=>id!==null)),'RIDE_ACTIVE','Close the ride and wait for its empty train to return before editing.');}
-  private discardTrain(ride:number){this.state.trains=this.state.trains.filter(t=>t.ride!==ride);this.index.trains.delete(ride);this.courses.delete(ride);}
-  private tip(r:TrackedRide):Connector{const id=r.track.at(-1);if(id===undefined)return{...r.anchor};const p=this.index.elements.get(id)! as Track;return endpoint(p.origin,this.rideRules(r).pieces[p.piece]!);}
-  private cells(e:Element,index=this.index):Cell[]{
+  private course(ride:Ride){const tracked=this.tracked(ride);let course=this.courses.get(ride.id);if(!course){const selected=this.rideRules(ride),profile=woodenProfile(ride.content??legacyRideContent(),this.rules);course=compileCourse(tracked,this.index.elements,selected,selected.motion);if(profile)qualifyWoodenCourse(tracked,course,profile);this.courses.set(ride.id,course);}return course;}
+  private trackRide(ride:Ride):TrackedRide|ChannelRide{ensure(ride.body===undefined,'INVALID_CONTENT','This command requires ordered track.');return ride;}
+  private tracked(ride:Ride):TrackedRide{ensure(ride.body===undefined&&!flumeProfile(ride.content,this.rules),'INVALID_CONTENT','This command requires a coaster train.');return ride as TrackedRide;}
+  private channelCourse(ride:Ride){const tracked=this.trackRide(ride);ensure(flumeProfile(ride.content,this.rules),'INVALID_CONTENT','A channel course requires its receiving profile.');let course=this.channels.get(ride.id);if(!course){course=compileFlumeCourse(tracked,this.index.elements);this.channels.set(ride.id,course);}return course;}
+  private editable(ride:Ride){if(ride.body!==undefined){const session=this.index.carouselSessions.get(ride.id);ensure(ride.status==='closed'&&session&&carouselEditable(session),'RIDE_ACTIVE','Close the Carousel and wait for an empty loading session at home before editing.');return;}if(flumeProfile(ride.content,this.rules)){const boat=this.index.boats.get(ride.id);ensure(ride.status==='closed'&&(!boat||boatEditable(boat,this.channelCourse(ride))),'RIDE_ACTIVE','Close the channel and wait for an empty boat at its loading dock before editing.');return;}const train=this.index.trains.get(ride.id);ensure(ride.status==='closed'&&(!train||train.phase==='waiting'&&!train.seats.some(id=>id!==null)),'RIDE_ACTIVE','Close the ride and wait for its empty train to return before editing.');}
+  private discardTrain(ride:number){const r=this.index.rides.get(ride);if(r&&flumeProfile(r.content,this.rules))for(const staff of this.state.staff)if(staff.job?.ride===ride&&staff.job.kind==='inspection'){staff.job=null;staff.work=0;staff.goal=null;staff.next=null;staff.progress=0;}this.state.trains=this.state.trains.filter(t=>t.ride!==ride);this.state.boats=this.state.boats.filter(b=>b.ride!==ride);this.index.trains.delete(ride);this.index.boats.delete(ride);this.courses.delete(ride);this.channels.delete(ride);}
+  private tip(r:TrackedRide|ChannelRide):Connector{const id=r.track.at(-1);if(id===undefined)return{...r.anchor};const p=this.index.elements.get(id)! as Track;return endpoint(p.origin,this.rideRules(r).pieces[p.piece]!);}
+  private cells(e:Element,index=this.index,s=this.state):Cell[]{
     if(e.kind==='fixed-body')return fixedBodyCells(e,fixedProfile(index.rides.get(e.ride)!.content,this.rules)!);
     if(e.kind==='portal'){const profile=fixedProfile(index.rides.get(e.ride)!.content,this.rules);if(profile)return[{x:e.tile.x,y:e.tile.y,low:e.height,high:e.height+profile.portalHeight,mask:15}];}
-    if(e.kind==='track'){const ride=index.rides.get(e.ride)!,selected=this.rideRules(ride);return rideFootprint(e.origin,selected.pieces[e.piece]!,woodenProfile(ride.content??legacyRideContent(),this.rules),e.piece);}
+    if(e.kind==='track'){const ride=index.rides.get(e.ride)!,selected=this.rideRules(ride);if(flumeProfile(ride.content,this.rules))return flumeGroundCells(e,c=>({height:s.terrain[at(c)]!,water:s.water[at(c)]!,owned:s.owned[at(c)]!}),this.rules.maxHeight);return rideFootprint(e.origin,selected.pieces[e.piece]!,woodenProfile(ride.content??legacyRideContent(),this.rules),e.piece);}
+    if(e.kind==='portal'&&flumeProfile(index.rides.get(e.ride)!.content,this.rules))return flumePortalCells(e);
     if(e.kind==='portal'&&woodenProfile(index.rides.get(e.ride)!.content??legacyRideContent(),this.rules)){const station=index.elements.get(e.station);ensure(station?.kind==='track','GEOMETRY','Wooden transition requires its actual station.');return woodenPortalCells(e,station);}
     return[{x:e.tile.x,y:e.tile.y,low:e.height,high:e.height+(e.kind==='scenery'?this.rules.scenery[e.sceneryType].height:16),mask:e.kind==='amenity'?1:15}];
   }
@@ -214,7 +237,11 @@ export class Engine{
       if(candidate?.kind==='track'&&woodenProfile(index.rides.get(candidate.ride)!.content??legacyRideContent(),this.rules))ensure(candidate.origin.z===ground&&water===0,'GEOMETRY','The wooden candidate requires level, dry ground beneath its track.');
       if(candidate?.kind==='fixed-body'||candidate?.kind==='portal'&&fixedProfile(index.rides.get(candidate.ride)!.content,this.rules))ensure(candidate.height===ground&&water===0,'GEOMETRY','The Carousel and its portals require level dry ground.');
       ensure(c.low>=ground&&c.low>=water,'CLEARANCE','Construction intersects terrain or water.');ensure(c.low-ground<=this.rules.maxSupport,'SUPPORT','Support height exceeded.');
-      for(const occupied of index.cells.get(at(c))??[])if(occupied.id!==ignore)ensure(!(c.mask&occupied.cell.mask)||c.low>=occupied.cell.high||c.high<=occupied.cell.low||candidate&&woodenInterface(candidate,index.elements.get(occupied.id)!,index.rides,index.elements,this.rules),'CLEARANCE','Construction intersects an existing element.');
+      for(const occupied of index.cells.get(at(c))??[])if(occupied.id!==ignore){
+        const other=index.elements.get(occupied.id)!,rideId=candidate&&(candidate.kind==='track'||candidate.kind==='portal')?candidate.ride:other.kind==='track'||other.kind==='portal'?other.ride:null,ride=rideId===null?undefined:index.rides.get(rideId),channel=ride&&flumeProfile(ride.content,this.rules);
+        const seam=channel&&candidate&&ride.body===undefined?candidate.kind==='track'&&other.kind==='track'?flumeInterface(candidate,other,ride,index.elements,c,occupied.cell):flumePortalInterface(candidate,other,ride,index.elements,c,occupied.cell):false;
+        ensure(!(c.mask&occupied.cell.mask)||c.low>=occupied.cell.high||c.high<=occupied.cell.low||seam||candidate&&woodenInterface(candidate,other,index.rides,index.elements,this.rules),'CLEARANCE','Construction intersects an existing element.');
+      }
     }
     ensure(index.records+cells.length<=LIMITS.tileElements,'CAPACITY','Tile element capacity exhausted.');
   }
@@ -238,31 +265,32 @@ export class Engine{
           this.clear(cells,this.state,overlay,null,body);
           return{cost:profile.buildPrice,category:'construction',cells,id,commit:()=>{this.state.rides.push(r);this.index.rides.set(id,r);this.add(body,cells);this.state.carouselSessions.push(session);this.index.carouselSessions.set(id,session);this.state.nextInstance++;this.state.topologyRevision++;}};
         }
-        let id=0;while(this.index.rides.has(id)||this.index.facilities.has(id))id++;const r:Ride={id,instanceId:this.state.nextInstance,content,name:c.name,anchor:{x:c.tile.x*32,y:c.tile.y*32,z:c.height,direction:c.direction,pitch:0,bank:0},track:[],status:'closed',cars:1,price:this.rules.guests.defaultRidePrice,income:0,broken:false,lastInspection:this.state.tick,queue:[]};
+        const channel=flumeProfile(content,this.rules);let id=0;while(this.index.rides.has(id)||this.index.facilities.has(id))id++;const r:Ride={id,instanceId:this.state.nextInstance,content,name:c.name,anchor:{x:c.tile.x*32,y:c.tile.y*32,z:c.height,direction:c.direction,pitch:0,bank:0},track:[],status:'closed',...(channel?{}:{cars:1}),price:channel?.vehicle.defaultPrice??this.rules.guests.defaultRidePrice,income:0,broken:false,lastInspection:this.state.tick,queue:[]};
         return{...empty,id,commit:()=>{this.state.rides.push(r);this.index.rides.set(id,r);this.state.nextInstance++;}};
       }
       case 'append-track':{
-        const r=this.tracked(this.ride(c.ride)),selected=this.rideRules(r);this.editable(r);ensure(Object.hasOwn(selected.pieces,c.piece),'GEOMETRY','Unknown track piece for the selected ride.');const p=selected.pieces[c.piece]!,origin=this.tip(r);
+        const r=this.trackRide(this.ride(c.ride)),selected=this.rideRules(r);this.editable(r);ensure(Object.hasOwn(selected.pieces,c.piece),'GEOMETRY','Unknown track piece for the selected ride.');const p=selected.pieces[c.piece]!,origin=this.tip(r);
         ensure(!(r.track.length>1&&same(origin,r.anchor)),'CIRCUIT_CLOSED','Remove a section before extending a closed circuit.');
         ensure(r.track.length>0||p.station,'GEOMETRY','A ride starts with a station.');ensure(origin.pitch===p.entry.pitch&&origin.bank===p.entry.bank,'GEOMETRY','Connector pitch or bank does not match.');
-        ensure(this.state.nextElement<Number.MAX_SAFE_INTEGER,'CAPACITY','Element identifier capacity exhausted.');const end=endpoint(origin,p);validConnector(end);const cells=rideFootprint(origin,p,woodenProfile(r.content,this.rules),c.piece);
+        ensure(this.state.nextElement<Number.MAX_SAFE_INTEGER,'CAPACITY','Element identifier capacity exhausted.');const end=endpoint(origin,p);validConnector(end);
         const e:Track={id:this.state.nextElement,kind:'track',ride:r.id,piece:c.piece,origin};
         const candidate={...r,track:[...r.track,e.id]},overlay={get:(id:number)=>id===e.id?e:this.index.elements.get(id),values:()=>this.index.elements.values()};
         const constructionIndex={...this.index,rides:new Map(this.index.rides).set(r.id,candidate),elements:new Map(this.index.elements).set(e.id,e)};
+        const cells=this.cells(e,constructionIndex);
         this.clear(cells,this.state,constructionIndex,null,e);
         for(const portal of this.state.elements)if(portal.kind==='portal'&&portal.ride===r.id)validatePortal(portal,candidate,overlay,this.rules);
         return{cost:p.price,category:'construction',cells,endpoint:end,id:e.id,commit:()=>{this.discardTrain(r.id);this.add(e,cells);r.track.push(e.id);}};
       }
       case 'remove-last-track':{
-        const r=this.tracked(this.ride(c.ride)),id=r.track.at(-1);this.editable(r);ensure(id!==undefined,'UNKNOWN_ELEMENT','Ride has no track.');ensure(!this.state.elements.some(e=>e.kind==='portal'&&e.station===id),'OPERATING_REQUIREMENTS','Remove station portals before removing their track.');const e=this.index.elements.get(id)! as Track;const cost=-Math.floor(this.rideRules(r).pieces[e.piece]!.price*this.rules.refundPerThousand/1000);
+        const r=this.trackRide(this.ride(c.ride)),id=r.track.at(-1);this.editable(r);ensure(id!==undefined,'UNKNOWN_ELEMENT','Ride has no track.');ensure(!this.state.elements.some(e=>e.kind==='portal'&&e.station===id),'OPERATING_REQUIREMENTS','Remove station portals before removing their track.');const e=this.index.elements.get(id)! as Track;const cost=-Math.floor(this.rideRules(r).pieces[e.piece]!.price*this.rules.refundPerThousand/1000);
         return{cost,category:'refund',cells:[],commit:()=>{this.discardTrain(r.id);this.remove(e);r.track.pop();}};
       }
       case 'remove-ride':{
-        const r=this.ride(c.ride),profile=fixedProfile(r.content,this.rules);ensure(profile&&r.body!==undefined,'INVALID_CONTENT','Whole-ride demolition currently requires a Carousel.');this.editable(r);
+        const r=this.ride(c.ride),profile=fixedProfile(r.content,this.rules),channel=flumeProfile(r.content,this.rules);ensure(profile&&r.body!==undefined||channel&&r.body===undefined,'INVALID_CONTENT','Whole-ride demolition requires a Carousel or channel ride.');this.editable(r);
         ensure(integer(this.state.retiredRideIncome+r.income),'CAPACITY','Retired ride income capacity exhausted.');
-        const elements=this.state.elements.filter(e=>(e.kind==='portal'||e.kind==='fixed-body')&&e.ride===r.id),body=this.index.elements.get(r.body);
-        ensure(body?.kind==='fixed-body','UNKNOWN_ELEMENT','The Carousel body is unavailable.');
-        const refund=Math.floor(profile.buildPrice*this.rules.refundPerThousand/1000)+elements.filter(e=>e.kind==='portal').length*Math.floor(profile.portalPrice*this.rules.refundPerThousand/1000);
+        const elements=this.state.elements.filter(e=>(e.kind==='portal'||e.kind==='fixed-body'||channel&&e.kind==='track')&&e.ride===r.id);
+        if(profile)ensure(r.body!==undefined&&this.index.elements.get(r.body)?.kind==='fixed-body','UNKNOWN_ELEMENT','The Carousel body is unavailable.');
+        const refund=elements.reduce((total,e)=>total+Math.floor((e.kind==='portal'?(profile?.portalPrice??channel!.vehicle.portalPrice):e.kind==='fixed-body'?profile!.buildPrice:e.kind==='track'?channel!.pieces[e.piece]!.price:0)*this.rules.refundPerThousand/1000),0);
         return{cost:-refund,category:'refund',cells:[],commit:()=>{
           for(const e of this.state.elements)if(e.kind==='path'&&e.queueFor===r.id)e.queueFor=null;
           this.state.topologyRevision++;
@@ -271,6 +299,7 @@ export class Engine{
           for(const e of elements)this.remove(e);
           this.state.retiredRideIncome+=r.income;this.state.rides=this.state.rides.filter(ride=>ride.id!==r.id);this.index.rides.delete(r.id);
           this.state.carouselSessions=this.state.carouselSessions.filter(s=>s.ride!==r.id);this.index.carouselSessions.delete(r.id);this.index.accessCache.delete(r.id);
+          this.discardTrain(r.id);
         }};
       }
       case 'place-scenery':{
@@ -290,6 +319,7 @@ export class Engine{
         this.owned(c.tile);ensure(c.height%16===0&&c.height<=this.rules.maxHeight&&c.water<=this.rules.maxHeight&&(c.water===0||c.water>=c.height),'GEOMETRY','Invalid terrain or water height.');const i=at(c.tile);
         for(const occupied of this.index.cells.get(i)??[]){const element=this.index.elements.get(occupied.id);if(element?.kind==='track'&&woodenProfile(this.index.rides.get(element.ride)!.content??legacyRideContent(),this.rules))ensure(c.height===this.state.terrain[i]&&c.water===0,'GEOMETRY','Remove wooden track before changing the ground or adding water beneath it.');ensure(element?.kind!=='scenery'||occupied.cell.low===c.height,'CLEARANCE','Remove scenery before changing its ground height.');ensure(occupied.cell.low>=Math.max(c.height,c.water),'CLEARANCE','Terrain change intersects construction.');ensure(occupied.cell.low-c.height<=this.rules.maxSupport,'SUPPORT','Terrain change leaves unsupported construction.');}
         for(const occupied of this.index.cells.get(i)??[]){const e=this.index.elements.get(occupied.id);if(e?.kind==='fixed-body'||e?.kind==='portal'&&fixedProfile(this.index.rides.get(e.ride)!.content,this.rules))ensure(c.height===this.state.terrain[i]&&c.water===0,'GEOMETRY','Remove the Carousel before changing its ground or adding water.');}
+        for(const occupied of this.index.cells.get(i)??[]){const e=this.index.elements.get(occupied.id);if((e?.kind==='track'||e?.kind==='portal')&&flumeProfile(this.index.rides.get(e.ride)!.content,this.rules))ensure(c.height===this.state.terrain[i]&&c.water===this.state.water[i],'GEOMETRY','Remove the channel and its portals before changing their support ground or water.');}
         const cost=(Math.abs(this.state.terrain[i]!-c.height)+Math.abs(this.state.water[i]!-c.water))/16*this.rules.terrainPrice;
         return{cost,category:'construction',cells:[],commit:()=>{this.state.terrain[i]=c.height;this.state.water[i]=c.water;this.state.topologyRevision++;}};
       }
@@ -298,21 +328,34 @@ export class Engine{
         ensure(this.state.nextElement<Number.MAX_SAFE_INTEGER,'CAPACITY','Element identifier capacity exhausted.');
         const e:Portal={id:this.state.nextElement,kind:'portal',ride:r.id,station:c.station,role:c.role,tile:c.tile,height:c.height,direction:c.direction};
         validatePortal(e,r,this.index.elements,this.rules);const cells=this.cells(e);this.clear(cells,this.state,this.index,null,e);
-        return{cost:fixedProfile(r.content,this.rules)?.portalPrice??this.rules.portalPrice,category:'construction',cells,id:e.id,commit:()=>{this.add(e,cells);this.state.topologyRevision++;}};
+        return{cost:fixedProfile(r.content,this.rules)?.portalPrice??flumeProfile(r.content,this.rules)?.vehicle.portalPrice??this.rules.portalPrice,category:'construction',cells,id:e.id,commit:()=>{this.add(e,cells);this.state.topologyRevision++;}};
       }
       case 'remove-portal':{
         const e=this.index.elements.get(c.id);ensure(e?.kind==='portal','UNKNOWN_ELEMENT','Portal does not exist.');
         this.editable(this.ride(e.ride));
-        return{cost:-Math.floor((fixedProfile(this.ride(e.ride).content,this.rules)?.portalPrice??this.rules.portalPrice)*this.rules.refundPerThousand/1000),category:'refund',cells:[],commit:()=>{this.remove(e);this.state.topologyRevision++;}};
+        return{cost:-Math.floor((fixedProfile(this.ride(e.ride).content,this.rules)?.portalPrice??flumeProfile(this.ride(e.ride).content,this.rules)?.vehicle.portalPrice??this.rules.portalPrice)*this.rules.refundPerThousand/1000),category:'refund',cells:[],commit:()=>{this.remove(e);this.state.topologyRevision++;}};
       }
       case 'set-ride-status':{
         const r=this.ride(c.ride);
+        const channel=flumeProfile(r.content,this.rules);
+        if(channel){
+          let boat=this.index.boats.get(r.id),created:Boat|undefined;let course:FlumeCourse|undefined;
+          if(c.status!=='closed'){
+            const gates=eligibility(r,this.index.elements,this.rules);ensure(gates.issues.length===0,'OPERATING_REQUIREMENTS',gates.issues.join(' '));course=this.channelCourse(r);
+            if(c.status==='open')ensure(boat&&boatQualified(boat,course,channel.vehicle),'OPERATING_REQUIREMENTS','The current channel requires a qualified empty test lap before opening.');
+            if(c.status==='testing'){
+              ensure(!boat||boatEditable(boat,course),'RIDE_ACTIVE','A fresh test requires an empty boat at its loading dock.');
+              if(!boat){ensure(sharedCount(this.state)<LIMITS.sharedEntities&&integer(this.state.nextEntity+1),'CAPACITY','Shared boat capacity exhausted.');boat=created=createBoat(this.state.nextEntity,r.id,course);}
+            }
+          }
+          return{...empty,commit:()=>{r.status=c.status;if(created){this.state.boats.push(created);this.index.boats.set(r.id,created);this.state.nextEntity++;}if(boat&&c.status==='testing'){boat.measured=null;boat.wait=0;}else if(boat?.phase==='loading'&&boat.seats.every(id=>id===null))boat.wait=0;}};
+        }
         let train:Train|undefined;
         if(c.status!=='closed'){
           const gates=eligibility(r,this.index.elements,this.rules);ensure(gates.issues.length===0,'OPERATING_REQUIREMENTS',gates.issues.join(' '));
           if(r.body===undefined&&!this.index.trains.has(r.id)){
-            ensure(sharedCount(this.state)+r.cars<=LIMITS.sharedEntities&&integer(this.state.nextEntity+r.cars),'CAPACITY','Shared entity or identifier capacity exhausted.');
-            train=createTrain(r.id,Array.from({length:r.cars},(_,i)=>this.state.nextEntity+i),this.course(r),this.rideRules(r).motion);
+            const tracked=this.tracked(r);ensure(sharedCount(this.state)+tracked.cars<=LIMITS.sharedEntities&&integer(this.state.nextEntity+tracked.cars),'CAPACITY','Shared entity or identifier capacity exhausted.');
+            train=createTrain(r.id,Array.from({length:tracked.cars},(_,i)=>this.state.nextEntity+i),this.course(r),this.rideRules(r).motion);
           }
         }
         return{...empty,commit:()=>{r.status=c.status;const session=this.index.carouselSessions.get(r.id);if(session&&carouselEditable(session)&&c.status!=='testing')session.phaseTick=0;if(train){this.state.trains.push(train);this.index.trains.set(r.id,train);this.state.nextEntity+=train.carIds.length;}}};
@@ -335,7 +378,7 @@ export class Engine{
         return{...empty,commit:()=>{this.state.people.open=c.open;}};
       }
       case 'set-ride-price':{
-        const r=this.ride(c.ride);ensure(c.price<=(fixedProfile(r.content,this.rules)?.maxPrice??this.rules.guests.maxRidePrice),'CAPACITY','Ticket price exceeds the supported range.');return{...empty,commit:()=>{r.price=c.price;}};
+        const r=this.ride(c.ride);ensure(c.price<=(fixedProfile(r.content,this.rules)?.maxPrice??flumeProfile(r.content,this.rules)?.vehicle.maxPrice??this.rules.guests.maxRidePrice),'CAPACITY','Ticket price exceeds the supported range.');return{...empty,commit:()=>{r.price=c.price;}};
       }
       case 'set-ride-broken':{const r=this.ride(c.ride);return{...empty,commit:()=>{r.broken=c.broken;}};}
       case 'place-amenity':{
@@ -397,28 +440,28 @@ export class Engine{
     for(const ride of s.rides)if(ride.body!==undefined)ensure(tracks.get(ride.body)?.kind==='fixed-body','INVALID_SAVE','Carousel has no fixed body.');
     return tracks;
   }
-  private indexState(s:State,legacy?:7|8|9):Index{
-    const identified=legacy!==7;
-    record(s,['amenities','litter','facilities','retiredShopIncome','retiredStock','staff','version','rules','side','tick','revision','topologyRevision','rng','paused','initialCash','cash','loan','maxLoan','spent','refunded','nextElement','nextEntity','people','ledger','trains','terrain','water','owned','rides','elements',...(identified?['contentVersion','nextInstance']:[]),...(!legacy?['carouselSessions','retiredRideIncome']:[])]);
-    ensure((s as {version:number}).version===(legacy??10),'INVALID_SAVE','Unsupported save version.');ensure(s.rules===(legacy===9?v9RuleJSON(this.rules):legacy?legacyRuleJSON(this.rules):JSON.stringify(this.rules)),'WRONG_RULES','Save rule profile differs from the engine.');
-    if(identified)ensure((s as {contentVersion:number}).contentVersion===(legacy===8?1:legacy===9?2:CONTENT_VERSION)&&integer(s.nextInstance,1),'INVALID_SAVE','Unsupported content version or invalid instance counter.');
+  private indexState(s:State,legacy?:7|8|9|10):Index{
+    const identified=legacy!==7,fixed=legacy===10||legacy===undefined;
+    record(s,['amenities','litter','facilities','retiredShopIncome','retiredStock','staff','version','rules','side','tick','revision','topologyRevision','rng','paused','initialCash','cash','loan','maxLoan','spent','refunded','nextElement','nextEntity','people','ledger','trains','terrain','water','owned','rides','elements',...(identified?['contentVersion','nextInstance']:[]),...(fixed?['carouselSessions','retiredRideIncome']:[]),...(!legacy?['boats']:[])]);
+    ensure((s as {version:number}).version===(legacy??11),'INVALID_SAVE','Unsupported save version.');ensure(s.rules===(legacy===10?v10RuleJSON(this.rules):legacy===9?v9RuleJSON(this.rules):legacy?legacyRuleJSON(this.rules):JSON.stringify(this.rules)),'WRONG_RULES','Save rule profile differs from the engine.');
+    if(identified)ensure((s as {contentVersion:number}).contentVersion===(legacy===8?1:legacy===9?2:legacy===10?3:CONTENT_VERSION)&&integer(s.nextInstance,1),'INVALID_SAVE','Unsupported content version or invalid instance counter.');
     ensure(integer(s.side,LIMITS.mapMin,LIMITS.mapMax)&&integer(s.rng,0,0xffffffff)&&typeof s.paused==='boolean','INVALID_SAVE','Invalid world metadata.');
     for(const n of [s.tick,s.revision,s.topologyRevision,s.initialCash,s.loan,s.maxLoan,s.spent,s.refunded,s.retiredShopIncome,s.retiredStock])ensure(integer(n),'INVALID_SAVE','Invalid clock or money field.');
-    if(!legacy)ensure(integer(s.retiredRideIncome),'INVALID_SAVE','Invalid retired ride income.');
+    if(fixed)ensure(integer(s.retiredRideIncome),'INVALID_SAVE','Invalid retired ride income.');
     record(s.ledger,['rideSales','shopSales','stock','wages','upkeep','interest']);for(const n of Object.values(s.ledger))ensure(integer(n),'INVALID_SAVE','Invalid operating ledger.');
     ensure(integer(s.cash,-Number.MAX_SAFE_INTEGER)&&s.topologyRevision<=s.revision&&s.loan<=s.maxLoan&&s.refunded<=s.spent&&BigInt(s.initialCash)+BigInt(s.loan)-BigInt(s.spent)+BigInt(s.refunded)+BigInt(s.ledger.rideSales)+BigInt(s.ledger.shopSales)-BigInt(s.ledger.stock)-BigInt(s.ledger.wages)-BigInt(s.ledger.upkeep)-BigInt(s.ledger.interest)===BigInt(s.cash)&&integer(s.nextElement,1),'INVALID_SAVE','Inconsistent finances or revisions.');
     for(const a of [s.terrain,s.water,s.owned])ensure(Array.isArray(a)&&a.length===65536,'INVALID_SAVE','Invalid backing map.');
     for(let i=0;i<65536;i++){const h=s.terrain[i]!,w=s.water[i]!;ensure(integer(h,0,this.rules.maxHeight)&&h%16===0&&integer(w,0,this.rules.maxHeight)&&w%16===0&&(w===0||w>=h)&&typeof s.owned[i]==='boolean','INVALID_SAVE','Invalid surface record.');if(i%256===0||Math.floor(i/256)===0||i%256>=s.side-1||Math.floor(i/256)>=s.side-1)ensure(!s.owned[i],'INVALID_SAVE','Boundary/outside land cannot be owned.');}
     ensure(Array.isArray(s.rides)&&Array.isArray(s.facilities)&&s.rides.length+s.facilities.length<=255&&Array.isArray(s.elements)&&s.elements.length<=LIMITS.tileElements-65536,'INVALID_SAVE','Resource capacity exceeded.');
-    const index:Index={amenities:new Map(),litter:new Map(),facilities:new Map(),staff:new Map(),elements:new Map(),rides:new Map(),trains:new Map(),carouselSessions:new Map(),guests:new Map(),accessCache:new Map(),cells:new Map(),paths:new Map(),records:65536};
+    const index:Index={amenities:new Map(),litter:new Map(),facilities:new Map(),staff:new Map(),elements:new Map(),rides:new Map(),trains:new Map(),carouselSessions:new Map(),boats:new Map(),guests:new Map(),accessCache:new Map(),cells:new Map(),paths:new Map(),records:65536};
     const instanceIds=new Set<number>();
-    const identity=(instance:Ride|Facility,kind:'ride'|'food'|'drink'|'restroom')=>{if(!identified)return;if(legacy===8){const expected=kind==='ride'?legacyRideContent():legacyFacilityContent(kind);const actual=executableContent(instance.content,kind);ensure(actual.familyId===expected.familyId&&actual.variantId===expected.variantId&&actual.modeId===expected.modeId,'INVALID_SAVE','Legacy content cannot introduce a later ride capability.');}if(legacy===9&&kind==='ride')ensure(resolveContent(instance.content).capabilities.construction.kind==='tracked','INVALID_SAVE','A v9 park cannot contain a fixed ride.');ensure(integer(instance.instanceId,1,s.nextInstance-1)&&!instanceIds.has(instance.instanceId),'INVALID_SAVE','Duplicate or invalid constructed instance identity.');executableContent(instance.content,kind);instanceIds.add(instance.instanceId);};
+    const identity=(instance:Ride|Facility,kind:'ride'|'food'|'drink'|'restroom')=>{if(!identified)return;if(legacy===8){const expected=kind==='ride'?legacyRideContent():legacyFacilityContent(kind);const actual=executableContent(instance.content,kind);ensure(actual.familyId===expected.familyId&&actual.variantId===expected.variantId&&actual.modeId===expected.modeId,'INVALID_SAVE','Legacy content cannot introduce a later ride capability.');}if(kind==='ride'&&(legacy===9||legacy===10)){const construction=resolveContent(instance.content).capabilities.construction.kind;ensure(legacy===9?construction==='tracked':construction!=='channel','INVALID_SAVE','Legacy park cannot contain a later ride capability.');}ensure(integer(instance.instanceId,1,s.nextInstance-1)&&!instanceIds.has(instance.instanceId),'INVALID_SAVE','Duplicate or invalid constructed instance identity.');executableContent(instance.content,kind);instanceIds.add(instance.instanceId);};
     for(const r of s.rides){
       ensure(r!==null&&typeof r==='object','INVALID_SAVE','Invalid ride record.');
-      identity(r,'ride');const profile=identified?fixedProfile(r.content,this.rules):null;
-      record(r,['id','name','anchor',...(profile?['body']:['track','cars']),'status','price','income','broken','lastInspection','queue',...(identified?['instanceId','content']:[])]);
-      ensure(['closed','testing','open'].includes(r.status)&&integer(r.price,0,profile?.maxPrice??this.rules.guests.maxRidePrice)&&integer(r.income)&&typeof r.broken==='boolean'&&integer(r.lastInspection,0,s.tick)&&Array.isArray(r.queue)&&r.queue.length<=LIMITS.sharedEntities,'INVALID_SAVE','Invalid operating status or price.');
-      ensure(profile?integer(r.body,1,s.nextElement-1):r.body===undefined&&integer(r.cars,1,this.rideRules(r).motion.maxCars)&&Array.isArray(r.track)&&r.track.length<=s.elements.length,'INVALID_SAVE','Invalid ride construction membership.');
+      identity(r,'ride');const profile=identified?fixedProfile(r.content,this.rules):null,channel=identified?flumeProfile(r.content,this.rules):null;
+      record(r,['id','name','anchor',...(profile?['body']:channel?['track']:['track','cars']),'status','price','income','broken','lastInspection','queue',...(identified?['instanceId','content']:[])]);
+      ensure(['closed','testing','open'].includes(r.status)&&integer(r.price,0,profile?.maxPrice??channel?.vehicle.maxPrice??this.rules.guests.maxRidePrice)&&integer(r.income)&&typeof r.broken==='boolean'&&integer(r.lastInspection,0,s.tick)&&Array.isArray(r.queue)&&r.queue.length<=LIMITS.sharedEntities,'INVALID_SAVE','Invalid operating status or price.');
+      ensure(profile?integer(r.body,1,s.nextElement-1):r.body===undefined&&(channel||integer(r.cars,1,this.rideRules(r).motion.maxCars))&&Array.isArray(r.track)&&r.track.length<=s.elements.length,'INVALID_SAVE','Invalid ride construction membership.');
       ensure(integer(r.id,0,254)&&!index.rides.has(r.id)&&typeof r.name==='string'&&r.name.length>0&&r.name.length<=80,'INVALID_SAVE','Invalid ride record.');validConnector(r.anchor);this.owned({x:r.anchor.x/32,y:r.anchor.y/32},s);ensure(r.anchor.pitch===0&&r.anchor.bank===0&&r.anchor.z<=this.rules.maxHeight,'INVALID_SAVE','Invalid ride anchor.');index.rides.set(r.id,r);
     }
     for(const f of s.facilities){record(f,['id','name','kind','element','open','price','income','sales',...(identified?['instanceId','content']:[])]);identity(f,f.kind);ensure(integer(f.id,0,254)&&!index.rides.has(f.id)&&!index.facilities.has(f.id)&&typeof f.name==='string'&&f.name.length>0&&f.name.length<=80&&['food','drink','restroom'].includes(f.kind)&&integer(f.element,1,s.nextElement-1)&&typeof f.open==='boolean'&&integer(f.price,0,this.rules.services.maxPrice)&&integer(f.income)&&integer(f.sales)&&BigInt(f.income)<=BigInt(f.sales)*BigInt(this.rules.services.maxPrice),'INVALID_SAVE','Invalid facility record.');index.facilities.set(f.id,f);}
@@ -426,19 +469,20 @@ export class Engine{
     let activeCost=0n;
     for(const e of s.elements){ensure(e!==null&&typeof e==='object','INVALID_SAVE','Invalid element record.');ensure(integer(e.id,1,s.nextElement-1)&&!index.elements.has(e.id),'INVALID_SAVE','Duplicate or invalid element identifier.');
       if(e.kind==='track'){record(e,['id','kind','ride','piece','origin']);ensure(typeof e.piece==='string'&&integer(e.ride,0,254)&&index.rides.has(e.ride)&&Object.hasOwn(this.rideRules(index.rides.get(e.ride)!).pieces,e.piece),'INVALID_SAVE','Unknown track metadata.');validConnector(e.origin);activeCost+=BigInt(this.rideRules(index.rides.get(e.ride)!).pieces[e.piece]!.price);}
-      else if(e.kind==='fixed-body'){ensure(!legacy,'INVALID_SAVE','Legacy parks cannot contain fixed bodies.');activeCost+=BigInt(fixedProfile(index.rides.get(e.ride)!.content,this.rules)!.buildPrice);}
+      else if(e.kind==='fixed-body'){ensure(fixed,'INVALID_SAVE','Legacy parks cannot contain fixed bodies.');activeCost+=BigInt(fixedProfile(index.rides.get(e.ride)!.content,this.rules)!.buildPrice);}
       else if(e.kind==='scenery'){record(e,['id','kind','sceneryType','tile','height']);validTile(e.tile);ensure(sceneryTypes.includes(e.sceneryType)&&integer(e.height,0,this.rules.maxHeight)&&e.height%16===0&&e.height===s.terrain[at(e.tile)],'INVALID_SAVE','Invalid scenery metadata.');activeCost+=BigInt(this.rules.scenery[e.sceneryType].price);}
       else if(e.kind==='amenity'){record(e,['id','kind','amenityType','path','tile','height']);validTile(e.tile);const path=index.elements.get(e.path);ensure(['bench','bin'].includes(e.amenityType)&&integer(e.path,1)&&path?.kind==='path'&&path.queueFor===null&&path.tile.x===e.tile.x&&path.tile.y===e.tile.y&&path.height===e.height,'INVALID_SAVE','Invalid attached amenity.');activeCost+=BigInt(this.rules.housekeeping.buildPrice);}
       else if(e.kind==='facility'){record(e,['id','kind','facility','tile','height','direction']);validTile(e.tile);ensure(integer(e.facility,0,254)&&index.facilities.get(e.facility)?.element===e.id&&integer(e.height,0,this.rules.maxHeight)&&e.height%8===0&&integer(e.direction,0,3),'INVALID_SAVE','Invalid facility element.');activeCost+=BigInt(this.rules.services.buildPrice);}
-      else if(e.kind==='portal'){record(e,['id','kind','ride','station','role','tile','height','direction']);validTile(e.tile);ensure(integer(e.ride,0,254)&&index.rides.has(e.ride)&&integer(e.station,1)&&(e.role==='entrance'||e.role==='exit')&&integer(e.direction,0,3)&&integer(e.height,0,this.rules.maxHeight)&&e.height%8===0,'INVALID_SAVE','Invalid portal metadata.');activeCost+=BigInt(fixedProfile(index.rides.get(e.ride)!.content,this.rules)?.portalPrice??this.rules.portalPrice);}
+      else if(e.kind==='portal'){record(e,['id','kind','ride','station','role','tile','height','direction']);validTile(e.tile);ensure(integer(e.ride,0,254)&&index.rides.has(e.ride)&&integer(e.station,1)&&(e.role==='entrance'||e.role==='exit')&&integer(e.direction,0,3)&&integer(e.height,0,this.rules.maxHeight)&&e.height%8===0,'INVALID_SAVE','Invalid portal metadata.');activeCost+=BigInt(fixedProfile(index.rides.get(e.ride)!.content,this.rules)?.portalPrice??flumeProfile(index.rides.get(e.ride)!.content,this.rules)?.vehicle.portalPrice??this.rules.portalPrice);}
       else{record(e,['id','kind','tile','height','queueFor']);ensure(e.kind==='path'&&integer(e.height,0,this.rules.maxHeight)&&e.height%8===0&&(e.queueFor===null||integer(e.queueFor,0,254)&&index.rides.has(e.queueFor)),'INVALID_SAVE','Invalid path metadata.');validTile(e.tile);activeCost+=BigInt(this.rules.pathPrice);}
-      const placementIndex={...index,elements:placementElements},cells=this.cells(e,placementIndex);this.clear(cells,s,placementIndex,e.kind==='amenity'?e.path:null,e);for(const c of cells){const a=index.cells.get(at(c))??[];a.push({id:e.id,cell:c});index.cells.set(at(c),a);}index.records+=cells.length;index.elements.set(e.id,e);placementElements.set(e.id,e);if(e.kind==='path')index.paths.set(pathKey(e.tile.x,e.tile.y,e.height),e);
+      const placementIndex={...index,elements:placementElements},cells=this.cells(e,placementIndex,s);this.clear(cells,s,placementIndex,e.kind==='amenity'?e.path:null,e);for(const c of cells){const a=index.cells.get(at(c))??[];a.push({id:e.id,cell:c});index.cells.set(at(c),a);}index.records+=cells.length;index.elements.set(e.id,e);placementElements.set(e.id,e);if(e.kind==='path')index.paths.set(pathKey(e.tile.x,e.tile.y,e.height),e);
     }
     ensure(BigInt(s.spent)-BigInt(s.refunded)>=activeCost,'INVALID_SAVE','Active construction exceeds its net expenditure.');
     for(const e of s.elements)if(e.kind==='portal')validatePortal(e,index.rides.get(e.ride)!,index.elements,this.rules);
     for(const r of s.rides)if(r.status!=='closed')ensure(eligibility(r,index.elements,this.rules).issues.length===0,'INVALID_SAVE','Operating ride has invalid prerequisites.');
     this.validateTrains(s,index);
-    if(!legacy)this.validateCarouselSessions(s,index);
+    if(fixed)this.validateCarouselSessions(s,index);
+    if(!legacy)this.validateBoats(s,index);
     this.validateHousekeeping(s,index);
     this.validatePeople(s,index,legacy);
     this.validateServices(s,index);
@@ -473,7 +517,7 @@ export class Engine{
       index.trains.set(t.ride,t);
     }
     ensure(ids.size<=LIMITS.sharedEntities,'INVALID_SAVE','Shared entity capacity exceeded.');
-    for(const r of s.rides)ensure(r.body!==undefined||r.status==='closed'||index.trains.has(r.id),'INVALID_SAVE','Operating ride has no train.');
+    for(const r of s.rides)ensure(r.body!==undefined||flumeProfile(r.content,this.rules)||r.status==='closed'||index.trains.has(r.id),'INVALID_SAVE','Operating coaster has no train.');
   }
   private validateCarouselSessions(s:State,index:Index){
     ensure(Array.isArray(s.carouselSessions)&&s.carouselSessions.length<=s.rides.length,'INVALID_SAVE','Invalid Carousel sessions.');
@@ -489,12 +533,44 @@ export class Engine{
     }
     for(const ride of s.rides)if(ride.body!==undefined)ensure(index.carouselSessions.has(ride.id),'INVALID_SAVE','Carousel has no authoritative session.');
   }
-  private validatePeople(s:State,index:Index,legacy?:7|8|9){
+  private validateBoats(s:State,index:Index){
+    ensure(Array.isArray(s.boats)&&s.boats.length<=s.rides.length,'INVALID_SAVE','Invalid boats.');
+    const ids=new Set(s.trains.flatMap(t=>t.carIds));
+    for(const boat of s.boats){
+      record(boat,['id','ride','seats','phase','position','travelled','speed','wait','laps','docking','mode','stats','measured']);
+      const ride=index.rides.get(boat.ride),profile=ride?flumeProfile(ride.content,this.rules):null;
+      ensure(integer(boat.id,1,s.nextEntity-1)&&!ids.has(boat.id)&&integer(boat.ride,0,254)&&ride&&ride.body===undefined&&profile&&!index.boats.has(boat.ride)&&!index.trains.has(boat.ride),'INVALID_SAVE','Invalid boat identity or membership.');ids.add(boat.id);
+      const course=compileFlumeCourse(ride,index.elements),p=profile.vehicle;
+      ensure(Array.isArray(boat.seats)&&boat.seats.length===4&&boat.seats.every(id=>id===null||integer(id,1))&&['loading','running','unloading'].includes(boat.phase)&&integer(boat.position,0,course.length-1)&&integer(boat.travelled,0,course.length)&&integer(boat.speed,0,1000000000)&&integer(boat.wait,0,p.maxLoadTicks-1)&&integer(boat.laps,0,s.tick)&&typeof boat.docking==='boolean'&&[null,'testing','paid'].includes(boat.mode),'INVALID_SAVE','Invalid boat motion or ordered occupants.');
+      ensure(boat.position===(course.dock+boat.travelled)%course.length,'INVALID_SAVE','Boat position disagrees with its current travel.');
+      const occupied=boat.seats.some(id=>id!==null);
+      if(boat.phase==='loading'){
+        ensure(boat.position===course.dock&&boat.speed===0&&(boat.travelled===0||boat.travelled===course.length)&&boat.mode===null&&!boat.docking,'INVALID_SAVE','Loading boat is outside its dock.');
+        if(!occupied)ensure(ride.status==='testing'?boat.wait<p.minLoadTicks:boat.wait===0,'INVALID_SAVE','Empty boat has an invalid loading clock.');
+        else ensure(ride.status!=='testing'&&boatQualified(boat,course,p),'INVALID_SAVE','Paid loading requires a qualified current test.');
+      }else if(boat.phase==='running')ensure(boat.speed>0&&boat.travelled>0&&boat.travelled<course.length&&boat.wait===0&&boat.mode!==null,'INVALID_SAVE','Invalid running boat phase.');
+      else ensure(boat.position===course.dock&&boat.speed===0&&boat.travelled===course.length&&boat.laps>0&&boat.wait<=p.unloadTicks&&boat.mode!==null,'INVALID_SAVE','Invalid unloading boat phase.');
+      const measurements=(m:Boat['stats'],complete:boolean)=>{record(m,complete?['ticks','distance','maxSpeed','courseKey']:['ticks','distance','maxSpeed']);ensure(integer(m.ticks,complete?1:0,s.tick)&&integer(m.distance,0,course.length)&&integer(m.maxSpeed,complete?p.channelSpeed:0,1000000000)&&(!complete||m.distance===course.length&&m.maxSpeed<=p.maxSpeed),'INVALID_SAVE','Invalid boat measurements.');};
+      measurements(boat.stats,false);ensure(boat.stats.distance===boat.travelled&&boat.stats.maxSpeed>=boat.speed,'INVALID_SAVE','Boat travel and measurements disagree.');
+      if(boat.travelled===course.length)ensure(boat.laps>0&&boat.stats.ticks>0,'INVALID_SAVE','Completed boat travel has no lap.');
+      if(boat.measured!==null){measurements(boat.measured,true);ensure(boat.laps>0&&boat.measured.courseKey===course.key,'INVALID_SAVE','Boat witness belongs to another course.');}
+      if(boat.mode==='testing'){
+        ensure(!occupied,'INVALID_SAVE','Testing boat has paid occupants.');
+        if(boat.phase==='unloading')ensure(boat.stats.maxSpeed<=p.maxSpeed?boat.measured!==null&&(['ticks','distance','maxSpeed'] as const).every(key=>boat.measured![key]===boat.stats[key]):boat.measured===null,'INVALID_SAVE','Current completed test and witness disagree.');
+        else ensure(boat.measured===null,'INVALID_SAVE','Testing boat has a premature witness.');
+      }
+      if(boat.mode==='paid')ensure(occupied&&boatQualified(boat,course,p),'INVALID_SAVE','Paid boat requires owners and a qualified current course.');
+      if(ride.status==='open')ensure(boatQualified(boat,course,p),'INVALID_SAVE','Open channel has no qualified current test.');
+      index.boats.set(boat.ride,boat);
+    }
+    for(const ride of s.rides)if(flumeProfile(ride.content,this.rules))ensure(ride.status==='closed'||index.boats.has(ride.id),'INVALID_SAVE','Operating channel has no boat.');
+  }
+  private validatePeople(s:State,index:Index,legacy?:7|8|9|10){
     record(s.people,['entry','open','guests','departedSpent']);
     ensure(typeof s.people.open==='boolean'&&integer(s.people.departedSpent)&&Array.isArray(s.people.guests)&&s.people.guests.length<=LIMITS.sharedEntities,'INVALID_SAVE','Invalid park guest state.');
     if(s.people.entry!==null){validPoint(s.people.entry);this.owned(s.people.entry,s);}
     ensure(!s.people.open||s.people.entry!==null&&index.paths.get(pathKey(s.people.entry.x,s.people.entry.y,s.people.entry.z))?.queueFor===null,'INVALID_SAVE','Open park has no public entrance.');
-    const ids=new Set(s.trains.flatMap(t=>t.carIds));let payments=BigInt(s.people.departedSpent);
+    const ids=new Set([...s.trains.flatMap(t=>t.carIds),...Array.from(index.boats.values(),b=>b.id)]);let payments=BigInt(s.people.departedSpent);
     for(const g of s.people.guests){
       record(g,['navigationRide','amenity','restProgress','wrapper','wrapperTick','facility','serviceProgress','bladder','id','point','phase','goal','next','walkProgress','destination','entrance','exit','queueRide','seat','initialCash','cash','spent','fareLimit','forceTolerance','hunger','thirst','nausea','happiness','energy','queuedAt','lastRide','lastRideTick','ridesTaken','thought']);
       ensure(integer(g.id,1,s.nextEntity-1)&&!ids.has(g.id),'INVALID_SAVE','Duplicate or invalid guest entity.');ids.add(g.id);index.guests.set(g.id,g);
@@ -534,13 +610,13 @@ export class Engine{
       }
     }
     ensure(ids.size<=LIMITS.sharedEntities&&payments===BigInt(s.ledger.rideSales)+BigInt(s.ledger.shopSales),'INVALID_SAVE','Shared entity or guest payment totals are inconsistent.');
-    ensure(BigInt(legacy?0:s.retiredRideIncome)+s.rides.reduce((sum,r)=>sum+BigInt(r.income),0n)===BigInt(s.ledger.rideSales),'INVALID_SAVE','Ride income does not reconcile.');
+    ensure(BigInt(legacy&&legacy<10?0:s.retiredRideIncome)+s.rides.reduce((sum,r)=>sum+BigInt(r.income),0n)===BigInt(s.ledger.rideSales),'INVALID_SAVE','Ride income does not reconcile.');
     const queued=new Set<number>(),seated=new Set<number>();
     for(const r of s.rides){
-      ensure(!r.queue.length||r.status==='open'&&!r.broken&&index.trains.get(r.id)?.measured!==null,'INVALID_SAVE','Inactive ride has queued guests.');
+      ensure(!r.queue.length||r.status==='open'&&!r.broken&&(r.body!==undefined?index.carouselSessions.has(r.id):flumeProfile(r.content,this.rules)?!!index.boats.get(r.id)?.measured:!!index.trains.get(r.id)?.measured),'INVALID_SAVE','Inactive ride has queued guests.');
       for(const id of r.queue){const guest=index.guests.get(id);ensure(integer(id,1)&&!queued.has(id)&&guest?.phase==='queued'&&guest.queueRide===r.id,'INVALID_SAVE','Invalid or duplicate queue membership.');queued.add(id);}
     }
-    for(const t of [...s.trains,...index.carouselSessions.values()])for(let slot=0;slot<t.seats.length;slot++){
+    for(const t of [...s.trains,...index.carouselSessions.values(),...index.boats.values()])for(let slot=0;slot<t.seats.length;slot++){
       const id=t.seats[slot];if(id===null)continue;const guest=index.guests.get(id!);
       ensure(!seated.has(id!)&&!queued.has(id!)&&guest?.phase==='riding'&&guest.seat?.ride===t.ride&&guest.seat.slot===slot,'INVALID_SAVE','Invalid or duplicate seat ownership.');seated.add(id!);
     }
@@ -548,10 +624,10 @@ export class Engine{
   }
   private validateServices(s:State,index:Index){
     ensure(Array.isArray(s.staff)&&s.staff.length<=LIMITS.staff,'INVALID_SAVE','Staff capacity exceeded.');
-    const ids=new Set([...s.trains.flatMap(t=>t.carIds),...s.people.guests.map(g=>g.id)]),jobs=new Set<number>();
+    const ids=new Set([...s.trains.flatMap(t=>t.carIds),...Array.from(index.boats.values(),b=>b.id),...s.people.guests.map(g=>g.id)]),jobs=new Set<number>();
     for(const t of s.staff){
       record(t,['cleanup','id','role','point','next','goal','progress','patrol','job','work','completed']);ensure(integer(t.id,1,s.nextEntity-1)&&!ids.has(t.id)&&['mechanic','handyman'].includes(t.role),'INVALID_SAVE','Invalid staff identity.');ids.add(t.id);index.staff.set(t.id,t);
-      const jobRide=t.job?index.rides.get(t.job.ride):undefined,jobProfile=jobRide?fixedProfile(jobRide.content,this.rules):null;
+      const jobRide=t.job?index.rides.get(t.job.ride):undefined,jobChannel=jobRide?flumeProfile(jobRide.content,this.rules):null,jobProfile=jobRide?fixedProfile(jobRide.content,this.rules)??jobChannel?.vehicle:null;
       validPoint(t.point);this.owned(t.point,s);ensure(integer(t.progress,0,this.rules.services.staffWalkTicks-1)&&integer(t.work,0,Math.max(jobProfile?.repairTicks??this.rules.services.repairTicks,jobProfile?.inspectionTicks??this.rules.services.inspectionTicks,this.rules.housekeeping.cleanupTicks)-1)&&integer(t.completed,0,s.tick)&&Array.isArray(t.patrol)&&(t.patrol.length===0||t.patrol.length===2048),'INVALID_SAVE','Invalid staff work state.');
       for(const word of t.patrol)ensure(integer(word,0,0xffffffff),'INVALID_SAVE','Invalid patrol word.');if(t.patrol.length)for(let bit=0;bit<65536;bit++)if(inPatrol(t.patrol,{x:bit%256,y:Math.floor(bit/256)}))this.owned({x:bit%256,y:Math.floor(bit/256)},s);
       for(const p of [t.goal,t.next])if(p!==null){validPoint(p);ensure(index.paths.get(pathKey(p.x,p.y,p.z))?.queueFor===null,'INVALID_SAVE','Staff navigation has no public path.');}
@@ -560,7 +636,7 @@ export class Engine{
       if(t.job!==null){record(t.job,['ride','kind']);const ride=index.rides.get(t.job.ride);ensure(t.role==='mechanic'&&integer(t.job.ride,0,254)&&ride&&!jobs.has(t.job.ride)&&['repair','inspection'].includes(t.job.kind)&&t.goal!==null&&(t.job.kind!=='repair'||ride.broken),'INVALID_SAVE','Invalid or duplicated staff job.');jobs.add(t.job.ride);
         ensure([...index.elements.values()].some(e=>e.kind==='portal'&&e.ride===t.job!.ride&&t.goal!.x===portalApproach(e).x&&t.goal!.y===portalApproach(e).y&&t.goal!.z===e.height),'INVALID_SAVE','Mechanic goal is not a station approach.');
         ensure(t.work<(t.job.kind==='repair'?(jobProfile?.repairTicks??this.rules.services.repairTicks):(jobProfile?.inspectionTicks??this.rules.services.inspectionTicks))&&(t.work===0||t.point.x===t.goal.x&&t.point.y===t.goal.y&&t.point.z===t.goal.z),'INVALID_SAVE','Staff service progress contradicts arrival.');
-        if(jobProfile&&t.job.kind==='inspection'&&t.work>0)ensure(carouselEditable(index.carouselSessions.get(ride.id)!),'INVALID_SAVE','Carousel inspection requires an empty session at home.');
+        if(jobProfile&&t.job.kind==='inspection'&&t.work>0){if(jobChannel){const boat=index.boats.get(ride.id);ensure(ride.body===undefined&&boat&&boatEditable(boat,compileFlumeCourse(ride,index.elements)),'INVALID_SAVE','Channel inspection requires an empty boat at its dock.');}else ensure(carouselEditable(index.carouselSessions.get(ride.id)!),'INVALID_SAVE','Carousel inspection requires an empty session at home.');}
         const route=this.navigation(s,index).find(t.point,t.goal,null,t.patrol);ensure(route.length>0&&route.every(p=>inPatrol(t.patrol,p)),'INVALID_SAVE','Staff job is unreachable within patrol.');
       }else if(t.cleanup===null)ensure(t.goal===null&&t.next===null&&t.work===0,'INVALID_SAVE','Idle staff retain an unowned job.');
     }

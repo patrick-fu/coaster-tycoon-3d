@@ -1,0 +1,22 @@
+{
+  "checkedUtc": "2026-10-09T13:39:47.188026+00:00",
+  "scope": "Mac filesystem hash audit only; browser/runtime and cleanup actually executed on Grok. Prior206 snapshot remains dated journal evidence; final209 corpus includes final verification records.",
+  "files": 209,
+  "mismatches": [],
+  "manifestSha256": "3a15d2d44e5ddaa6fadc5baadeec0a9512bee1bf30f2926d05f89963f425f71c",
+  "reportSha256": "72ebf7333e91cf46b996821aac4ea376405fa9aace6d07fe9ad0d14f38d3bc82",
+  "cleanup": {
+    "timestampUtc": "2026-10-09T13:11:16Z",
+    "ownedTargetClosed": true,
+    "ownedChromePid": 440491,
+    "ownedChromeTerminalCode": 0,
+    "cdp9237Listening": false,
+    "remainingChromeExecutableProcesses": [],
+    "storePreservation": {
+      "originalRecordCount": 2,
+      "originalSnapshotSha256": "d57fbd5b9e9a6602326084897768dec432e9b8aa55c07567fd952a3a9fd1a7c5",
+      "allRecordsUnchangedOnFailure": true
+    }
+  },
+  "rawDirectory": "/Volumes/WD/code/workspaces/coaster-log-flume-publication/public-browser-sol"
+}

@@ -1,0 +1,171 @@
+{
+  "scope": "Actual current UI/worker/Library, task-only exports and quiet-autosave suppression. Exact stage input pins identify the production receiver. No public/GPU/human/original acceptance.",
+  "checks": [
+    {
+      "name": "initial five rides/no Boat",
+      "passed": true
+    },
+    {
+      "name": "no unused Flume downloads",
+      "passed": true
+    },
+    {
+      "name": "Library Flume selectable",
+      "passed": true
+    },
+    {
+      "name": "Library uses actual channel content",
+      "passed": true
+    },
+    {
+      "name": "actual station Build button",
+      "passed": true
+    },
+    {
+      "name": "Flume inspector real cap/no Cars/G fields",
+      "passed": true
+    },
+    {
+      "name": "actual UI ticket command",
+      "passed": true
+    },
+    {
+      "name": "invalid UI price rejects atomically",
+      "passed": true
+    },
+    {
+      "name": "switch Flume to steel resets valid piece",
+      "passed": true
+    },
+    {
+      "name": "switch steel to Flume resets valid piece",
+      "passed": true
+    },
+    {
+      "name": "portal tool survives switch",
+      "passed": true
+    },
+    {
+      "name": "existing Carousel Library selectable",
+      "passed": true
+    },
+    {
+      "name": "Carousel choice preserved",
+      "passed": true
+    },
+    {
+      "name": "unpublished empty-channel v11 strict rejection",
+      "passed": true
+    },
+    {
+      "name": "original four stored parks preserved",
+      "passed": true
+    }
+  ],
+  "exceptions": [],
+  "consoleErrors": [],
+  "failedRequests": [],
+  "browserVersion": "Chrome/155.0.8059.39",
+  "ownedPids": [
+    257272,
+    257273
+  ],
+  "actualEvaluateParameterNames": [
+    "expression",
+    "objectGroup",
+    "includeCommandLineAPI",
+    "silent",
+    "contextId",
+    "returnByValue",
+    "generatePreview",
+    "userGesture",
+    "awaitPromise",
+    "throwOnSideEffect",
+    "timeout",
+    "disableBreaks",
+    "replMode",
+    "allowUnsafeEvalBlockedByCSP",
+    "uniqueContextId",
+    "serializationOptions"
+  ],
+  "initialActual": {
+    "rides": 5,
+    "boats": 0,
+    "side": 48,
+    "paused": true
+  },
+  "evaluatorDiagnostics": [
+    {
+      "replMode": false,
+      "expression": "2+2",
+      "actual": {
+        "result": {
+          "type": "number",
+          "value": 4,
+          "description": "4"
+        }
+      }
+    },
+    {
+      "replMode": false,
+      "expression": "(async()=>true)()",
+      "actual": {
+        "result": {
+          "type": "boolean",
+          "value": true
+        }
+      }
+    },
+    {
+      "replMode": false,
+      "expression": "(async()=>{const s=JSON.parse(await __game.request('save',null));return s.rides.length===5&&s.boats.length===0})()",
+      "actual": {
+        "result": {
+          "type": "boolean",
+          "value": true
+        }
+      }
+    },
+    {
+      "replMode": true,
+      "expression": "2+2",
+      "actual": {
+        "result": {
+          "type": "number",
+          "value": 4,
+          "description": "4"
+        }
+      }
+    },
+    {
+      "replMode": true,
+      "expression": "(async()=>true)()",
+      "actual": {
+        "result": {
+          "type": "object",
+          "value": {}
+        }
+      }
+    },
+    {
+      "replMode": true,
+      "expression": "(async()=>{const s=JSON.parse(await __game.request('save',null));return s.rides.length===5&&s.boats.length===0})()",
+      "actual": {
+        "result": {
+          "type": "object",
+          "value": {}
+        }
+      }
+    }
+  ],
+  "createdFlume": 8,
+  "screenshot": {
+    "file": "actual-Flume-inspector.png",
+    "sha256": "64b574254312557cce822e9d34b1c2bd75c10020f364fc470b76cbb1902e7fb3"
+  },
+  "passed": true,
+  "ownedProcessesTerminal": [
+    -15,
+    0
+  ]
+}

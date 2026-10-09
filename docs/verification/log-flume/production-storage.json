@@ -1,0 +1,45 @@
+{
+  "scope": "Actual current UI and source-pinned receiver worker, production quiet callback accelerated to500ms. Published-v10 same-Chrome migration and unpublished-v11 exact Rules refusal. No arbitrary receiving Rules, cross-runtime trajectory, public/GPU/human acceptance.",
+  "checks": [
+    {
+      "name": "actual opt-in new-park receiver/five rides/no Boat",
+      "passed": true
+    },
+    {
+      "name": "unpublished v11 mismatch stops fallback and real quiet writes",
+      "passed": true,
+      "feedback": "Saved park was not loaded: Save rule profile differs from the engine."
+    },
+    {
+      "name": "failed manual import preserves live state and disabled quiet saving",
+      "passed": true
+    },
+    {
+      "name": "matching v11 import reenables quiet saving and preserves lower slots",
+      "passed": true
+    },
+    {
+      "name": "published current-Chrome v10 exact authority migrates to opt-in v11/new slot only",
+      "passed": true
+    }
+  ],
+  "exceptions": [],
+  "consoleErrors": [],
+  "failedRequests": [],
+  "stageGameSha256": "6b37333eb59aaebdf26fb627895fd044358496a05e08c7ea0e1fbdb77832f9a4",
+  "testedGameSha256": "d8f6f4ba04ea8459d97695c48fef6cb2695ace5e76986617dc6557d3bdf58735",
+  "stageWorkerSha256": "6736fcb62b9c0b4e9d6169c095c0e5cf50ea6f30dbf32c3b5c6dba38e0f2a97c",
+  "historicalV10Sha256": "3148fa6854c05c806343c224865816b09f8f5401cf18f43a2d4dcea412b0cead",
+  "ownedPids": [
+    258875,
+    258876
+  ],
+  "browserVersion": "Chrome/155.0.8059.39",
+  "passed": true,
+  "originalRecordsRestored": true,
+  "stageSourceRestored": true,
+  "ownedProcessesTerminal": [
+    -15,
+    0
+  ]
+}
