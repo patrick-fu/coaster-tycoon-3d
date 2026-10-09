@@ -1,0 +1,124 @@
+{
+  "scope": "Exact authored candidates and unmodified CC0 source maps copied for root integration. No default/public, walking, continuous contact, representative GPU or human acceptance.",
+  "boat": {
+    "sourceSha256": "f70bd1816e57c2f68cc42d962a30788d9aa44225f0ef0bd5b96d3f40f7d06927",
+    "masterSha256": "655140c3855deb1c5c7eac94151fc99d653f40cfc479803287b57771750058e3",
+    "root": "BoatRoot",
+    "hipAnchors": [
+      "Seat_00",
+      "Seat_01",
+      "Seat_02",
+      "Seat_03"
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "metres": true,
+    "meshes": 8,
+    "triangles": 1916
+  },
+  "rider": {
+    "sourceSha256": "e615d282b367664e5cbecc52e0f1e1406e88a5641b46ef4add41e74b8f67bc85",
+    "masterSha256": "b7a9ebe4e6bb6669fb7d134f245669e52bfcef4086e56030f0c80ad71ed52724",
+    "root": "RiderRoot",
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "metres": true,
+    "meshes": 15,
+    "triangles": 1700
+  },
+  "resources": [
+    {
+      "path": "ui/models/flume/boat.glb",
+      "sha256": "0336a6e7dc4aaa54136193d47187d67d2710ba53c4ccca3f93cf81e9dc693549",
+      "bytes": 5411656,
+      "retainedSource": "/Volumes/WD/code/workspaces/coaster-log-flume-model-authoring/evidence/endgrain-v5/log-boat.glb"
+    },
+    {
+      "path": "ui/models/flume/rider.glb",
+      "sha256": "e0bb0c5ecb4821bbf40b2524817c77763933c941b068ea2159aa66273dc05286",
+      "bytes": 5763204,
+      "retainedSource": "/Volumes/WD/code/workspaces/coaster-log-flume-rider-authoring/audit-sol/evidence/r3/rider-immutable.glb"
+    },
+    {
+      "path": "ui/textures/flume/Wood096/Wood096_1K-PNG_Color.png",
+      "sha256": "2635d3b950808e52d5de4ce4ee4b3aa35430ffd3117e00c1b2cfb155168e6b47",
+      "bytes": 1076245
+    },
+    {
+      "path": "ui/textures/flume/Wood096/Wood096_1K-PNG_NormalGL.png",
+      "sha256": "5b9f71b56cc74a397c9263619f7ef0cfc7d668762f4f2c960e4bd883dc2891c5",
+      "bytes": 5092366
+    },
+    {
+      "path": "ui/textures/flume/Wood096/Wood096_1K-PNG_Roughness.png",
+      "sha256": "bcba2c9b971c17875e0d8b6e11b234ce86a1c4110bd72725c2586b8950738418",
+      "bytes": 609059
+    },
+    {
+      "path": "ui/textures/flume/WoodFloor043/WoodFloor043_1K-PNG_Color.png",
+      "sha256": "55a7c25c191c8eb501d87a8872438dcfba307b3a043fee00ad9e89f0c413d684",
+      "bytes": 659574
+    },
+    {
+      "path": "ui/textures/flume/WoodFloor043/WoodFloor043_1K-PNG_NormalGL.png",
+      "sha256": "ac8e1221726a512c4eb3cae98674bf0dda774382b2ba2577d36cbf8192986a6e",
+      "bytes": 2205607
+    },
+    {
+      "path": "ui/textures/flume/WoodFloor043/WoodFloor043_1K-PNG_Roughness.png",
+      "sha256": "c15241e172c474ad147003f8e957cf88d305d9e8d82809de201f04f7b969ec26",
+      "bytes": 190238
+    },
+    {
+      "path": "ui/textures/flume/RoofingTiles013A/RoofingTiles013A_1K-PNG_Color.png",
+      "sha256": "ae2037e4c4934b42b60c799b2755cb73c164a883410f89e22ac54ed5ecb4d1de",
+      "bytes": 813925
+    },
+    {
+      "path": "ui/textures/flume/RoofingTiles013A/RoofingTiles013A_1K-PNG_NormalGL.png",
+      "sha256": "2488e6f327db93fe29558a9326ee4dba94022f944e2daf070a7ed47825fa82ab",
+      "bytes": 4029497
+    },
+    {
+      "path": "ui/textures/flume/RoofingTiles013A/RoofingTiles013A_1K-PNG_Roughness.png",
+      "sha256": "575b1674cfd09dde9db152b917503c77fa4187693762bf2f8824521975bac812",
+      "bytes": 523350
+    },
+    {
+      "path": "ui/textures/flume/Metal049A/Metal049A_1K-PNG_Color.png",
+      "sha256": "3c5be68c8a56534f120e88cff835a321ca51459c8f31482f984958c7fbfda8e6",
+      "bytes": 535253
+    },
+    {
+      "path": "ui/textures/flume/Metal049A/Metal049A_1K-PNG_NormalGL.png",
+      "sha256": "5b80adcc8092618a127bb7dfa547e3a35d156efd027c9daa579ac26f9098a678",
+      "bytes": 1791977
+    },
+    {
+      "path": "ui/textures/flume/Metal049A/Metal049A_1K-PNG_Roughness.png",
+      "sha256": "a42d9eaba9bc232739c7cb86dee03805e66f50a065cecfbbfe906aaeb6b3ded2",
+      "bytes": 325089
+    },
+    {
+      "path": "ui/textures/flume/Concrete034/Concrete034_1K-PNG_Color.png",
+      "sha256": "dffbbd0fd7249e938a30b650675262034fe0face516b0d036e9c34cae5a99190",
+      "bytes": 288279
+    },
+    {
+      "path": "ui/textures/flume/Concrete034/Concrete034_1K-PNG_NormalGL.png",
+      "sha256": "7378313b5e38d138a2048d0a300194444ba7b205b062751a93a91bde8dfbccf9",
+      "bytes": 2715117
+    },
+    {
+      "path": "ui/textures/flume/Concrete034/Concrete034_1K-PNG_Roughness.png",
+      "sha256": "b2f8b937d4c9d1d305fc30b915b28712d166939bba1c3823ad39767dd22e1f07",
+      "bytes": 206202
+    }
+  ]
+}
