@@ -1,0 +1,12 @@
+{
+  "worker": {
+    "rejected": true,
+    "message": "Guest targets an unavailable service."
+  },
+  "ui": "Import failed: Guest targets an unavailable service.",
+  "guestId": 1,
+  "onlyCraftedField": "wrapper:false\u2192true",
+  "diagnosticScope": "Malformed current save, not a genuine chooser state",
+  "beforeSha256": "f4990af1f06a5ae55331d197c83484005495e396e27f634cc1b100e872846e92",
+  "afterSha256": "f4990af1f06a5ae55331d197c83484005495e396e27f634cc1b100e872846e92"
+}

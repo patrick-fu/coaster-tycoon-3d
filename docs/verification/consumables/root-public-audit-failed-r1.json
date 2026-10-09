@@ -1,0 +1,16 @@
+{
+  "actualExit": 1,
+  "failedChecker": "combined readonly raw audit37493",
+  "failedPredicate": "paid.tick==6502 on both routes",
+  "actualPaidTicks": {
+    "root": 6502,
+    "pin": 6508
+  },
+  "diagnostic": "Both complete per-route paid/manual-reload states are identical; no product or source defect. Preserve actual wall ticks and compare genuine per-route generated export.",
+  "prematureReceiptTransfer": {
+    "session": 9646,
+    "actualExit": 1,
+    "reason": "No successful audit receipt was produced"
+  },
+  "noRuntimeReplay": true
+}

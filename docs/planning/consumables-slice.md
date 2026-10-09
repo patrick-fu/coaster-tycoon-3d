@@ -4,8 +4,10 @@ Status: finite contract accepted by Root after independent Design/Drift review
 and actual old-v11 oracle/retention acceptance. Working authority is implemented
 and passes263 canonical kernel checks after the narrow malformed-import repair. Scoped current-browser player, storage,
 Classic controls and corrected typed-waste visibility are accepted; cumulative
-integration review and actual public delivery remain pending.
-Current public implementation remains save11/content4/protocol4, source89030f9.
+integration reviews are consumed. Exact public file/deploy identity qualifies;
+actual public root8/pin8 player/source flow and Root raw/retention audits qualify.
+Both whole-delivery Design/Drift closure rounds are accepted; source integration remains pending.
+Current public candidate files use save12/content5/protocol5, sourcefddd5b0.
 The procedural can/box meshes are finite mechanical and pixel candidates; they
 do not qualify ADR0003's final detailed editable Blender/GLB props or human art acceptance.
 
@@ -112,7 +114,7 @@ time and item counters. No rendering clock may consume, discard or book a sale.
 
 ## Save and receiving contract
 
-The working implementation uses save12/content5/protocol5. Public remains11/4/4.
+The working and current public candidate source uses save12/content5/protocol5.
 Default factories keep their prior receiving configurations; the browser composes
 the new commerce profile explicitly around its existing Flume-enabled Rules.
 Actual profile availability gates both Library selection and placement.

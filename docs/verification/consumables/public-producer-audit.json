@@ -1,0 +1,152 @@
+{
+  "utc": "2026-10-09T18:47:10.349074+00:00",
+  "run": "r1",
+  "checks": [
+    {
+      "name": "Actual selected dual-route run is terminal0 and both public groups passed",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Actual owned Chrome exited0 and task ports are free",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Complete original public store values/schema/existence restored root",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Actual route checks and zero runtime/console/network/HTTP errors root",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Actual loaded HTML equals immutable committed build root",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Actual parsed source bodies match all declared critical pins root initial",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Actual parsed source bodies match all declared critical pins root continuation",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Strict negative input changes only wrapper and both imports preserve whole authority root",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Complete actual mid-use export/manual-reload authority identical root",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Actual two paid owners reconcile27 revenue/8 stock/net19 root",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Complete final construction/refund/operation/cash identity root",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Real bin consumes can without litter/entity allocation root",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Actual macro camera/ghost/deck/typed ownership predicates root",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Six actual typed resource events1 and meshes absent root",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Complete original public store values/schema/existence restored pin",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Actual route checks and zero runtime/console/network/HTTP errors pin",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Actual loaded HTML equals immutable committed build pin",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Actual parsed source bodies match all declared critical pins pin initial",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Actual parsed source bodies match all declared critical pins pin continuation",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Strict negative input changes only wrapper and both imports preserve whole authority pin",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Complete actual mid-use export/manual-reload authority identical pin",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Actual two paid owners reconcile27 revenue/8 stock/net19 pin",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Complete final construction/refund/operation/cash identity pin",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Real bin consumes can without litter/entity allocation pin",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Actual macro camera/ghost/deck/typed ownership predicates pin",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Six actual typed resource events1 and meshes absent pin",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Both public routes preserve the same whole shared public-origin storage",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Owned actual Chrome no longer exists",
+      "passed": true,
+      "data": null
+    }
+  ],
+  "passed": true,
+  "compressedRecords": 55,
+  "decodedBytes": 265221362,
+  "compressedBytes": 42968920,
+  "ownedPID": 832077,
+  "ownedProcessAbsent": true
+}

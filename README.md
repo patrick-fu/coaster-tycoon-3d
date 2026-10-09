@@ -49,7 +49,7 @@ is distinct from the unavailable original MGR1 reference; original timing and
 visual agreement remain unqualified. Existing v9 saves migrate without replacing
 their park layout, and previous browser slots remain intact.
 
-The published Log Flume candidate adds an independent four-seat log boat, textured channel,
+The retained Log Flume checkpoint adds an independent four-seat log boat, textured channel,
 timber supports, a covered station and connected entrance/exit stairs. Build
 it from **Library → Water rides → Log Flume**, complete the closed lift/drop/
 splash circuit and its empty Test, then Open it for real paid guests. Successful
@@ -72,9 +72,10 @@ margin reflect each selected product. This working source uses save12/content5/
 protocol5 and retains complete historical continuation checks. [Current finite
 evidence](docs/verification/consumables/README.md) records263 passing kernel checks,
 actual two-buyer ownership/disposal and protected historical browser persistence.
-The new source is still awaiting integration and public delivery. These changes are not yet
-available in the current public preview and do not qualify full commercial or
-original-game behaviour.
+Exact new sourcefddd files are published at the root and
+[pinned consumables candidate](https://patrick-fu.github.io/coaster-tycoon-3d/previews/consumables-fddd5b0/?showcase=classic).
+Actual public root8/pin8 player/source flows and Root raw/retention audits qualify.
+Both whole-delivery Design/Drift closure rounds are accepted; source integration remains pending. This finite candidate does not qualify full commercial or original-game behaviour.
 
 The [earlier art checkpoint](https://patrick-fu.github.io/coaster-tycoon-3d/previews/classic-a7d6451/?showcase=classic)
 has procedural materials and composed models, three steel-coaster

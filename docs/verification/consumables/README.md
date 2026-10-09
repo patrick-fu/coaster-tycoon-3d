@@ -2,7 +2,9 @@
 
 The working candidate implements the [two-stall contract](../../planning/consumables-slice.md)
 with save12/content5/protocol5. The source checkpoint is on the consumables branch
-from main9172b5b; final source identities are recorded in PROGRESS; public remains source890/save11/content4/protocol4.
+from main9172b5b; current immutable sourcefddd/save12/content5/protocol5 files are
+published at Pages524. Actual public root8/pin8 and Root raw/retention audits qualify. Both cumulative
+closure rounds qualify; main integration remains pending.
 
 ## Accepted authority and regression evidence
 
@@ -144,7 +146,11 @@ byte-frozen. No passed authority or storage matrix is replayed for this correcti
 Actual consumer player34,executed-source93 and resource lifetime are Root
 retained/accepted within their declared scope. The typed-waste path-deck defect is resolved in actual bounded pixels; both
 whole-delivery integration lenses and material-repair re-reviews are consumed.
-Publication and both final cumulative Design/Drift closure rounds remain pending.
+[Exact public delivery](public-publication.md) and real root8/pin8 player/source
+flows plus Root265-file/55-record raw audit qualify. Both whole-delivery
+Design/Drift closure rounds are accepted; source integration remains pending.
+[Cumulative disposition](cumulative-review.json) records two terminal independent
+rounds per lens, all material repairs and the excluded contaminated attempt.
 Original numerical/art agreement, broader41-shop/35-product behaviour,
 representative integrated GPU/scale and Patrick's visual/play acceptance remain
 open. This finite authority evidence does not close the programme or overall goal.

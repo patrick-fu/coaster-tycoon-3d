@@ -1,0 +1,7523 @@
+{
+  "route": "root",
+  "url": "https://patrick-fu.github.io/coaster-tycoon-3d/?showcase=classic",
+  "startUTC": "2026-10-09T18:39:48.450850+00:00",
+  "groups": [
+    {
+      "name": "Real New park / versions / five rides / parsed public source",
+      "passed": true,
+      "utc": "2026-10-09T18:40:05.674249+00:00"
+    },
+    {
+      "name": "Real Library construction / prices / opening / two default-wallet arrivals",
+      "passed": true,
+      "utc": "2026-10-09T18:40:19.851768+00:00"
+    },
+    {
+      "name": "Current malformed wrapper/product import refusal / complete state preservation",
+      "passed": true,
+      "utc": "2026-10-09T18:40:28.739190+00:00"
+    },
+    {
+      "name": "Separate real12/15 sales / stock3/5 / net19 / wallets / held ownership",
+      "passed": true,
+      "utc": "2026-10-09T18:40:55.782090+00:00"
+    },
+    {
+      "name": "Real held inspectors / pause / export Blob / UI import / save / manual reload",
+      "passed": true,
+      "utc": "2026-10-09T18:41:17.660778+00:00"
+    },
+    {
+      "name": "Owned container / real bin deposit / restored no-bin branch / typed can and box",
+      "passed": true,
+      "utc": "2026-10-09T18:41:41.792785+00:00"
+    },
+    {
+      "name": "No-ghost actual visible prop pixels / current height bytes / whole accounting",
+      "passed": true,
+      "utc": "2026-10-09T18:41:53.197755+00:00"
+    },
+    {
+      "name": "Actual resource release / zero runtime and public HTTP errors",
+      "passed": true,
+      "utc": "2026-10-09T18:41:53.210759+00:00"
+    }
+  ],
+  "checks": [
+    {
+      "name": "Actual loaded public HTML equals the committed index",
+      "passed": true,
+      "data": {
+        "actualSha256": "fd88b27beca574ed17a2fb04dfaa08194bb886c386b762667dc8da9a5151ad6a",
+        "expectedSha256": "fd88b27beca574ed17a2fb04dfaa08194bb886c386b762667dc8da9a5151ad6a",
+        "frameUrl": "https://patrick-fu.github.io/coaster-tycoon-3d/?showcase=classic"
+      }
+    },
+    {
+      "name": "Actual parsed initial game.js matches committed build/readiness",
+      "passed": true,
+      "data": [
+        {
+          "url": "https://patrick-fu.github.io/coaster-tycoon-3d/game.js",
+          "relativePath": "game.js",
+          "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+          "target": {
+            "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+            "type": "page",
+            "title": "",
+            "url": "about:blank",
+            "attached": true,
+            "canAccessOpener": false,
+            "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+          },
+          "scriptId": "10",
+          "sha256": "6d429cff46bde002b0b2a9f984d3ed50953033ae6f5821fb51adf13f9ecb009a",
+          "expectedSha256": "6d429cff46bde002b0b2a9f984d3ed50953033ae6f5821fb51adf13f9ecb009a",
+          "retainedFile": "executed-sources/6d429cff46bde002b0b2a9f984d3ed50953033ae6f5821fb51adf13f9ecb009a.js"
+        }
+      ]
+    },
+    {
+      "name": "Actual parsed initial consumable-controls.js matches committed build/readiness",
+      "passed": true,
+      "data": [
+        {
+          "url": "https://patrick-fu.github.io/coaster-tycoon-3d/consumable-controls.js",
+          "relativePath": "consumable-controls.js",
+          "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+          "target": {
+            "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+            "type": "page",
+            "title": "",
+            "url": "about:blank",
+            "attached": true,
+            "canAccessOpener": false,
+            "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+          },
+          "scriptId": "15",
+          "sha256": "4e77687b8a5578a9fd15e89db3ef22bf0156304b22542be8e833b062862a118e",
+          "expectedSha256": "4e77687b8a5578a9fd15e89db3ef22bf0156304b22542be8e833b062862a118e",
+          "retainedFile": "executed-sources/4e77687b8a5578a9fd15e89db3ef22bf0156304b22542be8e833b062862a118e.js"
+        }
+      ]
+    },
+    {
+      "name": "Actual parsed initial consumable-waste.js matches committed build/readiness",
+      "passed": true,
+      "data": [
+        {
+          "url": "https://patrick-fu.github.io/coaster-tycoon-3d/consumable-waste.js",
+          "relativePath": "consumable-waste.js",
+          "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+          "target": {
+            "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+            "type": "page",
+            "title": "",
+            "url": "about:blank",
+            "attached": true,
+            "canAccessOpener": false,
+            "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+          },
+          "scriptId": "36",
+          "sha256": "6a61d96ab774507781b9bfce61198b9599230f0c176df05f8d8f28a8e9d02bac",
+          "expectedSha256": "6a61d96ab774507781b9bfce61198b9599230f0c176df05f8d8f28a8e9d02bac",
+          "retainedFile": "executed-sources/6a61d96ab774507781b9bfce61198b9599230f0c176df05f8d8f28a8e9d02bac.js"
+        }
+      ]
+    },
+    {
+      "name": "Actual parsed initial park-scene.js matches committed build/readiness",
+      "passed": true,
+      "data": [
+        {
+          "url": "https://patrick-fu.github.io/coaster-tycoon-3d/park-scene.js",
+          "relativePath": "park-scene.js",
+          "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+          "target": {
+            "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+            "type": "page",
+            "title": "",
+            "url": "about:blank",
+            "attached": true,
+            "canAccessOpener": false,
+            "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+          },
+          "scriptId": "12",
+          "sha256": "752be64288e176a44187765165f9c027b505f0da9d6de4fd07f5196c5929cac9",
+          "expectedSha256": "752be64288e176a44187765165f9c027b505f0da9d6de4fd07f5196c5929cac9",
+          "retainedFile": "executed-sources/752be64288e176a44187765165f9c027b505f0da9d6de4fd07f5196c5929cac9.js"
+        }
+      ]
+    },
+    {
+      "name": "Actual parsed initial simulation/browser-worker.js matches committed build/readiness",
+      "passed": true,
+      "data": [
+        {
+          "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+          "relativePath": "simulation/browser-worker.js",
+          "sessionId": "A82AEEEC89097A0E7FC5ABE9F4F5AF8B",
+          "target": {
+            "targetId": "9FE0D49915E67FD0B403F5426CD18691",
+            "type": "worker",
+            "title": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+            "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+            "attached": true,
+            "parentId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+            "canAccessOpener": false,
+            "parentFrameId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+            "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+          },
+          "scriptId": "3",
+          "sha256": "d5c82ceefac477eb9baecd5065933a6db0a216654c2a406058f1c28317127e1c",
+          "expectedSha256": "d5c82ceefac477eb9baecd5065933a6db0a216654c2a406058f1c28317127e1c",
+          "retainedFile": "executed-sources/d5c82ceefac477eb9baecd5065933a6db0a216654c2a406058f1c28317127e1c.js"
+        }
+      ]
+    },
+    {
+      "name": "Actual parsed initial simulation/engine.js matches committed build/readiness",
+      "passed": true,
+      "data": [
+        {
+          "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/engine.js",
+          "relativePath": "simulation/engine.js",
+          "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+          "target": {
+            "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+            "type": "page",
+            "title": "",
+            "url": "about:blank",
+            "attached": true,
+            "canAccessOpener": false,
+            "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+          },
+          "scriptId": "23",
+          "sha256": "71966822cbcd3b6f84fad25d4193f8fcd9d025717e3f17fcf9a340168bad1e7e",
+          "expectedSha256": "71966822cbcd3b6f84fad25d4193f8fcd9d025717e3f17fcf9a340168bad1e7e",
+          "retainedFile": "executed-sources/71966822cbcd3b6f84fad25d4193f8fcd9d025717e3f17fcf9a340168bad1e7e.js"
+        },
+        {
+          "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/engine.js",
+          "relativePath": "simulation/engine.js",
+          "sessionId": "A82AEEEC89097A0E7FC5ABE9F4F5AF8B",
+          "target": {
+            "targetId": "9FE0D49915E67FD0B403F5426CD18691",
+            "type": "worker",
+            "title": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+            "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+            "attached": true,
+            "parentId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+            "canAccessOpener": false,
+            "parentFrameId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+            "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+          },
+          "scriptId": "10",
+          "sha256": "71966822cbcd3b6f84fad25d4193f8fcd9d025717e3f17fcf9a340168bad1e7e",
+          "expectedSha256": "71966822cbcd3b6f84fad25d4193f8fcd9d025717e3f17fcf9a340168bad1e7e",
+          "retainedFile": "executed-sources/71966822cbcd3b6f84fad25d4193f8fcd9d025717e3f17fcf9a340168bad1e7e.js"
+        }
+      ]
+    },
+    {
+      "name": "Actual parsed initial content/consumables.js matches committed build/readiness",
+      "passed": true,
+      "data": [
+        {
+          "url": "https://patrick-fu.github.io/coaster-tycoon-3d/content/consumables.js",
+          "relativePath": "content/consumables.js",
+          "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+          "target": {
+            "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+            "type": "page",
+            "title": "",
+            "url": "about:blank",
+            "attached": true,
+            "canAccessOpener": false,
+            "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+          },
+          "scriptId": "66",
+          "sha256": "b1c162502f7a79c58c67a3d57e30c5d7db29f6972d87bc6fba65e1a3f56db4eb",
+          "expectedSha256": "b1c162502f7a79c58c67a3d57e30c5d7db29f6972d87bc6fba65e1a3f56db4eb",
+          "retainedFile": "executed-sources/b1c162502f7a79c58c67a3d57e30c5d7db29f6972d87bc6fba65e1a3f56db4eb.js"
+        },
+        {
+          "url": "https://patrick-fu.github.io/coaster-tycoon-3d/content/consumables.js",
+          "relativePath": "content/consumables.js",
+          "sessionId": "A82AEEEC89097A0E7FC5ABE9F4F5AF8B",
+          "target": {
+            "targetId": "9FE0D49915E67FD0B403F5426CD18691",
+            "type": "worker",
+            "title": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+            "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+            "attached": true,
+            "parentId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+            "canAccessOpener": false,
+            "parentFrameId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+            "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+          },
+          "scriptId": "6",
+          "sha256": "b1c162502f7a79c58c67a3d57e30c5d7db29f6972d87bc6fba65e1a3f56db4eb",
+          "expectedSha256": "b1c162502f7a79c58c67a3d57e30c5d7db29f6972d87bc6fba65e1a3f56db4eb",
+          "retainedFile": "executed-sources/b1c162502f7a79c58c67a3d57e30c5d7db29f6972d87bc6fba65e1a3f56db4eb.js"
+        }
+      ]
+    },
+    {
+      "name": "Actual parsed initial simulation/protocol.js matches committed build/readiness",
+      "passed": true,
+      "data": [
+        {
+          "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/protocol.js",
+          "relativePath": "simulation/protocol.js",
+          "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+          "target": {
+            "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+            "type": "page",
+            "title": "",
+            "url": "about:blank",
+            "attached": true,
+            "canAccessOpener": false,
+            "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+          },
+          "scriptId": "11",
+          "sha256": "1a7f454c4d4347075efedfb5f6343947cb611240e16ec820db8c457bbb368475",
+          "expectedSha256": "1a7f454c4d4347075efedfb5f6343947cb611240e16ec820db8c457bbb368475",
+          "retainedFile": "executed-sources/1a7f454c4d4347075efedfb5f6343947cb611240e16ec820db8c457bbb368475.js"
+        },
+        {
+          "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/protocol.js",
+          "relativePath": "simulation/protocol.js",
+          "sessionId": "A82AEEEC89097A0E7FC5ABE9F4F5AF8B",
+          "target": {
+            "targetId": "9FE0D49915E67FD0B403F5426CD18691",
+            "type": "worker",
+            "title": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+            "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+            "attached": true,
+            "parentId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+            "canAccessOpener": false,
+            "parentFrameId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+            "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+          },
+          "scriptId": "8",
+          "sha256": "1a7f454c4d4347075efedfb5f6343947cb611240e16ec820db8c457bbb368475",
+          "expectedSha256": "1a7f454c4d4347075efedfb5f6343947cb611240e16ec820db8c457bbb368475",
+          "retainedFile": "executed-sources/1a7f454c4d4347075efedfb5f6343947cb611240e16ec820db8c457bbb368475.js"
+        }
+      ]
+    },
+    {
+      "name": "Actual Engine and Product execute in worker session",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Every retained parsed module matches committed build",
+      "passed": true,
+      "data": {
+        "count": 93
+      }
+    },
+    {
+      "name": "Actual New park emits12/5/5 and the existing five rides",
+      "passed": true,
+      "data": {
+        "version": 12,
+        "contentVersion": 5,
+        "protocol": 5,
+        "rides": [
+          {
+            "name": "Copper Loop",
+            "content": {
+              "familyId": "independent.circuit-coaster",
+              "variantId": "independent.steel-train",
+              "modeId": "independent.continuous-circuit"
+            }
+          },
+          {
+            "name": "Juniper Sprint",
+            "content": {
+              "familyId": "independent.circuit-coaster",
+              "variantId": "independent.steel-train",
+              "modeId": "independent.continuous-circuit"
+            }
+          },
+          {
+            "name": "Highland Flyer",
+            "content": {
+              "familyId": "independent.circuit-coaster",
+              "variantId": "independent.steel-train",
+              "modeId": "independent.continuous-circuit"
+            }
+          },
+          {
+            "name": "Cedar Timber Run",
+            "content": {
+              "familyId": "independent.wooden-circuit-coaster",
+              "variantId": "independent.wooden-four-seat-train",
+              "modeId": "independent.continuous-circuit"
+            }
+          },
+          {
+            "name": "Golden Carousel",
+            "content": {
+              "familyId": "independent.carousel",
+              "variantId": "independent.sixteen-seat-carousel",
+              "modeId": "independent.timed-rotation"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Actual New park receiving Rules retain exact shipping authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Declared current-Engine empty baseline has no fabricated guest/object/Rules",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Actual UI File input preserves complete authority declared-empty-start.json",
+      "passed": true,
+      "data": {
+        "expectedSha256": "6457a66d198132f07a40e305289267df91b192db50d64e4c516694b46bf12471",
+        "actualSha256": "6457a66d198132f07a40e305289267df91b192db50d64e4c516694b46bf12471"
+      }
+    },
+    {
+      "name": "Actual projected tile lands on canvas and declared anchor",
+      "passed": true,
+      "data": {
+        "x": 792.9817073885339,
+        "y": 474.3667801741563,
+        "height": 32,
+        "tile": {
+          "x": 10,
+          "y": 10
+        },
+        "element": {
+          "tag": "CANVAS",
+          "id": ""
+        },
+        "ghostCount": 0
+      }
+    },
+    {
+      "name": "Actual post-hover pointer retains declared tile/canvas",
+      "passed": true,
+      "data": {
+        "tile": {
+          "x": 10,
+          "y": 10
+        },
+        "position": "Tile 10, 10 \u00b7 $1.20",
+        "canvas": true
+      }
+    },
+    {
+      "name": "Actual projected tile lands on canvas and declared anchor",
+      "passed": true,
+      "data": {
+        "x": 876.4908536942668,
+        "y": 509.1833900870778,
+        "height": 32,
+        "tile": {
+          "x": 11,
+          "y": 10
+        },
+        "element": {
+          "tag": "CANVAS",
+          "id": ""
+        },
+        "ghostCount": 1
+      }
+    },
+    {
+      "name": "Actual post-hover pointer retains declared tile/canvas",
+      "passed": true,
+      "data": {
+        "tile": {
+          "x": 11,
+          "y": 10
+        },
+        "position": "Construction intersects an existing element.",
+        "canvas": true
+      }
+    },
+    {
+      "name": "Actual projected tile lands on canvas and declared anchor",
+      "passed": true,
+      "data": {
+        "x": 959.9999999999997,
+        "y": 543.9999999999998,
+        "height": 32,
+        "tile": {
+          "x": 12,
+          "y": 10
+        },
+        "element": {
+          "tag": "CANVAS",
+          "id": ""
+        },
+        "ghostCount": 1
+      }
+    },
+    {
+      "name": "Actual post-hover pointer retains declared tile/canvas",
+      "passed": true,
+      "data": {
+        "tile": {
+          "x": 12,
+          "y": 10
+        },
+        "position": "Tile 12, 10 \u00b7 $1.20",
+        "canvas": true
+      }
+    },
+    {
+      "name": "Actual projected tile lands on canvas and declared anchor",
+      "passed": true,
+      "data": {
+        "x": 1043.5091463057329,
+        "y": 578.8166099129219,
+        "height": 32,
+        "tile": {
+          "x": 13,
+          "y": 10
+        },
+        "element": {
+          "tag": "CANVAS",
+          "id": ""
+        },
+        "ghostCount": 1
+      }
+    },
+    {
+      "name": "Actual post-hover pointer retains declared tile/canvas",
+      "passed": true,
+      "data": {
+        "tile": {
+          "x": 13,
+          "y": 10
+        },
+        "position": "Construction intersects an existing element.",
+        "canvas": true
+      }
+    },
+    {
+      "name": "Actual projected tile lands on canvas and declared anchor",
+      "passed": true,
+      "data": {
+        "x": 1127.018292611466,
+        "y": 613.6332198258438,
+        "height": 32,
+        "tile": {
+          "x": 14,
+          "y": 10
+        },
+        "element": {
+          "tag": "CANVAS",
+          "id": ""
+        },
+        "ghostCount": 1
+      }
+    },
+    {
+      "name": "Actual post-hover pointer retains declared tile/canvas",
+      "passed": true,
+      "data": {
+        "tile": {
+          "x": 14,
+          "y": 10
+        },
+        "position": "Tile 14, 10 \u00b7 $1.20",
+        "canvas": true
+      }
+    },
+    {
+      "name": "Actual projected tile lands on canvas and declared anchor",
+      "passed": true,
+      "data": {
+        "x": 959.9999999999997,
+        "y": 543.9999999999998,
+        "height": 32,
+        "tile": {
+          "x": 12,
+          "y": 10
+        },
+        "element": {
+          "tag": "CANVAS",
+          "id": ""
+        },
+        "ghostCount": 1
+      }
+    },
+    {
+      "name": "Actual post-hover pointer retains declared tile/canvas",
+      "passed": true,
+      "data": {
+        "tile": {
+          "x": 12,
+          "y": 10
+        },
+        "position": "Tile 14, 10 \u00b7 $0.00",
+        "canvas": true
+      }
+    },
+    {
+      "name": "Actual projected tile lands on canvas and declared anchor",
+      "passed": true,
+      "data": {
+        "x": 870.5259146724286,
+        "y": 436.8719694987015,
+        "height": 32,
+        "tile": {
+          "x": 10,
+          "y": 9
+        },
+        "element": {
+          "tag": "CANVAS",
+          "id": ""
+        },
+        "ghostCount": 0
+      }
+    },
+    {
+      "name": "Actual post-hover pointer retains declared tile/canvas",
+      "passed": true,
+      "data": {
+        "tile": {
+          "x": 10,
+          "y": 9
+        },
+        "position": "Tile 10, 9 \u00b7 $20.00",
+        "canvas": true
+      }
+    },
+    {
+      "name": "Actual projected tile lands on canvas and declared anchor",
+      "passed": true,
+      "data": {
+        "x": 1204.5624998953608,
+        "y": 576.1384091503893,
+        "height": 32,
+        "tile": {
+          "x": 14,
+          "y": 9
+        },
+        "element": {
+          "tag": "CANVAS",
+          "id": ""
+        },
+        "ghostCount": 0
+      }
+    },
+    {
+      "name": "Actual post-hover pointer retains declared tile/canvas",
+      "passed": true,
+      "data": {
+        "tile": {
+          "x": 14,
+          "y": 9
+        },
+        "position": "Construction intersects an existing element.",
+        "canvas": true
+      }
+    },
+    {
+      "name": "Both actual Library/pointer stalls keep exact identities and defaults",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Only two real unchanged-default arrivals establish wallets",
+      "passed": true,
+      "data": {
+        "tick": 161,
+        "paused": true,
+        "cash": 499540,
+        "spent": 460,
+        "refunded": 0,
+        "nextEntity": 3,
+        "ledger": {
+          "rideSales": 0,
+          "shopSales": 0,
+          "stock": 0,
+          "wages": 0,
+          "upkeep": 0,
+          "interest": 0
+        },
+        "open": true,
+        "facilities": [
+          {
+            "id": 0,
+            "instanceId": 1,
+            "price": 15,
+            "open": false,
+            "sales": 0,
+            "income": 0
+          },
+          {
+            "id": 1,
+            "instanceId": 2,
+            "price": 12,
+            "open": true,
+            "sales": 0,
+            "income": 0
+          }
+        ],
+        "guests": [
+          {
+            "id": 1,
+            "point": {
+              "x": 12,
+              "y": 10,
+              "z": 32
+            },
+            "phase": "walking",
+            "facility": null,
+            "serviceProgress": 0,
+            "cash": 193,
+            "initialCash": 193,
+            "spent": 0,
+            "held": null,
+            "wrapper": false
+          },
+          {
+            "id": 2,
+            "point": {
+              "x": 12,
+              "y": 10,
+              "z": 32
+            },
+            "phase": "walking",
+            "facility": null,
+            "serviceProgress": 0,
+            "cash": 128,
+            "initialCash": 128,
+            "spent": 0,
+            "held": null,
+            "wrapper": false
+          }
+        ],
+        "amenities": [],
+        "litter": []
+      }
+    },
+    {
+      "name": "Actual temporary130 price selects affordable wallet before payment at12",
+      "passed": true,
+      "data": {
+        "tick": 3397,
+        "paused": true,
+        "cash": 499540,
+        "spent": 460,
+        "refunded": 0,
+        "nextEntity": 3,
+        "ledger": {
+          "rideSales": 0,
+          "shopSales": 0,
+          "stock": 0,
+          "wages": 0,
+          "upkeep": 0,
+          "interest": 0
+        },
+        "open": false,
+        "facilities": [
+          {
+            "id": 0,
+            "instanceId": 1,
+            "price": 15,
+            "open": false,
+            "sales": 0,
+            "income": 0
+          },
+          {
+            "id": 1,
+            "instanceId": 2,
+            "price": 130,
+            "open": true,
+            "sales": 0,
+            "income": 0
+          }
+        ],
+        "guests": [
+          {
+            "id": 1,
+            "point": {
+              "x": 14,
+              "y": 10,
+              "z": 32
+            },
+            "phase": "buying",
+            "facility": 1,
+            "serviceProgress": 46,
+            "cash": 193,
+            "initialCash": 193,
+            "spent": 0,
+            "held": null,
+            "wrapper": false
+          },
+          {
+            "id": 2,
+            "point": {
+              "x": 12,
+              "y": 10,
+              "z": 32
+            },
+            "phase": "walking",
+            "facility": null,
+            "serviceProgress": 0,
+            "cash": 128,
+            "initialCash": 128,
+            "spent": 0,
+            "held": null,
+            "wrapper": false
+          }
+        ],
+        "amenities": [],
+        "litter": []
+      }
+    },
+    {
+      "name": "Strict-import diagnostic starts from genuine target with no wrapper/held",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Actual repaired worker rejects crafted wrapper/product target atomically",
+      "passed": true,
+      "data": {
+        "rejected": true,
+        "message": "Guest targets an unavailable service."
+      }
+    },
+    {
+      "name": "Actual UI rejects the same crafted target and preserves whole live state",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "First real drink payment is isolated exactly once",
+      "passed": true,
+      "data": {
+        "tick": 3431,
+        "paused": true,
+        "cash": 499549,
+        "spent": 460,
+        "refunded": 0,
+        "nextEntity": 3,
+        "ledger": {
+          "rideSales": 0,
+          "shopSales": 12,
+          "stock": 3,
+          "wages": 0,
+          "upkeep": 0,
+          "interest": 0
+        },
+        "open": false,
+        "facilities": [
+          {
+            "id": 0,
+            "instanceId": 1,
+            "price": 15,
+            "open": false,
+            "sales": 0,
+            "income": 0
+          },
+          {
+            "id": 1,
+            "instanceId": 2,
+            "price": 12,
+            "open": true,
+            "sales": 1,
+            "income": 12
+          }
+        ],
+        "guests": [
+          {
+            "id": 1,
+            "point": {
+              "x": 14,
+              "y": 10,
+              "z": 32
+            },
+            "phase": "walking",
+            "facility": null,
+            "serviceProgress": 0,
+            "cash": 181,
+            "initialCash": 193,
+            "spent": 12,
+            "held": {
+              "kind": "consumable",
+              "productId": "independent.soft-drink",
+              "remaining": 100
+            },
+            "wrapper": false
+          },
+          {
+            "id": 2,
+            "point": {
+              "x": 12,
+              "y": 10,
+              "z": 32
+            },
+            "phase": "walking",
+            "facility": null,
+            "serviceProgress": 0,
+            "cash": 128,
+            "initialCash": 128,
+            "spent": 0,
+            "held": null,
+            "wrapper": false
+          }
+        ],
+        "amenities": [],
+        "litter": []
+      }
+    },
+    {
+      "name": "Actual drink payment books12 revenue/3 stock/9 net and held ownership",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "The other real guest buys exactly one Burger while first still owns drink",
+      "passed": true,
+      "data": {
+        "tick": 6502,
+        "paused": true,
+        "cash": 499559,
+        "spent": 460,
+        "refunded": 0,
+        "nextEntity": 3,
+        "ledger": {
+          "rideSales": 0,
+          "shopSales": 27,
+          "stock": 8,
+          "wages": 0,
+          "upkeep": 0,
+          "interest": 0
+        },
+        "open": false,
+        "facilities": [
+          {
+            "id": 0,
+            "instanceId": 1,
+            "price": 15,
+            "open": true,
+            "sales": 1,
+            "income": 15
+          },
+          {
+            "id": 1,
+            "instanceId": 2,
+            "price": 12,
+            "open": false,
+            "sales": 1,
+            "income": 12
+          }
+        ],
+        "guests": [
+          {
+            "id": 1,
+            "point": {
+              "x": 14,
+              "y": 10,
+              "z": 32
+            },
+            "phase": "walking",
+            "facility": null,
+            "serviceProgress": 0,
+            "cash": 181,
+            "initialCash": 193,
+            "spent": 12,
+            "held": {
+              "kind": "consumable",
+              "productId": "independent.soft-drink",
+              "remaining": 28
+            },
+            "wrapper": false
+          },
+          {
+            "id": 2,
+            "point": {
+              "x": 10,
+              "y": 10,
+              "z": 32
+            },
+            "phase": "walking",
+            "facility": null,
+            "serviceProgress": 0,
+            "cash": 113,
+            "initialCash": 128,
+            "spent": 15,
+            "held": {
+              "kind": "consumable",
+              "productId": "independent.burger",
+              "remaining": 150
+            },
+            "wrapper": false
+          }
+        ],
+        "amenities": [],
+        "litter": []
+      }
+    },
+    {
+      "name": "Two buyers transfer15+12 revenue/5+3 stock/net19 separately from construction/operations",
+      "passed": true,
+      "data": {
+        "beforeCash": 499540,
+        "afterCash": 499559,
+        "constructionSpent": 460,
+        "refunds": 0,
+        "ledger": {
+          "rideSales": 0,
+          "shopSales": 27,
+          "stock": 8,
+          "wages": 0,
+          "upkeep": 0,
+          "interest": 0
+        }
+      }
+    },
+    {
+      "name": "Actual pre-click guest anchor still resolves owner",
+      "passed": true,
+      "data": {
+        "kind": "guest",
+        "id": 1
+      }
+    },
+    {
+      "name": "Real scene-picked held inspector shows owner/descriptor/remaining progress",
+      "passed": true,
+      "data": {
+        "data": {
+          "id": 1,
+          "held": {
+            "kind": "consumable",
+            "productId": "independent.soft-drink",
+            "remaining": 28
+          },
+          "navigationRide": null,
+          "amenity": null,
+          "restProgress": 0,
+          "wrapper": false,
+          "wrapperTick": 0,
+          "facility": null,
+          "serviceProgress": 0,
+          "bladder": 280,
+          "point": {
+            "x": 14,
+            "y": 10,
+            "z": 32
+          },
+          "phase": "walking",
+          "goal": null,
+          "next": null,
+          "walkProgress": 0,
+          "destination": null,
+          "entrance": null,
+          "exit": null,
+          "queueRide": null,
+          "seat": null,
+          "initialCash": 193,
+          "cash": 181,
+          "spent": 12,
+          "fareLimit": 40,
+          "forceTolerance": 6689,
+          "hunger": 500,
+          "thirst": 0,
+          "nausea": 0,
+          "happiness": 800,
+          "energy": 600,
+          "queuedAt": 0,
+          "lastRide": null,
+          "lastRideTick": 0,
+          "ridesTaken": 0,
+          "thought": "none"
+        },
+        "html": "<p class=\"lead\">Guest 1</p><p class=\"muted\">walking \u00b7 none</p><div class=\"row\"><span>Cash</span><strong>$18.10</strong></div><div class=\"row\"><span>Spent</span><strong>$1.20</strong></div><div class=\"row\"><span>Completed rides</span><strong>0</strong></div><div class=\"row\"><span>Carrying</span><strong>Soft drink</strong></div><div class=\"row\"><span>Status</span><strong>Drinking (28% left)</strong></div><div class=\"held-progress\" role=\"progressbar\" aria-label=\"Soft drink remaining\" aria-valuemin=\"0\" aria-valuemax=\"100\" aria-valuenow=\"28\"><div class=\"bar\"><span style=\"width:28%\"></span></div></div><div class=\"need\"><div class=\"need-label\"><span>Hunger</span><span>50%</span></div><div class=\"bar \"><span style=\"width:50%\"></span></div></div><div class=\"need\"><div class=\"need-label\"><span>Thirst</span><span>0%</span></div><div class=\"bar \"><span style=\"width:0%\"></span></div></div><div class=\"need\"><div class=\"need-label\"><span>Bladder</span><span>28%</span></div><div class=\"bar \"><span style=\"width:28%\"></span></div></div><div class=\"need\"><div class=\"need-label\"><span>Nausea</span><span>0%</span></div><div class=\"bar \"><span style=\"width:0%\"></span></div></div><div class=\"need\"><div class=\"need-label\"><span>Happiness</span><span>80%</span></div><div class=\"bar \"><span style=\"width:80%\"></span></div></div><div class=\"need\"><div class=\"need-label\"><span>Energy</span><span>60%</span></div><div class=\"bar \"><span style=\"width:60%\"></span></div></div>",
+        "text": "Guest 1walking \u00b7 noneCash$18.10Spent$1.20Completed rides0CarryingSoft drinkStatusDrinking (28% left)Hunger50%Thirst0%Bladder28%Nausea0%Happiness80%Energy60%",
+        "bar": {
+          "label": "Soft drink remaining",
+          "value": 28
+        }
+      }
+    },
+    {
+      "name": "Actual pre-click guest anchor still resolves owner",
+      "passed": true,
+      "data": {
+        "kind": "guest",
+        "id": 2
+      }
+    },
+    {
+      "name": "Real scene-picked held inspector shows owner/descriptor/remaining progress",
+      "passed": true,
+      "data": {
+        "data": {
+          "id": 2,
+          "held": {
+            "kind": "consumable",
+            "productId": "independent.burger",
+            "remaining": 150
+          },
+          "navigationRide": null,
+          "amenity": null,
+          "restProgress": 0,
+          "wrapper": false,
+          "wrapperTick": 0,
+          "facility": null,
+          "serviceProgress": 0,
+          "bladder": 280,
+          "point": {
+            "x": 10,
+            "y": 10,
+            "z": 32
+          },
+          "phase": "walking",
+          "goal": null,
+          "next": null,
+          "walkProgress": 0,
+          "destination": null,
+          "entrance": null,
+          "exit": null,
+          "queueRide": null,
+          "seat": null,
+          "initialCash": 128,
+          "cash": 113,
+          "spent": 15,
+          "fareLimit": 37,
+          "forceTolerance": 4667,
+          "hunger": 500,
+          "thirst": 600,
+          "nausea": 0,
+          "happiness": 800,
+          "energy": 600,
+          "queuedAt": 0,
+          "lastRide": null,
+          "lastRideTick": 0,
+          "ridesTaken": 0,
+          "thought": "none"
+        },
+        "html": "<p class=\"lead\">Guest 2</p><p class=\"muted\">walking \u00b7 none</p><div class=\"row\"><span>Cash</span><strong>$11.30</strong></div><div class=\"row\"><span>Spent</span><strong>$1.50</strong></div><div class=\"row\"><span>Completed rides</span><strong>0</strong></div><div class=\"row\"><span>Carrying</span><strong>Burger</strong></div><div class=\"row\"><span>Status</span><strong>Eating (100% left)</strong></div><div class=\"held-progress\" role=\"progressbar\" aria-label=\"Burger remaining\" aria-valuemin=\"0\" aria-valuemax=\"100\" aria-valuenow=\"100\"><div class=\"bar\"><span style=\"width:100%\"></span></div></div><div class=\"need\"><div class=\"need-label\"><span>Hunger</span><span>50%</span></div><div class=\"bar \"><span style=\"width:50%\"></span></div></div><div class=\"need\"><div class=\"need-label\"><span>Thirst</span><span>60%</span></div><div class=\"bar \"><span style=\"width:60%\"></span></div></div><div class=\"need\"><div class=\"need-label\"><span>Bladder</span><span>28%</span></div><div class=\"bar \"><span style=\"width:28%\"></span></div></div><div class=\"need\"><div class=\"need-label\"><span>Nausea</span><span>0%</span></div><div class=\"bar \"><span style=\"width:0%\"></span></div></div><div class=\"need\"><div class=\"need-label\"><span>Happiness</span><span>80%</span></div><div class=\"bar \"><span style=\"width:80%\"></span></div></div><div class=\"need\"><div class=\"need-label\"><span>Energy</span><span>60%</span></div><div class=\"bar \"><span style=\"width:60%\"></span></div></div>",
+        "text": "Guest 2walking \u00b7 noneCash$11.30Spent$1.50Completed rides0CarryingBurgerStatusEating (100% left)Hunger50%Thirst60%Bladder28%Nausea0%Happiness80%Energy60%",
+        "bar": {
+          "label": "Burger remaining",
+          "value": 100
+        }
+      }
+    },
+    {
+      "name": "Actual paused advance suspends all authoritative use/time",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Actual export Blob equals current complete worker save",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Actual UI File input preserves complete authority mid-use-actual-export.json",
+      "passed": true,
+      "data": {
+        "expectedSha256": "e24e2f271327115bb937e53afe2172b10e597cb051e115e35e91d9816e22b58d",
+        "actualSha256": "e24e2f271327115bb937e53afe2172b10e597cb051e115e35e91d9816e22b58d"
+      }
+    },
+    {
+      "name": "Actual public Save writes complete showcase-classic-v12 authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Actual manual reload restores exact paused paid checkpoint",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Real drink use becomes owned can while Burger use remains unfinished",
+      "passed": true,
+      "data": {
+        "tick": 7728,
+        "paused": true,
+        "cash": 499559,
+        "spent": 460,
+        "refunded": 0,
+        "nextEntity": 3,
+        "ledger": {
+          "rideSales": 0,
+          "shopSales": 27,
+          "stock": 8,
+          "wages": 0,
+          "upkeep": 0,
+          "interest": 0
+        },
+        "open": false,
+        "facilities": [
+          {
+            "id": 0,
+            "instanceId": 1,
+            "price": 15,
+            "open": false,
+            "sales": 1,
+            "income": 15
+          },
+          {
+            "id": 1,
+            "instanceId": 2,
+            "price": 12,
+            "open": false,
+            "sales": 1,
+            "income": 12
+          }
+        ],
+        "guests": [
+          {
+            "id": 1,
+            "point": {
+              "x": 14,
+              "y": 10,
+              "z": 32
+            },
+            "phase": "walking",
+            "facility": null,
+            "serviceProgress": 0,
+            "cash": 181,
+            "initialCash": 193,
+            "spent": 12,
+            "held": {
+              "kind": "container",
+              "containerId": "emptyCan",
+              "sinceTick": 7679
+            },
+            "wrapper": false
+          },
+          {
+            "id": 2,
+            "point": {
+              "x": 10,
+              "y": 10,
+              "z": 32
+            },
+            "phase": "walking",
+            "facility": null,
+            "serviceProgress": 0,
+            "cash": 113,
+            "initialCash": 128,
+            "spent": 15,
+            "held": {
+              "kind": "consumable",
+              "productId": "independent.burger",
+              "remaining": 120
+            },
+            "wrapper": false
+          }
+        ],
+        "amenities": [],
+        "litter": []
+      }
+    },
+    {
+      "name": "Actual export Blob equals current complete worker save",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Actual projected tile lands on canvas and declared anchor",
+      "passed": true,
+      "data": {
+        "x": 1127.018292611466,
+        "y": 613.6332198258438,
+        "height": 32,
+        "tile": {
+          "x": 14,
+          "y": 10
+        },
+        "element": {
+          "tag": "CANVAS",
+          "id": ""
+        },
+        "ghostCount": 0
+      }
+    },
+    {
+      "name": "Actual post-hover pointer retains declared tile/canvas",
+      "passed": true,
+      "data": {
+        "tile": {
+          "x": 14,
+          "y": 10
+        },
+        "position": "Tile 14, 10 \u00b7 $1.50",
+        "canvas": true
+      }
+    },
+    {
+      "name": "Real bin deposits can / clears ownership / no litter or entity allocation",
+      "passed": true,
+      "data": {
+        "tick": 7761,
+        "paused": true,
+        "cash": 499544,
+        "spent": 475,
+        "refunded": 0,
+        "nextEntity": 3,
+        "ledger": {
+          "rideSales": 0,
+          "shopSales": 27,
+          "stock": 8,
+          "wages": 0,
+          "upkeep": 0,
+          "interest": 0
+        },
+        "open": false,
+        "facilities": [
+          {
+            "id": 0,
+            "instanceId": 1,
+            "price": 15,
+            "open": false,
+            "sales": 1,
+            "income": 15
+          },
+          {
+            "id": 1,
+            "instanceId": 2,
+            "price": 12,
+            "open": false,
+            "sales": 1,
+            "income": 12
+          }
+        ],
+        "guests": [
+          {
+            "id": 1,
+            "point": {
+              "x": 14,
+              "y": 10,
+              "z": 32
+            },
+            "phase": "walking",
+            "facility": null,
+            "serviceProgress": 0,
+            "cash": 181,
+            "initialCash": 193,
+            "spent": 12,
+            "held": null,
+            "wrapper": false
+          },
+          {
+            "id": 2,
+            "point": {
+              "x": 10,
+              "y": 10,
+              "z": 32
+            },
+            "phase": "walking",
+            "facility": null,
+            "serviceProgress": 0,
+            "cash": 113,
+            "initialCash": 128,
+            "spent": 15,
+            "held": {
+              "kind": "consumable",
+              "productId": "independent.burger",
+              "remaining": 120
+            },
+            "wrapper": false
+          }
+        ],
+        "amenities": [
+          {
+            "id": 8,
+            "kind": "bin",
+            "path": 5,
+            "occupant": null,
+            "fill": 1
+          }
+        ],
+        "litter": []
+      }
+    },
+    {
+      "name": "Actual UI File input preserves complete authority mid-container-actual-export.json",
+      "passed": true,
+      "data": {
+        "expectedSha256": "84eb4c094f44c9fe950e7f283e4487f7b8f0e99c75a1bd66ec283660eec1dbda",
+        "actualSha256": "84eb4c094f44c9fe950e7f283e4487f7b8f0e99c75a1bd66ec283660eec1dbda"
+      }
+    },
+    {
+      "name": "No-bin branch from genuine checkpoint creates one typed can/entity",
+      "passed": true,
+      "data": {
+        "tick": 8890,
+        "paused": true,
+        "cash": 499559,
+        "spent": 460,
+        "refunded": 0,
+        "nextEntity": 4,
+        "ledger": {
+          "rideSales": 0,
+          "shopSales": 27,
+          "stock": 8,
+          "wages": 0,
+          "upkeep": 0,
+          "interest": 0
+        },
+        "open": false,
+        "facilities": [
+          {
+            "id": 0,
+            "instanceId": 1,
+            "price": 15,
+            "open": false,
+            "sales": 1,
+            "income": 15
+          },
+          {
+            "id": 1,
+            "instanceId": 2,
+            "price": 12,
+            "open": false,
+            "sales": 1,
+            "income": 12
+          }
+        ],
+        "guests": [
+          {
+            "id": 1,
+            "point": {
+              "x": 14,
+              "y": 10,
+              "z": 32
+            },
+            "phase": "walking",
+            "facility": null,
+            "serviceProgress": 0,
+            "cash": 181,
+            "initialCash": 193,
+            "spent": 12,
+            "held": null,
+            "wrapper": false
+          },
+          {
+            "id": 2,
+            "point": {
+              "x": 10,
+              "y": 10,
+              "z": 32
+            },
+            "phase": "walking",
+            "facility": null,
+            "serviceProgress": 0,
+            "cash": 113,
+            "initialCash": 128,
+            "spent": 15,
+            "held": {
+              "kind": "consumable",
+              "productId": "independent.burger",
+              "remaining": 93
+            },
+            "wrapper": false
+          }
+        ],
+        "amenities": [],
+        "litter": [
+          {
+            "id": 3,
+            "point": {
+              "x": 14,
+              "y": 10,
+              "z": 32
+            },
+            "containerId": "emptyCan"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Real Burger completion creates its typed box/entity",
+      "passed": true,
+      "data": {
+        "tick": 14056,
+        "paused": true,
+        "cash": 499559,
+        "spent": 460,
+        "refunded": 0,
+        "nextEntity": 5,
+        "ledger": {
+          "rideSales": 0,
+          "shopSales": 27,
+          "stock": 8,
+          "wages": 0,
+          "upkeep": 0,
+          "interest": 0
+        },
+        "open": false,
+        "facilities": [
+          {
+            "id": 0,
+            "instanceId": 1,
+            "price": 15,
+            "open": false,
+            "sales": 1,
+            "income": 15
+          },
+          {
+            "id": 1,
+            "instanceId": 2,
+            "price": 12,
+            "open": false,
+            "sales": 1,
+            "income": 12
+          }
+        ],
+        "guests": [
+          {
+            "id": 1,
+            "point": {
+              "x": 14,
+              "y": 10,
+              "z": 32
+            },
+            "phase": "walking",
+            "facility": null,
+            "serviceProgress": 0,
+            "cash": 181,
+            "initialCash": 193,
+            "spent": 12,
+            "held": null,
+            "wrapper": false
+          },
+          {
+            "id": 2,
+            "point": {
+              "x": 10,
+              "y": 10,
+              "z": 32
+            },
+            "phase": "walking",
+            "facility": null,
+            "serviceProgress": 0,
+            "cash": 113,
+            "initialCash": 128,
+            "spent": 15,
+            "held": null,
+            "wrapper": false
+          }
+        ],
+        "amenities": [],
+        "litter": [
+          {
+            "id": 3,
+            "point": {
+              "x": 14,
+              "y": 10,
+              "z": 32
+            },
+            "containerId": "emptyCan"
+          },
+          {
+            "id": 4,
+            "point": {
+              "x": 10,
+              "y": 10,
+              "z": 32
+            },
+            "containerId": "emptyBurgerBox"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Actual authority/view/meshes are one-to-one and legacy generic absent",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Actual projected tile lands on canvas and declared anchor",
+      "passed": true,
+      "data": {
+        "x": 876.4908536942668,
+        "y": 509.1833900870779,
+        "height": 32,
+        "tile": {
+          "x": 11,
+          "y": 10
+        },
+        "element": {
+          "tag": "CANVAS",
+          "id": ""
+        },
+        "ghostCount": 0
+      }
+    },
+    {
+      "name": "Actual post-hover pointer retains declared tile/canvas",
+      "passed": true,
+      "data": {
+        "tile": {
+          "x": 11,
+          "y": 10
+        },
+        "position": "Tile 11, 10 \u00b7 $1.50",
+        "canvas": true
+      }
+    },
+    {
+      "name": "Actual projected tile lands on canvas and declared anchor",
+      "passed": true,
+      "data": {
+        "x": 1043.5091463057329,
+        "y": 578.8166099129219,
+        "height": 32,
+        "tile": {
+          "x": 13,
+          "y": 10
+        },
+        "element": {
+          "tag": "CANVAS",
+          "id": ""
+        },
+        "ghostCount": 0
+      }
+    },
+    {
+      "name": "Actual post-hover pointer retains declared tile/canvas",
+      "passed": true,
+      "data": {
+        "tile": {
+          "x": 13,
+          "y": 10
+        },
+        "position": "Construction intersects an existing element.",
+        "canvas": true
+      }
+    },
+    {
+      "name": "Actual Inspect removes ghost and real need navigation moves owners off props",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Observed public macro field0.48m / no ghost / owners away",
+      "passed": true,
+      "data": {
+        "zoom": 1,
+        "verticalFieldMetres": 0.48,
+        "horizontalFieldMetres": 0.9974025974025973,
+        "target": [
+          58,
+          4.085,
+          41.99999999999999
+        ],
+        "position": [
+          57.364364519662,
+          4.735,
+          41.362844182216406
+        ],
+        "ghostCount": 0
+      }
+    },
+    {
+      "name": "Actual typed prop base clears opaque paving by2mm",
+      "passed": true,
+      "data": {
+        "count": 1,
+        "min": [
+          57.893950954242,
+          4.142000200748443,
+          41.89391716913171
+        ],
+        "max": [
+          58.106049045758,
+          4.272000193595886,
+          42.10608283086829
+        ],
+        "point": {
+          "x": 14,
+          "y": 10,
+          "z": 32
+        },
+        "opaqueHits": [
+          {
+            "point": [
+              58,
+              4.1400001719594,
+              42
+            ],
+            "type": "Mesh",
+            "opacity": 1
+          },
+          {
+            "point": [
+              58,
+              4.1400001719594,
+              42
+            ],
+            "type": "Mesh",
+            "opacity": 1
+          },
+          {
+            "point": [
+              58,
+              4,
+              42
+            ],
+            "type": "Mesh",
+            "opacity": 1
+          }
+        ],
+        "material": {
+          "color": "7e9cb6",
+          "metalness": 0.85,
+          "roughness": 0.28,
+          "opacity": 1
+        },
+        "vertexCount": 100,
+        "indexCount": 180,
+        "instanceMatrix": [
+          -0.7062616348266602,
+          0,
+          -0.7079508900642395,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.7079508900642395,
+          0,
+          -0.7062616348266602,
+          0,
+          58,
+          4.142000198364258,
+          42,
+          1
+        ],
+        "container": "emptyCan",
+        "entityId": 3,
+        "camera": {
+          "zoom": 1,
+          "verticalFieldMetres": 0.48,
+          "horizontalFieldMetres": 0.9974025974025973,
+          "target": [
+            58,
+            4.085,
+            41.99999999999999
+          ],
+          "position": [
+            57.364364519662,
+            4.735,
+            41.362844182216406
+          ],
+          "ghostCount": 0
+        }
+      }
+    },
+    {
+      "name": "Observed public macro field0.48m / no ghost / owners away",
+      "passed": true,
+      "data": {
+        "zoom": 1,
+        "verticalFieldMetres": 0.48,
+        "horizontalFieldMetres": 0.9974025974025973,
+        "target": [
+          42,
+          4.085,
+          42
+        ],
+        "position": [
+          41.601731601034636,
+          4.735,
+          41.19291742529927
+        ],
+        "ghostCount": 0
+      }
+    },
+    {
+      "name": "Actual typed prop base clears opaque paving by2mm",
+      "passed": true,
+      "data": {
+        "count": 1,
+        "min": [
+          41.87049731379925,
+          4.142000197470188,
+          41.87503969282695
+        ],
+        "max": [
+          42.14019963643366,
+          4.236013613641262,
+          42.1432006023392
+        ],
+        "point": {
+          "x": 10,
+          "y": 10,
+          "z": 32
+        },
+        "opaqueHits": [
+          {
+            "point": [
+              42,
+              4.1400001719594,
+              42
+            ],
+            "type": "Mesh",
+            "opacity": 1
+          },
+          {
+            "point": [
+              42,
+              4.1400001719594,
+              42
+            ],
+            "type": "Mesh",
+            "opacity": 1
+          },
+          {
+            "point": [
+              42,
+              4,
+              42
+            ],
+            "type": "Mesh",
+            "opacity": 1
+          }
+        ],
+        "material": {
+          "color": "c49e6d",
+          "metalness": 0.05,
+          "roughness": 0.85,
+          "opacity": 1
+        },
+        "vertexCount": 48,
+        "indexCount": 72,
+        "instanceMatrix": [
+          -0.8967584371566772,
+          0,
+          0.4425204396247864,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.4425204396247864,
+          0,
+          -0.8967584371566772,
+          0,
+          42,
+          4.142000198364258,
+          42,
+          1
+        ],
+        "container": "emptyBurgerBox",
+        "entityId": 4,
+        "camera": {
+          "zoom": 1,
+          "verticalFieldMetres": 0.48,
+          "horizontalFieldMetres": 0.9974025974025973,
+          "target": [
+            42,
+            4.085,
+            42
+          ],
+          "position": [
+            41.601731601034636,
+            4.735,
+            41.19291742529927
+          ],
+          "ghostCount": 0
+        }
+      }
+    },
+    {
+      "name": "Actual final complete ledger/wallet reconciliation retains27 revenue/8 stock",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Actual parsed continuation game.js matches committed build/readiness",
+      "passed": true,
+      "data": [
+        {
+          "url": "https://patrick-fu.github.io/coaster-tycoon-3d/game.js",
+          "relativePath": "game.js",
+          "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+          "target": {
+            "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+            "type": "page",
+            "title": "",
+            "url": "about:blank",
+            "attached": true,
+            "canAccessOpener": false,
+            "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+          },
+          "scriptId": "495",
+          "sha256": "6d429cff46bde002b0b2a9f984d3ed50953033ae6f5821fb51adf13f9ecb009a",
+          "expectedSha256": "6d429cff46bde002b0b2a9f984d3ed50953033ae6f5821fb51adf13f9ecb009a",
+          "retainedFile": "executed-sources/6d429cff46bde002b0b2a9f984d3ed50953033ae6f5821fb51adf13f9ecb009a.js"
+        }
+      ]
+    },
+    {
+      "name": "Actual parsed continuation consumable-controls.js matches committed build/readiness",
+      "passed": true,
+      "data": [
+        {
+          "url": "https://patrick-fu.github.io/coaster-tycoon-3d/consumable-controls.js",
+          "relativePath": "consumable-controls.js",
+          "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+          "target": {
+            "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+            "type": "page",
+            "title": "",
+            "url": "about:blank",
+            "attached": true,
+            "canAccessOpener": false,
+            "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+          },
+          "scriptId": "501",
+          "sha256": "4e77687b8a5578a9fd15e89db3ef22bf0156304b22542be8e833b062862a118e",
+          "expectedSha256": "4e77687b8a5578a9fd15e89db3ef22bf0156304b22542be8e833b062862a118e",
+          "retainedFile": "executed-sources/4e77687b8a5578a9fd15e89db3ef22bf0156304b22542be8e833b062862a118e.js"
+        }
+      ]
+    },
+    {
+      "name": "Actual parsed continuation consumable-waste.js matches committed build/readiness",
+      "passed": true,
+      "data": [
+        {
+          "url": "https://patrick-fu.github.io/coaster-tycoon-3d/consumable-waste.js",
+          "relativePath": "consumable-waste.js",
+          "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+          "target": {
+            "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+            "type": "page",
+            "title": "",
+            "url": "about:blank",
+            "attached": true,
+            "canAccessOpener": false,
+            "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+          },
+          "scriptId": "509",
+          "sha256": "6a61d96ab774507781b9bfce61198b9599230f0c176df05f8d8f28a8e9d02bac",
+          "expectedSha256": "6a61d96ab774507781b9bfce61198b9599230f0c176df05f8d8f28a8e9d02bac",
+          "retainedFile": "executed-sources/6a61d96ab774507781b9bfce61198b9599230f0c176df05f8d8f28a8e9d02bac.js"
+        }
+      ]
+    },
+    {
+      "name": "Actual parsed continuation park-scene.js matches committed build/readiness",
+      "passed": true,
+      "data": [
+        {
+          "url": "https://patrick-fu.github.io/coaster-tycoon-3d/park-scene.js",
+          "relativePath": "park-scene.js",
+          "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+          "target": {
+            "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+            "type": "page",
+            "title": "",
+            "url": "about:blank",
+            "attached": true,
+            "canAccessOpener": false,
+            "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+          },
+          "scriptId": "502",
+          "sha256": "752be64288e176a44187765165f9c027b505f0da9d6de4fd07f5196c5929cac9",
+          "expectedSha256": "752be64288e176a44187765165f9c027b505f0da9d6de4fd07f5196c5929cac9",
+          "retainedFile": "executed-sources/752be64288e176a44187765165f9c027b505f0da9d6de4fd07f5196c5929cac9.js"
+        }
+      ]
+    },
+    {
+      "name": "Actual parsed continuation simulation/browser-worker.js matches committed build/readiness",
+      "passed": true,
+      "data": [
+        {
+          "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+          "relativePath": "simulation/browser-worker.js",
+          "sessionId": "5C848A9F8214D416097AA89978A7347D",
+          "target": {
+            "targetId": "45CEFDEFF5CBB513C618DBE55B54AB16",
+            "type": "worker",
+            "title": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+            "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+            "attached": true,
+            "parentId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+            "canAccessOpener": false,
+            "parentFrameId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+            "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+          },
+          "scriptId": "3",
+          "sha256": "d5c82ceefac477eb9baecd5065933a6db0a216654c2a406058f1c28317127e1c",
+          "expectedSha256": "d5c82ceefac477eb9baecd5065933a6db0a216654c2a406058f1c28317127e1c",
+          "retainedFile": "executed-sources/d5c82ceefac477eb9baecd5065933a6db0a216654c2a406058f1c28317127e1c.js"
+        }
+      ]
+    },
+    {
+      "name": "Actual parsed continuation simulation/engine.js matches committed build/readiness",
+      "passed": true,
+      "data": [
+        {
+          "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/engine.js",
+          "relativePath": "simulation/engine.js",
+          "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+          "target": {
+            "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+            "type": "page",
+            "title": "",
+            "url": "about:blank",
+            "attached": true,
+            "canAccessOpener": false,
+            "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+          },
+          "scriptId": "518",
+          "sha256": "71966822cbcd3b6f84fad25d4193f8fcd9d025717e3f17fcf9a340168bad1e7e",
+          "expectedSha256": "71966822cbcd3b6f84fad25d4193f8fcd9d025717e3f17fcf9a340168bad1e7e",
+          "retainedFile": "executed-sources/71966822cbcd3b6f84fad25d4193f8fcd9d025717e3f17fcf9a340168bad1e7e.js"
+        },
+        {
+          "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/engine.js",
+          "relativePath": "simulation/engine.js",
+          "sessionId": "5C848A9F8214D416097AA89978A7347D",
+          "target": {
+            "targetId": "45CEFDEFF5CBB513C618DBE55B54AB16",
+            "type": "worker",
+            "title": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+            "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+            "attached": true,
+            "parentId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+            "canAccessOpener": false,
+            "parentFrameId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+            "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+          },
+          "scriptId": "15",
+          "sha256": "71966822cbcd3b6f84fad25d4193f8fcd9d025717e3f17fcf9a340168bad1e7e",
+          "expectedSha256": "71966822cbcd3b6f84fad25d4193f8fcd9d025717e3f17fcf9a340168bad1e7e",
+          "retainedFile": "executed-sources/71966822cbcd3b6f84fad25d4193f8fcd9d025717e3f17fcf9a340168bad1e7e.js"
+        }
+      ]
+    },
+    {
+      "name": "Actual parsed continuation content/consumables.js matches committed build/readiness",
+      "passed": true,
+      "data": [
+        {
+          "url": "https://patrick-fu.github.io/coaster-tycoon-3d/content/consumables.js",
+          "relativePath": "content/consumables.js",
+          "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+          "target": {
+            "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+            "type": "page",
+            "title": "",
+            "url": "about:blank",
+            "attached": true,
+            "canAccessOpener": false,
+            "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+          },
+          "scriptId": "534",
+          "sha256": "b1c162502f7a79c58c67a3d57e30c5d7db29f6972d87bc6fba65e1a3f56db4eb",
+          "expectedSha256": "b1c162502f7a79c58c67a3d57e30c5d7db29f6972d87bc6fba65e1a3f56db4eb",
+          "retainedFile": "executed-sources/b1c162502f7a79c58c67a3d57e30c5d7db29f6972d87bc6fba65e1a3f56db4eb.js"
+        },
+        {
+          "url": "https://patrick-fu.github.io/coaster-tycoon-3d/content/consumables.js",
+          "relativePath": "content/consumables.js",
+          "sessionId": "5C848A9F8214D416097AA89978A7347D",
+          "target": {
+            "targetId": "45CEFDEFF5CBB513C618DBE55B54AB16",
+            "type": "worker",
+            "title": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+            "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+            "attached": true,
+            "parentId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+            "canAccessOpener": false,
+            "parentFrameId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+            "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+          },
+          "scriptId": "9",
+          "sha256": "b1c162502f7a79c58c67a3d57e30c5d7db29f6972d87bc6fba65e1a3f56db4eb",
+          "expectedSha256": "b1c162502f7a79c58c67a3d57e30c5d7db29f6972d87bc6fba65e1a3f56db4eb",
+          "retainedFile": "executed-sources/b1c162502f7a79c58c67a3d57e30c5d7db29f6972d87bc6fba65e1a3f56db4eb.js"
+        }
+      ]
+    },
+    {
+      "name": "Actual parsed continuation simulation/protocol.js matches committed build/readiness",
+      "passed": true,
+      "data": [
+        {
+          "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/protocol.js",
+          "relativePath": "simulation/protocol.js",
+          "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+          "target": {
+            "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+            "type": "page",
+            "title": "",
+            "url": "about:blank",
+            "attached": true,
+            "canAccessOpener": false,
+            "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+          },
+          "scriptId": "500",
+          "sha256": "1a7f454c4d4347075efedfb5f6343947cb611240e16ec820db8c457bbb368475",
+          "expectedSha256": "1a7f454c4d4347075efedfb5f6343947cb611240e16ec820db8c457bbb368475",
+          "retainedFile": "executed-sources/1a7f454c4d4347075efedfb5f6343947cb611240e16ec820db8c457bbb368475.js"
+        },
+        {
+          "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/protocol.js",
+          "relativePath": "simulation/protocol.js",
+          "sessionId": "5C848A9F8214D416097AA89978A7347D",
+          "target": {
+            "targetId": "45CEFDEFF5CBB513C618DBE55B54AB16",
+            "type": "worker",
+            "title": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+            "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+            "attached": true,
+            "parentId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+            "canAccessOpener": false,
+            "parentFrameId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+            "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+          },
+          "scriptId": "11",
+          "sha256": "1a7f454c4d4347075efedfb5f6343947cb611240e16ec820db8c457bbb368475",
+          "expectedSha256": "1a7f454c4d4347075efedfb5f6343947cb611240e16ec820db8c457bbb368475",
+          "retainedFile": "executed-sources/1a7f454c4d4347075efedfb5f6343947cb611240e16ec820db8c457bbb368475.js"
+        }
+      ]
+    },
+    {
+      "name": "Actual Engine and Product execute in worker session",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Every retained parsed module matches committed build",
+      "passed": true,
+      "data": {
+        "count": 93
+      }
+    },
+    {
+      "name": "Actual scene.dispose emits all six typed resource events once/removes meshes",
+      "passed": true,
+      "data": {
+        "before": {
+          "counts": {
+            "can": 1,
+            "box": 1
+          },
+          "memory": {
+            "geometries": 28,
+            "textures": 26
+          }
+        },
+        "events": {
+          "canMesh": 1,
+          "canGeometry": 1,
+          "canMaterial": 1,
+          "boxMesh": 1,
+          "boxGeometry": 1,
+          "boxMaterial": 1
+        },
+        "disposed": true,
+        "canAbsent": true,
+        "boxAbsent": true,
+        "memoryAfter": {
+          "geometries": 0,
+          "textures": 3
+        }
+      }
+    },
+    {
+      "name": "Actual route has no runtime/console/network/HTTP errors",
+      "passed": true,
+      "data": null
+    }
+  ],
+  "exceptions": [],
+  "consoleErrors": [],
+  "failedRequests": [],
+  "httpErrors": [],
+  "snapshots": [
+    {
+      "name": "00-real-new-park",
+      "tick": 4809,
+      "utc": "2026-10-09T18:39:58.928129+00:00",
+      "completeStateSha256": "3c4240bdcc4dd6283f96daea2e10940985fb618936cd9b145e647b875756c03d"
+    },
+    {
+      "name": "01-real-library-stalls",
+      "tick": 0,
+      "utc": "2026-10-09T18:40:13.726373+00:00",
+      "completeStateSha256": "d8f44cd860b994b0f579c55941f967d80c0af6af41c4feb37406b59d5b85da89"
+    },
+    {
+      "name": "02-two-real-arrivals",
+      "tick": 161,
+      "utc": "2026-10-09T18:40:19.841519+00:00",
+      "completeStateSha256": "31b8fe6d3eb1ba4ae1ca6ef4f98bfb456c6a0ff59dfbbb65591ba000c60c567b"
+    },
+    {
+      "name": "03-drink-paid",
+      "tick": 3431,
+      "utc": "2026-10-09T18:40:31.254644+00:00",
+      "completeStateSha256": "ea5cc77470ae91bf0502d0738e47017c1866b15d314c3db94385e9072b33f28b"
+    },
+    {
+      "name": "04-two-paid-products",
+      "tick": 6502,
+      "utc": "2026-10-09T18:40:51.233005+00:00",
+      "completeStateSha256": "e24e2f271327115bb937e53afe2172b10e597cb051e115e35e91d9816e22b58d"
+    },
+    {
+      "name": "05-drink-held-inspector",
+      "tick": 6502,
+      "utc": "2026-10-09T18:40:56.594793+00:00",
+      "completeStateSha256": "e24e2f271327115bb937e53afe2172b10e597cb051e115e35e91d9816e22b58d"
+    },
+    {
+      "name": "05-burger-held-inspector",
+      "tick": 6502,
+      "utc": "2026-10-09T18:41:01.381482+00:00",
+      "completeStateSha256": "e24e2f271327115bb937e53afe2172b10e597cb051e115e35e91d9816e22b58d"
+    },
+    {
+      "name": "06-paid-manual-reload",
+      "tick": 6502,
+      "utc": "2026-10-09T18:41:13.460467+00:00",
+      "completeStateSha256": "e24e2f271327115bb937e53afe2172b10e597cb051e115e35e91d9816e22b58d"
+    },
+    {
+      "name": "07-owned-can-checkpoint",
+      "tick": 7728,
+      "utc": "2026-10-09T18:41:21.773168+00:00",
+      "completeStateSha256": "84eb4c094f44c9fe950e7f283e4487f7b8f0e99c75a1bd66ec283660eec1dbda"
+    },
+    {
+      "name": "08-can-in-real-bin",
+      "tick": 7761,
+      "utc": "2026-10-09T18:41:23.541917+00:00",
+      "completeStateSha256": "6c6ce7778c3937f8e345fa653785653ea9a1b25a1722a16c66a97bf0be741bec"
+    },
+    {
+      "name": "09-real-typed-ground",
+      "tick": 14056,
+      "utc": "2026-10-09T18:41:41.781078+00:00",
+      "completeStateSha256": "67f91c5c8c5ddf33615423ae95c2e998c1d6e2d809457ebc9cdf29e7e89158dc"
+    },
+    {
+      "name": "10-real-owners-away",
+      "tick": 18153,
+      "utc": "2026-10-09T18:41:43.372280+00:00",
+      "completeStateSha256": "152d78782d8e4363be078dd4dd810fac8055ee843a3a670b3b3766f4261d1b48"
+    },
+    {
+      "name": "11-can-visible-macro",
+      "tick": 18153,
+      "utc": "2026-10-09T18:41:43.838350+00:00",
+      "completeStateSha256": "152d78782d8e4363be078dd4dd810fac8055ee843a3a670b3b3766f4261d1b48"
+    },
+    {
+      "name": "11-box-visible-macro",
+      "tick": 18153,
+      "utc": "2026-10-09T18:41:48.364524+00:00",
+      "completeStateSha256": "152d78782d8e4363be078dd4dd810fac8055ee843a3a670b3b3766f4261d1b48"
+    }
+  ],
+  "sources": [
+    {
+      "phase": "initial",
+      "recordFile": "executed-source-initial.json",
+      "count": 93
+    },
+    {
+      "phase": "continuation",
+      "recordFile": "executed-source-continuation.json",
+      "count": 93
+    }
+  ],
+  "dialogs": [
+    {
+      "utc": "2026-10-09T18:39:54.960976+00:00",
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/?showcase=classic",
+      "frameId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "message": "Start a new Copper Meadows park? Save or export this park first if you want to keep it.",
+      "type": "confirm",
+      "hasBrowserHandler": true,
+      "defaultPrompt": ""
+    }
+  ],
+  "originalDatabaseCount": 1,
+  "storageScope": "All public-origin existing IndexedDB databases/stores, schema and complete key/value records; existence is preserved. Only the game database may be restored or deleted if this task created it. Other database changes are refused.",
+  "neutralScope": "Only the task-specific neutral URL is fulfilled locally with data favicon. Actual app HTML/modules/assets and worker are public HTTP resources; no LICENSE/download or host-root favicon page is used.",
+  "actualOwners": {
+    "drink": 1,
+    "burger": 2
+  },
+  "driverChecks": [
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Actual Library contains independent.food-facility",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Actual Library contains independent.burger-stand",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Actual Library variant is constructible independent.burger-stand",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Actual Library contains independent.drink-facility",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Actual Library contains independent.soft-drink-stand",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Actual Library variant is constructible independent.soft-drink-stand",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 160
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 2900
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 1
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 1
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 1
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 1
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 1
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 2669
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 8
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 1
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 1
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 1
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 1
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 1
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 1
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 1
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 1
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 1
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 1
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 1
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 1
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 1
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 1
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 1
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 1
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 1
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 1
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 1
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 1
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 1
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 1
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 1
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 1
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 1
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 1
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 1
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 1
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 1
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 1
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 1
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 1
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 1
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 1
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 1
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 1
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 1
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 1
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 1
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 1
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 1
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 1
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 1
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 1
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 1
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 1
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 1
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 1
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 1
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 1
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Actual rendered guest has an instance 1",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Actual rendered guest has an instance 2",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 64
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 64
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 64
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 64
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 64
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 64
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 64
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 64
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 64
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 64
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 64
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 64
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 64
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 64
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 64
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 64
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 64
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 64
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 64
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 32
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 64
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 64
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 64
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 64
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 64
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 64
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 64
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 64
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 64
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 64
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 64
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 64
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 64
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 64
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 64
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 64
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 64
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 64
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 128
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 128
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 128
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 128
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 128
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 128
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 128
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 128
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 128
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 128
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 128
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 128
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 128
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 128
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 128
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 128
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 128
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 128
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 128
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 128
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 128
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 128
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 128
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 128
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 128
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 128
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 128
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 128
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 128
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 128
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 128
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 128
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 128
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 128
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 128
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 128
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 128
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 128
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 128
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 128
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Requested advance is bounded at4096",
+      "passed": true,
+      "data": {
+        "ticks": 4096
+      }
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Legal quoted pause matches authority",
+      "passed": true,
+      "data": null
+    }
+  ],
+  "actualAdvances": [
+    {
+      "requested": 160,
+      "reply": 160,
+      "beforeTick": 0,
+      "afterTick": 161,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 2900,
+      "reply": 2900,
+      "beforeTick": 161,
+      "afterTick": 3062,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 3062,
+      "afterTick": 3073,
+      "wallClockTicks": 3
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 3073,
+      "afterTick": 3082,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 3082,
+      "afterTick": 3090,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 3090,
+      "afterTick": 3098,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 3098,
+      "afterTick": 3107,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 3107,
+      "afterTick": 3116,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 3116,
+      "afterTick": 3124,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 3124,
+      "afterTick": 3133,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 3133,
+      "afterTick": 3141,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 3141,
+      "afterTick": 3150,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 3150,
+      "afterTick": 3158,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 3158,
+      "afterTick": 3167,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 3167,
+      "afterTick": 3175,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 3175,
+      "afterTick": 3183,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 3183,
+      "afterTick": 3192,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 3192,
+      "afterTick": 3200,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 3200,
+      "afterTick": 3209,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 3209,
+      "afterTick": 3217,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 3217,
+      "afterTick": 3226,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 3226,
+      "afterTick": 3234,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 3234,
+      "afterTick": 3242,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 3242,
+      "afterTick": 3251,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 3251,
+      "afterTick": 3260,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 3260,
+      "afterTick": 3268,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 3268,
+      "afterTick": 3276,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 3276,
+      "afterTick": 3285,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 3285,
+      "afterTick": 3294,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 3294,
+      "afterTick": 3302,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 3302,
+      "afterTick": 3311,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 3311,
+      "afterTick": 3320,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 3320,
+      "afterTick": 3329,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 3329,
+      "afterTick": 3337,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 3337,
+      "afterTick": 3345,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 3345,
+      "afterTick": 3354,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 3354,
+      "afterTick": 3362,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 3362,
+      "afterTick": 3371,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 3371,
+      "afterTick": 3380,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 3380,
+      "afterTick": 3389,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 3389,
+      "afterTick": 3397,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 3397,
+      "afterTick": 3406,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 3406,
+      "afterTick": 3415,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 3415,
+      "afterTick": 3424,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 1,
+      "reply": 1,
+      "beforeTick": 3424,
+      "afterTick": 3425,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 1,
+      "reply": 1,
+      "beforeTick": 3425,
+      "afterTick": 3427,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 1,
+      "reply": 1,
+      "beforeTick": 3427,
+      "afterTick": 3428,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 1,
+      "reply": 1,
+      "beforeTick": 3428,
+      "afterTick": 3430,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 1,
+      "reply": 1,
+      "beforeTick": 3430,
+      "afterTick": 3431,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 2669,
+      "reply": 2669,
+      "beforeTick": 3431,
+      "afterTick": 6101,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 6101,
+      "afterTick": 6109,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 6109,
+      "afterTick": 6118,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 6118,
+      "afterTick": 6126,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 6126,
+      "afterTick": 6135,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 6135,
+      "afterTick": 6143,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 6143,
+      "afterTick": 6152,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 6152,
+      "afterTick": 6160,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 6160,
+      "afterTick": 6169,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 6169,
+      "afterTick": 6177,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 6177,
+      "afterTick": 6206,
+      "wallClockTicks": 21
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 6206,
+      "afterTick": 6215,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 6215,
+      "afterTick": 6223,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 6223,
+      "afterTick": 6232,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 6232,
+      "afterTick": 6241,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 6241,
+      "afterTick": 6249,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 6249,
+      "afterTick": 6258,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 6258,
+      "afterTick": 6267,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 6267,
+      "afterTick": 6275,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 6275,
+      "afterTick": 6283,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 6283,
+      "afterTick": 6292,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 6292,
+      "afterTick": 6300,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 6300,
+      "afterTick": 6309,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 6309,
+      "afterTick": 6317,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 6317,
+      "afterTick": 6326,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 6326,
+      "afterTick": 6334,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 6334,
+      "afterTick": 6344,
+      "wallClockTicks": 2
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 6344,
+      "afterTick": 6352,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 6352,
+      "afterTick": 6360,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 6360,
+      "afterTick": 6369,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 6369,
+      "afterTick": 6377,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 6377,
+      "afterTick": 6386,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 6386,
+      "afterTick": 6394,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 6394,
+      "afterTick": 6403,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 6403,
+      "afterTick": 6411,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 6411,
+      "afterTick": 6419,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 8,
+      "reply": 8,
+      "beforeTick": 6419,
+      "afterTick": 6428,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 1,
+      "reply": 1,
+      "beforeTick": 6428,
+      "afterTick": 6429,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 1,
+      "reply": 1,
+      "beforeTick": 6429,
+      "afterTick": 6431,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 1,
+      "reply": 1,
+      "beforeTick": 6431,
+      "afterTick": 6432,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 1,
+      "reply": 1,
+      "beforeTick": 6432,
+      "afterTick": 6434,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 1,
+      "reply": 1,
+      "beforeTick": 6434,
+      "afterTick": 6436,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 1,
+      "reply": 1,
+      "beforeTick": 6436,
+      "afterTick": 6437,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 1,
+      "reply": 1,
+      "beforeTick": 6437,
+      "afterTick": 6439,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 1,
+      "reply": 1,
+      "beforeTick": 6439,
+      "afterTick": 6440,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 1,
+      "reply": 1,
+      "beforeTick": 6440,
+      "afterTick": 6442,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 1,
+      "reply": 1,
+      "beforeTick": 6442,
+      "afterTick": 6443,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 1,
+      "reply": 1,
+      "beforeTick": 6443,
+      "afterTick": 6444,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 1,
+      "reply": 1,
+      "beforeTick": 6444,
+      "afterTick": 6446,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 1,
+      "reply": 1,
+      "beforeTick": 6446,
+      "afterTick": 6448,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 1,
+      "reply": 1,
+      "beforeTick": 6448,
+      "afterTick": 6449,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 1,
+      "reply": 1,
+      "beforeTick": 6449,
+      "afterTick": 6450,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 1,
+      "reply": 1,
+      "beforeTick": 6450,
+      "afterTick": 6452,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 1,
+      "reply": 1,
+      "beforeTick": 6452,
+      "afterTick": 6453,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 1,
+      "reply": 1,
+      "beforeTick": 6453,
+      "afterTick": 6454,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 1,
+      "reply": 1,
+      "beforeTick": 6454,
+      "afterTick": 6456,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 1,
+      "reply": 1,
+      "beforeTick": 6456,
+      "afterTick": 6458,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 1,
+      "reply": 1,
+      "beforeTick": 6458,
+      "afterTick": 6459,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 1,
+      "reply": 1,
+      "beforeTick": 6459,
+      "afterTick": 6461,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 1,
+      "reply": 1,
+      "beforeTick": 6461,
+      "afterTick": 6462,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 1,
+      "reply": 1,
+      "beforeTick": 6462,
+      "afterTick": 6464,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 1,
+      "reply": 1,
+      "beforeTick": 6464,
+      "afterTick": 6465,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 1,
+      "reply": 1,
+      "beforeTick": 6465,
+      "afterTick": 6467,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 1,
+      "reply": 1,
+      "beforeTick": 6467,
+      "afterTick": 6468,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 1,
+      "reply": 1,
+      "beforeTick": 6468,
+      "afterTick": 6470,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 1,
+      "reply": 1,
+      "beforeTick": 6470,
+      "afterTick": 6471,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 1,
+      "reply": 1,
+      "beforeTick": 6471,
+      "afterTick": 6472,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 1,
+      "reply": 1,
+      "beforeTick": 6472,
+      "afterTick": 6474,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 1,
+      "reply": 1,
+      "beforeTick": 6474,
+      "afterTick": 6476,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 1,
+      "reply": 1,
+      "beforeTick": 6476,
+      "afterTick": 6477,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 1,
+      "reply": 1,
+      "beforeTick": 6477,
+      "afterTick": 6479,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 1,
+      "reply": 1,
+      "beforeTick": 6479,
+      "afterTick": 6480,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 1,
+      "reply": 1,
+      "beforeTick": 6480,
+      "afterTick": 6481,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 1,
+      "reply": 1,
+      "beforeTick": 6481,
+      "afterTick": 6483,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 1,
+      "reply": 1,
+      "beforeTick": 6483,
+      "afterTick": 6484,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 1,
+      "reply": 1,
+      "beforeTick": 6484,
+      "afterTick": 6486,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 1,
+      "reply": 1,
+      "beforeTick": 6486,
+      "afterTick": 6488,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 1,
+      "reply": 1,
+      "beforeTick": 6488,
+      "afterTick": 6489,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 1,
+      "reply": 1,
+      "beforeTick": 6489,
+      "afterTick": 6491,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 1,
+      "reply": 1,
+      "beforeTick": 6491,
+      "afterTick": 6492,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 1,
+      "reply": 1,
+      "beforeTick": 6492,
+      "afterTick": 6493,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 1,
+      "reply": 1,
+      "beforeTick": 6493,
+      "afterTick": 6495,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 1,
+      "reply": 1,
+      "beforeTick": 6495,
+      "afterTick": 6496,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 1,
+      "reply": 1,
+      "beforeTick": 6496,
+      "afterTick": 6498,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 1,
+      "reply": 1,
+      "beforeTick": 6498,
+      "afterTick": 6500,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 1,
+      "reply": 1,
+      "beforeTick": 6500,
+      "afterTick": 6501,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 1,
+      "reply": 1,
+      "beforeTick": 6501,
+      "afterTick": 6502,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 64,
+      "reply": 64,
+      "beforeTick": 6502,
+      "afterTick": 6567,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 64,
+      "reply": 64,
+      "beforeTick": 6567,
+      "afterTick": 6631,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 64,
+      "reply": 64,
+      "beforeTick": 6631,
+      "afterTick": 6696,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 64,
+      "reply": 64,
+      "beforeTick": 6696,
+      "afterTick": 6761,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 64,
+      "reply": 64,
+      "beforeTick": 6761,
+      "afterTick": 6825,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 64,
+      "reply": 64,
+      "beforeTick": 6825,
+      "afterTick": 6890,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 64,
+      "reply": 64,
+      "beforeTick": 6890,
+      "afterTick": 6954,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 64,
+      "reply": 64,
+      "beforeTick": 6954,
+      "afterTick": 7019,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 64,
+      "reply": 64,
+      "beforeTick": 7019,
+      "afterTick": 7083,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 64,
+      "reply": 64,
+      "beforeTick": 7083,
+      "afterTick": 7147,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 64,
+      "reply": 64,
+      "beforeTick": 7147,
+      "afterTick": 7212,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 64,
+      "reply": 64,
+      "beforeTick": 7212,
+      "afterTick": 7277,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 64,
+      "reply": 64,
+      "beforeTick": 7277,
+      "afterTick": 7341,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 64,
+      "reply": 64,
+      "beforeTick": 7341,
+      "afterTick": 7405,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 64,
+      "reply": 64,
+      "beforeTick": 7405,
+      "afterTick": 7470,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 64,
+      "reply": 64,
+      "beforeTick": 7470,
+      "afterTick": 7534,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 64,
+      "reply": 64,
+      "beforeTick": 7534,
+      "afterTick": 7599,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 64,
+      "reply": 64,
+      "beforeTick": 7599,
+      "afterTick": 7663,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 64,
+      "reply": 64,
+      "beforeTick": 7663,
+      "afterTick": 7728,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 32,
+      "reply": 32,
+      "beforeTick": 7728,
+      "afterTick": 7761,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 64,
+      "reply": 64,
+      "beforeTick": 7728,
+      "afterTick": 7792,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 64,
+      "reply": 64,
+      "beforeTick": 7792,
+      "afterTick": 7857,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 64,
+      "reply": 64,
+      "beforeTick": 7857,
+      "afterTick": 7921,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 64,
+      "reply": 64,
+      "beforeTick": 7921,
+      "afterTick": 7986,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 64,
+      "reply": 64,
+      "beforeTick": 7986,
+      "afterTick": 8050,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 64,
+      "reply": 64,
+      "beforeTick": 8050,
+      "afterTick": 8115,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 64,
+      "reply": 64,
+      "beforeTick": 8115,
+      "afterTick": 8179,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 64,
+      "reply": 64,
+      "beforeTick": 8179,
+      "afterTick": 8244,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 64,
+      "reply": 64,
+      "beforeTick": 8244,
+      "afterTick": 8309,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 64,
+      "reply": 64,
+      "beforeTick": 8309,
+      "afterTick": 8374,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 64,
+      "reply": 64,
+      "beforeTick": 8374,
+      "afterTick": 8438,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 64,
+      "reply": 64,
+      "beforeTick": 8438,
+      "afterTick": 8503,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 64,
+      "reply": 64,
+      "beforeTick": 8503,
+      "afterTick": 8567,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 64,
+      "reply": 64,
+      "beforeTick": 8567,
+      "afterTick": 8631,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 64,
+      "reply": 64,
+      "beforeTick": 8631,
+      "afterTick": 8697,
+      "wallClockTicks": 2
+    },
+    {
+      "requested": 64,
+      "reply": 64,
+      "beforeTick": 8697,
+      "afterTick": 8761,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 64,
+      "reply": 64,
+      "beforeTick": 8761,
+      "afterTick": 8826,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 64,
+      "reply": 64,
+      "beforeTick": 8826,
+      "afterTick": 8890,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 128,
+      "reply": 128,
+      "beforeTick": 8890,
+      "afterTick": 9019,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 128,
+      "reply": 128,
+      "beforeTick": 9019,
+      "afterTick": 9148,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 128,
+      "reply": 128,
+      "beforeTick": 9148,
+      "afterTick": 9277,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 128,
+      "reply": 128,
+      "beforeTick": 9277,
+      "afterTick": 9405,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 128,
+      "reply": 128,
+      "beforeTick": 9405,
+      "afterTick": 9534,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 128,
+      "reply": 128,
+      "beforeTick": 9534,
+      "afterTick": 9663,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 128,
+      "reply": 128,
+      "beforeTick": 9663,
+      "afterTick": 9792,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 128,
+      "reply": 128,
+      "beforeTick": 9792,
+      "afterTick": 9920,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 128,
+      "reply": 128,
+      "beforeTick": 9920,
+      "afterTick": 10049,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 128,
+      "reply": 128,
+      "beforeTick": 10049,
+      "afterTick": 10177,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 128,
+      "reply": 128,
+      "beforeTick": 10177,
+      "afterTick": 10306,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 128,
+      "reply": 128,
+      "beforeTick": 10306,
+      "afterTick": 10455,
+      "wallClockTicks": 21
+    },
+    {
+      "requested": 128,
+      "reply": 128,
+      "beforeTick": 10455,
+      "afterTick": 10584,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 128,
+      "reply": 128,
+      "beforeTick": 10584,
+      "afterTick": 10713,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 128,
+      "reply": 128,
+      "beforeTick": 10713,
+      "afterTick": 10841,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 128,
+      "reply": 128,
+      "beforeTick": 10841,
+      "afterTick": 10969,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 128,
+      "reply": 128,
+      "beforeTick": 10969,
+      "afterTick": 11098,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 128,
+      "reply": 128,
+      "beforeTick": 11098,
+      "afterTick": 11227,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 128,
+      "reply": 128,
+      "beforeTick": 11227,
+      "afterTick": 11355,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 128,
+      "reply": 128,
+      "beforeTick": 11355,
+      "afterTick": 11484,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 128,
+      "reply": 128,
+      "beforeTick": 11484,
+      "afterTick": 11613,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 128,
+      "reply": 128,
+      "beforeTick": 11613,
+      "afterTick": 11741,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 128,
+      "reply": 128,
+      "beforeTick": 11741,
+      "afterTick": 11870,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 128,
+      "reply": 128,
+      "beforeTick": 11870,
+      "afterTick": 11998,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 128,
+      "reply": 128,
+      "beforeTick": 11998,
+      "afterTick": 12127,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 128,
+      "reply": 128,
+      "beforeTick": 12127,
+      "afterTick": 12255,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 128,
+      "reply": 128,
+      "beforeTick": 12255,
+      "afterTick": 12384,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 128,
+      "reply": 128,
+      "beforeTick": 12384,
+      "afterTick": 12512,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 128,
+      "reply": 128,
+      "beforeTick": 12512,
+      "afterTick": 12641,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 128,
+      "reply": 128,
+      "beforeTick": 12641,
+      "afterTick": 12770,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 128,
+      "reply": 128,
+      "beforeTick": 12770,
+      "afterTick": 12898,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 128,
+      "reply": 128,
+      "beforeTick": 12898,
+      "afterTick": 13027,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 128,
+      "reply": 128,
+      "beforeTick": 13027,
+      "afterTick": 13156,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 128,
+      "reply": 128,
+      "beforeTick": 13156,
+      "afterTick": 13284,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 128,
+      "reply": 128,
+      "beforeTick": 13284,
+      "afterTick": 13413,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 128,
+      "reply": 128,
+      "beforeTick": 13413,
+      "afterTick": 13541,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 128,
+      "reply": 128,
+      "beforeTick": 13541,
+      "afterTick": 13670,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 128,
+      "reply": 128,
+      "beforeTick": 13670,
+      "afterTick": 13799,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 128,
+      "reply": 128,
+      "beforeTick": 13799,
+      "afterTick": 13927,
+      "wallClockTicks": 0
+    },
+    {
+      "requested": 128,
+      "reply": 128,
+      "beforeTick": 13927,
+      "afterTick": 14056,
+      "wallClockTicks": 1
+    },
+    {
+      "requested": 4096,
+      "reply": 4096,
+      "beforeTick": 14056,
+      "afterTick": 18153,
+      "wallClockTicks": 1
+    }
+  ],
+  "actualFinalTick": 18153,
+  "accounting": {
+    "cashBeforeSales": 499540,
+    "cashAfterSales": 499559,
+    "cashAfterBinRestoredBenches": 499529,
+    "constructionSpent": 490,
+    "refunded": 0,
+    "ledger": {
+      "rideSales": 0,
+      "shopSales": 27,
+      "stock": 8,
+      "wages": 0,
+      "upkeep": 0,
+      "interest": 0
+    },
+    "wallets": [
+      {
+        "id": 1,
+        "initial": 193,
+        "cash": 181,
+        "spent": 12
+      },
+      {
+        "id": 2,
+        "initial": 128,
+        "cash": 113,
+        "spent": 15
+      }
+    ]
+  },
+  "passed": true,
+  "originalRecordsRestored": true,
+  "originalRecordsRestoredUTC": "2026-10-09T18:41:53.628274+00:00",
+  "endUTC": "2026-10-09T18:41:53.639427+00:00",
+  "CDPReaderTerminal": [
+    null
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "observedUTC": "2026-10-09 18:59:55 UTC",
+  "scope": "Terminal transport of the frozen finite actual public two-route proof; receipt and packaging/transport logs are outside the common-file manifest.",
+  "sourceCommit": "fddd5b0cccc66164209cdf7d2e543dfb24bb6235",
+  "pagesCommit": "524c8a9d224ea5eeda2ddc9a257bd748a34ccb5e",
+  "readinessSha256": "2128b095f052501e9ab7636260a9a8df8056847afc8d76cd25b31df963f03384",
+  "remoteRoot": "/workspace/coaster-consumables/public-browser-sol",
+  "localRoot": "/Volumes/WD/code/workspaces/coaster-consumables/public-browser-sol",
+  "runner": {
+    "run": "r1",
+    "exit": 0,
+    "startUTC": "2026-10-09T18:39:48.219436+00:00",
+    "endUTC": "2026-10-09T18:43:59.427156+00:00",
+    "routeGroups": {"root": 8, "pin": 8},
+    "orchestrationChecks": {"root": 81, "pin": 81},
+    "actualDriverPredicates": {"root": 655, "pin": 589},
+    "actualFinalTicks": {"root": 18153, "pin": 18205},
+    "publicSourceRecordsPerPhasePerRoute": 93,
+    "originalCompleteSharedStoresRestored": true,
+    "runtimeConsoleNetworkHTTPErrors": 0,
+    "ownedChromePID": 832077,
+    "ownedChromeExit": 0,
+    "ownedChromeTerminalUTC": "2026-10-09T18:43:59.412416+00:00",
+    "terminalPortsOccupied": {"8769": false, "9237": false},
+    "noHTTPServerStarted": true
+  },
+  "retentionAudit": {
+    "exit": 0,
+    "checksPassed": 28,
+    "compressedRecords": 55,
+    "decodedBytes": 265221362,
+    "compressedBytes": 42968920,
+    "allDecodedRereadSHA256VerifiedBeforeOriginalRemoval": true,
+    "sha256": "caab8bc86c4734c995a11cb8d901c433e4a31271b19cad98e1433462bfeb4b46",
+    "compressionManifestSha256": "0bc8f3772a5eaec10a1584318b4402a9f313b005351ea7f0838121e0de5ad485"
+  },
+  "archive": {
+    "path": "retained-public.tar.gz",
+    "exit": 0,
+    "stderrBytes": 0,
+    "bytes": 80696354,
+    "sha256": "70013b1185d9e69ced42cb7859e786615c8ac1d77fd0892a0e7caed70a325bc7",
+    "onlyExplicitFiles": true
+  },
+  "scp": {
+    "exit": 0,
+    "terminalBeforeExtraction": true,
+    "localArchiveSha256EqualsRemote": true,
+    "stderrBytes": 0
+  },
+  "extractionExit": 0,
+  "manifest": {
+    "path": "files.sha256",
+    "fileCount": 265,
+    "sha256": "d4a3f77cb496eeb09f9fd7d0af1daf42e80cfb7d2ea78d733973b1e964539726",
+    "grokFileCheckExit": 0,
+    "wdFileCheckExit": 0,
+    "grokVerifiedRows": 265,
+    "wdVerifiedRows": 265
+  },
+  "report": {"path": "REPORT.md", "sha256": "5a06292d040f1ff759acc9642aadadf85c72dfd3a2232e2476f98b6797c6875b"},
+  "priorEvidence": "Frozen consumer-browser-sol 174/175 and 290 science were read-only; no writes or broad matrix replays.",
+  "retainedFailures": ["retention-telemetry-r1-failed-input.txt: a post-run read-only inline parser error, corrected with a named-loop file; no browser or scientific replay."],
+  "unexecutedScopes": "Original-game numerics, human art/play, representative GPU/scale, detailed editable prop masters, full programme, final cumulative review and source integration remain separate Root-owned gates."
+}

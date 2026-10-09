@@ -1,0 +1,76 @@
+{
+  "observedUTC": "2026-10-09T19:23:29.548811+00:00",
+  "observer": "Root independent Grok retained-data audit; no runtime replay",
+  "sourceCommit": "fddd5b0cccc66164209cdf7d2e543dfb24bb6235",
+  "pagesCommit": "524c8a9d224ea5eeda2ddc9a257bd748a34ccb5e",
+  "manifestSha256": "d4a3f77cb496eeb09f9fd7d0af1daf42e80cfb7d2ea78d733973b1e964539726",
+  "manifestFilesVerified": 265,
+  "archiveSha256": "70013b1185d9e69ced42cb7859e786615c8ac1d77fd0892a0e7caed70a325bc7",
+  "decodedFiles": 55,
+  "decodedBytes": 265221362,
+  "retainedGzipBytes": 42968920,
+  "allEncodedDecodedHashesMatch": true,
+  "routes": [
+    {
+      "route": "root",
+      "groups": 8,
+      "completeProtectedStoresExact": true,
+      "strictWorkerUIRejectionAtomic": true,
+      "wholePaidExportReloadExact": true,
+      "paidTick": 6502,
+      "ledger": {
+        "rideSales": 0,
+        "shopSales": 27,
+        "stock": 8,
+        "wages": 0,
+        "upkeep": 0,
+        "interest": 0
+      },
+      "finalTick": 18153,
+      "constructionSpent": 490,
+      "finalCash": 499529,
+      "currentParsedSourceBodies": {
+        "initial": 93,
+        "continuation": 93
+      },
+      "sixResourcesOnce": true,
+      "htmlExact": true,
+      "canPixelSha256": "d3242ec2d9c121fb67a39df483083fa4a2398e41662461169866d4dcdb78a597",
+      "boxPixelSha256": "63ef4485313332b1b36d1b50b243b2a37b6b503cdb8f45d48decadb879436207"
+    },
+    {
+      "route": "pin",
+      "groups": 8,
+      "completeProtectedStoresExact": true,
+      "strictWorkerUIRejectionAtomic": true,
+      "wholePaidExportReloadExact": true,
+      "paidTick": 6508,
+      "ledger": {
+        "rideSales": 0,
+        "shopSales": 27,
+        "stock": 8,
+        "wages": 0,
+        "upkeep": 0,
+        "interest": 0
+      },
+      "finalTick": 18205,
+      "constructionSpent": 490,
+      "finalCash": 499529,
+      "currentParsedSourceBodies": {
+        "initial": 93,
+        "continuation": 93
+      },
+      "sixResourcesOnce": true,
+      "htmlExact": true,
+      "canPixelSha256": "d3242ec2d9c121fb67a39df483083fa4a2398e41662461169866d4dcdb78a597",
+      "boxPixelSha256": "63ef4485313332b1b36d1b50b243b2a37b6b503cdb8f45d48decadb879436207"
+    }
+  ],
+  "runnerActualExit": 0,
+  "ownedChromePID": 832077,
+  "ownedChromeActualExit": 0,
+  "ownedChromeAbsentNow": true,
+  "recordedPortsFree": true,
+  "rootFailedAuditR1": "Fixed6502 assumption failed on pin6508; exact per-route state/export/reload is the unchanged acceptance criterion. Failed checker/absent receipt transfer are preserved separately.",
+  "passed": true
+}

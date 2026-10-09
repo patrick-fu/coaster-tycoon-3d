@@ -26,10 +26,12 @@ Flume is constructible through the Library. It requires no original
 game data. Geometry, rates and motion remain candidate metadata; excitement,
 intensity/nausea rating formulas and exact original catalogue comparisons are
 not yet qualified. Six independently authored scenery types and a planted starter
-landscape use authoritative costs and footprints. Current saves use v11/content
-4 and worker protocol 4; [current verification](verification/log-flume/README.md)
+landscape use authoritative costs and footprints. The finite Burger/Soft-drink
+stalls add actual product economics, guest-held use and typed disposal. Current
+saves use v12/content 5 and worker protocol 5;
+[current verification](verification/consumables/README.md)
 records source and public boundaries separately from the earlier captures above.
-Historical v6–v10 parks validate before adding declared fields, preserving
+Historical v6–v11 parks validate before adding declared fields, preserving
 player construction without inserting new starter rides.
 
 Classic controls use a horizontal command desk and bottom palette. Construction

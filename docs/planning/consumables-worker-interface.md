@@ -1,8 +1,10 @@
 # Finite consumables worker and presentation interface
 
 Root freezes this interface for the [accepted finite contract](consumables-slice.md).
-These fields exist in the working implementation using12/5/5. Current public
-versions remain11/4/4; working browser/player qualification is recorded in PROGRESS.
+These fields exist in working and current public candidate source12/5/5.
+Exact public files and actual root8/pin8 player/source flow plus Root retention
+qualify. Both whole-delivery Design/Drift closure rounds are accepted; source integration remains pending.
+Dated local browser and current kernel qualification are recorded in PROGRESS.
 Authority owns all transactions, use counters, needs, ownership and disposal.
 
 ## Identities and receiving availability

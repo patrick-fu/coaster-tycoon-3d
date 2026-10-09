@@ -1,0 +1,27 @@
+{
+  "before": {
+    "counts": {
+      "can": 1,
+      "box": 1
+    },
+    "memory": {
+      "geometries": 28,
+      "textures": 26
+    }
+  },
+  "events": {
+    "canMesh": 1,
+    "canGeometry": 1,
+    "canMaterial": 1,
+    "boxMesh": 1,
+    "boxGeometry": 1,
+    "boxMaterial": 1
+  },
+  "disposed": true,
+  "canAbsent": true,
+  "boxAbsent": true,
+  "memoryAfter": {
+    "geometries": 0,
+    "textures": 3
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "observedUTC": "2026-10-09T20:02:00.197138+00:00",
+  "scope": "Exact redundant successful source/web transport archives only; final265-file science archive,masters,failures and immutable source/shipping copies remain.",
+  "runtimeSource": "fddd5b0cccc66164209cdf7d2e543dfb24bb6235",
+  "remote": {
+    "observedUTC": "2026-10-09T19:59:43.366760+00:00",
+    "host": "grok-build",
+    "scope": "Only redundant successful source/web transport archives; immutable authored sources,shipping outputs,public science archive,masters,failed attempts and manifests remain.",
+    "runtimeSource": "fddd5b0cccc66164209cdf7d2e543dfb24bb6235",
+    "guards": {
+      "authoredFiles": 116,
+      "shippingFiles": 119,
+      "allHashesMatch": true
+    },
+    "deleted": [
+      {
+        "path": "/workspace/coaster-consumables/publication/source.tar",
+        "sha256": "cc7ad14b18298db0178a7e025d92b102ddf04924a7632d0212525dd2d1809e40",
+        "bytes": 59740160
+      },
+      {
+        "path": "/workspace/coaster-consumables/publication/publication-web.tar.gz",
+        "sha256": "38302a5d659d378c0909b819f64c6cfbe642b5c0e187a1c9ac395f14bcc1a877",
+        "bytes": 57347022
+      }
+    ],
+    "freedBytes": 117087182,
+    "deletedFilesAbsent": true
+  },
+  "local": {
+    "guards": {
+      "authoredFiles": 116,
+      "shippingFiles": 119,
+      "allHashesMatch": true
+    },
+    "deleted": [
+      {
+        "path": "/Volumes/WD/code/workspaces/coaster-consumables/publication/source.tar",
+        "sha256": "cc7ad14b18298db0178a7e025d92b102ddf04924a7632d0212525dd2d1809e40",
+        "bytes": 59740160
+      },
+      {
+        "path": "/Volumes/WD/code/workspaces/coaster-consumables/publication/publication-web.tar.gz",
+        "sha256": "38302a5d659d378c0909b819f64c6cfbe642b5c0e187a1c9ac395f14bcc1a877",
+        "bytes": 57347022
+      }
+    ],
+    "freedBytes": 117087182,
+    "deletedFilesAbsent": true
+  },
+  "totalFreedBytes": 234174364,
+  "retainedRecovery": [
+    "Committed authored116 inputs and immutable Grok release",
+    "119 shipping files in Grok web-dist and Pages root/pin",
+    "Source/build/correspondence/hash manifests and actual process terminals",
+    "265 final public evidence files and archive70013b11 on WD/Grok",
+    "All failed artifacts, old oracles and editable masters"
+  ]
+}
