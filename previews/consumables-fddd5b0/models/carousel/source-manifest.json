@@ -1,0 +1,2011 @@
+{
+  "meshes": [
+    {
+      "object": "Horse_00",
+      "data": "Horse_Mesh_Outer",
+      "parent": "RotorRoot",
+      "rotates": true,
+      "vertices": 497,
+      "triangles": 604,
+      "bounds": [
+        [
+          -0.8399999737739563,
+          -4.440606594085693,
+          0.4000000059604645
+        ],
+        [
+          0.8999999761581421,
+          -3.959393262863159,
+          3.9000000953674316
+        ]
+      ],
+      "radialVertices": [
+        3.9594044054803033,
+        4.448004515249073
+      ],
+      "materials": [
+        "cream",
+        "paint_red",
+        "brass",
+        "ink"
+      ]
+    },
+    {
+      "object": "Horse_01",
+      "data": "Horse_Mesh_Inner",
+      "parent": "RotorRoot",
+      "rotates": true,
+      "vertices": 497,
+      "triangles": 604,
+      "bounds": [
+        [
+          0.24882325530052185,
+          -2.9362237453460693,
+          0.4000000059604645
+        ],
+        [
+          1.864491581916809,
+          -2.1312878131866455,
+          3.9000000953674316
+        ]
+      ],
+      "radialVertices": [
+        2.4588790070820163,
+        2.9699091118579224
+      ],
+      "materials": [
+        "cream",
+        "paint_red",
+        "brass",
+        "ink"
+      ]
+    },
+    {
+      "object": "Horse_02",
+      "data": "Horse_Mesh_Outer",
+      "parent": "RotorRoot",
+      "rotates": true,
+      "vertices": 497,
+      "triangles": 604,
+      "bounds": [
+        [
+          2.308048725128174,
+          -3.631951332092285,
+          0.4000000059604645
+        ],
+        [
+          3.606396198272705,
+          -2.333603858947754,
+          3.9000000953674316
+        ]
+      ],
+      "radialVertices": [
+        3.9596188825088463,
+        4.44821572065997
+      ],
+      "materials": [
+        "cream",
+        "paint_red",
+        "brass",
+        "ink"
+      ]
+    },
+    {
+      "object": "Horse_03",
+      "data": "Horse_Mesh_Inner",
+      "parent": "RotorRoot",
+      "rotates": true,
+      "vertices": 497,
+      "triangles": 604,
+      "bounds": [
+        [
+          2.0517759323120117,
+          -1.8171766996383667,
+          0.4000000059604645
+        ],
+        [
+          2.8567121028900146,
+          -0.20150846242904663,
+          3.9000000953674316
+        ]
+      ],
+      "radialVertices": [
+        2.458878760030188,
+        2.969887680529552
+      ],
+      "materials": [
+        "cream",
+        "paint_red",
+        "brass",
+        "ink"
+      ]
+    },
+    {
+      "object": "Horse_04",
+      "data": "Horse_Mesh_Outer",
+      "parent": "RotorRoot",
+      "rotates": true,
+      "vertices": 497,
+      "triangles": 604,
+      "bounds": [
+        [
+          3.959393262863159,
+          -0.8399999737739563,
+          0.4000000059604645
+        ],
+        [
+          4.440606594085693,
+          0.8999999761581421,
+          3.9000000953674316
+        ]
+      ],
+      "radialVertices": [
+        3.959404405506817,
+        4.448004515249073
+      ],
+      "materials": [
+        "cream",
+        "paint_red",
+        "brass",
+        "ink"
+      ]
+    },
+    {
+      "object": "Horse_05",
+      "data": "Horse_Mesh_Inner",
+      "parent": "RotorRoot",
+      "rotates": true,
+      "vertices": 497,
+      "triangles": 604,
+      "bounds": [
+        [
+          2.1312878131866455,
+          0.24882331490516663,
+          0.4000000059604645
+        ],
+        [
+          2.9362237453460693,
+          1.8644914627075195,
+          3.9000000953674316
+        ]
+      ],
+      "radialVertices": [
+        2.4588790070820163,
+        2.969909125285587
+      ],
+      "materials": [
+        "cream",
+        "paint_red",
+        "brass",
+        "ink"
+      ]
+    },
+    {
+      "object": "Horse_06",
+      "data": "Horse_Mesh_Outer",
+      "parent": "RotorRoot",
+      "rotates": true,
+      "vertices": 497,
+      "triangles": 604,
+      "bounds": [
+        [
+          2.333603858947754,
+          2.308048725128174,
+          0.4000000059604645
+        ],
+        [
+          3.631951332092285,
+          3.606396198272705,
+          3.9000000953674316
+        ]
+      ],
+      "radialVertices": [
+        3.9596188825088463,
+        4.44821572065997
+      ],
+      "materials": [
+        "cream",
+        "paint_red",
+        "brass",
+        "ink"
+      ]
+    },
+    {
+      "object": "Horse_07",
+      "data": "Horse_Mesh_Inner",
+      "parent": "RotorRoot",
+      "rotates": true,
+      "vertices": 497,
+      "triangles": 604,
+      "bounds": [
+        [
+          0.20150846242904663,
+          2.0517759323120117,
+          0.4000000059604645
+        ],
+        [
+          1.8171766996383667,
+          2.8567121028900146,
+          3.9000000953674316
+        ]
+      ],
+      "radialVertices": [
+        2.458878760030188,
+        2.969887680529552
+      ],
+      "materials": [
+        "cream",
+        "paint_red",
+        "brass",
+        "ink"
+      ]
+    },
+    {
+      "object": "Horse_08",
+      "data": "Horse_Mesh_Outer",
+      "parent": "RotorRoot",
+      "rotates": true,
+      "vertices": 497,
+      "triangles": 604,
+      "bounds": [
+        [
+          -0.8999999761581421,
+          3.959393262863159,
+          0.4000000059604645
+        ],
+        [
+          0.8399999737739563,
+          4.440606594085693,
+          3.9000000953674316
+        ]
+      ],
+      "radialVertices": [
+        3.959404405462627,
+        4.448004515249073
+      ],
+      "materials": [
+        "cream",
+        "paint_red",
+        "brass",
+        "ink"
+      ]
+    },
+    {
+      "object": "Horse_09",
+      "data": "Horse_Mesh_Inner",
+      "parent": "RotorRoot",
+      "rotates": true,
+      "vertices": 497,
+      "triangles": 604,
+      "bounds": [
+        [
+          -1.8644914627075195,
+          2.1312878131866455,
+          0.4000000059604645
+        ],
+        [
+          -0.24882331490516663,
+          2.9362239837646484,
+          3.9000000953674316
+        ]
+      ],
+      "radialVertices": [
+        2.4588789844838486,
+        2.9699093699517465
+      ],
+      "materials": [
+        "cream",
+        "paint_red",
+        "brass",
+        "ink"
+      ]
+    },
+    {
+      "object": "Horse_10",
+      "data": "Horse_Mesh_Outer",
+      "parent": "RotorRoot",
+      "rotates": true,
+      "vertices": 497,
+      "triangles": 604,
+      "bounds": [
+        [
+          -3.606396198272705,
+          2.333604097366333,
+          0.4000000059604645
+        ],
+        [
+          -2.308048725128174,
+          3.631951332092285,
+          3.9000000953674316
+        ]
+      ],
+      "radialVertices": [
+        3.9596188825088463,
+        4.448215583008823
+      ],
+      "materials": [
+        "cream",
+        "paint_red",
+        "brass",
+        "ink"
+      ]
+    },
+    {
+      "object": "Horse_11",
+      "data": "Horse_Mesh_Inner",
+      "parent": "RotorRoot",
+      "rotates": true,
+      "vertices": 497,
+      "triangles": 604,
+      "bounds": [
+        [
+          -2.8567121028900146,
+          0.20150840282440186,
+          0.4000000059604645
+        ],
+        [
+          -2.051776170730591,
+          1.8171766996383667,
+          3.9000000953674316
+        ]
+      ],
+      "radialVertices": [
+        2.4588785401086177,
+        2.969887680529552
+      ],
+      "materials": [
+        "cream",
+        "paint_red",
+        "brass",
+        "ink"
+      ]
+    },
+    {
+      "object": "Horse_12",
+      "data": "Horse_Mesh_Outer",
+      "parent": "RotorRoot",
+      "rotates": true,
+      "vertices": 497,
+      "triangles": 604,
+      "bounds": [
+        [
+          -4.440606594085693,
+          -0.8999999761581421,
+          0.4000000059604645
+        ],
+        [
+          -3.959393262863159,
+          0.8399999737739563,
+          3.9000000953674316
+        ]
+      ],
+      "radialVertices": [
+        3.9594044055554263,
+        4.448004505169367
+      ],
+      "materials": [
+        "cream",
+        "paint_red",
+        "brass",
+        "ink"
+      ]
+    },
+    {
+      "object": "Horse_13",
+      "data": "Horse_Mesh_Inner",
+      "parent": "RotorRoot",
+      "rotates": true,
+      "vertices": 497,
+      "triangles": 604,
+      "bounds": [
+        [
+          -2.9362237453460693,
+          -1.864491581916809,
+          0.4000000059604645
+        ],
+        [
+          -2.1312880516052246,
+          -0.24882325530052185,
+          3.9000000953674316
+        ]
+      ],
+      "radialVertices": [
+        2.4588790070820163,
+        2.9699091118579224
+      ],
+      "materials": [
+        "cream",
+        "paint_red",
+        "brass",
+        "ink"
+      ]
+    },
+    {
+      "object": "Horse_14",
+      "data": "Horse_Mesh_Outer",
+      "parent": "RotorRoot",
+      "rotates": true,
+      "vertices": 497,
+      "triangles": 604,
+      "bounds": [
+        [
+          -3.631951332092285,
+          -3.606396198272705,
+          0.4000000059604645
+        ],
+        [
+          -2.333603858947754,
+          -2.308048725128174,
+          3.9000000953674316
+        ]
+      ],
+      "radialVertices": [
+        3.9596188825088463,
+        4.44821572065997
+      ],
+      "materials": [
+        "cream",
+        "paint_red",
+        "brass",
+        "ink"
+      ]
+    },
+    {
+      "object": "Horse_15",
+      "data": "Horse_Mesh_Inner",
+      "parent": "RotorRoot",
+      "rotates": true,
+      "vertices": 497,
+      "triangles": 604,
+      "bounds": [
+        [
+          -1.8171768188476562,
+          -2.8567118644714355,
+          0.4000000059604645
+        ],
+        [
+          -0.20150834321975708,
+          -2.051776170730591,
+          3.9000000953674316
+        ]
+      ],
+      "radialVertices": [
+        2.4588785631275276,
+        2.96988775120463
+      ],
+      "materials": [
+        "cream",
+        "paint_red",
+        "brass",
+        "ink"
+      ]
+    },
+    {
+      "object": "Foundation_Skirt",
+      "data": "Foundation_Skirt",
+      "parent": "CarouselRoot",
+      "rotates": false,
+      "vertices": 128,
+      "triangles": 64,
+      "bounds": [
+        [
+          -5.599999904632568,
+          -5.599999904632568,
+          0.0
+        ],
+        [
+          5.599999904632568,
+          5.599999904632568,
+          0.1599999964237213
+        ]
+      ],
+      "radialVertices": [
+        5.599999836725124,
+        5.600000238259501
+      ],
+      "materials": [
+        "paint_red",
+        "canvas_yellow"
+      ]
+    },
+    {
+      "object": "Static_Deck_Border",
+      "data": "Static_Deck_Border",
+      "parent": "CarouselRoot",
+      "rotates": false,
+      "vertices": 132,
+      "triangles": 128,
+      "bounds": [
+        [
+          -5.400000095367432,
+          -5.400000095367432,
+          0.1599999964237213
+        ],
+        [
+          5.400000095367432,
+          5.400000095367432,
+          0.4000000059604645
+        ]
+      ],
+      "radialVertices": [
+        4.849999904632568,
+        5.400000095367432
+      ],
+      "materials": [
+        "timber"
+      ]
+    },
+    {
+      "object": "Rotating_Deck_Floor",
+      "data": "Rotating_Deck_Floor",
+      "parent": "RotorRoot",
+      "rotates": true,
+      "vertices": 129,
+      "triangles": 192,
+      "bounds": [
+        [
+          -4.849999904632568,
+          -4.849999904632568,
+          0.4000000059604645
+        ],
+        [
+          4.849999904632568,
+          4.849999904632568,
+          0.4000000059604645
+        ]
+      ],
+      "radialVertices": [
+        0.0,
+        4.850000139298773
+      ],
+      "materials": [
+        "boards"
+      ]
+    },
+    {
+      "object": "Static_Deck_Extensions",
+      "data": "Static_Deck_Extensions",
+      "parent": "CarouselRoot",
+      "rotates": false,
+      "vertices": 64,
+      "triangles": 60,
+      "bounds": [
+        [
+          -4.800000190734863,
+          2.419990062713623,
+          0.0
+        ],
+        [
+          4.800000190734863,
+          6.0,
+          0.4000000059604645
+        ]
+      ],
+      "radialVertices": [
+        5.375532879137417,
+        7.683749204070544
+      ],
+      "materials": [
+        "timber"
+      ]
+    },
+    {
+      "object": "Central_Column_Mast",
+      "data": "Central_Column_Mast",
+      "parent": "CarouselRoot",
+      "rotates": false,
+      "vertices": 128,
+      "triangles": 96,
+      "bounds": [
+        [
+          -0.8500000238418579,
+          -0.8500000238418579,
+          0.4000000059604645
+        ],
+        [
+          0.8500000238418579,
+          0.8500000238418579,
+          4.25
+        ]
+      ],
+      "radialVertices": [
+        0.8500000224554052,
+        0.8500000238418579
+      ],
+      "materials": [
+        "timber",
+        "paint_red",
+        "brass",
+        "ink"
+      ]
+    },
+    {
+      "object": "Roof_Canopy_Panels",
+      "data": "Roof_Canopy_Panels",
+      "parent": "CarouselRoot",
+      "rotates": false,
+      "vertices": 384,
+      "triangles": 288,
+      "bounds": [
+        [
+          -5.25,
+          -5.25,
+          4.534999847412109
+        ],
+        [
+          5.25,
+          5.25,
+          6.110000133514404
+        ]
+      ],
+      "radialVertices": [
+        0.17999999319998686,
+        5.2500097021953005
+      ],
+      "materials": [
+        "canvas_yellow",
+        "canvas_cream",
+        "brass"
+      ]
+    },
+    {
+      "object": "Roof_Valance_Scallops",
+      "data": "Roof_Valance_Scallops",
+      "parent": "CarouselRoot",
+      "rotates": false,
+      "vertices": 240,
+      "triangles": 256,
+      "bounds": [
+        [
+          -5.25,
+          -5.25,
+          3.819999933242798
+        ],
+        [
+          5.25,
+          5.25,
+          4.21999979019165
+        ]
+      ],
+      "radialVertices": [
+        5.24999976478347,
+        5.250000183198841
+      ],
+      "materials": [
+        "paint_red",
+        "canvas_yellow",
+        "canvas_cream"
+      ]
+    },
+    {
+      "object": "Roof_Fascia_Frieze",
+      "data": "Roof_Fascia_Frieze",
+      "parent": "CarouselRoot",
+      "rotates": false,
+      "vertices": 256,
+      "triangles": 192,
+      "bounds": [
+        [
+          -5.28000020980835,
+          -5.28000020980835,
+          4.199999809265137
+        ],
+        [
+          5.28000020980835,
+          5.28000020980835,
+          4.550000190734863
+        ]
+      ],
+      "radialVertices": [
+        5.279999824471988,
+        5.28000020980835
+      ],
+      "materials": [
+        "timber",
+        "paint_red",
+        "brass"
+      ]
+    },
+    {
+      "object": "Frieze_Medallion_00",
+      "data": "Shared_Frieze_Medallion_Mesh",
+      "parent": "CarouselRoot",
+      "rotates": false,
+      "vertices": 10,
+      "triangles": 16,
+      "bounds": [
+        [
+          5.1737494468688965,
+          0.9349246621131897,
+          4.275000095367432
+        ],
+        [
+          5.212767124176025,
+          1.1310817003250122,
+          4.474999904632568
+        ]
+      ],
+      "radialVertices": [
+        5.295000212854411,
+        5.2959445948561745
+      ],
+      "materials": [
+        "brass",
+        "paint_red"
+      ]
+    },
+    {
+      "object": "Frieze_Medallion_01",
+      "data": "Shared_Frieze_Medallion_Mesh",
+      "parent": "CarouselRoot",
+      "rotates": false,
+      "vertices": 10,
+      "triangles": 16,
+      "bounds": [
+        [
+          4.347074508666992,
+          2.8585972785949707,
+          4.275000095367432
+        ],
+        [
+          4.458189010620117,
+          3.0248913764953613,
+          4.474999904632568
+        ]
+      ],
+      "radialVertices": [
+        5.295000103840062,
+        5.295944453598862
+      ],
+      "materials": [
+        "brass",
+        "paint_red"
+      ]
+    },
+    {
+      "object": "Frieze_Medallion_02",
+      "data": "Shared_Frieze_Medallion_Mesh",
+      "parent": "CarouselRoot",
+      "rotates": false,
+      "vertices": 10,
+      "triangles": 16,
+      "bounds": [
+        [
+          2.8585972785949707,
+          4.347074508666992,
+          4.275000095367432
+        ],
+        [
+          3.0248913764953613,
+          4.458189010620117,
+          4.474999904632568
+        ]
+      ],
+      "radialVertices": [
+        5.295000103840062,
+        5.295944453598862
+      ],
+      "materials": [
+        "brass",
+        "paint_red"
+      ]
+    },
+    {
+      "object": "Frieze_Medallion_03",
+      "data": "Shared_Frieze_Medallion_Mesh",
+      "parent": "CarouselRoot",
+      "rotates": false,
+      "vertices": 10,
+      "triangles": 16,
+      "bounds": [
+        [
+          0.9349246621131897,
+          5.1737494468688965,
+          4.275000095367432
+        ],
+        [
+          1.1310817003250122,
+          5.212767124176025,
+          4.474999904632568
+        ]
+      ],
+      "radialVertices": [
+        5.295000212854411,
+        5.2959445948561745
+      ],
+      "materials": [
+        "brass",
+        "paint_red"
+      ]
+    },
+    {
+      "object": "Frieze_Medallion_04",
+      "data": "Shared_Frieze_Medallion_Mesh",
+      "parent": "CarouselRoot",
+      "rotates": false,
+      "vertices": 10,
+      "triangles": 16,
+      "bounds": [
+        [
+          -1.1310817003250122,
+          5.1737494468688965,
+          4.275000095367432
+        ],
+        [
+          -0.9349246621131897,
+          5.212767124176025,
+          4.474999904632568
+        ]
+      ],
+      "radialVertices": [
+        5.295000212854411,
+        5.2959445948561745
+      ],
+      "materials": [
+        "brass",
+        "paint_red"
+      ]
+    },
+    {
+      "object": "Frieze_Medallion_05",
+      "data": "Shared_Frieze_Medallion_Mesh",
+      "parent": "CarouselRoot",
+      "rotates": false,
+      "vertices": 10,
+      "triangles": 16,
+      "bounds": [
+        [
+          -3.0248913764953613,
+          4.347074508666992,
+          4.275000095367432
+        ],
+        [
+          -2.8585972785949707,
+          4.458189010620117,
+          4.474999904632568
+        ]
+      ],
+      "radialVertices": [
+        5.295000103840062,
+        5.295944453598862
+      ],
+      "materials": [
+        "brass",
+        "paint_red"
+      ]
+    },
+    {
+      "object": "Frieze_Medallion_06",
+      "data": "Shared_Frieze_Medallion_Mesh",
+      "parent": "CarouselRoot",
+      "rotates": false,
+      "vertices": 10,
+      "triangles": 16,
+      "bounds": [
+        [
+          -4.458189010620117,
+          2.8585972785949707,
+          4.275000095367432
+        ],
+        [
+          -4.347074508666992,
+          3.0248913764953613,
+          4.474999904632568
+        ]
+      ],
+      "radialVertices": [
+        5.295000103840062,
+        5.295944453598862
+      ],
+      "materials": [
+        "brass",
+        "paint_red"
+      ]
+    },
+    {
+      "object": "Frieze_Medallion_07",
+      "data": "Shared_Frieze_Medallion_Mesh",
+      "parent": "CarouselRoot",
+      "rotates": false,
+      "vertices": 10,
+      "triangles": 16,
+      "bounds": [
+        [
+          -5.212767124176025,
+          0.9349246621131897,
+          4.275000095367432
+        ],
+        [
+          -5.1737494468688965,
+          1.1310817003250122,
+          4.474999904632568
+        ]
+      ],
+      "radialVertices": [
+        5.295000212854411,
+        5.2959445948561745
+      ],
+      "materials": [
+        "brass",
+        "paint_red"
+      ]
+    },
+    {
+      "object": "Frieze_Medallion_08",
+      "data": "Shared_Frieze_Medallion_Mesh",
+      "parent": "CarouselRoot",
+      "rotates": false,
+      "vertices": 10,
+      "triangles": 16,
+      "bounds": [
+        [
+          -5.212767124176025,
+          -1.1310817003250122,
+          4.275000095367432
+        ],
+        [
+          -5.1737494468688965,
+          -0.9349246621131897,
+          4.474999904632568
+        ]
+      ],
+      "radialVertices": [
+        5.295000212854411,
+        5.2959445948561745
+      ],
+      "materials": [
+        "brass",
+        "paint_red"
+      ]
+    },
+    {
+      "object": "Frieze_Medallion_09",
+      "data": "Shared_Frieze_Medallion_Mesh",
+      "parent": "CarouselRoot",
+      "rotates": false,
+      "vertices": 10,
+      "triangles": 16,
+      "bounds": [
+        [
+          -4.458189010620117,
+          -3.0248913764953613,
+          4.275000095367432
+        ],
+        [
+          -4.347074508666992,
+          -2.8585972785949707,
+          4.474999904632568
+        ]
+      ],
+      "radialVertices": [
+        5.295000103840062,
+        5.295944453598862
+      ],
+      "materials": [
+        "brass",
+        "paint_red"
+      ]
+    },
+    {
+      "object": "Frieze_Medallion_10",
+      "data": "Shared_Frieze_Medallion_Mesh",
+      "parent": "CarouselRoot",
+      "rotates": false,
+      "vertices": 10,
+      "triangles": 16,
+      "bounds": [
+        [
+          -3.0248913764953613,
+          -4.458189010620117,
+          4.275000095367432
+        ],
+        [
+          -2.8585972785949707,
+          -4.347074508666992,
+          4.474999904632568
+        ]
+      ],
+      "radialVertices": [
+        5.295000103840062,
+        5.295944453598862
+      ],
+      "materials": [
+        "brass",
+        "paint_red"
+      ]
+    },
+    {
+      "object": "Frieze_Medallion_11",
+      "data": "Shared_Frieze_Medallion_Mesh",
+      "parent": "CarouselRoot",
+      "rotates": false,
+      "vertices": 10,
+      "triangles": 16,
+      "bounds": [
+        [
+          -1.1310817003250122,
+          -5.212767124176025,
+          4.275000095367432
+        ],
+        [
+          -0.9349246621131897,
+          -5.1737494468688965,
+          4.474999904632568
+        ]
+      ],
+      "radialVertices": [
+        5.295000212854411,
+        5.2959445948561745
+      ],
+      "materials": [
+        "brass",
+        "paint_red"
+      ]
+    },
+    {
+      "object": "Frieze_Medallion_12",
+      "data": "Shared_Frieze_Medallion_Mesh",
+      "parent": "CarouselRoot",
+      "rotates": false,
+      "vertices": 10,
+      "triangles": 16,
+      "bounds": [
+        [
+          0.9349246621131897,
+          -5.212767124176025,
+          4.275000095367432
+        ],
+        [
+          1.1310817003250122,
+          -5.1737494468688965,
+          4.474999904632568
+        ]
+      ],
+      "radialVertices": [
+        5.295000212854411,
+        5.2959445948561745
+      ],
+      "materials": [
+        "brass",
+        "paint_red"
+      ]
+    },
+    {
+      "object": "Frieze_Medallion_13",
+      "data": "Shared_Frieze_Medallion_Mesh",
+      "parent": "CarouselRoot",
+      "rotates": false,
+      "vertices": 10,
+      "triangles": 16,
+      "bounds": [
+        [
+          2.8585972785949707,
+          -4.458189010620117,
+          4.275000095367432
+        ],
+        [
+          3.0248913764953613,
+          -4.347074508666992,
+          4.474999904632568
+        ]
+      ],
+      "radialVertices": [
+        5.295000103840062,
+        5.295944453598862
+      ],
+      "materials": [
+        "brass",
+        "paint_red"
+      ]
+    },
+    {
+      "object": "Frieze_Medallion_14",
+      "data": "Shared_Frieze_Medallion_Mesh",
+      "parent": "CarouselRoot",
+      "rotates": false,
+      "vertices": 10,
+      "triangles": 16,
+      "bounds": [
+        [
+          4.347074508666992,
+          -3.0248913764953613,
+          4.275000095367432
+        ],
+        [
+          4.458189010620117,
+          -2.8585972785949707,
+          4.474999904632568
+        ]
+      ],
+      "radialVertices": [
+        5.295000103840062,
+        5.295944453598862
+      ],
+      "materials": [
+        "brass",
+        "paint_red"
+      ]
+    },
+    {
+      "object": "Frieze_Medallion_15",
+      "data": "Shared_Frieze_Medallion_Mesh",
+      "parent": "CarouselRoot",
+      "rotates": false,
+      "vertices": 10,
+      "triangles": 16,
+      "bounds": [
+        [
+          5.1737494468688965,
+          -1.1310817003250122,
+          4.275000095367432
+        ],
+        [
+          5.212767124176025,
+          -0.9349246621131897,
+          4.474999904632568
+        ]
+      ],
+      "radialVertices": [
+        5.295000212854411,
+        5.2959445948561745
+      ],
+      "materials": [
+        "brass",
+        "paint_red"
+      ]
+    },
+    {
+      "object": "Roof_Ceiling_Structure",
+      "data": "Roof_Ceiling_Structure",
+      "parent": "CarouselRoot",
+      "rotates": false,
+      "vertices": 128,
+      "triangles": 96,
+      "bounds": [
+        [
+          -5.199999809265137,
+          -5.199999809265137,
+          4.119999885559082
+        ],
+        [
+          5.199999809265137,
+          5.199999809265137,
+          4.300000190734863
+        ]
+      ],
+      "radialVertices": [
+        0.8509406379201655,
+        5.200153823445906
+      ],
+      "materials": [
+        "timber"
+      ]
+    },
+    {
+      "object": "Roof_Finial_Spire",
+      "data": "Roof_Finial_Spire",
+      "parent": "CarouselRoot",
+      "rotates": false,
+      "vertices": 26,
+      "triangles": 48,
+      "bounds": [
+        [
+          -0.2199999988079071,
+          -0.2199999988079071,
+          6.050000190734863
+        ],
+        [
+          0.2199999988079071,
+          0.2199999988079071,
+          6.800000190734863
+        ]
+      ],
+      "radialVertices": [
+        0.0,
+        0.22000000190243224
+      ],
+      "materials": [
+        "brass"
+      ]
+    },
+    {
+      "object": "Roof_Column_00",
+      "data": "Shared_Roof_Column_Mesh",
+      "parent": "CarouselRoot",
+      "rotates": false,
+      "vertices": 40,
+      "triangles": 42,
+      "bounds": [
+        [
+          4.812486171722412,
+          0.9227948784828186,
+          0.4000000059604645
+        ],
+        [
+          5.0668044090271,
+          1.1771132946014404,
+          4.159999847412109
+        ]
+      ],
+      "radialVertices": [
+        4.919999971909927,
+        5.179999853037771
+      ],
+      "materials": [
+        "paint_red",
+        "brass",
+        "timber"
+      ]
+    },
+    {
+      "object": "Roof_Column_01",
+      "data": "Shared_Roof_Column_Mesh",
+      "parent": "CarouselRoot",
+      "rotates": false,
+      "vertices": 40,
+      "triangles": 42,
+      "bounds": [
+        [
+          2.246511936187744,
+          4.33456563949585,
+          0.4000000059604645
+        ],
+        [
+          2.4951510429382324,
+          4.583204746246338,
+          4.159999847412109
+        ]
+      ],
+      "radialVertices": [
+        4.919999806089536,
+        5.180000018684432
+      ],
+      "materials": [
+        "paint_red",
+        "brass",
+        "timber"
+      ]
+    },
+    {
+      "object": "Roof_Column_02",
+      "data": "Shared_Roof_Column_Mesh",
+      "parent": "CarouselRoot",
+      "rotates": false,
+      "vertices": 40,
+      "triangles": 42,
+      "bounds": [
+        [
+          -1.4326064586639404,
+          4.752355098724365,
+          0.4000000059604645
+        ],
+        [
+          -1.1814658641815186,
+          5.003495693206787,
+          4.159999847412109
+        ]
+      ],
+      "radialVertices": [
+        4.920000030994711,
+        5.179999908782039
+      ],
+      "materials": [
+        "paint_red",
+        "brass",
+        "timber"
+      ]
+    },
+    {
+      "object": "Roof_Column_03",
+      "data": "Shared_Roof_Column_Mesh",
+      "parent": "CarouselRoot",
+      "rotates": false,
+      "vertices": 40,
+      "triangles": 42,
+      "bounds": [
+        [
+          -5.0668044090271,
+          0.9227948784828186,
+          0.4000000059604645
+        ],
+        [
+          -4.812486171722412,
+          1.1771132946014404,
+          4.159999847412109
+        ]
+      ],
+      "radialVertices": [
+        4.919999971909927,
+        5.179999853037771
+      ],
+      "materials": [
+        "paint_red",
+        "brass",
+        "timber"
+      ]
+    },
+    {
+      "object": "Roof_Column_04",
+      "data": "Shared_Roof_Column_Mesh",
+      "parent": "CarouselRoot",
+      "rotates": false,
+      "vertices": 40,
+      "triangles": 42,
+      "bounds": [
+        [
+          -4.699014186859131,
+          -2.2563822269439697,
+          0.4000000059604645
+        ],
+        [
+          -4.4546942710876465,
+          -2.0120623111724854,
+          4.159999847412109
+        ]
+      ],
+      "radialVertices": [
+        4.920000101186856,
+        5.179999765548919
+      ],
+      "materials": [
+        "paint_red",
+        "brass",
+        "timber"
+      ]
+    },
+    {
+      "object": "Roof_Column_05",
+      "data": "Shared_Roof_Column_Mesh",
+      "parent": "CarouselRoot",
+      "rotates": false,
+      "vertices": 40,
+      "triangles": 42,
+      "bounds": [
+        [
+          -1.849361777305603,
+          -4.867607593536377,
+          0.4000000059604645
+        ],
+        [
+          -1.6050416231155396,
+          -4.623287677764893,
+          4.159999847412109
+        ]
+      ],
+      "radialVertices": [
+        4.919999995930871,
+        5.179999801279521
+      ],
+      "materials": [
+        "paint_red",
+        "brass",
+        "timber"
+      ]
+    },
+    {
+      "object": "Roof_Column_06",
+      "data": "Shared_Roof_Column_Mesh",
+      "parent": "CarouselRoot",
+      "rotates": false,
+      "vertices": 40,
+      "triangles": 42,
+      "bounds": [
+        [
+          1.6050416231155396,
+          -4.867607593536377,
+          0.4000000059604645
+        ],
+        [
+          1.849361777305603,
+          -4.623287677764893,
+          4.159999847412109
+        ]
+      ],
+      "radialVertices": [
+        4.919999995930871,
+        5.179999801279521
+      ],
+      "materials": [
+        "paint_red",
+        "brass",
+        "timber"
+      ]
+    },
+    {
+      "object": "Roof_Column_07",
+      "data": "Shared_Roof_Column_Mesh",
+      "parent": "CarouselRoot",
+      "rotates": false,
+      "vertices": 40,
+      "triangles": 42,
+      "bounds": [
+        [
+          4.4546942710876465,
+          -2.2563822269439697,
+          0.4000000059604645
+        ],
+        [
+          4.699014186859131,
+          -2.0120623111724854,
+          4.159999847412109
+        ]
+      ],
+      "radialVertices": [
+        4.920000101186856,
+        5.179999765548919
+      ],
+      "materials": [
+        "paint_red",
+        "brass",
+        "timber"
+      ]
+    },
+    {
+      "object": "Perimeter_Railings",
+      "data": "Perimeter_Railings",
+      "parent": "CarouselRoot",
+      "rotates": false,
+      "vertices": 240,
+      "triangles": 120,
+      "bounds": [
+        [
+          -5.150000095367432,
+          -5.150000095367432,
+          0.8299999833106995
+        ],
+        [
+          5.150000095367432,
+          6.0,
+          1.0700000524520874
+        ]
+      ],
+      "radialVertices": [
+        5.149999806117214,
+        7.683749204070544
+      ],
+      "materials": [
+        "brass"
+      ]
+    }
+  ],
+  "triangles": 11796,
+  "meshObjects": 51,
+  "uniqueMeshData": 15,
+  "anchors": {
+    "CarouselRoot": {
+      "parent": null,
+      "gltfTranslation": [
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "localEulerBlender": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "DeckRoot": {
+      "parent": "CarouselRoot",
+      "gltfTranslation": [
+        0.0,
+        0.4000000059604645,
+        -0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "localEulerBlender": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "RotorRoot": {
+      "parent": "CarouselRoot",
+      "gltfTranslation": [
+        0.0,
+        0.4000000059604645,
+        -0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "localEulerBlender": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "EntranceBuildingRoot": {
+      "parent": "CarouselRoot",
+      "gltfTranslation": [
+        4.0,
+        0.0,
+        -8.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "localEulerBlender": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "ExitBuildingRoot": {
+      "parent": "CarouselRoot",
+      "gltfTranslation": [
+        -4.0,
+        0.0,
+        -8.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "localEulerBlender": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "EntranceDeckInterface": {
+      "parent": "CarouselRoot",
+      "gltfTranslation": [
+        4.0,
+        0.4000000059604645,
+        -6.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "localEulerBlender": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "ExitDeckInterface": {
+      "parent": "CarouselRoot",
+      "gltfTranslation": [
+        -4.0,
+        0.4000000059604645,
+        -6.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "localEulerBlender": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "Seat_00": {
+      "parent": "RotorRoot",
+      "gltfTranslation": [
+        0.0,
+        1.600000023841858,
+        4.199999809265137
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "localEulerBlender": [
+        0.0,
+        0.0,
+        1.5707963705062866
+      ]
+    },
+    "Seat_01": {
+      "parent": "RotorRoot",
+      "gltfTranslation": [
+        1.0329999923706055,
+        1.600000023841858,
+        2.49399995803833
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "localEulerBlender": [
+        0.0,
+        0.0,
+        1.9634953737258911
+      ]
+    },
+    "Seat_02": {
+      "parent": "RotorRoot",
+      "gltfTranslation": [
+        2.9700000286102295,
+        1.600000023841858,
+        2.9700000286102295
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "localEulerBlender": [
+        0.0,
+        0.0,
+        2.356194496154785
+      ]
+    },
+    "Seat_03": {
+      "parent": "RotorRoot",
+      "gltfTranslation": [
+        2.49399995803833,
+        1.600000023841858,
+        1.0329999923706055
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "localEulerBlender": [
+        0.0,
+        0.0,
+        2.7488934993743896
+      ]
+    },
+    "Seat_04": {
+      "parent": "RotorRoot",
+      "gltfTranslation": [
+        4.199999809265137,
+        1.600000023841858,
+        -0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "localEulerBlender": [
+        0.0,
+        0.0,
+        3.1415927410125732
+      ]
+    },
+    "Seat_05": {
+      "parent": "RotorRoot",
+      "gltfTranslation": [
+        2.49399995803833,
+        1.600000023841858,
+        -1.0329999923706055
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "localEulerBlender": [
+        0.0,
+        0.0,
+        3.5342917442321777
+      ]
+    },
+    "Seat_06": {
+      "parent": "RotorRoot",
+      "gltfTranslation": [
+        2.9700000286102295,
+        1.600000023841858,
+        -2.9700000286102295
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "localEulerBlender": [
+        0.0,
+        0.0,
+        3.9269907474517822
+      ]
+    },
+    "Seat_07": {
+      "parent": "RotorRoot",
+      "gltfTranslation": [
+        1.0329999923706055,
+        1.600000023841858,
+        -2.49399995803833
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "localEulerBlender": [
+        0.0,
+        0.0,
+        4.319689750671387
+      ]
+    },
+    "Seat_08": {
+      "parent": "RotorRoot",
+      "gltfTranslation": [
+        0.0,
+        1.600000023841858,
+        -4.199999809265137
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "localEulerBlender": [
+        0.0,
+        0.0,
+        4.71238899230957
+      ]
+    },
+    "Seat_09": {
+      "parent": "RotorRoot",
+      "gltfTranslation": [
+        -1.0329999923706055,
+        1.600000023841858,
+        -2.49399995803833
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "localEulerBlender": [
+        0.0,
+        0.0,
+        5.105088233947754
+      ]
+    },
+    "Seat_10": {
+      "parent": "RotorRoot",
+      "gltfTranslation": [
+        -2.9700000286102295,
+        1.600000023841858,
+        -2.9700000286102295
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "localEulerBlender": [
+        0.0,
+        0.0,
+        5.497786998748779
+      ]
+    },
+    "Seat_11": {
+      "parent": "RotorRoot",
+      "gltfTranslation": [
+        -2.49399995803833,
+        1.600000023841858,
+        -1.0329999923706055
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "localEulerBlender": [
+        0.0,
+        0.0,
+        5.890486240386963
+      ]
+    },
+    "Seat_12": {
+      "parent": "RotorRoot",
+      "gltfTranslation": [
+        -4.199999809265137,
+        1.600000023841858,
+        -0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "localEulerBlender": [
+        0.0,
+        0.0,
+        6.2831854820251465
+      ]
+    },
+    "Seat_13": {
+      "parent": "RotorRoot",
+      "gltfTranslation": [
+        -2.49399995803833,
+        1.600000023841858,
+        1.0329999923706055
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "localEulerBlender": [
+        0.0,
+        0.0,
+        6.675884246826172
+      ]
+    },
+    "Seat_14": {
+      "parent": "RotorRoot",
+      "gltfTranslation": [
+        -2.9700000286102295,
+        1.600000023841858,
+        2.9700000286102295
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "localEulerBlender": [
+        0.0,
+        0.0,
+        7.0685834884643555
+      ]
+    },
+    "Seat_15": {
+      "parent": "RotorRoot",
+      "gltfTranslation": [
+        -1.0329999923706055,
+        1.600000023841858,
+        2.49399995803833
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "localEulerBlender": [
+        0.0,
+        0.0,
+        7.461282730102539
+      ]
+    }
+  },
+  "boundsBlender": [
+    [
+      -5.599999904632568,
+      -5.599999904632568,
+      0.0
+    ],
+    [
+      5.599999904632568,
+      6.0,
+      6.800000190734863
+    ]
+  ],
+  "issues": [],
+  "scope": "Actual mesh/UV/anchor measurements; radial vertex ranges are diagnostics, not collision qualification.",
+  "sourceSha256": "b1563f36db78dd70cc037a68a882ef5ee510237a8cb38a1ae6209be8b53119ff",
+  "driverSha256": "a62ccb80dd1fbbbd928260a25932d314c73bc1e4bcbc6d40efcc6a356c04cff5",
+  "blender": "4.3.2",
+  "sourceTextures": [
+    {
+      "file": "/workspace/coaster-detailed-assets/materials/Fabric081C/Fabric081C_1K-PNG_Color.png",
+      "sha256": "0723468f450e7e112738a2051e33403e3fa5a606837fcca8dd1f473817956a6d",
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "file": "/workspace/coaster-detailed-assets/materials/Fabric081C/Fabric081C_1K-PNG_NormalGL.png",
+      "sha256": "6db4f24cf86fe3f1e4cde6b86b670da0726602929e3ef60d3c137a14cadb5b6f",
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "file": "/workspace/coaster-detailed-assets/materials/Fabric081C/Fabric081C_1K-PNG_Roughness.png",
+      "sha256": "0a20570d975bfc6adb15b6881ef09e0d213f7f5a99d48735ef1564d464ca800d",
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "file": "/workspace/coaster-detailed-assets/materials/Wood096/Wood096_1K-PNG_Color.png",
+      "sha256": "2635d3b950808e52d5de4ce4ee4b3aa35430ffd3117e00c1b2cfb155168e6b47",
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "file": "/workspace/coaster-detailed-assets/materials/Wood096/Wood096_1K-PNG_NormalGL.png",
+      "sha256": "5b9f71b56cc74a397c9263619f7ef0cfc7d668762f4f2c960e4bd883dc2891c5",
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "file": "/workspace/coaster-detailed-assets/materials/Wood096/Wood096_1K-PNG_Roughness.png",
+      "sha256": "bcba2c9b971c17875e0d8b6e11b234ce86a1c4110bd72725c2586b8950738418",
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "file": "/workspace/coaster-detailed-assets/materials/WoodFloor043/WoodFloor043_1K-PNG_Color.png",
+      "sha256": "55a7c25c191c8eb501d87a8872438dcfba307b3a043fee00ad9e89f0c413d684",
+      "size": [
+        1024,
+        512
+      ]
+    },
+    {
+      "file": "/workspace/coaster-detailed-assets/materials/WoodFloor043/WoodFloor043_1K-PNG_Metalness.png",
+      "sha256": "46ca3dbd1939c6c89b437c195afe51d816336baa0376b9289d6e7dc0757a69dc",
+      "size": [
+        1024,
+        512
+      ]
+    },
+    {
+      "file": "/workspace/coaster-detailed-assets/materials/WoodFloor043/WoodFloor043_1K-PNG_NormalGL.png",
+      "sha256": "ac8e1221726a512c4eb3cae98674bf0dda774382b2ba2577d36cbf8192986a6e",
+      "size": [
+        1024,
+        512
+      ]
+    },
+    {
+      "file": "/workspace/coaster-detailed-assets/materials/WoodFloor043/WoodFloor043_1K-PNG_Roughness.png",
+      "sha256": "c15241e172c474ad147003f8e957cf88d305d9e8d82809de201f04f7b969ec26",
+      "size": [
+        1024,
+        512
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "file": "carousel.blend",
+      "bytes": 15500142,
+      "sha256": "9c064e645b140823c77c2d92816b5257ba485c69468471bf4495fa8c070abc72"
+    },
+    {
+      "file": "carousel.glb",
+      "bytes": 5369400,
+      "sha256": "405e14e1d2f6a54bd7f05676697f1d96193b7f0378c2426601d0de1484a9464f"
+    }
+  ],
+  "renders": [
+    {
+      "file": "carousel-front.png",
+      "sha256": "ac85e63b7e7e7dc60b8959b54ce0e4f5b17f204b60a707b792f30ed95622aaa0"
+    },
+    {
+      "file": "carousel-rear.png",
+      "sha256": "6ff9af5d2cc3fe9d53903a1fd874f4a37aa8261c088f3641ebe13fe62aa785f1"
+    }
+  ]
+}
