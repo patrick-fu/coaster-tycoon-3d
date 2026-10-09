@@ -74,3 +74,22 @@ A channel ride's moving vehicle, carrying its ordered boarding guests through
 the operating circuit and back to unloading. Its occupied seats remain owned
 by those guests when the attraction closes or pauses.
 _Avoid_: Coaster train, cosmetic vehicle, ride session
+
+**Product**:
+The food, drink or other item sold by a facility to a guest. A product differs
+from the building that sells it and from the guest's purchased item.
+_Avoid_: Shop variant, facility, sale
+
+**Owned consumable**:
+A guest's purchased food or drink that has not yet been fully used. Its ownership
+continues when the selling facility closes or is demolished.
+_Avoid_: Wrapper, vendor inventory, instant need relief
+
+**Discard container**:
+Empty packaging retained by a guest after using a consumable, until disposal.
+It differs from waste already left on the ground.
+_Avoid_: Ground litter, unfinished consumable
+
+**Ground litter**:
+Discarded waste left on a park path and available for cleanup.
+_Avoid_: Carried container, guest inventory

@@ -1,17 +1,20 @@
 import {LIMITS,type Element,type Path,type Portal,type Ride,type Rules,type Tile,type State} from './types.js';
 import {amenityAvailable,chooseAmenity,dropLitter,releaseAmenity,rest,useAmenity} from './housekeeping.js';
-import {buy,chooseFacility,recoverFacility,sharedCount,type ServiceIndex} from './services.js';
+import {buy,chooseFacility,consume,recoverFacility,sharedCount,type ServiceIndex} from './services.js';
 import type {Train} from './motion.js';
 import {carouselEditable,type CarouselSession} from './carousel.js';
 import type {Boat} from './boat.js';
 import {flumeProfile} from './flume-profile.js';
 import {portalApproach,stationGroups} from './operation.js';
 import {integer} from './validation.js';
+import type {ContainerId,ProductId} from '../content/consumables.js';
+
+export type HeldItem=null|{readonly kind:'consumable',readonly productId:ProductId,readonly remaining:number}|{readonly kind:'container',readonly containerId:ContainerId,readonly sinceTick:number};
 
 export type PathPoint={readonly x:number,readonly y:number,readonly z:number};
 export type GuestRules={spawnTicks:number,walkTicks:number,decisionTicks:number,needTicks:number,queueSlotsPerTile:number,patienceTicks:number,rideCooldownTicks:number,defaultRidePrice:number,maxRidePrice:number,cashMin:number,cashMax:number,fareMin:number,fareMax:number,forceMin:number,forceMax:number,initialHunger:number,initialThirst:number,initialHappiness:number,initialEnergy:number,needGrowth:number,rideHappiness:number,rideNausea:number};
 export type Ledger={rideSales:number,shopSales:number,stock:number,wages:number,upkeep:number,interest:number};
-export type Guest={id:number,navigationRide:number|null,amenity:number|null,restProgress:number,wrapper:boolean,wrapperTick:number,facility:number|null,serviceProgress:number,bladder:number,point:PathPoint,phase:'walking'|'queued'|'riding'|'stranded'|'leaving'|'buying'|'resting',goal:PathPoint|null,next:PathPoint|null,walkProgress:number,destination:number|null,entrance:number|null,exit:number|null,queueRide:number|null,seat:{ride:number,slot:number}|null,initialCash:number,cash:number,spent:number,fareLimit:number,forceTolerance:number,hunger:number,thirst:number,nausea:number,happiness:number,energy:number,queuedAt:number,lastRide:number|null,lastRideTick:number,ridesTaken:number,thought:'none'|'not-enough-cash'|'too-intense'|'path-lost'|'ride-closed'|'queue-too-long'|'price-changed'|'payment-blocked'|'leaving'};
+export type Guest={id:number,held:HeldItem,navigationRide:number|null,amenity:number|null,restProgress:number,wrapper:boolean,wrapperTick:number,facility:number|null,serviceProgress:number,bladder:number,point:PathPoint,phase:'walking'|'queued'|'riding'|'stranded'|'leaving'|'buying'|'resting',goal:PathPoint|null,next:PathPoint|null,walkProgress:number,destination:number|null,entrance:number|null,exit:number|null,queueRide:number|null,seat:{ride:number,slot:number}|null,initialCash:number,cash:number,spent:number,fareLimit:number,forceTolerance:number,hunger:number,thirst:number,nausea:number,happiness:number,energy:number,queuedAt:number,lastRide:number|null,lastRideTick:number,ridesTaken:number,thought:'none'|'not-enough-cash'|'too-intense'|'path-lost'|'ride-closed'|'queue-too-long'|'price-changed'|'payment-blocked'|'leaving'};
 export type PeopleState={entry:PathPoint|null,open:boolean,guests:Guest[],departedSpent:number};
 type Access={entrance:Portal,exit:Portal,front:PathPoint,out:PathPoint,body:PathPoint[]};
 export type PeopleIndex={elements:Map<number,Element>,paths:Map<string,Path>,rides:Map<number,Ride>,trains:Map<number,Train>,carouselSessions:Map<number,CarouselSession>,boats:Map<number,Boat>,guests:Map<number,Guest>,accessCache:Map<number,{stamp:string,value:Access|null}>};
@@ -132,12 +135,13 @@ export function stepPeople(state:State,rules:Rules,index:ServiceIndex,route:Rout
   const entry=state.people.entry;
   if(state.people.open&&entry&&state.tick%rules.guests.spawnTicks===0&&index.paths.get(key(entry))?.queueFor===null&&sharedCount(state)<LIMITS.sharedEntities&&integer(state.nextEntity+1)){
     const cash=random(state,rules.guests.cashMin,rules.guests.cashMax);
-    const guest:Guest={id:state.nextEntity++,navigationRide:null,amenity:null,restProgress:0,wrapper:false,wrapperTick:0,facility:null,serviceProgress:0,bladder:rules.services.initialBladder,point:{...entry},phase:'walking',goal:null,next:null,walkProgress:0,destination:null,entrance:null,exit:null,queueRide:null,seat:null,initialCash:cash,cash,spent:0,fareLimit:random(state,rules.guests.fareMin,rules.guests.fareMax),forceTolerance:random(state,rules.guests.forceMin,rules.guests.forceMax),hunger:rules.guests.initialHunger,thirst:rules.guests.initialThirst,nausea:0,happiness:rules.guests.initialHappiness,energy:rules.guests.initialEnergy,queuedAt:0,lastRide:null,lastRideTick:0,ridesTaken:0,thought:'none'};
+    const guest:Guest={id:state.nextEntity++,held:null,navigationRide:null,amenity:null,restProgress:0,wrapper:false,wrapperTick:0,facility:null,serviceProgress:0,bladder:rules.services.initialBladder,point:{...entry},phase:'walking',goal:null,next:null,walkProgress:0,destination:null,entrance:null,exit:null,queueRide:null,seat:null,initialCash:cash,cash,spent:0,fareLimit:random(state,rules.guests.fareMin,rules.guests.fareMax),forceTolerance:random(state,rules.guests.forceMin,rules.guests.forceMax),hunger:rules.guests.initialHunger,thirst:rules.guests.initialThirst,nausea:0,happiness:rules.guests.initialHappiness,energy:rules.guests.initialEnergy,queuedAt:0,lastRide:null,lastRideTick:0,ridesTaken:0,thought:'none'};
     state.people.guests.push(guest);index.guests.set(guest.id,guest);
   }
   const departing:number[]=[];
   for(const guest of state.people.guests){
     if(due(state.tick,guest.id,rules.guests.needTicks)){guest.hunger=clamp(guest.hunger+rules.guests.needGrowth);guest.thirst=clamp(guest.thirst+rules.guests.needGrowth);guest.bladder=clamp(guest.bladder+rules.guests.needGrowth);guest.energy=clamp(guest.energy-rules.guests.needGrowth);guest.nausea=clamp(guest.nausea-1);if(guest.hunger===1000||guest.thirst===1000||guest.bladder===1000)guest.happiness=clamp(guest.happiness-rules.guests.needGrowth);}
+    consume(guest,state,rules);
     if(guest.phase==='riding')continue;
     if(!amenityAvailable(guest,rules,index)){recover(guest,state,index,route,'path-lost');continue;}
     dropLitter(guest,state,rules,index);

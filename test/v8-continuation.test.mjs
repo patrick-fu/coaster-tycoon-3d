@@ -1,3 +1,4 @@
+import {beforeCommerceState,beforeCommerceView} from './consumables-fixtures.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
@@ -8,13 +9,14 @@ const fixture=JSON.parse(gunzipSync(readFileSync(new URL('./fixtures/v8-continua
 const wire=value=>JSON.parse(JSON.stringify(value,(_key,item)=>ArrayBuffer.isView(item)?Array.from(item):item));
 
 function previousSave(state){
+ state=beforeCommerceState(state);
  assert.equal(state.version,11);assert.equal(state.contentVersion,4);
  const old=structuredClone(state),rules=JSON.parse(old.rules);assert.deepEqual(rules.rideProfiles,{});
  assert.deepEqual(rules.channelProfiles,{});assert.deepEqual(old.boats,[]);delete old.boats;delete rules.channelProfiles;assert.deepEqual(rules.fixedProfiles,{});assert.deepEqual(old.carouselSessions,[]);assert.equal(old.retiredRideIncome,0);delete old.carouselSessions;delete old.retiredRideIncome;delete rules.rideProfiles;delete rules.fixedProfiles;old.rules=JSON.stringify(rules);old.version=8;old.contentVersion=1;return old;
 }
 
 function previousView(view,state,receivingRules){
- const old=wire(view);assert.equal(old.protocolVersion,4);assert.equal(old.contentVersion,4);assert.deepEqual(old.boats,[]);assert.equal(old.counts.boats,0);delete old.boats;delete old.counts.boats;
+ const old=wire(beforeCommerceView(view));assert.equal(old.protocolVersion,4);assert.equal(old.contentVersion,4);assert.deepEqual(old.boats,[]);assert.equal(old.counts.boats,0);delete old.boats;delete old.counts.boats;
  for(const car of old.cars){
   const train=state.trains.find(t=>t.ride===car.ride),index=train.carIds.indexOf(car.id),seats=receivingRules.motion.seatsPerCar;
   assert.deepEqual(car.seatIds,train.seats.slice(index*seats,(index+1)*seats));assert.equal(car.rig,null);

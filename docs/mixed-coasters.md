@@ -64,20 +64,21 @@ native chord data, with metre UVs and per-element material buffer concatenation.
 ## Saves and browser storage
 
 The original mixed-coaster snapshot used v9/content 2. Current saves are
-**version 11 / content version 4**, and worker messages/views use **protocol 4**.
-Complete declared profiles and selected content are saved. Historical v6–v10
+**version 12 / content version 5**, and worker messages/views use **protocol 5**.
+Complete declared profiles and selected content are saved. Historical v6–v11
 inputs are validated at each original schema before adding only declared
-identity/profile/session/Boat fields. The actual historical continuation tests use their
+identity/profile/session/Boat/guest-held fields. Historical generic facilities
+and wrappers are not converted into products. The actual historical continuation tests use their
 matching complete receiving numeric rules. Unsupported profiles and invalid
 loads preserve the live park, pending quotes and pause state.
 
-The browser writes `current-v11` or `showcase-classic-v11`. Reading checks the
-matching v11, v10, v9 and original unversioned slots in that order, continuing
+The browser writes `current-v12` or `showcase-classic-v12`. Reading checks the
+matching v12, v11, v10, v9 and original unversioned slots in that order, continuing
 only when a key is absent. Existing older slots remain intact. A present invalid
-record is rejected rather than bypassed for an older slot; quiet saving stays
-disabled until an explicit successful save, matching import or confirmed New
-park. [Current storage evidence](verification/log-flume/production-storage.json)
-and [Classic reload checks](verification/log-flume/classic-library-browser.json)
+record is rejected rather than bypassed for an older slot; manual and quiet
+saving stay disabled until a matching import or confirmed New park.
+[Current storage evidence](verification/consumables/storage-result.json)
+and [Classic reload checks](verification/consumables/classic-library-browser.json)
 record the actual receiving versions and complete original-store preservation.
 
 Exact rule matching is deliberate. Runtime-generated default curve coordinates

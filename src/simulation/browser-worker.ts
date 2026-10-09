@@ -1,12 +1,13 @@
 import {steelRules} from '../content/steel-coaster.js';
 import {mixedRules,newCarouselPark} from '../content/mixed-park.js';
 import {withFlumeProfile} from '../content/log-flume.js';
+import {withConsumablesProfile} from '../content/consumables.js';
 import {createHost} from './host.js';
 import {FixedClock} from './clock.js';
 import {ensure,integer,record,result} from './validation.js';
 import {WORKER_PROTOCOL_VERSION} from './protocol.js';
 const scope=globalThis as unknown as DedicatedWorkerGlobalScope;
-const browserRules=withFlumeProfile(mixedRules);
+const browserRules=withConsumablesProfile(withFlumeProfile(mixedRules));
 let engine=newCarouselPark(browserRules),host=createHost(engine),paused=false;
 const clock=new FixedClock(steelRules.motion.tickHz,performance.now());
 let backlog=0;

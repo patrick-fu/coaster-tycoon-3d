@@ -1,0 +1,497 @@
+[
+  {
+    "logicalPath": "r1/pin/00-real-new-park.json",
+    "compressedPath": "r1/pin/00-real-new-park.json.gz",
+    "decodedBytes": 2263158,
+    "compressedBytes": 21923,
+    "decodedSha256": "aa3b153a0ed46d7ca4179e4df4c8af4b5879f4b9d18b8999dfb50c9693261a76",
+    "compressedSha256": "bb8938358281dce1c8eca48fc95ebf992ce090a196c1f73a842e95f5b5ba7ae1",
+    "decodedRereadVerified": true
+  },
+  {
+    "logicalPath": "r1/pin/01-real-library-stalls.json",
+    "compressedPath": "r1/pin/01-real-library-stalls.json.gz",
+    "decodedBytes": 2155715,
+    "compressedBytes": 15164,
+    "decodedSha256": "c2056638d8f73421644e0565e2f834c01485144f17cb21f6ec125c62c7e2f037",
+    "compressedSha256": "bfbc711fe9c596a8facddf9937694fb9703ad4951d9b2c4073b9a49a5987135d",
+    "decodedRereadVerified": true
+  },
+  {
+    "logicalPath": "r1/pin/02-two-real-arrivals.json",
+    "compressedPath": "r1/pin/02-two-real-arrivals.json.gz",
+    "decodedBytes": 2157966,
+    "compressedBytes": 15592,
+    "decodedSha256": "1a23645f178b7f2f8a7959426ae2cf95a22e69eb750cd1e742173d86f96a26af",
+    "compressedSha256": "b4e45bb8e84c35896c778a1c7bfa6ac95c43d81b58591d7ee98a03aa67685c57",
+    "decodedRereadVerified": true
+  },
+  {
+    "logicalPath": "r1/pin/03-drink-paid.json",
+    "compressedPath": "r1/pin/03-drink-paid.json.gz",
+    "decodedBytes": 2158101,
+    "compressedBytes": 15689,
+    "decodedSha256": "a1a627850592a1c9f6cf33197145b76bf16cc028c5890caeedf8c7307bfcf5b9",
+    "compressedSha256": "8d13c9aff582a056bbcd0145ac998a219aeeb15ce21c36889e990fff98c6acef",
+    "decodedRereadVerified": true
+  },
+  {
+    "logicalPath": "r1/pin/04-two-paid-products.json",
+    "compressedPath": "r1/pin/04-two-paid-products.json.gz",
+    "decodedBytes": 2158221,
+    "compressedBytes": 15686,
+    "decodedSha256": "e0d07715c6980f59d4be2f94c1a496665a6faa7fcfe016fb850fbe9f86a45e25",
+    "compressedSha256": "288f2ef4600f5ea334043aaccbbae63b9576d35a99a1e4ce0caeb84ed3f70b8e",
+    "decodedRereadVerified": true
+  },
+  {
+    "logicalPath": "r1/pin/05-burger-held-inspector.json",
+    "compressedPath": "r1/pin/05-burger-held-inspector.json.gz",
+    "decodedBytes": 2158221,
+    "compressedBytes": 15686,
+    "decodedSha256": "e0d07715c6980f59d4be2f94c1a496665a6faa7fcfe016fb850fbe9f86a45e25",
+    "compressedSha256": "288f2ef4600f5ea334043aaccbbae63b9576d35a99a1e4ce0caeb84ed3f70b8e",
+    "decodedRereadVerified": true
+  },
+  {
+    "logicalPath": "r1/pin/05-drink-held-inspector.json",
+    "compressedPath": "r1/pin/05-drink-held-inspector.json.gz",
+    "decodedBytes": 2158221,
+    "compressedBytes": 15686,
+    "decodedSha256": "e0d07715c6980f59d4be2f94c1a496665a6faa7fcfe016fb850fbe9f86a45e25",
+    "compressedSha256": "288f2ef4600f5ea334043aaccbbae63b9576d35a99a1e4ce0caeb84ed3f70b8e",
+    "decodedRereadVerified": true
+  },
+  {
+    "logicalPath": "r1/pin/06-paid-manual-reload.json",
+    "compressedPath": "r1/pin/06-paid-manual-reload.json.gz",
+    "decodedBytes": 2158262,
+    "compressedBytes": 15724,
+    "decodedSha256": "ed46be996e2aafdbba8dfa0b7d45044e2a9dbedd2d8d9133e652a5f5b2c380a2",
+    "compressedSha256": "3a6b7393c0ab37e3e914eb03e5cb40c971f6bbfaa55f800906a5ae107b42b464",
+    "decodedRereadVerified": true
+  },
+  {
+    "logicalPath": "r1/pin/07-owned-can-checkpoint.json",
+    "compressedPath": "r1/pin/07-owned-can-checkpoint.json.gz",
+    "decodedBytes": 2158251,
+    "compressedBytes": 15748,
+    "decodedSha256": "577d257228b129da4f708337d204ec6ec15e8d4021238509275512e4245ed8dd",
+    "compressedSha256": "1c646ad9572b9939bfc0ba8a16a46806596a24ccac96d6f7eaf1dc1554c594ca",
+    "decodedRereadVerified": true
+  },
+  {
+    "logicalPath": "r1/pin/08-can-in-real-bin.json",
+    "compressedPath": "r1/pin/08-can-in-real-bin.json.gz",
+    "decodedBytes": 2158423,
+    "compressedBytes": 15764,
+    "decodedSha256": "369955bf4dd05f49fa1ea196ed60bae799a06b9244c4ff8af96f7862104bb9fc",
+    "compressedSha256": "727e49797142dafa4e75b9f5bf3b7428a50ad67463161640f767ea023b4ecaf3",
+    "decodedRereadVerified": true
+  },
+  {
+    "logicalPath": "r1/pin/09-real-typed-ground.json",
+    "compressedPath": "r1/pin/09-real-typed-ground.json.gz",
+    "decodedBytes": 2158462,
+    "compressedBytes": 15751,
+    "decodedSha256": "e8fb05ff3f62d4a9fbf869ee4e0740dcec8a5281d452b9e025f4166ea783c23d",
+    "compressedSha256": "94d66b800657bab3690c0426ce851c9d3ba085b0f531a27afeffa7b5ebdf0fe4",
+    "decodedRereadVerified": true
+  },
+  {
+    "logicalPath": "r1/pin/10-real-owners-away.json",
+    "compressedPath": "r1/pin/10-real-owners-away.json.gz",
+    "decodedBytes": 2159100,
+    "compressedBytes": 15853,
+    "decodedSha256": "144f99bd072071e239b51cafab7b2b5dcc38714a4857c26542395318170a1ea4",
+    "compressedSha256": "f5b4f42b9c522b096aa759a6a0134c3c655d952b4d674f9d0604aee56404e110",
+    "decodedRereadVerified": true
+  },
+  {
+    "logicalPath": "r1/pin/11-box-visible-macro.json",
+    "compressedPath": "r1/pin/11-box-visible-macro.json.gz",
+    "decodedBytes": 2159100,
+    "compressedBytes": 15853,
+    "decodedSha256": "144f99bd072071e239b51cafab7b2b5dcc38714a4857c26542395318170a1ea4",
+    "compressedSha256": "f5b4f42b9c522b096aa759a6a0134c3c655d952b4d674f9d0604aee56404e110",
+    "decodedRereadVerified": true
+  },
+  {
+    "logicalPath": "r1/pin/11-can-visible-macro.json",
+    "compressedPath": "r1/pin/11-can-visible-macro.json.gz",
+    "decodedBytes": 2159100,
+    "compressedBytes": 15853,
+    "decodedSha256": "144f99bd072071e239b51cafab7b2b5dcc38714a4857c26542395318170a1ea4",
+    "compressedSha256": "f5b4f42b9c522b096aa759a6a0134c3c655d952b4d674f9d0604aee56404e110",
+    "decodedRereadVerified": true
+  },
+  {
+    "logicalPath": "r1/pin/declared-empty-start.json",
+    "compressedPath": "r1/pin/declared-empty-start.json.gz",
+    "decodedBytes": 774337,
+    "compressedBytes": 10539,
+    "decodedSha256": "6457a66d198132f07a40e305289267df91b192db50d64e4c516694b46bf12471",
+    "compressedSha256": "c739b9cb7f6ca9d0d8974415a0baa6bf89c439186845fb3f071549f867abfefd",
+    "decodedRereadVerified": true
+  },
+  {
+    "logicalPath": "r1/pin/declared-malformed-wrapper-product-target.json",
+    "compressedPath": "r1/pin/declared-malformed-wrapper-product-target.json.gz",
+    "decodedBytes": 776496,
+    "compressedBytes": 11214,
+    "decodedSha256": "9648b1afb04b5a1cc3ac05cb422fb753eeaef30083012f73c1d682cbc28e7794",
+    "compressedSha256": "49d5cf63c55425be0c7670a6bb4801a8a1f4712d91a4a2db5b9cecf54b0f4ee8",
+    "decodedRereadVerified": true
+  },
+  {
+    "logicalPath": "r1/pin/downloads/coaster-park.json",
+    "compressedPath": "r1/pin/downloads/coaster-park.json.gz",
+    "decodedBytes": 776628,
+    "compressedBytes": 11261,
+    "decodedSha256": "3391e7ced967016e2ebb03888d48cd99a565c0c673fbb0eb3c7cafbf8539e388",
+    "compressedSha256": "457ba11269a4455e97298be119a5bdcc27770675bba4ecdf3b5728e5365852c3",
+    "decodedRereadVerified": true
+  },
+  {
+    "logicalPath": "r1/pin/final-actual-player-observations.json",
+    "compressedPath": "r1/pin/final-actual-player-observations.json.gz",
+    "decodedBytes": 4107913,
+    "compressedBytes": 49916,
+    "decodedSha256": "bfec0689b59fce4c5eaed79d04b980a3a3c0184c4a8d13611d56ee0193abddcf",
+    "compressedSha256": "43549ba220acf6f83a5936081c8381a39761c7abf0e3cd27d013b23d796fc5ae",
+    "decodedRereadVerified": true
+  },
+  {
+    "logicalPath": "r1/pin/mid-container-actual-export.json",
+    "compressedPath": "r1/pin/mid-container-actual-export.json.gz",
+    "decodedBytes": 776628,
+    "compressedBytes": 11261,
+    "decodedSha256": "3391e7ced967016e2ebb03888d48cd99a565c0c673fbb0eb3c7cafbf8539e388",
+    "compressedSha256": "457ba11269a4455e97298be119a5bdcc27770675bba4ecdf3b5728e5365852c3",
+    "decodedRereadVerified": true
+  },
+  {
+    "logicalPath": "r1/pin/mid-use-actual-export.json",
+    "compressedPath": "r1/pin/mid-use-actual-export.json.gz",
+    "decodedBytes": 776639,
+    "compressedBytes": 11237,
+    "decodedSha256": "e8ee682520dc09b9b57ef55b149e7098ff208748d4ecb197cc2c202770e4806c",
+    "compressedSha256": "3bb23bba7a48cb2532637d66012eac7169538255df21685423cfb63eeb9fc3ec",
+    "decodedRereadVerified": true
+  },
+  {
+    "logicalPath": "r1/pin/mid-use-complete-public-store.json",
+    "compressedPath": "r1/pin/mid-use-complete-public-store.json.gz",
+    "decodedBytes": 2651207,
+    "compressedBytes": 43573,
+    "decodedSha256": "570489e82c2158fc6a182d530ab063690ec13a7f1638f3d78d9394fea8c2485a",
+    "compressedSha256": "fc583f6a0c8cac074106f118d91bb4efe28587d9fe7a1ebed2d269a5a3e1cd74",
+    "decodedRereadVerified": true
+  },
+  {
+    "logicalPath": "r1/pin/pre-reload-actual-driver.json",
+    "compressedPath": "r1/pin/pre-reload-actual-driver.json.gz",
+    "decodedBytes": 6713909,
+    "compressedBytes": 89060,
+    "decodedSha256": "2c4430fba940afd268e797523daa0a8db6fe33ba76a3f888b22949efd6a89acf",
+    "compressedSha256": "bc913a79861ee6198ecb3b2b80da838c809ab9eaf87956ff1eefae9a0d56d728",
+    "decodedRereadVerified": true
+  },
+  {
+    "logicalPath": "r1/pin/protected-original-databases.json",
+    "compressedPath": "r1/pin/protected-original-databases.json.gz",
+    "decodedBytes": 1857146,
+    "compressedBytes": 31410,
+    "decodedSha256": "5de9269e14a5b08272cd1f48ae31016a21ac289af20890c08f14dd80bbc9e040",
+    "compressedSha256": "944c2220df7d44a3010900e099586e1835737bdad878f0b29825d3cff3f626a9",
+    "decodedRereadVerified": true
+  },
+  {
+    "logicalPath": "r1/pin/raw-cdp.jsonl",
+    "compressedPath": "r1/pin/raw-cdp.jsonl.gz",
+    "decodedBytes": 79310908,
+    "compressedBytes": 20917327,
+    "decodedSha256": "8fad846a8e964c8d956c61220ecd5f97d7bc73b61c6c12a162329ef9a84536b1",
+    "compressedSha256": "9ad411b19fb3f2866861c2963024b9b7017c7c73d616c1488073097255c932eb",
+    "decodedRereadVerified": true
+  },
+  {
+    "logicalPath": "r1/pin/restored-original-databases.json",
+    "compressedPath": "r1/pin/restored-original-databases.json.gz",
+    "decodedBytes": 1857146,
+    "compressedBytes": 31410,
+    "decodedSha256": "5de9269e14a5b08272cd1f48ae31016a21ac289af20890c08f14dd80bbc9e040",
+    "compressedSha256": "944c2220df7d44a3010900e099586e1835737bdad878f0b29825d3cff3f626a9",
+    "decodedRereadVerified": true
+  },
+  {
+    "logicalPath": "r1/pin/strict-import-after.json",
+    "compressedPath": "r1/pin/strict-import-after.json.gz",
+    "decodedBytes": 776497,
+    "compressedBytes": 11209,
+    "decodedSha256": "f4990af1f06a5ae55331d197c83484005495e396e27f634cc1b100e872846e92",
+    "compressedSha256": "bdce127a2710d7c2cca20358d962e621abbd43090d476f0750efdbd33fcea080",
+    "decodedRereadVerified": true
+  },
+  {
+    "logicalPath": "r1/pin/strict-import-before.json",
+    "compressedPath": "r1/pin/strict-import-before.json.gz",
+    "decodedBytes": 776497,
+    "compressedBytes": 11209,
+    "decodedSha256": "f4990af1f06a5ae55331d197c83484005495e396e27f634cc1b100e872846e92",
+    "compressedSha256": "bdce127a2710d7c2cca20358d962e621abbd43090d476f0750efdbd33fcea080",
+    "decodedRereadVerified": true
+  },
+  {
+    "logicalPath": "r1/result.json",
+    "compressedPath": "r1/result.json.gz",
+    "decodedBytes": 469827,
+    "compressedBytes": 35909,
+    "decodedSha256": "33a8663ab600d461f588905dcf0668a57fff6c79edf8331dedfeec7469127372",
+    "compressedSha256": "a9b6df7fddbbdeebd098553085d2ced49f1d02b855717e2572b3cc98c35dd70c",
+    "decodedRereadVerified": true
+  },
+  {
+    "logicalPath": "r1/root/00-real-new-park.json",
+    "compressedPath": "r1/root/00-real-new-park.json.gz",
+    "decodedBytes": 2263158,
+    "compressedBytes": 21923,
+    "decodedSha256": "44670927b0276ec28ce1de23597e7c17d7b65a1eeffc633952764edc7b4ef28e",
+    "compressedSha256": "95fbd7db54cc01bb5124c1982701e0cdc590bdae435834895ac874ff3ff71fcf",
+    "decodedRereadVerified": true
+  },
+  {
+    "logicalPath": "r1/root/01-real-library-stalls.json",
+    "compressedPath": "r1/root/01-real-library-stalls.json.gz",
+    "decodedBytes": 2155715,
+    "compressedBytes": 15164,
+    "decodedSha256": "c2056638d8f73421644e0565e2f834c01485144f17cb21f6ec125c62c7e2f037",
+    "compressedSha256": "bfbc711fe9c596a8facddf9937694fb9703ad4951d9b2c4073b9a49a5987135d",
+    "decodedRereadVerified": true
+  },
+  {
+    "logicalPath": "r1/root/02-two-real-arrivals.json",
+    "compressedPath": "r1/root/02-two-real-arrivals.json.gz",
+    "decodedBytes": 2157966,
+    "compressedBytes": 15594,
+    "decodedSha256": "70cc1713c482a9534b1e146ee706a12e00b6ac58ee50a0a387cc226169f41aca",
+    "compressedSha256": "87f741cdd06a76aef34f463361cfedf0a8245814685346098c11ccbc6f79a36c",
+    "decodedRereadVerified": true
+  },
+  {
+    "logicalPath": "r1/root/03-drink-paid.json",
+    "compressedPath": "r1/root/03-drink-paid.json.gz",
+    "decodedBytes": 2158101,
+    "compressedBytes": 15689,
+    "decodedSha256": "31b740e40b50fa7c0dee4793b754574674b89788daa9b417d3ea6de50f481437",
+    "compressedSha256": "36afcdcea5405caf88cd6a03cbae9c1678c17b808e1e2c3ceb7a33dfcff452f0",
+    "decodedRereadVerified": true
+  },
+  {
+    "logicalPath": "r1/root/04-two-paid-products.json",
+    "compressedPath": "r1/root/04-two-paid-products.json.gz",
+    "decodedBytes": 2158221,
+    "compressedBytes": 15686,
+    "decodedSha256": "d40138a1440a81ef3630ad51752adfc16fee8fb17f3cdaaf6fd5b252ecce62fc",
+    "compressedSha256": "d14c2841554f549e88096df058d373e100b0f68e4b66711e9c5dc759b2f7a1d1",
+    "decodedRereadVerified": true
+  },
+  {
+    "logicalPath": "r1/root/05-burger-held-inspector.json",
+    "compressedPath": "r1/root/05-burger-held-inspector.json.gz",
+    "decodedBytes": 2158221,
+    "compressedBytes": 15686,
+    "decodedSha256": "d40138a1440a81ef3630ad51752adfc16fee8fb17f3cdaaf6fd5b252ecce62fc",
+    "compressedSha256": "d14c2841554f549e88096df058d373e100b0f68e4b66711e9c5dc759b2f7a1d1",
+    "decodedRereadVerified": true
+  },
+  {
+    "logicalPath": "r1/root/05-drink-held-inspector.json",
+    "compressedPath": "r1/root/05-drink-held-inspector.json.gz",
+    "decodedBytes": 2158221,
+    "compressedBytes": 15686,
+    "decodedSha256": "d40138a1440a81ef3630ad51752adfc16fee8fb17f3cdaaf6fd5b252ecce62fc",
+    "compressedSha256": "d14c2841554f549e88096df058d373e100b0f68e4b66711e9c5dc759b2f7a1d1",
+    "decodedRereadVerified": true
+  },
+  {
+    "logicalPath": "r1/root/06-paid-manual-reload.json",
+    "compressedPath": "r1/root/06-paid-manual-reload.json.gz",
+    "decodedBytes": 2158262,
+    "compressedBytes": 15725,
+    "decodedSha256": "2dc5a98ac5421275909483fc1ea972cc50f878cf32ef3cbac1aec358dd24df21",
+    "compressedSha256": "96798011dc4ca5346746afb907b8c462cdcedf4472542412f14ee78cdccc4f45",
+    "decodedRereadVerified": true
+  },
+  {
+    "logicalPath": "r1/root/07-owned-can-checkpoint.json",
+    "compressedPath": "r1/root/07-owned-can-checkpoint.json.gz",
+    "decodedBytes": 2158251,
+    "compressedBytes": 15748,
+    "decodedSha256": "71932fae0cffa293b749b58442fd6f13858d66dc2698f9ec876b23d1906d979a",
+    "compressedSha256": "d11dbd302c1e0dc4b0bfe87db85d3594ec17d0ae19f1eb2e991d862907deb964",
+    "decodedRereadVerified": true
+  },
+  {
+    "logicalPath": "r1/root/08-can-in-real-bin.json",
+    "compressedPath": "r1/root/08-can-in-real-bin.json.gz",
+    "decodedBytes": 2158423,
+    "compressedBytes": 15765,
+    "decodedSha256": "c67c7ae22bb83dd0d814c03023cf9a4c130fac16010b67123fcf95644d9316c9",
+    "compressedSha256": "38a43de457ab2d8f654a9cd78a2d00d7f43e7238309b539c012adaa8a6d05e95",
+    "decodedRereadVerified": true
+  },
+  {
+    "logicalPath": "r1/root/09-real-typed-ground.json",
+    "compressedPath": "r1/root/09-real-typed-ground.json.gz",
+    "decodedBytes": 2158462,
+    "compressedBytes": 15756,
+    "decodedSha256": "258c25c6a91a8205665e625be56a77273aa3d048d600de30c1832fdc0f63e540",
+    "compressedSha256": "eaa4403a5d7235c5bd1e74e11c6d9a5531cccfd0a08c8c5c07dc7d0ed257e31d",
+    "decodedRereadVerified": true
+  },
+  {
+    "logicalPath": "r1/root/10-real-owners-away.json",
+    "compressedPath": "r1/root/10-real-owners-away.json.gz",
+    "decodedBytes": 2159100,
+    "compressedBytes": 15845,
+    "decodedSha256": "45fbb1cbef83e3147dbf51a46628d4edf5d696c9600dca2db1dccb26ae481da8",
+    "compressedSha256": "84197a25213b7ed000c28263cd83c2638db47e71d95520430bb163a8ba306012",
+    "decodedRereadVerified": true
+  },
+  {
+    "logicalPath": "r1/root/11-box-visible-macro.json",
+    "compressedPath": "r1/root/11-box-visible-macro.json.gz",
+    "decodedBytes": 2159100,
+    "compressedBytes": 15845,
+    "decodedSha256": "45fbb1cbef83e3147dbf51a46628d4edf5d696c9600dca2db1dccb26ae481da8",
+    "compressedSha256": "84197a25213b7ed000c28263cd83c2638db47e71d95520430bb163a8ba306012",
+    "decodedRereadVerified": true
+  },
+  {
+    "logicalPath": "r1/root/11-can-visible-macro.json",
+    "compressedPath": "r1/root/11-can-visible-macro.json.gz",
+    "decodedBytes": 2159100,
+    "compressedBytes": 15845,
+    "decodedSha256": "45fbb1cbef83e3147dbf51a46628d4edf5d696c9600dca2db1dccb26ae481da8",
+    "compressedSha256": "84197a25213b7ed000c28263cd83c2638db47e71d95520430bb163a8ba306012",
+    "decodedRereadVerified": true
+  },
+  {
+    "logicalPath": "r1/root/declared-empty-start.json",
+    "compressedPath": "r1/root/declared-empty-start.json.gz",
+    "decodedBytes": 774337,
+    "compressedBytes": 10539,
+    "decodedSha256": "6457a66d198132f07a40e305289267df91b192db50d64e4c516694b46bf12471",
+    "compressedSha256": "c739b9cb7f6ca9d0d8974415a0baa6bf89c439186845fb3f071549f867abfefd",
+    "decodedRereadVerified": true
+  },
+  {
+    "logicalPath": "r1/root/declared-malformed-wrapper-product-target.json",
+    "compressedPath": "r1/root/declared-malformed-wrapper-product-target.json.gz",
+    "decodedBytes": 776496,
+    "compressedBytes": 11215,
+    "decodedSha256": "964bed5988c94598cb697c02164e1df75de032bed958d9a74ffe9d702d265ba3",
+    "compressedSha256": "1402d2f552dc4287690c6df80349ebb03e1451c4411a49b20f90210a55d92abd",
+    "decodedRereadVerified": true
+  },
+  {
+    "logicalPath": "r1/root/downloads/coaster-park.json",
+    "compressedPath": "r1/root/downloads/coaster-park.json.gz",
+    "decodedBytes": 776628,
+    "compressedBytes": 11260,
+    "decodedSha256": "84eb4c094f44c9fe950e7f283e4487f7b8f0e99c75a1bd66ec283660eec1dbda",
+    "compressedSha256": "65fe04283f0b78da4be3614aad8a96bb4bf3ec50b7ab08cea1a22831584325e4",
+    "decodedRereadVerified": true
+  },
+  {
+    "logicalPath": "r1/root/final-actual-player-observations.json",
+    "compressedPath": "r1/root/final-actual-player-observations.json.gz",
+    "decodedBytes": 4107903,
+    "compressedBytes": 49903,
+    "decodedSha256": "a0c879caf3d39f32bbda8c3fefaca64d589cbffe383b80b58a596e8e99816cd4",
+    "compressedSha256": "3a8819502cb4f1b3a5039ee22a94ebe5c1b17375f409b3d219929c6f0a50b181",
+    "decodedRereadVerified": true
+  },
+  {
+    "logicalPath": "r1/root/mid-container-actual-export.json",
+    "compressedPath": "r1/root/mid-container-actual-export.json.gz",
+    "decodedBytes": 776628,
+    "compressedBytes": 11260,
+    "decodedSha256": "84eb4c094f44c9fe950e7f283e4487f7b8f0e99c75a1bd66ec283660eec1dbda",
+    "compressedSha256": "65fe04283f0b78da4be3614aad8a96bb4bf3ec50b7ab08cea1a22831584325e4",
+    "decodedRereadVerified": true
+  },
+  {
+    "logicalPath": "r1/root/mid-use-actual-export.json",
+    "compressedPath": "r1/root/mid-use-actual-export.json.gz",
+    "decodedBytes": 776639,
+    "compressedBytes": 11237,
+    "decodedSha256": "e24e2f271327115bb937e53afe2172b10e597cb051e115e35e91d9816e22b58d",
+    "compressedSha256": "be64597416b0b884fec633a538a8d082f0e859d0700501f62d52f620e0b032ed",
+    "decodedRereadVerified": true
+  },
+  {
+    "logicalPath": "r1/root/mid-use-complete-public-store.json",
+    "compressedPath": "r1/root/mid-use-complete-public-store.json.gz",
+    "decodedBytes": 2651207,
+    "compressedBytes": 43572,
+    "decodedSha256": "5c782c9cbe00b22849ed46972ca215cd081774023514aa42bb35e3d13e71cca3",
+    "compressedSha256": "6b97ec3edf7f36d815a0b9d5a5ce1d67b1671fc9c6df2529fd6129341639c073",
+    "decodedRereadVerified": true
+  },
+  {
+    "logicalPath": "r1/root/pre-reload-actual-driver.json",
+    "compressedPath": "r1/root/pre-reload-actual-driver.json.gz",
+    "decodedBytes": 6809336,
+    "compressedBytes": 91097,
+    "decodedSha256": "1f97297afd96db412d73a0f495eb16bb2ca5e5a5756b19d4bc396a53512aec2d",
+    "compressedSha256": "e574adbc1344c7e35bf5b02d440d053c7a83a7c2bc3efb258b581a740191ba5f",
+    "decodedRereadVerified": true
+  },
+  {
+    "logicalPath": "r1/root/protected-original-databases.json",
+    "compressedPath": "r1/root/protected-original-databases.json.gz",
+    "decodedBytes": 1857146,
+    "compressedBytes": 31410,
+    "decodedSha256": "5de9269e14a5b08272cd1f48ae31016a21ac289af20890c08f14dd80bbc9e040",
+    "compressedSha256": "944c2220df7d44a3010900e099586e1835737bdad878f0b29825d3cff3f626a9",
+    "decodedRereadVerified": true
+  },
+  {
+    "logicalPath": "r1/root/raw-cdp.jsonl",
+    "compressedPath": "r1/root/raw-cdp.jsonl.gz",
+    "decodedBytes": 79462522,
+    "compressedBytes": 20915133,
+    "decodedSha256": "58f8436febd5bd5639b62682b751a0a8a16e74206ecce5f779ec4dca97911f37",
+    "compressedSha256": "7a5a6437b17e112c9c305008e5e1fd23b9469972283fc7efb29c363a6de8d1f9",
+    "decodedRereadVerified": true
+  },
+  {
+    "logicalPath": "r1/root/restored-original-databases.json",
+    "compressedPath": "r1/root/restored-original-databases.json.gz",
+    "decodedBytes": 1857146,
+    "compressedBytes": 31410,
+    "decodedSha256": "5de9269e14a5b08272cd1f48ae31016a21ac289af20890c08f14dd80bbc9e040",
+    "compressedSha256": "944c2220df7d44a3010900e099586e1835737bdad878f0b29825d3cff3f626a9",
+    "decodedRereadVerified": true
+  },
+  {
+    "logicalPath": "r1/root/strict-import-after.json",
+    "compressedPath": "r1/root/strict-import-after.json.gz",
+    "decodedBytes": 776497,
+    "compressedBytes": 11210,
+    "decodedSha256": "7299a9a64f12b190a617b930d26ffd8f8cf4dedb79728aa5e3f077824e9550bf",
+    "compressedSha256": "bcb7c8b397c044c55740837b479b7a050cb736417d2f1bc9fd968fc96ab81a1a",
+    "decodedRereadVerified": true
+  },
+  {
+    "logicalPath": "r1/root/strict-import-before.json",
+    "compressedPath": "r1/root/strict-import-before.json.gz",
+    "decodedBytes": 776497,
+    "compressedBytes": 11210,
+    "decodedSha256": "7299a9a64f12b190a617b930d26ffd8f8cf4dedb79728aa5e3f077824e9550bf",
+    "compressedSha256": "bcb7c8b397c044c55740837b479b7a050cb736417d2f1bc9fd968fc96ab81a1a",
+    "decodedRereadVerified": true
+  }
+]

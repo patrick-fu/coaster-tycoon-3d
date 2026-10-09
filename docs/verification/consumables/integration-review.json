@@ -1,0 +1,47 @@
+{
+  "phase": "Whole finite local integration and material-repair re-review; not final cumulative public closure",
+  "baseline": "9172b5b13ea8b6d40dbc3f98ef86de64ad1af3bd",
+  "sourceCheckpoint": "0931ff3c746280b4645a1086c3290b38730ada48",
+  "workingSourceHashes": {
+    "src/simulation/engine.ts": "d0151bcc143af455627a3f46b180fec335870504f5a2423f5b50fe28e06651bb",
+    "test/consumables.test.mjs": "e9016341e9f6af78991d3bc6e729cbc865341897601eec471b9e529ccfdbc1ca",
+    "ui/consumable-waste.js": "6a61d96ab774507781b9bfce61198b9599230f0c176df05f8d8f28a8e9d02bac"
+  },
+  "reviewers": [
+    {
+      "actor": "/root/consumables_integration_design_sol_max",
+      "model": "gpt-6.1-sol",
+      "effort": "max",
+      "lens": "Design",
+      "scope": "Entire9172-to-current source/UI/tests/contracts and actual retained local evidence",
+      "status": "terminal consumed",
+      "finding": "P2 crafted current-save wrapper/product buying intention imports then creates unloadable dual ownership",
+      "materialRepairReReview": "Closed after narrow current-save guard and actual two-product red/green/full263, exact16-file retention and source/test verification",
+      "otherVerifiedP0P1P2": []
+    },
+    {
+      "actor": "/root/consumables_integration_drift_luna_max",
+      "model": "gpt-6-luna",
+      "effort": "max",
+      "lens": "Drift",
+      "scope": "Entire9172-to-current intent/progress/source/UI/test/docs/evidence/ticket/claim boundary",
+      "status": "terminal consumed",
+      "finding": "Same P2 independently traced; refresh dated draft PR description before readiness",
+      "materialRepairReReview": "Closed after actual red/green/full263,16-file/archive/source/test checks; Root updates completed review status",
+      "otherVerifiedP0P1P2": []
+    }
+  ],
+  "rootDisposition": {
+    "wrapperImport": "Confirmed by actual Grok red, repaired validation-only, green and full263 pass, independently re-reviewed",
+    "typedDeckVisibility": "Confirmed by actual red bounds/pixels, isolated AGY two-root repair, narrow independent Luna review and green20/pixels/retention accepted",
+    "proceduralPropBoundary": "Finite mechanical/pixel candidates do not satisfy final ADR0003 detailed editable Blender/GLB art, original/human/GPU qualification",
+    "draftPR": "Refresh after source proof checkpoint",
+    "unresolvedVerifiedLocalP0P1P2": []
+  },
+  "remaining": [
+    "Source checkpoint/push/integration",
+    "Exact public distribution and real public source/player checks",
+    "Both final whole-delivery closure lenses twice",
+    "Original numerical/art fidelity, representative integrated GPU/scale, human visual/play acceptance and full programme"
+  ]
+}

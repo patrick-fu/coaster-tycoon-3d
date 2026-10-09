@@ -1,0 +1,101 @@
+{
+  "created": "2026-10-09T18:02:29.477925+00:00",
+  "runs": {
+    "red-r1": {
+      "runnerPid": 815772,
+      "runs": [
+        {
+          "name": "diagnostic",
+          "command": [
+            "node",
+            "/workspace/coaster-consumables/wrapper-admission-red.mjs"
+          ],
+          "started": "2026-10-09T17:57:28.445258+00:00",
+          "finished": "2026-10-09T17:57:28.767012+00:00",
+          "pid": 815777,
+          "actualExit": 0,
+          "stderrBytes": 0
+        },
+        {
+          "name": "regression",
+          "command": [
+            "node",
+            "--test",
+            "--test-name-pattern=a legacy wrapper cannot target a product counter in a current save",
+            "test/consumables.test.mjs"
+          ],
+          "started": "2026-10-09T17:57:28.767106+00:00",
+          "finished": "2026-10-09T17:57:29.130725+00:00",
+          "pid": 815791,
+          "actualExit": 1,
+          "stderrBytes": 0
+        }
+      ],
+      "engineSha256": "f6ad3fdae3725aedd49c4fcb9bb005a11677e903442a7e31e265e3ed6939f1a1",
+      "testSha256": "e9016341e9f6af78991d3bc6e729cbc865341897601eec471b9e529ccfdbc1ca"
+    },
+    "green-r1": {
+      "runs": [
+        {
+          "name": "build",
+          "command": [
+            "npm",
+            "run",
+            "build"
+          ],
+          "started": "2026-10-09T18:00:06.190650+00:00",
+          "finished": "2026-10-09T18:00:06.855052+00:00",
+          "pid": 816766,
+          "actualExit": 0,
+          "stderrBytes": 0
+        },
+        {
+          "name": "regression",
+          "command": [
+            "node",
+            "--test",
+            "--test-name-pattern=a legacy wrapper cannot target a product counter in a current save",
+            "test/consumables.test.mjs"
+          ],
+          "started": "2026-10-09T18:00:06.855383+00:00",
+          "finished": "2026-10-09T18:00:07.291085+00:00",
+          "pid": 816805,
+          "actualExit": 0,
+          "stderrBytes": 0
+        },
+        {
+          "name": "full",
+          "command": [
+            "npm",
+            "test"
+          ],
+          "started": "2026-10-09T18:00:07.291441+00:00",
+          "finished": "2026-10-09T18:01:17.219941+00:00",
+          "pid": 816825,
+          "actualExit": 0,
+          "stderrBytes": 0
+        },
+        {
+          "name": "web",
+          "command": [
+            "npm",
+            "run",
+            "build:web"
+          ],
+          "started": "2026-10-09T18:01:17.220394+00:00",
+          "finished": "2026-10-09T18:01:18.555042+00:00",
+          "pid": 817613,
+          "actualExit": 0,
+          "stderrBytes": 0
+        }
+      ],
+      "runnerPid": 816765,
+      "sourceSha256": "d0151bcc143af455627a3f46b180fec335870504f5a2423f5b50fe28e06651bb",
+      "testSha256": "e9016341e9f6af78991d3bc6e729cbc865341897601eec471b9e529ccfdbc1ca",
+      "engineSha256": "71966822cbcd3b6f84fad25d4193f8fcd9d025717e3f17fcf9a340168bad1e7e"
+    }
+  },
+  "note": "Red diagnostic confirms crafted-input failure; red regression actual1 is preserved. Green has build/regression/full263/web actual0. Historical player/browser evidence remains dated before this strict-import guard.",
+  "currentWebEngineSha256": "71966822cbcd3b6f84fad25d4193f8fcd9d025717e3f17fcf9a340168bad1e7e",
+  "currentWebWasteSha256": "6a61d96ab774507781b9bfce61198b9599230f0c176df05f8d8f28a8e9d02bac"
+}

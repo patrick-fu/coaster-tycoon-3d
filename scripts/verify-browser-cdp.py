@@ -63,7 +63,7 @@ async def run():
     reply=await call('Runtime.evaluate',{'expression':expression,'returnByValue':True,'awaitPromise':True},session)
     if 'exceptionDetails' in reply:raise RuntimeError(reply['exceptionDetails'])
     return reply.get('result',{}).get('value')
-   read_slot="(async()=>{const db=await new Promise((resolve,reject)=>{const r=indexedDB.open('coaster-tycoon-3d',1);r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error);});const value=await new Promise((resolve,reject)=>{const r=db.transaction('parks').objectStore('parks').get('current-v11');r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error);});db.close();return value;})()"
+   read_slot="(async()=>{const db=await new Promise((resolve,reject)=>{const r=indexedDB.open('coaster-tycoon-3d',1);r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error);});const value=await new Promise((resolve,reject)=>{const r=db.transaction('parks').objectStore('parks').get('current-v12');r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error);});db.close();return value;})()"
    original=await evaluate(read_slot)
    await call('Page.navigate',{'url':'http://127.0.0.1:4175/?showcase=classic'},session)
    for n in range(150):

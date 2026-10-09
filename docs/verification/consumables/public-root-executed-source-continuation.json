@@ -1,0 +1,1744 @@
+[
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/game.js",
+    "relativePath": "game.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "495",
+    "sha256": "6d429cff46bde002b0b2a9f984d3ed50953033ae6f5821fb51adf13f9ecb009a",
+    "expectedSha256": "6d429cff46bde002b0b2a9f984d3ed50953033ae6f5821fb51adf13f9ecb009a",
+    "retainedFile": "executed-sources/6d429cff46bde002b0b2a9f984d3ed50953033ae6f5821fb51adf13f9ecb009a.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/flume-controls.js",
+    "relativePath": "flume-controls.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "497",
+    "sha256": "86f9e7c264d023d5599eea7c5a8c3dc920733090f8fb5f4c6ac574fe05a42821",
+    "expectedSha256": "86f9e7c264d023d5599eea7c5a8c3dc920733090f8fb5f4c6ac574fe05a42821",
+    "retainedFile": "executed-sources/86f9e7c264d023d5599eea7c5a8c3dc920733090f8fb5f4c6ac574fe05a42821.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/consumable-controls.js",
+    "relativePath": "consumable-controls.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "501",
+    "sha256": "4e77687b8a5578a9fd15e89db3ef22bf0156304b22542be8e833b062862a118e",
+    "expectedSha256": "4e77687b8a5578a9fd15e89db3ef22bf0156304b22542be8e833b062862a118e",
+    "retainedFile": "executed-sources/4e77687b8a5578a9fd15e89db3ef22bf0156304b22542be8e833b062862a118e.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/park-scene.js",
+    "relativePath": "park-scene.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "502",
+    "sha256": "752be64288e176a44187765165f9c027b505f0da9d6de4fd07f5196c5929cac9",
+    "expectedSha256": "752be64288e176a44187765165f9c027b505f0da9d6de4fd07f5196c5929cac9",
+    "retainedFile": "executed-sources/752be64288e176a44187765165f9c027b505f0da9d6de4fd07f5196c5929cac9.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/vendor/three.module.js",
+    "relativePath": "vendor/three.module.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "526",
+    "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea",
+    "expectedSha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea",
+    "retainedFile": "executed-sources/9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/vendor/three.core.js",
+    "relativePath": "vendor/three.core.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "551",
+    "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
+    "expectedSha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
+    "retainedFile": "executed-sources/9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/vendor/OrbitControls.js",
+    "relativePath": "vendor/OrbitControls.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "524",
+    "sha256": "3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b",
+    "expectedSha256": "3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b",
+    "retainedFile": "executed-sources/3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/art/runtime.js",
+    "relativePath": "art/runtime.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "527",
+    "sha256": "8b85e50ffed823678e3235639ae726ba7bee3e0c52c527855fce056b98df9e60",
+    "expectedSha256": "8b85e50ffed823678e3235639ae726ba7bee3e0c52c527855fce056b98df9e60",
+    "retainedFile": "executed-sources/8b85e50ffed823678e3235639ae726ba7bee3e0c52c527855fce056b98df9e60.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/art/environment.js",
+    "relativePath": "art/environment.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "517",
+    "sha256": "b94f58adf2419866af798467d6af0af2a5355dbd0cc797cb866234745d6f8933",
+    "expectedSha256": "b94f58adf2419866af798467d6af0af2a5355dbd0cc797cb866234745d6f8933",
+    "retainedFile": "executed-sources/b94f58adf2419866af798467d6af0af2a5355dbd0cc797cb866234745d6f8933.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/art/buildings.js",
+    "relativePath": "art/buildings.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "514",
+    "sha256": "fd59e83c14589dc1db7cf43ef79a0ad02ebede0569f092465349387a0161e720",
+    "expectedSha256": "fd59e83c14589dc1db7cf43ef79a0ad02ebede0569f092465349387a0161e720",
+    "retainedFile": "executed-sources/fd59e83c14589dc1db7cf43ef79a0ad02ebede0569f092465349387a0161e720.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/art/coaster.js",
+    "relativePath": "art/coaster.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "508",
+    "sha256": "acea0401e86ca920fefdca2d25ac43c6ca88f6ad78d980b995967c9a19d42951",
+    "expectedSha256": "acea0401e86ca920fefdca2d25ac43c6ca88f6ad78d980b995967c9a19d42951",
+    "retainedFile": "executed-sources/acea0401e86ca920fefdca2d25ac43c6ca88f6ad78d980b995967c9a19d42951.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/content/steel-coaster.js",
+    "relativePath": "content/steel-coaster.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "503",
+    "sha256": "d248ab39ba5695c5402872b634d514cc81517673c44d77e9e0da3deaaf683335",
+    "expectedSha256": "d248ab39ba5695c5402872b634d514cc81517673c44d77e9e0da3deaaf683335",
+    "retainedFile": "executed-sources/d248ab39ba5695c5402872b634d514cc81517673c44d77e9e0da3deaaf683335.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/engine.js",
+    "relativePath": "simulation/engine.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "518",
+    "sha256": "71966822cbcd3b6f84fad25d4193f8fcd9d025717e3f17fcf9a340168bad1e7e",
+    "expectedSha256": "71966822cbcd3b6f84fad25d4193f8fcd9d025717e3f17fcf9a340168bad1e7e",
+    "retainedFile": "executed-sources/71966822cbcd3b6f84fad25d4193f8fcd9d025717e3f17fcf9a340168bad1e7e.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/types.js",
+    "relativePath": "simulation/types.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "537",
+    "sha256": "1a6231381895d5abcccbc927e582be7270c22e19c76be7c5c3e560d83ea97d91",
+    "expectedSha256": "1a6231381895d5abcccbc927e582be7270c22e19c76be7c5c3e560d83ea97d91",
+    "retainedFile": "executed-sources/1a6231381895d5abcccbc927e582be7270c22e19c76be7c5c3e560d83ea97d91.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/validation.js",
+    "relativePath": "simulation/validation.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "522",
+    "sha256": "10a2f21ddd134f16105bf4f0153d57a6e660d7938157e30c1958487498b66056",
+    "expectedSha256": "10a2f21ddd134f16105bf4f0153d57a6e660d7938157e30c1958487498b66056",
+    "retainedFile": "executed-sources/10a2f21ddd134f16105bf4f0153d57a6e660d7938157e30c1958487498b66056.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/geometry.js",
+    "relativePath": "simulation/geometry.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "530",
+    "sha256": "e12404ca6542681cdd3175a6502928d5891622d5f0beed915613f7d6254c9a24",
+    "expectedSha256": "e12404ca6542681cdd3175a6502928d5891622d5f0beed915613f7d6254c9a24",
+    "retainedFile": "executed-sources/e12404ca6542681cdd3175a6502928d5891622d5f0beed915613f7d6254c9a24.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/housekeeping.js",
+    "relativePath": "simulation/housekeeping.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "560",
+    "sha256": "588c5c06187c0bcfd9d5b52a69ea33fece6a22aa89246df1189e4a247fb5cc7b",
+    "expectedSha256": "588c5c06187c0bcfd9d5b52a69ea33fece6a22aa89246df1189e4a247fb5cc7b",
+    "retainedFile": "executed-sources/588c5c06187c0bcfd9d5b52a69ea33fece6a22aa89246df1189e4a247fb5cc7b.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/services.js",
+    "relativePath": "simulation/services.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "548",
+    "sha256": "171566ab11852ed81f086e098bb2d85f46d790267ee3cad56c1e47f55c0b0aee",
+    "expectedSha256": "171566ab11852ed81f086e098bb2d85f46d790267ee3cad56c1e47f55c0b0aee",
+    "retainedFile": "executed-sources/171566ab11852ed81f086e098bb2d85f46d790267ee3cad56c1e47f55c0b0aee.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/patrol.js",
+    "relativePath": "simulation/patrol.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "545",
+    "sha256": "4a59eec5e274c541fecf413cb62cd27cabfe5fb13aaa6104d5543b8498b16e16",
+    "expectedSha256": "4a59eec5e274c541fecf413cb62cd27cabfe5fb13aaa6104d5543b8498b16e16",
+    "retainedFile": "executed-sources/4a59eec5e274c541fecf413cb62cd27cabfe5fb13aaa6104d5543b8498b16e16.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/operation.js",
+    "relativePath": "simulation/operation.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "536",
+    "sha256": "90a079ea7b4ed724d214a334b8cd006bcb07a40774b7f431051c554e9c620e69",
+    "expectedSha256": "90a079ea7b4ed724d214a334b8cd006bcb07a40774b7f431051c554e9c620e69",
+    "retainedFile": "executed-sources/90a079ea7b4ed724d214a334b8cd006bcb07a40774b7f431051c554e9c620e69.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/content/registry.js",
+    "relativePath": "content/registry.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "499",
+    "sha256": "fccec768191771369611bf9a02e28f751b445efc9888b329ae605e4863103ad3",
+    "expectedSha256": "fccec768191771369611bf9a02e28f751b445efc9888b329ae605e4863103ad3",
+    "retainedFile": "executed-sources/fccec768191771369611bf9a02e28f751b445efc9888b329ae605e4863103ad3.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/content/rct2-reference.js",
+    "relativePath": "content/rct2-reference.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "505",
+    "sha256": "23ad185689097bbc9b21d87de63f4d62a4d2365fa019f983cf8b8ae85f7836ee",
+    "expectedSha256": "23ad185689097bbc9b21d87de63f4d62a4d2365fa019f983cf8b8ae85f7836ee",
+    "retainedFile": "executed-sources/23ad185689097bbc9b21d87de63f4d62a4d2365fa019f983cf8b8ae85f7836ee.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/content/ride-profiles.js",
+    "relativePath": "content/ride-profiles.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "535",
+    "sha256": "034490199b05354be6ae497b5e43f3ff804f0b120b2d332b6e1167f1c1be23f2",
+    "expectedSha256": "034490199b05354be6ae497b5e43f3ff804f0b120b2d332b6e1167f1c1be23f2",
+    "retainedFile": "executed-sources/034490199b05354be6ae497b5e43f3ff804f0b120b2d332b6e1167f1c1be23f2.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/flume-profile.js",
+    "relativePath": "simulation/flume-profile.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "547",
+    "sha256": "e89e86ea002b94f7339ef7c5e4bcc73c33998abf0252c17ed2b430b2394f7f58",
+    "expectedSha256": "e89e86ea002b94f7339ef7c5e4bcc73c33998abf0252c17ed2b430b2394f7f58",
+    "retainedFile": "executed-sources/e89e86ea002b94f7339ef7c5e4bcc73c33998abf0252c17ed2b430b2394f7f58.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/content/log-flume.js",
+    "relativePath": "content/log-flume.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "532",
+    "sha256": "6f71b4fc57dd403647c725f0e018a0439ce226108dc5459d837cfc9d0e469aa1",
+    "expectedSha256": "6f71b4fc57dd403647c725f0e018a0439ce226108dc5459d837cfc9d0e469aa1",
+    "retainedFile": "executed-sources/6f71b4fc57dd403647c725f0e018a0439ce226108dc5459d837cfc9d0e469aa1.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/wooden-placement.js",
+    "relativePath": "simulation/wooden-placement.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "531",
+    "sha256": "66b9590399dfd6235cbf6c04401744df1611d7fa1b55a72c1daf6950393a586c",
+    "expectedSha256": "66b9590399dfd6235cbf6c04401744df1611d7fa1b55a72c1daf6950393a586c",
+    "retainedFile": "executed-sources/66b9590399dfd6235cbf6c04401744df1611d7fa1b55a72c1daf6950393a586c.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/carousel.js",
+    "relativePath": "simulation/carousel.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "543",
+    "sha256": "c707db6b92deb1742b2c84f9cdb7c65a50fbdd9908387e64b29e53e0f3b29f6a",
+    "expectedSha256": "c707db6b92deb1742b2c84f9cdb7c65a50fbdd9908387e64b29e53e0f3b29f6a",
+    "retainedFile": "executed-sources/c707db6b92deb1742b2c84f9cdb7c65a50fbdd9908387e64b29e53e0f3b29f6a.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/content/carousel.js",
+    "relativePath": "content/carousel.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "556",
+    "sha256": "29f71f912001cf341916541fbf678bf8fb1985d6c1979cf1e541e8e79318ceb9",
+    "expectedSha256": "29f71f912001cf341916541fbf678bf8fb1985d6c1979cf1e541e8e79318ceb9",
+    "retainedFile": "executed-sources/29f71f912001cf341916541fbf678bf8fb1985d6c1979cf1e541e8e79318ceb9.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/flume-native.js",
+    "relativePath": "simulation/flume-native.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "506",
+    "sha256": "735c2d793a1daf76844e1eeac6ea3342e37f84b1f49e5de6edc8e914073f02ae",
+    "expectedSha256": "735c2d793a1daf76844e1eeac6ea3342e37f84b1f49e5de6edc8e914073f02ae",
+    "retainedFile": "executed-sources/735c2d793a1daf76844e1eeac6ea3342e37f84b1f49e5de6edc8e914073f02ae.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/flume-portal.js",
+    "relativePath": "simulation/flume-portal.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "549",
+    "sha256": "877ba9c562c874ee742a77ec67aa64cb68012885ce96f288e6d4f9b128e621c3",
+    "expectedSha256": "877ba9c562c874ee742a77ec67aa64cb68012885ce96f288e6d4f9b128e621c3",
+    "retainedFile": "executed-sources/877ba9c562c874ee742a77ec67aa64cb68012885ce96f288e6d4f9b128e621c3.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/boat.js",
+    "relativePath": "simulation/boat.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "541",
+    "sha256": "d4ca78dc773f712086b995b5bf870d48dd9a3feb35fb9765f8296b499fb80199",
+    "expectedSha256": "d4ca78dc773f712086b995b5bf870d48dd9a3feb35fb9765f8296b499fb80199",
+    "retainedFile": "executed-sources/d4ca78dc773f712086b995b5bf870d48dd9a3feb35fb9765f8296b499fb80199.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/content/consumables.js",
+    "relativePath": "content/consumables.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "534",
+    "sha256": "b1c162502f7a79c58c67a3d57e30c5d7db29f6972d87bc6fba65e1a3f56db4eb",
+    "expectedSha256": "b1c162502f7a79c58c67a3d57e30c5d7db29f6972d87bc6fba65e1a3f56db4eb",
+    "retainedFile": "executed-sources/b1c162502f7a79c58c67a3d57e30c5d7db29f6972d87bc6fba65e1a3f56db4eb.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/scenery.js",
+    "relativePath": "simulation/scenery.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "520",
+    "sha256": "af181426f98f7c6daab583055906264db929940ecb25a3fe50c1ca219d9ee520",
+    "expectedSha256": "af181426f98f7c6daab583055906264db929940ecb25a3fe50c1ca219d9ee520",
+    "retainedFile": "executed-sources/af181426f98f7c6daab583055906264db929940ecb25a3fe50c1ca219d9ee520.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/motion.js",
+    "relativePath": "simulation/motion.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "542",
+    "sha256": "4c3d5c27617302f607d0235a10eeda4cd4fafc9c81cb7859327fba0b407f34e6",
+    "expectedSha256": "4c3d5c27617302f607d0235a10eeda4cd4fafc9c81cb7859327fba0b407f34e6",
+    "retainedFile": "executed-sources/4c3d5c27617302f607d0235a10eeda4cd4fafc9c81cb7859327fba0b407f34e6.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/people.js",
+    "relativePath": "simulation/people.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "550",
+    "sha256": "96ef0885c3c3719ff5827e9ea63f370508d5e21f2e8b2d31799099a1855f8a5e",
+    "expectedSha256": "96ef0885c3c3719ff5827e9ea63f370508d5e21f2e8b2d31799099a1855f8a5e",
+    "retainedFile": "executed-sources/96ef0885c3c3719ff5827e9ea63f370508d5e21f2e8b2d31799099a1855f8a5e.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/view.js",
+    "relativePath": "simulation/view.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "546",
+    "sha256": "1742bc023dc22f8624ecefac4b1b5076ab1aa89a0a35090536bdb00af1f8c75d",
+    "expectedSha256": "1742bc023dc22f8624ecefac4b1b5076ab1aa89a0a35090536bdb00af1f8c75d",
+    "retainedFile": "executed-sources/1742bc023dc22f8624ecefac4b1b5076ab1aa89a0a35090536bdb00af1f8c75d.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/protocol.js",
+    "relativePath": "simulation/protocol.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "500",
+    "sha256": "1a7f454c4d4347075efedfb5f6343947cb611240e16ec820db8c457bbb368475",
+    "expectedSha256": "1a7f454c4d4347075efedfb5f6343947cb611240e16ec820db8c457bbb368475",
+    "retainedFile": "executed-sources/1a7f454c4d4347075efedfb5f6343947cb611240e16ec820db8c457bbb368475.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/wooden-motion.js",
+    "relativePath": "simulation/wooden-motion.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "540",
+    "sha256": "aaed1ed31a0764f8ecc8b07db1d2c6bc6e2a0230b2002daff30729a20c5da12d",
+    "expectedSha256": "aaed1ed31a0764f8ecc8b07db1d2c6bc6e2a0230b2002daff30729a20c5da12d",
+    "retainedFile": "executed-sources/aaed1ed31a0764f8ecc8b07db1d2c6bc6e2a0230b2002daff30729a20c5da12d.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/routes.js",
+    "relativePath": "simulation/routes.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "539",
+    "sha256": "ec098e36c6a24155b4d10da3118a7240e08850a4b38c52eb7d4891be556c3453",
+    "expectedSha256": "ec098e36c6a24155b4d10da3118a7240e08850a4b38c52eb7d4891be556c3453",
+    "retainedFile": "executed-sources/ec098e36c6a24155b4d10da3118a7240e08850a4b38c52eb7d4891be556c3453.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/art/tree-assets.js",
+    "relativePath": "art/tree-assets.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "521",
+    "sha256": "daa01cc5d707a402a6523adb3e815a6ce7d1d88e4c9b1f0c72702467f8c6e054",
+    "expectedSha256": "daa01cc5d707a402a6523adb3e815a6ce7d1d88e4c9b1f0c72702467f8c6e054",
+    "retainedFile": "executed-sources/daa01cc5d707a402a6523adb3e815a6ce7d1d88e4c9b1f0c72702467f8c6e054.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/vendor/addons/loaders/GLTFLoader.js",
+    "relativePath": "vendor/addons/loaders/GLTFLoader.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "538",
+    "sha256": "131c0f78c01d19368ae495caa65b3adaa10487810a36a05bb5901b769a35ac16",
+    "expectedSha256": "131c0f78c01d19368ae495caa65b3adaa10487810a36a05bb5901b769a35ac16",
+    "retainedFile": "executed-sources/131c0f78c01d19368ae495caa65b3adaa10487810a36a05bb5901b769a35ac16.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/vendor/addons/utils/BufferGeometryUtils.js",
+    "relativePath": "vendor/addons/utils/BufferGeometryUtils.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "554",
+    "sha256": "9fb63427ce6641fa14fd0baff9cc4d1b5f9c3d85fd084bf2e90e803c44ec1797",
+    "expectedSha256": "9fb63427ce6641fa14fd0baff9cc4d1b5f9c3d85fd084bf2e90e803c44ec1797",
+    "retainedFile": "executed-sources/9fb63427ce6641fa14fd0baff9cc4d1b5f9c3d85fd084bf2e90e803c44ec1797.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/vendor/addons/utils/SkeletonUtils.js",
+    "relativePath": "vendor/addons/utils/SkeletonUtils.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "553",
+    "sha256": "b1632a703206c3d830de9fcbe515696770d04b71a15ee6b50afa6d2c3298c86f",
+    "expectedSha256": "b1632a703206c3d830de9fcbe515696770d04b71a15ee6b50afa6d2c3298c86f",
+    "retainedFile": "executed-sources/b1632a703206c3d830de9fcbe515696770d04b71a15ee6b50afa6d2c3298c86f.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/art/surface-assets.js",
+    "relativePath": "art/surface-assets.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "516",
+    "sha256": "11495b97bf3daaffcf49f7fd991da882fdf2321347739fda88d6fcf35ced2927",
+    "expectedSha256": "11495b97bf3daaffcf49f7fd991da882fdf2321347739fda88d6fcf35ced2927",
+    "retainedFile": "executed-sources/11495b97bf3daaffcf49f7fd991da882fdf2321347739fda88d6fcf35ced2927.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/art/surface-palette.js",
+    "relativePath": "art/surface-palette.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "533",
+    "sha256": "91adbb55a95dc3b0b2ad670084a7f93366c266a09df6ed36bf414cb23b538768",
+    "expectedSha256": "91adbb55a95dc3b0b2ad670084a7f93366c266a09df6ed36bf414cb23b538768",
+    "retainedFile": "executed-sources/91adbb55a95dc3b0b2ad670084a7f93366c266a09df6ed36bf414cb23b538768.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/art/wooden-assets.js",
+    "relativePath": "art/wooden-assets.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "519",
+    "sha256": "3475acd3d3975ad8951135e0e3382ab7f530b5fa87824ec0013575086522a237",
+    "expectedSha256": "3475acd3d3975ad8951135e0e3382ab7f530b5fa87824ec0013575086522a237",
+    "retainedFile": "executed-sources/3475acd3d3975ad8951135e0e3382ab7f530b5fa87824ec0013575086522a237.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/art/wooden-coaster.js",
+    "relativePath": "art/wooden-coaster.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "511",
+    "sha256": "9ebceda15d406332d37ab8dae756a1725b7a36cc7278ab7ac8b6d7438c920898",
+    "expectedSha256": "9ebceda15d406332d37ab8dae756a1725b7a36cc7278ab7ac8b6d7438c920898",
+    "retainedFile": "executed-sources/9ebceda15d406332d37ab8dae756a1725b7a36cc7278ab7ac8b6d7438c920898.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/art/carousel-assets.js",
+    "relativePath": "art/carousel-assets.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "512",
+    "sha256": "5b437923981d7728133e4fdf3173808dced188f66cc7b18ab653470738c92453",
+    "expectedSha256": "5b437923981d7728133e4fdf3173808dced188f66cc7b18ab653470738c92453",
+    "retainedFile": "executed-sources/5b437923981d7728133e4fdf3173808dced188f66cc7b18ab653470738c92453.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/art/carousel.js",
+    "relativePath": "art/carousel.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "515",
+    "sha256": "02173c16094d2caf950e1c7908bf51268f36ef955d91af09b7457705272b15e8",
+    "expectedSha256": "02173c16094d2caf950e1c7908bf51268f36ef955d91af09b7457705272b15e8",
+    "retainedFile": "executed-sources/02173c16094d2caf950e1c7908bf51268f36ef955d91af09b7457705272b15e8.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/art/carousel-portal.js",
+    "relativePath": "art/carousel-portal.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "507",
+    "sha256": "be22f0a550df9625640910022bbfae67ee19aac0913330bcba9fc482152b4eac",
+    "expectedSha256": "be22f0a550df9625640910022bbfae67ee19aac0913330bcba9fc482152b4eac",
+    "retainedFile": "executed-sources/be22f0a550df9625640910022bbfae67ee19aac0913330bcba9fc482152b4eac.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/art/flume-assets.js",
+    "relativePath": "art/flume-assets.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "513",
+    "sha256": "f45315ab423b590a61d3715a33f928d09db2b810046e48c3d91b0157892186bb",
+    "expectedSha256": "f45315ab423b590a61d3715a33f928d09db2b810046e48c3d91b0157892186bb",
+    "retainedFile": "executed-sources/f45315ab423b590a61d3715a33f928d09db2b810046e48c3d91b0157892186bb.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/art/flume-boats.js",
+    "relativePath": "art/flume-boats.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "510",
+    "sha256": "cc5840239a11dec4468376741c99eadaaddf7168d31c1e2fb9ecc36df1b28781",
+    "expectedSha256": "cc5840239a11dec4468376741c99eadaaddf7168d31c1e2fb9ecc36df1b28781",
+    "retainedFile": "executed-sources/cc5840239a11dec4468376741c99eadaaddf7168d31c1e2fb9ecc36df1b28781.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/art/flume-channel.js",
+    "relativePath": "art/flume-channel.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "525",
+    "sha256": "931974b2615e49f9a1ffe59b5514b5811e8c68ac10bf48eb6ecc4ba9cd4649e8",
+    "expectedSha256": "931974b2615e49f9a1ffe59b5514b5811e8c68ac10bf48eb6ecc4ba9cd4649e8",
+    "retainedFile": "executed-sources/931974b2615e49f9a1ffe59b5514b5811e8c68ac10bf48eb6ecc4ba9cd4649e8.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/art/flume-terrain.js",
+    "relativePath": "art/flume-terrain.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "544",
+    "sha256": "c541601fa7f37777d1a259c9e3c8103d7d3bba87ad24b4376b1dba7b6f7f7808",
+    "expectedSha256": "c541601fa7f37777d1a259c9e3c8103d7d3bba87ad24b4376b1dba7b6f7f7808",
+    "retainedFile": "executed-sources/c541601fa7f37777d1a259c9e3c8103d7d3bba87ad24b4376b1dba7b6f7f7808.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/art/flume-support-box.js",
+    "relativePath": "art/flume-support-box.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "555",
+    "sha256": "554a01c412ec368a02841eb525fba61f1541453467e25877d7d42081d33ab26d",
+    "expectedSha256": "554a01c412ec368a02841eb525fba61f1541453467e25877d7d42081d33ab26d",
+    "retainedFile": "executed-sources/554a01c412ec368a02841eb525fba61f1541453467e25877d7d42081d33ab26d.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/art/flume-portal.js",
+    "relativePath": "art/flume-portal.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "523",
+    "sha256": "9f71639544385fa5108fa8106e93fa3b5f70c55b8735a6d9cb66ce2d7c6c4913",
+    "expectedSha256": "9f71639544385fa5108fa8106e93fa3b5f70c55b8735a6d9cb66ce2d7c6c4913",
+    "retainedFile": "executed-sources/9f71639544385fa5108fa8106e93fa3b5f70c55b8735a6d9cb66ce2d7c6c4913.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/art/flume-approach.js",
+    "relativePath": "art/flume-approach.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "528",
+    "sha256": "e310a6f68f399ae180e70b2988990e4280dc018ca0267bf6deed9de03f50b89e",
+    "expectedSha256": "e310a6f68f399ae180e70b2988990e4280dc018ca0267bf6deed9de03f50b89e",
+    "retainedFile": "executed-sources/e310a6f68f399ae180e70b2988990e4280dc018ca0267bf6deed9de03f50b89e.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/consumable-waste.js",
+    "relativePath": "consumable-waste.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "509",
+    "sha256": "6a61d96ab774507781b9bfce61198b9599230f0c176df05f8d8f28a8e9d02bac",
+    "expectedSha256": "6a61d96ab774507781b9bfce61198b9599230f0c176df05f8d8f28a8e9d02bac",
+    "retainedFile": "executed-sources/6a61d96ab774507781b9bfce61198b9599230f0c176df05f8d8f28a8e9d02bac.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/content-browser.js",
+    "relativePath": "content-browser.js",
+    "sessionId": "270871F502FAD93E7BEB2D0177CAF33F",
+    "target": {
+      "targetId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "type": "page",
+      "title": "",
+      "url": "about:blank",
+      "attached": true,
+      "canAccessOpener": false,
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "498",
+    "sha256": "e45ea2cf6c24685abaec5e63ddc0101928a698ff1d531e39c73aab6eca38471b",
+    "expectedSha256": "e45ea2cf6c24685abaec5e63ddc0101928a698ff1d531e39c73aab6eca38471b",
+    "retainedFile": "executed-sources/e45ea2cf6c24685abaec5e63ddc0101928a698ff1d531e39c73aab6eca38471b.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+    "relativePath": "simulation/browser-worker.js",
+    "sessionId": "5C848A9F8214D416097AA89978A7347D",
+    "target": {
+      "targetId": "45CEFDEFF5CBB513C618DBE55B54AB16",
+      "type": "worker",
+      "title": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "attached": true,
+      "parentId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "canAccessOpener": false,
+      "parentFrameId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "3",
+    "sha256": "d5c82ceefac477eb9baecd5065933a6db0a216654c2a406058f1c28317127e1c",
+    "expectedSha256": "d5c82ceefac477eb9baecd5065933a6db0a216654c2a406058f1c28317127e1c",
+    "retainedFile": "executed-sources/d5c82ceefac477eb9baecd5065933a6db0a216654c2a406058f1c28317127e1c.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/content/steel-coaster.js",
+    "relativePath": "content/steel-coaster.js",
+    "sessionId": "5C848A9F8214D416097AA89978A7347D",
+    "target": {
+      "targetId": "45CEFDEFF5CBB513C618DBE55B54AB16",
+      "type": "worker",
+      "title": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "attached": true,
+      "parentId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "canAccessOpener": false,
+      "parentFrameId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "5",
+    "sha256": "d248ab39ba5695c5402872b634d514cc81517673c44d77e9e0da3deaaf683335",
+    "expectedSha256": "d248ab39ba5695c5402872b634d514cc81517673c44d77e9e0da3deaaf683335",
+    "retainedFile": "executed-sources/d248ab39ba5695c5402872b634d514cc81517673c44d77e9e0da3deaaf683335.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/engine.js",
+    "relativePath": "simulation/engine.js",
+    "sessionId": "5C848A9F8214D416097AA89978A7347D",
+    "target": {
+      "targetId": "45CEFDEFF5CBB513C618DBE55B54AB16",
+      "type": "worker",
+      "title": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "attached": true,
+      "parentId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "canAccessOpener": false,
+      "parentFrameId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "15",
+    "sha256": "71966822cbcd3b6f84fad25d4193f8fcd9d025717e3f17fcf9a340168bad1e7e",
+    "expectedSha256": "71966822cbcd3b6f84fad25d4193f8fcd9d025717e3f17fcf9a340168bad1e7e",
+    "retainedFile": "executed-sources/71966822cbcd3b6f84fad25d4193f8fcd9d025717e3f17fcf9a340168bad1e7e.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/types.js",
+    "relativePath": "simulation/types.js",
+    "sessionId": "5C848A9F8214D416097AA89978A7347D",
+    "target": {
+      "targetId": "45CEFDEFF5CBB513C618DBE55B54AB16",
+      "type": "worker",
+      "title": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "attached": true,
+      "parentId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "canAccessOpener": false,
+      "parentFrameId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "31",
+    "sha256": "1a6231381895d5abcccbc927e582be7270c22e19c76be7c5c3e560d83ea97d91",
+    "expectedSha256": "1a6231381895d5abcccbc927e582be7270c22e19c76be7c5c3e560d83ea97d91",
+    "retainedFile": "executed-sources/1a6231381895d5abcccbc927e582be7270c22e19c76be7c5c3e560d83ea97d91.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/validation.js",
+    "relativePath": "simulation/validation.js",
+    "sessionId": "5C848A9F8214D416097AA89978A7347D",
+    "target": {
+      "targetId": "45CEFDEFF5CBB513C618DBE55B54AB16",
+      "type": "worker",
+      "title": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "attached": true,
+      "parentId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "canAccessOpener": false,
+      "parentFrameId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "8",
+    "sha256": "10a2f21ddd134f16105bf4f0153d57a6e660d7938157e30c1958487498b66056",
+    "expectedSha256": "10a2f21ddd134f16105bf4f0153d57a6e660d7938157e30c1958487498b66056",
+    "retainedFile": "executed-sources/10a2f21ddd134f16105bf4f0153d57a6e660d7938157e30c1958487498b66056.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/geometry.js",
+    "relativePath": "simulation/geometry.js",
+    "sessionId": "5C848A9F8214D416097AA89978A7347D",
+    "target": {
+      "targetId": "45CEFDEFF5CBB513C618DBE55B54AB16",
+      "type": "worker",
+      "title": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "attached": true,
+      "parentId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "canAccessOpener": false,
+      "parentFrameId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "25",
+    "sha256": "e12404ca6542681cdd3175a6502928d5891622d5f0beed915613f7d6254c9a24",
+    "expectedSha256": "e12404ca6542681cdd3175a6502928d5891622d5f0beed915613f7d6254c9a24",
+    "retainedFile": "executed-sources/e12404ca6542681cdd3175a6502928d5891622d5f0beed915613f7d6254c9a24.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/housekeeping.js",
+    "relativePath": "simulation/housekeeping.js",
+    "sessionId": "5C848A9F8214D416097AA89978A7347D",
+    "target": {
+      "targetId": "45CEFDEFF5CBB513C618DBE55B54AB16",
+      "type": "worker",
+      "title": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "attached": true,
+      "parentId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "canAccessOpener": false,
+      "parentFrameId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "17",
+    "sha256": "588c5c06187c0bcfd9d5b52a69ea33fece6a22aa89246df1189e4a247fb5cc7b",
+    "expectedSha256": "588c5c06187c0bcfd9d5b52a69ea33fece6a22aa89246df1189e4a247fb5cc7b",
+    "retainedFile": "executed-sources/588c5c06187c0bcfd9d5b52a69ea33fece6a22aa89246df1189e4a247fb5cc7b.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/services.js",
+    "relativePath": "simulation/services.js",
+    "sessionId": "5C848A9F8214D416097AA89978A7347D",
+    "target": {
+      "targetId": "45CEFDEFF5CBB513C618DBE55B54AB16",
+      "type": "worker",
+      "title": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "attached": true,
+      "parentId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "canAccessOpener": false,
+      "parentFrameId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "28",
+    "sha256": "171566ab11852ed81f086e098bb2d85f46d790267ee3cad56c1e47f55c0b0aee",
+    "expectedSha256": "171566ab11852ed81f086e098bb2d85f46d790267ee3cad56c1e47f55c0b0aee",
+    "retainedFile": "executed-sources/171566ab11852ed81f086e098bb2d85f46d790267ee3cad56c1e47f55c0b0aee.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/patrol.js",
+    "relativePath": "simulation/patrol.js",
+    "sessionId": "5C848A9F8214D416097AA89978A7347D",
+    "target": {
+      "targetId": "45CEFDEFF5CBB513C618DBE55B54AB16",
+      "type": "worker",
+      "title": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "attached": true,
+      "parentId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "canAccessOpener": false,
+      "parentFrameId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "29",
+    "sha256": "4a59eec5e274c541fecf413cb62cd27cabfe5fb13aaa6104d5543b8498b16e16",
+    "expectedSha256": "4a59eec5e274c541fecf413cb62cd27cabfe5fb13aaa6104d5543b8498b16e16",
+    "retainedFile": "executed-sources/4a59eec5e274c541fecf413cb62cd27cabfe5fb13aaa6104d5543b8498b16e16.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/operation.js",
+    "relativePath": "simulation/operation.js",
+    "sessionId": "5C848A9F8214D416097AA89978A7347D",
+    "target": {
+      "targetId": "45CEFDEFF5CBB513C618DBE55B54AB16",
+      "type": "worker",
+      "title": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "attached": true,
+      "parentId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "canAccessOpener": false,
+      "parentFrameId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "21",
+    "sha256": "90a079ea7b4ed724d214a334b8cd006bcb07a40774b7f431051c554e9c620e69",
+    "expectedSha256": "90a079ea7b4ed724d214a334b8cd006bcb07a40774b7f431051c554e9c620e69",
+    "retainedFile": "executed-sources/90a079ea7b4ed724d214a334b8cd006bcb07a40774b7f431051c554e9c620e69.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/content/registry.js",
+    "relativePath": "content/registry.js",
+    "sessionId": "5C848A9F8214D416097AA89978A7347D",
+    "target": {
+      "targetId": "45CEFDEFF5CBB513C618DBE55B54AB16",
+      "type": "worker",
+      "title": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "attached": true,
+      "parentId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "canAccessOpener": false,
+      "parentFrameId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "12",
+    "sha256": "fccec768191771369611bf9a02e28f751b445efc9888b329ae605e4863103ad3",
+    "expectedSha256": "fccec768191771369611bf9a02e28f751b445efc9888b329ae605e4863103ad3",
+    "retainedFile": "executed-sources/fccec768191771369611bf9a02e28f751b445efc9888b329ae605e4863103ad3.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/content/rct2-reference.js",
+    "relativePath": "content/rct2-reference.js",
+    "sessionId": "5C848A9F8214D416097AA89978A7347D",
+    "target": {
+      "targetId": "45CEFDEFF5CBB513C618DBE55B54AB16",
+      "type": "worker",
+      "title": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "attached": true,
+      "parentId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "canAccessOpener": false,
+      "parentFrameId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "32",
+    "sha256": "23ad185689097bbc9b21d87de63f4d62a4d2365fa019f983cf8b8ae85f7836ee",
+    "expectedSha256": "23ad185689097bbc9b21d87de63f4d62a4d2365fa019f983cf8b8ae85f7836ee",
+    "retainedFile": "executed-sources/23ad185689097bbc9b21d87de63f4d62a4d2365fa019f983cf8b8ae85f7836ee.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/content/ride-profiles.js",
+    "relativePath": "content/ride-profiles.js",
+    "sessionId": "5C848A9F8214D416097AA89978A7347D",
+    "target": {
+      "targetId": "45CEFDEFF5CBB513C618DBE55B54AB16",
+      "type": "worker",
+      "title": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "attached": true,
+      "parentId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "canAccessOpener": false,
+      "parentFrameId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "24",
+    "sha256": "034490199b05354be6ae497b5e43f3ff804f0b120b2d332b6e1167f1c1be23f2",
+    "expectedSha256": "034490199b05354be6ae497b5e43f3ff804f0b120b2d332b6e1167f1c1be23f2",
+    "retainedFile": "executed-sources/034490199b05354be6ae497b5e43f3ff804f0b120b2d332b6e1167f1c1be23f2.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/flume-profile.js",
+    "relativePath": "simulation/flume-profile.js",
+    "sessionId": "5C848A9F8214D416097AA89978A7347D",
+    "target": {
+      "targetId": "45CEFDEFF5CBB513C618DBE55B54AB16",
+      "type": "worker",
+      "title": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "attached": true,
+      "parentId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "canAccessOpener": false,
+      "parentFrameId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "33",
+    "sha256": "e89e86ea002b94f7339ef7c5e4bcc73c33998abf0252c17ed2b430b2394f7f58",
+    "expectedSha256": "e89e86ea002b94f7339ef7c5e4bcc73c33998abf0252c17ed2b430b2394f7f58",
+    "retainedFile": "executed-sources/e89e86ea002b94f7339ef7c5e4bcc73c33998abf0252c17ed2b430b2394f7f58.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/content/log-flume.js",
+    "relativePath": "content/log-flume.js",
+    "sessionId": "5C848A9F8214D416097AA89978A7347D",
+    "target": {
+      "targetId": "45CEFDEFF5CBB513C618DBE55B54AB16",
+      "type": "worker",
+      "title": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "attached": true,
+      "parentId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "canAccessOpener": false,
+      "parentFrameId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "7",
+    "sha256": "6f71b4fc57dd403647c725f0e018a0439ce226108dc5459d837cfc9d0e469aa1",
+    "expectedSha256": "6f71b4fc57dd403647c725f0e018a0439ce226108dc5459d837cfc9d0e469aa1",
+    "retainedFile": "executed-sources/6f71b4fc57dd403647c725f0e018a0439ce226108dc5459d837cfc9d0e469aa1.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/wooden-placement.js",
+    "relativePath": "simulation/wooden-placement.js",
+    "sessionId": "5C848A9F8214D416097AA89978A7347D",
+    "target": {
+      "targetId": "45CEFDEFF5CBB513C618DBE55B54AB16",
+      "type": "worker",
+      "title": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "attached": true,
+      "parentId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "canAccessOpener": false,
+      "parentFrameId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "27",
+    "sha256": "66b9590399dfd6235cbf6c04401744df1611d7fa1b55a72c1daf6950393a586c",
+    "expectedSha256": "66b9590399dfd6235cbf6c04401744df1611d7fa1b55a72c1daf6950393a586c",
+    "retainedFile": "executed-sources/66b9590399dfd6235cbf6c04401744df1611d7fa1b55a72c1daf6950393a586c.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/carousel.js",
+    "relativePath": "simulation/carousel.js",
+    "sessionId": "5C848A9F8214D416097AA89978A7347D",
+    "target": {
+      "targetId": "45CEFDEFF5CBB513C618DBE55B54AB16",
+      "type": "worker",
+      "title": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "attached": true,
+      "parentId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "canAccessOpener": false,
+      "parentFrameId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "23",
+    "sha256": "c707db6b92deb1742b2c84f9cdb7c65a50fbdd9908387e64b29e53e0f3b29f6a",
+    "expectedSha256": "c707db6b92deb1742b2c84f9cdb7c65a50fbdd9908387e64b29e53e0f3b29f6a",
+    "retainedFile": "executed-sources/c707db6b92deb1742b2c84f9cdb7c65a50fbdd9908387e64b29e53e0f3b29f6a.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/content/carousel.js",
+    "relativePath": "content/carousel.js",
+    "sessionId": "5C848A9F8214D416097AA89978A7347D",
+    "target": {
+      "targetId": "45CEFDEFF5CBB513C618DBE55B54AB16",
+      "type": "worker",
+      "title": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "attached": true,
+      "parentId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "canAccessOpener": false,
+      "parentFrameId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "14",
+    "sha256": "29f71f912001cf341916541fbf678bf8fb1985d6c1979cf1e541e8e79318ceb9",
+    "expectedSha256": "29f71f912001cf341916541fbf678bf8fb1985d6c1979cf1e541e8e79318ceb9",
+    "retainedFile": "executed-sources/29f71f912001cf341916541fbf678bf8fb1985d6c1979cf1e541e8e79318ceb9.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/flume-native.js",
+    "relativePath": "simulation/flume-native.js",
+    "sessionId": "5C848A9F8214D416097AA89978A7347D",
+    "target": {
+      "targetId": "45CEFDEFF5CBB513C618DBE55B54AB16",
+      "type": "worker",
+      "title": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "attached": true,
+      "parentId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "canAccessOpener": false,
+      "parentFrameId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "16",
+    "sha256": "735c2d793a1daf76844e1eeac6ea3342e37f84b1f49e5de6edc8e914073f02ae",
+    "expectedSha256": "735c2d793a1daf76844e1eeac6ea3342e37f84b1f49e5de6edc8e914073f02ae",
+    "retainedFile": "executed-sources/735c2d793a1daf76844e1eeac6ea3342e37f84b1f49e5de6edc8e914073f02ae.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/flume-portal.js",
+    "relativePath": "simulation/flume-portal.js",
+    "sessionId": "5C848A9F8214D416097AA89978A7347D",
+    "target": {
+      "targetId": "45CEFDEFF5CBB513C618DBE55B54AB16",
+      "type": "worker",
+      "title": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "attached": true,
+      "parentId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "canAccessOpener": false,
+      "parentFrameId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "34",
+    "sha256": "877ba9c562c874ee742a77ec67aa64cb68012885ce96f288e6d4f9b128e621c3",
+    "expectedSha256": "877ba9c562c874ee742a77ec67aa64cb68012885ce96f288e6d4f9b128e621c3",
+    "retainedFile": "executed-sources/877ba9c562c874ee742a77ec67aa64cb68012885ce96f288e6d4f9b128e621c3.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/boat.js",
+    "relativePath": "simulation/boat.js",
+    "sessionId": "5C848A9F8214D416097AA89978A7347D",
+    "target": {
+      "targetId": "45CEFDEFF5CBB513C618DBE55B54AB16",
+      "type": "worker",
+      "title": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "attached": true,
+      "parentId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "canAccessOpener": false,
+      "parentFrameId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "18",
+    "sha256": "d4ca78dc773f712086b995b5bf870d48dd9a3feb35fb9765f8296b499fb80199",
+    "expectedSha256": "d4ca78dc773f712086b995b5bf870d48dd9a3feb35fb9765f8296b499fb80199",
+    "retainedFile": "executed-sources/d4ca78dc773f712086b995b5bf870d48dd9a3feb35fb9765f8296b499fb80199.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/content/consumables.js",
+    "relativePath": "content/consumables.js",
+    "sessionId": "5C848A9F8214D416097AA89978A7347D",
+    "target": {
+      "targetId": "45CEFDEFF5CBB513C618DBE55B54AB16",
+      "type": "worker",
+      "title": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "attached": true,
+      "parentId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "canAccessOpener": false,
+      "parentFrameId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "9",
+    "sha256": "b1c162502f7a79c58c67a3d57e30c5d7db29f6972d87bc6fba65e1a3f56db4eb",
+    "expectedSha256": "b1c162502f7a79c58c67a3d57e30c5d7db29f6972d87bc6fba65e1a3f56db4eb",
+    "retainedFile": "executed-sources/b1c162502f7a79c58c67a3d57e30c5d7db29f6972d87bc6fba65e1a3f56db4eb.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/scenery.js",
+    "relativePath": "simulation/scenery.js",
+    "sessionId": "5C848A9F8214D416097AA89978A7347D",
+    "target": {
+      "targetId": "45CEFDEFF5CBB513C618DBE55B54AB16",
+      "type": "worker",
+      "title": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "attached": true,
+      "parentId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "canAccessOpener": false,
+      "parentFrameId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "13",
+    "sha256": "af181426f98f7c6daab583055906264db929940ecb25a3fe50c1ca219d9ee520",
+    "expectedSha256": "af181426f98f7c6daab583055906264db929940ecb25a3fe50c1ca219d9ee520",
+    "retainedFile": "executed-sources/af181426f98f7c6daab583055906264db929940ecb25a3fe50c1ca219d9ee520.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/motion.js",
+    "relativePath": "simulation/motion.js",
+    "sessionId": "5C848A9F8214D416097AA89978A7347D",
+    "target": {
+      "targetId": "45CEFDEFF5CBB513C618DBE55B54AB16",
+      "type": "worker",
+      "title": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "attached": true,
+      "parentId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "canAccessOpener": false,
+      "parentFrameId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "30",
+    "sha256": "4c3d5c27617302f607d0235a10eeda4cd4fafc9c81cb7859327fba0b407f34e6",
+    "expectedSha256": "4c3d5c27617302f607d0235a10eeda4cd4fafc9c81cb7859327fba0b407f34e6",
+    "retainedFile": "executed-sources/4c3d5c27617302f607d0235a10eeda4cd4fafc9c81cb7859327fba0b407f34e6.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/people.js",
+    "relativePath": "simulation/people.js",
+    "sessionId": "5C848A9F8214D416097AA89978A7347D",
+    "target": {
+      "targetId": "45CEFDEFF5CBB513C618DBE55B54AB16",
+      "type": "worker",
+      "title": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "attached": true,
+      "parentId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "canAccessOpener": false,
+      "parentFrameId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "26",
+    "sha256": "96ef0885c3c3719ff5827e9ea63f370508d5e21f2e8b2d31799099a1855f8a5e",
+    "expectedSha256": "96ef0885c3c3719ff5827e9ea63f370508d5e21f2e8b2d31799099a1855f8a5e",
+    "retainedFile": "executed-sources/96ef0885c3c3719ff5827e9ea63f370508d5e21f2e8b2d31799099a1855f8a5e.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/view.js",
+    "relativePath": "simulation/view.js",
+    "sessionId": "5C848A9F8214D416097AA89978A7347D",
+    "target": {
+      "targetId": "45CEFDEFF5CBB513C618DBE55B54AB16",
+      "type": "worker",
+      "title": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "attached": true,
+      "parentId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "canAccessOpener": false,
+      "parentFrameId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "20",
+    "sha256": "1742bc023dc22f8624ecefac4b1b5076ab1aa89a0a35090536bdb00af1f8c75d",
+    "expectedSha256": "1742bc023dc22f8624ecefac4b1b5076ab1aa89a0a35090536bdb00af1f8c75d",
+    "retainedFile": "executed-sources/1742bc023dc22f8624ecefac4b1b5076ab1aa89a0a35090536bdb00af1f8c75d.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/protocol.js",
+    "relativePath": "simulation/protocol.js",
+    "sessionId": "5C848A9F8214D416097AA89978A7347D",
+    "target": {
+      "targetId": "45CEFDEFF5CBB513C618DBE55B54AB16",
+      "type": "worker",
+      "title": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "attached": true,
+      "parentId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "canAccessOpener": false,
+      "parentFrameId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "11",
+    "sha256": "1a7f454c4d4347075efedfb5f6343947cb611240e16ec820db8c457bbb368475",
+    "expectedSha256": "1a7f454c4d4347075efedfb5f6343947cb611240e16ec820db8c457bbb368475",
+    "retainedFile": "executed-sources/1a7f454c4d4347075efedfb5f6343947cb611240e16ec820db8c457bbb368475.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/wooden-motion.js",
+    "relativePath": "simulation/wooden-motion.js",
+    "sessionId": "5C848A9F8214D416097AA89978A7347D",
+    "target": {
+      "targetId": "45CEFDEFF5CBB513C618DBE55B54AB16",
+      "type": "worker",
+      "title": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "attached": true,
+      "parentId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "canAccessOpener": false,
+      "parentFrameId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "22",
+    "sha256": "aaed1ed31a0764f8ecc8b07db1d2c6bc6e2a0230b2002daff30729a20c5da12d",
+    "expectedSha256": "aaed1ed31a0764f8ecc8b07db1d2c6bc6e2a0230b2002daff30729a20c5da12d",
+    "retainedFile": "executed-sources/aaed1ed31a0764f8ecc8b07db1d2c6bc6e2a0230b2002daff30729a20c5da12d.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/routes.js",
+    "relativePath": "simulation/routes.js",
+    "sessionId": "5C848A9F8214D416097AA89978A7347D",
+    "target": {
+      "targetId": "45CEFDEFF5CBB513C618DBE55B54AB16",
+      "type": "worker",
+      "title": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "attached": true,
+      "parentId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "canAccessOpener": false,
+      "parentFrameId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "19",
+    "sha256": "ec098e36c6a24155b4d10da3118a7240e08850a4b38c52eb7d4891be556c3453",
+    "expectedSha256": "ec098e36c6a24155b4d10da3118a7240e08850a4b38c52eb7d4891be556c3453",
+    "retainedFile": "executed-sources/ec098e36c6a24155b4d10da3118a7240e08850a4b38c52eb7d4891be556c3453.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/content/mixed-park.js",
+    "relativePath": "content/mixed-park.js",
+    "sessionId": "5C848A9F8214D416097AA89978A7347D",
+    "target": {
+      "targetId": "45CEFDEFF5CBB513C618DBE55B54AB16",
+      "type": "worker",
+      "title": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "attached": true,
+      "parentId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "canAccessOpener": false,
+      "parentFrameId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "6",
+    "sha256": "5c1ccc0fd7a8b0778ba81de453580ee25aebac14670cebbb0db24b87311b4875",
+    "expectedSha256": "5c1ccc0fd7a8b0778ba81de453580ee25aebac14670cebbb0db24b87311b4875",
+    "retainedFile": "executed-sources/5c1ccc0fd7a8b0778ba81de453580ee25aebac14670cebbb0db24b87311b4875.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/content/wooden-coaster.js",
+    "relativePath": "content/wooden-coaster.js",
+    "sessionId": "5C848A9F8214D416097AA89978A7347D",
+    "target": {
+      "targetId": "45CEFDEFF5CBB513C618DBE55B54AB16",
+      "type": "worker",
+      "title": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "attached": true,
+      "parentId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "canAccessOpener": false,
+      "parentFrameId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "35",
+    "sha256": "c3a0c2c2f43aeb88a1ad81f64e45dd185f894b84d2e9400b4da944e12f6a3c70",
+    "expectedSha256": "c3a0c2c2f43aeb88a1ad81f64e45dd185f894b84d2e9400b4da944e12f6a3c70",
+    "retainedFile": "executed-sources/c3a0c2c2f43aeb88a1ad81f64e45dd185f894b84d2e9400b4da944e12f6a3c70.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/content/wooden-footprints.js",
+    "relativePath": "content/wooden-footprints.js",
+    "sessionId": "5C848A9F8214D416097AA89978A7347D",
+    "target": {
+      "targetId": "45CEFDEFF5CBB513C618DBE55B54AB16",
+      "type": "worker",
+      "title": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "attached": true,
+      "parentId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "canAccessOpener": false,
+      "parentFrameId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "36",
+    "sha256": "ef471c76a23274bf86a3f17acc00bcd69ed9f8eca1a3fb17b74b8c0c9c86f9d2",
+    "expectedSha256": "ef471c76a23274bf86a3f17acc00bcd69ed9f8eca1a3fb17b74b8c0c9c86f9d2",
+    "retainedFile": "executed-sources/ef471c76a23274bf86a3f17acc00bcd69ed9f8eca1a3fb17b74b8c0c9c86f9d2.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/host.js",
+    "relativePath": "simulation/host.js",
+    "sessionId": "5C848A9F8214D416097AA89978A7347D",
+    "target": {
+      "targetId": "45CEFDEFF5CBB513C618DBE55B54AB16",
+      "type": "worker",
+      "title": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "attached": true,
+      "parentId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "canAccessOpener": false,
+      "parentFrameId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "4",
+    "sha256": "d2dfa7c018b25214231009e850e56507019cea9a7484459d990247bed9f775b2",
+    "expectedSha256": "d2dfa7c018b25214231009e850e56507019cea9a7484459d990247bed9f775b2",
+    "retainedFile": "executed-sources/d2dfa7c018b25214231009e850e56507019cea9a7484459d990247bed9f775b2.js"
+  },
+  {
+    "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/clock.js",
+    "relativePath": "simulation/clock.js",
+    "sessionId": "5C848A9F8214D416097AA89978A7347D",
+    "target": {
+      "targetId": "45CEFDEFF5CBB513C618DBE55B54AB16",
+      "type": "worker",
+      "title": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js",
+      "attached": true,
+      "parentId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "canAccessOpener": false,
+      "parentFrameId": "3200BEBDF1FD67C86F9A1D6E456B74B2",
+      "browserContextId": "43AC6E8F45EEB8B04DFE912B33D5E529"
+    },
+    "scriptId": "10",
+    "sha256": "32820b03a12b9bde816654f4e58fd37a24c32b9c8dc035b52d157636e58d9fbd",
+    "expectedSha256": "32820b03a12b9bde816654f4e58fd37a24c32b9c8dc035b52d157636e58d9fbd",
+    "retainedFile": "executed-sources/32820b03a12b9bde816654f4e58fd37a24c32b9c8dc035b52d157636e58d9fbd.js"
+  }
+]

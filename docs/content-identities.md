@@ -35,11 +35,11 @@ state. Unavailable original-reference wood, water, free-water, shuttle and fixed
 cannot borrow an independent candidate adapter. Candidate identities describe independently
 authored algorithms; they never relabel an old park as an original object.
 
-The seven implemented variants are the candidate uniform steel train, detailed
+The nine implemented variants are the candidate uniform steel train, detailed
 independent wooden train, sixteen-seat Carousel, four-seat Log Flume, and
-candidate food, drink and restroom facilities. Catalogue availability also
+candidate food, drink, restroom, Burger and Soft-drink facilities. Catalogue availability also
 requires the actual receiving numeric profile: the browser explicitly selects
-the complete Flume profile, while zero-argument park factories retain their
+the complete consumables profile around the Flume profile, while zero-argument park factories retain their
 previous configuration. Their capability profile IDs identify the verified
 construction/operation/presentation implementation. Numeric rules
 remain the complete canonical `Rules` record, not defaults looked up by name.
@@ -66,11 +66,14 @@ queue, train, seat, guest, staff and housekeeping invariants before atomic load.
 V8 input must contain its complete identity schema before migration to v9.
 The declared sequence then validates v9/content 2 before adding v10/content 3
 Carousel fields, and validates v10 before adding v11/content 4 Boat fields.
-Current saves use **version 11 / content version 4**. Matching historical
+It validates v11 before adding v12/content 5 guest-held state and the complete
+receiving commerce profile. Historical generic sales and wrappers are preserved.
+Current saves use **version 12 / content version 5**. Matching historical
 receivers keep their complete old Rules, owner and accounting behavior; only
 declared later fields are added. See the [mixed coaster contract](mixed-coasters.md),
 [Carousel contract](planning/carousel-slice.md) and
-[finite Log Flume contract](planning/log-flume-slice.md). Versions 1–5, future
+[finite Log Flume contract](planning/log-flume-slice.md) and
+[finite consumables contract](planning/consumables-slice.md). Versions 1–5, future
 save or content versions, incompatible profiles, and unavailable content reject.
 
 The full canonical rule JSON must match the receiving engine, including prices,
@@ -86,7 +89,7 @@ scenario histories. Those remain explicit implementation work in the programme.
 ## Worker and presentation
 
 Requests, replies, ready/error events and view packets use
-`protocolVersion: 4`. Requests require `{id, protocolVersion, request}`; an
+`protocolVersion: 5`. Requests require `{id, protocolVersion, request}`; an
 unsupported or missing version receives a correlated structured rejection.
 Browser `speed` and `new-park` controls use the same version gate. Older save
 formats are migrated independently of this current message protocol.
@@ -110,13 +113,26 @@ Remote checks cover populated v7 train/queue continuation with nondefault rules,
 demolished/reused shop stock and income, restricted v6 normalization, malformed
 identities and versions, failed-load quote/pause preservation, capability
 rejection in both quote and execute, instance lifecycle, copied projections and
-versioned real worker messages. Current [Classic/Library checks](verification/log-flume/classic-library-browser.json)
-cover the historical v7 steel-only projection, v11/content-4 export and canonical
-reload/showcase separation. [Storage controls](verification/log-flume/production-storage.json)
-cover same-Chrome historical admission, explicit incompatible Rules refusal,
-quiet saving and unchanged existing slots. [The verification index](verification/log-flume/README.md)
-records each actual source/version, result and retained failure; it does not
-claim cross-runtime default-rule portability or original numerical agreement.
+versioned real worker messages. The dated Log Flume
+[Classic/Library checks](verification/log-flume/classic-library-browser.json) and
+[storage controls](verification/log-flume/production-storage.json) qualify their
+v11/content-4/protocol-4 profile, including historical v7 projection, export,
+canonical reload/showcase separation, same-Chrome historical admission,
+incompatible Rules refusal and protected slots. The
+[Flume verification index](verification/log-flume/README.md) retains those
+versions and failures.
+
+The consumables [Classic/Library checks](verification/consumables/classic-library-browser.json)
+qualify 27 Classic controls, 10 Library controls and 3 canonical reload checks
+under save12/content5/protocol5. Its [storage controls](verification/consumables/storage-result.json)
+and [15 complete historical pairs](verification/consumables/storage-historical-pair.json)
+qualify the declared receiving profile. The later
+[actual public root/pinned flows](verification/consumables/public-browser-report.md)
+qualify eight groups per route on sourcefddd5b0 and repaired Engine71966822.
+[Root's raw audit](verification/consumables/root-public-runtime-audit.json) and the
+[consumables index](verification/consumables/README.md) retain exact source,
+authority, storage, resource and terminal evidence. These checks do not claim
+cross-runtime default-rule portability or original numerical agreement.
 
 R01–R03 still require contrasting family geometry, suspended/inverted clearance,
 ordered nonuniform vehicle/dispatch implementations and original comparison;

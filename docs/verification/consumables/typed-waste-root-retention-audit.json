@@ -1,0 +1,31 @@
+{
+  "observedUTC": "2026-10-09T18:09:05.162932+00:00",
+  "observer": "Root independent retained-data audit on Grok; no browser replay",
+  "decodedFiles": 27,
+  "decodedBytes": 156715579,
+  "retainedGzipBytes": 22812609,
+  "allEncodedAndDecodedHashesMatch": true,
+  "protectedStores": {
+    "runStoresExact": true,
+    "run2StoresExact": true,
+    "run3StoresExact": true
+  },
+  "greenChecks": 20,
+  "greenRunnerExit": 0,
+  "zeroRuntimeErrors": true,
+  "resourcesReleasedExactlyOnce": true,
+  "ownProcessExits": {
+    "808708": -15,
+    "808709": 0
+  },
+  "recordedTerminalPorts": {
+    "8769": false,
+    "9237": false
+  },
+  "currentOwnedPidsAbsent": true,
+  "greenEndUTC": "2026-10-09T17:40:30.933066+00:00",
+  "completeAuthorityRulesAndPointsExact": true,
+  "actualPausedCheckpointTick": 18131,
+  "actualSourceBodiesVerified": 93,
+  "actualServedSourceBodiesMatched": 93
+}

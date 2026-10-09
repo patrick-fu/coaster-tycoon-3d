@@ -1,0 +1,425 @@
+{
+  "time": "2026-10-09T16:18:58.683780+00:00",
+  "entries": [
+    {
+      "path": "._src",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "._package.json",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "._tsconfig.json",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "._package-lock.json",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "._test",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "src/._content",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "src/._simulation",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "src/simulation/._patrol.ts",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "src/simulation/._people.ts",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "src/simulation/._scenery.ts",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "src/simulation/._protocol.ts",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "src/simulation/._clock.ts",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "src/simulation/._carousel.ts",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "src/simulation/._flume-native.ts",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "src/simulation/._flume-profile.ts",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "src/simulation/._engine.ts",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "src/simulation/._view.ts",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "src/simulation/._flume-portal.ts",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "src/simulation/._boat.ts",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "src/simulation/._motion.ts",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "src/simulation/._services.ts",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "src/simulation/._validation.ts",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "src/simulation/._routes.ts",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "src/simulation/._operation.ts",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "src/simulation/._wooden-placement.ts",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "src/simulation/._housekeeping.ts",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "src/simulation/._browser-worker.ts",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "src/simulation/._wooden-motion.ts",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "src/simulation/._geometry.ts",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "src/simulation/._types.ts",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "src/simulation/._host.ts",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "src/simulation/._index.ts",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "src/content/._carousel.ts",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "src/content/._ride-profiles.ts",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "src/content/._registry.ts",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "src/content/._log-flume.ts",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "src/content/._consumables.ts",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "src/content/._wooden-coaster.ts",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "src/content/._rct2-reference.ts",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "src/content/._wooden-footprints.ts",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "src/content/._steel-coaster.ts",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "src/content/._mixed-park.ts",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "test/._people.test.mjs",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "test/._guest-recovery-review.test.mjs",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "test/._browser-check.js",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "test/._services-review.test.mjs",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "test/._kernel.test.mjs",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "test/._fixtures",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "test/._mixed-coasters.test.mjs",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "test/._v9-mixed-continuation.test.mjs",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "test/._services.test.mjs",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "test/._integrated-park.test.mjs",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "test/._operation.test.mjs",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "test/._imported-speed.test.mjs",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "test/._worker-host.mjs",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "test/._housekeeping.test.mjs",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "test/._motion-regressions.test.mjs",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "test/._navigation-saves.test.mjs",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "test/._wooden-poses.test.mjs",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "test/._fixtures.mjs",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "test/._content-library-lifecycle-browser.js",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "test/._content-migration.test.mjs",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "test/._flume-native.test.mjs",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "test/._presentation.test.mjs",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "test/._worker.test.mjs",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "test/._v8-continuation.test.mjs",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "test/._content-identity.test.mjs",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "test/._train.test.mjs",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "test/._carousel.test.mjs",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "test/._housekeeping-review.test.mjs",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "test/._boat-motion.test.mjs",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "test/._scenery.test.mjs",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "test/._content-library-browser.js",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "test/._v10-mixed-carousel-continuation.test.mjs",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "test/._flume-portal.test.mjs",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "test/._flume-integration.test.mjs",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "test/._tree-assets-browser.js",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "test/fixtures/._v11-consumables-legacy-continuation.json.gz",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "test/fixtures/._v7-continuation.json.gz",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "test/fixtures/._v9-mixed-continuation.json.gz",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "test/fixtures/._v8-continuation.json.gz",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "test/fixtures/._README.md",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    },
+    {
+      "path": "test/fixtures/._v10-mixed-carousel-continuation.json.gz",
+      "bytes": 163,
+      "sha256": "c31a5285e4611918445f60708c7bdc407a2863320abc7bc299df421bfac1d20a"
+    }
+  ],
+  "retainedArchive": "appledouble.tar.gz",
+  "removedCount": 83,
+  "bytesReleased": 13529,
+  "scope": "Exact known generated transport metadata only; source/build/fixture/masters unchanged.",
+  "allAbsent": true
+}

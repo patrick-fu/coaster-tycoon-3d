@@ -1,4 +1,5 @@
 import test from 'node:test';
+import {beforeCommerceState} from './consumables-fixtures.mjs';
 import assert from 'node:assert/strict';
 import {Engine} from '../dist/simulation/index.js';
 import {initialWorld,steelRules} from '../dist/content/steel-coaster.js';
@@ -77,7 +78,7 @@ test('breakdown, pause and uneven tick batches preserve every paid Carousel owne
 test('duplicate or missing Carousel seat owners and old-version fixed capabilities reject atomically',()=>{
  const {engine,rules}=park({guests:true});until(engine,s=>s.carouselSessions[0].seats.filter(id=>id!==null).length>=2);const before=engine.exportSave();
  for(const mutate of [s=>s.carouselSessions[0].seats[1]=s.carouselSessions[0].seats[0],s=>s.carouselSessions[0].seats.push(null),s=>s.carouselSessions=[],s=>s.trains.push({ride:s.rides[0].id}),s=>s.rides[0].cars=1,s=>s.retiredRideIncome=1]){const bad=engine.snapshot();mutate(bad);const r=engine.restoreSave(JSON.stringify(bad));assert.equal(r.ok,false);assert.equal(r.error.code,'INVALID_SAVE');assert.equal(engine.exportSave(),before);}
- const old=engine.snapshot(),receiving=JSON.parse(old.rules);delete receiving.fixedProfiles;old.rules=JSON.stringify(receiving);old.version=9;old.contentVersion=2;delete old.carouselSessions;delete old.retiredRideIncome;assert.equal(new Engine(initialWorld,rules).restoreSave(JSON.stringify(old)).error.code,'INVALID_SAVE');
+ const old=beforeCommerceState(engine.snapshot()),receiving=JSON.parse(old.rules);delete receiving.fixedProfiles;delete receiving.channelProfiles;old.rules=JSON.stringify(receiving);old.version=9;old.contentVersion=2;delete old.boats;delete old.carouselSessions;delete old.retiredRideIncome;assert.equal(new Engine(initialWorld,rules).restoreSave(JSON.stringify(old)).error.code,'INVALID_SAVE');
  const view=engine.view(request).value;assert.equal(view.carouselSessions[0].seats.length,16);view.carouselSessions[0].seatIds.fill(null);assert.notDeepEqual(session(engine).seats,Array(16).fill(null));
 });
 

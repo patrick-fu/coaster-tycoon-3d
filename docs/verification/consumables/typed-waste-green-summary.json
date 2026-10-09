@@ -1,0 +1,265 @@
+{
+  "startUTC": "2026-10-09T17:40:06.577916+00:00",
+  "endUTC": "2026-10-09T17:40:30.933066+00:00",
+  "scope": "Separate green run3 visual extension: actual unchanged moved-owner authority imported through the UI File input, ordinary bench construction and unchanged need navigation, actual Inspect tool, 0.48m observed orthographic camera field, read-only geometry/deck witnesses and raw pixels. No Guest/state/mesh/point/visibility or production edits; no r4 test replay.",
+  "runnerExit": 0,
+  "passed": true,
+  "failure": null,
+  "confirmedSourceFailure": null,
+  "originalStoreCount": 2,
+  "originalKeys": [
+    "current-v10",
+    "showcase-classic-v10"
+  ],
+  "originalRecordsRestored": true,
+  "originalRecordsRestoredUTC": "2026-10-09T17:40:30.858714+00:00",
+  "terminalPorts": {
+    "8769": false,
+    "9237": false
+  },
+  "ownedProcesses": [
+    {
+      "pid": 808708,
+      "command": [
+        "/usr/bin/python3",
+        "/workspace/coaster-consumables/consumer-browser-sol/server.py"
+      ],
+      "startUTC": "2026-10-09T17:40:06.593702+00:00",
+      "returncode": -15,
+      "endUTC": "2026-10-09T17:40:30.932893+00:00"
+    },
+    {
+      "pid": 808709,
+      "command": [
+        "/workspace/coaster-content-identity/chrome-linux64/chrome",
+        "--headless=new",
+        "--no-sandbox",
+        "--disable-dev-shm-usage",
+        "--use-gl=angle",
+        "--use-angle=swiftshader",
+        "--enable-unsafe-swiftshader",
+        "--no-startup-window",
+        "--user-data-dir=/home/box/.config/google-chrome",
+        "--remote-debugging-address=127.0.0.1",
+        "--remote-debugging-port=9237"
+      ],
+      "startUTC": "2026-10-09T17:40:06.593917+00:00",
+      "returncode": 0,
+      "endUTC": "2026-10-09T17:40:30.932923+00:00"
+    }
+  ],
+  "primaryCDPReaderTerminal": [
+    null
+  ],
+  "actualDisposal": {
+    "before": {
+      "counts": {
+        "can": 1,
+        "box": 1
+      },
+      "memory": {
+        "geometries": 36,
+        "textures": 50
+      }
+    },
+    "events": {
+      "canMesh": 1,
+      "canGeometry": 1,
+      "canMaterial": 1,
+      "boxMesh": 1,
+      "boxGeometry": 1,
+      "boxMaterial": 1
+    },
+    "disposed": true,
+    "canAbsent": true,
+    "boxAbsent": true,
+    "memoryAfter": {
+      "geometries": 0,
+      "textures": 3
+    }
+  },
+  "actualBounds": [
+    {
+      "container": "emptyCan",
+      "worldBounds": {
+        "min": [
+          57.893950954242,
+          4.142000200748443,
+          41.89391716913171
+        ],
+        "max": [
+          58.106049045758,
+          4.272000193595886,
+          42.10608283086829
+        ]
+      },
+      "deck": {
+        "point": [
+          58,
+          4.1400001719594,
+          42
+        ],
+        "distance": 2.8599998280406,
+        "objectType": "Mesh",
+        "materialOpacity": 1,
+        "instanceId": 4
+      },
+      "camera": {
+        "zoom": 1,
+        "verticalFieldMetres": 0.48,
+        "horizontalFieldMetres": 0.9974025974025973,
+        "target": [
+          58,
+          4.085,
+          41.99999999999999
+        ],
+        "position": [
+          57.364364519662,
+          4.735,
+          41.362844182216406
+        ],
+        "ghostCount": 0
+      },
+      "counts": {
+        "can": 1,
+        "box": 1,
+        "generic": 0
+      }
+    },
+    {
+      "container": "emptyBurgerBox",
+      "worldBounds": {
+        "min": [
+          41.87049731379925,
+          4.142000197470188,
+          41.87503969282695
+        ],
+        "max": [
+          42.14019963643366,
+          4.236013613641262,
+          42.1432006023392
+        ]
+      },
+      "deck": {
+        "point": [
+          42,
+          4.1400001719594,
+          42
+        ],
+        "distance": 2.8599998280406,
+        "objectType": "Mesh",
+        "materialOpacity": 1,
+        "instanceId": 0
+      },
+      "camera": {
+        "zoom": 1,
+        "verticalFieldMetres": 0.48,
+        "horizontalFieldMetres": 0.9974025974025973,
+        "target": [
+          42,
+          4.085,
+          42
+        ],
+        "position": [
+          41.601731601034636,
+          4.735,
+          41.19291742529927
+        ],
+        "ghostCount": 0
+      },
+      "counts": {
+        "can": 1,
+        "box": 1,
+        "generic": 0
+      }
+    }
+  ],
+  "checkNames": [
+    {
+      "name": "Actual receiving Rules match retained final authority",
+      "passed": true
+    },
+    {
+      "name": "Actual UI File import preserves complete generated authority retained-final-authority.json",
+      "passed": true
+    },
+    {
+      "name": "Actual typed litter and mesh counts survive unmodified UI import",
+      "passed": true
+    },
+    {
+      "name": "Actual Inspect tool clears construction ghost",
+      "passed": true
+    },
+    {
+      "name": "Actual imported real owners remain away from both props",
+      "passed": true
+    },
+    {
+      "name": "Actual observed ground macro field is0.48m vertical and under1.1m horizontal",
+      "passed": true
+    },
+    {
+      "name": "Actual observed ground macro field is0.48m vertical and under1.1m horizontal",
+      "passed": true
+    },
+    {
+      "name": "Actual executed game.js equals its served compiled bytes",
+      "passed": true
+    },
+    {
+      "name": "Actual executed consumable-controls.js equals its served compiled bytes",
+      "passed": true
+    },
+    {
+      "name": "Actual executed consumable-waste.js equals its served compiled bytes",
+      "passed": true
+    },
+    {
+      "name": "Actual executed park-scene.js equals its served compiled bytes",
+      "passed": true
+    },
+    {
+      "name": "Actual executed simulation/browser-worker.js equals its served compiled bytes",
+      "passed": true
+    },
+    {
+      "name": "Actual executed simulation/engine.js equals its served compiled bytes",
+      "passed": true
+    },
+    {
+      "name": "Actual executed content/consumables.js equals its served compiled bytes",
+      "passed": true
+    },
+    {
+      "name": "Engine and product implementation are actually executed in the worker session",
+      "passed": true
+    },
+    {
+      "name": "Actual new waste executes exactly the integrated6a61 bytes",
+      "passed": true
+    },
+    {
+      "name": "Complete final authority, Rules and litter points remain unchanged in camera-only green capture",
+      "passed": true
+    },
+    {
+      "name": "Actual green x/z bounds remain exactly equal to red geometry/transforms",
+      "passed": true
+    },
+    {
+      "name": "Both actual green props sit above the opaque deck with the expected2mm clearance",
+      "passed": true
+    },
+    {
+      "name": "Actual green scene.dispose releases each new resource once and removes both meshes",
+      "passed": true
+    }
+  ],
+  "runtimeErrorCounts": {
+    "exceptions": 0,
+    "consoleErrors": 0,
+    "failedRequests": 0,
+    "httpErrors": 0
+  }
+}

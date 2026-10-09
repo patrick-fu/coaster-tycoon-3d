@@ -1,3 +1,4 @@
+import {beforeCommerceState,beforeCommerceView} from './consumables-fixtures.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
@@ -9,12 +10,12 @@ import {apply} from './fixtures.mjs';
 
 const frozen=JSON.parse(gunzipSync(readFileSync(new URL('./fixtures/v9-mixed-continuation.json.gz',import.meta.url))));
 function v9Save(text){
- const s=JSON.parse(text);assert.equal(s.version,11);assert.equal(s.contentVersion,4);assert.deepEqual(s.boats,[]);delete s.boats;assert.deepEqual(s.carouselSessions,[]);assert.equal(s.retiredRideIncome,0);
+ const s=beforeCommerceState(JSON.parse(text));assert.equal(s.version,11);assert.equal(s.contentVersion,4);assert.deepEqual(s.boats,[]);delete s.boats;assert.deepEqual(s.carouselSessions,[]);assert.equal(s.retiredRideIncome,0);
  const rules=JSON.parse(s.rules);assert(Object.hasOwn(rules,'channelProfiles'));delete rules.channelProfiles;assert(Object.hasOwn(rules,'fixedProfiles'));delete rules.fixedProfiles;s.rules=JSON.stringify(rules);delete s.carouselSessions;delete s.retiredRideIncome;s.version=9;s.contentVersion=2;
  return JSON.stringify(s);
 }
 function v9View(view){
- const result=JSON.parse(JSON.stringify(view,(_key,value)=>ArrayBuffer.isView(value)?{$typedArray:value.constructor.name,values:Array.from(value)}:value));
+ const result=JSON.parse(JSON.stringify(beforeCommerceView(view),(_key,value)=>ArrayBuffer.isView(value)?{$typedArray:value.constructor.name,values:Array.from(value)}:value));
  assert.equal(result.protocolVersion,4);assert.equal(result.contentVersion,4);assert.deepEqual(result.boats,[]);assert.equal(result.counts.boats,0);delete result.boats;delete result.counts.boats;assert.deepEqual(result.carouselSessions,[]);delete result.carouselSessions;result.protocolVersion=2;result.contentVersion=2;
  const token=result.commandRevision.split(':');assert.equal(Number(token[2]),result.worldRevision);result.commandRevision=`<SESSION>:<RESTORE_GENERATION>:${token[2]}`;
  return result;

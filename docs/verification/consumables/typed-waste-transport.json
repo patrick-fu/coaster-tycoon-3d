@@ -1,0 +1,38 @@
+{
+  "verificationObservedUTC": "2026-10-09 18:01:55 UTC",
+  "scope": "Dated green visual extension with Engine f6ad3fda and waste6a61; Root's later crafted-v12-import repair/public proof has separate source pins. No browser replay or original174/175 science overwrite.",
+  "archiveCommandExit": 0,
+  "scpExit": 0,
+  "scpTerminalBeforeExtraction": true,
+  "localArchiveShaMatchesRemote": true,
+  "archiveSha256": "7391b9cdd1442e90afcc37e940ab52772153c6796c90d660270f897032b90efe",
+  "extractionExit": 0,
+  "retainedPayloadFiles": 290,
+  "manifestSha256": "d5d51ed2d23503e2f56e67055c2754fe4f1f730d636474e9872210cf31a507ea",
+  "localFileVerificationExit": 0,
+  "localFileVerificationLogSha256": "65b202816f814f46a48c1bbab4ffabb4bc827e7d53cf177ae174ad1d603f4178",
+  "reportSha256": "0942500e1e97da88e22149c4b896a31f0d6daad2182ece9a900a3afd49a522f0",
+  "originalFrozen174VerificationExit": 0,
+  "originalFrozen174ManifestSha256": "eb4097974698e094a48ef6aa05a62f3d3c4ef9ec22795902e7ecd63433650b29",
+  "originalSeparate175VerificationExit": 0,
+  "originalSeparate175ManifestSha256": "dbab0fa3d9d12f9f0f552c8124217d9ba00a5c66f8d09d70311a69efd162ef4a",
+  "sourceBodyHash": {
+    "waste": "6a61d96ab774507781b9bfce61198b9599230f0c176df05f8d8f28a8e9d02bac",
+    "engine": "f6ad3fdae3725aedd49c4fcb9bb005a11677e903442a7e31e265e3ed6939f1a1",
+    "product": "b1c162502f7a79c58c67a3d57e30c5d7db29f6972d87bc6fba65e1a3f56db4eb"
+  },
+  "greenRunnerExit": 0,
+  "greenEndUTC": "2026-10-09T17:40:30.933066+00:00",
+  "greenChromePID": 808709,
+  "greenChromeExit": 0,
+  "greenHTTPPID": 808708,
+  "greenHTTPExit": -15,
+  "originalRecordsRestored": true,
+  "terminalPortsAtGreenEnd": {
+    "8769": false,
+    "9237": false
+  },
+  "rootIndependentBoundedPixelClosureAccepted": true,
+  "rsyncUsed": false,
+  "remainingScopes": "No original/human/GPU/full-programme/public acceptance is inferred."
+}

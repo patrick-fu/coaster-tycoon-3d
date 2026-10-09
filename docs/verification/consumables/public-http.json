@@ -1,0 +1,3880 @@
+{
+  "sourceCommit": "fddd5b0cccc66164209cdf7d2e543dfb24bb6235",
+  "checkedAtUnix": 1791570763.6502094,
+  "scope": "Every final remote built web file at both live HTTP routes. Earlier previews are separately verified locally by unchanged bytes.",
+  "files": [
+    {
+      "route": "root",
+      "file": "LICENSE",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 1067,
+      "sha256": "f68cef6a23271aa6fa5022cd7acebc98de572571df4a97077b0ecd7b385aa45d",
+      "expectedSha256": "f68cef6a23271aa6fa5022cd7acebc98de572571df4a97077b0ecd7b385aa45d",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "THIRD_PARTY_NOTICES.md",
+      "status": 200,
+      "mime": "text/markdown; charset=utf-8",
+      "bytes": 6238,
+      "sha256": "465cf29578e4afc00eb9b29efbe0728983aa7e5cca746b0bbefcf43d69b642b0",
+      "expectedSha256": "465cf29578e4afc00eb9b29efbe0728983aa7e5cca746b0bbefcf43d69b642b0",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "art/buildings.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 33871,
+      "sha256": "fd59e83c14589dc1db7cf43ef79a0ad02ebede0569f092465349387a0161e720",
+      "expectedSha256": "fd59e83c14589dc1db7cf43ef79a0ad02ebede0569f092465349387a0161e720",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "art/carousel-assets.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 4536,
+      "sha256": "5b437923981d7728133e4fdf3173808dced188f66cc7b18ab653470738c92453",
+      "expectedSha256": "5b437923981d7728133e4fdf3173808dced188f66cc7b18ab653470738c92453",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "art/carousel-portal.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 7877,
+      "sha256": "be22f0a550df9625640910022bbfae67ee19aac0913330bcba9fc482152b4eac",
+      "expectedSha256": "be22f0a550df9625640910022bbfae67ee19aac0913330bcba9fc482152b4eac",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "art/carousel.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 11175,
+      "sha256": "02173c16094d2caf950e1c7908bf51268f36ef955d91af09b7457705272b15e8",
+      "expectedSha256": "02173c16094d2caf950e1c7908bf51268f36ef955d91af09b7457705272b15e8",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "art/coaster.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 65435,
+      "sha256": "acea0401e86ca920fefdca2d25ac43c6ca88f6ad78d980b995967c9a19d42951",
+      "expectedSha256": "acea0401e86ca920fefdca2d25ac43c6ca88f6ad78d980b995967c9a19d42951",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "art/environment.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 61081,
+      "sha256": "b94f58adf2419866af798467d6af0af2a5355dbd0cc797cb866234745d6f8933",
+      "expectedSha256": "b94f58adf2419866af798467d6af0af2a5355dbd0cc797cb866234745d6f8933",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "art/flume-approach.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 1344,
+      "sha256": "e310a6f68f399ae180e70b2988990e4280dc018ca0267bf6deed9de03f50b89e",
+      "expectedSha256": "e310a6f68f399ae180e70b2988990e4280dc018ca0267bf6deed9de03f50b89e",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "art/flume-assets.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 6336,
+      "sha256": "f45315ab423b590a61d3715a33f928d09db2b810046e48c3d91b0157892186bb",
+      "expectedSha256": "f45315ab423b590a61d3715a33f928d09db2b810046e48c3d91b0157892186bb",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "art/flume-boats.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 4369,
+      "sha256": "cc5840239a11dec4468376741c99eadaaddf7168d31c1e2fb9ecc36df1b28781",
+      "expectedSha256": "cc5840239a11dec4468376741c99eadaaddf7168d31c1e2fb9ecc36df1b28781",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "art/flume-channel.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 23672,
+      "sha256": "931974b2615e49f9a1ffe59b5514b5811e8c68ac10bf48eb6ecc4ba9cd4649e8",
+      "expectedSha256": "931974b2615e49f9a1ffe59b5514b5811e8c68ac10bf48eb6ecc4ba9cd4649e8",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "art/flume-portal.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 9988,
+      "sha256": "9f71639544385fa5108fa8106e93fa3b5f70c55b8735a6d9cb66ce2d7c6c4913",
+      "expectedSha256": "9f71639544385fa5108fa8106e93fa3b5f70c55b8735a6d9cb66ce2d7c6c4913",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "art/flume-support-box.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 10826,
+      "sha256": "554a01c412ec368a02841eb525fba61f1541453467e25877d7d42081d33ab26d",
+      "expectedSha256": "554a01c412ec368a02841eb525fba61f1541453467e25877d7d42081d33ab26d",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "art/flume-terrain.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 6384,
+      "sha256": "c541601fa7f37777d1a259c9e3c8103d7d3bba87ad24b4376b1dba7b6f7f7808",
+      "expectedSha256": "c541601fa7f37777d1a259c9e3c8103d7d3bba87ad24b4376b1dba7b6f7f7808",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "art/runtime.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 5320,
+      "sha256": "8b85e50ffed823678e3235639ae726ba7bee3e0c52c527855fce056b98df9e60",
+      "expectedSha256": "8b85e50ffed823678e3235639ae726ba7bee3e0c52c527855fce056b98df9e60",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "art/surface-assets.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 2332,
+      "sha256": "11495b97bf3daaffcf49f7fd991da882fdf2321347739fda88d6fcf35ced2927",
+      "expectedSha256": "11495b97bf3daaffcf49f7fd991da882fdf2321347739fda88d6fcf35ced2927",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "art/surface-palette.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 2093,
+      "sha256": "91adbb55a95dc3b0b2ad670084a7f93366c266a09df6ed36bf414cb23b538768",
+      "expectedSha256": "91adbb55a95dc3b0b2ad670084a7f93366c266a09df6ed36bf414cb23b538768",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "art/tree-assets.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 5027,
+      "sha256": "daa01cc5d707a402a6523adb3e815a6ce7d1d88e4c9b1f0c72702467f8c6e054",
+      "expectedSha256": "daa01cc5d707a402a6523adb3e815a6ce7d1d88e4c9b1f0c72702467f8c6e054",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "art/wooden-assets.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 5815,
+      "sha256": "3475acd3d3975ad8951135e0e3382ab7f530b5fa87824ec0013575086522a237",
+      "expectedSha256": "3475acd3d3975ad8951135e0e3382ab7f530b5fa87824ec0013575086522a237",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "art/wooden-coaster.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 38791,
+      "sha256": "9ebceda15d406332d37ab8dae756a1725b7a36cc7278ab7ac8b6d7438c920898",
+      "expectedSha256": "9ebceda15d406332d37ab8dae756a1725b7a36cc7278ab7ac8b6d7438c920898",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "consumable-controls.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 6373,
+      "sha256": "4e77687b8a5578a9fd15e89db3ef22bf0156304b22542be8e833b062862a118e",
+      "expectedSha256": "4e77687b8a5578a9fd15e89db3ef22bf0156304b22542be8e833b062862a118e",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "consumable-waste.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 5991,
+      "sha256": "6a61d96ab774507781b9bfce61198b9599230f0c176df05f8d8f28a8e9d02bac",
+      "expectedSha256": "6a61d96ab774507781b9bfce61198b9599230f0c176df05f8d8f28a8e9d02bac",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "content/carousel.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 1424,
+      "sha256": "29f71f912001cf341916541fbf678bf8fb1985d6c1979cf1e541e8e79318ceb9",
+      "expectedSha256": "29f71f912001cf341916541fbf678bf8fb1985d6c1979cf1e541e8e79318ceb9",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "content/consumables.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 5307,
+      "sha256": "b1c162502f7a79c58c67a3d57e30c5d7db29f6972d87bc6fba65e1a3f56db4eb",
+      "expectedSha256": "b1c162502f7a79c58c67a3d57e30c5d7db29f6972d87bc6fba65e1a3f56db4eb",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "content/log-flume.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 4252,
+      "sha256": "6f71b4fc57dd403647c725f0e018a0439ce226108dc5459d837cfc9d0e469aa1",
+      "expectedSha256": "6f71b4fc57dd403647c725f0e018a0439ce226108dc5459d837cfc9d0e469aa1",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "content/mixed-park.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 4818,
+      "sha256": "5c1ccc0fd7a8b0778ba81de453580ee25aebac14670cebbb0db24b87311b4875",
+      "expectedSha256": "5c1ccc0fd7a8b0778ba81de453580ee25aebac14670cebbb0db24b87311b4875",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "content/rct2-reference.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 113071,
+      "sha256": "23ad185689097bbc9b21d87de63f4d62a4d2365fa019f983cf8b8ae85f7836ee",
+      "expectedSha256": "23ad185689097bbc9b21d87de63f4d62a4d2365fa019f983cf8b8ae85f7836ee",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "content/registry.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 9919,
+      "sha256": "fccec768191771369611bf9a02e28f751b445efc9888b329ae605e4863103ad3",
+      "expectedSha256": "fccec768191771369611bf9a02e28f751b445efc9888b329ae605e4863103ad3",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "content/ride-profiles.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 2163,
+      "sha256": "034490199b05354be6ae497b5e43f3ff804f0b120b2d332b6e1167f1c1be23f2",
+      "expectedSha256": "034490199b05354be6ae497b5e43f3ff804f0b120b2d332b6e1167f1c1be23f2",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "content/steel-coaster.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 9691,
+      "sha256": "d248ab39ba5695c5402872b634d514cc81517673c44d77e9e0da3deaaf683335",
+      "expectedSha256": "d248ab39ba5695c5402872b634d514cc81517673c44d77e9e0da3deaaf683335",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "content/wooden-coaster.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 1734,
+      "sha256": "c3a0c2c2f43aeb88a1ad81f64e45dd185f894b84d2e9400b4da944e12f6a3c70",
+      "expectedSha256": "c3a0c2c2f43aeb88a1ad81f64e45dd185f894b84d2e9400b4da944e12f6a3c70",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "content/wooden-footprints.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 10283,
+      "sha256": "ef471c76a23274bf86a3f17acc00bcd69ed9f8eca1a3fb17b74b8c0c9c86f9d2",
+      "expectedSha256": "ef471c76a23274bf86a3f17acc00bcd69ed9f8eca1a3fb17b74b8c0c9c86f9d2",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "content-browser.css",
+      "status": 200,
+      "mime": "text/css; charset=utf-8",
+      "bytes": 22049,
+      "sha256": "b0ca6136234806692e643b6117b5b3df9696161a86a8f3590c30dfcd5d1cd566",
+      "expectedSha256": "b0ca6136234806692e643b6117b5b3df9696161a86a8f3590c30dfcd5d1cd566",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "content-browser.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 48685,
+      "sha256": "e45ea2cf6c24685abaec5e63ddc0101928a698ff1d531e39c73aab6eca38471b",
+      "expectedSha256": "e45ea2cf6c24685abaec5e63ddc0101928a698ff1d531e39c73aab6eca38471b",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "favicon.svg",
+      "status": 200,
+      "mime": "image/svg+xml",
+      "bytes": 213,
+      "sha256": "60879a890648c630ab1dc7cdc25975693b3c0610be77a4a11d2e7c7315d5c697",
+      "expectedSha256": "60879a890648c630ab1dc7cdc25975693b3c0610be77a4a11d2e7c7315d5c697",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "flume-controls.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 3309,
+      "sha256": "86f9e7c264d023d5599eea7c5a8c3dc920733090f8fb5f4c6ac574fe05a42821",
+      "expectedSha256": "86f9e7c264d023d5599eea7c5a8c3dc920733090f8fb5f4c6ac574fe05a42821",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "game.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 33570,
+      "sha256": "6d429cff46bde002b0b2a9f984d3ed50953033ae6f5821fb51adf13f9ecb009a",
+      "expectedSha256": "6d429cff46bde002b0b2a9f984d3ed50953033ae6f5821fb51adf13f9ecb009a",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "index.html",
+      "status": 200,
+      "mime": "text/html; charset=utf-8",
+      "bytes": 11495,
+      "sha256": "fd88b27beca574ed17a2fb04dfaa08194bb886c386b762667dc8da9a5151ad6a",
+      "expectedSha256": "fd88b27beca574ed17a2fb04dfaa08194bb886c386b762667dc8da9a5151ad6a",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "models/carousel/README.md",
+      "status": 200,
+      "mime": "text/markdown; charset=utf-8",
+      "bytes": 797,
+      "sha256": "4d1644cc1ab198454719d649db6540708a1c70afa4dec44ec54cc337fe27c2cf",
+      "expectedSha256": "4d1644cc1ab198454719d649db6540708a1c70afa4dec44ec54cc337fe27c2cf",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "models/carousel/body.glb",
+      "status": 200,
+      "mime": "model/gltf-binary",
+      "bytes": 5369400,
+      "sha256": "405e14e1d2f6a54bd7f05676697f1d96193b7f0378c2426601d0de1484a9464f",
+      "expectedSha256": "405e14e1d2f6a54bd7f05676697f1d96193b7f0378c2426601d0de1484a9464f",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "models/carousel/material-provenance.json",
+      "status": 200,
+      "mime": "application/json; charset=utf-8",
+      "bytes": 3628,
+      "sha256": "964c76789c39952ab9a40b3be44f95549f83cb31a5274d45d7954490cc2c84b1",
+      "expectedSha256": "964c76789c39952ab9a40b3be44f95549f83cb31a5274d45d7954490cc2c84b1",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "models/carousel/source-manifest.json",
+      "status": 200,
+      "mime": "application/json; charset=utf-8",
+      "bytes": 41266,
+      "sha256": "555652533c5075a281537cc938eafd520c759c102dc680a949d6e0d6f6e8d5c2",
+      "expectedSha256": "555652533c5075a281537cc938eafd520c759c102dc680a949d6e0d6f6e8d5c2",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "models/flume/README.md",
+      "status": 200,
+      "mime": "text/markdown; charset=utf-8",
+      "bytes": 1669,
+      "sha256": "5ff416addf23b2b2ede5a74acb86d4197698a3ee042917484f24acd9737cfe3f",
+      "expectedSha256": "5ff416addf23b2b2ede5a74acb86d4197698a3ee042917484f24acd9737cfe3f",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "models/flume/boat.glb",
+      "status": 200,
+      "mime": "model/gltf-binary",
+      "bytes": 5411656,
+      "sha256": "0336a6e7dc4aaa54136193d47187d67d2710ba53c4ccca3f93cf81e9dc693549",
+      "expectedSha256": "0336a6e7dc4aaa54136193d47187d67d2710ba53c4ccca3f93cf81e9dc693549",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "models/flume/material-provenance.json",
+      "status": 200,
+      "mime": "application/json; charset=utf-8",
+      "bytes": 8134,
+      "sha256": "d4386d2bd0a062287caf11cbf63dc78ebe334cbb9b8f0a2bdb092ca9601137a5",
+      "expectedSha256": "d4386d2bd0a062287caf11cbf63dc78ebe334cbb9b8f0a2bdb092ca9601137a5",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "models/flume/rider.glb",
+      "status": 200,
+      "mime": "model/gltf-binary",
+      "bytes": 5763204,
+      "sha256": "e0bb0c5ecb4821bbf40b2524817c77763933c941b068ea2159aa66273dc05286",
+      "expectedSha256": "e0bb0c5ecb4821bbf40b2524817c77763933c941b068ea2159aa66273dc05286",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "models/flume/source-manifest.json",
+      "status": 200,
+      "mime": "application/json; charset=utf-8",
+      "bytes": 4502,
+      "sha256": "bf289db68061cf41058bb442a77fe4c94197ae38384fb54e130e3fdf59a13ddd",
+      "expectedSha256": "bf289db68061cf41058bb442a77fe4c94197ae38384fb54e130e3fdf59a13ddd",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "models/trees/ASSET-NOTICES.txt",
+      "status": 200,
+      "mime": "text/plain; charset=utf-8",
+      "bytes": 392,
+      "sha256": "db561c35b988de25d8e7bd545b6bdab4a7da81b5b220d11f4c11c7e6f7b40999",
+      "expectedSha256": "db561c35b988de25d8e7bd545b6bdab4a7da81b5b220d11f4c11c7e6f7b40999",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "models/trees/export-manifest.json",
+      "status": 200,
+      "mime": "application/json; charset=utf-8",
+      "bytes": 18321,
+      "sha256": "b2a56814faea97e0157c96c7ac5676146aaed0e93096e0deab2ed4b578e26496",
+      "expectedSha256": "b2a56814faea97e0157c96c7ac5676146aaed0e93096e0deab2ed4b578e26496",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "models/trees/organic-tree-lod0.bin",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 443040,
+      "sha256": "f1480d960bc1b380527d1514b4056348db2e5cff9cd8a0f3faaa4e1f1a1a6534",
+      "expectedSha256": "f1480d960bc1b380527d1514b4056348db2e5cff9cd8a0f3faaa4e1f1a1a6534",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "models/trees/organic-tree-lod0.gltf",
+      "status": 200,
+      "mime": "model/gltf+json",
+      "bytes": 6555,
+      "sha256": "852ac0bfce78bd271c8484a724f5c95fc0339786c9553d4d32aae159f43be3fa",
+      "expectedSha256": "852ac0bfce78bd271c8484a724f5c95fc0339786c9553d4d32aae159f43be3fa",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "models/trees/organic-tree-lod1.bin",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 146264,
+      "sha256": "47fbd4f8e6fea1c5e80998c15dbb058e468e17e6316e6940a83c8c394166ae0e",
+      "expectedSha256": "47fbd4f8e6fea1c5e80998c15dbb058e468e17e6316e6940a83c8c394166ae0e",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "models/trees/organic-tree-lod1.gltf",
+      "status": 200,
+      "mime": "model/gltf+json",
+      "bytes": 6543,
+      "sha256": "0d74981a915d491cf2ad8de496f7340cb7f09c7aa8e2c76a8095d39d3000ea85",
+      "expectedSha256": "0d74981a915d491cf2ad8de496f7340cb7f09c7aa8e2c76a8095d39d3000ea85",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "models/trees/organic-tree-lod2.bin",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 60740,
+      "sha256": "ccc5f2c623bd5e86c62b52375bd9b9489309bdfcc333bb107200b7ab7c02dd86",
+      "expectedSha256": "ccc5f2c623bd5e86c62b52375bd9b9489309bdfcc333bb107200b7ab7c02dd86",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "models/trees/organic-tree-lod2.gltf",
+      "status": 200,
+      "mime": "model/gltf+json",
+      "bytes": 6519,
+      "sha256": "9f6b829b9a0446f89f413ceb84fa3be6bbec981f91fd6a288ad4264f7edf5a2d",
+      "expectedSha256": "9f6b829b9a0446f89f413ceb84fa3be6bbec981f91fd6a288ad4264f7edf5a2d",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "models/trees/textures/Bark014_1K-PNG_Color.png",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 555611,
+      "sha256": "5091ca295325cb289cc40fdd13d182b00a45c767ecc949edd76db4c183de900e",
+      "expectedSha256": "5091ca295325cb289cc40fdd13d182b00a45c767ecc949edd76db4c183de900e",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "models/trees/textures/Bark014_1K-PNG_NormalGL.png",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 1411595,
+      "sha256": "fad0e06319bf5a7f642a324941d9d71448d61eabe70495babb3e27b3d85a2112",
+      "expectedSha256": "fad0e06319bf5a7f642a324941d9d71448d61eabe70495babb3e27b3d85a2112",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "models/trees/textures/Bark014_1K-PNG_Roughness.png",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 312830,
+      "sha256": "14c8111cb5ef1f5b60c6bd9f30041b468e64d451ac70c04a35982630af104cdd",
+      "expectedSha256": "14c8111cb5ef1f5b60c6bd9f30041b468e64d451ac70c04a35982630af104cdd",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "models/trees/textures/LeafSet026_1K-PNG_Color-LeafSet026_1K-PNG_Opacity.png",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 601809,
+      "sha256": "ea06aba219626ed20d94ac895eee043ae28dc5dabe29d2ee8ecfcc7534a60752",
+      "expectedSha256": "ea06aba219626ed20d94ac895eee043ae28dc5dabe29d2ee8ecfcc7534a60752",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "models/trees/textures/LeafSet026_1K-PNG_NormalGL.png",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 1773840,
+      "sha256": "172fdfadddb68ef4a0a95c37d6e484e5c1511074f9c8b160babc30e93c115e30",
+      "expectedSha256": "172fdfadddb68ef4a0a95c37d6e484e5c1511074f9c8b160babc30e93c115e30",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "models/wooden/car.glb",
+      "status": 200,
+      "mime": "model/gltf-binary",
+      "bytes": 3636520,
+      "sha256": "ed293d53712c1bc02ce01a5c027d69dd7b31e60ae41c8a811d9a9464274f9adc",
+      "expectedSha256": "ed293d53712c1bc02ce01a5c027d69dd7b31e60ae41c8a811d9a9464274f9adc",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "models/wooden/link.glb",
+      "status": 200,
+      "mime": "model/gltf-binary",
+      "bytes": 988980,
+      "sha256": "bd65312ab91197d08d66fd6258e31f31e46b6d529832a0d741fcb729e0fec671",
+      "expectedSha256": "bd65312ab91197d08d66fd6258e31f31e46b6d529832a0d741fcb729e0fec671",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "models/wooden/station.glb",
+      "status": 200,
+      "mime": "model/gltf-binary",
+      "bytes": 9199772,
+      "sha256": "32214cdb6f388bcda1bdbbd59b8ac5a59ba454d947d2fde45380898572809cbd",
+      "expectedSha256": "32214cdb6f388bcda1bdbbd59b8ac5a59ba454d947d2fde45380898572809cbd",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "park-scene.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 17112,
+      "sha256": "752be64288e176a44187765165f9c027b505f0da9d6de4fd07f5196c5929cac9",
+      "expectedSha256": "752be64288e176a44187765165f9c027b505f0da9d6de4fd07f5196c5929cac9",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "simulation/boat.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 5489,
+      "sha256": "d4ca78dc773f712086b995b5bf870d48dd9a3feb35fb9765f8296b499fb80199",
+      "expectedSha256": "d4ca78dc773f712086b995b5bf870d48dd9a3feb35fb9765f8296b499fb80199",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "simulation/browser-worker.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 3190,
+      "sha256": "d5c82ceefac477eb9baecd5065933a6db0a216654c2a406058f1c28317127e1c",
+      "expectedSha256": "d5c82ceefac477eb9baecd5065933a6db0a216654c2a406058f1c28317127e1c",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "simulation/carousel.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 4791,
+      "sha256": "c707db6b92deb1742b2c84f9cdb7c65a50fbdd9908387e64b29e53e0f3b29f6a",
+      "expectedSha256": "c707db6b92deb1742b2c84f9cdb7c65a50fbdd9908387e64b29e53e0f3b29f6a",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "simulation/clock.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 834,
+      "sha256": "32820b03a12b9bde816654f4e58fd37a24c32b9c8dc035b52d157636e58d9fbd",
+      "expectedSha256": "32820b03a12b9bde816654f4e58fd37a24c32b9c8dc035b52d157636e58d9fbd",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "simulation/engine.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 113194,
+      "sha256": "71966822cbcd3b6f84fad25d4193f8fcd9d025717e3f17fcf9a340168bad1e7e",
+      "expectedSha256": "71966822cbcd3b6f84fad25d4193f8fcd9d025717e3f17fcf9a340168bad1e7e",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "simulation/flume-native.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 9442,
+      "sha256": "735c2d793a1daf76844e1eeac6ea3342e37f84b1f49e5de6edc8e914073f02ae",
+      "expectedSha256": "735c2d793a1daf76844e1eeac6ea3342e37f84b1f49e5de6edc8e914073f02ae",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "simulation/flume-portal.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 5486,
+      "sha256": "877ba9c562c874ee742a77ec67aa64cb68012885ce96f288e6d4f9b128e621c3",
+      "expectedSha256": "877ba9c562c874ee742a77ec67aa64cb68012885ce96f288e6d4f9b128e621c3",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "simulation/flume-profile.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 2917,
+      "sha256": "e89e86ea002b94f7339ef7c5e4bcc73c33998abf0252c17ed2b430b2394f7f58",
+      "expectedSha256": "e89e86ea002b94f7339ef7c5e4bcc73c33998abf0252c17ed2b430b2394f7f58",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "simulation/geometry.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 14864,
+      "sha256": "e12404ca6542681cdd3175a6502928d5891622d5f0beed915613f7d6254c9a24",
+      "expectedSha256": "e12404ca6542681cdd3175a6502928d5891622d5f0beed915613f7d6254c9a24",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "simulation/host.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 2139,
+      "sha256": "d2dfa7c018b25214231009e850e56507019cea9a7484459d990247bed9f775b2",
+      "expectedSha256": "d2dfa7c018b25214231009e850e56507019cea9a7484459d990247bed9f775b2",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "simulation/housekeeping.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 7226,
+      "sha256": "588c5c06187c0bcfd9d5b52a69ea33fece6a22aa89246df1189e4a247fb5cc7b",
+      "expectedSha256": "588c5c06187c0bcfd9d5b52a69ea33fece6a22aa89246df1189e4a247fb5cc7b",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "simulation/index.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 132,
+      "sha256": "346366ed60f6c42fcb47aa83210f541b512704500f290f203513ca17b0a809c4",
+      "expectedSha256": "346366ed60f6c42fcb47aa83210f541b512704500f290f203513ca17b0a809c4",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "simulation/motion.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 8356,
+      "sha256": "4c3d5c27617302f607d0235a10eeda4cd4fafc9c81cb7859327fba0b407f34e6",
+      "expectedSha256": "4c3d5c27617302f607d0235a10eeda4cd4fafc9c81cb7859327fba0b407f34e6",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "simulation/operation.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 6695,
+      "sha256": "90a079ea7b4ed724d214a334b8cd006bcb07a40774b7f431051c554e9c620e69",
+      "expectedSha256": "90a079ea7b4ed724d214a334b8cd006bcb07a40774b7f431051c554e9c620e69",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "simulation/patrol.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 562,
+      "sha256": "4a59eec5e274c541fecf413cb62cd27cabfe5fb13aaa6104d5543b8498b16e16",
+      "expectedSha256": "4a59eec5e274c541fecf413cb62cd27cabfe5fb13aaa6104d5543b8498b16e16",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "simulation/people.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 22632,
+      "sha256": "96ef0885c3c3719ff5827e9ea63f370508d5e21f2e8b2d31799099a1855f8a5e",
+      "expectedSha256": "96ef0885c3c3719ff5827e9ea63f370508d5e21f2e8b2d31799099a1855f8a5e",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "simulation/protocol.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 42,
+      "sha256": "1a7f454c4d4347075efedfb5f6343947cb611240e16ec820db8c457bbb368475",
+      "expectedSha256": "1a7f454c4d4347075efedfb5f6343947cb611240e16ec820db8c457bbb368475",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "simulation/routes.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 3156,
+      "sha256": "ec098e36c6a24155b4d10da3118a7240e08850a4b38c52eb7d4891be556c3453",
+      "expectedSha256": "ec098e36c6a24155b4d10da3118a7240e08850a4b38c52eb7d4891be556c3453",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "simulation/scenery.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 408,
+      "sha256": "af181426f98f7c6daab583055906264db929940ecb25a3fe50c1ca219d9ee520",
+      "expectedSha256": "af181426f98f7c6daab583055906264db929940ecb25a3fe50c1ca219d9ee520",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "simulation/services.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 12107,
+      "sha256": "171566ab11852ed81f086e098bb2d85f46d790267ee3cad56c1e47f55c0b0aee",
+      "expectedSha256": "171566ab11852ed81f086e098bb2d85f46d790267ee3cad56c1e47f55c0b0aee",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "simulation/types.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 147,
+      "sha256": "1a6231381895d5abcccbc927e582be7270c22e19c76be7c5c3e560d83ea97d91",
+      "expectedSha256": "1a6231381895d5abcccbc927e582be7270c22e19c76be7c5c3e560d83ea97d91",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "simulation/validation.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 1191,
+      "sha256": "10a2f21ddd134f16105bf4f0153d57a6e660d7938157e30c1958487498b66056",
+      "expectedSha256": "10a2f21ddd134f16105bf4f0153d57a6e660d7938157e30c1958487498b66056",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "simulation/view.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 9747,
+      "sha256": "1742bc023dc22f8624ecefac4b1b5076ab1aa89a0a35090536bdb00af1f8c75d",
+      "expectedSha256": "1742bc023dc22f8624ecefac4b1b5076ab1aa89a0a35090536bdb00af1f8c75d",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "simulation/wooden-motion.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 5888,
+      "sha256": "aaed1ed31a0764f8ecc8b07db1d2c6bc6e2a0230b2002daff30729a20c5da12d",
+      "expectedSha256": "aaed1ed31a0764f8ecc8b07db1d2c6bc6e2a0230b2002daff30729a20c5da12d",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "simulation/wooden-placement.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 5951,
+      "sha256": "66b9590399dfd6235cbf6c04401744df1611d7fa1b55a72c1daf6950393a586c",
+      "expectedSha256": "66b9590399dfd6235cbf6c04401744df1611d7fa1b55a72c1daf6950393a586c",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "style.css",
+      "status": 200,
+      "mime": "text/css; charset=utf-8",
+      "bytes": 28300,
+      "sha256": "8cc71e1901683b6a8c889ef80f22f1ec357198eb41221eeb90a07f259a60cee3",
+      "expectedSha256": "8cc71e1901683b6a8c889ef80f22f1ec357198eb41221eeb90a07f259a60cee3",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "textures/flume/Concrete034/Concrete034_1K-PNG_Color.png",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 288279,
+      "sha256": "dffbbd0fd7249e938a30b650675262034fe0face516b0d036e9c34cae5a99190",
+      "expectedSha256": "dffbbd0fd7249e938a30b650675262034fe0face516b0d036e9c34cae5a99190",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "textures/flume/Concrete034/Concrete034_1K-PNG_NormalGL.png",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 2715117,
+      "sha256": "7378313b5e38d138a2048d0a300194444ba7b205b062751a93a91bde8dfbccf9",
+      "expectedSha256": "7378313b5e38d138a2048d0a300194444ba7b205b062751a93a91bde8dfbccf9",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "textures/flume/Concrete034/Concrete034_1K-PNG_Roughness.png",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 206202,
+      "sha256": "b2f8b937d4c9d1d305fc30b915b28712d166939bba1c3823ad39767dd22e1f07",
+      "expectedSha256": "b2f8b937d4c9d1d305fc30b915b28712d166939bba1c3823ad39767dd22e1f07",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "textures/flume/Metal049A/Metal049A_1K-PNG_Color.png",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 535253,
+      "sha256": "3c5be68c8a56534f120e88cff835a321ca51459c8f31482f984958c7fbfda8e6",
+      "expectedSha256": "3c5be68c8a56534f120e88cff835a321ca51459c8f31482f984958c7fbfda8e6",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "textures/flume/Metal049A/Metal049A_1K-PNG_NormalGL.png",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 1791977,
+      "sha256": "5b80adcc8092618a127bb7dfa547e3a35d156efd027c9daa579ac26f9098a678",
+      "expectedSha256": "5b80adcc8092618a127bb7dfa547e3a35d156efd027c9daa579ac26f9098a678",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "textures/flume/Metal049A/Metal049A_1K-PNG_Roughness.png",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 325089,
+      "sha256": "a42d9eaba9bc232739c7cb86dee03805e66f50a065cecfbbfe906aaeb6b3ded2",
+      "expectedSha256": "a42d9eaba9bc232739c7cb86dee03805e66f50a065cecfbbfe906aaeb6b3ded2",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "textures/flume/RoofingTiles013A/RoofingTiles013A_1K-PNG_Color.png",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 813925,
+      "sha256": "ae2037e4c4934b42b60c799b2755cb73c164a883410f89e22ac54ed5ecb4d1de",
+      "expectedSha256": "ae2037e4c4934b42b60c799b2755cb73c164a883410f89e22ac54ed5ecb4d1de",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "textures/flume/RoofingTiles013A/RoofingTiles013A_1K-PNG_NormalGL.png",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 4029497,
+      "sha256": "2488e6f327db93fe29558a9326ee4dba94022f944e2daf070a7ed47825fa82ab",
+      "expectedSha256": "2488e6f327db93fe29558a9326ee4dba94022f944e2daf070a7ed47825fa82ab",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "textures/flume/RoofingTiles013A/RoofingTiles013A_1K-PNG_Roughness.png",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 523350,
+      "sha256": "575b1674cfd09dde9db152b917503c77fa4187693762bf2f8824521975bac812",
+      "expectedSha256": "575b1674cfd09dde9db152b917503c77fa4187693762bf2f8824521975bac812",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "textures/flume/Wood096/Wood096_1K-PNG_Color.png",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 1076245,
+      "sha256": "2635d3b950808e52d5de4ce4ee4b3aa35430ffd3117e00c1b2cfb155168e6b47",
+      "expectedSha256": "2635d3b950808e52d5de4ce4ee4b3aa35430ffd3117e00c1b2cfb155168e6b47",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "textures/flume/Wood096/Wood096_1K-PNG_NormalGL.png",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 5092366,
+      "sha256": "5b9f71b56cc74a397c9263619f7ef0cfc7d668762f4f2c960e4bd883dc2891c5",
+      "expectedSha256": "5b9f71b56cc74a397c9263619f7ef0cfc7d668762f4f2c960e4bd883dc2891c5",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "textures/flume/Wood096/Wood096_1K-PNG_Roughness.png",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 609059,
+      "sha256": "bcba2c9b971c17875e0d8b6e11b234ce86a1c4110bd72725c2586b8950738418",
+      "expectedSha256": "bcba2c9b971c17875e0d8b6e11b234ce86a1c4110bd72725c2586b8950738418",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "textures/flume/WoodFloor043/WoodFloor043_1K-PNG_Color.png",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 659574,
+      "sha256": "55a7c25c191c8eb501d87a8872438dcfba307b3a043fee00ad9e89f0c413d684",
+      "expectedSha256": "55a7c25c191c8eb501d87a8872438dcfba307b3a043fee00ad9e89f0c413d684",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "textures/flume/WoodFloor043/WoodFloor043_1K-PNG_NormalGL.png",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 2205607,
+      "sha256": "ac8e1221726a512c4eb3cae98674bf0dda774382b2ba2577d36cbf8192986a6e",
+      "expectedSha256": "ac8e1221726a512c4eb3cae98674bf0dda774382b2ba2577d36cbf8192986a6e",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "textures/flume/WoodFloor043/WoodFloor043_1K-PNG_Roughness.png",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 190238,
+      "sha256": "c15241e172c474ad147003f8e957cf88d305d9e8d82809de201f04f7b969ec26",
+      "expectedSha256": "c15241e172c474ad147003f8e957cf88d305d9e8d82809de201f04f7b969ec26",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "textures/surfaces/grass-color.png",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 509645,
+      "sha256": "fdfda01eb989b5eff677408c822f37097394711e569fe4b28f02787aa723af92",
+      "expectedSha256": "fdfda01eb989b5eff677408c822f37097394711e569fe4b28f02787aa723af92",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "textures/surfaces/grass-normal.png",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 636185,
+      "sha256": "9c72876ec82f95e6ca3b50d14199055bba17248a358520b9948da0a497ff22b0",
+      "expectedSha256": "9c72876ec82f95e6ca3b50d14199055bba17248a358520b9948da0a497ff22b0",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "textures/surfaces/grass-roughness.png",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 194627,
+      "sha256": "4cd9ae5b58a46cd172816974664f19b1aaf540c0ef1cfed8719bf59b702ec4e3",
+      "expectedSha256": "4cd9ae5b58a46cd172816974664f19b1aaf540c0ef1cfed8719bf59b702ec4e3",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "textures/surfaces/paving-color.png",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 249959,
+      "sha256": "b34277b63dc34dc1c90639329843c75137532fc9c3066a4f1a6edcb3bf92802b",
+      "expectedSha256": "b34277b63dc34dc1c90639329843c75137532fc9c3066a4f1a6edcb3bf92802b",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "textures/surfaces/paving-normal.png",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 256304,
+      "sha256": "0b3097df90811489d17d1ae9c7fa6437cf26c9c65370bd6785b607e15ad3fafb",
+      "expectedSha256": "0b3097df90811489d17d1ae9c7fa6437cf26c9c65370bd6785b607e15ad3fafb",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "textures/surfaces/paving-roughness.png",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 83498,
+      "sha256": "7b0958ee8f21e7844a0f9d441bf4e1e0e0c288eec59a24da479235c255fdc654",
+      "expectedSha256": "7b0958ee8f21e7844a0f9d441bf4e1e0e0c288eec59a24da479235c255fdc654",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "vendor/OrbitControls.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 40755,
+      "sha256": "3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b",
+      "expectedSha256": "3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "vendor/THREE-LICENSE.txt",
+      "status": 200,
+      "mime": "text/plain; charset=utf-8",
+      "bytes": 1081,
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+      "expectedSha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "vendor/addons/loaders/GLTFLoader.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 117570,
+      "sha256": "131c0f78c01d19368ae495caa65b3adaa10487810a36a05bb5901b769a35ac16",
+      "expectedSha256": "131c0f78c01d19368ae495caa65b3adaa10487810a36a05bb5901b769a35ac16",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "vendor/addons/utils/BufferGeometryUtils.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 37712,
+      "sha256": "9fb63427ce6641fa14fd0baff9cc4d1b5f9c3d85fd084bf2e90e803c44ec1797",
+      "expectedSha256": "9fb63427ce6641fa14fd0baff9cc4d1b5f9c3d85fd084bf2e90e803c44ec1797",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "vendor/addons/utils/SkeletonUtils.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 11535,
+      "sha256": "b1632a703206c3d830de9fcbe515696770d04b71a15ee6b50afa6d2c3298c86f",
+      "expectedSha256": "b1632a703206c3d830de9fcbe515696770d04b71a15ee6b50afa6d2c3298c86f",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "vendor/three.core.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 1458113,
+      "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
+      "expectedSha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "vendor/three.module.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 662772,
+      "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea",
+      "expectedSha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "build.json",
+      "status": 200,
+      "mime": "application/json; charset=utf-8",
+      "bytes": 627,
+      "sha256": "38daa6e6168afe44c5448e4efdd7c5aac093813510ae601aba52600bcfff0c39",
+      "expectedSha256": "38daa6e6168afe44c5448e4efdd7c5aac093813510ae601aba52600bcfff0c39",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "root",
+      "file": "preview-manifest.json",
+      "status": 200,
+      "mime": "application/json; charset=utf-8",
+      "bytes": 468,
+      "sha256": "72f86a766871734564143b837c419fcb78d87162b3677bfc7b7ab58921820f71",
+      "expectedSha256": "72f86a766871734564143b837c419fcb78d87162b3677bfc7b7ab58921820f71",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "LICENSE",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 1067,
+      "sha256": "f68cef6a23271aa6fa5022cd7acebc98de572571df4a97077b0ecd7b385aa45d",
+      "expectedSha256": "f68cef6a23271aa6fa5022cd7acebc98de572571df4a97077b0ecd7b385aa45d",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "THIRD_PARTY_NOTICES.md",
+      "status": 200,
+      "mime": "text/markdown; charset=utf-8",
+      "bytes": 6238,
+      "sha256": "465cf29578e4afc00eb9b29efbe0728983aa7e5cca746b0bbefcf43d69b642b0",
+      "expectedSha256": "465cf29578e4afc00eb9b29efbe0728983aa7e5cca746b0bbefcf43d69b642b0",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "art/buildings.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 33871,
+      "sha256": "fd59e83c14589dc1db7cf43ef79a0ad02ebede0569f092465349387a0161e720",
+      "expectedSha256": "fd59e83c14589dc1db7cf43ef79a0ad02ebede0569f092465349387a0161e720",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "art/carousel-assets.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 4536,
+      "sha256": "5b437923981d7728133e4fdf3173808dced188f66cc7b18ab653470738c92453",
+      "expectedSha256": "5b437923981d7728133e4fdf3173808dced188f66cc7b18ab653470738c92453",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "art/carousel-portal.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 7877,
+      "sha256": "be22f0a550df9625640910022bbfae67ee19aac0913330bcba9fc482152b4eac",
+      "expectedSha256": "be22f0a550df9625640910022bbfae67ee19aac0913330bcba9fc482152b4eac",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "art/carousel.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 11175,
+      "sha256": "02173c16094d2caf950e1c7908bf51268f36ef955d91af09b7457705272b15e8",
+      "expectedSha256": "02173c16094d2caf950e1c7908bf51268f36ef955d91af09b7457705272b15e8",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "art/coaster.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 65435,
+      "sha256": "acea0401e86ca920fefdca2d25ac43c6ca88f6ad78d980b995967c9a19d42951",
+      "expectedSha256": "acea0401e86ca920fefdca2d25ac43c6ca88f6ad78d980b995967c9a19d42951",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "art/environment.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 61081,
+      "sha256": "b94f58adf2419866af798467d6af0af2a5355dbd0cc797cb866234745d6f8933",
+      "expectedSha256": "b94f58adf2419866af798467d6af0af2a5355dbd0cc797cb866234745d6f8933",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "art/flume-approach.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 1344,
+      "sha256": "e310a6f68f399ae180e70b2988990e4280dc018ca0267bf6deed9de03f50b89e",
+      "expectedSha256": "e310a6f68f399ae180e70b2988990e4280dc018ca0267bf6deed9de03f50b89e",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "art/flume-assets.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 6336,
+      "sha256": "f45315ab423b590a61d3715a33f928d09db2b810046e48c3d91b0157892186bb",
+      "expectedSha256": "f45315ab423b590a61d3715a33f928d09db2b810046e48c3d91b0157892186bb",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "art/flume-boats.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 4369,
+      "sha256": "cc5840239a11dec4468376741c99eadaaddf7168d31c1e2fb9ecc36df1b28781",
+      "expectedSha256": "cc5840239a11dec4468376741c99eadaaddf7168d31c1e2fb9ecc36df1b28781",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "art/flume-channel.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 23672,
+      "sha256": "931974b2615e49f9a1ffe59b5514b5811e8c68ac10bf48eb6ecc4ba9cd4649e8",
+      "expectedSha256": "931974b2615e49f9a1ffe59b5514b5811e8c68ac10bf48eb6ecc4ba9cd4649e8",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "art/flume-portal.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 9988,
+      "sha256": "9f71639544385fa5108fa8106e93fa3b5f70c55b8735a6d9cb66ce2d7c6c4913",
+      "expectedSha256": "9f71639544385fa5108fa8106e93fa3b5f70c55b8735a6d9cb66ce2d7c6c4913",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "art/flume-support-box.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 10826,
+      "sha256": "554a01c412ec368a02841eb525fba61f1541453467e25877d7d42081d33ab26d",
+      "expectedSha256": "554a01c412ec368a02841eb525fba61f1541453467e25877d7d42081d33ab26d",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "art/flume-terrain.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 6384,
+      "sha256": "c541601fa7f37777d1a259c9e3c8103d7d3bba87ad24b4376b1dba7b6f7f7808",
+      "expectedSha256": "c541601fa7f37777d1a259c9e3c8103d7d3bba87ad24b4376b1dba7b6f7f7808",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "art/runtime.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 5320,
+      "sha256": "8b85e50ffed823678e3235639ae726ba7bee3e0c52c527855fce056b98df9e60",
+      "expectedSha256": "8b85e50ffed823678e3235639ae726ba7bee3e0c52c527855fce056b98df9e60",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "art/surface-assets.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 2332,
+      "sha256": "11495b97bf3daaffcf49f7fd991da882fdf2321347739fda88d6fcf35ced2927",
+      "expectedSha256": "11495b97bf3daaffcf49f7fd991da882fdf2321347739fda88d6fcf35ced2927",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "art/surface-palette.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 2093,
+      "sha256": "91adbb55a95dc3b0b2ad670084a7f93366c266a09df6ed36bf414cb23b538768",
+      "expectedSha256": "91adbb55a95dc3b0b2ad670084a7f93366c266a09df6ed36bf414cb23b538768",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "art/tree-assets.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 5027,
+      "sha256": "daa01cc5d707a402a6523adb3e815a6ce7d1d88e4c9b1f0c72702467f8c6e054",
+      "expectedSha256": "daa01cc5d707a402a6523adb3e815a6ce7d1d88e4c9b1f0c72702467f8c6e054",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "art/wooden-assets.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 5815,
+      "sha256": "3475acd3d3975ad8951135e0e3382ab7f530b5fa87824ec0013575086522a237",
+      "expectedSha256": "3475acd3d3975ad8951135e0e3382ab7f530b5fa87824ec0013575086522a237",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "art/wooden-coaster.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 38791,
+      "sha256": "9ebceda15d406332d37ab8dae756a1725b7a36cc7278ab7ac8b6d7438c920898",
+      "expectedSha256": "9ebceda15d406332d37ab8dae756a1725b7a36cc7278ab7ac8b6d7438c920898",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "consumable-controls.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 6373,
+      "sha256": "4e77687b8a5578a9fd15e89db3ef22bf0156304b22542be8e833b062862a118e",
+      "expectedSha256": "4e77687b8a5578a9fd15e89db3ef22bf0156304b22542be8e833b062862a118e",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "consumable-waste.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 5991,
+      "sha256": "6a61d96ab774507781b9bfce61198b9599230f0c176df05f8d8f28a8e9d02bac",
+      "expectedSha256": "6a61d96ab774507781b9bfce61198b9599230f0c176df05f8d8f28a8e9d02bac",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "content/carousel.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 1424,
+      "sha256": "29f71f912001cf341916541fbf678bf8fb1985d6c1979cf1e541e8e79318ceb9",
+      "expectedSha256": "29f71f912001cf341916541fbf678bf8fb1985d6c1979cf1e541e8e79318ceb9",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "content/consumables.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 5307,
+      "sha256": "b1c162502f7a79c58c67a3d57e30c5d7db29f6972d87bc6fba65e1a3f56db4eb",
+      "expectedSha256": "b1c162502f7a79c58c67a3d57e30c5d7db29f6972d87bc6fba65e1a3f56db4eb",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "content/log-flume.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 4252,
+      "sha256": "6f71b4fc57dd403647c725f0e018a0439ce226108dc5459d837cfc9d0e469aa1",
+      "expectedSha256": "6f71b4fc57dd403647c725f0e018a0439ce226108dc5459d837cfc9d0e469aa1",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "content/mixed-park.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 4818,
+      "sha256": "5c1ccc0fd7a8b0778ba81de453580ee25aebac14670cebbb0db24b87311b4875",
+      "expectedSha256": "5c1ccc0fd7a8b0778ba81de453580ee25aebac14670cebbb0db24b87311b4875",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "content/rct2-reference.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 113071,
+      "sha256": "23ad185689097bbc9b21d87de63f4d62a4d2365fa019f983cf8b8ae85f7836ee",
+      "expectedSha256": "23ad185689097bbc9b21d87de63f4d62a4d2365fa019f983cf8b8ae85f7836ee",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "content/registry.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 9919,
+      "sha256": "fccec768191771369611bf9a02e28f751b445efc9888b329ae605e4863103ad3",
+      "expectedSha256": "fccec768191771369611bf9a02e28f751b445efc9888b329ae605e4863103ad3",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "content/ride-profiles.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 2163,
+      "sha256": "034490199b05354be6ae497b5e43f3ff804f0b120b2d332b6e1167f1c1be23f2",
+      "expectedSha256": "034490199b05354be6ae497b5e43f3ff804f0b120b2d332b6e1167f1c1be23f2",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "content/steel-coaster.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 9691,
+      "sha256": "d248ab39ba5695c5402872b634d514cc81517673c44d77e9e0da3deaaf683335",
+      "expectedSha256": "d248ab39ba5695c5402872b634d514cc81517673c44d77e9e0da3deaaf683335",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "content/wooden-coaster.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 1734,
+      "sha256": "c3a0c2c2f43aeb88a1ad81f64e45dd185f894b84d2e9400b4da944e12f6a3c70",
+      "expectedSha256": "c3a0c2c2f43aeb88a1ad81f64e45dd185f894b84d2e9400b4da944e12f6a3c70",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "content/wooden-footprints.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 10283,
+      "sha256": "ef471c76a23274bf86a3f17acc00bcd69ed9f8eca1a3fb17b74b8c0c9c86f9d2",
+      "expectedSha256": "ef471c76a23274bf86a3f17acc00bcd69ed9f8eca1a3fb17b74b8c0c9c86f9d2",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "content-browser.css",
+      "status": 200,
+      "mime": "text/css; charset=utf-8",
+      "bytes": 22049,
+      "sha256": "b0ca6136234806692e643b6117b5b3df9696161a86a8f3590c30dfcd5d1cd566",
+      "expectedSha256": "b0ca6136234806692e643b6117b5b3df9696161a86a8f3590c30dfcd5d1cd566",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "content-browser.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 48685,
+      "sha256": "e45ea2cf6c24685abaec5e63ddc0101928a698ff1d531e39c73aab6eca38471b",
+      "expectedSha256": "e45ea2cf6c24685abaec5e63ddc0101928a698ff1d531e39c73aab6eca38471b",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "favicon.svg",
+      "status": 200,
+      "mime": "image/svg+xml",
+      "bytes": 213,
+      "sha256": "60879a890648c630ab1dc7cdc25975693b3c0610be77a4a11d2e7c7315d5c697",
+      "expectedSha256": "60879a890648c630ab1dc7cdc25975693b3c0610be77a4a11d2e7c7315d5c697",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "flume-controls.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 3309,
+      "sha256": "86f9e7c264d023d5599eea7c5a8c3dc920733090f8fb5f4c6ac574fe05a42821",
+      "expectedSha256": "86f9e7c264d023d5599eea7c5a8c3dc920733090f8fb5f4c6ac574fe05a42821",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "game.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 33570,
+      "sha256": "6d429cff46bde002b0b2a9f984d3ed50953033ae6f5821fb51adf13f9ecb009a",
+      "expectedSha256": "6d429cff46bde002b0b2a9f984d3ed50953033ae6f5821fb51adf13f9ecb009a",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "index.html",
+      "status": 200,
+      "mime": "text/html; charset=utf-8",
+      "bytes": 11495,
+      "sha256": "fd88b27beca574ed17a2fb04dfaa08194bb886c386b762667dc8da9a5151ad6a",
+      "expectedSha256": "fd88b27beca574ed17a2fb04dfaa08194bb886c386b762667dc8da9a5151ad6a",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "models/carousel/README.md",
+      "status": 200,
+      "mime": "text/markdown; charset=utf-8",
+      "bytes": 797,
+      "sha256": "4d1644cc1ab198454719d649db6540708a1c70afa4dec44ec54cc337fe27c2cf",
+      "expectedSha256": "4d1644cc1ab198454719d649db6540708a1c70afa4dec44ec54cc337fe27c2cf",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "models/carousel/body.glb",
+      "status": 200,
+      "mime": "model/gltf-binary",
+      "bytes": 5369400,
+      "sha256": "405e14e1d2f6a54bd7f05676697f1d96193b7f0378c2426601d0de1484a9464f",
+      "expectedSha256": "405e14e1d2f6a54bd7f05676697f1d96193b7f0378c2426601d0de1484a9464f",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "models/carousel/material-provenance.json",
+      "status": 200,
+      "mime": "application/json; charset=utf-8",
+      "bytes": 3628,
+      "sha256": "964c76789c39952ab9a40b3be44f95549f83cb31a5274d45d7954490cc2c84b1",
+      "expectedSha256": "964c76789c39952ab9a40b3be44f95549f83cb31a5274d45d7954490cc2c84b1",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "models/carousel/source-manifest.json",
+      "status": 200,
+      "mime": "application/json; charset=utf-8",
+      "bytes": 41266,
+      "sha256": "555652533c5075a281537cc938eafd520c759c102dc680a949d6e0d6f6e8d5c2",
+      "expectedSha256": "555652533c5075a281537cc938eafd520c759c102dc680a949d6e0d6f6e8d5c2",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "models/flume/README.md",
+      "status": 200,
+      "mime": "text/markdown; charset=utf-8",
+      "bytes": 1669,
+      "sha256": "5ff416addf23b2b2ede5a74acb86d4197698a3ee042917484f24acd9737cfe3f",
+      "expectedSha256": "5ff416addf23b2b2ede5a74acb86d4197698a3ee042917484f24acd9737cfe3f",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "models/flume/boat.glb",
+      "status": 200,
+      "mime": "model/gltf-binary",
+      "bytes": 5411656,
+      "sha256": "0336a6e7dc4aaa54136193d47187d67d2710ba53c4ccca3f93cf81e9dc693549",
+      "expectedSha256": "0336a6e7dc4aaa54136193d47187d67d2710ba53c4ccca3f93cf81e9dc693549",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "models/flume/material-provenance.json",
+      "status": 200,
+      "mime": "application/json; charset=utf-8",
+      "bytes": 8134,
+      "sha256": "d4386d2bd0a062287caf11cbf63dc78ebe334cbb9b8f0a2bdb092ca9601137a5",
+      "expectedSha256": "d4386d2bd0a062287caf11cbf63dc78ebe334cbb9b8f0a2bdb092ca9601137a5",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "models/flume/rider.glb",
+      "status": 200,
+      "mime": "model/gltf-binary",
+      "bytes": 5763204,
+      "sha256": "e0bb0c5ecb4821bbf40b2524817c77763933c941b068ea2159aa66273dc05286",
+      "expectedSha256": "e0bb0c5ecb4821bbf40b2524817c77763933c941b068ea2159aa66273dc05286",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "models/flume/source-manifest.json",
+      "status": 200,
+      "mime": "application/json; charset=utf-8",
+      "bytes": 4502,
+      "sha256": "bf289db68061cf41058bb442a77fe4c94197ae38384fb54e130e3fdf59a13ddd",
+      "expectedSha256": "bf289db68061cf41058bb442a77fe4c94197ae38384fb54e130e3fdf59a13ddd",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "models/trees/ASSET-NOTICES.txt",
+      "status": 200,
+      "mime": "text/plain; charset=utf-8",
+      "bytes": 392,
+      "sha256": "db561c35b988de25d8e7bd545b6bdab4a7da81b5b220d11f4c11c7e6f7b40999",
+      "expectedSha256": "db561c35b988de25d8e7bd545b6bdab4a7da81b5b220d11f4c11c7e6f7b40999",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "models/trees/export-manifest.json",
+      "status": 200,
+      "mime": "application/json; charset=utf-8",
+      "bytes": 18321,
+      "sha256": "b2a56814faea97e0157c96c7ac5676146aaed0e93096e0deab2ed4b578e26496",
+      "expectedSha256": "b2a56814faea97e0157c96c7ac5676146aaed0e93096e0deab2ed4b578e26496",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "models/trees/organic-tree-lod0.bin",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 443040,
+      "sha256": "f1480d960bc1b380527d1514b4056348db2e5cff9cd8a0f3faaa4e1f1a1a6534",
+      "expectedSha256": "f1480d960bc1b380527d1514b4056348db2e5cff9cd8a0f3faaa4e1f1a1a6534",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "models/trees/organic-tree-lod0.gltf",
+      "status": 200,
+      "mime": "model/gltf+json",
+      "bytes": 6555,
+      "sha256": "852ac0bfce78bd271c8484a724f5c95fc0339786c9553d4d32aae159f43be3fa",
+      "expectedSha256": "852ac0bfce78bd271c8484a724f5c95fc0339786c9553d4d32aae159f43be3fa",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "models/trees/organic-tree-lod1.bin",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 146264,
+      "sha256": "47fbd4f8e6fea1c5e80998c15dbb058e468e17e6316e6940a83c8c394166ae0e",
+      "expectedSha256": "47fbd4f8e6fea1c5e80998c15dbb058e468e17e6316e6940a83c8c394166ae0e",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "models/trees/organic-tree-lod1.gltf",
+      "status": 200,
+      "mime": "model/gltf+json",
+      "bytes": 6543,
+      "sha256": "0d74981a915d491cf2ad8de496f7340cb7f09c7aa8e2c76a8095d39d3000ea85",
+      "expectedSha256": "0d74981a915d491cf2ad8de496f7340cb7f09c7aa8e2c76a8095d39d3000ea85",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "models/trees/organic-tree-lod2.bin",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 60740,
+      "sha256": "ccc5f2c623bd5e86c62b52375bd9b9489309bdfcc333bb107200b7ab7c02dd86",
+      "expectedSha256": "ccc5f2c623bd5e86c62b52375bd9b9489309bdfcc333bb107200b7ab7c02dd86",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "models/trees/organic-tree-lod2.gltf",
+      "status": 200,
+      "mime": "model/gltf+json",
+      "bytes": 6519,
+      "sha256": "9f6b829b9a0446f89f413ceb84fa3be6bbec981f91fd6a288ad4264f7edf5a2d",
+      "expectedSha256": "9f6b829b9a0446f89f413ceb84fa3be6bbec981f91fd6a288ad4264f7edf5a2d",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "models/trees/textures/Bark014_1K-PNG_Color.png",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 555611,
+      "sha256": "5091ca295325cb289cc40fdd13d182b00a45c767ecc949edd76db4c183de900e",
+      "expectedSha256": "5091ca295325cb289cc40fdd13d182b00a45c767ecc949edd76db4c183de900e",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "models/trees/textures/Bark014_1K-PNG_NormalGL.png",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 1411595,
+      "sha256": "fad0e06319bf5a7f642a324941d9d71448d61eabe70495babb3e27b3d85a2112",
+      "expectedSha256": "fad0e06319bf5a7f642a324941d9d71448d61eabe70495babb3e27b3d85a2112",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "models/trees/textures/Bark014_1K-PNG_Roughness.png",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 312830,
+      "sha256": "14c8111cb5ef1f5b60c6bd9f30041b468e64d451ac70c04a35982630af104cdd",
+      "expectedSha256": "14c8111cb5ef1f5b60c6bd9f30041b468e64d451ac70c04a35982630af104cdd",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "models/trees/textures/LeafSet026_1K-PNG_Color-LeafSet026_1K-PNG_Opacity.png",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 601809,
+      "sha256": "ea06aba219626ed20d94ac895eee043ae28dc5dabe29d2ee8ecfcc7534a60752",
+      "expectedSha256": "ea06aba219626ed20d94ac895eee043ae28dc5dabe29d2ee8ecfcc7534a60752",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "models/trees/textures/LeafSet026_1K-PNG_NormalGL.png",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 1773840,
+      "sha256": "172fdfadddb68ef4a0a95c37d6e484e5c1511074f9c8b160babc30e93c115e30",
+      "expectedSha256": "172fdfadddb68ef4a0a95c37d6e484e5c1511074f9c8b160babc30e93c115e30",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "models/wooden/car.glb",
+      "status": 200,
+      "mime": "model/gltf-binary",
+      "bytes": 3636520,
+      "sha256": "ed293d53712c1bc02ce01a5c027d69dd7b31e60ae41c8a811d9a9464274f9adc",
+      "expectedSha256": "ed293d53712c1bc02ce01a5c027d69dd7b31e60ae41c8a811d9a9464274f9adc",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "models/wooden/link.glb",
+      "status": 200,
+      "mime": "model/gltf-binary",
+      "bytes": 988980,
+      "sha256": "bd65312ab91197d08d66fd6258e31f31e46b6d529832a0d741fcb729e0fec671",
+      "expectedSha256": "bd65312ab91197d08d66fd6258e31f31e46b6d529832a0d741fcb729e0fec671",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "models/wooden/station.glb",
+      "status": 200,
+      "mime": "model/gltf-binary",
+      "bytes": 9199772,
+      "sha256": "32214cdb6f388bcda1bdbbd59b8ac5a59ba454d947d2fde45380898572809cbd",
+      "expectedSha256": "32214cdb6f388bcda1bdbbd59b8ac5a59ba454d947d2fde45380898572809cbd",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "park-scene.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 17112,
+      "sha256": "752be64288e176a44187765165f9c027b505f0da9d6de4fd07f5196c5929cac9",
+      "expectedSha256": "752be64288e176a44187765165f9c027b505f0da9d6de4fd07f5196c5929cac9",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "simulation/boat.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 5489,
+      "sha256": "d4ca78dc773f712086b995b5bf870d48dd9a3feb35fb9765f8296b499fb80199",
+      "expectedSha256": "d4ca78dc773f712086b995b5bf870d48dd9a3feb35fb9765f8296b499fb80199",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "simulation/browser-worker.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 3190,
+      "sha256": "d5c82ceefac477eb9baecd5065933a6db0a216654c2a406058f1c28317127e1c",
+      "expectedSha256": "d5c82ceefac477eb9baecd5065933a6db0a216654c2a406058f1c28317127e1c",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "simulation/carousel.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 4791,
+      "sha256": "c707db6b92deb1742b2c84f9cdb7c65a50fbdd9908387e64b29e53e0f3b29f6a",
+      "expectedSha256": "c707db6b92deb1742b2c84f9cdb7c65a50fbdd9908387e64b29e53e0f3b29f6a",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "simulation/clock.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 834,
+      "sha256": "32820b03a12b9bde816654f4e58fd37a24c32b9c8dc035b52d157636e58d9fbd",
+      "expectedSha256": "32820b03a12b9bde816654f4e58fd37a24c32b9c8dc035b52d157636e58d9fbd",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "simulation/engine.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 113194,
+      "sha256": "71966822cbcd3b6f84fad25d4193f8fcd9d025717e3f17fcf9a340168bad1e7e",
+      "expectedSha256": "71966822cbcd3b6f84fad25d4193f8fcd9d025717e3f17fcf9a340168bad1e7e",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "simulation/flume-native.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 9442,
+      "sha256": "735c2d793a1daf76844e1eeac6ea3342e37f84b1f49e5de6edc8e914073f02ae",
+      "expectedSha256": "735c2d793a1daf76844e1eeac6ea3342e37f84b1f49e5de6edc8e914073f02ae",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "simulation/flume-portal.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 5486,
+      "sha256": "877ba9c562c874ee742a77ec67aa64cb68012885ce96f288e6d4f9b128e621c3",
+      "expectedSha256": "877ba9c562c874ee742a77ec67aa64cb68012885ce96f288e6d4f9b128e621c3",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "simulation/flume-profile.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 2917,
+      "sha256": "e89e86ea002b94f7339ef7c5e4bcc73c33998abf0252c17ed2b430b2394f7f58",
+      "expectedSha256": "e89e86ea002b94f7339ef7c5e4bcc73c33998abf0252c17ed2b430b2394f7f58",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "simulation/geometry.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 14864,
+      "sha256": "e12404ca6542681cdd3175a6502928d5891622d5f0beed915613f7d6254c9a24",
+      "expectedSha256": "e12404ca6542681cdd3175a6502928d5891622d5f0beed915613f7d6254c9a24",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "simulation/host.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 2139,
+      "sha256": "d2dfa7c018b25214231009e850e56507019cea9a7484459d990247bed9f775b2",
+      "expectedSha256": "d2dfa7c018b25214231009e850e56507019cea9a7484459d990247bed9f775b2",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "simulation/housekeeping.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 7226,
+      "sha256": "588c5c06187c0bcfd9d5b52a69ea33fece6a22aa89246df1189e4a247fb5cc7b",
+      "expectedSha256": "588c5c06187c0bcfd9d5b52a69ea33fece6a22aa89246df1189e4a247fb5cc7b",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "simulation/index.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 132,
+      "sha256": "346366ed60f6c42fcb47aa83210f541b512704500f290f203513ca17b0a809c4",
+      "expectedSha256": "346366ed60f6c42fcb47aa83210f541b512704500f290f203513ca17b0a809c4",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "simulation/motion.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 8356,
+      "sha256": "4c3d5c27617302f607d0235a10eeda4cd4fafc9c81cb7859327fba0b407f34e6",
+      "expectedSha256": "4c3d5c27617302f607d0235a10eeda4cd4fafc9c81cb7859327fba0b407f34e6",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "simulation/operation.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 6695,
+      "sha256": "90a079ea7b4ed724d214a334b8cd006bcb07a40774b7f431051c554e9c620e69",
+      "expectedSha256": "90a079ea7b4ed724d214a334b8cd006bcb07a40774b7f431051c554e9c620e69",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "simulation/patrol.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 562,
+      "sha256": "4a59eec5e274c541fecf413cb62cd27cabfe5fb13aaa6104d5543b8498b16e16",
+      "expectedSha256": "4a59eec5e274c541fecf413cb62cd27cabfe5fb13aaa6104d5543b8498b16e16",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "simulation/people.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 22632,
+      "sha256": "96ef0885c3c3719ff5827e9ea63f370508d5e21f2e8b2d31799099a1855f8a5e",
+      "expectedSha256": "96ef0885c3c3719ff5827e9ea63f370508d5e21f2e8b2d31799099a1855f8a5e",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "simulation/protocol.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 42,
+      "sha256": "1a7f454c4d4347075efedfb5f6343947cb611240e16ec820db8c457bbb368475",
+      "expectedSha256": "1a7f454c4d4347075efedfb5f6343947cb611240e16ec820db8c457bbb368475",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "simulation/routes.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 3156,
+      "sha256": "ec098e36c6a24155b4d10da3118a7240e08850a4b38c52eb7d4891be556c3453",
+      "expectedSha256": "ec098e36c6a24155b4d10da3118a7240e08850a4b38c52eb7d4891be556c3453",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "simulation/scenery.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 408,
+      "sha256": "af181426f98f7c6daab583055906264db929940ecb25a3fe50c1ca219d9ee520",
+      "expectedSha256": "af181426f98f7c6daab583055906264db929940ecb25a3fe50c1ca219d9ee520",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "simulation/services.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 12107,
+      "sha256": "171566ab11852ed81f086e098bb2d85f46d790267ee3cad56c1e47f55c0b0aee",
+      "expectedSha256": "171566ab11852ed81f086e098bb2d85f46d790267ee3cad56c1e47f55c0b0aee",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "simulation/types.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 147,
+      "sha256": "1a6231381895d5abcccbc927e582be7270c22e19c76be7c5c3e560d83ea97d91",
+      "expectedSha256": "1a6231381895d5abcccbc927e582be7270c22e19c76be7c5c3e560d83ea97d91",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "simulation/validation.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 1191,
+      "sha256": "10a2f21ddd134f16105bf4f0153d57a6e660d7938157e30c1958487498b66056",
+      "expectedSha256": "10a2f21ddd134f16105bf4f0153d57a6e660d7938157e30c1958487498b66056",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "simulation/view.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 9747,
+      "sha256": "1742bc023dc22f8624ecefac4b1b5076ab1aa89a0a35090536bdb00af1f8c75d",
+      "expectedSha256": "1742bc023dc22f8624ecefac4b1b5076ab1aa89a0a35090536bdb00af1f8c75d",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "simulation/wooden-motion.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 5888,
+      "sha256": "aaed1ed31a0764f8ecc8b07db1d2c6bc6e2a0230b2002daff30729a20c5da12d",
+      "expectedSha256": "aaed1ed31a0764f8ecc8b07db1d2c6bc6e2a0230b2002daff30729a20c5da12d",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "simulation/wooden-placement.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 5951,
+      "sha256": "66b9590399dfd6235cbf6c04401744df1611d7fa1b55a72c1daf6950393a586c",
+      "expectedSha256": "66b9590399dfd6235cbf6c04401744df1611d7fa1b55a72c1daf6950393a586c",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "style.css",
+      "status": 200,
+      "mime": "text/css; charset=utf-8",
+      "bytes": 28300,
+      "sha256": "8cc71e1901683b6a8c889ef80f22f1ec357198eb41221eeb90a07f259a60cee3",
+      "expectedSha256": "8cc71e1901683b6a8c889ef80f22f1ec357198eb41221eeb90a07f259a60cee3",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "textures/flume/Concrete034/Concrete034_1K-PNG_Color.png",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 288279,
+      "sha256": "dffbbd0fd7249e938a30b650675262034fe0face516b0d036e9c34cae5a99190",
+      "expectedSha256": "dffbbd0fd7249e938a30b650675262034fe0face516b0d036e9c34cae5a99190",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "textures/flume/Concrete034/Concrete034_1K-PNG_NormalGL.png",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 2715117,
+      "sha256": "7378313b5e38d138a2048d0a300194444ba7b205b062751a93a91bde8dfbccf9",
+      "expectedSha256": "7378313b5e38d138a2048d0a300194444ba7b205b062751a93a91bde8dfbccf9",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "textures/flume/Concrete034/Concrete034_1K-PNG_Roughness.png",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 206202,
+      "sha256": "b2f8b937d4c9d1d305fc30b915b28712d166939bba1c3823ad39767dd22e1f07",
+      "expectedSha256": "b2f8b937d4c9d1d305fc30b915b28712d166939bba1c3823ad39767dd22e1f07",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "textures/flume/Metal049A/Metal049A_1K-PNG_Color.png",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 535253,
+      "sha256": "3c5be68c8a56534f120e88cff835a321ca51459c8f31482f984958c7fbfda8e6",
+      "expectedSha256": "3c5be68c8a56534f120e88cff835a321ca51459c8f31482f984958c7fbfda8e6",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "textures/flume/Metal049A/Metal049A_1K-PNG_NormalGL.png",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 1791977,
+      "sha256": "5b80adcc8092618a127bb7dfa547e3a35d156efd027c9daa579ac26f9098a678",
+      "expectedSha256": "5b80adcc8092618a127bb7dfa547e3a35d156efd027c9daa579ac26f9098a678",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "textures/flume/Metal049A/Metal049A_1K-PNG_Roughness.png",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 325089,
+      "sha256": "a42d9eaba9bc232739c7cb86dee03805e66f50a065cecfbbfe906aaeb6b3ded2",
+      "expectedSha256": "a42d9eaba9bc232739c7cb86dee03805e66f50a065cecfbbfe906aaeb6b3ded2",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "textures/flume/RoofingTiles013A/RoofingTiles013A_1K-PNG_Color.png",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 813925,
+      "sha256": "ae2037e4c4934b42b60c799b2755cb73c164a883410f89e22ac54ed5ecb4d1de",
+      "expectedSha256": "ae2037e4c4934b42b60c799b2755cb73c164a883410f89e22ac54ed5ecb4d1de",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "textures/flume/RoofingTiles013A/RoofingTiles013A_1K-PNG_NormalGL.png",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 4029497,
+      "sha256": "2488e6f327db93fe29558a9326ee4dba94022f944e2daf070a7ed47825fa82ab",
+      "expectedSha256": "2488e6f327db93fe29558a9326ee4dba94022f944e2daf070a7ed47825fa82ab",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "textures/flume/RoofingTiles013A/RoofingTiles013A_1K-PNG_Roughness.png",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 523350,
+      "sha256": "575b1674cfd09dde9db152b917503c77fa4187693762bf2f8824521975bac812",
+      "expectedSha256": "575b1674cfd09dde9db152b917503c77fa4187693762bf2f8824521975bac812",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "textures/flume/Wood096/Wood096_1K-PNG_Color.png",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 1076245,
+      "sha256": "2635d3b950808e52d5de4ce4ee4b3aa35430ffd3117e00c1b2cfb155168e6b47",
+      "expectedSha256": "2635d3b950808e52d5de4ce4ee4b3aa35430ffd3117e00c1b2cfb155168e6b47",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "textures/flume/Wood096/Wood096_1K-PNG_NormalGL.png",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 5092366,
+      "sha256": "5b9f71b56cc74a397c9263619f7ef0cfc7d668762f4f2c960e4bd883dc2891c5",
+      "expectedSha256": "5b9f71b56cc74a397c9263619f7ef0cfc7d668762f4f2c960e4bd883dc2891c5",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "textures/flume/Wood096/Wood096_1K-PNG_Roughness.png",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 609059,
+      "sha256": "bcba2c9b971c17875e0d8b6e11b234ce86a1c4110bd72725c2586b8950738418",
+      "expectedSha256": "bcba2c9b971c17875e0d8b6e11b234ce86a1c4110bd72725c2586b8950738418",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "textures/flume/WoodFloor043/WoodFloor043_1K-PNG_Color.png",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 659574,
+      "sha256": "55a7c25c191c8eb501d87a8872438dcfba307b3a043fee00ad9e89f0c413d684",
+      "expectedSha256": "55a7c25c191c8eb501d87a8872438dcfba307b3a043fee00ad9e89f0c413d684",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "textures/flume/WoodFloor043/WoodFloor043_1K-PNG_NormalGL.png",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 2205607,
+      "sha256": "ac8e1221726a512c4eb3cae98674bf0dda774382b2ba2577d36cbf8192986a6e",
+      "expectedSha256": "ac8e1221726a512c4eb3cae98674bf0dda774382b2ba2577d36cbf8192986a6e",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "textures/flume/WoodFloor043/WoodFloor043_1K-PNG_Roughness.png",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 190238,
+      "sha256": "c15241e172c474ad147003f8e957cf88d305d9e8d82809de201f04f7b969ec26",
+      "expectedSha256": "c15241e172c474ad147003f8e957cf88d305d9e8d82809de201f04f7b969ec26",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "textures/surfaces/grass-color.png",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 509645,
+      "sha256": "fdfda01eb989b5eff677408c822f37097394711e569fe4b28f02787aa723af92",
+      "expectedSha256": "fdfda01eb989b5eff677408c822f37097394711e569fe4b28f02787aa723af92",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "textures/surfaces/grass-normal.png",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 636185,
+      "sha256": "9c72876ec82f95e6ca3b50d14199055bba17248a358520b9948da0a497ff22b0",
+      "expectedSha256": "9c72876ec82f95e6ca3b50d14199055bba17248a358520b9948da0a497ff22b0",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "textures/surfaces/grass-roughness.png",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 194627,
+      "sha256": "4cd9ae5b58a46cd172816974664f19b1aaf540c0ef1cfed8719bf59b702ec4e3",
+      "expectedSha256": "4cd9ae5b58a46cd172816974664f19b1aaf540c0ef1cfed8719bf59b702ec4e3",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "textures/surfaces/paving-color.png",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 249959,
+      "sha256": "b34277b63dc34dc1c90639329843c75137532fc9c3066a4f1a6edcb3bf92802b",
+      "expectedSha256": "b34277b63dc34dc1c90639329843c75137532fc9c3066a4f1a6edcb3bf92802b",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "textures/surfaces/paving-normal.png",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 256304,
+      "sha256": "0b3097df90811489d17d1ae9c7fa6437cf26c9c65370bd6785b607e15ad3fafb",
+      "expectedSha256": "0b3097df90811489d17d1ae9c7fa6437cf26c9c65370bd6785b607e15ad3fafb",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "textures/surfaces/paving-roughness.png",
+      "status": 200,
+      "mime": "image/png",
+      "bytes": 83498,
+      "sha256": "7b0958ee8f21e7844a0f9d441bf4e1e0e0c288eec59a24da479235c255fdc654",
+      "expectedSha256": "7b0958ee8f21e7844a0f9d441bf4e1e0e0c288eec59a24da479235c255fdc654",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "vendor/OrbitControls.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 40755,
+      "sha256": "3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b",
+      "expectedSha256": "3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "vendor/THREE-LICENSE.txt",
+      "status": 200,
+      "mime": "text/plain; charset=utf-8",
+      "bytes": 1081,
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+      "expectedSha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "vendor/addons/loaders/GLTFLoader.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 117570,
+      "sha256": "131c0f78c01d19368ae495caa65b3adaa10487810a36a05bb5901b769a35ac16",
+      "expectedSha256": "131c0f78c01d19368ae495caa65b3adaa10487810a36a05bb5901b769a35ac16",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "vendor/addons/utils/BufferGeometryUtils.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 37712,
+      "sha256": "9fb63427ce6641fa14fd0baff9cc4d1b5f9c3d85fd084bf2e90e803c44ec1797",
+      "expectedSha256": "9fb63427ce6641fa14fd0baff9cc4d1b5f9c3d85fd084bf2e90e803c44ec1797",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "vendor/addons/utils/SkeletonUtils.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 11535,
+      "sha256": "b1632a703206c3d830de9fcbe515696770d04b71a15ee6b50afa6d2c3298c86f",
+      "expectedSha256": "b1632a703206c3d830de9fcbe515696770d04b71a15ee6b50afa6d2c3298c86f",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "vendor/three.core.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 1458113,
+      "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
+      "expectedSha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "vendor/three.module.js",
+      "status": 200,
+      "mime": "application/javascript; charset=utf-8",
+      "bytes": 662772,
+      "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea",
+      "expectedSha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "build.json",
+      "status": 200,
+      "mime": "application/json; charset=utf-8",
+      "bytes": 627,
+      "sha256": "38daa6e6168afe44c5448e4efdd7c5aac093813510ae601aba52600bcfff0c39",
+      "expectedSha256": "38daa6e6168afe44c5448e4efdd7c5aac093813510ae601aba52600bcfff0c39",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    },
+    {
+      "route": "pin",
+      "file": "preview-manifest.json",
+      "status": 200,
+      "mime": "application/json; charset=utf-8",
+      "bytes": 468,
+      "sha256": "72f86a766871734564143b837c419fcb78d87162b3677bfc7b7ab58921820f71",
+      "expectedSha256": "72f86a766871734564143b837c419fcb78d87162b3677bfc7b7ab58921820f71",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": 200
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "passed": true
+}

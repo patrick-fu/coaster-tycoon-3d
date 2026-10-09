@@ -1,0 +1,98 @@
+{
+  "sourceSha256": "6a61d96ab774507781b9bfce61198b9599230f0c176df05f8d8f28a8e9d02bac",
+  "oldSourceSha256": "91444431b3af61da27eb48f04c8d6b36797fdeb7d2a59fed8958008bca5d0f85",
+  "inverseByteComparison": true,
+  "changes": "Exactly two typed roots h+.01 to h+.142 and one reason comment",
+  "preserved": "Every other code byte, including legacy wrapper geometry/transforms, authority/packet reads, materials and disposal",
+  "clearanceMetres": 0.002,
+  "candidateArtBoundary": "Finite procedural props; not ADR0003 final detailed editable Blender/GLB prop qualification",
+  "visualRepairReceipt": {
+    "actualExit": 0,
+    "pid": 48834,
+    "started": "2026-10-09T17:25:23Z",
+    "finished": "2026-10-09T17:28:56Z",
+    "stderrBytes": 0,
+    "events": [
+      {
+        "event": "init",
+        "id": "58a8e05d-fcb6-4958-8f62-ec9fc7cf4477",
+        "effective": {
+          "model": "gemini-3.8-flash-high",
+          "cwd": "/Volumes/WD/code/workspaces/coaster-consumables/agy-typed-height-fix",
+          "permission": "request-review"
+        }
+      },
+      {
+        "event": "tool",
+        "name": "view_file",
+        "info": {
+          "name": "view_file",
+          "parameters": {
+            "AbsolutePath": "/Volumes/WD/code/workspaces/coaster-consumables/agy-typed-height-fix/input/path-deck-source.txt"
+          },
+          "output": "51 lines, 2615 bytes"
+        }
+      },
+      {
+        "event": "tool",
+        "name": "view_file",
+        "info": {
+          "name": "view_file",
+          "parameters": {
+            "AbsolutePath": "/Volumes/WD/code/workspaces/coaster-consumables/agy-typed-height-fix/input/consumable-waste.js"
+          },
+          "output": "192 lines, 5904 bytes"
+        }
+      },
+      {
+        "event": "tool",
+        "name": "write_to_file",
+        "info": {
+          "name": "write_to_file",
+          "parameters": {
+            "TargetFile": "/Volumes/WD/code/workspaces/coaster-consumables/agy-typed-height-fix/implementation/consumable-waste.js"
+          }
+        }
+      },
+      {
+        "event": "tool",
+        "name": "view_file",
+        "info": {
+          "name": "view_file",
+          "parameters": {
+            "AbsolutePath": "/Volumes/WD/code/workspaces/coaster-consumables/agy-typed-height-fix/implementation/consumable-waste.js"
+          },
+          "output": "193 lines, 5991 bytes"
+        }
+      },
+      {
+        "event": "tool",
+        "name": "write_to_file",
+        "info": {
+          "name": "write_to_file",
+          "parameters": {
+            "TargetFile": "/Volumes/WD/code/workspaces/coaster-consumables/agy-typed-height-fix/RESULT.md"
+          }
+        }
+      },
+      {
+        "event": "tool",
+        "name": "view_file",
+        "info": {
+          "name": "view_file",
+          "parameters": {
+            "AbsolutePath": "/Volumes/WD/code/workspaces/coaster-consumables/agy-typed-height-fix/RESULT.md"
+          },
+          "output": "73 lines, 4253 bytes"
+        }
+      },
+      {
+        "event": "result",
+        "status": "SUCCESS",
+        "turns": 1,
+        "denied": []
+      }
+    ],
+    "sourceSha256": "6a61d96ab774507781b9bfce61198b9599230f0c176df05f8d8f28a8e9d02bac"
+  }
+}

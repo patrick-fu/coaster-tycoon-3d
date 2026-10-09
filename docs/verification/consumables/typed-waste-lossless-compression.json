@@ -1,0 +1,272 @@
+[
+  {
+    "originalPath": "run/00-final-authority-imported.json",
+    "retainedPath": "run/00-final-authority-imported.json.gz",
+    "decodedSha256": "54ebf9515b1eb7fcc190111ac925086cf13500ccf76e0a018d1057f9bc20643a",
+    "retainedSha256": "db34acbf9a01e693376abfb0abe6d316e451a1d118588aee24558f2bdc10d341",
+    "originalBytes": 2902685,
+    "retainedBytes": 44218,
+    "verifiedUTC": "2026-10-09T17:49:17.608364+00:00",
+    "compressionLevel": 6
+  },
+  {
+    "originalPath": "run/01-real-owners-moved.json",
+    "retainedPath": "run/01-real-owners-moved.json.gz",
+    "decodedSha256": "81a4c2aa781a48fcdc63ae24ad0d48024023ae85f74ee3ce0a23001b6972f928",
+    "retainedSha256": "1502d4ba9f291613700108d27c756dbc64d078627e83448284db1ea616493b3b",
+    "originalBytes": 5483078,
+    "retainedBytes": 130553,
+    "verifiedUTC": "2026-10-09T17:49:17.661300+00:00",
+    "compressionLevel": 6
+  },
+  {
+    "originalPath": "run/02-box-ground-macro.json",
+    "retainedPath": "run/02-box-ground-macro.json.gz",
+    "decodedSha256": "6290e2dfd4aa29414a4f90299c31ab552af8fe78d69017c8f1263465b6d1984d",
+    "retainedSha256": "1cd647effac67ab5e3aaafb61fd57e6858d1f73bb8c47b2905787dae55034b46",
+    "originalBytes": 6046260,
+    "retainedBytes": 137194,
+    "verifiedUTC": "2026-10-09T17:49:17.725478+00:00",
+    "compressionLevel": 6
+  },
+  {
+    "originalPath": "run/02-can-ground-macro.json",
+    "retainedPath": "run/02-can-ground-macro.json.gz",
+    "decodedSha256": "1bfb30314300c218cc845ace45460d559013adbf33cedd864e60e832f4ae8a1a",
+    "retainedSha256": "2d2bc72c0eab0dd76b70e044bc4ce3b1b31b8524bbf3cc06145816aed5088b5c",
+    "originalBytes": 5779184,
+    "retainedBytes": 134174,
+    "verifiedUTC": "2026-10-09T17:49:17.782734+00:00",
+    "compressionLevel": 6
+  },
+  {
+    "originalPath": "run/final-visual-observations.json",
+    "retainedPath": "run/final-visual-observations.json.gz",
+    "decodedSha256": "9091452ee922b9dcb11d93b90ccaa9e3f866c294872a8472c73c3468e4c7218f",
+    "retainedSha256": "cfc4e0ccfe5ba849630b0a34a72f9fda45ea2772e73bef4a333c44e215c5f7bb",
+    "originalBytes": 6243664,
+    "retainedBytes": 139312,
+    "verifiedUTC": "2026-10-09T17:49:17.838141+00:00",
+    "compressionLevel": 6
+  },
+  {
+    "originalPath": "run/protected-original-records.json",
+    "retainedPath": "run/protected-original-records.json.gz",
+    "decodedSha256": "b2a487bfe50d291a02fd83de1593989dc8e16a4564b15761e48c4501d9935250",
+    "retainedSha256": "41895c7dff6bb9e1087603810554a1243c973201826f5b9382c63dddef042552",
+    "originalBytes": 1639998,
+    "retainedBytes": 28065,
+    "verifiedUTC": "2026-10-09T17:49:17.853050+00:00",
+    "compressionLevel": 6
+  },
+  {
+    "originalPath": "run/raw-cdp.jsonl",
+    "retainedPath": "run/raw-cdp.jsonl.gz",
+    "decodedSha256": "3c73c76fdaff5e3a0691d4b7867115c374c33d822db962177705dcd90e6284e3",
+    "retainedSha256": "4817e17a3841743110b021b9d86242e80ec690ae77dc73274587dae802fab019",
+    "originalBytes": 29085391,
+    "retainedBytes": 6843636,
+    "verifiedUTC": "2026-10-09T17:49:18.507142+00:00",
+    "compressionLevel": 6
+  },
+  {
+    "originalPath": "run/restored-original-records.json",
+    "retainedPath": "run/restored-original-records.json.gz",
+    "decodedSha256": "b2a487bfe50d291a02fd83de1593989dc8e16a4564b15761e48c4501d9935250",
+    "retainedSha256": "41895c7dff6bb9e1087603810554a1243c973201826f5b9382c63dddef042552",
+    "originalBytes": 1639998,
+    "retainedBytes": 28065,
+    "verifiedUTC": "2026-10-09T17:49:18.523647+00:00",
+    "compressionLevel": 6
+  },
+  {
+    "originalPath": "run/retained-final-authority.json",
+    "retainedPath": "run/retained-final-authority.json.gz",
+    "decodedSha256": "aa1aa9d1caa6d8b4374f8bda903d8aca2ed3513a255e2330848a8f13caf15f6e",
+    "retainedSha256": "43404ee3ff4ad4c7c480288c1023ceb6f9536d72d3b4afd6bff06990f005cf45",
+    "originalBytes": 776644,
+    "retainedBytes": 11747,
+    "verifiedUTC": "2026-10-09T17:49:18.530137+00:00",
+    "compressionLevel": 6
+  },
+  {
+    "originalPath": "run2/00-final-authority-imported.json",
+    "retainedPath": "run2/00-final-authority-imported.json.gz",
+    "decodedSha256": "a41ecec5aa6663340e16a2c3e64916082b15520d5b834593b7453b0d969991cb",
+    "retainedSha256": "775c440f39f0fe43d0d591f485da065e10e7fc1b73c125a652debab0c5993659",
+    "originalBytes": 2785252,
+    "retainedBytes": 42599,
+    "verifiedUTC": "2026-10-09T17:49:18.550766+00:00",
+    "compressionLevel": 6
+  },
+  {
+    "originalPath": "run2/01-real-owners-remain-moved.json",
+    "retainedPath": "run2/01-real-owners-remain-moved.json.gz",
+    "decodedSha256": "a57054582387e84f2104c6a3eb51656d67f4a7d1d841421c7e2cb74509a9db62",
+    "retainedSha256": "041d94e9f00d479b3246dc3d9817fb434cb0441681c6cccdcfb8d29589bf1802",
+    "originalBytes": 3150967,
+    "retainedBytes": 47088,
+    "verifiedUTC": "2026-10-09T17:49:18.573003+00:00",
+    "compressionLevel": 6
+  },
+  {
+    "originalPath": "run2/02-box-ground-macro.json",
+    "retainedPath": "run2/02-box-ground-macro.json.gz",
+    "decodedSha256": "6002f379bd14f5b06e90f0fff1ac71c1b0224c9022bc2c275506c91aae6fc4d3",
+    "retainedSha256": "2555ff265e8a9a6c4330f25bd060f487d2e611aadd5fe3187aa89f14c07a0117",
+    "originalBytes": 3841858,
+    "retainedBytes": 54782,
+    "verifiedUTC": "2026-10-09T17:49:18.599891+00:00",
+    "compressionLevel": 6
+  },
+  {
+    "originalPath": "run2/02-can-ground-macro.json",
+    "retainedPath": "run2/02-can-ground-macro.json.gz",
+    "decodedSha256": "05f809bdbad3d2c26f96f8e3b553646b10224adeb12072a1bbd7269f500a0f52",
+    "retainedSha256": "3eb67d0cfc57e598053221c78cf542aed23441f66ab8155b221999b0d9493ccb",
+    "originalBytes": 3487692,
+    "retainedBytes": 51014,
+    "verifiedUTC": "2026-10-09T17:49:18.624472+00:00",
+    "compressionLevel": 6
+  },
+  {
+    "originalPath": "run2/final-visual-observations.json",
+    "retainedPath": "run2/final-visual-observations.json.gz",
+    "decodedSha256": "92ca8791bf268b59c16b81dee146b4e286ce831ce5c94d907a043791423f039b",
+    "retainedSha256": "bff1acc48c0f9834fc03c8e0387610cc262ce9dc77a16a45d346dbf9010254dd",
+    "originalBytes": 4143770,
+    "retainedBytes": 57721,
+    "verifiedUTC": "2026-10-09T17:49:18.653800+00:00",
+    "compressionLevel": 6
+  },
+  {
+    "originalPath": "run2/protected-original-records.json",
+    "retainedPath": "run2/protected-original-records.json.gz",
+    "decodedSha256": "b2a487bfe50d291a02fd83de1593989dc8e16a4564b15761e48c4501d9935250",
+    "retainedSha256": "41895c7dff6bb9e1087603810554a1243c973201826f5b9382c63dddef042552",
+    "originalBytes": 1639998,
+    "retainedBytes": 28065,
+    "verifiedUTC": "2026-10-09T17:49:18.667074+00:00",
+    "compressionLevel": 6
+  },
+  {
+    "originalPath": "run2/raw-cdp.jsonl",
+    "retainedPath": "run2/raw-cdp.jsonl.gz",
+    "decodedSha256": "91d7235ee18b0c6b5533b344a4dfcfd6065a7943b3b12ff5e5aa857d9d51270f",
+    "retainedSha256": "4d0a2c74a2ae15a4dc10e43ceeb5b2041cba5e49f7dc3a7a7584982f48e1e980",
+    "originalBytes": 27297953,
+    "retainedBytes": 7428304,
+    "verifiedUTC": "2026-10-09T17:49:19.289024+00:00",
+    "compressionLevel": 6
+  },
+  {
+    "originalPath": "run2/restored-original-records.json",
+    "retainedPath": "run2/restored-original-records.json.gz",
+    "decodedSha256": "b2a487bfe50d291a02fd83de1593989dc8e16a4564b15761e48c4501d9935250",
+    "retainedSha256": "41895c7dff6bb9e1087603810554a1243c973201826f5b9382c63dddef042552",
+    "originalBytes": 1639998,
+    "retainedBytes": 28065,
+    "verifiedUTC": "2026-10-09T17:49:19.309881+00:00",
+    "compressionLevel": 6
+  },
+  {
+    "originalPath": "run2/retained-final-authority.json",
+    "retainedPath": "run2/retained-final-authority.json.gz",
+    "decodedSha256": "cb91e6f5e1710a367622b48f98261c8332035d26862804eb512b75e874aca4f7",
+    "retainedSha256": "2ab8cf671d57cff20e14520c00325b5bec326bb09daf54ecb80d91e6cd637795",
+    "originalBytes": 776948,
+    "retainedBytes": 11829,
+    "verifiedUTC": "2026-10-09T17:49:19.316947+00:00",
+    "compressionLevel": 6
+  },
+  {
+    "originalPath": "run3/00-final-authority-imported.json",
+    "retainedPath": "run3/00-final-authority-imported.json.gz",
+    "decodedSha256": "f36182a714bd7661e95ac52feeca52cd76ba80af07b603198a93448eea7fd1be",
+    "retainedSha256": "dec91d22af882e16536ca991123af2f86fc113657ed5e93838b62a0560fd04af",
+    "originalBytes": 2765243,
+    "retainedBytes": 42277,
+    "verifiedUTC": "2026-10-09T17:49:19.339243+00:00",
+    "compressionLevel": 6
+  },
+  {
+    "originalPath": "run3/01-real-owners-remain-moved.json",
+    "retainedPath": "run3/01-real-owners-remain-moved.json.gz",
+    "decodedSha256": "9d23bc359a73c0b8a47adb13458eaf015518042600ff0a43bdfbfb7019d40c69",
+    "retainedSha256": "d4e0d4f1ee8dab3867f9a3f5b1780144744ff350a41046b64518c955d81aa943",
+    "originalBytes": 3159983,
+    "retainedBytes": 47128,
+    "verifiedUTC": "2026-10-09T17:49:19.363775+00:00",
+    "compressionLevel": 6
+  },
+  {
+    "originalPath": "run3/02-box-ground-macro.json",
+    "retainedPath": "run3/02-box-ground-macro.json.gz",
+    "decodedSha256": "7a01c134ba5cde021bef2f992ccf9722bea206ab28fe57f4ff24b0cb75d111d0",
+    "retainedSha256": "d66614fe17fdcfd0ed19fbb14a7cf905c6374a118fc2162e685c85dc61e12924",
+    "originalBytes": 3757982,
+    "retainedBytes": 53876,
+    "verifiedUTC": "2026-10-09T17:49:19.392089+00:00",
+    "compressionLevel": 6
+  },
+  {
+    "originalPath": "run3/02-can-ground-macro.json",
+    "retainedPath": "run3/02-can-ground-macro.json.gz",
+    "decodedSha256": "fcadcb0a387d756728833699864b7f483d113fcf608cd35aea4f2bfed811642b",
+    "retainedSha256": "6b3d5934098d631d0f63d65f7502b93ff33473df2828debf02abd122ed53cd6c",
+    "originalBytes": 3421234,
+    "retainedBytes": 50189,
+    "verifiedUTC": "2026-10-09T17:49:19.417423+00:00",
+    "compressionLevel": 6
+  },
+  {
+    "originalPath": "run3/final-visual-observations.json",
+    "retainedPath": "run3/final-visual-observations.json.gz",
+    "decodedSha256": "c36488fddcd2466b8b8b2b054595c1289a870b301751df333402470b6ca47cf9",
+    "retainedSha256": "6110810357a6ae7f73ad2099dda94d280bbb123f014b9c0abeb95e79d12efe26",
+    "originalBytes": 4170208,
+    "retainedBytes": 57899,
+    "verifiedUTC": "2026-10-09T17:49:19.450111+00:00",
+    "compressionLevel": 6
+  },
+  {
+    "originalPath": "run3/protected-original-records.json",
+    "retainedPath": "run3/protected-original-records.json.gz",
+    "decodedSha256": "b2a487bfe50d291a02fd83de1593989dc8e16a4564b15761e48c4501d9935250",
+    "retainedSha256": "41895c7dff6bb9e1087603810554a1243c973201826f5b9382c63dddef042552",
+    "originalBytes": 1639998,
+    "retainedBytes": 28065,
+    "verifiedUTC": "2026-10-09T17:49:19.462701+00:00",
+    "compressionLevel": 6
+  },
+  {
+    "originalPath": "run3/raw-cdp.jsonl",
+    "retainedPath": "run3/raw-cdp.jsonl.gz",
+    "decodedSha256": "ddb6e28908885cd6b92f76de2e58cd36918a32dad1df3d27db29a67b581d456c",
+    "retainedSha256": "0cf11695e834c160b0c293d2c43935acc576b8ac20bf0646f031dd2e03f6459a",
+    "originalBytes": 27022647,
+    "retainedBytes": 7246850,
+    "verifiedUTC": "2026-10-09T17:49:20.074613+00:00",
+    "compressionLevel": 6
+  },
+  {
+    "originalPath": "run3/restored-original-records.json",
+    "retainedPath": "run3/restored-original-records.json.gz",
+    "decodedSha256": "b2a487bfe50d291a02fd83de1593989dc8e16a4564b15761e48c4501d9935250",
+    "retainedSha256": "41895c7dff6bb9e1087603810554a1243c973201826f5b9382c63dddef042552",
+    "originalBytes": 1639998,
+    "retainedBytes": 28065,
+    "verifiedUTC": "2026-10-09T17:49:20.095439+00:00",
+    "compressionLevel": 6
+  },
+  {
+    "originalPath": "run3/retained-final-authority.json",
+    "retainedPath": "run3/retained-final-authority.json.gz",
+    "decodedSha256": "cb91e6f5e1710a367622b48f98261c8332035d26862804eb512b75e874aca4f7",
+    "retainedSha256": "2ab8cf671d57cff20e14520c00325b5bec326bb09daf54ecb80d91e6cd637795",
+    "originalBytes": 776948,
+    "retainedBytes": 11829,
+    "verifiedUTC": "2026-10-09T17:49:20.101422+00:00",
+    "compressionLevel": 6
+  }
+]

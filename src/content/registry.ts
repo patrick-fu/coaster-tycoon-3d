@@ -1,11 +1,12 @@
 import {ensure,record} from '../simulation/validation.js';
 import {referenceFamilies,referenceVariants} from './rct2-reference.js';
+import type {ProductId} from './consumables.js';
 
-export const CONTENT_VERSION=4 as const;
+export const CONTENT_VERSION=5 as const;
 export type ContentIdentity={familyId:string,variantId:string,modeId:string};
 type ServiceKind='food'|'drink'|'restroom';
-type Construction={kind:'tracked',profileId:'independent-circuit-v1'|'independent.wooden-circuit-v1'}|{kind:'channel',profileId:'independent.log-flume-v1'}|{kind:'fixed',profileId:'independent.carousel-v1'}|{kind:'facility',service:ServiceKind,profileId:'independent-services-v1'}|{kind:'unimplemented',referenceShape:string};
-type Operation={kind:'circuit',profileId:'independent-circuit-v1'|'independent.wooden-circuit-v1'}|{kind:'channel-circuit',profileId:'independent.log-flume-v1'}|{kind:'rotation',profileId:'independent.carousel-v1'}|{kind:'service',service:ServiceKind,profileId:'independent-services-v1'}|{kind:'unimplemented'};
+type Construction={kind:'tracked',profileId:'independent-circuit-v1'|'independent.wooden-circuit-v1'}|{kind:'channel',profileId:'independent.log-flume-v1'}|{kind:'fixed',profileId:'independent.carousel-v1'}|{kind:'facility',service:ServiceKind,profileId:'independent-services-v1'}|{kind:'facility',service:'food'|'drink',profileId:'independent.consumables-v1',productId:ProductId}|{kind:'unimplemented',referenceShape:string};
+type Operation={kind:'circuit',profileId:'independent-circuit-v1'|'independent.wooden-circuit-v1'}|{kind:'channel-circuit',profileId:'independent.log-flume-v1'}|{kind:'rotation',profileId:'independent.carousel-v1'}|{kind:'service',service:ServiceKind,profileId:'independent-services-v1'}|{kind:'service',service:'food'|'drink',profileId:'independent.consumables-v1',productId:ProductId}|{kind:'unimplemented'};
 export type Presentation={kind:'procedural-coaster',profileId:'classic-candidate-v1'}|{kind:'detailed-wooden-coaster',profileId:'detailed-wooden-candidate-v1'}|{kind:'detailed-carousel',profileId:'detailed-carousel-candidate-v1'}|{kind:'detailed-log-flume',profileId:'detailed-log-flume-candidate-v1'}|{kind:'procedural-facility',service:ServiceKind,profileId:'classic-candidate-v1'}|{kind:'unimplemented'};
 type Capabilities={construction:Construction,operation:Operation,presentation:Presentation};
 type Family={id:string,label:string,category:string,reference:{originalSlot:number,sourceUrl:string}|null};
@@ -36,6 +37,10 @@ for(const service of ['food','drink','restroom'] as const){
  modes.set(modeId,{id:modeId,label:service==='restroom'?'Independent restroom service':'Independent retail service',evidence:'project-candidate'});
  variants.set(variantId,{id:variantId,label:`Independent ${service} facility`,reference:null,choices:[{familyId,modeIds:[modeId],capabilities:{construction:{kind:'facility',service,profileId:'independent-services-v1'},operation:{kind:'service',service,profileId:'independent-services-v1'},presentation:{kind:'procedural-facility',service,profileId:'classic-candidate-v1'}}}]});
 }
+for(const [service,variantId,productId,label] of [['food','independent.burger-stand','independent.burger','Independent Burger stand'],['drink','independent.soft-drink-stand','independent.soft-drink','Independent Soft-drink stand']] as const){
+ const familyId='independent.'+service+'-facility',modeId='independent.retail',profileId='independent.consumables-v1' as const;
+ variants.set(variantId,{id:variantId,label,reference:null,choices:[{familyId,modeIds:[modeId],capabilities:{construction:{kind:'facility',service,profileId,productId},operation:{kind:'service',service,profileId,productId},presentation:{kind:'procedural-facility',service,profileId:'classic-candidate-v1'}}}]});
+}
 for(const f of referenceFamilies)families.set(f.id,{id:f.id,label:f.label,category:f.category,reference:{originalSlot:f.originalSlot,sourceUrl:f.sourceUrl}});
 for(const v of referenceVariants){
  const choices:Choice[]=v.choices.map(c=>{
@@ -50,6 +55,7 @@ export function legacyRideContent():ContentIdentity{return{...rideIdentity};}
 export function woodenRideContent():ContentIdentity{return{...woodenIdentity};}
 export function carouselRideContent():ContentIdentity{return{...carouselIdentity};}
 export function flumeRideContent():ContentIdentity{return{...flumeIdentity};}
+export function consumableFacilityContent(product:ProductId):ContentIdentity{return{familyId:'independent.'+(product==='independent.burger'?'food':'drink')+'-facility',variantId:product==='independent.burger'?'independent.burger-stand':'independent.soft-drink-stand',modeId:'independent.retail'};}
 export function legacyFacilityContent(service:ServiceKind):ContentIdentity{return{familyId:`independent.${service}-facility`,variantId:`independent.${service==='restroom'?'restroom':service+'-stand'}`,modeId:service==='restroom'?'independent.restroom-service':'independent.retail'};}
 
 export function resolveContent(value:unknown):ResolvedContent{
@@ -70,5 +76,5 @@ export function executableContent(value:unknown,kind:'ride'|ServiceKind):Content
 }
 
 export function catalogue(availableProfiles:ReadonlySet<string>=new Set()){
- return structuredClone({contentVersion:CONTENT_VERSION,families:[...families.values()],variants:[...variants.values()].map(v=>({...v,choices:v.choices.map(c=>({...c,runtimeAvailable:c.capabilities.construction.kind!=='unimplemented'&&c.capabilities.operation.kind!=='unimplemented'&&c.capabilities.presentation.kind!=='unimplemented'&&(!(c.capabilities.construction.kind==='tracked'||c.capabilities.construction.kind==='fixed'||c.capabilities.construction.kind==='channel')||c.capabilities.construction.profileId==='independent-circuit-v1'||availableProfiles.has(c.capabilities.construction.profileId))}))})),modes:[...modes.values()]});
+ return structuredClone({contentVersion:CONTENT_VERSION,families:[...families.values()],variants:[...variants.values()].map(v=>({...v,choices:v.choices.map(c=>({...c,runtimeAvailable:c.capabilities.construction.kind!=='unimplemented'&&c.capabilities.operation.kind!=='unimplemented'&&c.capabilities.presentation.kind!=='unimplemented'&&(c.capabilities.construction.profileId==='independent-circuit-v1'||c.capabilities.construction.profileId==='independent-services-v1'||availableProfiles.has(c.capabilities.construction.profileId))}))})),modes:[...modes.values()]});
 }
