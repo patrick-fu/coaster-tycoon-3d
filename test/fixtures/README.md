@@ -83,3 +83,42 @@ The current production receiver independently passes all20 packaged authority/
 view checkpoints under17 and1200 tick batches. Future Flume changes must
 preserve them and all earlier v7/v8/v9 oracles; this fixture supplies no
 Flume, original, cross-runtime, scale/GPU or human acceptance.
+
+## Actual pre-commerce v11 paid park and generic commerce continuation
+
+`v11-consumables-legacy-continuation.json.gz` is the unchanged643742-byte
+fixture from independently frozen source
+`89030f9062bf4cff6245722dd8d3846d06d3c83c`,compiled Engine SHA256
+`2b24637ba88a62d0a41666d1a57f5c55ab5677298c781a65067453dbb4edc8b6`.
+Fixture SHA256 is
+`2ac88098d81d8fdf747aedaca8eb3caf8f7fd48e592e9a6e2e9d7d64af4c0ef1`;
+master index SHA256 is
+`1ca9e0dfccc0a5a31622977cfa2d29ccf7cb86d90695a9bb303cc54e3ebbb86d`.
+The full input legally owns45 paid seats:wood8,Carousel16,Flume4 andsteel3/8/6.
+It also retains actual generic sales,retired/reused shop instances,32 wrappers,
+a full bin and two pending purchases. The second input is the genuine next
+Flume cycle after full unload/reopen,with one paid slot0 owner and three holes.
+No owner,Guest,State,RNG or numeric Rules value is edited for either case.
+
+Every frozen continuation executes actual unpause before offsets0/1/17/400/1200.
+Complete authority and original full projections genuinely change; a fresh old
+Engine process reconstructs3472 setup events and24 complete comparisons. Rules
+are the exact shipping `withFlumeProfile(mixedRules)` receiver on Linux
+Node20.19.2. This is matching-runtime project regression,not Chrome/default
+portability,original-game agreement or future-profile correctness.
+
+The new save12 receiver independently checks two cases with/without commerce
+and17/1200 batching:40 authority/full-view checkpoint pairs. Projection first
+asserts all new held fields are null,generic facility identities unchanged and
+no typed ground litter;then removes only declared commerce/product/bounds/type
+fields and restores11/4/4. Complete old bytes,poses,owners,wallets,RNG and ledgers
+remain expected bytes from the old source. Separate smuggling controls reject
+later facilities/fields before migration without changing pause or quotes.
+
+The immutable generation,masters,independent replay,retention and original
+failed attempts remain at
+`/Volumes/WD/code/workspaces/coaster-v11-consumables-golden/REPORT.md` and
+`/workspace/coaster-v11-consumables-golden`. WD336 and remote404 file hashes
+are verified;57 frozen scientific files are read-only and11 owned process
+groups terminal. [Current receiving checks](../../docs/verification/consumables/README.md)
+retain actual outcomes separately. All v7–v10 fixtures remain byte-identical.

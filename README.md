@@ -54,7 +54,7 @@ timber supports, a covered station and connected entrance/exit stairs. Build
 it from **Library → Water rides → Log Flume**, complete the closed lift/drop/
 splash circuit and its empty Test, then Open it for real paid guests. Successful
 test results remain available until an explicit new Test. Fresh parks retain
-the five-ride layout; this ride is available for construction. This source uses
+the five-ride layout; this ride is available for construction. Its published source uses
 save11/content4/protocol4 and validates older parks before adding declared
 fields. [Finite checks and actual paid image](docs/verification/log-flume/README.md)
 record 238 kernel checks and seven current production-worker paid controls.
@@ -63,6 +63,17 @@ records the current build, HTTP and browser boundaries; the
 [frozen candidate](https://patrick-fu.github.io/coaster-tycoon-3d/previews/log-flume-89030f9/?showcase=classic)
 retains this source. Original LFB1 agreement and Patrick's visual/play acceptance
 remain open.
+
+The working consumables branch adds independently identified Burger and Soft-drink
+stalls to the existing food/drink Library families. Actual purchases give guests
+unfinished items; use changes their needs over time and ends in an empty box or
+can, which goes to a bin or becomes typed ground litter. Stock expense and gross
+margin reflect each selected product. This working source uses save12/content5/
+protocol5 and retains complete historical continuation checks. [Current finite
+evidence](docs/verification/consumables/README.md) records262 passing kernel checks;
+the new-product player/public path remains pending. These changes are not yet
+available in the current public preview and do not qualify full commercial or
+original-game behaviour.
 
 The [earlier art checkpoint](https://patrick-fu.github.io/coaster-tycoon-3d/previews/classic-a7d6451/?showcase=classic)
 has procedural materials and composed models, three steel-coaster

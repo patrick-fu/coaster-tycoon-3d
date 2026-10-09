@@ -9,6 +9,7 @@ import {carouselEditable,fixedProfile} from './carousel.js';
 import {flumeProfile} from './flume-profile.js';
 import {boatEditable} from './boat.js';
 import {compileFlumeCourse} from './flume-native.js';
+import {commerceProfileId,facilityProduct,facilityStockCost,productRule} from '../content/consumables.js';
 
 export type FacilityKind='food'|'drink'|'restroom';
 export type Facility={id:number,instanceId:number,content:ContentIdentity,name:string,kind:FacilityKind,element:number,open:boolean,price:number,income:number,sales:number};
@@ -33,7 +34,7 @@ export function chooseFacility(g:Guest,s:State,rules:Rules,index:ServiceIndex,ro
   const motive=(f:Facility)=>f.kind==='food'?g.hunger:f.kind==='drink'?g.thirst:g.bladder;
   let choice:{facility:number,goal:PathPoint,need:number,distance:number}|null=null;
   for(const f of s.facilities){
-    if(!f.open||g.cash<f.price||g.wrapper&&f.kind!=='restroom'||motive(f)<rules.services.needThreshold)continue;
+    if(!f.open||g.cash<f.price||(g.wrapper||g.held)&&f.kind!=='restroom'||motive(f)<rules.services.needThreshold)continue;
     const e=index.elements.get(f.element);if(e?.kind!=='facility')continue;const goal=facilityApproach(e);
     if(!publicPath(goal,index))continue;const distance=route.distance(g.point,goal,null);if(distance===null)continue;
     if(!choice||motive(f)>choice.need||motive(f)===choice.need&&distance<choice.distance)choice={facility:f.id,goal,need:motive(f),distance};
@@ -43,16 +44,28 @@ export function chooseFacility(g:Guest,s:State,rules:Rules,index:ServiceIndex,ro
 export function recoverFacility(g:Guest,index:ServiceIndex):boolean{
   if(g.facility===null)return true;
   const f=index.facilities.get(g.facility),e=f?index.elements.get(f.element):undefined;
-  return !!f&&f.open&&g.cash>=f.price&&e?.kind==='facility'&&publicPath(facilityApproach(e),index);
+  return !!f&&f.open&&g.cash>=f.price&&(f.kind==='restroom'||!g.held)&&e?.kind==='facility'&&publicPath(facilityApproach(e),index);
 }
 export function buy(g:Guest,s:State,rules:Rules,index:ServiceIndex){
-  const f=index.facilities.get(g.facility!)!,r=rules.services,stock=f.kind==='food'?r.foodStock:f.kind==='drink'?r.drinkStock:0,price=f.price;
+  const f=index.facilities.get(g.facility!)!,r=rules.services,product=facilityProduct(f.content,rules),stock=facilityStockCost(f,rules),price=f.price;
   const cash=BigInt(s.cash)+BigInt(price)-BigInt(stock);
   ensure(cash>=BigInt(-Number.MAX_SAFE_INTEGER)&&cash<=BigInt(Number.MAX_SAFE_INTEGER)&&integer(s.ledger.shopSales+price)&&integer(s.ledger.stock+stock)&&integer(f.income+price)&&integer(f.sales+1)&&integer(g.spent+price),'CAPACITY','Shop accounting capacity exhausted.');
   g.cash-=price;g.spent+=price;s.cash=Number(cash);s.ledger.shopSales+=price;s.ledger.stock+=stock;f.income+=price;f.sales++;
-  if(f.kind!=='restroom'){g.wrapper=true;g.wrapperTick=s.tick;}
-  if(f.kind==='food')g.hunger=Math.max(0,g.hunger-r.relief);else if(f.kind==='drink')g.thirst=Math.max(0,g.thirst-r.relief);else g.bladder=Math.max(0,g.bladder-r.relief);
+  if(product)g.held={kind:'consumable',productId:product.id,remaining:product.rule.useUnits};
+  else{
+    if(f.kind!=='restroom'){g.wrapper=true;g.wrapperTick=s.tick;}
+    if(f.kind==='food')g.hunger=Math.max(0,g.hunger-r.relief);else if(f.kind==='drink')g.thirst=Math.max(0,g.thirst-r.relief);else g.bladder=Math.max(0,g.bladder-r.relief);
+  }
   g.facility=null;g.serviceProgress=0;g.phase='walking';g.thought='none';
+}
+export function consume(g:Guest,s:State,rules:Rules){
+ const held=g.held;if(held?.kind!=='consumable'||g.phase==='riding'||g.phase==='stranded')return;
+ const profile=rules.commerceProfiles![commerceProfileId]!;
+ if((s.tick%profile.consumeTicks+g.id%profile.consumeTicks)%profile.consumeTicks!==0)return;
+ const p=productRule(held.productId,rules),remaining=Math.max(0,held.remaining-profile.unitsPerCall);
+ for(const need of ['hunger','thirst','bladder'] as const)g[need]=Math.max(0,Math.min(1000,g[need]+p.effects[need]));
+ // Replace nested ownership so a later failed advance cannot alter the original guest.
+ g.held=remaining?{...held,remaining}:{kind:'container',containerId:p.containerId,sinceTick:s.tick};
 }
 function publicPath(p:PathPoint,index:PeopleIndex){return index.paths.get(key(p))?.queueFor===null;}
 function allowed(staff:Staff,p:PathPoint){return inPatrol(staff.patrol,p);}

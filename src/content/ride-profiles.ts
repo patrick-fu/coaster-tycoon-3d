@@ -27,13 +27,17 @@ export function rideFootprint(origin:Connector,piece:PieceRule,profile:RideProfi
 }
 
 export function legacyRuleJSON(rules:Rules):string{
- const {rideProfiles,fixedProfiles,channelProfiles,...common}=rules;return JSON.stringify(common);
+ const {rideProfiles,fixedProfiles,channelProfiles,commerceProfiles,...common}=rules;return JSON.stringify(common);
 }
 
 export function v9RuleJSON(rules:Rules):string{
- const {fixedProfiles,channelProfiles,...previous}=rules;return JSON.stringify(previous);
+ const {fixedProfiles,channelProfiles,commerceProfiles,...previous}=rules;return JSON.stringify(previous);
 }
 
 export function v10RuleJSON(rules:Rules):string{
- const {channelProfiles,...previous}=rules;return JSON.stringify(previous);
+ const {channelProfiles,commerceProfiles,...previous}=rules;return JSON.stringify(previous);
+}
+
+export function v11RuleJSON(rules:Rules):string{
+ const {commerceProfiles,...previous}=rules;return JSON.stringify(previous);
 }

@@ -7,6 +7,7 @@ import type {Boat} from './boat.js';
 import type {FlumeProfile} from '../content/log-flume.js';
 import type {SceneryRules,SceneryType} from './scenery.js';
 import type {ContentIdentity} from '../content/registry.js';
+import type {CommerceProfile} from '../content/consumables.js';
 export type Direction=0|1|2|3;
 export type Attitude=-1|0|1;
 export type Tile={x:number,y:number};
@@ -18,7 +19,7 @@ export type WoodenVehicleRules={kind:'coupled-flat',originMm:Vector,wheelbaseMm:
 export type RideProfile={motion:MotionRules,pieces:Record<string,PieceRule>,vehicle:WoodenVehicleRules,footprints:Record<string,[Cell[],Cell[],Cell[],Cell[]]>};
 export type FixedRideProfile={size:number,bodyHeight:number,portalHeight:number,deckMm:number,seats:{x:number,y:number,z:number,yaw:number}[],boardTicks:number,minLoadTicks:number,maxLoadTicks:number,accelTicks:number,cruiseTicks:number,decelTicks:number,angleUnits:number,peakUnitsPerTick:number,unloadTicks:number,buildPrice:number,portalPrice:number,defaultPrice:number,maxPrice:number,upkeep:number,inspectionInterval:number,inspectionTicks:number,repairTicks:number};
 export type ChannelRideProfile={vehicle:FlumeProfile,pieces:Record<string,PieceRule>};
-export type Rules={scenery:SceneryRules,housekeeping:HousekeepingRules,services:ServiceRules,guests:GuestRules,motion:MotionRules,id:string,evidence:'project-candidate'|'reference-verified',pathPrice:number,portalPrice:number,terrainPrice:number,refundPerThousand:number,maxSupport:number,maxHeight:number,pieces:Record<string,PieceRule>,rideProfiles?:Record<string,RideProfile>,fixedProfiles?:Record<string,FixedRideProfile>,channelProfiles?:Record<string,ChannelRideProfile>};
+export type Rules={scenery:SceneryRules,housekeeping:HousekeepingRules,services:ServiceRules,guests:GuestRules,motion:MotionRules,id:string,evidence:'project-candidate'|'reference-verified',pathPrice:number,portalPrice:number,terrainPrice:number,refundPerThousand:number,maxSupport:number,maxHeight:number,pieces:Record<string,PieceRule>,rideProfiles?:Record<string,RideProfile>,fixedProfiles?:Record<string,FixedRideProfile>,channelProfiles?:Record<string,ChannelRideProfile>,commerceProfiles?:Record<string,CommerceProfile>};
 export type WorldOptions={side:number,cash:number,maxLoan:number,seed:number,land?:{tile:Tile,height:number,water:number,owned:boolean}[]};
 export type Track={id:number,kind:'track',ride:number,piece:string,origin:Connector};
 export type Path={id:number,kind:'path',tile:Tile,height:number,queueFor:number|null};
@@ -31,7 +32,7 @@ export type TrackedRide=RideBase&{track:number[],cars:number,body?:never};
 export type ChannelRide=RideBase&{track:number[],cars?:never,body?:never};
 export type FixedRide=RideBase&{body:number,track?:never,cars?:never};
 export type Ride=TrackedRide|ChannelRide|FixedRide;
-export type State={version:11,contentVersion:4,nextInstance:number,amenities:Amenity[],litter:Litter[],facilities:Facility[],retiredShopIncome:number,retiredStock:number,retiredRideIncome:number,staff:Staff[],rules:string,side:number,tick:number,revision:number,topologyRevision:number,rng:number,paused:boolean,initialCash:number,cash:number,loan:number,maxLoan:number,spent:number,refunded:number,nextElement:number,nextEntity:number,people:PeopleState,ledger:Ledger,trains:Train[],carouselSessions:CarouselSession[],boats:Boat[],terrain:number[],water:number[],owned:boolean[],rides:Ride[],elements:Element[]};
+export type State={version:12,contentVersion:5,nextInstance:number,amenities:Amenity[],litter:Litter[],facilities:Facility[],retiredShopIncome:number,retiredStock:number,retiredRideIncome:number,staff:Staff[],rules:string,side:number,tick:number,revision:number,topologyRevision:number,rng:number,paused:boolean,initialCash:number,cash:number,loan:number,maxLoan:number,spent:number,refunded:number,nextElement:number,nextEntity:number,people:PeopleState,ledger:Ledger,trains:Train[],carouselSessions:CarouselSession[],boats:Boat[],terrain:number[],water:number[],owned:boolean[],rides:Ride[],elements:Element[]};
 export type Command=
  | {type:'create-ride',name:string,tile:Tile,height:number,direction:Direction,content?:ContentIdentity}
  | {type:'append-track',ride:number,piece:string}

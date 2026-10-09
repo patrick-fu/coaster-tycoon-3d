@@ -4,10 +4,11 @@ import {accessible,sharedCount} from './services.js';
 import {inPatrol} from './patrol.js';
 import {LIMITS,type State,type Rules,type Tile} from './types.js';
 import {ensure,integer,record} from './validation.js';
+import type {ContainerId} from '../content/consumables.js';
 
 export type Amenity={id:number,kind:'bench'|'bin',path:number,occupant:number|null,fill:number};
 export type AmenityElement={id:number,kind:'amenity',amenityType:'bench'|'bin',path:number,tile:Tile,height:number};
-export type Litter={id:number,point:PathPoint};
+export type Litter={id:number,point:PathPoint,containerId?:ContainerId};
 export type CleanupJob={kind:'litter'|'bin',target:number};
 export type HousekeepingRules={buildPrice:number,binCapacity:number,restTicks:number,restEnergy:number,restNausea:number,energyThreshold:number,nauseaThreshold:number,wrapperTicks:number,cleanupTicks:number};
 const key=(p:PathPoint)=>`${p.x},${p.y},${p.z}`;
@@ -21,11 +22,12 @@ export function validateHousekeepingRules(input:HousekeepingRules):HousekeepingR
 }
 export function amenityPoint(a:Amenity,index:ServiceIndex):PathPoint|null{const p=index.elements.get(a.path);return p?.kind==='path'?{x:p.tile.x,y:p.tile.y,z:p.height}:null;}
 function publicPoint(p:PathPoint,index:ServiceIndex){return index.paths.get(key(p))?.queueFor===null;}
+export function carriesWaste(g:Guest){return g.wrapper||g.held?.kind==='container';}
 export function releaseAmenity(g:Guest,index:ServiceIndex){if(g.amenity!==null){const a=index.amenities.get(g.amenity);if(a?.occupant===g.id)a.occupant=null;}g.amenity=null;g.restProgress=0;}
 export function chooseAmenity(g:Guest,s:State,rules:Rules,index:ServiceIndex,route:Routing):{amenity:number,goal:PathPoint}|null{
   let choice:{amenity:number,goal:PathPoint,distance:number}|null=null;
   for(const a of s.amenities){
-    if(a.kind==='bin'? !g.wrapper||a.fill>=rules.housekeeping.binCapacity : g.wrapper||a.occupant!==null||g.energy>rules.housekeeping.energyThreshold&&g.nausea<rules.housekeeping.nauseaThreshold)continue;
+    if(a.kind==='bin'? !carriesWaste(g)||a.fill>=rules.housekeeping.binCapacity : carriesWaste(g)||a.occupant!==null||g.energy>rules.housekeeping.energyThreshold&&g.nausea<rules.housekeeping.nauseaThreshold)continue;
     const goal=amenityPoint(a,index);if(!goal||!publicPoint(goal,index))continue;const distance=route.distance(g.point,goal,null);if(distance===null)continue;
     if(!choice||distance<choice.distance)choice={amenity:a.id,goal,distance};
   }
@@ -33,11 +35,11 @@ export function chooseAmenity(g:Guest,s:State,rules:Rules,index:ServiceIndex,rou
 }
 export function amenityAvailable(g:Guest,rules:Rules,index:ServiceIndex){
   if(g.amenity===null)return true;const a=index.amenities.get(g.amenity),point=a?amenityPoint(a,index):null;
-  return !!a&&!!point&&publicPoint(point,index)&&(a.kind==='bin'?g.wrapper&&a.fill<rules.housekeeping.binCapacity:a.occupant===null||a.occupant===g.id);
+  return !!a&&!!point&&publicPoint(point,index)&&(a.kind==='bin'?carriesWaste(g)&&a.fill<rules.housekeeping.binCapacity:a.occupant===null||a.occupant===g.id);
 }
 export function useAmenity(g:Guest,rules:Rules,index:ServiceIndex){
   const a=index.amenities.get(g.amenity!)!;
-  if(a.kind==='bin'){a.fill++;g.wrapper=false;g.wrapperTick=0;releaseAmenity(g,index);g.thought='none';}
+  if(a.kind==='bin'){a.fill++;g.wrapper=false;g.wrapperTick=0;if(g.held?.kind==='container')g.held=null;releaseAmenity(g,index);g.thought='none';}
   else{a.occupant=g.id;g.phase='resting';g.restProgress=0;}
 }
 export function rest(g:Guest,rules:Rules,index:ServiceIndex){
@@ -45,8 +47,9 @@ export function rest(g:Guest,rules:Rules,index:ServiceIndex){
   if(g.restProgress>=rules.housekeeping.restTicks){g.energy=Math.min(1000,g.energy+rules.housekeeping.restEnergy);g.nausea=Math.max(0,g.nausea-rules.housekeeping.restNausea);releaseAmenity(g,index);g.phase='walking';}
 }
 export function dropLitter(g:Guest,s:State,rules:Rules,index:ServiceIndex){
-  if(g.wrapper&&g.amenity===null&&g.phase!=='riding'&&g.phase!=='queued'&&s.tick-g.wrapperTick>=rules.housekeeping.wrapperTicks&&publicPoint(g.point,index)&&sharedCount(s)<LIMITS.sharedEntities&&integer(s.nextEntity+1)){
-    const litter={id:s.nextEntity++,point:{...g.point}};s.litter.push(litter);index.litter.set(litter.id,litter);g.wrapper=false;g.wrapperTick=0;
+  const container=g.held?.kind==='container'?g.held:null;
+  if(carriesWaste(g)&&g.amenity===null&&g.phase!=='riding'&&g.phase!=='queued'&&s.tick-(container?.sinceTick??g.wrapperTick)>=rules.housekeeping.wrapperTicks&&publicPoint(g.point,index)&&sharedCount(s)<LIMITS.sharedEntities&&integer(s.nextEntity+1)){
+    const litter:Litter={id:s.nextEntity++,point:{...g.point},...(container?{containerId:container.containerId}:{})};s.litter.push(litter);index.litter.set(litter.id,litter);g.wrapper=false;g.wrapperTick=0;if(container)g.held=null;
   }
 }
 function clear(t:Staff){t.cleanup=null;t.goal=null;t.next=null;t.progress=0;t.work=0;}

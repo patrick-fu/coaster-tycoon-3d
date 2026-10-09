@@ -5,10 +5,10 @@ import {eligibility,portalApproach,validatePortal} from './operation.js';
 import {compileCourse,createTrain,stepTrain,type Course,type Measurements,type Train} from './motion.js';
 import {boardBoat,boardCarousel,boardGuests,detachRideGuests,recoverPeople,stepPeople,unloadBoat,unloadGuests,type Guest,type PathPoint,type PeopleIndex,type Routing} from './people.js';
 import {facilityApproach,recoverStaff,sharedCount,stepFinance,stepStaff,type Facility,type FacilityElement,type ServiceIndex,type Staff} from './services.js';
-import {amenityPoint,recoverCleanup,stepHandymen,type Amenity,type AmenityElement} from './housekeeping.js';
+import {amenityPoint,carriesWaste,recoverCleanup,stepHandymen,type Amenity,type AmenityElement} from './housekeeping.js';
 import {encodePatrol,inPatrol} from './patrol.js';
 import {project,validateView} from './view.js';
-import {legacyRuleJSON,v9RuleJSON,v10RuleJSON,resolveRideRules,rideFootprint,woodenProfile} from '../content/ride-profiles.js';
+import {legacyRuleJSON,v9RuleJSON,v10RuleJSON,v11RuleJSON,resolveRideRules,rideFootprint,woodenProfile} from '../content/ride-profiles.js';
 import {carouselCycleTicks,carouselEditable,fixedBodyCells,fixedProfile,newCarouselSession,type CarouselSession} from './carousel.js';
 import {qualifyWoodenCourse} from './wooden-motion.js';
 import {woodenInterface,woodenPortalCells} from './wooden-placement.js';
@@ -19,6 +19,8 @@ import {flumePortalCells,flumePortalInterface} from './flume-portal.js';
 import {boatEditable,boatQualified,createBoat,finishBoatUnloading,stepBoat,type Boat} from './boat.js';
 import {sceneryTypes} from './scenery.js';
 import {CONTENT_VERSION,catalogue,executableContent,legacyRideContent,legacyFacilityContent,resolveContent} from '../content/registry.js';
+import {commerceProfileId,containerIds,facilityProduct,facilityStockCost,productRule} from '../content/consumables.js';
+type HistoricalVersion=7|8|9|10|11;
 type Index=ServiceIndex&{cells:Map<number,{id:number,cell:Cell}[]>,records:number};
 type Plan={cost:number,category:'construction'|'refund'|'loan'|'none',cells:Cell[],endpoint?:Connector,id?:number,commit:()=>void};
 const at=(t:Tile)=>t.y*256+t.x;
@@ -83,14 +85,14 @@ export class Engine{
     if(options.land){ensure(Array.isArray(options.land)&&options.land.length<=65536,'INVALID_COMMAND','Invalid land setup.');const seen=new Set<number>();
       for(const l of options.land){record(l,['tile','height','water','owned']);validTile(l.tile);this.bounds(l.tile,options.side);ensure(!seen.has(at(l.tile))&&integer(l.height,0,this.rules.maxHeight)&&l.height%16===0&&integer(l.water,0,this.rules.maxHeight)&&l.water%16===0&&(l.water===0||l.water>=l.height)&&typeof l.owned==='boolean','INVALID_COMMAND','Invalid land setup.');seen.add(at(l.tile));terrain[at(l.tile)]=l.height;water[at(l.tile)]=l.water;owned[at(l.tile)]=l.owned;}
     }
-    this.state={version:11,contentVersion:CONTENT_VERSION,nextInstance:1,amenities:[],litter:[],facilities:[],retiredShopIncome:0,retiredStock:0,retiredRideIncome:0,staff:[],rules:JSON.stringify(this.rules),side:options.side,tick:0,revision:0,topologyRevision:0,rng:options.seed,paused:false,initialCash:options.cash,cash:options.cash,loan:0,maxLoan:options.maxLoan,spent:0,refunded:0,nextElement:1,nextEntity:1,people:{entry:null,open:false,guests:[],departedSpent:0},ledger:{rideSales:0,shopSales:0,stock:0,wages:0,upkeep:0,interest:0},trains:[],carouselSessions:[],boats:[],terrain,water,owned,rides:[],elements:[]};
+    this.state={version:12,contentVersion:CONTENT_VERSION,nextInstance:1,amenities:[],litter:[],facilities:[],retiredShopIncome:0,retiredStock:0,retiredRideIncome:0,staff:[],rules:JSON.stringify(this.rules),side:options.side,tick:0,revision:0,topologyRevision:0,rng:options.seed,paused:false,initialCash:options.cash,cash:options.cash,loan:0,maxLoan:options.maxLoan,spent:0,refunded:0,nextElement:1,nextEntity:1,people:{entry:null,open:false,guests:[],departedSpent:0},ledger:{rideSales:0,shopSales:0,stock:0,wages:0,upkeep:0,interest:0},trains:[],carouselSessions:[],boats:[],terrain,water,owned,rides:[],elements:[]};
     this.index=this.indexState(this.state);
   }
   get revision():string{return `${this.session}:${this.generation}:${this.state.revision}`;}
   view(input:unknown){return result(()=>({...project(this.state,this.rules,validateView(input,this.state.side),this.index.elements,id=>this.course(this.ride(id)),id=>this.channelCourse(this.ride(id))),commandRevision:this.revision}));}
   inspect(kind:unknown,id:unknown){return result(()=>{ensure(integer(id,0),'INVALID_COMMAND','Invalid selection identifier.');const selected=kind==='guest'?this.index.guests.get(id):kind==='staff'?this.index.staff.get(id):kind==='element'?this.index.elements.get(id):undefined;ensure(selected,'UNKNOWN_ELEMENT','Selection is unavailable.');return structuredClone(selected);});}
   snapshot():State{return structuredClone(this.state);}
-  catalogue(){return catalogue(new Set([...Object.keys(this.rules.rideProfiles??{}),...Object.keys(this.rules.fixedProfiles??{}),...Object.keys(this.rules.channelProfiles??{})]));}
+  catalogue(){return catalogue(new Set([...Object.keys(this.rules.rideProfiles??{}),...Object.keys(this.rules.fixedProfiles??{}),...Object.keys(this.rules.channelProfiles??{}),...Object.keys(this.rules.commerceProfiles??{})]));}
   exportSave():string{return JSON.stringify(this.state);}
   restoreSave(input:unknown):Result<void>{return result(()=>{
     ensure(typeof input==='string'&&input.length<=64*1024*1024,'INVALID_SAVE','Invalid or oversized save.');let candidate:State;
@@ -102,7 +104,7 @@ export class Engine{
         ensure(typeof legacy.rules==='string'&&Array.isArray(legacy.elements)&&!legacy.elements.some(e=>e?.kind==='scenery'),'INVALID_SAVE','Invalid legacy park.');
         let previous:Rules;try{previous=JSON.parse(legacy.rules);}catch{throw new Fault('INVALID_SAVE','Legacy rule profile is not JSON.');}
         ensure(previous!==null&&typeof previous==='object'&&!Array.isArray(previous),'INVALID_SAVE','Invalid legacy rule profile.');ensure(!Object.hasOwn(previous,'scenery')&&!Object.hasOwn(previous,'rideProfiles')&&!Object.hasOwn(previous,'fixedProfiles')&&!Object.hasOwn(previous,'channelProfiles'),'INVALID_SAVE','Invalid legacy rule profile.');
-        legacy.rules=legacyRuleJSON(validateRules(previous));legacy.version=7;
+        ensure(!Object.hasOwn(previous,'commerceProfiles'),'INVALID_SAVE','Legacy rules cannot contain later commerce.');legacy.rules=legacyRuleJSON(validateRules(previous));legacy.version=7;
       }
       if(legacy?.version===7){
         this.indexState(candidate,7);
@@ -121,7 +123,12 @@ export class Engine{
       }
       if(legacy?.version===10){
         this.indexState(candidate,10);
-        Object.assign(candidate,{version:11,contentVersion:CONTENT_VERSION,rules:JSON.stringify(this.rules),boats:[]});
+        Object.assign(candidate,{version:11,contentVersion:4,rules:v11RuleJSON(this.rules),boats:[]});
+      }
+      if(legacy?.version===11){
+        this.indexState(candidate,11);
+        for(const guest of candidate.people.guests)guest.held=null;
+        Object.assign(candidate,{version:12,contentVersion:CONTENT_VERSION,rules:JSON.stringify(this.rules)});
       }
       index=this.indexState(candidate);
     }catch(e){if(e instanceof Fault)throw new Fault(e.code==='WRONG_RULES'?'WRONG_RULES':'INVALID_SAVE',e.message);throw e;}
@@ -388,18 +395,18 @@ export class Engine{
       }
       case 'remove-amenity':{const a=this.index.amenities.get(c.id),e=this.index.elements.get(c.id);ensure(a&&e?.kind==='amenity','UNKNOWN_ELEMENT','Amenity does not exist.');return{cost:-Math.floor(this.rules.housekeeping.buildPrice*this.rules.refundPerThousand/1000),category:'refund',cells:[],commit:()=>{this.remove(e);this.state.amenities=this.state.amenities.filter(t=>t.id!==a.id);this.index.amenities.delete(a.id);}};}
       case 'place-facility':{
-        const content=executableContent(Object.hasOwn(c,'content')?c.content:legacyFacilityContent(c.kind),c.kind);ensure(integer(this.state.nextInstance+1),'CAPACITY','Instance identifier capacity exhausted.');
+        const content=executableContent(Object.hasOwn(c,'content')?c.content:legacyFacilityContent(c.kind),c.kind),product=facilityProduct(content,this.rules);ensure(integer(this.state.nextInstance+1),'CAPACITY','Instance identifier capacity exhausted.');
         ensure(this.state.rides.length+this.state.facilities.length<LIMITS.rideSlots&&this.state.nextElement<Number.MAX_SAFE_INTEGER,'CAPACITY','Facility slots or element identifiers exhausted.');
         let id=0;while(this.index.rides.has(id)||this.index.facilities.has(id))id++;
         const e:FacilityElement={id:this.state.nextElement,kind:'facility',facility:id,tile:c.tile,height:c.height,direction:c.direction},cells=this.cells(e);this.clear(cells);
-        const f:Facility={id,instanceId:this.state.nextInstance,content,name:c.name,kind:c.kind,element:e.id,open:false,price:this.rules.services.defaultPrice,income:0,sales:0};
+        const f:Facility={id,instanceId:this.state.nextInstance,content,name:c.name,kind:c.kind,element:e.id,open:false,price:product?.rule.defaultPrice??this.rules.services.defaultPrice,income:0,sales:0};
         return{cost:this.rules.services.buildPrice,category:'construction',cells,id,commit:()=>{this.add(e,cells);this.state.facilities.push(f);this.index.facilities.set(id,f);this.state.nextInstance++;}};
       }
       case 'set-facility-open':{const f=this.index.facilities.get(c.facility);ensure(f,'UNKNOWN_RIDE','Facility does not exist.');return{...empty,commit:()=>{f.open=c.open;}};}
-      case 'set-facility-price':{const f=this.index.facilities.get(c.facility);ensure(f,'UNKNOWN_RIDE','Facility does not exist.');ensure(c.price<=this.rules.services.maxPrice,'CAPACITY','Facility price exceeds profile bounds.');return{...empty,commit:()=>{f.price=c.price;}};}
+      case 'set-facility-price':{const f=this.index.facilities.get(c.facility);ensure(f,'UNKNOWN_RIDE','Facility does not exist.');ensure(c.price<=(facilityProduct(f.content,this.rules)?.rule.maxPrice??this.rules.services.maxPrice),'CAPACITY','Facility price exceeds profile bounds.');return{...empty,commit:()=>{f.price=c.price;}};}
       case 'remove-facility':{
-        const f=this.index.facilities.get(c.facility);ensure(f,'UNKNOWN_RIDE','Facility does not exist.');const e=this.index.elements.get(f.element)!,stock=f.sales*(f.kind==='food'?this.rules.services.foodStock:f.kind==='drink'?this.rules.services.drinkStock:0);
-        ensure(integer(this.state.retiredShopIncome+f.income)&&integer(stock)&&integer(this.state.retiredStock+stock),'CAPACITY','Retired shop ledger capacity exhausted.');
+        const f=this.index.facilities.get(c.facility);ensure(f,'UNKNOWN_RIDE','Facility does not exist.');const e=this.index.elements.get(f.element)!,actualStock=BigInt(f.sales)*BigInt(facilityStockCost(f,this.rules));
+        ensure(actualStock+BigInt(this.state.retiredStock)<=BigInt(Number.MAX_SAFE_INTEGER)&&integer(this.state.retiredShopIncome+f.income),'CAPACITY','Retired shop ledger capacity exhausted.');const stock=Number(actualStock);
         return{cost:-Math.floor(this.rules.services.buildPrice*this.rules.refundPerThousand/1000),category:'refund',cells:[],commit:()=>{this.remove(e);this.state.facilities=this.state.facilities.filter(t=>t.id!==f.id);this.index.facilities.delete(f.id);this.state.retiredShopIncome+=f.income;this.state.retiredStock+=stock;}};
       }
       case 'hire-staff':{
@@ -440,11 +447,11 @@ export class Engine{
     for(const ride of s.rides)if(ride.body!==undefined)ensure(tracks.get(ride.body)?.kind==='fixed-body','INVALID_SAVE','Carousel has no fixed body.');
     return tracks;
   }
-  private indexState(s:State,legacy?:7|8|9|10):Index{
-    const identified=legacy!==7,fixed=legacy===10||legacy===undefined;
-    record(s,['amenities','litter','facilities','retiredShopIncome','retiredStock','staff','version','rules','side','tick','revision','topologyRevision','rng','paused','initialCash','cash','loan','maxLoan','spent','refunded','nextElement','nextEntity','people','ledger','trains','terrain','water','owned','rides','elements',...(identified?['contentVersion','nextInstance']:[]),...(fixed?['carouselSessions','retiredRideIncome']:[]),...(!legacy?['boats']:[])]);
-    ensure((s as {version:number}).version===(legacy??11),'INVALID_SAVE','Unsupported save version.');ensure(s.rules===(legacy===10?v10RuleJSON(this.rules):legacy===9?v9RuleJSON(this.rules):legacy?legacyRuleJSON(this.rules):JSON.stringify(this.rules)),'WRONG_RULES','Save rule profile differs from the engine.');
-    if(identified)ensure((s as {contentVersion:number}).contentVersion===(legacy===8?1:legacy===9?2:legacy===10?3:CONTENT_VERSION)&&integer(s.nextInstance,1),'INVALID_SAVE','Unsupported content version or invalid instance counter.');
+  private indexState(s:State,legacy?:HistoricalVersion):Index{
+    const identified=legacy!==7,fixed=legacy===undefined||legacy>=10,channel=legacy===undefined||legacy===11;
+    record(s,['amenities','litter','facilities','retiredShopIncome','retiredStock','staff','version','rules','side','tick','revision','topologyRevision','rng','paused','initialCash','cash','loan','maxLoan','spent','refunded','nextElement','nextEntity','people','ledger','trains','terrain','water','owned','rides','elements',...(identified?['contentVersion','nextInstance']:[]),...(fixed?['carouselSessions','retiredRideIncome']:[]),...(channel?['boats']:[])]);
+    ensure((s as {version:number}).version===(legacy??12),'INVALID_SAVE','Unsupported save version.');ensure(s.rules===(legacy===11?v11RuleJSON(this.rules):legacy===10?v10RuleJSON(this.rules):legacy===9?v9RuleJSON(this.rules):legacy?legacyRuleJSON(this.rules):JSON.stringify(this.rules)),'WRONG_RULES','Save rule profile differs from the engine.');
+    if(identified)ensure((s as {contentVersion:number}).contentVersion===(legacy===8?1:legacy===9?2:legacy===10?3:legacy===11?4:CONTENT_VERSION)&&integer(s.nextInstance,1),'INVALID_SAVE','Unsupported content version or invalid instance counter.');
     ensure(integer(s.side,LIMITS.mapMin,LIMITS.mapMax)&&integer(s.rng,0,0xffffffff)&&typeof s.paused==='boolean','INVALID_SAVE','Invalid world metadata.');
     for(const n of [s.tick,s.revision,s.topologyRevision,s.initialCash,s.loan,s.maxLoan,s.spent,s.refunded,s.retiredShopIncome,s.retiredStock])ensure(integer(n),'INVALID_SAVE','Invalid clock or money field.');
     if(fixed)ensure(integer(s.retiredRideIncome),'INVALID_SAVE','Invalid retired ride income.');
@@ -455,7 +462,7 @@ export class Engine{
     ensure(Array.isArray(s.rides)&&Array.isArray(s.facilities)&&s.rides.length+s.facilities.length<=255&&Array.isArray(s.elements)&&s.elements.length<=LIMITS.tileElements-65536,'INVALID_SAVE','Resource capacity exceeded.');
     const index:Index={amenities:new Map(),litter:new Map(),facilities:new Map(),staff:new Map(),elements:new Map(),rides:new Map(),trains:new Map(),carouselSessions:new Map(),boats:new Map(),guests:new Map(),accessCache:new Map(),cells:new Map(),paths:new Map(),records:65536};
     const instanceIds=new Set<number>();
-    const identity=(instance:Ride|Facility,kind:'ride'|'food'|'drink'|'restroom')=>{if(!identified)return;if(legacy===8){const expected=kind==='ride'?legacyRideContent():legacyFacilityContent(kind);const actual=executableContent(instance.content,kind);ensure(actual.familyId===expected.familyId&&actual.variantId===expected.variantId&&actual.modeId===expected.modeId,'INVALID_SAVE','Legacy content cannot introduce a later ride capability.');}if(kind==='ride'&&(legacy===9||legacy===10)){const construction=resolveContent(instance.content).capabilities.construction.kind;ensure(legacy===9?construction==='tracked':construction!=='channel','INVALID_SAVE','Legacy park cannot contain a later ride capability.');}ensure(integer(instance.instanceId,1,s.nextInstance-1)&&!instanceIds.has(instance.instanceId),'INVALID_SAVE','Duplicate or invalid constructed instance identity.');executableContent(instance.content,kind);instanceIds.add(instance.instanceId);};
+    const identity=(instance:Ride|Facility,kind:'ride'|'food'|'drink'|'restroom')=>{if(!identified)return;if(legacy&&kind!=='ride'){const c=resolveContent(instance.content).capabilities.construction;ensure(c.kind==='facility'&&c.profileId==='independent-services-v1','INVALID_SAVE','Legacy parks cannot contain later products.');}if(legacy===8){const expected=kind==='ride'?legacyRideContent():legacyFacilityContent(kind);const actual=executableContent(instance.content,kind);ensure(actual.familyId===expected.familyId&&actual.variantId===expected.variantId&&actual.modeId===expected.modeId,'INVALID_SAVE','Legacy content cannot introduce a later ride capability.');}if(kind==='ride'&&(legacy===9||legacy===10)){const construction=resolveContent(instance.content).capabilities.construction.kind;ensure(legacy===9?construction==='tracked':construction!=='channel','INVALID_SAVE','Legacy park cannot contain a later ride capability.');}ensure(integer(instance.instanceId,1,s.nextInstance-1)&&!instanceIds.has(instance.instanceId),'INVALID_SAVE','Duplicate or invalid constructed instance identity.');executableContent(instance.content,kind);instanceIds.add(instance.instanceId);};
     for(const r of s.rides){
       ensure(r!==null&&typeof r==='object','INVALID_SAVE','Invalid ride record.');
       identity(r,'ride');const profile=identified?fixedProfile(r.content,this.rules):null,channel=identified?flumeProfile(r.content,this.rules):null;
@@ -464,7 +471,7 @@ export class Engine{
       ensure(profile?integer(r.body,1,s.nextElement-1):r.body===undefined&&(channel||integer(r.cars,1,this.rideRules(r).motion.maxCars))&&Array.isArray(r.track)&&r.track.length<=s.elements.length,'INVALID_SAVE','Invalid ride construction membership.');
       ensure(integer(r.id,0,254)&&!index.rides.has(r.id)&&typeof r.name==='string'&&r.name.length>0&&r.name.length<=80,'INVALID_SAVE','Invalid ride record.');validConnector(r.anchor);this.owned({x:r.anchor.x/32,y:r.anchor.y/32},s);ensure(r.anchor.pitch===0&&r.anchor.bank===0&&r.anchor.z<=this.rules.maxHeight,'INVALID_SAVE','Invalid ride anchor.');index.rides.set(r.id,r);
     }
-    for(const f of s.facilities){record(f,['id','name','kind','element','open','price','income','sales',...(identified?['instanceId','content']:[])]);identity(f,f.kind);ensure(integer(f.id,0,254)&&!index.rides.has(f.id)&&!index.facilities.has(f.id)&&typeof f.name==='string'&&f.name.length>0&&f.name.length<=80&&['food','drink','restroom'].includes(f.kind)&&integer(f.element,1,s.nextElement-1)&&typeof f.open==='boolean'&&integer(f.price,0,this.rules.services.maxPrice)&&integer(f.income)&&integer(f.sales)&&BigInt(f.income)<=BigInt(f.sales)*BigInt(this.rules.services.maxPrice),'INVALID_SAVE','Invalid facility record.');index.facilities.set(f.id,f);}
+    for(const f of s.facilities){record(f,['id','name','kind','element','open','price','income','sales',...(identified?['instanceId','content']:[])]);identity(f,f.kind);const bound=(identified?facilityProduct(f.content,this.rules)?.rule.maxPrice:undefined)??this.rules.services.maxPrice;ensure(integer(f.id,0,254)&&!index.rides.has(f.id)&&!index.facilities.has(f.id)&&typeof f.name==='string'&&f.name.length>0&&f.name.length<=80&&['food','drink','restroom'].includes(f.kind)&&integer(f.element,1,s.nextElement-1)&&typeof f.open==='boolean'&&integer(f.price,0,bound)&&integer(f.income)&&integer(f.sales)&&BigInt(f.income)<=BigInt(f.sales)*BigInt(bound),'INVALID_SAVE','Invalid facility record.');index.facilities.set(f.id,f);}
     const topology=this.trackTopology(s,index),placementElements=new Map(topology);
     let activeCost=0n;
     for(const e of s.elements){ensure(e!==null&&typeof e==='object','INVALID_SAVE','Invalid element record.');ensure(integer(e.id,1,s.nextElement-1)&&!index.elements.has(e.id),'INVALID_SAVE','Duplicate or invalid element identifier.');
@@ -482,8 +489,8 @@ export class Engine{
     for(const r of s.rides)if(r.status!=='closed')ensure(eligibility(r,index.elements,this.rules).issues.length===0,'INVALID_SAVE','Operating ride has invalid prerequisites.');
     this.validateTrains(s,index);
     if(fixed)this.validateCarouselSessions(s,index);
-    if(!legacy)this.validateBoats(s,index);
-    this.validateHousekeeping(s,index);
+    if(channel)this.validateBoats(s,index);
+    this.validateHousekeeping(s,index,legacy);
     this.validatePeople(s,index,legacy);
     this.validateServices(s,index);
     return index;
@@ -565,24 +572,37 @@ export class Engine{
     }
     for(const ride of s.rides)if(flumeProfile(ride.content,this.rules))ensure(ride.status==='closed'||index.boats.has(ride.id),'INVALID_SAVE','Operating channel has no boat.');
   }
-  private validatePeople(s:State,index:Index,legacy?:7|8|9|10){
+  private validatePeople(s:State,index:Index,legacy?:HistoricalVersion){
     record(s.people,['entry','open','guests','departedSpent']);
     ensure(typeof s.people.open==='boolean'&&integer(s.people.departedSpent)&&Array.isArray(s.people.guests)&&s.people.guests.length<=LIMITS.sharedEntities,'INVALID_SAVE','Invalid park guest state.');
     if(s.people.entry!==null){validPoint(s.people.entry);this.owned(s.people.entry,s);}
     ensure(!s.people.open||s.people.entry!==null&&index.paths.get(pathKey(s.people.entry.x,s.people.entry.y,s.people.entry.z))?.queueFor===null,'INVALID_SAVE','Open park has no public entrance.');
     const ids=new Set([...s.trains.flatMap(t=>t.carIds),...Array.from(index.boats.values(),b=>b.id)]);let payments=BigInt(s.people.departedSpent);
     for(const g of s.people.guests){
-      record(g,['navigationRide','amenity','restProgress','wrapper','wrapperTick','facility','serviceProgress','bladder','id','point','phase','goal','next','walkProgress','destination','entrance','exit','queueRide','seat','initialCash','cash','spent','fareLimit','forceTolerance','hunger','thirst','nausea','happiness','energy','queuedAt','lastRide','lastRideTick','ridesTaken','thought']);
+      record(g,['navigationRide','amenity','restProgress','wrapper','wrapperTick','facility','serviceProgress','bladder','id','point','phase','goal','next','walkProgress','destination','entrance','exit','queueRide','seat','initialCash','cash','spent','fareLimit','forceTolerance','hunger','thirst','nausea','happiness','energy','queuedAt','lastRide','lastRideTick','ridesTaken','thought',...(!legacy?['held']:[])]);
+      if(!legacy){
+        ensure(!g.wrapper||g.held===null,'INVALID_SAVE','A guest cannot carry both a wrapper and a product.');
+        if(g.held!==null){
+          const h=g.held;ensure(h&&typeof h==='object','INVALID_SAVE','Invalid held item.');
+          if(h.kind==='consumable'){
+            record(h,['kind','productId','remaining']);const product=productRule(h.productId,this.rules),profile=this.rules.commerceProfiles![commerceProfileId]!;
+            ensure(integer(h.remaining,1,product.useUnits)&&(product.useUnits-h.remaining)%profile.unitsPerCall===0,'INVALID_SAVE','Invalid consumable remainder.');
+          }else{
+            record(h,['kind','containerId','sinceTick']);const profile=this.rules.commerceProfiles?.[commerceProfileId];
+            ensure(h.kind==='container'&&containerIds.includes(h.containerId)&&profile&&Object.values(profile.products).some(p=>p.containerId===h.containerId)&&integer(h.sinceTick,0,s.tick),'INVALID_SAVE','Invalid carried container.');
+          }
+        }
+      }
       ensure(integer(g.id,1,s.nextEntity-1)&&!ids.has(g.id),'INVALID_SAVE','Duplicate or invalid guest entity.');ids.add(g.id);index.guests.set(g.id,g);
       validPoint(g.point);this.owned(g.point,s);
       ensure(g.navigationRide===null||integer(g.navigationRide,0,254)&&index.rides.has(g.navigationRide)&&g.destination===null&&g.queueRide===null&&g.seat===null&&g.facility===null&&g.amenity===null&&(g.phase==='walking'||g.phase==='stranded'||g.phase==='leaving'),'INVALID_SAVE','Invalid evacuation route permission.');
       if(g.navigationRide!==null&&g.phase!=='stranded')ensure(s.people.entry!==null&&g.goal!==null&&g.goal.x===s.people.entry.x&&g.goal.y===s.people.entry.y&&g.goal.z===s.people.entry.z,'INVALID_SAVE','Evacuation must target the current public entry.');
       ensure(typeof g.wrapper==='boolean'&&integer(g.wrapperTick,0,s.tick)&&(g.wrapper||g.wrapperTick===0)&&integer(g.restProgress,0,this.rules.housekeeping.restTicks-1)&&(g.phase==='resting'||g.restProgress===0),'INVALID_SAVE','Invalid guest resting or wrapper state.');
-      if(g.amenity!==null){const a=index.amenities.get(g.amenity);ensure(integer(g.amenity,1)&&a&&g.facility===null&&g.destination===null&&g.queueRide===null&&g.seat===null&&(g.phase==='walking'||g.phase==='resting'),'INVALID_SAVE','Conflicting amenity destination.');const point=amenityPoint(a,index)!;if(g.phase==='walking')ensure(g.goal!==null&&g.goal.x===point.x&&g.goal.y===point.y&&g.goal.z===point.z,'INVALID_SAVE','Walking amenity guest has no correct destination.');ensure(g.phase==='resting'?a.kind==='bench'&&a.occupant===g.id&&g.goal===null&&g.next===null&&g.point.x===point.x&&g.point.y===point.y&&g.point.z===point.z:a.kind!=='bin'||g.wrapper,'INVALID_SAVE','Amenity use disagrees with guest state.');}else ensure(g.phase!=='resting','INVALID_SAVE','Resting guest has no bench.');
+      if(g.amenity!==null){const a=index.amenities.get(g.amenity);ensure(integer(g.amenity,1)&&a&&g.facility===null&&g.destination===null&&g.queueRide===null&&g.seat===null&&(g.phase==='walking'||g.phase==='resting'),'INVALID_SAVE','Conflicting amenity destination.');const point=amenityPoint(a,index)!;if(g.phase==='walking')ensure(g.goal!==null&&g.goal.x===point.x&&g.goal.y===point.y&&g.goal.z===point.z,'INVALID_SAVE','Walking amenity guest has no correct destination.');ensure(g.phase==='resting'?a.kind==='bench'&&a.occupant===g.id&&g.goal===null&&g.next===null&&g.point.x===point.x&&g.point.y===point.y&&g.point.z===point.z:a.kind!=='bin'||carriesWaste(g),'INVALID_SAVE','Amenity use disagrees with guest state.');}else ensure(g.phase!=='resting','INVALID_SAVE','Resting guest has no bench.');
       ensure(integer(g.serviceProgress,0,this.rules.services.serviceTicks-1)&&((g.phase==='buying')||g.serviceProgress===0)&&(g.facility===null||integer(g.facility,0,254)&&index.facilities.has(g.facility)),'INVALID_SAVE','Invalid guest facility service.');
       ensure(g.phase!=='buying'||g.facility!==null&&g.goal===null&&g.next===null,'INVALID_SAVE','Buying guest has no service destination.');
       ensure(g.facility===null||g.destination===null&&g.queueRide===null&&g.seat===null&&(g.phase==='walking'||g.phase==='buying'),'INVALID_SAVE','Conflicting guest destination.');
-      if(g.facility!==null){const f=index.facilities.get(g.facility)!,e=index.elements.get(f.element);ensure(f.open&&e?.kind==='facility'&&index.paths.get(pathKey(facilityApproach(e).x,facilityApproach(e).y,e.height))?.queueFor===null&&g.cash>=f.price,'INVALID_SAVE','Guest targets an unavailable service.');if(g.phase==='walking')ensure(g.goal!==null&&g.goal.x===facilityApproach(e).x&&g.goal.y===facilityApproach(e).y&&g.goal.z===e.height,'INVALID_SAVE','Walking service guest has no counter goal.');if(g.phase==='buying')ensure(g.point.x===facilityApproach(e).x&&g.point.y===facilityApproach(e).y&&g.point.z===e.height,'INVALID_SAVE','Buying guest is away from the counter.');}
+      if(g.facility!==null){const f=index.facilities.get(g.facility)!,e=index.elements.get(f.element);ensure((legacy||f.kind==='restroom'||!g.held)&&f.open&&e?.kind==='facility'&&index.paths.get(pathKey(facilityApproach(e).x,facilityApproach(e).y,e.height))?.queueFor===null&&g.cash>=f.price,'INVALID_SAVE','Guest targets an unavailable service.');if(g.phase==='walking')ensure(g.goal!==null&&g.goal.x===facilityApproach(e).x&&g.goal.y===facilityApproach(e).y&&g.goal.z===e.height,'INVALID_SAVE','Walking service guest has no counter goal.');if(g.phase==='buying')ensure(g.point.x===facilityApproach(e).x&&g.point.y===facilityApproach(e).y&&g.point.z===e.height,'INVALID_SAVE','Buying guest is away from the counter.');}
       ensure(['walking','queued','riding','stranded','leaving','buying','resting'].includes(g.phase)&&['none','not-enough-cash','too-intense','path-lost','ride-closed','queue-too-long','price-changed','payment-blocked','leaving'].includes(g.thought),'INVALID_SAVE','Invalid guest phase or thought.');
       for(const value of [g.initialCash,g.cash,g.spent,g.fareLimit,g.forceTolerance])ensure(integer(value,0,1000000),'INVALID_SAVE','Invalid guest cash or preference.');
       ensure(g.initialCash-g.spent===g.cash,'INVALID_SAVE','Guest pocket cash does not reconcile.');payments+=BigInt(g.spent);
@@ -647,14 +667,14 @@ export class Engine{
     for(const a of s.amenities)if(a.occupant!==null){const g=index.guests.get(a.occupant);ensure(g?.phase==='resting'&&g.amenity===a.id,'INVALID_SAVE','Bench occupant is unregistered.');}
     for(const f of s.facilities)ensure(index.elements.get(f.element)?.kind==='facility','INVALID_SAVE','Facility has no construction element.');
     ensure(BigInt(s.retiredShopIncome)+s.facilities.reduce((n,f)=>n+BigInt(f.income),0n)===BigInt(s.ledger.shopSales),'INVALID_SAVE','Shop revenue does not reconcile.');
-    ensure(BigInt(s.retiredStock)+s.facilities.reduce((n,f)=>n+BigInt(f.sales)*BigInt(f.kind==='food'?this.rules.services.foodStock:f.kind==='drink'?this.rules.services.drinkStock:0),0n)===BigInt(s.ledger.stock),'INVALID_SAVE','Shop stock does not reconcile.');
+    ensure(BigInt(s.retiredStock)+s.facilities.reduce((n,f)=>n+BigInt(f.sales)*BigInt(facilityStockCost(f,this.rules)),0n)===BigInt(s.ledger.stock),'INVALID_SAVE','Shop stock does not reconcile.');
   }
 
-  private validateHousekeeping(s:State,index:Index){
+  private validateHousekeeping(s:State,index:Index,legacy?:HistoricalVersion){
     ensure(Array.isArray(s.amenities)&&s.amenities.length<=s.elements.length&&Array.isArray(s.litter)&&s.litter.length<=LIMITS.sharedEntities,'INVALID_SAVE','Invalid housekeeping arrays.');
     for(const a of s.amenities){record(a,['id','kind','path','occupant','fill']);const e=index.elements.get(a.id);ensure(integer(a.id,1)&&!index.amenities.has(a.id)&&['bench','bin'].includes(a.kind)&&e?.kind==='amenity'&&e.amenityType===a.kind&&e.path===a.path&&(a.occupant===null||integer(a.occupant,1))&&integer(a.fill,0,this.rules.housekeeping.binCapacity)&&(a.kind==='bench'?a.fill===0:a.occupant===null),'INVALID_SAVE','Invalid amenity state.');index.amenities.set(a.id,a);}
     ensure(index.amenities.size===s.elements.filter(e=>e.kind==='amenity').length,'INVALID_SAVE','Unregistered amenity element.');
-    for(const l of s.litter){record(l,['id','point']);ensure(integer(l.id,1,s.nextEntity-1)&&!index.litter.has(l.id),'INVALID_SAVE','Invalid litter identity.');validPoint(l.point);this.owned(l.point,s);index.litter.set(l.id,l);}
+    for(const l of s.litter){record(l,['id','point',...(!legacy&&Object.hasOwn(l,'containerId')?['containerId']:[])]);if(Object.hasOwn(l,'containerId')){const profile=this.rules.commerceProfiles?.[commerceProfileId];ensure((l.containerId==='emptyBurgerBox'||l.containerId==='emptyCan')&&profile&&Object.values(profile.products).some(p=>p.containerId===l.containerId),'INVALID_SAVE','Unknown typed ground container.');}ensure(integer(l.id,1,s.nextEntity-1)&&!index.litter.has(l.id),'INVALID_SAVE','Invalid litter identity.');validPoint(l.point);this.owned(l.point,s);index.litter.set(l.id,l);}
   }
 
 }

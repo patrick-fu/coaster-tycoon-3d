@@ -1,0 +1,136 @@
+{
+  "scope": "Actual existing repository Classic/Library browser modules against frozen production worker/resources. Task-only UI exports and quiet-save suppression; full original task-origin IndexedDB records restored, no public/GPU/human/original acceptance.",
+  "checks": [],
+  "exceptions": [],
+  "consoleErrors": [],
+  "failedRequests": [],
+  "browserVersion": "Chrome/155.0.8059.39",
+  "ownedPids": [
+    770689,
+    770690
+  ],
+  "actualEvaluateParameterNames": [
+    "expression",
+    "objectGroup",
+    "includeCommandLineAPI",
+    "silent",
+    "contextId",
+    "returnByValue",
+    "generatePreview",
+    "userGesture",
+    "awaitPromise",
+    "throwOnSideEffect",
+    "timeout",
+    "disableBreaks",
+    "replMode",
+    "allowUnsafeEvalBlockedByCSP",
+    "uniqueContextId",
+    "serializationOptions"
+  ],
+  "originalRecordCount": 2,
+  "classic": {
+    "checks": [
+      "WebGL scene and Classic controls render",
+      "Legal elevated paths clear detailed station, portal and shop roofs",
+      "Pause suppresses actual worker updates",
+      "A valid steel-only v7 file import adds current identities and profiles without changing legacy park values",
+      "Unsupported original content cannot allocate a ride through the actual worker",
+      "Speed controls update through worker replies",
+      "Pointer path placement charges the authoritative price",
+      "A shop side wall retains its path border while its real frontage stays open",
+      "Rejected duplicate placement preserves money and state",
+      "New coaster, station, append and partial refund use real commands",
+      "Loan control moves cash and principal without income",
+      "Facility inspection edits current price and opening state",
+      "Staff placement and instanced picking select a real employee",
+      "Patrol painting reaches authoritative staff state",
+      "A rejected patrol tile leaves later valid painting usable",
+      "Rapid valid patrol clicks commit in order without a false stale error",
+      "Scenery clicks pay the quote and batched picking removes the selected lantern",
+      "Focused dialog buttons retain native Space and do not toggle park pause",
+      "Browser save reaches IndexedDB and import preserves state",
+      "Invalid imports report structured failure and keep the park",
+      "Static scene replacement disposes obsolete instanced ground buffers",
+      "Forced static refresh survives an already pending view",
+      "Staff list makes overlapping initial employees individually selectable",
+      "Malformed Worker envelopes return correlated errors and preserve a subsequent save",
+      "Unpause permits real worker guest arrivals",
+      "Only actual employees carry rendered work equipment",
+      "Final saved checkpoint preserves the validated park for page reload"
+    ],
+    "errors": [],
+    "currentCheck": "Final saved checkpoint preserves the validated park for page reload",
+    "ok": true,
+    "state": {
+      "tick": 2572,
+      "guests": 2
+    }
+  },
+  "classicDiagnostic": {
+    "current": {
+      "checks": [
+        "WebGL scene and Classic controls render",
+        "Legal elevated paths clear detailed station, portal and shop roofs",
+        "Pause suppresses actual worker updates",
+        "A valid steel-only v7 file import adds current identities and profiles without changing legacy park values",
+        "Unsupported original content cannot allocate a ride through the actual worker",
+        "Speed controls update through worker replies",
+        "Pointer path placement charges the authoritative price",
+        "A shop side wall retains its path border while its real frontage stays open",
+        "Rejected duplicate placement preserves money and state",
+        "New coaster, station, append and partial refund use real commands",
+        "Loan control moves cash and principal without income",
+        "Facility inspection edits current price and opening state",
+        "Staff placement and instanced picking select a real employee",
+        "Patrol painting reaches authoritative staff state",
+        "A rejected patrol tile leaves later valid painting usable",
+        "Rapid valid patrol clicks commit in order without a false stale error",
+        "Scenery clicks pay the quote and batched picking removes the selected lantern",
+        "Focused dialog buttons retain native Space and do not toggle park pause",
+        "Browser save reaches IndexedDB and import preserves state",
+        "Invalid imports report structured failure and keep the park",
+        "Static scene replacement disposes obsolete instanced ground buffers",
+        "Forced static refresh survives an already pending view",
+        "Staff list makes overlapping initial employees individually selectable",
+        "Malformed Worker envelopes return correlated errors and preserve a subsequent save",
+        "Unpause permits real worker guest arrivals",
+        "Only actual employees carry rendered work equipment",
+        "Final saved checkpoint preserves the validated park for page reload"
+      ],
+      "errors": [],
+      "currentCheck": "Final saved checkpoint preserves the validated park for page reload",
+      "ok": true,
+      "state": {
+        "tick": 2572,
+        "guests": 2
+      }
+    },
+    "feedback": "Your park has been saved in this browser."
+  },
+  "canonicalTail": [
+    "Actual page reload restores IndexedDB buildings and live state",
+    "Fresh showcase and its save preserve the existing player park",
+    "Leaving the showcase resumes the unchanged saved player park"
+  ],
+  "library": {
+    "ok": true,
+    "checks": [
+      "Category counts and memberships come from the actual worker catalogue",
+      "Category names and selected choices remain legible in the Classic stylesheet",
+      "Original variants and modes are inspectable while their construction remains disabled",
+      "Selecting an operating mode preserves the actual detail scroll position",
+      "Search and status filters expose true empty and available states",
+      "Reopening preserves filters and selection without allocating another library window",
+      "Family arrow and Space keys preserve focus and do not pause the park",
+      "Browsing, filtering and cancelling preserve all authoritative park state",
+      "An available selected coaster is created through the actual park click with its exact identity",
+      "An available selected drink facility is placed through the actual park click"
+    ]
+  },
+  "passed": true,
+  "originalRecordsRestored": true,
+  "ownedProcessesTerminal": [
+    -15,
+    0
+  ]
+}

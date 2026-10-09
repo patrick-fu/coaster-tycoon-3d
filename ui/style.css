@@ -1280,3 +1280,33 @@ dialog h2 {
 .carousel-seat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin:8px 0 12px}
 .carousel-seat-grid button{padding:7px 3px;font-size:11px}
 .carousel-seat-grid button:disabled{opacity:.55}
+
+/* Classic Consumable Controls Widget Styling */
+.facility-stats.margin-positive .stat:last-child strong {
+  color: #2b7042;
+}
+.facility-stats.margin-negative .stat:last-child strong {
+  color: var(--danger-red);
+}
+.facility-margin-note {
+  font-size: 9.5px;
+  margin: 3px 0 6px;
+  line-height: 1.35;
+}
+.facility-price-limit {
+  font-size: 10px;
+  margin: -2px 0 6px 48px;
+}
+.held-progress {
+  margin: 3px 0 6px;
+  padding: 0 1px;
+}
+.held-progress .bar {
+  height: 5px;
+  background: #ded6c2;
+  border: 1px solid #c2b79e;
+  border-radius: 3px;
+}
+.held-progress .bar span {
+  background: linear-gradient(90deg, #4da86c, #2f7a47);
+}
