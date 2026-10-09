@@ -49,7 +49,7 @@ is distinct from the unavailable original MGR1 reference; original timing and
 visual agreement remain unqualified. Existing v9 saves migrate without replacing
 their park layout, and previous browser slots remain intact.
 
-The Log Flume source adds an independent four-seat log boat, textured channel,
+The published Log Flume candidate adds an independent four-seat log boat, textured channel,
 timber supports, a covered station and connected entrance/exit stairs. Build
 it from **Library → Water rides → Log Flume**, complete the closed lift/drop/
 splash circuit and its empty Test, then Open it for real paid guests. Successful
@@ -58,8 +58,11 @@ the five-ride layout; this ride is available for construction. This source uses
 save11/content4/protocol4 and validates older parks before adding declared
 fields. [Finite checks and actual paid image](docs/verification/log-flume/README.md)
 record 238 kernel checks and seven current production-worker paid controls.
-The public Flume preview is recorded separately after distribution checks;
-original LFB1 agreement and Patrick's visual/play acceptance remain open.
+[Exact public distribution](docs/verification/log-flume/public-publication.md)
+records the current build, HTTP and browser boundaries; the
+[frozen candidate](https://patrick-fu.github.io/coaster-tycoon-3d/previews/log-flume-89030f9/?showcase=classic)
+retains this source. Original LFB1 agreement and Patrick's visual/play acceptance
+remain open.
 
 The [earlier art checkpoint](https://patrick-fu.github.io/coaster-tycoon-3d/previews/classic-a7d6451/?showcase=classic)
 has procedural materials and composed models, three steel-coaster

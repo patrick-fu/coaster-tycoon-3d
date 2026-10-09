@@ -54,11 +54,11 @@ acceptance. Never infer original physics from a matching silhouette.
 | F04 | Food/merchandise gross and stock margin versus overall profit and gross ride income objectives. | Aggregated shop/stock accounting obscures distinct metrics. |
 | F05 | Six campaigns with target/duration/upfront payment and voucher redemption; research funding/orders/unlocks and costs. | Campaign/research state absent. |
 | F06 | Identical tick-indexed action stream across speed/render stalls, pause construction eligibility and legacy migration with unknown history. | Existing clock correctness does not prove original pause/build policy or historical reconstruction. |
-| S01 | Ten layouts of one variant fail the ten-subtype objective; ten qualifying distinct variants succeed. | Family/object/mode and constructed-instance identities are saved in v9/content2; E/I/N and scenario objective evaluation remain absent. |
+| S01 | Ten layouts of one variant fail the ten-subtype objective; ten qualifying distinct variants succeed. | Family/object/mode and constructed-instance identities are saved in v11/content4; E/I/N and scenario objective evaluation remain absent. |
 | S02 | Guest/value target attained early versus October deadline; sustained low rating grace/countdown/closure. | Scenario calendar/objective/failure state absent. |
 | S03 | Finish designated five rides with testing/open lifecycle and preserved original protected segments. | Protected ride and protected track not separate. |
 | S04 | Height-dependent construction rights, terrain/water/tree/high-construction/marketing restrictions at boundaries. | Generic owned bit and no recipe policies. |
-| S05 | Recipe seed/content manifest/invented research/weather/objective restored exactly; invalid unavailable content rejects without partial load. | Save v9 preserves content, instance identity and complete mixed profiles; recipe/research/weather/objective/calendar history remain absent, and old monthly history cannot be reconstructed. |
+| S05 | Recipe seed/content manifest/invented research/weather/objective restored exactly; invalid unavailable content rejects without partial load. | Save v11/content4 preserves content, instance identity and complete mixed profiles; recipe/research/weather/objective/calendar history remain absent, and old monthly history cannot be reconstructed. |
 
 ## Asset and frontend cases
 

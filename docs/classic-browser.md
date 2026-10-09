@@ -2,8 +2,8 @@
 
 The [public development preview](https://patrick-fu.github.io/coaster-tycoon-3d/)
 is served from the remotely built `gh-pages` static distribution. Its `build.json`
-identifies the source, pinned tools and selected artifact hashes. Grok Bot Chrome
-for Testing, reusing the default profile, loaded the HTTPS page at 1080p/DPR1,
+identifies the source, pinned tools and selected artifact hashes. Earlier Grok Bot Chrome
+for Testing checks, reusing the default profile, loaded the HTTPS page at 1080p/DPR1,
 rendered 43 starter elements and observed worker ticks/guest arrivals without
 page exceptions. The downloaded `game.js` hash matched the remote build. This
 confirms direct entry and relative module/Worker loading, not GPU qualification.
@@ -18,15 +18,19 @@ simulation rules. Normal, 2× and 4× controls alter tick accumulation.
 
 The independently authored steel candidate includes straight/station, left/right
 curves, lift/drop transitions, brakes and banking transitions. Copper Meadows
-starts with three operating layouts: Copper Loop, Juniper Sprint and Highland
-Flyer. These share one steel family, with four measured cars each, real
-paths/queue, three services, amenities and two employees. It requires no original
+has three operating layouts: Copper Loop, Juniper Sprint and Highland Flyer.
+These share one steel family, with four measured cars each, real paths/queues,
+three services, amenities and two employees. The current five-ride starter also
+includes Cedar Timber Run and Golden Carousel; the independent four-seat Log
+Flume is constructible through the Library. It requires no original
 game data. Geometry, rates and motion remain candidate metadata; excitement,
 intensity/nausea rating formulas and exact original catalogue comparisons are
 not yet qualified. Six independently authored scenery types and a planted starter
-landscape use authoritative costs, footprints and version-8 saves. Legacy
-version-6/7 parks migrate without replacing player construction or adding the
-expanded starter content.
+landscape use authoritative costs and footprints. Current saves use v11/content
+4 and worker protocol 4; [current verification](verification/log-flume/README.md)
+records source and public boundaries separately from the earlier captures above.
+Historical v6–v10 parks validate before adding declared fields, preserving
+player construction without inserting new starter rides.
 
 Classic controls use a horizontal command desk and bottom palette. Construction
 quotes come from the worker; clicks execute a fresh quoted command and surface
@@ -42,7 +46,8 @@ vehicle poses come from the actual measured course. Individual inspection is
 an explicit request. The current caller covers the starter world; full-map camera
 windowing, dense-layer truncation UX and large-map presentation remain pending.
 
-IndexedDB stores the current versioned park. Export/import uses portable JSON;
+IndexedDB stores the current versioned park. Export/import uses JSON backups; exact cross-runtime default Rules remain
+unqualified, as described in [the save contract](mixed-coasters.md).
 failed imports preserve the live park and display their error. New park requires
 a player confirmation. Saves are local to this browser and origin; the preview
 server is a static-file service without a game backend. The `?showcase=classic`

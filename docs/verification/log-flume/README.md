@@ -83,6 +83,15 @@ a supported Flume is present; failed/cancelled loads release their resources.
   collision controls. Ambiguous ray controls were independently resolved;
   the original failed attempt stays retained. Only byte-proven unchanged
   flat/equal-ground geometry inherits that finite contact evidence.
+- [Public distribution](public-publication.md): exact committed Grok build
+  and 236 root/pinned HTTP file checks pass, with 694 historical preview files
+  preserved. [Grouped application acceptance](public-browser.json) consumes
+  nine real gameplay groups at each route plus 24 actual full source files;
+  the Grok retained-evidence audit exits 0 with blank stderr. The two original
+  public-origin parks remain exact. Whole r4/residual-r1 each retain exit 1:
+  the first source-body collector failure and later neutral host-root favicon
+  404 are explicit. Actual Debugger-source supplementation closes the source
+  gap without replaying root gameplay; no global browser-log pass is invented.
 - Independent Sol Design/Drift and Luna adversarial reviews closed the
   material terrain, asset, UI-switch, long-station and Test-intent findings. Cumulative
   whole-programme closure rounds remain open.
@@ -103,8 +112,10 @@ ran on Grok Bot; Mac activity was editing, file I/O and retained hash checks.
 broad118 list incorrectly included five absent, inactive diagnostic scripts;
 its failed record remains retained. This113 record covers actual build:web
 dependencies and does not claim those old scripts were executed.
-The exact committed release build and public distribution remain separate
-checks. Node paid replay is not browser acceptance. Software Chrome rendering does not qualify
+The exact committed release build and distribution have separate
+[actual evidence](public-publication.md). The public application groups and full
+source capture qualify within their explicitly retained whole-run failures.
+Node paid replay is not browser acceptance. Software Chrome rendering does not qualify
 representative integrated hardware. Continuous contact/NPC traversal,
 exhaustive varied-ground Boat/Rider composition, original numerical agreement,
 full catalogue/management breadth and Patrick's visual/play acceptance remain

@@ -1,0 +1,50 @@
+{
+  "scope": "Two cumulative clean-context Design/Drift rounds over finite source890, working interface/proof docs and actual public5ba delivery; not whole-programme/original/human/GPU/continuous completion.",
+  "sourceCommit": "89030f9062bf4cff6245722dd8d3846d06d3c83c",
+  "baselineCommit": "4c737dbfc861a87b0ad893d7b88d5f398f2cbba4",
+  "publicationCommit": "5ba3a7242d28a3f11ce6078e9eafc69a0888cfd7",
+  "consumedUtc": "2026-10-09T13:51:16.530138+00:00",
+  "unresolvedVerifiedP0P1P2": [],
+  "rounds": [
+    {
+      "round": 1,
+      "design": {
+        "agent": "flume_cumulative_design_r1_sol_max",
+        "model": "GPT 6.1 Sol Max",
+        "disposition": "Closed: no verified defects after final source/public aggregate consumption."
+      },
+      "drift": {
+        "agent": "flume_cumulative_drift_r1_luna_max",
+        "model": "GPT 6 Luna Max",
+        "findings": "Stale current interface/public/pending recovery documentation.",
+        "disposition": "Repaired from actual source and execution; materially re-reviewed against final records, no remaining verified defects."
+      }
+    },
+    {
+      "round": 2,
+      "design": {
+        "agent": "flume_cumulative_design_r2_sol_max",
+        "model": "GPT 6.1 Sol Max",
+        "disposition": "Closed: entire finite source/proof/raw209/cleanup independently inspected; no verified defects."
+      },
+      "drift": {
+        "agent": "flume_cumulative_drift_r2_luna_max",
+        "model": "GPT 6 Luna Max",
+        "findings": "Current programme P2 version clause and selected pending-retention state rows.",
+        "disposition": "Repaired with actual11/4/4 and coherent completed retention/current review state; independently re-reviewed, no remaining verified defects."
+      }
+    }
+  ],
+  "sourceRuntimeReexecutedByReviewers": false,
+  "rawWholeBrowserRunExits": {
+    "public-r4": 1,
+    "residual-r1": 1
+  },
+  "hostFaviconBoundary": "Both whole runs retain a browser-generated host-root favicon404 on neutral build.json before application navigation; only explicitly qualified application groups are accepted, no global clean-log claim.",
+  "artifactHashes": {
+    "public-publication.md": "c0563189720b43e830d50dd833744a5eb55177ac65990b83ec917d09c7eac01a",
+    "public-browser.json": "6d5f2ebe6ff270751764ef6a5e91dbf688ee246a6a4a36825bbb07e8f5a0dc82",
+    "README.md": "aeb3492058b6b6f4de2162dd43410dae5841fab8f19cc0c3fa3af24e1b56e372",
+    "public-retention.json": "dc0459b62b3766277289d24b4cfdd3107dc1fa7b1ea1581d28e5b5d705e822f0"
+  }
+}

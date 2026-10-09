@@ -87,14 +87,18 @@ not every original loan, wage, upkeep, pricing or profit formula.
 
 ## Save validation
 
-Version 8 stores content/instance identities and clock/pause/RNG, command/topology revisions, profile identity,
+Current version 11/content 4 stores content/instance identities and clock/pause/RNG,
+command/topology revisions, profile identity,
 funds/loan/ledger aggregates, surface ownership/heights/water, ride anchors and
 ordered track membership, path/queue associations, portals, stable element/car
-IDs, train motion/measurements, individual guest navigation, queue/seat membership
+IDs, train motion/measurements, Carousel sessions and Boat progress/lap/test
+state with ordered owners, individual guest navigation, queue/seat membership
 and reconciled guest payments, plus independently authored scenery placements.
 Accepted version-6 saves normalize their legacy rule profile with the scenery
 catalogue. Validated v6/v7 state then receives independent candidate identities
-and passes full v8 validation before atomic load. See [content identities](content-identities.md).
+and passes full v8 validation before later declared profile/session/Boat fields
+are added through validated v9/v10 steps and final v11 validation before atomic
+load. See [content identities](content-identities.md).
 The migration preserves existing park content, money, identifiers and RNG;
 it does not add the expanded starter park to a player's save.
 Versions 1–5 were earlier milestones; no

@@ -1,6 +1,6 @@
 # Detailed wooden and steel candidates in one park
 
-The new default park adds Cedar Timber Run to the three existing steel rides.
+The mixed-coaster slice added Cedar Timber Run to the three existing steel rides.
 The wooden car, station, track, passengers and drawbar present authoritative
 worker state at metre scale. This is an independently authored candidate;
 the reference Wooden/PTCT1 entry remains unavailable. The complete reference
@@ -63,19 +63,22 @@ native chord data, with metre UVs and per-element material buffer concatenation.
 
 ## Saves and browser storage
 
-Current saves are `version: 9`, `contentVersion: 2`; worker messages and views
-use `protocolVersion: 2`. Complete declared profiles and selected content are
-saved. Historical v6/v7/v8 inputs are validated in their original schema before
-adding identities/profiles. The actual historical continuation tests use their
+The original mixed-coaster snapshot used v9/content 2. Current saves are
+**version 11 / content version 4**, and worker messages/views use **protocol 4**.
+Complete declared profiles and selected content are saved. Historical v6–v10
+inputs are validated at each original schema before adding only declared
+identity/profile/session/Boat fields. The actual historical continuation tests use their
 matching complete receiving numeric rules. Unsupported profiles and invalid
 loads preserve the live park, pending quotes and pause state.
 
-New browser storage writes `current-v9` or `showcase-classic-v9`. When that key
-is absent, the matching original unversioned slot can be read and migrated;
-the original slot is retained. Preserved v8 preview clients therefore cannot
-overwrite the new v9 slot. A rejected local restore disables quiet autosaving
-until an explicit successful save or confirmed new park. An existing invalid
-v9 record is not silently bypassed in favour of the older slot.
+The browser writes `current-v11` or `showcase-classic-v11`. Reading checks the
+matching v11, v10, v9 and original unversioned slots in that order, continuing
+only when a key is absent. Existing older slots remain intact. A present invalid
+record is rejected rather than bypassed for an older slot; quiet saving stays
+disabled until an explicit successful save, matching import or confirmed New
+park. [Current storage evidence](verification/log-flume/production-storage.json)
+and [Classic reload checks](verification/log-flume/classic-library-browser.json)
+record the actual receiving versions and complete original-store preservation.
 
 Exact rule matching is deliberate. Runtime-generated default curve coordinates
 currently have tiny Node/Chrome differences, so a portable-default profile is
@@ -93,6 +96,9 @@ Software WebGL results do not qualify representative integrated-GPU performance.
 No exact-original agreement, universal radius/grade clearance, structural
 manufacturing or human visual acceptance is implied.
 
-Carousel, Log Flume, the remaining ride families, all commercial products and
-services, park admission policies, complete finance/calendar/research, authored
-scenarios and reusable track presets remain required programme work.
+The current park also includes the independent Carousel; the independent Log
+Flume is available for construction. Their [finite Carousel](verification/carousel/README.md)
+and [Flume checks](verification/log-flume/README.md) have separate boundaries.
+Original family agreement, remaining ride families, all commercial products and
+services, admission policies, full finance/calendar/research, authored scenarios
+and reusable track presets remain required programme work.

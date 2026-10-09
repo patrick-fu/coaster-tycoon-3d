@@ -1,6 +1,6 @@
 # Project progress and recovery
 
-Last updated: 2026-10-09 11:22 UTC (2026-10-09 19:22 Asia/Shanghai).
+Last updated: 2026-10-09 13:56 UTC (2026-10-09 21:56 Asia/Shanghai).
 Root owns this record. Update triggers are in [AGENTS.md](AGENTS.md).
 The [domain glossary](CONTEXT.md), [programme](docs/planning/rct2-program.md),
 [fidelity gaps](docs/planning/fidelity-gaps.md) and
@@ -28,17 +28,17 @@ or Patrick's visual/play acceptance.
 
 | Area | Observed state | Evidence / next action |
 | --- | --- | --- |
-| Published game | Carousel plus steel/wooden rides, save 10/content 3/protocol 3. Five rides in a new park; existing saved layouts persist. | [Classic play](https://patrick-fu.github.io/coaster-tycoon-3d/?showcase=classic), [frozen repaired route](https://patrick-fu.github.io/coaster-tycoon-3d/previews/carousel-5498c35/?showcase=classic), [public proof](docs/verification/carousel/public-publication.md). |
-| Production baseline | Canonical main is4c737dbfc861a87b0ad893d7b88d5f398f2cbba4 with merged planning PRs #70–71. Shipped game source remains5498c35eb4a4013e29a602657e706d46ac68ddcc. | Current gh-pages f0c1417eca241e305e622fe938638c5cebdd7ead; finite Flume source/publication pending. |
-| Carousel outcome | Published and verified; [ticket #65](https://github.com/patrick-fu/coaster-tycoon-3d/issues/65) closed. | 148/148 kernel and a separate 9/9 protocol supplement; paid seats, storage and Classic controls checked. Details below. |
-| Log Flume | Current full238/238/exit0; finite art/channel/terrain gates and material repair reviews consumed. Actual paid-browser-r3/72053 seven checks/exit0/blankstderr with Engine2b24637b/Native735c2d79/worker6736fcb6. All150 production files remain exact after runtime, zero mismatches. | [Finite evidence](docs/verification/log-flume/README.md) now retains latest paid result/pixels/stage/invariance and authored source-input pins. Independent bounded delivery reviews and source/publication follow. |
-| Historical continuation | Shared r5 full11054 actually233/233/exit0/blank stderr,47.614s after four material repairs. Earlier r4/immutable fixture/old bytes retained; r2 helper failure is not relabelled. | Retain r5 raw logs and new version manifest on WD; historical fixture remains unchanged. |
-| Log boat art | V5 GLB0336a6e7 and literal4hips qualify. Complete four-rider/channel/Portal finite composition113792 combinations, exact contacts0 after independent ambiguity resolution; prior failed run remains retained. Current terrain-null/equal-ground caller320 complete byte/group comparisons preserves only that unchanged flat geometry. | Varied-ground Boat/Rider composition, continuous contact/walking, GPU, original and human acceptance remain open. No shipped art acceptance. |
-| Seated rider art | Frozen e615 export/audit/English qualification all exit0. Four seats contact V5 with12 patches/300 samples gap1.000008mm; six neighbour pairs zero. GLB e0bb0c5e/master b7a9ebe4 retained; AGY38394 remains ERROR. Complete finite flat composition and Scene actual four paid owners/Hip/raycast/resource release qualify separately. | Continuous/varied-ground contact, human/GPU/original and public paid-play acceptance remain open; earlier failures retained. |
-| Channel pedestrian access | Portal9f716395 qualifies40layouts/38520 static walk poses and32layouts/28416triangle Native supplement. Approach e310a6 qualifies32layouts/4416 floor samples and Scene integration; finite flat composition also qualifies. | Finite static fit accepted. Actual continuous NPC traversal and original/GPU/human/public qualification remain open. |
-| Progress documentation | [PR #70](https://github.com/patrick-fu/coaster-tycoon-3d/pull/70) merged as `8c1761fa74542c20e194ca59e579fc8e6ed290bb`; canonical main and active `p/patrick/feature/log-flume` both include it. | The live journal continues in the active worktree; commit new entries with their scoped deliveries. |
-| Delegates/processes | /goal active. Bounded Design/Drift terminal and material QA re-review now closes the confirmed P2 with no new substantive finding. Actual current full238, paid7, Classic27/Library10/canonical tail3 and source/resource hashes consumed. No running delegate or browser/test process. | Root prepares scoped source commit/PR and exact Grok release build/public paths. Full expanded-programme closure, original/GPU/human/continuous gates remain open. |
-| Browser integration | Scene r2/16 and previous production UI15/storage5 remain scoped evidence. Current paid-browser-r3 proves completed Test held4000 extra ticks, real four paid owners/render/guest selection, exact occupied save/restore, close preserving seats/pose and original four stored parks. | Root consumes detailed pins/pixels and source invariance next. Public, original/GPU/human/continuous gates remain open. |
+| Published game | Source 89030f9, save 11/content 4/protocol 4, Pages 5ba3a724. Matching deployment and all 236 HTTP hashes pass; root and pin each qualify nine real application groups and 24 executed source files. | [Public proof](docs/verification/log-flume/public-publication.md). Whole r4/residual-r1 remain exit 1; source-body collector failure and neutral host-root favicon logs are retained. All 694 older previews remain intact. |
+| Source integration | Canonical main is 4c737db. Source 89030f9 is pushed in draft PR #72; current proof/interface/context documentation is root-owned working state. | Finish final material doc re-review and cumulative review terminals, commit documentation and integrate source. Public application verification is already qualified. |
+| Carousel | Finite source/public outcome and ticket #65 are closed. | Kernel 148 plus separate protocol 9, paid seats/storage/Classic controls and historical source versions remain scoped prior evidence. |
+| Log Flume | Kernel 238; current local paid 7; Classic 27/Library 10/canonical 3; finite native/art/terrain/composition; real public root 9/pin 9/source 24; root retained-evidence audit 0. | Finite implementation/distribution qualify. Source integration and review closure remain; original LFB1 and the expanded programme are unqualified. |
+| Historical continuation | Immutable v7–v10 fixtures and old source are preserved. R5 historical full 233 remains dated evidence; final full 238 also passes. A separate pre-commerce v11 oracle is preparing. | Keep complete receiving Rules and actual runtime identities. No cross-runtime default or original agreement is inferred; declared null-fixture controls differ from real loading witnesses. |
+| Boat and rider art | Independently authored unit GLBs and literal four Hips, finite fit/composition and actual paid Scene/source/pixel checks qualify. Editable masters and failed authoring attempts remain retained. | Varied/continuous contact, representative GPU and Patrick's visual acceptance remain open. Shipped finite candidate art is not human acceptance. |
+| Channel and pedestrian access | Native channel/Portal/approach and whole-footprint terrain gates qualify within their finite static fixtures; unchanged flat buffers have complete byte comparisons. | Continuous NPC traversal, exhaustive varied-ground composition and original/human/GPU gates remain open. Actual public paid gameplay has separate accepted groups. |
+| Public retention and cleanup | Final manifest 3a15d2d4 has 209 files, all root-verified. Owned target is closed, Chrome 440491 exits 0, CDP 9237 is free and no Chrome executable processes remain. | [Retention](docs/verification/log-flume/public-retention.json). Raw failures, two protected stored parks, source captures and paid pixels remain on WD/Grok. No browser replay is running. |
+| Cumulative finite review | Both cumulative clean-context Design/Drift rounds are terminal and root-consumed. Confirmed doc findings are repaired and independently re-reviewed; no verified P0/P1/P2 remains within this finite delivery. | [Review disposition](docs/verification/log-flume/cumulative-review.json). Commit proof and integrate source; original/human/GPU/full-programme closure remains open. |
+| Commerce prerequisite | Oracle capture-r1 is terminal exit 1: real default four-paid-seat Flume qualifies at tick 8096, but later Carousel reaches at most 6 owners against the unchanged 16-owner/bounded expectation. Raw failed state/logs are retained. | Sol diagnoses the changed setup order against the proven early v10 helper, then prepares a distinct early-Carousel-first attempt with exact Rules/real commands. No accepted v11 masters or commerce production yet. |
+| Live context | This PROGRESS and linked journal are root-owned in the active Flume source worktree. Canonical main's committed copy remains a dated snapshot until integration. | Record meaningful results/failures/reviews/launches/cleanup before dependent work; CONTEXT stays the domain glossary. |
 
 ### Acceptance evidence that still applies
 
@@ -70,7 +70,8 @@ or Patrick's visual/play acceptance.
 | Location | Purpose / owner |
 | --- | --- |
 | `/Volumes/WD/code/projects/coaster-tycoon-3d` | Canonical main checkout; root. |
-| `/Volumes/WD/code/workspaces/coaster-log-flume/coaster-tycoon-3d` | Active source worktree on `p/patrick/feature/log-flume`, HEAD `4c737db`; native module/tests, finite datum contract and live progress/journal are uncommitted. |
+| `/Volumes/WD/code/workspaces/coaster-content-library-publication/coaster-tycoon-3d` | Reused clean Pages checkout, now `p/patrick/publish/log-flume-89030f9` from f0c1417; root owns shipping/root/pin writes and retains694 historical preview hashes. |
+| `/Volumes/WD/code/workspaces/coaster-log-flume/coaster-tycoon-3d` | Active source on `p/patrick/feature/log-flume`, exact committed source89030f9062bf4cff6245722dd8d3846d06d3c83c; subsequent live recovery/journal updates are root-owned. |
 | `/Volumes/WD/code/workspaces/coaster-log-flume-model-authoring` | Isolated AGY boat source, input contracts, prompts and raw/repaired evidence. Current material candidate: `evidence/endgrain-v5/` with reports, packed master, GLB and front/rear PNGs; original v3 baseline and failed v4 stay retained. |
 | `/Volumes/WD/code/workspaces/coaster-log-flume-channel-authoring` | Root-frozen native visual API and copied read-only reference inputs; AGY returns isolated source, root owns writes and Grok qualification. |
 | `/workspace/coaster-log-flume-model-authoring` on Grok Bot | Remote Blender execution and editable/export artifacts. |
@@ -99,11 +100,12 @@ refresh this current-state record before dependent work.
 
 ## Next actions and unresolved gates
 
-1. Retain and hash-check the terminal paid-browser-r3 proof and current150-file
-   source invariance, then freeze actual guest/inspector/vehicle state and pixels.
-2. Freeze the bounded Log Flume verification/source manifest, review the finite
-   delivery, publish its scoped source/preview and check actual public paths.
-3. Continue the applicable P4–P7 programme and qualified catalogue batches.
+1. Commit the completed finite proof/current docs and integrate source PR #72;
+   all required public retention, cleanup and cumulative reviews are consumed.
+2. Update finite ticket #69 and refresh canonical/active recovery context.
+   PR #72 and update ticket #69 with exact finite acceptance and retained limits.
+3. Freeze the first product-consumption contract and pre-commerce v11 oracle
+   before production schema changes; continue applicable P4–P7/catalogue gates.
 
 Direct original execution/metrics are unavailable. Representative integrated
 GPU/park-scale qualification and Patrick's visual/play acceptance remain open.

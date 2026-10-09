@@ -139,7 +139,9 @@ when saving, relocating or dismissing staff.
 The reference explicitly changes toy→map behavior, queue successor handling,
 bin RNG and rain/scenery coverage; it also contains a guessed low-cash energy
 condition. Record comparison cases instead of treating these as vanilla rules.
-The current state is version 7, with a limited version-6 scenery-free migration.
+The 2026-10-07 research baseline was version 7, with a limited version-6
+scenery-free migration. [Current progress](../../../PROGRESS.md) and
+[the identity contract](../../content-identities.md) track subsequent schemas.
 New inventory, targeted thoughts, queue/seat phases, treatment, withdrawal totals,
 staff orders/jobs and reliability require explicit version/profile migration.
 Nested state must survive the engine's transaction clone and rejected commands.
