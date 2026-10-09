@@ -14,6 +14,12 @@ import {CONTENT_VERSION} from './content/registry.js';
 import {createCarouselAssets} from './art/carousel-assets.js';
 import {createCarousels} from './art/carousel.js';
 import {buildCarouselPortal} from './art/carousel-portal.js';
+import {createFlumeAssets} from './art/flume-assets.js';
+import {createBoats} from './art/flume-boats.js';
+import {buildFlumeChannel} from './art/flume-channel.js';
+import {createFlumePortal} from './art/flume-portal.js';
+import {buildFlumeApproach} from './art/flume-approach.js';
+import {flumeFrame} from './simulation/flume-native.js';
 
 export class ParkScene{
  constructor(container){
@@ -43,6 +49,7 @@ export class ParkScene{
   });
   this.carouselAssets=createCarouselAssets(this.renderer);this.carousels=createCarousels(this.art,this.carouselAssets);this.scene.add(this.carousels.group);
   this.carouselAssets.readyPromise.then(()=>{if(this.disposed)return;if(this.carouselAssets.error){this.onAssetError?.('Carousel models could not load: '+this.carouselAssets.error);return;}if(this.packet)this.carousels.update(this.packet,this.elements??[]);if(this.scenery)this.setStatic(this.scenery,this.entry);});
+  this.flumeAssets=null;this.boats=null;
   this.litter=new THREE.InstancedMesh(this.art.geometry('litter-box',()=>new THREE.BoxGeometry(1,1,1)),this.art.material('litter',{color:'#fff0be',roughness:1}),10000);this.litter.count=0;this.scene.add(this.litter);
   this.ghost=new THREE.Group();this.scene.add(this.ghost);this.ghostMaterial=new THREE.MeshBasicMaterial({color:'#80bd53',transparent:true,opacity:.48,depthWrite:false});this.selection=new THREE.Mesh(new THREE.BoxGeometry(4.08,.06,4.08),new THREE.MeshBasicMaterial({color:'#ffd35e',transparent:true,opacity:.5,depthWrite:false}));this.selection.visible=false;this.scene.add(this.selection);
   this.ray=new THREE.Raycaster();this.mouse=new THREE.Vector2();this.transform=new THREE.Object3D();this.visibleFacilityState='';this.visibleAmenityState='';
@@ -60,31 +67,44 @@ export class ParkScene{
  }
  resize(){const {clientWidth:w,clientHeight:h}=this.container;if(!w||!h)return;this.camera.left=-60*w/h;this.camera.right=60*w/h;this.camera.top=60;this.camera.bottom=-60;this.camera.updateProjectionMatrix();this.renderer.setSize(w,h,false);}
  clearStatic(){this.staticGroup.traverse(object=>{if(object.isInstancedMesh)object.dispose();});this.staticGroup.clear();this.art.releaseStatic();}
+ ensureFlumeAssets(){
+  if(this.flumeAssets)return;
+  this.flumeAssets=createFlumeAssets(this.renderer);this.boats=createBoats(this.flumeAssets);this.scene.add(this.boats.group);
+  this.flumeAssets.readyPromise.then(()=>{if(this.disposed)return;if(this.flumeAssets.error){this.onAssetError?.('Log Flume models could not load: '+this.flumeAssets.error);return;}if(this.scenery)this.setStatic(this.scenery,this.entry);if(this.packet)this.boats.update(this.packet);});
+ }
+ flumeFrames(track,ride){
+  const count=ride.channelProfile.pieces[track.piece].motion.samples.length;
+  return Array.from({length:count},(_,i)=>{const frame=flumeFrame(track,i/(count-1)),ground=this.surfaceMap.get(`${Math.floor(frame.position.x/4000)},${Math.floor(frame.position.y/4000)}`);if(ground===undefined)throw new Error('Log Flume terrain is missing from the current view.');return{...frame,groundMm:ground*1000};});
+ }
  setStatic(scenery,entry){
   if(this.disposed)return;
   this.clearStatic();this.elements=scenery.elements;this.scenery=scenery;this.entry=entry;this.surfaceMap.clear();for(let i=0;i<scenery.surfaces.length;i+=5)this.surfaceMap.set(`${scenery.surfaces[i]},${scenery.surfaces[i+1]}`,scenery.surfaces[i+2]/32*4);
   this.art.packet=this.packet;buildEnvironment(this.art,scenery,entry);
+  const elements=new Map(scenery.elements.map(e=>[e.id,e])),terrain={surfaceHeight:(x,y)=>this.surfaceMap.get(`${Math.floor(x)},${Math.floor(y)}`)??null},approaches=new Map();
+  for(const portal of scenery.elements)if(portal.kind==='portal'&&this.packet?.rides.some(r=>r.id===portal.ride&&r.presentation.kind==='detailed-log-flume')){const [dx,dy]=[[1,0],[0,1],[-1,0],[0,-1]][portal.direction],key=`${portal.tile.x-dx},${portal.tile.y-dy},${portal.height}`,list=approaches.get(key)??[];list.push(portal);approaches.set(key,list);}
   for(const e of scenery.elements){const group=new THREE.Group();group.userData.selection={kind:'element',id:e.id};this.staticGroup.add(group);
-   const ride=(e.kind==='track'||e.kind==='portal')?this.packet?.rides.find(r=>r.id===e.ride):null,wooden=ride?.presentation.kind==='detailed-wooden-coaster',carousel=ride?.presentation.kind==='detailed-carousel';
-   if(e.kind==='track'){if(wooden){if(this.woodenAssets.ready)buildWoodenTrack(this.art,group,e,ride,scenery,this.woodenAssets);}else buildTrack(this.art,group,e,steelRules);}
-   else if(e.kind==='path')buildPath(this.art,group,e,scenery);
-   else if(e.kind==='portal'){if(carousel){if(this.carouselAssets.ready)buildCarouselPortal(this.art,group,e,ride,this.carouselAssets);}else if(wooden){if(this.woodenAssets.ready)buildWoodenPortal(this.art,group,e,ride,scenery,this.woodenAssets);}else buildPortal(this.art,group,e,ride);}
+   const ride=(e.kind==='track'||e.kind==='portal')?this.packet?.rides.find(r=>r.id===e.ride):null,wooden=ride?.presentation.kind==='detailed-wooden-coaster',carousel=ride?.presentation.kind==='detailed-carousel',flume=ride?.presentation.kind==='detailed-log-flume';
+   if(e.kind==='track'){if(flume){if(this.flumeAssets?.ready){const portal=scenery.elements.find(p=>p.kind==='portal'&&p.ride===e.ride&&p.station===e.id),ground=portal?terrain.surfaceHeight(portal.tile.x,portal.tile.y):null;if(portal&&ground===null)throw new Error('Log Flume shared terrain is missing.');buildFlumeChannel(this.art,group,e,this.flumeFrames(e,ride),this.flumeAssets.channelMaterials,portal?{portal,sharedGroundMm:ground*1000}:null,terrain);}}else if(wooden){if(this.woodenAssets.ready)buildWoodenTrack(this.art,group,e,ride,scenery,this.woodenAssets);}else buildTrack(this.art,group,e,steelRules);}
+   else if(e.kind==='path'){buildPath(this.art,group,e,scenery);for(const portal of approaches.get(`${e.tile.x},${e.tile.y},${e.height}`)??[])buildFlumeApproach(this.art,group,e,portal,elements,this.packet.rides.find(r=>r.id===portal.ride));}
+   else if(e.kind==='portal'){if(flume){const station=elements.get(e.station);if(this.flumeAssets?.ready&&station?.kind==='track'&&station.ride===e.ride&&station.piece==='station')createFlumePortal(this.art,group,e,station,this.flumeFrames(station,ride),this.flumeAssets.channelMaterials);}else if(carousel){if(this.carouselAssets.ready)buildCarouselPortal(this.art,group,e,ride,this.carouselAssets);}else if(wooden){if(this.woodenAssets.ready)buildWoodenPortal(this.art,group,e,ride,scenery,this.woodenAssets);}else buildPortal(this.art,group,e,ride);}
    else if(e.kind==='facility')buildFacility(this.art,group,e,this.packet?.facilities.find(f=>f.id===e.facility));
    else if(e.kind==='amenity')buildAmenity(this.art,group,e,{...this.packet?.amenities.find(a=>a.id===e.id),capacity:steelRules.housekeeping.binCapacity});
    else if(e.kind==='scenery')buildScenery(this.art,group,e);
    if(carousel&&this.carouselAssets.ready)group.traverse(object=>{if(object.isMesh)object.customDepthMaterial=this.carouselAssets.depthMaterial(object.material);});
    if(wooden&&this.woodenAssets.ready)group.traverse(object=>{if(object.isMesh)object.customDepthMaterial=this.woodenAssets.depthMaterial(object.material);});
-   if(['facility','portal','scenery'].includes(e.kind)&&!wooden&&!carousel&&!group.userData.detailedTree)fitModel(group,{x:e.tile.x*4+2,z:e.tile.y*4+2,low:e.height/8,height:e.kind==='scenery'?steelRules.scenery[e.sceneryType].height/8:2});
+   if(flume&&this.flumeAssets?.ready)group.traverse(object=>{if(object.isMesh)object.customDepthMaterial=this.flumeAssets.depthMaterial(object.material);});
+   if(['facility','portal','scenery'].includes(e.kind)&&!wooden&&!carousel&&!flume&&!group.userData.detailedTree)fitModel(group,{x:e.tile.x*4+2,z:e.tile.y*4+2,low:e.height/8,height:e.kind==='scenery'?steelRules.scenery[e.sceneryType].height/8:2});
   }
   batchStatic(this.staticGroup);this.renderer.shadowMap.needsUpdate=true;
  }
  update(packet){
   if(this.disposed)return;
   if(packet.protocolVersion!==WORKER_PROTOCOL_VERSION||packet.contentVersion!==CONTENT_VERSION)throw new Error('Unsupported park presentation version.');
-  for(const ride of packet.rides)if(!(ride.presentation.kind==='procedural-coaster'&&ride.presentation.profileId==='classic-candidate-v1'||ride.presentation.kind==='detailed-wooden-coaster'&&ride.presentation.profileId==='detailed-wooden-candidate-v1'&&ride.trackProfile||ride.presentation.kind==='detailed-carousel'&&ride.presentation.profileId==='detailed-carousel-candidate-v1'&&Number.isSafeInteger(ride.body)))throw new Error('This ride has no supported presentation.');
+  for(const ride of packet.rides)if(!(ride.presentation.kind==='procedural-coaster'&&ride.presentation.profileId==='classic-candidate-v1'||ride.presentation.kind==='detailed-wooden-coaster'&&ride.presentation.profileId==='detailed-wooden-candidate-v1'&&ride.trackProfile||ride.presentation.kind==='detailed-carousel'&&ride.presentation.profileId==='detailed-carousel-candidate-v1'&&Number.isSafeInteger(ride.body)||ride.presentation.kind==='detailed-log-flume'&&ride.presentation.profileId==='detailed-log-flume-candidate-v1'&&ride.channelProfile&&ride.capacity===4))throw new Error('This ride has no supported presentation.');
   for(const facility of packet.facilities)if(facility.presentation.kind!=='procedural-facility'||facility.presentation.profileId!=='classic-candidate-v1'||facility.presentation.service!==facility.kind)throw new Error('This facility has no supported presentation.');
   if(packet.coordinates.metresPerTile!==steelRules.motion.tileMetres)throw new Error('Unsupported park coordinate profile.');
   const frameOverview=!this.packet||this.overviewPending;this.packet=packet;this.art.packet=packet;if(frameOverview){this.overview();this.overviewPending=false;}
+  if(packet.rides.some(ride=>ride.presentation.kind==='detailed-log-flume'))this.ensureFlumeAssets();
   const facilities=packet.facilities.map(f=>`${f.id}:${f.open}`).join(','),amenities=packet.amenities.map(a=>`${a.id}:${a.fill}`).join(',');
   if(packet.scenery)this.setStatic(packet.scenery,packet.entry);
   else if(this.scenery&&(facilities!==this.visibleFacilityState||amenities!==this.visibleAmenityState))this.setStatic(this.scenery,packet.entry);
@@ -92,12 +112,13 @@ export class ParkScene{
   this.people.update(packet);this.vehicles.update(packet);
   if(this.woodenAssets.ready)this.woodenVehicles.update(packet);
   this.carousels.update(packet,this.elements??[]);
+  this.boats?.update(packet);
   let count=0;for(let i=0;i<packet.litter.length;i+=4){const [id,x,z,y]=packet.litter.slice(i,i+4);this.transform.position.set(x+2,y+.04,z+2);this.transform.scale.set(.2,.035,.15);this.transform.rotation.set(0,id%5,0);this.transform.updateMatrix();this.litter.setMatrixAt(count++,this.transform.matrix);}this.litter.count=count;this.litter.instanceMatrix.needsUpdate=true;this.litter.boundingSphere=null;this.renderer.shadowMap.needsUpdate=true;
  }
  pointer(event,height){const rect=this.renderer.domElement.getBoundingClientRect();this.mouse.set((event.clientX-rect.left)/rect.width*2-1,-(event.clientY-rect.top)/rect.height*2+1);this.ray.setFromCamera(this.mouse,this.camera);const p=this.ray.ray.intersectPlane(new THREE.Plane(new THREE.Vector3(0,1,0),-height/8),new THREE.Vector3());return p?{x:Math.floor(p.x/4),y:Math.floor(p.z/4)}:null;}
  pick(event){
   const rect=this.renderer.domElement.getBoundingClientRect();this.mouse.set((event.clientX-rect.left)/rect.width*2-1,-(event.clientY-rect.top)/rect.height*2+1);this.ray.setFromCamera(this.mouse,this.camera);
-  for(const hit of this.ray.intersectObjects([this.staticGroup,this.woodenVehicles.group,this.carousels.group,...this.people.pickMeshes,...this.vehicles.pickMeshes],true)){
+  for(const hit of this.ray.intersectObjects([this.staticGroup,this.woodenVehicles.group,this.carousels.group,...(this.boats?[this.boats.group]:[]),...this.people.pickMeshes,...this.vehicles.pickMeshes],true)){
    for(const dynamic of [this.people,this.vehicles])if(dynamic.pickMeshes.includes(hit.object))return dynamic.selections[hit.instanceId]??null;
    if(hit.object.userData.selections){const selected=hit.object.userData.selections[hit.instanceId];if(selected)return selected;continue;}
    let object=hit.object;while(object){if(object.userData.selection)return object.userData.selection;object=object.parent;}
@@ -108,5 +129,5 @@ export class ParkScene{
  overview(){const mixed=this.packet?.rides.some(r=>r.presentation.kind==='detailed-wooden-coaster')||this.packet?.rides.length>=4;if(mixed){this.controls.target.set(74,4,80);this.camera.position.set(146,64,156);this.camera.zoom=.98;}else{this.controls.target.set(82,4,74);this.camera.position.set(154,64,150);this.camera.zoom=1.18;}this.camera.updateProjectionMatrix();}
  requestOverview(){this.overviewPending=true;}
  close(){this.controls.target.set(82,4,67);this.camera.position.set(124,40,113);this.camera.zoom=2.5;this.camera.updateProjectionMatrix();}
- dispose(){this.disposed=true;this.renderer.setAnimationLoop(null);this.resizeObserver.disconnect();this.controls.dispose();this.clearStatic();this.people.dispose();this.vehicles.dispose();this.woodenVehicles.dispose();this.carousels.dispose();this.litter.dispose();this.ghostMaterial.dispose();this.selection.geometry.dispose();this.selection.material.dispose();this.treeAssets.dispose();this.surfaceAssets.dispose();this.woodenAssets.dispose();this.carouselAssets.dispose();this.art.surfacePalette=null;this.art.dispose();this.renderer.dispose();}
+ dispose(){this.disposed=true;this.renderer.setAnimationLoop(null);this.resizeObserver.disconnect();this.controls.dispose();this.clearStatic();this.people.dispose();this.vehicles.dispose();this.woodenVehicles.dispose();this.carousels.dispose();this.boats?.dispose();this.litter.dispose();this.ghostMaterial.dispose();this.selection.geometry.dispose();this.selection.material.dispose();this.treeAssets.dispose();this.surfaceAssets.dispose();this.woodenAssets.dispose();this.carouselAssets.dispose();this.flumeAssets?.dispose();this.art.surfacePalette=null;this.art.dispose();this.renderer.dispose();}
 }

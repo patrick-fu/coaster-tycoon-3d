@@ -3,12 +3,12 @@ import {withWoodenProfile} from './wooden-coaster.js';
 import {woodenRideContent} from './registry.js';
 import {carouselRideContent} from './registry.js';
 import {withCarouselProfile} from './carousel.js';
-import type {Command} from '../simulation/types.js';
+import type {Command,Rules} from '../simulation/types.js';
 
 export const mixedRules=withCarouselProfile(withWoodenProfile(steelRules));
 
-export function newMixedPark(){
- const engine=newPark(mixedRules);
+export function newMixedPark(rules:Rules=mixedRules){
+ const engine=newPark(rules);
  const apply=(command:Command)=>{
   const quote=engine.quote(command);if(!quote.ok)throw new Error(quote.error.message);
   const receipt=engine.execute(command,quote.value.revision);if(!receipt.ok)throw new Error(receipt.error.message);
@@ -43,8 +43,8 @@ export function newMixedPark(){
  return engine;
 }
 
-export function newCarouselPark(){
- const engine=newMixedPark();
+export function newCarouselPark(rules:Rules=mixedRules){
+ const engine=newMixedPark(rules);
  const apply=(command:Command)=>{const q=engine.quote(command);if(!q.ok)throw new Error(q.error.message);const r=engine.execute(command,q.value.revision);if(!r.ok)throw new Error(r.error.message);return r.value.id!;};
  const clear=(x:number,y:number)=>{for(const e of engine.snapshot().elements)if(e.kind==='scenery'&&e.tile.x===x&&e.tile.y===y)apply({type:'remove-scenery',id:e.id});};
  for(let x=27;x<=30;x++)for(let y=5;y<=7;y++)clear(x,y);

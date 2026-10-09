@@ -1,0 +1,7 @@
+{
+  "scope": "After actual paid-browser-r3, all frozen production web files remain exact. Test UI exports and quiet-save suppression are separately identified in stage-inputs.json.",
+  "productionFiles": 150,
+  "mismatches": [],
+  "passed": true,
+  "stageWorker": "6736fcb62b9c0b4e9d6169c095c0e5cf50ea6f30dbf32c3b5c6dba38e0f2a97c"
+}

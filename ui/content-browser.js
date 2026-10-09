@@ -147,6 +147,8 @@ export function createContentBrowser({ loadCatalogue, onChoose } = {}) {
     const { construction, operation, presentation } = choice.capabilities;
     if (!choice.modeIds?.length || !construction || !operation || !presentation) return false;
     return construction.kind === 'tracked' && operation.kind === 'circuit' && ['procedural-coaster','detailed-wooden-coaster'].includes(presentation.kind) ||
+      construction.kind === 'fixed' && operation.kind === 'rotation' && presentation.kind === 'detailed-carousel' ||
+      construction.kind === 'channel' && operation.kind === 'channel-circuit' && presentation.kind === 'detailed-log-flume' ||
       construction.kind === 'facility' && operation.kind === 'service' && presentation.kind === 'procedural-facility' &&
       ['food','drink','restroom'].includes(construction.service) && operation.service === construction.service && presentation.service === construction.service;
   }

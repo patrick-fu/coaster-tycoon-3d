@@ -1,0 +1,10 @@
+{
+  "scope": "The exact current canonical verify-browser-cdp.py reload/showcase-return tail runs after actual Classic27 under an owned wrapper. Only task HTTP port and evidence directory differ. Canonical CLI bootstrap is not invoked.",
+  "canonicalSourceSha256": "5bf87edec55aac2b65c94feca90b6eb2586d4a6b2af61b7f542bffd3e6e57e5c",
+  "driverSha256": "ddef08f2db104859e6cb548320b8e95790413b0a5bbc06bcfbaf05ea00ea195b",
+  "adaptations": [
+    "HTTP4175 -> owned8769",
+    "evidence -> task OUT",
+    "reuse owned CDP wrapper and original full-store restoration"
+  ]
+}

@@ -26,7 +26,7 @@ surfaces, masked shadows and three camera-selected levels of detail to the
 playable park. Planting, inspection, demolition and save/load use the existing
 simulation. See the [editable asset source](prototypes/organic-tree/README.md)
 and [verification evidence](docs/verification/oak-scenery/README.md). The modeless
-Classic Library exposes the full reference catalogue and the six implemented
+Classic Library exposes the full reference catalogue and independently implemented
 candidate variants; unavailable reference items remain clearly marked.
 
 The [mixed coaster slice](docs/mixed-coasters.md) adds an independently authored
@@ -35,7 +35,7 @@ station and textured track. Cedar Timber Run operates beside the steel rides:
 actual guests board, pay, ride and unload, and their ordered seats survive saving.
 The finite wooden construction profile supports ground-level flat track and
 R16 curves, with two cars at most. This is a project candidate, not the original
-Wooden/PTCT1 entry. Current saves use v10/content3; historical steel continuation
+Wooden/PTCT1 entry. The published Carousel snapshot uses v10/content3; historical steel continuation
 and [the measured checks](docs/verification/mixed-wooden/README.md) have distinct
 evidence boundaries.
 
@@ -48,6 +48,18 @@ retain prior steel/wood state and pose continuations. The independent Carousel
 is distinct from the unavailable original MGR1 reference; original timing and
 visual agreement remain unqualified. Existing v9 saves migrate without replacing
 their park layout, and previous browser slots remain intact.
+
+The Log Flume source adds an independent four-seat log boat, textured channel,
+timber supports, a covered station and connected entrance/exit stairs. Build
+it from **Library → Water rides → Log Flume**, complete the closed lift/drop/
+splash circuit and its empty Test, then Open it for real paid guests. Successful
+test results remain available until an explicit new Test. Fresh parks retain
+the five-ride layout; this ride is available for construction. This source uses
+save11/content4/protocol4 and validates older parks before adding declared
+fields. [Finite checks and actual paid image](docs/verification/log-flume/README.md)
+record 238 kernel checks and seven current production-worker paid controls.
+The public Flume preview is recorded separately after distribution checks;
+original LFB1 agreement and Patrick's visual/play acceptance remain open.
 
 The [earlier art checkpoint](https://patrick-fu.github.io/coaster-tycoon-3d/previews/classic-a7d6451/?showcase=classic)
 has procedural materials and composed models, three steel-coaster

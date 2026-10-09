@@ -1,10 +1,13 @@
 import type {Element,Portal,Ride,Rules,Track} from './types.js';
 import {endpoint,same} from './geometry.js';
-import {ensure} from './validation.js';
+import {ensure,Fault} from './validation.js';
 import {legacyRideContent} from '../content/registry.js';
 import {resolveRideRules,woodenProfile} from '../content/ride-profiles.js';
 import {portalMountYaw} from './wooden-placement.js';
 import {carouselPortal,fixedProfile} from './carousel.js';
+import {flumeProfile} from './flume-profile.js';
+import {compileFlumeCourse} from './flume-native.js';
+import {validateFlumePortal} from './flume-portal.js';
 
 export type Station={id:number,track:number[]};
 export type Eligibility={circuit:boolean,stations:Station[],issues:string[]};
@@ -33,6 +36,7 @@ export function stationGroups(ride:Ride,elements:Elements,rules:Rules):Station[]
 }
 
 export function validatePortal(portal:Portal,ride:Ride,elements:Elements,rules:Rules){
+  if(flumeProfile(ride.content,rules)){ensure(ride.body===undefined,'INVALID_CONTENT','A channel portal requires ordered track.');validateFlumePortal(portal,ride,elements);return;}
   if(fixedProfile(ride.content,rules)){
     const body=elements.get(portal.station);
     ensure(body?.kind==='fixed-body'&&body.ride===ride.id&&ride.body===body.id,'GEOMETRY','Carousel portals must reference their fixed body.');
@@ -85,6 +89,7 @@ export function eligibility(ride:Ride,elements:Elements,rules:Rules):Eligibility
     if(stations.length!==1)issues.push('The wooden candidate requires one connected station.');
     if(turns.length!==4||turns.some(turn=>turn!==turns[0]))issues.push('The wooden candidate supports one flat four-turn loop with a single turn direction.');
   }
+  if(flumeProfile(ride.content,rules)&&circuit){try{compileFlumeCourse(ride,elements);}catch(error){if(error instanceof Fault)issues.push(error.message);else throw error;}}
   return{circuit,stations,issues};
 }
 

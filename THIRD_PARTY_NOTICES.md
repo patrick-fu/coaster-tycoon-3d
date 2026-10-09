@@ -33,6 +33,15 @@ Source bundle/member hashes, licence and direct source links are retained in
 actual texture inputs. Chris Sawyer's original object render was used as an
 external observation reference only and is not included in this distribution.
 
+The independent Log Flume boat, seated rider, channel and portal geometry are
+project art under MIT. Their surface inputs use ambientCG Bark014, Wood096,
+WoodFloor043, Metal049A, Concrete034, RoofingTiles013A and Fabric081C under
+[CC0-1.0](https://docs.ambientcg.com/license/). The project-authored endgrain
+maps and procedural water remain MIT. Exact source bundle/member permissions
+and hashes are recorded in `ui/models/flume/material-provenance.json`;
+the resource manifest distinguishes exact authored exports from unmodified
+channel maps. Original RCT2 media are observation references only.
+
 ## Reference catalogue metadata
 
 `src/content/rct2-reference.ts` contains reference identifiers, English object

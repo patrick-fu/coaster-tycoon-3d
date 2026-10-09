@@ -1,0 +1,76 @@
+{
+  "scope": "Actual Grok test-intent-r1 final full suite after long-station dock and successful Test-intent repairs. Focused filtered tests and earlier failures stay separate in raw evidence.",
+  "runtimeHost": "grok-build",
+  "exit": 0,
+  "stats": {
+    "tests": 238,
+    "pass": 238,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "durationMs": 68700.564547,
+  "stderrBytes": 0,
+  "sourcePins": {
+    "src/simulation/engine.ts": "6bf18a707e0b81e3bbabce7ef8f7f3f567c0c3d5625146cd196090409cd5f1b2",
+    "src/simulation/flume-native.ts": "bdb3d3278c74a2a5de92ee20710baca6530af996a5b248c1d20e668b2dcc7909",
+    "src/simulation/browser-worker.ts": "2d426a11f65386d310c00af29cd86672cd4ad81f07dfe924bb084f353ab3098e"
+  },
+  "raw": {
+    "build.stderr": {
+      "path": "/Volumes/WD/code/workspaces/coaster-log-flume-game-qualification/evidence/test-intent-r1/build.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "build.stdout": {
+      "path": "/Volumes/WD/code/workspaces/coaster-log-flume-game-qualification/evidence/test-intent-r1/build.stdout",
+      "sha256": "a262a5fa8b8b9def50fbfb6d378570a291b38d491a12f86089f5a107d1888430",
+      "bytes": 57
+    },
+    "full.stderr": {
+      "path": "/Volumes/WD/code/workspaces/coaster-log-flume-game-qualification/evidence/test-intent-r1/full.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "full.stdout": {
+      "path": "/Volumes/WD/code/workspaces/coaster-log-flume-game-qualification/evidence/test-intent-r1/full.stdout",
+      "sha256": "ac9e23775ed7ce13a531106ae536f983c6a33ce4520fdb2e570377e59f445f0f",
+      "bytes": 57139
+    },
+    "green-full.exit": {
+      "path": "/Volumes/WD/code/workspaces/coaster-log-flume-game-qualification/evidence/test-intent-r1/green-full.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "bytes": 2
+    },
+    "green.stderr": {
+      "path": "/Volumes/WD/code/workspaces/coaster-log-flume-game-qualification/evidence/test-intent-r1/green.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "green.stdout": {
+      "path": "/Volumes/WD/code/workspaces/coaster-log-flume-game-qualification/evidence/test-intent-r1/green.stdout",
+      "sha256": "8f5c83936718f2527f1f7fe481fcd5cc7ff2ec474ddbca106f9780e9c9fb538c",
+      "bytes": 9037
+    },
+    "red.exit": {
+      "path": "/Volumes/WD/code/workspaces/coaster-log-flume-game-qualification/evidence/test-intent-r1/red.exit",
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "bytes": 2
+    },
+    "red.stderr": {
+      "path": "/Volumes/WD/code/workspaces/coaster-log-flume-game-qualification/evidence/test-intent-r1/red.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "red.stdout": {
+      "path": "/Volumes/WD/code/workspaces/coaster-log-flume-game-qualification/evidence/test-intent-r1/red.stdout",
+      "sha256": "d693c5f3655ca611144a80861106c211cca411caf21d0e3d2d89201aa534ce95",
+      "bytes": 12691
+    }
+  },
+  "commands": [
+    "npm run build",
+    "node --test test/*.test.mjs"
+  ]
+}
