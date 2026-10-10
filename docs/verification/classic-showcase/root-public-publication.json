@@ -1,0 +1,23 @@
+{
+  "observedUTC": "2026-10-10T13:51:02.188038+00:00",
+  "sourceCommit": "93b5e2397c9dfd61f2ceb6df1f41d17361453558",
+  "sourceTree": "6f6cbf0bb87a21c0d962591765e1d3c6204317a2",
+  "sourceDocumentationCommit": "f2ef84dab6ef6d083293a38b3dc720e15c998662",
+  "sourcePullRequest": "https://github.com/patrick-fu/coaster-tycoon-3d/pull/78",
+  "sourcePRDraft": true,
+  "hostingCommit": "b54109d6f1ef5f86eabb8c7b9765422a70fd6baf",
+  "actualGitCommitPushExit": 0,
+  "actualRemoteGhPagesExact": true,
+  "actualPages": {
+    "status": "built",
+    "commit": "b54109d6f1ef5f86eabb8c7b9765422a70fd6baf",
+    "createdAt": "2026-10-10T13:48:02Z",
+    "updatedAt": "2026-10-10T13:48:59Z",
+    "error": null
+  },
+  "runtimeFilesPerRoute": 164,
+  "protectedOlderFilesExact": 1262,
+  "rootURL": "https://patrick-fu.github.io/coaster-tycoon-3d/?showcase=classic",
+  "frozenURL": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/classic-93b5e23/?showcase=classic",
+  "qualification": "Fresh actual HTTP and player qualification pending. Pages built is not browser or human acceptance."
+}

@@ -229,12 +229,24 @@ input, select {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.25);
 }
 
+#park-toggle.park-open:hover {
+  background: linear-gradient(180deg, #358053 0%, #245e3c 100%);
+  border-color: #61ca8b;
+  color: #ffffff;
+}
+
 #park-toggle.park-open.closed {
   background: linear-gradient(180deg, #963b27 0%, #6e2515 100%);
   border: 1.5px solid #d45f47;
   border-top-color: #f78d77;
   border-bottom-color: #401208;
   color: #fff0ed;
+}
+
+#park-toggle.park-open.closed:hover {
+  background: linear-gradient(180deg, #aa432c 0%, #7e2b19 100%);
+  border-color: #e86e56;
+  color: #ffffff;
 }
 
 /* Classic cash meter / odometer window */
@@ -253,6 +265,7 @@ input, select {
   border-radius: 4px;
   box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.8), 0 1px 0 rgba(255, 255, 255, 0.1);
 }
+
 
 .money small {
   font-size: 8.5px;
@@ -284,10 +297,13 @@ input, select {
 }
 
 #guest-count {
+  display: inline-flex;
+  align-items: center;
+  height: 28px;
   background: rgba(11, 24, 17, 0.65);
   border: 1px solid #284c39;
   border-radius: 4px;
-  padding: 4px 10px;
+  padding: 0 10px;
   font-size: 11px;
   font-weight: 700;
   color: #d2e6da;
@@ -324,6 +340,43 @@ input, select {
               repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.015) 0px, rgba(255, 255, 255, 0.015) 1px, transparent 1px, transparent 8px);
   border-bottom: 2px solid var(--desk-border);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.tools #content-library {
+  height: 28px;
+  padding: 0 11px;
+  font-size: 11.5px;
+  font-weight: 700;
+  border-radius: 4px;
+  color: var(--brass-bright);
+  background: linear-gradient(180deg, #335b44 0%, #204330 50%, #152e20 100%);
+  border: 1.5px solid var(--brass-main);
+  border-top-color: var(--brass-bright);
+  border-bottom-color: var(--brass-dark);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 234, 171, 0.25);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-right: 3px;
+  letter-spacing: 0.02em;
+}
+
+.tools #content-library:hover {
+  background: linear-gradient(180deg, #427256 0%, #2b573e 50%, #1c3c2a 100%);
+  border-color: var(--brass-bright);
+  color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+.tools #content-library:active,
+.tools #content-library.active {
+  background: linear-gradient(180deg, var(--desk-dark) 0%, #152c20 60%, #1a3828 100%);
+  border: 1.5px solid var(--brass-main);
+  border-top-color: var(--brass-dark);
+  border-bottom-color: var(--brass-bright);
+  color: var(--brass-bright);
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.7), 0 0 6px rgba(212, 163, 75, 0.35);
 }
 
 .tools button[data-tool] {
@@ -380,20 +433,23 @@ input, select {
 }
 
 .tools-end button {
-  height: 26px;
-  padding: 0 8px;
+  height: 28px;
+  padding: 0 9px;
   font-size: 11px;
   font-weight: 600;
 }
 
 #save-status {
+  display: inline-flex;
+  align-items: center;
+  height: 28px;
   font-size: 10px;
   font-weight: 600;
   color: #8faea0;
   background: rgba(10, 22, 16, 0.55);
   border: 1px solid #234333;
   border-radius: 3px;
-  padding: 3px 8px;
+  padding: 0 8px;
   margin-left: 6px;
   white-space: nowrap;
 }
@@ -479,6 +535,8 @@ aside#inspector {
   flex-direction: column;
   background: var(--paper);
   border: 2px solid var(--brass-deep);
+  border-top-color: var(--brass-bright);
+  border-bottom-color: var(--brass-dark);
   border-radius: 7px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 2px 6px rgba(0, 0, 0, 0.3);
   overflow: hidden;
@@ -489,13 +547,16 @@ aside#inspector {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-height: 36px;
   background: linear-gradient(180deg, #2b5441 0%, #193528 100%);
   border-bottom: 2px solid var(--brass-deep);
-  padding: 8px 12px;
+  padding: 6px 12px;
   color: var(--brass-bright);
   font-weight: 700;
   font-size: 13px;
+  letter-spacing: 0.02em;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15);
 }
 
 #clear-selection {
@@ -547,11 +608,12 @@ aside#inspector {
 
 /* Dynamic inspection elements */
 .lead {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 800;
-  letter-spacing: -0.4px;
+  letter-spacing: -0.3px;
   color: var(--ink-heading);
-  margin: 0 0 3px;
+  margin: 0 0 4px;
+  line-height: 1.25;
 }
 
 .muted {
@@ -644,6 +706,7 @@ aside#inspector {
   transform: translateY(0);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
+
 
 .row {
   display: flex;
@@ -1227,10 +1290,10 @@ dialog h2 {
   .brand {
     min-width: 150px;
   }
-  .desk-right #new, .desk-right #guest-count {
+  .desk-right #guest-count {
     display: none;
   }
-  .tools-end #close-camera, .tools-end #save-status {
+  .tools-end #save-status {
     display: none;
   }
   aside#inspector {

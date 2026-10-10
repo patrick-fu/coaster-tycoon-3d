@@ -1,0 +1,20 @@
+{
+  "utc": "2026-10-10T18:07:13.674063+00:00",
+  "sourceCommit": "0b38018b2e28b741d888006e9e174f6e28c394ed",
+  "sourceTree": "6f404432b89eb74d30b3797467a93a94320adca8",
+  "parentCommit": "2d797d3cd2a3a77ddb5edf5df31372c608642919",
+  "integratedPaths": [
+    "ui/game.js"
+  ],
+  "gameSHA256": "78bbc00ef98f95498ba0267def1d49ac2ccbb2d378c1b85da6999dc61d7ad3a8",
+  "cameraSHA256": "f562b92da35a35792fe36c3b6ebfdcbc31b42368ce2f48ff0bbc65f5645cf79b",
+  "candidateDeltaSHA256": "374d37fb6eabe60b06e575822929f4270213cf0b41bf19e2b2b27890c31ee839",
+  "actualCommitAndDiffChecks": 0,
+  "reviewers": [
+    "/root/classic_cumulative_design_r2_sol_max",
+    "/root/classic_cumulative_drift_r1_luna_max"
+  ],
+  "sourceVerdict": "Sol/Luna exact r16 source reviews pass; Root reads actual delta/callers and integrates. Source-only create-ID regression repaired, not native-observed.",
+  "scope": "Remove early create palette render; require received selected ID for track/portal command generation until current adoption. No pending flag/helper/queue/global gate/authority/art/camera change.",
+  "limits": "Overlapping actions/tool switches, custom input-name persistence and transient generic public-path feedback are not qualified/fixed; native creation and corrected causal post-input checks remain pending."
+}

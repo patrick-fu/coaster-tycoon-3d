@@ -1,0 +1,46 @@
+{
+  "utc": "2026-10-10T12:57:23.076584+00:00",
+  "scope": "Root accepts all90 administrative sidecar payloads, actual closure/preparation semantics and separately retained self-tool terminal supplement; original90/main706 unchanged.",
+  "retentionRoot": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/supplement-r2-diagnostic-r1",
+  "manifestSHA256": "51d4f35674e4aadae9d8d6bdeff541daef37feca5ba5d7b14dde95f75f91757e",
+  "retainedSHAListSHA256": "537b51962f069a9a870f4386a4d85e72e264cf2fb9a25ac5e5a524dede39da41",
+  "all90EncodedDecodedPayloadsMatched": true,
+  "logicalAndRetainedBytes": 380642,
+  "actualClosure": {
+    "sha256": "34d72bf8c0fa8526e80885df0b9cfe153210994e3761eef9b11a248a8acbaaeb",
+    "pid": 1494568,
+    "childSSHExit": 0,
+    "postWaitAbsent": true,
+    "knownRemoteAbsent": 41,
+    "knownMacAbsent": 8,
+    "portsClosed": true,
+    "profileLockOwnerInactive": true
+  },
+  "actualPreparedObserver": {
+    "pid": 1491908,
+    "generator": 1491909,
+    "NodeSyntax": 1491910,
+    "childSSHExit": 0,
+    "postWaitAbsent": true,
+    "driverSHA256": "da223b9b5cfd66f2d349a9165aebfe187ce6e4d905f36902c626e6b234e4c5dc"
+  },
+  "mirrorWrapperActualExit": 0,
+  "firstStaticPreparationFailurePreserved": true,
+  "sidecarSelfClosure": {
+    "retainerPrefix": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/administrative-attempt/r2-administration-retention",
+    "retainerPID": 1502946,
+    "retainerChildExit": 0,
+    "retainerSSHExit": 0,
+    "retainerPostWaitAbsent": true,
+    "retainerPostWaitSHA256": "1c3c3d304420b45e058cc30244c8861a71e04c9180048d61c82bc59aad7ceca3",
+    "mirrorPrefix": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/transport/r2-administration-mirror",
+    "SCPPID": 5320,
+    "SCPExit": 0,
+    "hashCheckExit": 0,
+    "SCPPostWaitAbsent": true,
+    "SCPPostWaitSHA256": "cb9f7b1c06db4e6dc4141228555ca04a5bc8da01d4e3d414b6c7432cece1ba23"
+  },
+  "fullOriginalMain706Preserved": true,
+  "next": "Partial administrative closure complete; qualified remaining player/save and public/whole-review delivery still open.",
+  "selfToolSupplementUTC": "2026-10-10T13:07:19.990271+00:00"
+}

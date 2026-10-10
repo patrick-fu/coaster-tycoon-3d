@@ -1,0 +1,25 @@
+{
+  "utc": "2026-10-10T17:00:28.271579+00:00",
+  "sourceCommit": "29c2b0db9c4e18368f6efb2f181850d1b6981818",
+  "sourceTree": "f7201486a4e76211898475a480ba8a5e42fc8c66",
+  "parentCommit": "879364c1a5130aef2b153070e740302c29f88797",
+  "actualCommitAndDiffChecks": 0,
+  "integratedPaths": [
+    "ui/game.js"
+  ],
+  "gameSHA256": "93a42c18f0658ed6d8e72f92f16df18fa7bf26754d38562b755443087e39440e",
+  "cameraSHA256": "f562b92da35a35792fe36c3b6ebfdcbc31b42368ce2f48ff0bbc65f5645cf79b",
+  "candidateRoot": "/Volumes/WD/code/workspaces/coaster-classic-showcase-camera-r4/review-r13",
+  "candidateDiffSHA256": "bd391d784dc3a58d48f18d6a075793fec4984eb3ba890f2d04912d86c515ff9e",
+  "independentSourceReviewers": [
+    "/root/classic_cumulative_design_r2_sol_max",
+    "/root/classic_cumulative_drift_r1_luna_max"
+  ],
+  "sourceVerdict": "Both independent exact r13 source reviews pass; Root directly verifies and integrates. Narrow source review only.",
+  "scope": "Same stale editor-context root cause on successful File import plus current receiving palette normalization. Preserve create/public/entry intent; no camera, authority, schema, art or dependency change.",
+  "prunedCandidates": "r11 entry-only normalization misses backpressured receiving adoption; r12 broad reset disrupts genuine-empty create/entry. Both preserved and unintegrated.",
+  "remaining": [
+    "Fresh game syntax/web build",
+    "Actual affected native/public paths and whole closure"
+  ]
+}

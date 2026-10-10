@@ -1,0 +1,197 @@
+{
+  "observedUTC": "2026-10-10T13:42:07.063700+00:00",
+  "scope": "Root independent complete byte and raw semantic acceptance of the exact actual remaining R4 player/save path. R1 paid/R2 framing/New/Library/R3 manual controls are reused. No fresh public or human/hardware claim.",
+  "sourceCommit": "93b5e2397c9dfd61f2ceb6df1f41d17361453558",
+  "sourceTree": "6f6cbf0bb87a21c0d962591765e1d3c6204317a2",
+  "buildReadySHA256": "0423eebe4dfe4c93a06340fc8cccbc90d547fcd59cc8ae3e7d94ed5c89e6cc89",
+  "evidenceRoot": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/retained-player-save-tail-r1",
+  "manifestSHA256": "a9e8ae911baf556208a0d33149c07dc7fd915ff9728cfa78b45df9cb214d35d2",
+  "checksSHA256": "edadcc45095f429ccf77d5ca9435e8c4d54d8fae32d722212172f8ea454d9dad",
+  "payloads": {
+    "count": 490,
+    "logicalBytes": 211932642,
+    "retainedBytes": 167144667,
+    "allEncodedDecodedExact": true
+  },
+  "actualRuntime": {
+    "pid": 1515895,
+    "childExit": 0,
+    "sshExit": 0,
+    "checks": 53
+  },
+  "rootRawSemantics": {
+    "httpBodies": 164,
+    "actualDebuggerSources": 194,
+    "actualLoadedHTMLGLBBodies": 6,
+    "completeSaveReplies": 9,
+    "actualAttachedSessionsBound": true,
+    "wholeRulesSHA256": "78b58b23912d6653fde12fbd57249a5a67182867f354edd76c7a4e58fd17fc50",
+    "nativeCausalReplyLine": 3756,
+    "strictNativeMoveDownUpTile": {
+      "x": 19,
+      "y": 12
+    },
+    "height": 32,
+    "tick": 7403,
+    "buildCost": 30,
+    "removeRefund": 15,
+    "buildChangedFields": [
+      "revision",
+      "cash",
+      "spent",
+      "nextElement",
+      "elements"
+    ],
+    "removeChangedFields": [
+      "revision",
+      "cash",
+      "refunded",
+      "elements"
+    ],
+    "originalElementsRestored": true,
+    "genuinePriorChrome13SHA256": "6aaeb37230da32aba4a8041f11dab0ea6f683e797ebb24e5e79f35965e6e1809",
+    "completeSavedExportedReloadedSHA256": "afd73e9ee79516cab02365bbe7219954009c59f1d03631e21618ae59578f2602",
+    "actualFileImportCommands": 3,
+    "actualNativeExportCompleted": true,
+    "resourceAndCompleteTypedReplyLines": {
+      "actual-owned-scene-disposal.json": [
+        4325
+      ],
+      "actual-scene-final-disposal.json": [
+        6111
+      ],
+      "actual-saved-typed-inventory.json": [
+        4274,
+        6162
+      ],
+      "protected-original-databases.json": [
+        55,
+        6164,
+        6166
+      ],
+      "restored-original-databases.json": [
+        55,
+        6164,
+        6166
+      ]
+    }
+  },
+  "resourcesAndTypedInventory": "Both actual67/48/30/30 borrowed pools, foreign preservation, Scene target once/null and exact original typed[] were independently enumerated in root-r4-early-disposition.json; corresponding complete payload bytes also match here. Full native72 pool qualification is exact-input finite75 evidence, not inferred from borrowed48.",
+  "ownedClosure": {
+    "knownChildren": 14,
+    "allHaveAnyCapturedTreeRecord": true,
+    "preterminationAncestryCount": 13,
+    "missingOwnPreterminationAncestryPIDs": [
+      1516104
+    ],
+    "limit": "1516104 first appears adopted/zombie in settlement-0. All14 are actually reaped/absent, but do not claim every child has its own earlier ancestry/status.",
+    "runnerPostwaitAbsent": true,
+    "allKnownAbsent": true,
+    "portsOpen": {
+      "8777": false,
+      "9237": false
+    },
+    "localMirrorPIDs": [
+      {
+        "pid": 30178,
+        "exists": false
+      },
+      {
+        "pid": 30181,
+        "exists": false
+      },
+      {
+        "pid": 30187,
+        "exists": false
+      },
+      {
+        "pid": 30188,
+        "exists": false
+      },
+      {
+        "pid": 30579,
+        "exists": false
+      }
+    ]
+  },
+  "offlineAudit": {
+    "pid": 1520392,
+    "actualExit": 0,
+    "checks": 409,
+    "sha256": "53a59a2f935cbdba0be154223458d0db17929565fa8744d69f8fed4e2f2e0274"
+  },
+  "mirror": {
+    "sshExit": 0,
+    "tarExit": 0,
+    "hashExit": 0,
+    "wrapperExit": 0,
+    "postwaitExists": false
+  },
+  "remaining": [
+    "Actual source PR and public root/pin qualification",
+    "Both whole R1 public tails and fresh whole R2 Design/Drift rounds",
+    "Human/original/hardware/full programme remain open"
+  ],
+  "finalToolClosure": {
+    "sidecarRoot": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/supplement-player-save-tail-r1",
+    "manifestSHA256": "9fe02589ba39ea463cbf6cb7f752f87b6d01e96d5be8a8962a38cbe6a4c7ace9",
+    "checksSHA256": "afe90f82101585f935d7a7b8462d44ec42b2a7afce8c4ab7ddd9be932e899d8c",
+    "payloadCount": 71,
+    "allEncodedDecodedExact": true,
+    "logicalBytes": 69281,
+    "retainedBytes": 69281,
+    "closureSHA256": "c18595c0f06df5639cd8e668e152807b75cb051985198446a0f747690949e771",
+    "priorKnownRemotePIDs": 89,
+    "allPriorKnownRemoteAbsent": true,
+    "retainerClosureTerminals": [
+      {
+        "path": "administrative-attempt/player-save-tail-retention-r1",
+        "pid": 1523234,
+        "childExit": 0,
+        "postwaitExists": false
+      },
+      {
+        "path": "administrative-attempt/player-save-tail-final-closure-r1",
+        "pid": 1524918,
+        "childExit": 0,
+        "postwaitExists": false
+      },
+      {
+        "path": "administrative-attempt/player-save-tail-closure-retention-r1",
+        "pid": 1526300,
+        "childExit": 0,
+        "postwaitExists": false
+      }
+    ],
+    "allSSHExitsZero": true,
+    "sidecarSCPAndHashExitZero": true,
+    "rootIndependentMacAbsentPIDs": [
+      22132,
+      22327,
+      22596,
+      22600,
+      23341,
+      23416,
+      26635,
+      28980,
+      29968,
+      30178,
+      30181,
+      30187,
+      30188,
+      30579,
+      32834,
+      33122,
+      33503,
+      33578
+    ],
+    "defaultProfileLockOwnerInactive": true,
+    "portsOpen": {
+      "8777": false,
+      "9237": false
+    },
+    "fullOriginalTypedInventoryExact": true,
+    "erratumSHA256": "8fc80c189e007eab9a0944d6bcaa9d5a9be341d6f7963be31881ab273b085cee",
+    "noRecursiveRetainerOrNewBrowser": "Owner stopped at the bounded local outcome. Raw490 and sidecar71 remain unchanged."
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "utc": "2026-10-10T16:29:43.515891+00:00",
+  "scope": "Fresh affected Grok UI syntax and canonical web packaging only; exact unchanged source93 compile/all313 kernel/factory/art proof reused. No Mac runtime. Native and public repair paths remain pending.",
+  "sourceCommit": "879364c1a5130aef2b153070e740302c29f88797",
+  "sourceTree": "3cef1d672bdc71ee4a48855ac27401703dc9ce6a",
+  "readyPath": "/workspace/coaster-classic-showcase-interaction-fix-r1/evidence/build-r1/build-ready.json",
+  "readySHA256": "de0764800f5b673d46a9ba51d4250a9661eb513401245df953806e296a946c05",
+  "shippingRoot": "/workspace/coaster-classic-showcase-interaction-fix-r1/source/web-dist",
+  "sourceFiles": 847,
+  "shippingFiles": 164,
+  "changedShippingFiles": [
+    "game.js",
+    "park-scene.js"
+  ],
+  "unchangedShippingFiles": 162,
+  "compiledFilesUnchanged": 74,
+  "freshSyntaxPhases": [
+    "camera-syntax",
+    "editor-syntax"
+  ],
+  "actualAllThreeNodeExits": 0,
+  "actualRemoteBuildHelperExit": 0,
+  "actualSSHBuildExit": 0,
+  "actualUploadAndProofRetentionExits": 0,
+  "allPhaseStderrBytes": 0,
+  "knownRemoteChildrenAbsent": [
+    {
+      "pid": 1592727,
+      "exists": false
+    },
+    {
+      "pid": 1592734,
+      "exists": false
+    },
+    {
+      "pid": 1592741,
+      "exists": false
+    }
+  ],
+  "remoteHelperPID": 1592720,
+  "transportTerminalSHA256": "ac6398eb28ec2d7be3b72e1c712c3fcb2f49102a7c6c258cdffa604cd6c4f971",
+  "proofRoot": "/Volumes/WD/code/workspaces/coaster-consumable-art/evidence/classic-interaction-fix-build-r1",
+  "testReuse": "Reuse exact source93 passing313; no kernel/dependency/test changes and no test replay.",
+  "canonicalTestCountsReused": {
+    "tests": 313,
+    "pass": 313,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "priorReadySHA256": "0423eebe4dfe4c93a06340fc8cccbc90d547fcd59cc8ae3e7d94ed5c89e6cc89",
+  "nativePublic": "Pending"
+}

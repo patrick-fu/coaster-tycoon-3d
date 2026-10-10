@@ -1,0 +1,45 @@
+{
+  "sourceCommit": "7a0bbac668ece30416cceefb97997c0de17d1376",
+  "readySHA256": "8547297526a21a602ee783e7e8d02579b700782d3cd3afe16aaed575b8790669",
+  "manifestSHA256": "03f71192f8680d1f8985cff1925754d2a1f238a9bb0f60e467c32666f07ba11e",
+  "payloads": 466,
+  "rawCDPLines": 15736,
+  "rawCDPBytes": 319218667,
+  "rawCDPSHA256": "2ac065b14a9073fd87e3992621852f4f35d47e98d79515ff5da5e8c92c167827",
+  "actualRuntimeExit": 0,
+  "checks": 215,
+  "fullRawConsumed": true,
+  "originalTypedRecordsRestored": true,
+  "wholeTypedSHA256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+  "resourceScope": "Two observed reachable borrowed67/48/30/30 release tuples, software WebGL. Full72-material ownership/fault matrix reused, no integrated-GPU or global idempotence claim.",
+  "lateSettlementOnly": [
+    1653085,
+    1655024
+  ],
+  "utc": "2026-10-10T19:45:45.751535+00:00",
+  "accepted": true,
+  "fullRawToolConsumed": true,
+  "publicQualified": false,
+  "wholeDeliveryClosed": false,
+  "mainReceipt": "root-fixed-native-r2-full-consumption.json",
+  "fullConsumptionSHA256": "89688fe69f0ded5de7852437d16a431aef448b93c9f683e3663f207013c5c630",
+  "terminalSupplement": {
+    "payloads": 136,
+    "bytes": 237520,
+    "manifestSHA256": "c511170d70626472f095a1efa6a1489a1e71acb6878081f927021150de817c34",
+    "rootReceiptPath": "/Volumes/WD/code/workspaces/coaster-consumable-art/evidence/classic-fixed-native-root-r1/runtime-r2-terminal-supplement-consumption.json",
+    "rootReceiptSHA256": "fc4ac0c1f52ad890423f7a77b22312d91ee3e97b0d7ccd6d307f3520c9937bde"
+  },
+  "selfTerminal": {
+    "indexedFiles": 76,
+    "bytes": 78745,
+    "indexSHA256": "cef8477f407671ebe4ddab91a3c136ce380e6d014250a5d905410d12205fb662",
+    "rootReceiptPath": "/Volumes/WD/code/workspaces/coaster-consumable-art/evidence/classic-fixed-native-root-r1/runtime-r2-self-terminal-consumption.json",
+    "rootReceiptSHA256": "17656682d8dca860cce7fb1705738d866e5fb798ea7180edcf60c8bd1901c2e8",
+    "actualProducerSSHExit": 0,
+    "actualMirrorSSHExit": 0,
+    "actualRemoteSelfSSHExit": 0
+  },
+  "preservedFailures": "Source2d native FAILED1; metadata selector1, BSD tar literal metadata/hash1, delta-r2 hash1, exact misplaced-upload0 then79-input relocation0 and local PATH127; first Root heterogeneous-row reader1 and prefixed self-index reader1. Corrected native/main/tools0 does not erase them.",
+  "scope": "Source-bound final affected native/static/build/whole-raw/typed/resource/tool acceptance. Authorizes Root publication of exact164 shipping files; actual current-source public and whole cumulative closure remain pending. Full programme/original/human/hardware/scale remain open."
+}

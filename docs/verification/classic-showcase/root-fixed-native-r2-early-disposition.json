@@ -1,0 +1,164 @@
+{
+  "utc": "2026-10-10T19:09:10.559248+00:00",
+  "rootConsumedTerminalSubset": true,
+  "sourceCommit": "7a0bbac668ece30416cceefb97997c0de17d1376",
+  "readySHA256": "8547297526a21a602ee783e7e8d02579b700782d3cd3afe16aaed575b8790669",
+  "driverSHA256": "5da7cc73904a62c981c6d310c4df7df5851ff7f87f038213472f18135b9585c4",
+  "actualTerminalSubset": {
+    "utc": "2026-10-10T19:05:04.495778+00:00",
+    "actualResultFileSHA256": "156cbaa880db08517bff0eeea25b171a53d470af38cb3b66eff110273ea01952",
+    "actualResultFileBytes": 3439711,
+    "actualResult": {
+      "pid": 1652874,
+      "startUTC": "2026-10-10T18:57:49.699789+00:00",
+      "endUTC": "2026-10-10T19:01:52.473310+00:00",
+      "passed": true,
+      "failure": null,
+      "runnerExit": 0,
+      "terminalOwnedProcessState": [
+        {
+          "pid": 1652882,
+          "exists": false
+        },
+        {
+          "pid": 1653052,
+          "exists": false
+        },
+        {
+          "pid": 1653058,
+          "exists": false
+        },
+        {
+          "pid": 1653061,
+          "exists": false
+        },
+        {
+          "pid": 1653062,
+          "exists": false
+        },
+        {
+          "pid": 1653064,
+          "exists": false
+        },
+        {
+          "pid": 1653084,
+          "exists": false
+        },
+        {
+          "pid": 1653085,
+          "exists": false
+        },
+        {
+          "pid": 1653115,
+          "exists": false
+        },
+        {
+          "pid": 1653146,
+          "exists": false
+        },
+        {
+          "pid": 1653160,
+          "exists": false
+        },
+        {
+          "pid": 1653161,
+          "exists": false
+        },
+        {
+          "pid": 1653350,
+          "exists": false
+        },
+        {
+          "pid": 1654997,
+          "exists": false
+        },
+        {
+          "pid": 1655024,
+          "exists": false
+        }
+      ],
+      "terminalPorts": {
+        "8777": false,
+        "9237": false
+      },
+      "ownedProcesses": [
+        {
+          "role": "immutable-readonly-HTTP",
+          "pid": 1652882,
+          "command": [
+            "/usr/bin/python3",
+            "-m",
+            "http.server",
+            "8777",
+            "--bind",
+            "127.0.0.1",
+            "--directory",
+            "/workspace/coaster-classic-showcase-interaction-fix-r1/source-r5/web-dist"
+          ],
+          "actualExit": -15,
+          "endUTC": "2026-10-10T19:01:52.370396+00:00"
+        },
+        {
+          "role": "sole-default-Chrome",
+          "pid": 1653052,
+          "command": [
+            "/workspace/coaster-content-identity/chrome-linux64/chrome",
+            "--headless=new",
+            "--no-sandbox",
+            "--disable-dev-shm-usage",
+            "--disable-features=BackForwardCache",
+            "--use-gl=angle",
+            "--use-angle=swiftshader",
+            "--enable-unsafe-swiftshader",
+            "--no-startup-window",
+            "--user-data-dir=/home/box/.config/google-chrome",
+            "--remote-debugging-address=127.0.0.1",
+            "--remote-debugging-port=9237"
+          ],
+          "actualExit": 0,
+          "endUTC": "2026-10-10T19:01:52.369264+00:00"
+        }
+      ],
+      "ownedKnownPids": [
+        1652882,
+        1653052,
+        1653058,
+        1653061,
+        1653062,
+        1653064,
+        1653084,
+        1653085,
+        1653115,
+        1653146,
+        1653160,
+        1653161,
+        1653350,
+        1654997,
+        1655024
+      ]
+    },
+    "actualSummarySHA256": "5efeccfbdef11d5b884af35f41bab0b1dfeab901e601b02dcb893de825c1c8f7",
+    "actualSummaryBytes": 3026798,
+    "actualSummary": {
+      "passed": true,
+      "failure": null,
+      "originalRecordsRestored": true
+    },
+    "checkCount": 215,
+    "passCount": 215,
+    "wholeTyped": {
+      "protected-original-databases.json": {
+        "bytes": 3,
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+        "body": []
+      },
+      "restored-original-databases.json": {
+        "bytes": 3,
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+        "body": []
+      }
+    }
+  },
+  "subsetSHA256": "899e6ae652ae4c4988b2b12bc147e67be65528618c4564841d154b31ba32849d",
+  "scope": "Actual original result/summary and full local-origin typed inventory files read from Grok; terminal0/215of215 and known children/ports closed. Complete raw/authority/input/resource/tool package remains pending, not native final acceptance."
+}

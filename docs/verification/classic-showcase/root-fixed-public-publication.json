@@ -1,0 +1,29 @@
+{
+  "utc": "2026-10-10T19:52:33.189919+00:00",
+  "hostingCommit": "0f6c585b98fb786d8966c28b6aaab022c3064459",
+  "sourceCommit": "7a0bbac668ece30416cceefb97997c0de17d1376",
+  "sourceTree": "6c942d435e5a093d4a471182d5030ad1ecf594f6",
+  "readySHA256": "8547297526a21a602ee783e7e8d02579b700782d3cd3afe16aaed575b8790669",
+  "actualCommitExit": 0,
+  "actualPushExit": 0,
+  "shippingFilesPerRoute": 164,
+  "protectedEarlierFiles": 1428,
+  "rootURL": "https://patrick-fu.github.io/coaster-tycoon-3d/?showcase=classic",
+  "frozenURL": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/classic-7a0bbac/?showcase=classic",
+  "metadataPins": {
+    "build.json": "415cee31fcd0c36e969eadc8826453af38d46174c1696e6620ffd07c65bede06",
+    "preview-manifest.json": "c74f67a70313edea3721dfbf5c5d9f33e49c9f869b4cc2128b81c21a203adc29"
+  },
+  "actualPages": {
+    "status": "built",
+    "commit": "0f6c585b98fb786d8966c28b6aaab022c3064459",
+    "error": {
+      "message": null
+    },
+    "created_at": "2026-10-10T19:49:53Z",
+    "updated_at": "2026-10-10T19:50:47Z"
+  },
+  "actualPagesAPIExit": 0,
+  "publicHTTPBrowserQualified": false,
+  "scope": "Exact shipping committed/pushed and remote ref verified; actual HTTP/executed-source/player/save/typed/resource public qualification remains pending."
+}

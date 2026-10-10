@@ -1,0 +1,96 @@
+{
+  "utc": "2026-10-10T18:10:40.305900+00:00",
+  "sourceCommit": "0b38018b2e28b741d888006e9e174f6e28c394ed",
+  "sourceTree": "6f404432b89eb74d30b3797467a93a94320adca8",
+  "readySHA256": "0ef26d31e019bc03531f29f8e5f9ba5cd9d2e66839d1b55bbdbf253ae664fcc8",
+  "shippingRoot": "/workspace/coaster-classic-showcase-interaction-fix-r1/source-r4/web-dist",
+  "sourceFiles": 847,
+  "shippingFiles": 164,
+  "compiledFiles": 74,
+  "actualHelperExit": 0,
+  "actualTransportExit": 0,
+  "helperPID": 1632455,
+  "commands": [
+    {
+      "name": "snapshot-source",
+      "pid": 1632456,
+      "args": [
+        "cp",
+        "-a",
+        "--reflink=auto",
+        "/workspace/coaster-classic-showcase-interaction-fix-r1/source-r3",
+        "/workspace/coaster-classic-showcase-interaction-fix-r1/source-r4"
+      ],
+      "startUTC": "2026-10-10T18:07:52.270441+00:00",
+      "actualExit": 0,
+      "endUTC": "2026-10-10T18:07:52.406283+00:00",
+      "stdoutSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrBytes": 0
+    },
+    {
+      "name": "editor-syntax",
+      "pid": 1632457,
+      "args": [
+        "node",
+        "--check",
+        "ui/game.js"
+      ],
+      "startUTC": "2026-10-10T18:07:52.545160+00:00",
+      "actualExit": 0,
+      "endUTC": "2026-10-10T18:07:52.660975+00:00",
+      "stdoutSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrBytes": 0
+    },
+    {
+      "name": "canonical-web",
+      "pid": 1632464,
+      "args": [
+        "node",
+        "scripts/build-web.mjs"
+      ],
+      "startUTC": "2026-10-10T18:07:52.661903+00:00",
+      "actualExit": 0,
+      "endUTC": "2026-10-10T18:07:52.940686+00:00",
+      "stdoutSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrBytes": 0
+    }
+  ],
+  "knownRemoteChildren": [
+    {
+      "pid": 1632456,
+      "exists": false
+    },
+    {
+      "pid": 1632457,
+      "exists": false
+    },
+    {
+      "pid": 1632464,
+      "exists": false
+    }
+  ],
+  "knownLocalStates": [
+    {
+      "pid": 37802,
+      "exists": false
+    },
+    {
+      "pid": 37807,
+      "exists": false
+    },
+    {
+      "pid": 37836,
+      "exists": false
+    },
+    {
+      "pid": 37849,
+      "exists": false
+    }
+  ],
+  "rootConsumed": "Full ready/source identity/delta and compiled/factory equality, exact raw copy+two Node phase launch/stdout/stderr, actual3 transport waits0/postwaitfalse and fresh local owner absence; actual push0. No Mac runtime.",
+  "reuse": "Source2d/29/879/93 checkpoints preserved, onlygamechanges from2d; camera/163shipping/74compiled/313kernel/factory/art exact.",
+  "remaining": "Correct causal after-input driver and current-source native creation/replacement/player paths; full failed raw/tool consumed before retry, final public/whole pending."
+}

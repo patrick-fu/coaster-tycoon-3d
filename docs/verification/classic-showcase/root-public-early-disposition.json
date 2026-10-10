@@ -1,0 +1,259 @@
+{
+  "utc": "2026-10-10T14:45:08.528378+00:00",
+  "status": "Root-consumed actual terminal/early frames/whole typed inventories; complete raw/retention/tool binding pending",
+  "sourceCommit": "93b5e2397c9dfd61f2ceb6df1f41d17361453558",
+  "sourceTree": "6f6cbf0bb87a21c0d962591765e1d3c6204317a2",
+  "readySHA256": "0423eebe4dfe4c93a06340fc8cccbc90d547fcd59cc8ae3e7d94ed5c89e6cc89",
+  "hostingCommit": "b54109d6f1ef5f86eabb8c7b9765422a70fd6baf",
+  "driverSHA256": "9b75bb005ffeb023b895e8298ae8b7591d6d099a99e2f51cb9a4b6a43ad82893",
+  "result": {
+    "path": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/early-public-r1/result.json",
+    "bytes": 195411,
+    "sha256": "fadba64805b1338aed4659b719960ed38cbbe703c6a547f42d0c04524b6ddc15"
+  },
+  "actualChildExit": 0,
+  "rootReadPostwaitRunnerAbsent": true,
+  "rootReadEmptyChildStderr": true,
+  "routes": [
+    {
+      "route": "root",
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/?showcase=classic",
+      "summary": {
+        "path": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/early-public-r1/root/summary.json",
+        "bytes": 92779,
+        "sha256": "bdba01c67a651d98ab091bf9fa8f04dad6b61e13b7aeabd08ffa8a795f529443"
+      },
+      "actualPassedChecks": 77,
+      "actualHttpCountReported": 164,
+      "sourceRecordsReported": [
+        {
+          "phase": "startup",
+          "file": "executed-source-startup.json",
+          "count": 97,
+          "sha256": "b48f3295566c6ec4b0f69c123a2f38d4465b79e23650a57666a4cc2c12d0c9a4"
+        },
+        {
+          "phase": "reloaded",
+          "file": "executed-source-reloaded.json",
+          "count": 97,
+          "sha256": "271c0f892647693c666861cba175d64ecfa468990115d3c84cd5f4e44fc5b0d7"
+        }
+      ],
+      "frames": [
+        {
+          "path": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/early-public-r1/root/close-1024x768.png",
+          "bytes": 727463,
+          "sha256": "8cd14ec0f866b3a12268a35275b4d6cdd2264cdf5600afd0e2d62206a8541a2c"
+        },
+        {
+          "path": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/early-public-r1/root/close-1920x1080.png",
+          "bytes": 2151564,
+          "sha256": "6e296a6c5743991d03026a4b42192550eb8978a2da8b45d5b5e4ee87916507d6"
+        },
+        {
+          "path": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/early-public-r1/root/overview-1024x768.png",
+          "bytes": 508010,
+          "sha256": "792328111f082823d656a1d4f302ef1b45837cffd3fcbfcf80977890ecbe15f4"
+        },
+        {
+          "path": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/early-public-r1/root/overview-1920x1080.png",
+          "bytes": 1498943,
+          "sha256": "e549df946a1c5897121b6734ddd7c6905e42371425e863bcb1527a68c41aba21"
+        }
+      ],
+      "rootViewedAllFourFrames": true,
+      "rootFrameDisposition": "All four ride families visible clear of inspector in both Overview sizes; detailed two counters and Carousel visible in Close. All seven controls visibly present. Composition qualified; human style/play remains open.",
+      "controls": [
+        {
+          "label": "overview",
+          "window": {
+            "width": 1920,
+            "height": 1080
+          },
+          "allSevenInWindowAndHittable": true
+        },
+        {
+          "label": "close",
+          "window": {
+            "width": 1920,
+            "height": 1080
+          },
+          "allSevenInWindowAndHittable": true
+        },
+        {
+          "label": "overview",
+          "window": {
+            "width": 1024,
+            "height": 768
+          },
+          "allSevenInWindowAndHittable": true
+        },
+        {
+          "label": "close",
+          "window": {
+            "width": 1024,
+            "height": 768
+          },
+          "allSevenInWindowAndHittable": true
+        }
+      ],
+      "originalWholeTypedInventory": {
+        "path": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/early-public-r1/root/protected-original-databases.json",
+        "bytes": 1857485,
+        "sha256": "595e4cc33bc3a1286cfc5da456c94b213fec80476f09b5a15d13b7e4d5571b68"
+      },
+      "restoredWholeTypedInventory": {
+        "path": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/early-public-r1/root/restored-original-databases.json",
+        "bytes": 1857485,
+        "sha256": "595e4cc33bc3a1286cfc5da456c94b213fec80476f09b5a15d13b7e4d5571b68"
+      },
+      "rootWholeTypedBytesEqual": true,
+      "strictBuild": {
+        "path": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/early-public-r1/root/actual-player-build.json",
+        "bytes": 903,
+        "sha256": "d71ffad29574226789f3426029716da1c437453aa69db26a65ba035dda640d49"
+      },
+      "strictRemove": {
+        "path": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/early-public-r1/root/actual-player-remove.json",
+        "bytes": 353,
+        "sha256": "ae00286ad2cc720b61548ff828cbeac3c38c9b82768ed226163d000826d043cc"
+      },
+      "authorityStageIndex": {
+        "path": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/early-public-r1/root/complete-paused-authority-stages.json",
+        "bytes": 3165,
+        "sha256": "71cd802d16fb94b048050664e9e8d6ac75e402764462f39c1c46059b4ee94781"
+      },
+      "endUTC": "2026-10-10T14:27:36.114644+00:00"
+    },
+    {
+      "route": "pin",
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/classic-93b5e23/?showcase=classic",
+      "summary": {
+        "path": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/early-public-r1/pin/summary.json",
+        "bytes": 65909,
+        "sha256": "fb3b24266733e9513d099eed606354f7f9bcf44f52fcbe50ace8c067f908788c"
+      },
+      "actualPassedChecks": 70,
+      "actualHttpCountReported": 164,
+      "sourceRecordsReported": [
+        {
+          "phase": "startup",
+          "file": "executed-source-startup.json",
+          "count": 97,
+          "sha256": "aa8ddc1ef5cc6461d25ed86a208923936e3c57c5ea37d5b15ed4668c29e32599"
+        },
+        {
+          "phase": "reloaded",
+          "file": "executed-source-reloaded.json",
+          "count": 97,
+          "sha256": "7ebf86c2f783955934eaa1b3461120419ffc137a1a1019c218e0107e20cf0fdc"
+        }
+      ],
+      "frames": [
+        {
+          "path": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/early-public-r1/pin/close-1024x768.png",
+          "bytes": 727443,
+          "sha256": "bd88ad1c4323cd453154d21254e1f728c58e809698e948669c7ef85e4bec3ec5"
+        },
+        {
+          "path": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/early-public-r1/pin/close-1920x1080.png",
+          "bytes": 2151190,
+          "sha256": "43ad89586aed96b11447938b7694195ab0fe7a73844b6bd0a9eeb4a0e4f3abe0"
+        },
+        {
+          "path": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/early-public-r1/pin/overview-1024x768.png",
+          "bytes": 508113,
+          "sha256": "5517c6f679892f83d21ee6f81a0466437b45bc7aca0a9402eb743200a6db2be7"
+        },
+        {
+          "path": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/early-public-r1/pin/overview-1920x1080.png",
+          "bytes": 1498916,
+          "sha256": "9f7f2cb7c26b03822675ae5c0f9bf3bbf7ef6f8ea285e8ea459e3764358a9abf"
+        }
+      ],
+      "rootViewedAllFourFrames": true,
+      "rootFrameDisposition": "All four ride families visible clear of inspector in both Overview sizes; detailed two counters and Carousel visible in Close. All seven controls visibly present. Composition qualified; human style/play remains open.",
+      "controls": [
+        {
+          "label": "overview",
+          "window": {
+            "width": 1920,
+            "height": 1080
+          },
+          "allSevenInWindowAndHittable": true
+        },
+        {
+          "label": "close",
+          "window": {
+            "width": 1920,
+            "height": 1080
+          },
+          "allSevenInWindowAndHittable": true
+        },
+        {
+          "label": "overview",
+          "window": {
+            "width": 1024,
+            "height": 768
+          },
+          "allSevenInWindowAndHittable": true
+        },
+        {
+          "label": "close",
+          "window": {
+            "width": 1024,
+            "height": 768
+          },
+          "allSevenInWindowAndHittable": true
+        }
+      ],
+      "originalWholeTypedInventory": {
+        "path": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/early-public-r1/pin/protected-original-databases.json",
+        "bytes": 1857485,
+        "sha256": "595e4cc33bc3a1286cfc5da456c94b213fec80476f09b5a15d13b7e4d5571b68"
+      },
+      "restoredWholeTypedInventory": {
+        "path": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/early-public-r1/pin/restored-original-databases.json",
+        "bytes": 1857485,
+        "sha256": "595e4cc33bc3a1286cfc5da456c94b213fec80476f09b5a15d13b7e4d5571b68"
+      },
+      "rootWholeTypedBytesEqual": true,
+      "strictBuild": {
+        "path": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/early-public-r1/pin/actual-player-build.json",
+        "bytes": 903,
+        "sha256": "cdb2a2b3f286cc74d562df7abe00f409274e4a23c8581f9d31a6380d499d16a1"
+      },
+      "strictRemove": {
+        "path": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/early-public-r1/pin/actual-player-remove.json",
+        "bytes": 353,
+        "sha256": "68a9b117425d80d76a000fc98983f704c566cc3400d49aaead1d1842d26bc690"
+      },
+      "authorityStageIndex": {
+        "path": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/early-public-r1/pin/complete-paused-authority-stages.json",
+        "bytes": 2926,
+        "sha256": "5faa20664bcc75666a3e2d6aed5a7ba82e6a6e62d5208bd6c09008beab23824f"
+      },
+      "endUTC": "2026-10-10T14:29:19.463965+00:00"
+    }
+  ],
+  "audit": {
+    "path": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/early-public-r1/audit/audit.json",
+    "bytes": 109645,
+    "sha256": "87c6d935414d8befb9943a74af978e54b180c925e8bb88ab6dc64f9cc8f45aad"
+  },
+  "actualRawBindings": {
+    "path": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/early-public-r1/audit/actual-raw-bindings.json",
+    "bytes": 154739,
+    "sha256": "098c56d9b2026c80b7e4a033717cd631440326b34e9f73baaafecb5098a28cb6"
+  },
+  "auditCheckCount": 856,
+  "auditPassed": true,
+  "auditBoundary": "Audit document read; all actual raw payload/transport/closure binding is separately pending. Audit assertions alone do not substitute for Root consumption.",
+  "ancestryBoundary": "16 known children absent/reaped;14 have earlier ancestry/status,1546126 and1547664 first appear adopted/Z in settlement. No complete descendant ancestry claim.",
+  "pending": [
+    "Complete lossless payload/raw/transport/owned-tool closure consumption",
+    "Minimal held-click after residual-motion contrast and material candidate disposition",
+    "Two whole cumulative Design and Drift rounds",
+    "Human style/play and representative integrated-GPU/scale acceptance"
+  ]
+}

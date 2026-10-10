@@ -1,0 +1,62 @@
+{
+  "utc": "2026-10-10T12:46:07.743742+00:00",
+  "scope": "Root accepts full terminal R3 partial proof and preserves runtime/SSH1. Remaining construction/import/save/reload and public proof unexecuted.",
+  "sourceCommit": "93b5e2397c9dfd61f2ceb6df1f41d17361453558",
+  "readySHA256": "0423eebe4dfe4c93a06340fc8cccbc90d547fcd59cc8ae3e7d94ed5c89e6cc89",
+  "retentionRoot": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/root-retained-r3-r1",
+  "manifestSHA256": "7d2dbd6e6b4d86a0559037b0c2e8153df756832726329a0278be92b25ca4e3f5",
+  "fileCount": 315,
+  "logicalBytes": 144464440,
+  "retainedBytes": 109759052,
+  "all315EncodedDecodedPayloadsMatched": true,
+  "rawSemanticConsumption": {
+    "HTTPBodies": 164,
+    "actualCDPBoundSources": 97,
+    "actualCDPBoundLoadedBodies": 3,
+    "fullAuthorityBodiesExactAndBoundToSaveReply": 5,
+    "nativeResizeWitnessRecordsBoundToActualReplies": 3,
+    "manualFacilityPickingPassed": true,
+    "rawFailedTileCallsBoundToOriginalLines": 7,
+    "flowerPressOrReleaseOccurred": false,
+    "completeTypedDBRestored": true,
+    "capturedKnownChildrenAbsent": 15,
+    "runnerAbsent": true,
+    "portsClosed": true
+  },
+  "diagnosticSHA256": "66bf167bfe89fd544e39bd388c94a19888fbc706402f9280781123a5b316f9e6",
+  "retainer": {
+    "pid": 1504808,
+    "childExit": 0,
+    "SSHExit": 0,
+    "blankStderr": true,
+    "postWaitAbsent": true
+  },
+  "mirror": {
+    "SSHExit": 0,
+    "tarExit": 0
+  },
+  "localKnownRetainerAndMirrorStates": [
+    {
+      "pid": 7696,
+      "exists": false
+    },
+    {
+      "pid": 7698,
+      "exists": false
+    },
+    {
+      "pid": 9213,
+      "exists": false
+    },
+    {
+      "pid": 9217,
+      "exists": false
+    },
+    {
+      "pid": 9218,
+      "exists": false
+    }
+  ],
+  "causeBoundary": "The original 19,12\u219218,15 guard has no intermediate physical/projection sample. Inherited control-advancing projector and unobserved wide resize are concrete driver hazards; a unique product/root cause is unproven.",
+  "next": "Read scoped remaining-driver preparation with read-only projection and actual resize/input-time witnesses; no passed native qualification replay."
+}

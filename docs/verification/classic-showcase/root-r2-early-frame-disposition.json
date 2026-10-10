@@ -1,0 +1,24 @@
+{
+  "utc": "2026-10-10T11:36:49.417252+00:00",
+  "scope": "Root views/hash-matches actual fourcanonical93/0423 earlyframes andpartialterminalsubset. Fullraw/body/save/closureconsumption pending. r2childSSH1 remainsFAILED.",
+  "sourceCommit": "93b5e2397c9dfd61f2ceb6df1f41d17361453558",
+  "readySHA256": "0423eebe4dfe4c93a06340fc8cccbc90d547fcd59cc8ae3e7d94ed5c89e6cc89",
+  "pngs": {
+    "overview-1920x1080.png": "2b6d0f663b2255f6ac6fe13451ed3fd2e75f7ca115d1ac50980e9b4f79a4ff0c",
+    "close-1920x1080.png": "973bdc6d40686a97b6afad4f03d53ca9bb4db3bcbf5bb3fb797bec689f0751f3",
+    "overview-1024x768.png": "282e03dc9acdc45fa4f0c7e428fa98787d3a14e9c3d1a0687685779d4439654a",
+    "close-1024x768.png": "9fcd7f34943909190ac64dc7704be53b2ef1bb5a2dd16373ed9a969fce922ebb"
+  },
+  "rootOpticalDisposition": "BothOverviews show wood/steel/Flume/Carousel clearofinspector. BothClose views show two authoredcounters andCarousel; outercoastercropping expected.1024New/Close visible. Native no-motionclick-responsivefit and realNew controls pass inpartialtrace.",
+  "actualFailure": "First native orbit exact repeated-pose observer timed out at60s. Separate actual diagnostic proves65 native RAFs/48.0218s with continuing about0.9/frame position damping and no repeated poses. Minimal affected observer repair remains gated.",
+  "actualOriginalDatabaseRecoveryReported": true,
+  "actualOriginalDatabaseCount": 0,
+  "actualPortsOpen": {
+    "8777": false,
+    "9237": false
+  },
+  "rawFullCoverage": "Root consumed all 706 encoded/decoded R2+diagnostic payloads, actual CDP-bound sources and HTML/GLBs, full authorities, typed DB restores and captured process trees. R2 runtime1 remains FAILED; remaining tail is unexecuted.",
+  "next": "Read prepared passive callback observer/preflight, run affected and remaining player/storage tail.",
+  "timeoutSecondsCorrection": "Actualdriver asyncio.wait timeout60; priorowner90 claimcorrected from source/rawcall before anyreplay. Orbit-before261 settled6RAF in3.586s; afterdrag275 no internalpose history.",
+  "partialRetentionReceipt": "root-r2-diagnostic-retention-acceptance.json"
+}

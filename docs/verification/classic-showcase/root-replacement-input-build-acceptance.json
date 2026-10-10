@@ -1,0 +1,162 @@
+{
+  "utc": "2026-10-10T18:46:51.786517+00:00",
+  "rootConsumed": true,
+  "sourceCommit": "7a0bbac668ece30416cceefb97997c0de17d1376",
+  "sourceTree": "6c942d435e5a093d4a471182d5030ad1ecf594f6",
+  "readySHA256": "8547297526a21a602ee783e7e8d02579b700782d3cd3afe16aaed575b8790669",
+  "sourceFileCount": 847,
+  "shippingFileCount": 164,
+  "unchangedCompiledFileCount": 74,
+  "changedExecutableFiles": [
+    "ui/game.js"
+  ],
+  "changedShippingFiles": [
+    "game.js"
+  ],
+  "unchangedShippingFileCount": 163,
+  "remoteHelperPid": 1647430,
+  "actualRemoteCommands": [
+    {
+      "name": "snapshot-source",
+      "pid": 1647431,
+      "args": [
+        "cp",
+        "-a",
+        "--reflink=auto",
+        "/workspace/coaster-classic-showcase-interaction-fix-r1/source-r4",
+        "/workspace/coaster-classic-showcase-interaction-fix-r1/source-r5"
+      ],
+      "startUTC": "2026-10-10T18:44:31.698716+00:00",
+      "actualExit": 0,
+      "endUTC": "2026-10-10T18:44:31.836353+00:00",
+      "stdoutSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrBytes": 0
+    },
+    {
+      "name": "editor-syntax",
+      "pid": 1647438,
+      "args": [
+        "node",
+        "--check",
+        "ui/game.js"
+      ],
+      "startUTC": "2026-10-10T18:44:31.991050+00:00",
+      "actualExit": 0,
+      "endUTC": "2026-10-10T18:44:32.097263+00:00",
+      "stdoutSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrBytes": 0
+    },
+    {
+      "name": "canonical-web",
+      "pid": 1647445,
+      "args": [
+        "node",
+        "scripts/build-web.mjs"
+      ],
+      "startUTC": "2026-10-10T18:44:32.098099+00:00",
+      "actualExit": 0,
+      "endUTC": "2026-10-10T18:44:32.392795+00:00",
+      "stdoutSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrBytes": 0
+    }
+  ],
+  "knownRemoteChildrenAbsent": [
+    {
+      "pid": 1647431,
+      "exists": false
+    },
+    {
+      "pid": 1647438,
+      "exists": false
+    },
+    {
+      "pid": 1647445,
+      "exists": false
+    }
+  ],
+  "actualMacTransport": {
+    "pid": 49165,
+    "startUTC": "2026-10-10T18:44:21.696638+00:00",
+    "phases": [
+      {
+        "name": "upload-inputs",
+        "pid": 49174,
+        "args": [
+          "scp",
+          "-q",
+          "/Volumes/WD/code/workspaces/coaster-consumable-art/evidence/classic-interaction-fix-build-r1/source-delta-r5.tar",
+          "/Volumes/WD/code/workspaces/coaster-consumable-art/evidence/classic-interaction-fix-build-r1/source-identity-r5.json",
+          "/Volumes/WD/code/workspaces/coaster-consumable-art/evidence/classic-interaction-fix-build-r1/build-game-tail-r5.py",
+          "grok-build:/workspace/coaster-classic-showcase-interaction-fix-r1/"
+        ],
+        "startUTC": "2026-10-10T18:44:21.701221+00:00",
+        "actualExit": 0,
+        "endUTC": "2026-10-10T18:44:28.996711+00:00",
+        "postWaitExists": false,
+        "stdoutSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderrBytes": 0
+      },
+      {
+        "name": "affected-build",
+        "pid": 49212,
+        "args": [
+          "ssh",
+          "-o",
+          "BatchMode=yes",
+          "grok-build",
+          "python3 /workspace/coaster-classic-showcase-interaction-fix-r1/build-game-tail-r5.py"
+        ],
+        "startUTC": "2026-10-10T18:44:29.001620+00:00",
+        "actualExit": 0,
+        "endUTC": "2026-10-10T18:44:32.477286+00:00",
+        "postWaitExists": false,
+        "stdoutSHA256": "3d1c5975e3742022f54e2cf65c0895c1df79b5dae12a36d0e282d10f3d436266",
+        "stderrBytes": 0
+      },
+      {
+        "name": "retain-proof",
+        "pid": 49235,
+        "args": [
+          "scp",
+          "-q",
+          "-r",
+          "grok-build:/workspace/coaster-classic-showcase-interaction-fix-r1/evidence/build-r5",
+          "/Volumes/WD/code/workspaces/coaster-consumable-art/evidence/classic-interaction-fix-build-r1/remote-build-r5"
+        ],
+        "startUTC": "2026-10-10T18:44:32.479518+00:00",
+        "actualExit": 0,
+        "endUTC": "2026-10-10T18:44:45.298902+00:00",
+        "postWaitExists": false,
+        "stdoutSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderrBytes": 0
+      }
+    ],
+    "scope": "Mac SSH/file transport only; all syntax/build execution on Grok",
+    "actualExit": 0,
+    "readySHA256": "8547297526a21a602ee783e7e8d02579b700782d3cd3afe16aaed575b8790669",
+    "sourceCommit": "7a0bbac668ece30416cceefb97997c0de17d1376",
+    "sourceTree": "6c942d435e5a093d4a471182d5030ad1ecf594f6",
+    "shippingRoot": "/workspace/coaster-classic-showcase-interaction-fix-r1/source-r5/web-dist",
+    "knownRemoteChildStates": [
+      {
+        "pid": 1647431,
+        "exists": false
+      },
+      {
+        "pid": 1647438,
+        "exists": false
+      },
+      {
+        "pid": 1647445,
+        "exists": false
+      }
+    ],
+    "endUTC": "2026-10-10T18:44:45.300102+00:00"
+  },
+  "reuse": "Exact313 kernel/factory/art, camera and previous qualified matrices remain exact; no kernel/camera/paid/native fault replay.",
+  "scope": "Reviewed20 replacement input/Scene-adoption repair. Fresh game Node syntax and canonical web only on Grok; no Mac build/test/runtime. Native/public/whole pending.",
+  "sourcePush": "Ordinary SSH push128 retained; ephemeral authenticated HTTPS push actual0, actual ls-remote head7a0bbac matches; no global Git/SSH config change."
+}

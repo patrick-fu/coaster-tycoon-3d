@@ -1,0 +1,40 @@
+{
+  "utc": "2026-10-10T10:39:38.666726+00:00",
+  "scope": "Root source-only disposition of isolated AGY camera r5. Actual Grok framing, picking and manual interaction remain pending.",
+  "model": "gemini-3.8-flash-high",
+  "effectivePermissions": "request-review",
+  "conversationId": "86e53158-fcac-474f-b1ec-070766482c78",
+  "actualChildExit": 0,
+  "stderrBytes": 0,
+  "stdoutSHA256": "1b1dcd419aa435639bcd734b8d819f940dcdd4bb29f6a24d0fc6ef80b9864568",
+  "sourceSHA256": "978e4d8db17b29578e71a56a7e62adce3751f50b555db081553a75b5daeed0ca",
+  "unchangedInputs": [
+    "ui/game.js",
+    "ui/index.html",
+    "ui/style.css",
+    "references/close-1920x1080.json",
+    "references/overview-1920x1080.json",
+    "references/overview-1024x768.json",
+    "references/overview-1920x1080.png",
+    "references/overview-1024x768.png",
+    "references/close-1920x1080.png",
+    "references/close-1024x768.png",
+    "references/close-1024x768.json",
+    "references/early-frame-index.json"
+  ],
+  "knownProducerPIDsAbsent": [
+    45724,
+    45729
+  ],
+  "acceptedCandidateChanges": [
+    "Reserve visible inspector width through orthographic view offset",
+    "Scale Overview zoom to usable viewport width",
+    "Track manual control start and Close to avoid resetting manual view on resize"
+  ],
+  "unqualified": [
+    "Actual all-four-ride unobstructed framing at1920 and1024",
+    "Actual picking, orbit and zoom after view offset",
+    "Actual1024 toolbar visibility, clicks and overlap"
+  ],
+  "retainedPriorFailure": "r4 timeout with empty response and no source edits remains INCOMPLETE."
+}

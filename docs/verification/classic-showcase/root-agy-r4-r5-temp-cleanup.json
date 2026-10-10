@@ -1,0 +1,89 @@
+{
+  "utc": "2026-10-10T10:50:42.231080+00:00",
+  "scope": "Only exact retained r4/r5 duplicate AGY temporary stdout/stderr copies. Live r6, source, masters, proof, oracles, default profile and frozen previews preserved.",
+  "allEightKnownProducersAbsent": true,
+  "lsofAllEmptyExit1": true,
+  "freedLogicalBytes": 82006,
+  "copiesRemoved": [
+    {
+      "captureDirectory": "/var/folders/5c/f170nvbx6t7105zg26q08zvh0000gn/T/coaster-showcase-camera-agy-r4-ylqnps2f",
+      "retainedDirectory": "/Volumes/WD/code/workspaces/coaster-classic-showcase-camera-r4/evidence/agy-r4",
+      "producerPIDs": [
+        42088,
+        42093
+      ],
+      "files": [
+        {
+          "name": "stdout.jsonl",
+          "bytes": 15240,
+          "sha256": "99b95054cb9a0c642262143bc45815f3ae74a5170c9ed526cd35a6e558667055"
+        },
+        {
+          "name": "stderr.log",
+          "bytes": 79,
+          "sha256": "4a2006a98bc16491aa631ec3d2b8e706159a8aabd2046279f7b9a4af7f6489fd"
+        }
+      ]
+    },
+    {
+      "captureDirectory": "/var/folders/5c/f170nvbx6t7105zg26q08zvh0000gn/T/coaster-showcase-camera-agy-r5-ffa0w41h",
+      "retainedDirectory": "/Volumes/WD/code/workspaces/coaster-classic-showcase-camera-r4/evidence/agy-r5",
+      "producerPIDs": [
+        45724,
+        45729
+      ],
+      "files": [
+        {
+          "name": "stdout.jsonl",
+          "bytes": 33243,
+          "sha256": "1b1dcd419aa435639bcd734b8d819f940dcdd4bb29f6a24d0fc6ef80b9864568"
+        },
+        {
+          "name": "stderr.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ]
+    },
+    {
+      "captureDirectory": "/var/folders/5c/f170nvbx6t7105zg26q08zvh0000gn/T/coaster-showcase-toolbar-agy-r4-mux2yzav",
+      "retainedDirectory": "/Volumes/WD/code/workspaces/coaster-classic-showcase-toolbar-r4/evidence/agy-r4",
+      "producerPIDs": [
+        42089,
+        42092
+      ],
+      "files": [
+        {
+          "name": "stdout.jsonl",
+          "bytes": 16934,
+          "sha256": "a72fea028489d15dcad5f2370730a7c282212c2c369193e811ea0c4ac2fbc50e"
+        },
+        {
+          "name": "stderr.log",
+          "bytes": 79,
+          "sha256": "4a2006a98bc16491aa631ec3d2b8e706159a8aabd2046279f7b9a4af7f6489fd"
+        }
+      ]
+    },
+    {
+      "captureDirectory": "/var/folders/5c/f170nvbx6t7105zg26q08zvh0000gn/T/coaster-showcase-toolbar-agy-r5-9b6my6el",
+      "retainedDirectory": "/Volumes/WD/code/workspaces/coaster-classic-showcase-toolbar-r4/evidence/agy-r5",
+      "producerPIDs": [
+        45725,
+        45728
+      ],
+      "files": [
+        {
+          "name": "stdout.jsonl",
+          "bytes": 16431,
+          "sha256": "1c9d599db0403c2e6c8fd7c5fdefc98604864cb6f39c2314cd34b794b53c63ff"
+        },
+        {
+          "name": "stderr.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ]
+    }
+  ]
+}

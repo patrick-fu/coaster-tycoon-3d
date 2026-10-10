@@ -1,0 +1,37 @@
+{
+  "utc": "2026-10-10T20:09:05.211211+00:00",
+  "rootConsumed": true,
+  "preparedDirectory": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/interactions/fix-r1/public-fixed-r1/preparation-r1",
+  "sourceCommit": "7a0bbac668ece30416cceefb97997c0de17d1376",
+  "sourceTree": "6c942d435e5a093d4a471182d5030ad1ecf594f6",
+  "readySHA256": "8547297526a21a602ee783e7e8d02579b700782d3cd3afe16aaed575b8790669",
+  "hostingCommit": "0f6c585b98fb786d8966c28b6aaab022c3064459",
+  "driverSHA256": "dc7edf9d8df8c56206120e2f073ce39de2a32c71abe073ab0f3cd5b245c5925d",
+  "contractSHA256": "8ff8dfff8a0552d6a46390ef7114e1bea15d7a9f23839e51df047b1a4e9a190b",
+  "preparationReceiptSHA256": "79156a5f65a58ecebf31fd06413b462ebc2ce27ada27f48b65634e5d27497b65",
+  "inputPins": 21,
+  "runtimeInputPins": 14,
+  "actualGeneratorPID": 1676525,
+  "actualSyntaxPID": 1676526,
+  "actualPreparerPID": 1676524,
+  "actualChildExits": [
+    0,
+    0
+  ],
+  "sourceFiles": 847,
+  "shippingFiles": 164,
+  "compiledFiles": 74,
+  "literalSyntaxCount": 83,
+  "helperSyntaxCount": 7,
+  "RootReviewedDiffs": [
+    "7503638dcb4095985b550180309b0104bdc52651cdd6155cf17f113241179873",
+    "dc4fa8c92cfdda5f8e0f8833dd63a4514da632b5fb9e8a9158140cc25792e816"
+  ],
+  "independentNarrowReviews": {
+    "design": "/root/classic_cumulative_design_r2_sol_max PASS exactdc7/8ff/7915, whole pending",
+    "drift": "/root/classic_cumulative_drift_r2_luna_max PASS exactdc7/8ff/7915, whole pending"
+  },
+  "publicationGateBound": false,
+  "actualPublicBrowser": false,
+  "scope": "Root consumes exact prepared bytes/static/tool pins and actual full source/hash tables. Accepted narrow root repairs/common root+pin public scope; no matrix/whole/runtime claim. Actual quote success/residual magnitude will be consumed from final raw, not inferred from static."
+}

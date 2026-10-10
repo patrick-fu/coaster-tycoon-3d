@@ -1,0 +1,67 @@
+{
+  "utc": "2026-10-10T12:04:12.976930+00:00",
+  "scope": "Root accepts complete retained partial R2 plus bounded diagnostic proof. R2 runtime exit1 and first retainer exit1 remain failures. No remaining player tail, publication or whole review qualification.",
+  "sourceCommit": "93b5e2397c9dfd61f2ceb6df1f41d17361453558",
+  "sourceTree": "6f6cbf0bb87a21c0d962591765e1d3c6204317a2",
+  "readySHA256": "0423eebe4dfe4c93a06340fc8cccbc90d547fcd59cc8ae3e7d94ed5c89e6cc89",
+  "retentionRoot": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/retained-r2-diagnostic-r2",
+  "manifestSHA256": "64c546762b213825225775e2149f296478b962d596296703b606577f962b99fb",
+  "retainedSHAListSHA256": "1c4f79437bae57baf00dd2cc8aa01d4c2acbb18ded46122e55fe42ab20433feb",
+  "all706EncodedAndDecodedPayloadsMatched": true,
+  "logicalBytes": 277543031,
+  "retainedBytes": 229095172,
+  "actualSemanticConsumption": {
+    "runtime-r2": {
+      "actualRunnerExit": 1,
+      "fullHTTPBodies": 164,
+      "actualParsedSourcesBoundToCDP": 97,
+      "actualLoadedResponseBodiesBoundToCDP": 3,
+      "completeAuthorityBodiesEqualAcceptedR1": 9,
+      "capturedChildren": 15,
+      "completeTypedDBRestored": true,
+      "knownChildrenAndRunnerAbsent": true,
+      "portsClosed": true
+    },
+    "orbit-diagnostic-r1": {
+      "actualRunnerExit": 0,
+      "fullHTTPBodies": 164,
+      "actualParsedSourcesBoundToCDP": 97,
+      "actualLoadedResponseBodiesBoundToCDP": 0,
+      "completeAuthorityBodiesEqualAcceptedR1": 2,
+      "capturedChildren": 14,
+      "completeTypedDBRestored": true,
+      "knownChildrenAndRunnerAbsent": true,
+      "portsClosed": true
+    }
+  },
+  "offlineAudit": {
+    "SHA256": "1b2075d63e38e66e2d37d0d4da24dae1081bc9c1c9d26c0deb620c000a6b168f",
+    "checks": 561,
+    "knownPIDsAbsent": 31
+  },
+  "correctedRetainer": {
+    "pid": 1488175,
+    "childExit": 0,
+    "SSHExit": 0,
+    "postWaitAbsent": true
+  },
+  "mirror": {
+    "SSHExit": 0,
+    "localTarExit": 0,
+    "hashCheckExit": 0,
+    "blankStderr": true,
+    "wrapperActualExit": 0,
+    "wrapperExitEvidence": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/transport/r2-diagnostic-mirror/actual-wrapper-exit.txt",
+    "administrativeAndMirrorPIDClosure": "Accepted via root-administrative-sidecar-acceptance.json:41 remote/eight Mac absent, lock ownerinactive/portsclosed, exact self-retainer1502946 and SCP5320 terminal0/postwaitabsent."
+  },
+  "fullOriginalTypedDBSHA256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+  "remainingUnexecuted": [
+    "Native manual orbit/pan/wheel and actual resize/picking",
+    "Actual player construction/removal",
+    "Genuine prior Chrome13 File import, Save/Export and actual reload",
+    "Final native resource lifecycle",
+    "New public preview and whole cumulative review closure"
+  ],
+  "priorR1AncestryGapRetained": "13 captured plus2 late-reaped without individual prior ancestry/status; these later complete trees do not erase that limit.",
+  "next": "Read repaired driver/preflight, then release only affected and remaining local tail."
+}

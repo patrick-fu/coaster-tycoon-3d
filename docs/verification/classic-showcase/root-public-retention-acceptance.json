@@ -1,0 +1,224 @@
+{
+  "utc": "2026-10-10T15:15:34.218853+00:00",
+  "method": "Mac file-I/O/hash/JSON-only independent proof consumption; no build/test/simulation/browser",
+  "passed": true,
+  "manifestSHA256": "e16af7c3eec4c264a995d71394c1f82a693f6cf90a2539747d98e214be26f5ae",
+  "fileCount": 1124,
+  "logicalBytes": 530063278,
+  "retainedBytes": 395550448,
+  "compressedCount": 60,
+  "routes": [
+    {
+      "route": "root",
+      "rawLines": 5465,
+      "checks": 77,
+      "httpBodies": 164,
+      "sourceReplies": 194,
+      "loadedBodyReplies": 6,
+      "wholeSaveReplies": 17,
+      "nativeCausalReplies": 2,
+      "boundPNGCount": 11,
+      "resources": [
+        {
+          "file": "actual-owned-scene-disposal.json",
+          "actualReplyLine": 3539
+        },
+        {
+          "file": "actual-scene-final-disposal.json",
+          "actualReplyLine": 5408
+        }
+      ],
+      "typedInventories": [
+        {
+          "file": "protected-original-databases.json",
+          "actualReplyLine": 55
+        },
+        {
+          "file": "restored-original-databases.json",
+          "actualReplyLine": 5461
+        },
+        {
+          "file": "actual-saved-typed-inventory.json",
+          "actualReplyLine": 5459
+        }
+      ]
+    },
+    {
+      "route": "pin",
+      "rawLines": 5220,
+      "checks": 70,
+      "httpBodies": 164,
+      "sourceReplies": 194,
+      "loadedBodyReplies": 6,
+      "wholeSaveReplies": 16,
+      "nativeCausalReplies": 2,
+      "boundPNGCount": 10,
+      "resources": [
+        {
+          "file": "actual-owned-scene-disposal.json",
+          "actualReplyLine": 3212
+        },
+        {
+          "file": "actual-scene-final-disposal.json",
+          "actualReplyLine": 5161
+        }
+      ],
+      "typedInventories": [
+        {
+          "file": "protected-original-databases.json",
+          "actualReplyLine": 54
+        },
+        {
+          "file": "restored-original-databases.json",
+          "actualReplyLine": 5216
+        },
+        {
+          "file": "actual-saved-typed-inventory.json",
+          "actualReplyLine": 5214
+        }
+      ]
+    }
+  ],
+  "toolTerminalSupplement": {
+    "passed": true,
+    "manifestSHA256": "00072ecfb7377cd25d9518d81817f14ee31ffa4344fcdf84fb76ae25d3155159",
+    "checksumSHA256": "3622a52cb338b907f8a67220fdbe7a86da658d1fc7059479b9555c393e97ab37",
+    "fileCount": 51,
+    "logicalBytes": 100332,
+    "retainedBytes": 100332,
+    "outsideSelfTerminalReceipts": [
+      {
+        "path": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/administrative-attempt/public-terminal-retention-r1/post-wait.json",
+        "postwait": {
+          "pid": 1558968,
+          "exists": false
+        }
+      },
+      {
+        "path": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/administrative-attempt/public-terminal-retention-r1/actual-child-exit.txt",
+        "actualExit": 0
+      },
+      {
+        "path": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/transport/public-terminal-r1/transport-scp-exit.txt",
+        "actualExit": 0
+      },
+      {
+        "path": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/transport/public-terminal-r1/helper-scp-exit.txt",
+        "actualExit": 0
+      },
+      {
+        "path": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/transport/public-terminal-r1/mirror-scp-exit.txt",
+        "actualExit": 0
+      },
+      {
+        "path": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/transport/public-terminal-r1/post-wait-ssh.json",
+        "postwait": {
+          "pid": 76548,
+          "exists": false
+        }
+      },
+      {
+        "path": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/transport/public-terminal-r1/mac-known-pid-exit.txt",
+        "actualExit": 0
+      },
+      {
+        "path": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/transport/public-terminal-r1/terminal-scp-exit.txt",
+        "actualExit": 0
+      },
+      {
+        "path": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/transport/public-terminal-r1/actual-ssh-outer-exit.txt",
+        "actualExit": 0
+      },
+      {
+        "path": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/transport/public-terminal-r1/tar-pid-scp-exit.txt",
+        "actualExit": 0
+      },
+      {
+        "path": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/transport/public-terminal-mirror-r1/actual-hash-check-exit.txt",
+        "actualExit": 0
+      },
+      {
+        "path": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/transport/public-terminal-mirror-r1/post-wait-hash.json",
+        "postwait": {
+          "pid": 77952,
+          "exists": false
+        }
+      },
+      {
+        "path": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/transport/public-terminal-mirror-r1/actual-attempt-scp-exit.txt",
+        "actualExit": 0
+      },
+      {
+        "path": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/transport/public-terminal-mirror-r1/post-wait-attempt-scp.json",
+        "postwait": {
+          "pid": 77916,
+          "exists": false
+        }
+      },
+      {
+        "path": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/transport/public-terminal-mirror-r1/actual-scp-exit.txt",
+        "actualExit": 0
+      },
+      {
+        "path": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/transport/public-terminal-mirror-r1/post-wait-scp.json",
+        "postwait": {
+          "pid": 77629,
+          "exists": false
+        }
+      }
+    ],
+    "rootIndependentlyAbsentMacPIDs": [
+      61832,
+      62068,
+      62072,
+      63877,
+      64325,
+      66097,
+      68101,
+      70029,
+      71032,
+      71566,
+      71569,
+      71576,
+      71577,
+      72745,
+      76548,
+      77629,
+      77916,
+      77952
+    ],
+    "actualPSExit": 1
+  },
+  "materialCandidates": "Held-click residual and stale selectedRide after New still await native observation",
+  "rootProofHelper": {
+    "path": "/Volumes/WD/code/workspaces/coaster-consumable-art/evidence/classic-public-root-consumption-r1/consume.py",
+    "sha256": "352e9e9a389be7b857eb9dd356f97a5a487776b8795a073c9c9a09d145ee1888"
+  },
+  "status": "Root consumes entire actual public1124+51/raw/whole authority/tool closure; material interaction candidates and whole reviews remain pending",
+  "independentProjectionDisposition": {
+    "status": "Surface helper update suspicion rejected by effective actual override",
+    "rootInstallLine": 1967,
+    "rootTileLine": 2834,
+    "rootRestoreLine": 3547,
+    "pinInstallLine": 1843,
+    "pinTileLine": 2555,
+    "pinRestoreLine": 3220,
+    "witnessSHA256": "2bda287f9054a5dad3c33f0ce31d6a1f20814dde56cf4fff5b5385646441360a",
+    "reason": "p.tile dynamically reads p.project; exact actual witness replaces it with completed-render-only projection before tile call and restores afterwards. Root and independent Drift R1 verify raw order and same sessions. No product/observer repair or replay needed."
+  },
+  "rootFreshRemoteClosure": {
+    "actualSSHExit": 0,
+    "knownRemoteCount": 27,
+    "allKnownAbsent": true,
+    "portsOpen": {
+      "8777": false,
+      "9237": false
+    },
+    "scope": "Fresh Root proc/socket-only probe over exact known owned runtime/preparation/audit/retainer PIDs; no app/Chrome launch or global ancestry claim."
+  },
+  "sourceCommit": "93b5e2397c9dfd61f2ceb6df1f41d17361453558",
+  "sourceTree": "6f6cbf0bb87a21c0d962591765e1d3c6204317a2",
+  "readySHA256": "0423eebe4dfe4c93a06340fc8cccbc90d547fcd59cc8ae3e7d94ed5c89e6cc89",
+  "hostingCommit": "b54109d6f1ef5f86eabb8c7b9765422a70fd6baf",
+  "chromeRulesSHA256": "78b58b23912d6653fde12fbd57249a5a67182867f354edd76c7a4e58fd17fc50"
+}

@@ -1,0 +1,77 @@
+{
+  "utc": "2026-10-10T11:19:57.758274+00:00",
+  "scope": "Root accepts exact finite77 canonical compile/all313tests/web/whole810792B factory Node oracle. Actual revised Chrome/public/human/GPU qualification pending.",
+  "sourceCommit": "93b5e2397c9dfd61f2ceb6df1f41d17361453558",
+  "sourceTree": "6f6cbf0bb87a21c0d962591765e1d3c6204317a2",
+  "remoteReadyPath": "/workspace/coaster-classic-showcase-canonical-r1/evidence/build-r2/build-ready.json",
+  "readySHA256": "0423eebe4dfe4c93a06340fc8cccbc90d547fcd59cc8ae3e7d94ed5c89e6cc89",
+  "shippingRoot": "/workspace/coaster-classic-showcase-canonical-r1/source/web-dist",
+  "actualAllFiveChildExits": 0,
+  "actualContinuationSSHExit": 0,
+  "actualProofMirrorExit": 0,
+  "allPhaseStderrBytes": 0,
+  "sourceFilesExact": 823,
+  "shippingFilesExact": 164,
+  "compiledFilesUnchanged": 74,
+  "changedComparedTo2b395": [
+    "park-scene.js"
+  ],
+  "unchangedShippingFiles": 163,
+  "canonicalTestCounts": {
+    "tests": 313,
+    "pass": 313,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "testConfiguration": "Canonical33 test/*.test.mjs files, serialconcurrency1; all313 mandatory checks passed, none skipped. Reuse original child0; no rerun.",
+  "fullFactoryOracle": {
+    "saveVersion": 13,
+    "contentVersion": 6,
+    "protocolVersion": 6,
+    "rulesSHA256": "b123fee6c14e7b2df2b32b694639258a721f43a9552046d636f651c0af2d3fcb",
+    "bytes": 810792,
+    "sha256": "a91139e868bf21eebb1cc75e049e368fa3e285795f011e833c48d4ca8d8bef4a"
+  },
+  "originalFailedHelperAndSSHExit": 1,
+  "originalFailedReadySHA256": "cecf2a5666a7695220167e1f7d665e3f431a5a876833148df1fcb521c7e6bbd4",
+  "testCountDiagnosis": {
+    "scope": "Stale helper counter from earlier kernel-only312 baseline; integrated main includes one previously added batching test. No product test failed or case removed.",
+    "oldBaselineTests": 312,
+    "actualCanonicalTests": 313,
+    "addedSubtests": [
+      "static batching preserves the visible shutter pose and element selection across open closed open"
+    ],
+    "removedSubtests": [],
+    "baselineStdoutSHA256": "8a5c13aa58b45dce51a9da94349be871d77597341571b6fb819515aee963c6d0",
+    "actualCanonicalStdoutSHA256": "6fc2dedb5dcbc84497c630382692c60594145ea01e463019144e8fd79b706b44",
+    "originalFailedReadySHA256": "cecf2a5666a7695220167e1f7d665e3f431a5a876833148df1fcb521c7e6bbd4",
+    "reusedSuccessfulPhases": [
+      "node-version",
+      "canonical-build",
+      "canonical-tests"
+    ]
+  },
+  "knownRemotePIDsAbsent": [
+    1465710,
+    1472371,
+    1465711,
+    1465712,
+    1465761,
+    1472372,
+    1472383
+  ],
+  "knownMacOrchestrationPIDsAbsent": [
+    55310,
+    55314,
+    55315,
+    56576,
+    56578,
+    61249,
+    61251
+  ],
+  "closureLimitation": "Known direct phases/helpers only; complete npm/TS descendant ancestry not captured.",
+  "rawRoot": "/Volumes/WD/code/workspaces/coaster-consumable-art/evidence/classic-canonical-r1/raw",
+  "sourceIdentitySHA256": "5f3954b378246017cff280d83ac28d23cc0a068b4215287bc927c592f0c933bc"
+}

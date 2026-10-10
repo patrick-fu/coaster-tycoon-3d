@@ -1,0 +1,49 @@
+{
+  "utc": "2026-10-10T17:08:38.769606+00:00",
+  "scope": "Root consumes actual final game-only source29 remote syntax/web packaging. Source879/camera syntax and exact74 compiled/all313 kernel/art/factory reused; no Mac runtime or duplicated matrices. Native/public acceptance pending.",
+  "sourceCommit": "29c2b0db9c4e18368f6efb2f181850d1b6981818",
+  "sourceTree": "f7201486a4e76211898475a480ba8a5e42fc8c66",
+  "readySHA256": "cb6b8b78799e59326376d516997dacba11bd6d35f46875c332ee364da22b5ed7",
+  "readyPath": "/workspace/coaster-classic-showcase-interaction-fix-r1/evidence/build-r2/build-ready.json",
+  "shippingRoot": "/workspace/coaster-classic-showcase-interaction-fix-r1/source-r2/web-dist",
+  "sourceFiles": 847,
+  "shippingFiles": 164,
+  "changedComparedTo879": [
+    "game.js"
+  ],
+  "unchangedShippingComparedTo879": 163,
+  "cameraSHA256": "f562b92da35a35792fe36c3b6ebfdcbc31b42368ce2f48ff0bbc65f5645cf79b",
+  "gameSHA256": "93a42c18f0658ed6d8e72f92f16df18fa7bf26754d38562b755443087e39440e",
+  "compiledFilesUnchanged": 74,
+  "canonicalTestsReused": {
+    "tests": 313,
+    "pass": 313,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "actualBothNodeExits": 0,
+  "actualSnapshotCopyExit": 0,
+  "actualRemoteHelperAndSSHExits": 0,
+  "actualUploadAndProofMirrorExits": 0,
+  "knownChildStates": [
+    {
+      "pid": 1607295,
+      "exists": false
+    },
+    {
+      "pid": 1607296,
+      "exists": false
+    },
+    {
+      "pid": 1607303,
+      "exists": false
+    }
+  ],
+  "remoteHelperPID": 1607294,
+  "transportTerminalSHA256": "43989ad937fb269bff1f75cc688524a32d0fa84b7d5070d82d03d7dec0efd80c",
+  "proofRoot": "/Volumes/WD/code/workspaces/coaster-consumable-art/evidence/classic-interaction-fix-build-r1",
+  "actualSourcePushExit": 0,
+  "nativePublic": "Pending"
+}
