@@ -11,8 +11,10 @@ Try the [current Classic showcase](https://patrick-fu.github.io/coaster-tycoon-3
 in desktop Chrome or Edge. This branch composes a four-ride starter park: a
 ground-level wooden coaster, steel lift/drop circuit, single four-seat Log Flume
 and sixteen-seat Carousel, with detailed Burger/Soft-drink stalls, restrooms,
-connected paths and gardens. Its local player checks pass; public qualification
-of this successor is pending in [the live record](PROGRESS.md). The showcase uses
+connected paths and gardens. Its local and actual public player checks pass at
+[the frozen preview](https://patrick-fu.github.io/coaster-tycoon-3d/previews/classic-93b5e23/?showcase=classic).
+Two newly identified interaction candidates remain under narrow investigation in
+[the live record](PROGRESS.md). The showcase uses
 a separate save slot, preserving your existing park at the
 [regular preview](https://patrick-fu.github.io/coaster-tycoon-3d/).
 Build and manage Copper Meadows with mouse/keyboard;
@@ -22,10 +24,10 @@ cross-runtime default-rule portability is not yet qualified.
 An earlier local park remains intact; choose **New park** after saving/exporting
 it to start this branch's four-ride layout.
 
-![Actual local Classic park with wood, steel, Log Flume and Carousel](docs/verification/classic-showcase/overview.png)
+![Actual published Classic93 park with wood, steel, Log Flume and Carousel](docs/verification/classic-showcase/overview.png)
 
 [Current finite checks](docs/verification/classic-showcase/README.md) distinguish
-actual local operation and player controls from pending public and human acceptance.
+actual local/public operation and player controls from unresolved interaction, human and hardware acceptance.
 
 The current art iteration adds detailed oak meshes, real CC0 bark and leaf
 surfaces, masked shadows and three camera-selected levels of detail to the

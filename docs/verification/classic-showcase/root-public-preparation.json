@@ -1,6 +1,6 @@
 {
   "utc": "2026-10-10T12:14:42.442948+00:00",
-  "scope": "Reversible hosting preparation only. Not committed, pushed, published or public-qualified.",
+  "scope": "Exact staging reverified after local acceptance. Runtime164 and protected1262 remain exact; metadata now points to actual attached draft PR78. Commit/push and public qualification not yet claimed.",
   "sourceCommit": "93b5e2397c9dfd61f2ceb6df1f41d17361453558",
   "sourceTree": "6f6cbf0bb87a21c0d962591765e1d3c6204317a2",
   "readySHA256": "0423eebe4dfe4c93a06340fc8cccbc90d547fcd59cc8ae3e7d94ed5c89e6cc89",
@@ -670,12 +670,12 @@
   },
   "metadataFiles": {
     "build.json": {
-      "bytes": 908,
-      "sha256": "fa4ef7fd5130148110d303d0a88541a737f6ccd62fbd0e64a31a3b5fe4a22e4d"
+      "bytes": 961,
+      "sha256": "0de55cf3e2a83b3ae45da5716cf2b774235fbdae9959bfc0e39ee3e7265e4362"
     },
     "preview-manifest.json": {
-      "bytes": 17678,
-      "sha256": "04ad3c4da56194117e34d419ab86fe6b995679167a4244382de8ba90d3d3c321"
+      "bytes": 17731,
+      "sha256": "98b968fe80aa893c7f9a374e7447f205c7a3de0946119dc0d0f0021d1f64f376"
     }
   },
   "protectedEarlierFiles": {
@@ -1947,5 +1947,14 @@
   "replacedPriorRootShippingFiles": 162,
   "newRootShippingFiles": 2,
   "failedFirstPreparation": "The first file-only preparation exited1 before copying: stale protected1098 count ignored the newly published164-file d232 preview, and two existing root metadata files are outside runtime shipping. Actual current inventory is1262 protected files and162 prior root runtime files; exact prior paths were read before this separate preparation.",
-  "next": "Wait for final affected local proof and pre-public cumulative findings disposition; attach an actual source PR if created, then commit/push and qualify fresh public paths."
+  "next": "Commit/push this exact runtime and metadata; verify actual Pages and fresh public root/pin behavior.",
+  "sourcePullRequest": "https://github.com/patrick-fu/coaster-tycoon-3d/pull/78",
+  "lastStagingVerificationUTC": "2026-10-10T13:46:49.487809+00:00",
+  "failedSecondPreparation": "First publication gate exited1 before mutation: Root compared a shipping record object to a digest string. Actual manifest stores {bytes, sha256}; this separate run reads and verifies both fields. Hosting base and all runtime/protected bytes were unchanged.",
+  "inheritedVendoredWhitespace": {
+    "path": "previews/classic-93b5e23/vendor/three.core.js",
+    "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
+    "byteIdenticalToPriorRootAndCurrentVendor": true,
+    "observation": "Unrestricted staged whitespace check flags one inherited space-before-tab in original Three core at line49957. The exact vendored bytes are preserved; all other staged paths pass diff --check. No runtime source alteration or check bypass for owned files."
+  }
 }
