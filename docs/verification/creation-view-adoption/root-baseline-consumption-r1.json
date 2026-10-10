@@ -1,0 +1,999 @@
+{
+  "pid": 1737064,
+  "startUTC": "2026-10-10T22:31:28.453816+00:00",
+  "scope": "Root offline original failed-baseline consumption only. No app, replay, candidate or private game mutation. Preserve run1, accept only the Track causal baseline if all bindings pass.",
+  "actualExit": 0,
+  "fullOriginalRawConsumed": true,
+  "rawBytes": 709507604,
+  "rawSHA256": "ef1b1b90bd0b9ddd855a28e228fd5a6aeeec8f298c8c363058123a9d0a31a205",
+  "counts": {
+    "rawRows": 6201,
+    "send": 668,
+    "reply": 668,
+    "event": 4865,
+    "runtimeReplies": 415
+  },
+  "trackQualified": true,
+  "originalRunExitPreserved": 1,
+  "queueQualified": false,
+  "escapeQualified": false,
+  "productPassClaim": false,
+  "creationChangedFields": [
+    "nextInstance",
+    "revision",
+    "rides"
+  ],
+  "trackDeliveryElapsedMs": 6799.5999999940395,
+  "terminalRawBinding": {
+    "requestID": 313,
+    "sendLine": 3129,
+    "replyLine": 3135,
+    "sendUTC": "2026-10-10T22:02:16.504608+00:00",
+    "replyUTC": "2026-10-10T22:02:19.027277+00:00"
+  },
+  "nativeExportRawBindings": {
+    "startup": {
+      "requestID": 67,
+      "sendLine": 1597,
+      "replyLine": 1605,
+      "sendUTC": "2026-10-10T22:01:46.091435+00:00",
+      "replyUTC": "2026-10-10T22:01:46.126178+00:00"
+    },
+    "before-track": {
+      "requestID": 200,
+      "sendLine": 1987,
+      "replyLine": 1989,
+      "sendUTC": "2026-10-10T22:01:51.074829+00:00",
+      "replyUTC": "2026-10-10T22:01:51.094743+00:00"
+    },
+    "track-created-held": {
+      "requestID": 263,
+      "sendLine": 2485,
+      "replyLine": 2493,
+      "sendUTC": "2026-10-10T22:02:01.899083+00:00",
+      "replyUTC": "2026-10-10T22:02:01.918984+00:00"
+    },
+    "track-held-input": {
+      "requestID": 285,
+      "sendLine": 2564,
+      "replyLine": 2566,
+      "sendUTC": "2026-10-10T22:02:05.922434+00:00",
+      "replyUTC": "2026-10-10T22:02:05.943115+00:00"
+    },
+    "track-released-input": {
+      "requestID": 311,
+      "sendLine": 2840,
+      "replyLine": 2842,
+      "sendUTC": "2026-10-10T22:02:11.630219+00:00",
+      "replyUTC": "2026-10-10T22:02:11.654791+00:00"
+    }
+  },
+  "sourceBindings": [
+    {
+      "requestID": 71,
+      "sendLine": 1612,
+      "replyLine": 1613,
+      "sendUTC": "2026-10-10T22:01:47.509921+00:00",
+      "replyUTC": "2026-10-10T22:01:47.516735+00:00",
+      "relativePath": "game.js",
+      "sha256": "aad245986349d541e3c022280c222aad8aa73989db7cd283a654df8577001b19"
+    },
+    {
+      "requestID": 72,
+      "sendLine": 1614,
+      "replyLine": 1615,
+      "sendUTC": "2026-10-10T22:01:47.522419+00:00",
+      "replyUTC": "2026-10-10T22:01:47.523564+00:00",
+      "relativePath": "flume-controls.js",
+      "sha256": "86f9e7c264d023d5599eea7c5a8c3dc920733090f8fb5f4c6ac574fe05a42821"
+    },
+    {
+      "requestID": 73,
+      "sendLine": 1616,
+      "replyLine": 1617,
+      "sendUTC": "2026-10-10T22:01:47.523885+00:00",
+      "replyUTC": "2026-10-10T22:01:47.525104+00:00",
+      "relativePath": "consumable-controls.js",
+      "sha256": "4e77687b8a5578a9fd15e89db3ef22bf0156304b22542be8e833b062862a118e"
+    },
+    {
+      "requestID": 74,
+      "sendLine": 1618,
+      "replyLine": 1619,
+      "sendUTC": "2026-10-10T22:01:47.525369+00:00",
+      "replyUTC": "2026-10-10T22:01:47.526781+00:00",
+      "relativePath": "park-scene.js",
+      "sha256": "f562b92da35a35792fe36c3b6ebfdcbc31b42368ce2f48ff0bbc65f5645cf79b"
+    },
+    {
+      "requestID": 75,
+      "sendLine": 1620,
+      "replyLine": 1621,
+      "sendUTC": "2026-10-10T22:01:47.527091+00:00",
+      "replyUTC": "2026-10-10T22:01:47.551652+00:00",
+      "relativePath": "vendor/three.module.js",
+      "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea"
+    },
+    {
+      "requestID": 76,
+      "sendLine": 1622,
+      "replyLine": 1623,
+      "sendUTC": "2026-10-10T22:01:47.555365+00:00",
+      "replyUTC": "2026-10-10T22:01:47.641657+00:00",
+      "relativePath": "vendor/three.core.js",
+      "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6"
+    },
+    {
+      "requestID": 77,
+      "sendLine": 1624,
+      "replyLine": 1625,
+      "sendUTC": "2026-10-10T22:01:47.653571+00:00",
+      "replyUTC": "2026-10-10T22:01:47.656897+00:00",
+      "relativePath": "vendor/OrbitControls.js",
+      "sha256": "3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b"
+    },
+    {
+      "requestID": 78,
+      "sendLine": 1626,
+      "replyLine": 1627,
+      "sendUTC": "2026-10-10T22:01:47.657339+00:00",
+      "replyUTC": "2026-10-10T22:01:47.658823+00:00",
+      "relativePath": "art/runtime.js",
+      "sha256": "c51087ac087db82fb765b119dc2463f48e1f45c19f583723b64fc7f2f7771b35"
+    },
+    {
+      "requestID": 79,
+      "sendLine": 1628,
+      "replyLine": 1629,
+      "sendUTC": "2026-10-10T22:01:47.659023+00:00",
+      "replyUTC": "2026-10-10T22:01:47.662230+00:00",
+      "relativePath": "art/environment.js",
+      "sha256": "b94f58adf2419866af798467d6af0af2a5355dbd0cc797cb866234745d6f8933"
+    },
+    {
+      "requestID": 80,
+      "sendLine": 1630,
+      "replyLine": 1631,
+      "sendUTC": "2026-10-10T22:01:47.662621+00:00",
+      "replyUTC": "2026-10-10T22:01:47.665469+00:00",
+      "relativePath": "art/buildings.js",
+      "sha256": "fd59e83c14589dc1db7cf43ef79a0ad02ebede0569f092465349387a0161e720"
+    },
+    {
+      "requestID": 81,
+      "sendLine": 1632,
+      "replyLine": 1633,
+      "sendUTC": "2026-10-10T22:01:47.665874+00:00",
+      "replyUTC": "2026-10-10T22:01:47.669522+00:00",
+      "relativePath": "art/coaster.js",
+      "sha256": "acea0401e86ca920fefdca2d25ac43c6ca88f6ad78d980b995967c9a19d42951"
+    },
+    {
+      "requestID": 82,
+      "sendLine": 1634,
+      "replyLine": 1635,
+      "sendUTC": "2026-10-10T22:01:47.669965+00:00",
+      "replyUTC": "2026-10-10T22:01:47.671209+00:00",
+      "relativePath": "content/steel-coaster.js",
+      "sha256": "d248ab39ba5695c5402872b634d514cc81517673c44d77e9e0da3deaaf683335"
+    },
+    {
+      "requestID": 83,
+      "sendLine": 1636,
+      "replyLine": 1637,
+      "sendUTC": "2026-10-10T22:01:47.671378+00:00",
+      "replyUTC": "2026-10-10T22:01:47.676255+00:00",
+      "relativePath": "simulation/engine.js",
+      "sha256": "f15a5646359ecab5d2b870712b0ad2f5b0adc843d9d8815cf1cac64681e0ba75"
+    },
+    {
+      "requestID": 84,
+      "sendLine": 1638,
+      "replyLine": 1639,
+      "sendUTC": "2026-10-10T22:01:47.676863+00:00",
+      "replyUTC": "2026-10-10T22:01:47.678032+00:00",
+      "relativePath": "simulation/types.js",
+      "sha256": "1a6231381895d5abcccbc927e582be7270c22e19c76be7c5c3e560d83ea97d91"
+    },
+    {
+      "requestID": 85,
+      "sendLine": 1640,
+      "replyLine": 1641,
+      "sendUTC": "2026-10-10T22:01:47.678317+00:00",
+      "replyUTC": "2026-10-10T22:01:47.679543+00:00",
+      "relativePath": "simulation/validation.js",
+      "sha256": "10a2f21ddd134f16105bf4f0153d57a6e660d7938157e30c1958487498b66056"
+    },
+    {
+      "requestID": 86,
+      "sendLine": 1642,
+      "replyLine": 1643,
+      "sendUTC": "2026-10-10T22:01:47.679682+00:00",
+      "replyUTC": "2026-10-10T22:01:47.681785+00:00",
+      "relativePath": "simulation/geometry.js",
+      "sha256": "495a3b626f79bd316f012a564a70dffa9ae627b60fe96fb5fde59be8ffaac775"
+    },
+    {
+      "requestID": 87,
+      "sendLine": 1644,
+      "replyLine": 1645,
+      "sendUTC": "2026-10-10T22:01:47.682020+00:00",
+      "replyUTC": "2026-10-10T22:01:47.682903+00:00",
+      "relativePath": "simulation/housekeeping.js",
+      "sha256": "588c5c06187c0bcfd9d5b52a69ea33fece6a22aa89246df1189e4a247fb5cc7b"
+    },
+    {
+      "requestID": 88,
+      "sendLine": 1646,
+      "replyLine": 1647,
+      "sendUTC": "2026-10-10T22:01:47.683068+00:00",
+      "replyUTC": "2026-10-10T22:01:47.683851+00:00",
+      "relativePath": "simulation/services.js",
+      "sha256": "171566ab11852ed81f086e098bb2d85f46d790267ee3cad56c1e47f55c0b0aee"
+    },
+    {
+      "requestID": 89,
+      "sendLine": 1648,
+      "replyLine": 1649,
+      "sendUTC": "2026-10-10T22:01:47.684026+00:00",
+      "replyUTC": "2026-10-10T22:01:47.685485+00:00",
+      "relativePath": "simulation/patrol.js",
+      "sha256": "4a59eec5e274c541fecf413cb62cd27cabfe5fb13aaa6104d5543b8498b16e16"
+    },
+    {
+      "requestID": 90,
+      "sendLine": 1650,
+      "replyLine": 1651,
+      "sendUTC": "2026-10-10T22:01:47.685702+00:00",
+      "replyUTC": "2026-10-10T22:01:47.687380+00:00",
+      "relativePath": "simulation/operation.js",
+      "sha256": "90a079ea7b4ed724d214a334b8cd006bcb07a40774b7f431051c554e9c620e69"
+    },
+    {
+      "requestID": 91,
+      "sendLine": 1652,
+      "replyLine": 1653,
+      "sendUTC": "2026-10-10T22:01:47.687630+00:00",
+      "replyUTC": "2026-10-10T22:01:47.688483+00:00",
+      "relativePath": "content/registry.js",
+      "sha256": "f54ac235840492819e4afa279222034b0ed4cd184640d69cfd49dfe33e56aa9d"
+    },
+    {
+      "requestID": 92,
+      "sendLine": 1654,
+      "replyLine": 1655,
+      "sendUTC": "2026-10-10T22:01:47.688715+00:00",
+      "replyUTC": "2026-10-10T22:01:47.692380+00:00",
+      "relativePath": "content/rct2-reference.js",
+      "sha256": "23ad185689097bbc9b21d87de63f4d62a4d2365fa019f983cf8b8ae85f7836ee"
+    },
+    {
+      "requestID": 93,
+      "sendLine": 1656,
+      "replyLine": 1657,
+      "sendUTC": "2026-10-10T22:01:47.692982+00:00",
+      "replyUTC": "2026-10-10T22:01:47.696005+00:00",
+      "relativePath": "content/ride-profiles.js",
+      "sha256": "4b2a025833ac73762ddc16eb29a26cfece126fc9a4a6839d039f5bf4ea65974e"
+    },
+    {
+      "requestID": 94,
+      "sendLine": 1658,
+      "replyLine": 1659,
+      "sendUTC": "2026-10-10T22:01:47.696219+00:00",
+      "replyUTC": "2026-10-10T22:01:47.696783+00:00",
+      "relativePath": "simulation/flume-profile.js",
+      "sha256": "e89e86ea002b94f7339ef7c5e4bcc73c33998abf0252c17ed2b430b2394f7f58"
+    },
+    {
+      "requestID": 95,
+      "sendLine": 1660,
+      "replyLine": 1661,
+      "sendUTC": "2026-10-10T22:01:47.696936+00:00",
+      "replyUTC": "2026-10-10T22:01:47.697526+00:00",
+      "relativePath": "content/log-flume.js",
+      "sha256": "6f71b4fc57dd403647c725f0e018a0439ce226108dc5459d837cfc9d0e469aa1"
+    },
+    {
+      "requestID": 96,
+      "sendLine": 1662,
+      "replyLine": 1663,
+      "sendUTC": "2026-10-10T22:01:47.697708+00:00",
+      "replyUTC": "2026-10-10T22:01:47.700069+00:00",
+      "relativePath": "simulation/wooden-placement.js",
+      "sha256": "66b9590399dfd6235cbf6c04401744df1611d7fa1b55a72c1daf6950393a586c"
+    },
+    {
+      "requestID": 97,
+      "sendLine": 1664,
+      "replyLine": 1665,
+      "sendUTC": "2026-10-10T22:01:47.700252+00:00",
+      "replyUTC": "2026-10-10T22:01:47.701111+00:00",
+      "relativePath": "simulation/carousel.js",
+      "sha256": "c707db6b92deb1742b2c84f9cdb7c65a50fbdd9908387e64b29e53e0f3b29f6a"
+    },
+    {
+      "requestID": 98,
+      "sendLine": 1666,
+      "replyLine": 1667,
+      "sendUTC": "2026-10-10T22:01:47.701320+00:00",
+      "replyUTC": "2026-10-10T22:01:47.702279+00:00",
+      "relativePath": "content/carousel.js",
+      "sha256": "29f71f912001cf341916541fbf678bf8fb1985d6c1979cf1e541e8e79318ceb9"
+    },
+    {
+      "requestID": 99,
+      "sendLine": 1668,
+      "replyLine": 1669,
+      "sendUTC": "2026-10-10T22:01:47.702431+00:00",
+      "replyUTC": "2026-10-10T22:01:47.703150+00:00",
+      "relativePath": "simulation/flume-native.js",
+      "sha256": "735c2d793a1daf76844e1eeac6ea3342e37f84b1f49e5de6edc8e914073f02ae"
+    },
+    {
+      "requestID": 100,
+      "sendLine": 1670,
+      "replyLine": 1671,
+      "sendUTC": "2026-10-10T22:01:47.703323+00:00",
+      "replyUTC": "2026-10-10T22:01:47.703997+00:00",
+      "relativePath": "simulation/flume-portal.js",
+      "sha256": "877ba9c562c874ee742a77ec67aa64cb68012885ce96f288e6d4f9b128e621c3"
+    },
+    {
+      "requestID": 101,
+      "sendLine": 1672,
+      "replyLine": 1673,
+      "sendUTC": "2026-10-10T22:01:47.704191+00:00",
+      "replyUTC": "2026-10-10T22:01:47.705101+00:00",
+      "relativePath": "simulation/boat.js",
+      "sha256": "d4ca78dc773f712086b995b5bf870d48dd9a3feb35fb9765f8296b499fb80199"
+    },
+    {
+      "requestID": 102,
+      "sendLine": 1674,
+      "replyLine": 1675,
+      "sendUTC": "2026-10-10T22:01:47.705330+00:00",
+      "replyUTC": "2026-10-10T22:01:47.706075+00:00",
+      "relativePath": "content/consumables.js",
+      "sha256": "f5c7f277329113b8f79e3575189d76a642c00810aed2eff6206e511305f99b9c"
+    },
+    {
+      "requestID": 103,
+      "sendLine": 1676,
+      "replyLine": 1677,
+      "sendUTC": "2026-10-10T22:01:47.706276+00:00",
+      "replyUTC": "2026-10-10T22:01:47.706802+00:00",
+      "relativePath": "simulation/scenery.js",
+      "sha256": "af181426f98f7c6daab583055906264db929940ecb25a3fe50c1ca219d9ee520"
+    },
+    {
+      "requestID": 104,
+      "sendLine": 1678,
+      "replyLine": 1679,
+      "sendUTC": "2026-10-10T22:01:47.706943+00:00",
+      "replyUTC": "2026-10-10T22:01:47.707392+00:00",
+      "relativePath": "content/facility-profiles.js",
+      "sha256": "ad558ff5f276662019ea662a22c0637d6eb1ecc061364cda8c9dcd2bb28aa2a4"
+    },
+    {
+      "requestID": 105,
+      "sendLine": 1680,
+      "replyLine": 1681,
+      "sendUTC": "2026-10-10T22:01:47.707516+00:00",
+      "replyUTC": "2026-10-10T22:01:47.708828+00:00",
+      "relativePath": "simulation/motion.js",
+      "sha256": "4c3d5c27617302f607d0235a10eeda4cd4fafc9c81cb7859327fba0b407f34e6"
+    },
+    {
+      "requestID": 106,
+      "sendLine": 1682,
+      "replyLine": 1683,
+      "sendUTC": "2026-10-10T22:01:47.708984+00:00",
+      "replyUTC": "2026-10-10T22:01:47.709957+00:00",
+      "relativePath": "simulation/people.js",
+      "sha256": "96ef0885c3c3719ff5827e9ea63f370508d5e21f2e8b2d31799099a1855f8a5e"
+    },
+    {
+      "requestID": 107,
+      "sendLine": 1684,
+      "replyLine": 1685,
+      "sendUTC": "2026-10-10T22:01:47.710144+00:00",
+      "replyUTC": "2026-10-10T22:01:47.710969+00:00",
+      "relativePath": "simulation/view.js",
+      "sha256": "1742bc023dc22f8624ecefac4b1b5076ab1aa89a0a35090536bdb00af1f8c75d"
+    },
+    {
+      "requestID": 108,
+      "sendLine": 1686,
+      "replyLine": 1687,
+      "sendUTC": "2026-10-10T22:01:47.711101+00:00",
+      "replyUTC": "2026-10-10T22:01:47.711376+00:00",
+      "relativePath": "simulation/protocol.js",
+      "sha256": "a4f880302025d29608227a39508403ec1b5c09554bfe0f9fd7db054ecc9d560d"
+    },
+    {
+      "requestID": 109,
+      "sendLine": 1688,
+      "replyLine": 1689,
+      "sendUTC": "2026-10-10T22:01:47.711486+00:00",
+      "replyUTC": "2026-10-10T22:01:47.712342+00:00",
+      "relativePath": "simulation/wooden-motion.js",
+      "sha256": "aaed1ed31a0764f8ecc8b07db1d2c6bc6e2a0230b2002daff30729a20c5da12d"
+    },
+    {
+      "requestID": 110,
+      "sendLine": 1690,
+      "replyLine": 1691,
+      "sendUTC": "2026-10-10T22:01:47.712471+00:00",
+      "replyUTC": "2026-10-10T22:01:47.712978+00:00",
+      "relativePath": "simulation/routes.js",
+      "sha256": "ec098e36c6a24155b4d10da3118a7240e08850a4b38c52eb7d4891be556c3453"
+    },
+    {
+      "requestID": 111,
+      "sendLine": 1692,
+      "replyLine": 1693,
+      "sendUTC": "2026-10-10T22:01:47.713225+00:00",
+      "replyUTC": "2026-10-10T22:01:47.714049+00:00",
+      "relativePath": "art/tree-assets.js",
+      "sha256": "daa01cc5d707a402a6523adb3e815a6ce7d1d88e4c9b1f0c72702467f8c6e054"
+    },
+    {
+      "requestID": 112,
+      "sendLine": 1694,
+      "replyLine": 1695,
+      "sendUTC": "2026-10-10T22:01:47.714211+00:00",
+      "replyUTC": "2026-10-10T22:01:47.719004+00:00",
+      "relativePath": "vendor/addons/loaders/GLTFLoader.js",
+      "sha256": "131c0f78c01d19368ae495caa65b3adaa10487810a36a05bb5901b769a35ac16"
+    },
+    {
+      "requestID": 113,
+      "sendLine": 1696,
+      "replyLine": 1697,
+      "sendUTC": "2026-10-10T22:01:47.719673+00:00",
+      "replyUTC": "2026-10-10T22:01:47.722806+00:00",
+      "relativePath": "vendor/addons/utils/BufferGeometryUtils.js",
+      "sha256": "9fb63427ce6641fa14fd0baff9cc4d1b5f9c3d85fd084bf2e90e803c44ec1797"
+    },
+    {
+      "requestID": 114,
+      "sendLine": 1698,
+      "replyLine": 1699,
+      "sendUTC": "2026-10-10T22:01:47.723130+00:00",
+      "replyUTC": "2026-10-10T22:01:47.724424+00:00",
+      "relativePath": "vendor/addons/utils/SkeletonUtils.js",
+      "sha256": "b1632a703206c3d830de9fcbe515696770d04b71a15ee6b50afa6d2c3298c86f"
+    },
+    {
+      "requestID": 115,
+      "sendLine": 1700,
+      "replyLine": 1701,
+      "sendUTC": "2026-10-10T22:01:47.724604+00:00",
+      "replyUTC": "2026-10-10T22:01:47.725120+00:00",
+      "relativePath": "art/surface-assets.js",
+      "sha256": "11495b97bf3daaffcf49f7fd991da882fdf2321347739fda88d6fcf35ced2927"
+    },
+    {
+      "requestID": 116,
+      "sendLine": 1702,
+      "replyLine": 1703,
+      "sendUTC": "2026-10-10T22:01:47.725259+00:00",
+      "replyUTC": "2026-10-10T22:01:47.727826+00:00",
+      "relativePath": "art/surface-palette.js",
+      "sha256": "91adbb55a95dc3b0b2ad670084a7f93366c266a09df6ed36bf414cb23b538768"
+    },
+    {
+      "requestID": 117,
+      "sendLine": 1704,
+      "replyLine": 1705,
+      "sendUTC": "2026-10-10T22:01:47.727993+00:00",
+      "replyUTC": "2026-10-10T22:01:47.728445+00:00",
+      "relativePath": "art/wooden-assets.js",
+      "sha256": "3475acd3d3975ad8951135e0e3382ab7f530b5fa87824ec0013575086522a237"
+    },
+    {
+      "requestID": 118,
+      "sendLine": 1706,
+      "replyLine": 1707,
+      "sendUTC": "2026-10-10T22:01:47.728593+00:00",
+      "replyUTC": "2026-10-10T22:01:47.730154+00:00",
+      "relativePath": "art/wooden-coaster.js",
+      "sha256": "9ebceda15d406332d37ab8dae756a1725b7a36cc7278ab7ac8b6d7438c920898"
+    },
+    {
+      "requestID": 119,
+      "sendLine": 1708,
+      "replyLine": 1709,
+      "sendUTC": "2026-10-10T22:01:47.730434+00:00",
+      "replyUTC": "2026-10-10T22:01:47.730891+00:00",
+      "relativePath": "art/carousel-assets.js",
+      "sha256": "5b437923981d7728133e4fdf3173808dced188f66cc7b18ab653470738c92453"
+    },
+    {
+      "requestID": 120,
+      "sendLine": 1710,
+      "replyLine": 1711,
+      "sendUTC": "2026-10-10T22:01:47.731027+00:00",
+      "replyUTC": "2026-10-10T22:01:47.731653+00:00",
+      "relativePath": "art/carousel.js",
+      "sha256": "02173c16094d2caf950e1c7908bf51268f36ef955d91af09b7457705272b15e8"
+    },
+    {
+      "requestID": 121,
+      "sendLine": 1712,
+      "replyLine": 1713,
+      "sendUTC": "2026-10-10T22:01:47.731815+00:00",
+      "replyUTC": "2026-10-10T22:01:47.732832+00:00",
+      "relativePath": "art/carousel-portal.js",
+      "sha256": "be22f0a550df9625640910022bbfae67ee19aac0913330bcba9fc482152b4eac"
+    },
+    {
+      "requestID": 122,
+      "sendLine": 1714,
+      "replyLine": 1715,
+      "sendUTC": "2026-10-10T22:01:47.732991+00:00",
+      "replyUTC": "2026-10-10T22:01:47.734809+00:00",
+      "relativePath": "art/flume-assets.js",
+      "sha256": "f45315ab423b590a61d3715a33f928d09db2b810046e48c3d91b0157892186bb"
+    },
+    {
+      "requestID": 123,
+      "sendLine": 1716,
+      "replyLine": 1717,
+      "sendUTC": "2026-10-10T22:01:47.734989+00:00",
+      "replyUTC": "2026-10-10T22:01:47.735492+00:00",
+      "relativePath": "art/flume-boats.js",
+      "sha256": "cc5840239a11dec4468376741c99eadaaddf7168d31c1e2fb9ecc36df1b28781"
+    },
+    {
+      "requestID": 124,
+      "sendLine": 1718,
+      "replyLine": 1719,
+      "sendUTC": "2026-10-10T22:01:47.735650+00:00",
+      "replyUTC": "2026-10-10T22:01:47.739447+00:00",
+      "relativePath": "art/flume-channel.js",
+      "sha256": "931974b2615e49f9a1ffe59b5514b5811e8c68ac10bf48eb6ecc4ba9cd4649e8"
+    },
+    {
+      "requestID": 125,
+      "sendLine": 1720,
+      "replyLine": 1721,
+      "sendUTC": "2026-10-10T22:01:47.739801+00:00",
+      "replyUTC": "2026-10-10T22:01:47.740335+00:00",
+      "relativePath": "art/flume-terrain.js",
+      "sha256": "c541601fa7f37777d1a259c9e3c8103d7d3bba87ad24b4376b1dba7b6f7f7808"
+    },
+    {
+      "requestID": 126,
+      "sendLine": 1722,
+      "replyLine": 1723,
+      "sendUTC": "2026-10-10T22:01:47.740511+00:00",
+      "replyUTC": "2026-10-10T22:01:47.741308+00:00",
+      "relativePath": "art/flume-support-box.js",
+      "sha256": "554a01c412ec368a02841eb525fba61f1541453467e25877d7d42081d33ab26d"
+    },
+    {
+      "requestID": 127,
+      "sendLine": 1724,
+      "replyLine": 1725,
+      "sendUTC": "2026-10-10T22:01:47.741512+00:00",
+      "replyUTC": "2026-10-10T22:01:47.742144+00:00",
+      "relativePath": "art/flume-portal.js",
+      "sha256": "9f71639544385fa5108fa8106e93fa3b5f70c55b8735a6d9cb66ce2d7c6c4913"
+    },
+    {
+      "requestID": 128,
+      "sendLine": 1726,
+      "replyLine": 1727,
+      "sendUTC": "2026-10-10T22:01:47.742307+00:00",
+      "replyUTC": "2026-10-10T22:01:47.742791+00:00",
+      "relativePath": "art/flume-approach.js",
+      "sha256": "e310a6f68f399ae180e70b2988990e4280dc018ca0267bf6deed9de03f50b89e"
+    },
+    {
+      "requestID": 129,
+      "sendLine": 1728,
+      "replyLine": 1729,
+      "sendUTC": "2026-10-10T22:01:47.742914+00:00",
+      "replyUTC": "2026-10-10T22:01:47.743340+00:00",
+      "relativePath": "consumable-waste.js",
+      "sha256": "6a61d96ab774507781b9bfce61198b9599230f0c176df05f8d8f28a8e9d02bac"
+    },
+    {
+      "requestID": 130,
+      "sendLine": 1730,
+      "replyLine": 1731,
+      "sendUTC": "2026-10-10T22:01:47.743490+00:00",
+      "replyUTC": "2026-10-10T22:01:47.744987+00:00",
+      "relativePath": "art/detailed-facility-assets.js",
+      "sha256": "9ca3bf9c26077a2e31a857760c15086b12ce530ba160abb31f207e30723e0cd2"
+    },
+    {
+      "requestID": 131,
+      "sendLine": 1732,
+      "replyLine": 1733,
+      "sendUTC": "2026-10-10T22:01:47.745216+00:00",
+      "replyUTC": "2026-10-10T22:01:47.754069+00:00",
+      "relativePath": "content-browser.js",
+      "sha256": "a72a11c2d9189755bbf3aca713764754fe7e567e2ec0c51e77bc7fe117ad5848"
+    },
+    {
+      "requestID": 132,
+      "sendLine": 1734,
+      "replyLine": 1735,
+      "sendUTC": "2026-10-10T22:01:47.754506+00:00",
+      "replyUTC": "2026-10-10T22:01:47.759842+00:00",
+      "relativePath": "simulation/browser-worker.js",
+      "sha256": "8f3df7fc3b46b364320d60204cf8622edd205fe3a3e5e21c361ce71e329d49c2"
+    },
+    {
+      "requestID": 133,
+      "sendLine": 1736,
+      "replyLine": 1737,
+      "sendUTC": "2026-10-10T22:01:47.760018+00:00",
+      "replyUTC": "2026-10-10T22:01:47.760633+00:00",
+      "relativePath": "content/steel-coaster.js",
+      "sha256": "d248ab39ba5695c5402872b634d514cc81517673c44d77e9e0da3deaaf683335"
+    },
+    {
+      "requestID": 134,
+      "sendLine": 1738,
+      "replyLine": 1739,
+      "sendUTC": "2026-10-10T22:01:47.760842+00:00",
+      "replyUTC": "2026-10-10T22:01:47.764533+00:00",
+      "relativePath": "simulation/engine.js",
+      "sha256": "f15a5646359ecab5d2b870712b0ad2f5b0adc843d9d8815cf1cac64681e0ba75"
+    },
+    {
+      "requestID": 135,
+      "sendLine": 1740,
+      "replyLine": 1741,
+      "sendUTC": "2026-10-10T22:01:47.765191+00:00",
+      "replyUTC": "2026-10-10T22:01:47.766578+00:00",
+      "relativePath": "simulation/types.js",
+      "sha256": "1a6231381895d5abcccbc927e582be7270c22e19c76be7c5c3e560d83ea97d91"
+    },
+    {
+      "requestID": 136,
+      "sendLine": 1742,
+      "replyLine": 1743,
+      "sendUTC": "2026-10-10T22:01:47.766743+00:00",
+      "replyUTC": "2026-10-10T22:01:47.767335+00:00",
+      "relativePath": "simulation/validation.js",
+      "sha256": "10a2f21ddd134f16105bf4f0153d57a6e660d7938157e30c1958487498b66056"
+    },
+    {
+      "requestID": 137,
+      "sendLine": 1744,
+      "replyLine": 1745,
+      "sendUTC": "2026-10-10T22:01:47.767602+00:00",
+      "replyUTC": "2026-10-10T22:01:47.768666+00:00",
+      "relativePath": "simulation/geometry.js",
+      "sha256": "495a3b626f79bd316f012a564a70dffa9ae627b60fe96fb5fde59be8ffaac775"
+    },
+    {
+      "requestID": 138,
+      "sendLine": 1746,
+      "replyLine": 1747,
+      "sendUTC": "2026-10-10T22:01:47.768928+00:00",
+      "replyUTC": "2026-10-10T22:01:47.772086+00:00",
+      "relativePath": "simulation/housekeeping.js",
+      "sha256": "588c5c06187c0bcfd9d5b52a69ea33fece6a22aa89246df1189e4a247fb5cc7b"
+    },
+    {
+      "requestID": 139,
+      "sendLine": 1748,
+      "replyLine": 1749,
+      "sendUTC": "2026-10-10T22:01:47.772314+00:00",
+      "replyUTC": "2026-10-10T22:01:47.773207+00:00",
+      "relativePath": "simulation/services.js",
+      "sha256": "171566ab11852ed81f086e098bb2d85f46d790267ee3cad56c1e47f55c0b0aee"
+    },
+    {
+      "requestID": 140,
+      "sendLine": 1750,
+      "replyLine": 1751,
+      "sendUTC": "2026-10-10T22:01:47.773457+00:00",
+      "replyUTC": "2026-10-10T22:01:47.773917+00:00",
+      "relativePath": "simulation/patrol.js",
+      "sha256": "4a59eec5e274c541fecf413cb62cd27cabfe5fb13aaa6104d5543b8498b16e16"
+    },
+    {
+      "requestID": 141,
+      "sendLine": 1752,
+      "replyLine": 1753,
+      "sendUTC": "2026-10-10T22:01:47.774093+00:00",
+      "replyUTC": "2026-10-10T22:01:47.774738+00:00",
+      "relativePath": "simulation/operation.js",
+      "sha256": "90a079ea7b4ed724d214a334b8cd006bcb07a40774b7f431051c554e9c620e69"
+    },
+    {
+      "requestID": 142,
+      "sendLine": 1754,
+      "replyLine": 1755,
+      "sendUTC": "2026-10-10T22:01:47.774946+00:00",
+      "replyUTC": "2026-10-10T22:01:47.775700+00:00",
+      "relativePath": "content/registry.js",
+      "sha256": "f54ac235840492819e4afa279222034b0ed4cd184640d69cfd49dfe33e56aa9d"
+    },
+    {
+      "requestID": 143,
+      "sendLine": 1756,
+      "replyLine": 1757,
+      "sendUTC": "2026-10-10T22:01:47.775937+00:00",
+      "replyUTC": "2026-10-10T22:01:47.778735+00:00",
+      "relativePath": "content/rct2-reference.js",
+      "sha256": "23ad185689097bbc9b21d87de63f4d62a4d2365fa019f983cf8b8ae85f7836ee"
+    },
+    {
+      "requestID": 144,
+      "sendLine": 1758,
+      "replyLine": 1759,
+      "sendUTC": "2026-10-10T22:01:47.779420+00:00",
+      "replyUTC": "2026-10-10T22:01:47.780021+00:00",
+      "relativePath": "content/ride-profiles.js",
+      "sha256": "4b2a025833ac73762ddc16eb29a26cfece126fc9a4a6839d039f5bf4ea65974e"
+    },
+    {
+      "requestID": 145,
+      "sendLine": 1760,
+      "replyLine": 1761,
+      "sendUTC": "2026-10-10T22:01:47.780222+00:00",
+      "replyUTC": "2026-10-10T22:01:47.780758+00:00",
+      "relativePath": "simulation/flume-profile.js",
+      "sha256": "e89e86ea002b94f7339ef7c5e4bcc73c33998abf0252c17ed2b430b2394f7f58"
+    },
+    {
+      "requestID": 146,
+      "sendLine": 1762,
+      "replyLine": 1763,
+      "sendUTC": "2026-10-10T22:01:47.780939+00:00",
+      "replyUTC": "2026-10-10T22:01:47.781498+00:00",
+      "relativePath": "content/log-flume.js",
+      "sha256": "6f71b4fc57dd403647c725f0e018a0439ce226108dc5459d837cfc9d0e469aa1"
+    },
+    {
+      "requestID": 147,
+      "sendLine": 1764,
+      "replyLine": 1765,
+      "sendUTC": "2026-10-10T22:01:47.781689+00:00",
+      "replyUTC": "2026-10-10T22:01:47.782302+00:00",
+      "relativePath": "simulation/wooden-placement.js",
+      "sha256": "66b9590399dfd6235cbf6c04401744df1611d7fa1b55a72c1daf6950393a586c"
+    },
+    {
+      "requestID": 148,
+      "sendLine": 1766,
+      "replyLine": 1767,
+      "sendUTC": "2026-10-10T22:01:47.782513+00:00",
+      "replyUTC": "2026-10-10T22:01:47.783093+00:00",
+      "relativePath": "simulation/carousel.js",
+      "sha256": "c707db6b92deb1742b2c84f9cdb7c65a50fbdd9908387e64b29e53e0f3b29f6a"
+    },
+    {
+      "requestID": 149,
+      "sendLine": 1768,
+      "replyLine": 1769,
+      "sendUTC": "2026-10-10T22:01:47.783294+00:00",
+      "replyUTC": "2026-10-10T22:01:47.783823+00:00",
+      "relativePath": "content/carousel.js",
+      "sha256": "29f71f912001cf341916541fbf678bf8fb1985d6c1979cf1e541e8e79318ceb9"
+    },
+    {
+      "requestID": 150,
+      "sendLine": 1770,
+      "replyLine": 1771,
+      "sendUTC": "2026-10-10T22:01:47.783997+00:00",
+      "replyUTC": "2026-10-10T22:01:47.784754+00:00",
+      "relativePath": "simulation/flume-native.js",
+      "sha256": "735c2d793a1daf76844e1eeac6ea3342e37f84b1f49e5de6edc8e914073f02ae"
+    },
+    {
+      "requestID": 151,
+      "sendLine": 1772,
+      "replyLine": 1773,
+      "sendUTC": "2026-10-10T22:01:47.784988+00:00",
+      "replyUTC": "2026-10-10T22:01:47.785612+00:00",
+      "relativePath": "simulation/flume-portal.js",
+      "sha256": "877ba9c562c874ee742a77ec67aa64cb68012885ce96f288e6d4f9b128e621c3"
+    },
+    {
+      "requestID": 152,
+      "sendLine": 1774,
+      "replyLine": 1775,
+      "sendUTC": "2026-10-10T22:01:47.785824+00:00",
+      "replyUTC": "2026-10-10T22:01:47.786441+00:00",
+      "relativePath": "simulation/boat.js",
+      "sha256": "d4ca78dc773f712086b995b5bf870d48dd9a3feb35fb9765f8296b499fb80199"
+    },
+    {
+      "requestID": 153,
+      "sendLine": 1776,
+      "replyLine": 1777,
+      "sendUTC": "2026-10-10T22:01:47.786645+00:00",
+      "replyUTC": "2026-10-10T22:01:47.787311+00:00",
+      "relativePath": "content/consumables.js",
+      "sha256": "f5c7f277329113b8f79e3575189d76a642c00810aed2eff6206e511305f99b9c"
+    },
+    {
+      "requestID": 154,
+      "sendLine": 1778,
+      "replyLine": 1779,
+      "sendUTC": "2026-10-10T22:01:47.787540+00:00",
+      "replyUTC": "2026-10-10T22:01:47.787965+00:00",
+      "relativePath": "simulation/scenery.js",
+      "sha256": "af181426f98f7c6daab583055906264db929940ecb25a3fe50c1ca219d9ee520"
+    },
+    {
+      "requestID": 155,
+      "sendLine": 1780,
+      "replyLine": 1781,
+      "sendUTC": "2026-10-10T22:01:47.788133+00:00",
+      "replyUTC": "2026-10-10T22:01:47.788587+00:00",
+      "relativePath": "content/facility-profiles.js",
+      "sha256": "ad558ff5f276662019ea662a22c0637d6eb1ecc061364cda8c9dcd2bb28aa2a4"
+    },
+    {
+      "requestID": 156,
+      "sendLine": 1782,
+      "replyLine": 1783,
+      "sendUTC": "2026-10-10T22:01:47.788759+00:00",
+      "replyUTC": "2026-10-10T22:01:47.789459+00:00",
+      "relativePath": "simulation/motion.js",
+      "sha256": "4c3d5c27617302f607d0235a10eeda4cd4fafc9c81cb7859327fba0b407f34e6"
+    },
+    {
+      "requestID": 157,
+      "sendLine": 1784,
+      "replyLine": 1785,
+      "sendUTC": "2026-10-10T22:01:47.789670+00:00",
+      "replyUTC": "2026-10-10T22:01:47.790811+00:00",
+      "relativePath": "simulation/people.js",
+      "sha256": "96ef0885c3c3719ff5827e9ea63f370508d5e21f2e8b2d31799099a1855f8a5e"
+    },
+    {
+      "requestID": 158,
+      "sendLine": 1786,
+      "replyLine": 1787,
+      "sendUTC": "2026-10-10T22:01:47.791084+00:00",
+      "replyUTC": "2026-10-10T22:01:47.791870+00:00",
+      "relativePath": "simulation/view.js",
+      "sha256": "1742bc023dc22f8624ecefac4b1b5076ab1aa89a0a35090536bdb00af1f8c75d"
+    },
+    {
+      "requestID": 159,
+      "sendLine": 1788,
+      "replyLine": 1789,
+      "sendUTC": "2026-10-10T22:01:47.792096+00:00",
+      "replyUTC": "2026-10-10T22:01:47.792524+00:00",
+      "relativePath": "simulation/protocol.js",
+      "sha256": "a4f880302025d29608227a39508403ec1b5c09554bfe0f9fd7db054ecc9d560d"
+    },
+    {
+      "requestID": 160,
+      "sendLine": 1790,
+      "replyLine": 1791,
+      "sendUTC": "2026-10-10T22:01:47.792691+00:00",
+      "replyUTC": "2026-10-10T22:01:47.793311+00:00",
+      "relativePath": "simulation/wooden-motion.js",
+      "sha256": "aaed1ed31a0764f8ecc8b07db1d2c6bc6e2a0230b2002daff30729a20c5da12d"
+    },
+    {
+      "requestID": 161,
+      "sendLine": 1792,
+      "replyLine": 1793,
+      "sendUTC": "2026-10-10T22:01:47.793519+00:00",
+      "replyUTC": "2026-10-10T22:01:47.794061+00:00",
+      "relativePath": "simulation/routes.js",
+      "sha256": "ec098e36c6a24155b4d10da3118a7240e08850a4b38c52eb7d4891be556c3453"
+    },
+    {
+      "requestID": 162,
+      "sendLine": 1794,
+      "replyLine": 1795,
+      "sendUTC": "2026-10-10T22:01:47.794246+00:00",
+      "replyUTC": "2026-10-10T22:01:47.794807+00:00",
+      "relativePath": "content/mixed-park.js",
+      "sha256": "5c1ccc0fd7a8b0778ba81de453580ee25aebac14670cebbb0db24b87311b4875"
+    },
+    {
+      "requestID": 163,
+      "sendLine": 1796,
+      "replyLine": 1797,
+      "sendUTC": "2026-10-10T22:01:47.794987+00:00",
+      "replyUTC": "2026-10-10T22:01:47.795422+00:00",
+      "relativePath": "content/wooden-coaster.js",
+      "sha256": "c3a0c2c2f43aeb88a1ad81f64e45dd185f894b84d2e9400b4da944e12f6a3c70"
+    },
+    {
+      "requestID": 164,
+      "sendLine": 1798,
+      "replyLine": 1799,
+      "sendUTC": "2026-10-10T22:01:47.795596+00:00",
+      "replyUTC": "2026-10-10T22:01:47.796214+00:00",
+      "relativePath": "content/wooden-footprints.js",
+      "sha256": "ef471c76a23274bf86a3f17acc00bcd69ed9f8eca1a3fb17b74b8c0c9c86f9d2"
+    },
+    {
+      "requestID": 165,
+      "sendLine": 1800,
+      "replyLine": 1801,
+      "sendUTC": "2026-10-10T22:01:47.796418+00:00",
+      "replyUTC": "2026-10-10T22:01:47.797020+00:00",
+      "relativePath": "content/classic-showcase.js",
+      "sha256": "540a7bc6bd76a148af9af5f83b9892988cbf0aa779bdf43ea89eb5746586f55b"
+    },
+    {
+      "requestID": 166,
+      "sendLine": 1802,
+      "replyLine": 1803,
+      "sendUTC": "2026-10-10T22:01:47.797205+00:00",
+      "replyUTC": "2026-10-10T22:01:47.797685+00:00",
+      "relativePath": "simulation/host.js",
+      "sha256": "d2dfa7c018b25214231009e850e56507019cea9a7484459d990247bed9f775b2"
+    },
+    {
+      "requestID": 167,
+      "sendLine": 1804,
+      "replyLine": 1805,
+      "sendUTC": "2026-10-10T22:01:47.797851+00:00",
+      "replyUTC": "2026-10-10T22:01:47.798254+00:00",
+      "relativePath": "simulation/clock.js",
+      "sha256": "32820b03a12b9bde816654f4e58fd37a24c32b9c8dc035b52d157636e58d9fbd"
+    }
+  ],
+  "loadedBindings": [
+    {
+      "requestID": 68,
+      "sendLine": 1606,
+      "replyLine": 1607,
+      "sendUTC": "2026-10-10T22:01:46.136972+00:00",
+      "replyUTC": "2026-10-10T22:01:46.138933+00:00",
+      "relativePath": "index.html",
+      "sha256": "fd88b27beca574ed17a2fb04dfaa08194bb886c386b762667dc8da9a5151ad6a"
+    },
+    {
+      "requestID": 69,
+      "sendLine": 1608,
+      "replyLine": 1609,
+      "sendUTC": "2026-10-10T22:01:46.139866+00:00",
+      "replyUTC": "2026-10-10T22:01:46.737411+00:00",
+      "relativePath": "models/detailed-stalls/burger.glb",
+      "sha256": "9b646bdd004390fd8c240091d0e85df6bec3def0ba33dfa2826aa4160527ebfe"
+    },
+    {
+      "requestID": 70,
+      "sendLine": 1610,
+      "replyLine": 1611,
+      "sendUTC": "2026-10-10T22:01:46.888686+00:00",
+      "replyUTC": "2026-10-10T22:01:47.422161+00:00",
+      "relativePath": "models/detailed-stalls/soft-drink.glb",
+      "sha256": "c166d2e28c2be1ab49dec4d26078b26f66a14520ea7a9c011a559d6e6d5a825e"
+    }
+  ],
+  "imageBindings": [
+    {
+      "requestID": 312,
+      "sendLine": 2843,
+      "replyLine": 3088,
+      "sendUTC": "2026-10-10T22:02:11.686730+00:00",
+      "replyUTC": "2026-10-10T22:02:16.493341+00:00",
+      "file": "track-released-input.png",
+      "sha256": "56c7039926888d62bb4df7210ce9ee9535050ee8107d33afab5e9283f97df276"
+    },
+    {
+      "requestID": 497,
+      "sendLine": 4743,
+      "replyLine": 4984,
+      "sendUTC": "2026-10-10T22:03:08.952895+00:00",
+      "replyUTC": "2026-10-10T22:03:13.689970+00:00",
+      "file": "queue-released-input.png",
+      "sha256": "4e7af0df6606f5610c42c8a71f494d182df9040f685cf680684e7a6940c3f205"
+    }
+  ],
+  "typedRestored": true,
+  "observedResourcesDisposed": true,
+  "knownRuntimeChildrenClosed": true,
+  "endUTC": "2026-10-10T22:31:36.092328+00:00"
+}

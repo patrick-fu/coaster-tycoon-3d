@@ -1,0 +1,9 @@
+{
+  "utc": "2026-10-10T22:31:20.501549+00:00",
+  "scope": "Mac streaming retained encoded proof I/O only. Decoding and semantic consumption remain remote.",
+  "actualExit": 0,
+  "files": 426,
+  "retainedBytes": 300968147,
+  "manifestSHA256": "d3001292171a585e655e162992a000f516dcfbd0ea51d54561725fe5c140ef76",
+  "checksSHA256": "2e1dfd0a0d454c6ea2b231ba2841f325b40b6630ca0663e06cc492ac0549c9fb"
+}

@@ -1,6 +1,6 @@
 # Project progress and recovery
 
-Last updated: 2026-10-10 21:25 UTC.
+Last updated: 2026-10-10 22:33 UTC.
 Root owns this live record and the [UTC journal](docs/progress/2026-10-10.md).
 [Previous detailed checkpoint](docs/progress/2026-10-10-progress-before-final-public-acceptance.md)
 retains the source/native/public/tool repair sequence. `CONTEXT.md` remains the domain glossary;
@@ -13,7 +13,7 @@ art, RCT2 gameplay breadth and substantive park management. Full79 families/155 
 41 shops/35 products, admissions/finance/research/scenarios, original numerical/art agreement,
 human style/play and representative integrated-GPU/scale acceptance remain OPEN. Finite77 is
 one four-family composition milestone; it is not the full game or first-playable acceptance.
-No new human decision is required for this integration/publication.
+No new human decision is required for the current finite creation-input repair.
 
 English project artifacts; Chinese chat. Root owns production, integration, GitHub, hosting
 and this context. Logical work uses Sol Max, visual work AGY, adversarial review Luna Max.
@@ -25,11 +25,15 @@ complete typed saves, editable masters and every frozen preview.
 
 ## Current identity
 
-- Worktree `/Volumes/WD/code/workspaces/coaster-consumable-art/coaster-tycoon-3d`, branch
-  `p/patrick/feature/classic-four-family-showcase`, main baseb6f03f9b.
-- Executable source7a0bbac668ece30416cceefb97997c0de17d1376, tree6c942d435e5a093d4a471182d5030ad1ecf594f6,
-  gameaad24598/cameraf562b92d. Git HEADcfe2f2e8a518c7b94c6aa0f64819d114c7ef068a is a documentation-only
-  checkpoint; newer live docs may be dirty. Documentation HEAD is not a new build identity.
+- Active worktree `/Volumes/WD/code/workspaces/coaster-creation-input/coaster-tycoon-3d`, branch
+  `p/patrick/fix/creation-view-adoption`, exact merged main basecb922ccea03841033de32ca5840219b056ea7173.
+  Root alone writes production/docs. Previous composition worktree remains proof/history only.
+- Accepted executable baseline source7a0bbac668ece30416cceefb97997c0de17d1376, tree6c942d435e5a093d4a471182d5030ad1ecf594f6,
+  gameaad24598/cameraf562b92d. Git HEADcb922ccea03841033de32ca5840219b056ea7173 is the actual composition merge; executable
+  published UI remains source7a. Canonical main fast-forward0/clean is independently verified.
+  Root now integrates identical reviewed gamec4fd4cff into dirty ui/game.js; camera and all
+  other executable files remain unchanged. No fixed syntax/build/native/public run yet.
+  Prior docs commitc810 remains immutable; documentation HEAD is not a new build identity.
 - [Final source repair](docs/verification/classic-showcase/root-replacement-input-source-repair.json)
   combines exact Sol/Luna r20 review: pending New/File uses existing inert/keyboard exclusion;
   invalidate staticRevision before replacement/recovery, commit it after current-epoch Scene/
@@ -55,7 +59,7 @@ flower156/build30/refund15/tick7403, whole Save/Export/reload and normal borrowe
 hosting0f6c585b98fb786d8966c28b6aaab022c3064459, Pages built19:50:47Z/errornull. Root and new
 [classic-7a0bbac pin](https://patrick-fu.github.io/coaster-tycoon-3d/previews/classic-7a0bbac/?showcase=classic)
 ship exact164 files/79298767B per route;1428 earlier preview/.nojekyll bytes remain unchanged.
-Hosting worktree is clean at `p/patrick/publish/classic-7a0bbac`; canonical source main staysb6.
+Hosting worktree is clean at `p/patrick/publish/classic-7a0bbac`; current canonical source main iscb922.
 Initial Git SSH128 is retained; normal ephemeral HTTPS commit/push0 uses existing credentials.
 
 [Final public acceptance](docs/verification/classic-showcase/root-fixed-public-acceptance.json)
@@ -99,7 +103,9 @@ Initial retention inventory probe1/transport89 occurs before any Python producer
 inventory order enables the first real main producer0. Native metadata transport/hash1/PATH127/
 reader schema1 remain linked history, with exact raw envelope/relocation/reader repairs retained.
 
-Unavailable worker/view/Scene recovery is source-reviewed, not runtime fault-injected. Overlapping
+Candidate worker/view/Scene recovery remains source-reviewed/unqualified at runtime. The old
+source7a baseline accidentally hits a real held-view timeout; that failed diagnostic does not
+qualify candidate recovery or planned unavailable-worker/Scene injection. Overlapping
 ordinary action/tool-switch/replacement transactions remain source-reachable/unobserved. Cross-
 runtime default-rule portability, partial GPU allocation/permanently hung decode, older unexplained
 Node SIGABRT, original agreement, human style/play and representative real GPU/scale remain OPEN.
@@ -116,17 +122,87 @@ all-interactions completion claim: all four and Root confirm one material source
 creation/tool-switch P2 remains unobserved by normal runtime proof.
 
 [Preserve the created ride target through pending view adoption](https://github.com/patrick-fu/coaster-tycoon-3d/issues/79)
-is created/assigned, parentprogramme27 and nativeblocked-byfinite77. Root independently reads
+is created/assigned, parentprogramme27; finite77 is closed and nativeblocked_by=0. Root independently reads
 execute31→setTool42/palette43→commandAt60/61/65: receipt7 can normalize toold0 before fresh view.
 The next finite task freezes a causal real-worker/native-input baseline, repairs only UI
 adoption/input, then verifies affected transitions/authority/typed/resources remotely. Documenting
-the risk or closing the composition does not resolve it. Sole browser/proof owner is COMPLETE.
+the risk or closing the composition does not resolve it. Previous publication browser proof is COMPLETE; the same sole owner now prepares finite79.
 
-1. Commit/push current receipts/context/image, ready/merge [PR78](https://github.com/patrick-fu/coaster-tycoon-3d/pull/78)
-   and close [finite77](https://github.com/patrick-fu/coaster-tycoon-3d/issues/77); actual integration remains pending.
-2. Start finite79 in its own WD task worktree; Root production owner, one remote browser owner,
-   independent Sol/Luna review, no broad camera/art/kernel/matrix replay.
-3. Continue [programme27](https://github.com/patrick-fu/coaster-tycoon-3d/issues/27) and the full Goal.
+1. [PR78](https://github.com/patrick-fu/coaster-tycoon-3d/pull/78) is actual MERGED at21:27:13Z,
+   commitcb922ccea03841033de32ca5840219b056ea7173; [finite77](https://github.com/patrick-fu/coaster-tycoon-3d/issues/77)
+   closes21:27:15Z. Exactc810 head match/merge exits0. Finite79 nativeblocked_by is now0.
+   Canonical main actual fetch/ff0/clean and next WD worktree creation0 are verified;
+   archived composition proof/hosting routes stay unchanged.
+2. Exact baseline-preparation-r2 is COMPLETE: driver3c551954/contracte9892164/observerd3ec51e5,
+   manifest93ac0c3e/checks36108851, all50files1513170B exact on WD/Grok. Actual generator/
+   Node30literals+5helpers/source847/shipping164/compiled74/static/mirror/finite terminal0
+   are consumed, known11 Mac/5remote tools absent at21:52:36Z, portsclosed/defaultlockinactive.
+   Fresh independent DesignSolR1 and DriftLunaR1 gate verdicts PASS. Earlier r1 HOLD on
+   request deadlines and autosave correlation remains frozen/unrun; exact source counterexamples
+   resolve original SolHOLD/LunaPASS without unresolved judgment. The live21:56 record already
+   states terminal0; Luna's final stale-status note refers to its earlier read, now reconciled.
+   Root signs evidence/baseline-launch-gate-r2.json, SHA3bed0634f61df968c9412e62fb998556a83008d574338a2b6ccbc3c34a680122,
+   allowing only baseline-runtime-r1 and the same sole browser owner. Fresh immediate preflight
+   must confirm exact inputs/source/inventory, all known owners absent, closedports and inactive
+   default profile. Actual fresh1725857 preflight child/SSH/wrapper0 at22:01:01Z confirms all exact pins,
+   protected inventory/known owners/default lock/ports. Sole actual runner1726072/HTTP1726073/
+   defaultChrome1726243 starts22:01:35.740596Z, monitored by owner exec85170 under
+   /workspace/coaster-creation-input/browser/baseline-runtime-r1. Actual child/SSH/wrapper ends FAILED1 at22:04:15Z, reported portsclosed. Track reports
+   realID7→native held/post-release target0 with6799.6ms delivery: Root now qualifies only Track.
+   Quote188/221 is refused RIDE_ACTIVE; no successful wrong build is claimed.
+   Queue7→0 delivery18841.8/18840.9ms fails
+   Root14s gate; Escape actual app request timeout and observationCompleted=false. Neither
+   counts as ordinary-input qualification. Complete raw/authority/typed/resource/own-tree/tool
+   consumption is now accepted in [the baseline receipt](docs/verification/creation-view-adoption/root-baseline-acceptance.json).
+   No baseline replay. Actual151 CDP call bindings now show complete
+   snapshot replies growing17.68→77.49MB and1.91→6.90s, including45.1→77.5MB/4.60→6.903s
+   near the failed cases. This supports bounded observation; it does not uniquely attribute all
+   Queue/Escape delay to the observer. Root integrates only the reviewed UI candidate, unbuilt.
+   Driver retains original trusted MessageEvents, real receipt7, actual native inputs and each
+   Export click→unique synchronous save request→exact real reply. Timing/timeout failure cannot
+   become completion; Root additionally qualifies only <14s actual request-to-final delivery.
+   Whole authority, original typed inventory, borrowed resources and own processes must close.
+   Core creation contract audits and exact isolated candidate r2 reviews are COMPLETE by Sol/
+   Luna. Root accepted current create-only worker Error.cause for definite rejection, lock before
+   quoteawait/preview and down invalidation, current marker+receiptID adoption, successful receipt
+   recovery return/feedback, ambiguous sent fail-closed, and existing Import lock reorder.
+   Candidate gamec4fd4cff/diffe63b4ee3/deltac7f2072a remains frozen in evidence/candidate-source-r2;
+   r1 stays unchanged. Identical productiongamec4fd is now integrated, no fixed syntax/build/runtime.
+   Actual causal baseline precedes production integration. Quote recovery failure remains
+   fail-closed/reload; later ordinary polls do not silently unlock it. No shared queue/flag,
+   worker/kernel/save/art/camera/dependency change or general execute rollback guarantee.
+3. Exact candidate r2 reviews are PASS. Root prepares only evidence/build-ui-repair-r1.py
+   from the accepted canonical packaging recipe; no command is run yet. Actual read-only SSH0
+   confirms the absolute unchanged node_modules symlink and ready854, available workspace
+   space; current878 tracked source paths add31 documents versus old847, so the next source
+   identity must truthfully include the committed docs rather than inherit old count.
+   Full failed-run retention is now terminal0:1733258,426payloads/2486624114 logical/
+   300968147 encoded bytes, manifestd3001292/checks2e1dfd0a. Mirror69003/SSH69011/tar69010/
+   hash69986 and finite terminal70629/SSH70635 actually end0; known16remote/20Mac tools absent
+   at22:22:46Z. Root has independently streamed all69 early decisive files53760775B exact
+   c5edffba/6b0e2bbf. Full426 encoded/decoded and original709507604B/6201-row raw semantic
+   consumption now pass: Root1737064 raw/1737095 retention and1737063 wrapper/SSH74675/
+   Mac74642 actual0 at22:31:41Z, all waited children absent. Raw668send/668reply/4865events/
+   415Runtime replies bind Track terminal3129→3135, five native full Export authorities,
+   loaded source/model and two PNGs. Root all426 WD encoded payloads300968147B also match.
+   Complete local typed[] restores exact; observed borrowed disposal/known child closure pass.
+   Clean-context DesignSolR2 and DriftLunaR2 course reviews both support only Track qualification,
+   preserving FAILED1 and thinning ordinary view metadata/current held projections. DesignSol
+   independently consumed original full raw with tool-only75932/15e16d/PID1732030/SSH0;
+   no separate persisted consumer/result exists. Root's own durable full reader supplies acceptance. These
+   narrow course reviews do not replace earlier whole77 rounds or fixed runtime acceptance.
+   Root's entry read used nonexistent docs/execution-journal.md and exited1 after other reads;
+   the linked actual docs/progress/2026-10-10.md is now consumed. Initial combined context patch
+   fails its exact-line guard after source copy0; no partial patch is applied. This corrected
+   live record immediately records integration. Neither failure replays the app.
+   The sole browser owner may prepare fixed-driver files in an isolated prefix while Root
+   consumes evidence; no build, HTTP or Chrome launch before the exact fixed source/driver gate.
+   Preserve full held/receipt/quote/execute/Export authority; fixed inert input must be observed
+   blocked during hold, then exported natively after real adoption. Do not forcibly unlock.
+   Root has integrated the minimal repair after full baseline consumption. Commit exact source
+   identity, then run only affected remote syntax/web/native/
+   public integration and complete actual evidence. No broad camera/art/kernel/matrix replay.
+4. Continue [programme27](https://github.com/patrick-fu/coaster-tycoon-3d/issues/27) and the full Goal.
    Next P4 foundation should honestly implement an independent information kiosk's Map/Umbrella
    dual-product transaction, permanent guest ownership separate from consumables, four counter
    approaches and per-product accounting/retirement with explicit old13 migration. Coffee/cup
@@ -137,7 +213,8 @@ the risk or closing the composition does not resolve it. Sole browser/proof owne
 ## Cleanup
 
 Only prior guarded17469B duplicates and3emptydirs were removed, after retained equality,
-absent producers and empty lsof. No new cache cleanup is claimed from process exit or OS
-free-space change. Source/masters/profile/frozen previews/all proof remain. Current outputs
+absent producers and empty lsof. Current exact cleanup removes only3 completed owned TMPDIR issue/PR/commit body files,
+4222B, after retained body/hash equality and empty lsof; actual Git/GH records stay.
+No general cache cleanup is claimed from process exit or OS free-space change. Source/masters/profile/frozen previews/all proof remain. Current outputs
 are WD/Grok, never Mac builds/tests. Perform further exact owned duplicate cleanup only after
 these final proof consumers release their inputs; update this record/journal immediately.
