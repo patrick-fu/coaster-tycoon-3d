@@ -1,0 +1,15 @@
+{
+  "recordedUTC": "2026-10-10T02:08:21.579400+00:00",
+  "status": "INCOMPLETE_TIMEOUT",
+  "actualCLIExit": 0,
+  "actualTerminalUTC": "2026-10-10T02:00:13.122285+00:00",
+  "conversationId": "89e1c5ec-d9c7-4027-9ec1-a1d2a42f5ae9",
+  "requiredSourceAndPrimaryReadsCompleted": true,
+  "responseEmpty": true,
+  "candidateSourceUnchanged": true,
+  "sourceWriteCompleted": false,
+  "stderrWarning": "[agy] print timeout after 8m0s with turn in progress; returning partial output",
+  "retainedRoot": "/Volumes/WD/code/workspaces/coaster-detailed-stall-reflections-r1/evidence/agy-r1",
+  "streamSHA256": "a42a206a4fd7a1c93a3dc24152b6f8885eab06efbab44b7482cc750c510b589b",
+  "disposition": "Preserve useful primary/source reads and failed empty turn. One fresh narrower file-write outcome under the same supported model; no source integration or success relabel."
+}

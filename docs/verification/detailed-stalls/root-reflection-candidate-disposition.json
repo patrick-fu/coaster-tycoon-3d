@@ -1,0 +1,19 @@
+{
+  "recordedUTC": "2026-10-10T02:15:03.786032+00:00",
+  "actualAGYExit": 0,
+  "actualTerminalUTC": "2026-10-10T02:10:00.463485+00:00",
+  "conversationId": "7a90b325-a14d-4982-af16-2c81210931f7",
+  "modelEffective": "gemini-3.8-flash-high",
+  "cwdEffective": "/Volumes/WD/code/workspaces/coaster-detailed-stall-reflections-r2",
+  "permissionModeEffective": "always-proceed",
+  "stderrBytes": 0,
+  "requiredSourceAndPrimaryReadsCompleted": true,
+  "actualCandidateAndNotesWritesCompleted": true,
+  "AGYCandidateSHA256": "c03200a6a06b25e94ff781c521c6e431e02e227dd045dce8eee48b0a36ebe223",
+  "rootCandidateSHA256": "fe9a433bfbe524cf8a8be9d185097400c8f256218e1ef753286f9f397beb35cb",
+  "rootCandidatePath": "/Volumes/WD/code/workspaces/coaster-detailed-stall-reflections-r2/root-candidate-r3/park-scene.js",
+  "rootCorrection": "Clear the target reference after disposal so repeated ParkScene.dispose cannot dispatch target disposal twice; clone the background color for isolated source ownership.",
+  "unverifiedNotesCorrection": "AGY notes assert the cause and exact-once disposal before actual control; keep causal hypothesis and runtime/target ownership pending.",
+  "adoption": "Not integrated; awaiting actual same-view PBR/nonmetal/memory/authority control and narrow source review.",
+  "scope": "Three-line bounded constructor/teardown change; no geometry/material/dependency/camera/tone/authority changes"
+}

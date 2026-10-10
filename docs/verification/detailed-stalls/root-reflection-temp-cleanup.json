@@ -1,0 +1,63 @@
+{
+  "recordedUTC": "2026-10-10 02:42 UTC",
+  "scope": "Only duplicate owned AGY reflection r1/r2 system-temp stdout/stderr after exact retained bytes and absent process guard; no source, primary input, failure, master, profile or cache removed.",
+  "runs": [
+    {
+      "run": "r1",
+      "terminal": "/Volumes/WD/code/workspaces/coaster-detailed-stall-reflections-r1/evidence/agy-r1/terminal.json",
+      "absentOwnedPids": [
+        {
+          "pid": 90226,
+          "exists": false
+        },
+        {
+          "pid": 90229,
+          "exists": false
+        }
+      ],
+      "removed": [
+        {
+          "path": "/var/folders/5c/f170nvbx6t7105zg26q08zvh0000gn/T/coaster-reflection-agy-r1-7a620s61/stdout.jsonl",
+          "bytes": 78503,
+          "sha256": "a42a206a4fd7a1c93a3dc24152b6f8885eab06efbab44b7482cc750c510b589b",
+          "retainedPath": "/Volumes/WD/code/workspaces/coaster-detailed-stall-reflections-r1/evidence/agy-r1/stdout.jsonl"
+        },
+        {
+          "path": "/var/folders/5c/f170nvbx6t7105zg26q08zvh0000gn/T/coaster-reflection-agy-r1-7a620s61/stderr.log",
+          "bytes": 79,
+          "sha256": "66fac1db5ea5f11626c447224fa91de55101f12b5669baad6c175da61a770cb7",
+          "retainedPath": "/Volumes/WD/code/workspaces/coaster-detailed-stall-reflections-r1/evidence/agy-r1/stderr.log"
+        }
+      ]
+    },
+    {
+      "run": "r2",
+      "terminal": "/Volumes/WD/code/workspaces/coaster-detailed-stall-reflections-r2/evidence/agy-r1/terminal.json",
+      "absentOwnedPids": [
+        {
+          "pid": 94427,
+          "exists": false
+        },
+        {
+          "pid": 94429,
+          "exists": false
+        }
+      ],
+      "removed": [
+        {
+          "path": "/var/folders/5c/f170nvbx6t7105zg26q08zvh0000gn/T/coaster-reflection-agy-r2-9rpqiqb0/stdout.jsonl",
+          "bytes": 27221,
+          "sha256": "1c24dc362335076e9af369cbf93696cda1fe05cd300d4d1f4bd7aac17db800b6",
+          "retainedPath": "/Volumes/WD/code/workspaces/coaster-detailed-stall-reflections-r2/evidence/agy-r1/stdout.jsonl"
+        },
+        {
+          "path": "/var/folders/5c/f170nvbx6t7105zg26q08zvh0000gn/T/coaster-reflection-agy-r2-9rpqiqb0/stderr.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "retainedPath": "/Volumes/WD/code/workspaces/coaster-detailed-stall-reflections-r2/evidence/agy-r1/stderr.log"
+        }
+      ]
+    }
+  ],
+  "freedBytes": 105803
+}

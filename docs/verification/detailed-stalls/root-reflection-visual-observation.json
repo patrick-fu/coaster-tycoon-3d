@@ -1,0 +1,29 @@
+{
+  "recordedUTC": "2026-10-10 02:39 UTC",
+  "observedImages": [
+    {
+      "path": "/Volumes/WD/code/workspaces/coaster-detailed-stalls-browser/reflection-control-r1/early-views/baseline-off-food.png",
+      "bytes": 1579492,
+      "sha256": "762f023e164bd0039f670c761b0637b57eb80d94ebddfea9193d1a19559b234a"
+    },
+    {
+      "path": "/Volumes/WD/code/workspaces/coaster-detailed-stalls-browser/reflection-control-r1/early-views/environment-0.35-food.png",
+      "bytes": 1546798,
+      "sha256": "f69eacd0e4f89d7ba249e32b0a7180fe0fa3f812b064b31a807011cbb8ef57de"
+    },
+    {
+      "path": "/Volumes/WD/code/workspaces/coaster-detailed-stalls-browser/reflection-control-r1/early-views/baseline-off-drink.png",
+      "bytes": 1588904,
+      "sha256": "acff413a18708163d1a94ee17dce27b708c9b5443f8423e39da38f88af848f8f"
+    },
+    {
+      "path": "/Volumes/WD/code/workspaces/coaster-detailed-stalls-browser/reflection-control-r1/early-views/environment-0.35-drink.png",
+      "bytes": 1548441,
+      "sha256": "b3e6fc54f9b1df86801ffa811f7015f37a87be7e9b79080fb56195ce361a4835"
+    }
+  ],
+  "rootVisualObservation": "Actual global .35 reflection fixes black metal but strongly brightens intentional dark parts, cream boards, grass and genuine Classic gate. Reject the global source; qualify scoped authored metal/brass-only reflection.",
+  "candidateSourceSHA256": "fe9a433bfbe524cf8a8be9d185097400c8f256218e1ef753286f9f397beb35cb",
+  "scope": "Actual global causal contrast only; final raw retention pending; no production integration or public/style/GPU acceptance.",
+  "disposition": "REJECT_GLOBAL_ENVIRONMENT"
+}

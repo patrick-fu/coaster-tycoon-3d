@@ -1,0 +1,23 @@
+{
+  "recordedUTC": "2026-10-10 02:50 UTC",
+  "scope": "Only duplicate WD global-reflection transport archive; all687 encoded/decoded retained payloads verified by Root before deletion.",
+  "removedPath": "/Volumes/WD/code/workspaces/coaster-detailed-stalls-browser/reflection-control-r1/reflection-retained-r1.tar.gz",
+  "removedBytes": 202490496,
+  "sha256": "d68989e04008405d6c0d0d8d31f2e7b2cbc674765c9ac7ef75bba31dcd813917",
+  "retainedManifest": "/Volumes/WD/code/workspaces/coaster-detailed-stalls-browser/reflection-control-r1/retained-r1/retention-manifest.json",
+  "retainedManifestSHA256": "26045f3d7735264bbf3e03f88c7317e3c88bd8b6ca010e3f858c035817c9ea0a",
+  "guards": {
+    "scpActualExit": 0,
+    "extractActualExit": 0,
+    "rootAll687EncodedDecodedExact": true,
+    "lsofActualExit": 1,
+    "noOpenOwner": true,
+    "actualSshOwnedHelpersAbsent": [
+      1030188,
+      1030216,
+      1030953,
+      1031508
+    ]
+  },
+  "preserved": "All raw/encoded/failed/masters/oracles/default-profile and remote recoverable proof; no global cache cleanup."
+}

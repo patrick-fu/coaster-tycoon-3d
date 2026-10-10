@@ -42,16 +42,37 @@ controls in the current integrated build. AGY's useful material partial remains
 an incomplete timeout; subsequent Root corrections and independent checks do
 not relabel that earlier attempt.
 
-The existing SolMax browser owner now qualifies only affected source7ab paths:
-actual decoded/rendered palette, cardinal unit/state/picking, refresh/paused
-whole-authority preservation, native decoder exact disposal, late callbacks and
-visible failures. Prior complete paid/storage/legacy matrices may be reused
-under unchanged input pins; old palette and cancellation failures cannot. Fresh
-Chrome receiver binding, affected browser results, exact public root/pin and
-TWO whole cumulative Design rounds and TWO Drift rounds remain required. The
-[progress record](../../../PROGRESS.md) distinguishes planned, running, verified
-and published work. [Duplicate transport cleanup](root-transfer-cleanup-r2.json)
-frees143MB while preserving all381 raw files, encoded proof and failures.
+Actual source7ab affected qualification is now retained and independently audited:
+8 cardinal builds/24 exclusive poses and picks, all4 decoded albedo bindings,
+32 real material ray pixels and64 late/error/native resource checks. Native
+cancellation now releases30 textures,30 bitmaps and24 materials exactly once.
+[Root affected acceptance](root-affected-browser-acceptance.json) verifies366
+encoded and decoded retained payloads. The first missing-PIL attempt remains
+failed; its offline correction and successful lifecycle tail remain separate.
+
+A new actual black-metal observation prompted a bounded reflection control.
+The global neutral environment makes metal visible but also substantially
+brightens intentional dark parts, cream boards, grass and the genuine Classic
+gate. Root [rejects the global source](root-global-reflection-rejection.json)
+and verifies all687 retained encoded/decoded files,44 owned process identities,
+closed ports and four byte-exact original storage restorations. The transient
+zombie and incorrect Soft-roof driver attempts retain their original failures.
+
+The current isolated scoped source assigns the shared reflection only to the
+authored `metal` and `brass` materials; global environment and nonmetal maps stay
+unchanged. One lazy Scene-owned size64 target is excluded from factory ownership.
+[Source gate](root-scoped-reflection-source-gate.json) records the exact two-file
+candidate, the completed one-file AGY author and the earlier useful Scene partial
+that remains an incomplete timeout. The candidate is not integrated or published;
+independent concrete source review and actual scoped browser controls are pending.
+Actual GPU failure after partial PMREM allocation remains unqualified.
+
+Prior complete paid/storage/legacy matrices remain reusable only under unchanged
+input pins. Exact public root/pin and TWO whole cumulative Design rounds and TWO
+Drift rounds remain required. The [progress record](../../../PROGRESS.md) retains
+planned, running, verified and published scope. Exact owned duplicate transport
+and temporary captures were removed only after retained-byte/process checks;
+masters, raw failures, oracles and default browser profile remain intact.
 Current public runtime is still fddd/save12/content5/protocol5. Original
 numerical/art agreement, representative GPU/scale, catalogue breadth and
 Patrick's visual/play acceptance remain open.

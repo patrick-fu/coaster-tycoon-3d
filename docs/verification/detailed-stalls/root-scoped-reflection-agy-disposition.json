@@ -1,0 +1,16 @@
+{
+  "recordedUTC": "2026-10-10 02:51 UTC",
+  "terminal": {
+    "actualExit": 0,
+    "endUTC": "2026-10-10T02:50:03.090585+00:00",
+    "childPid": 3919,
+    "captureDirectory": "/var/folders/5c/f170nvbx6t7105zg26q08zvh0000gn/T/coaster-reflection-agy-r3-1tk95oiw",
+    "retainedDirectory": "/Volumes/WD/code/workspaces/coaster-detailed-stall-reflections-r3/evidence/agy-r3",
+    "stdoutSha256": "b7ba577628e5c5509e72ee6a9a9d2bbf25318844050d483b7f0299c14b917be3",
+    "stderrBytes": 79
+  },
+  "classification": "INCOMPLETE_TIMEOUT",
+  "reason": "Actual CLI exit0 but empty SUCCESS response and79-byte4m timeout warning; no completed notes/final answer. Useful partial source edits require independent review and actual checks.",
+  "productionUnchanged": "7ab4d7e35bc2d4d07456b00d5aaaafe122eb105d",
+  "scope": "Partial visual source only; no completed author/task/runtime/public acceptance."
+}
