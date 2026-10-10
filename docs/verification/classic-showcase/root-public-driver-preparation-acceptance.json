@@ -1,0 +1,38 @@
+{
+  "observedUTC": "2026-10-10T14:19:14.878110+00:00",
+  "scope": "Root concrete public preparation review; r1 candidate not launched, corrected r2 adds only the declared Import control. Actual public runtime is separately authorized after gate transfer and fresh owned source/profile/process preflight.",
+  "sourceCommit": "93b5e2397c9dfd61f2ceb6df1f41d17361453558",
+  "sourceTree": "6f6cbf0bb87a21c0d962591765e1d3c6204317a2",
+  "readySHA256": "0423eebe4dfe4c93a06340fc8cccbc90d547fcd59cc8ae3e7d94ed5c89e6cc89",
+  "hostingCommit": "b54109d6f1ef5f86eabb8c7b9765422a70fd6baf",
+  "evidenceRoot": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/public-preparation-r2/static-check-r1",
+  "actualPreparerPID": 1541987,
+  "actualStaticPassed": true,
+  "preparationTerminalSHA256": "ccb903f0d0c4ebcfada3a8cd802186c44735e76e8234b856f16fdf4fd74fe8d2",
+  "driverSHA256": "9b75bb005ffeb023b895e8298ae8b7591d6d099a99e2f51cb9a4b6a43ad82893",
+  "fullDiffSHA256": "5e620b89653006642d607ee0e81f17dbc74c62673f061c56a5774c1ba95f5b95",
+  "importOnlyDiffSHA256": "a15564c8b3866644603b60c7f3533c15ded22ea0ff15e8102a55f2c03d56966b",
+  "witnessSHA256": "2bda287f9054a5dad3c33f0ce31d6a1f20814dde56cf4fff5b5385646441360a",
+  "allElevenInputBodiesExact": true,
+  "rootIndependentPointerBuildSaveTypedFinallySectionsExact": true,
+  "rootReviewedPublicDelta": "All164 fresh HTTP per route; actual startup/New;1920/1024 Overview/Close/seven controls/Library/inspector; one root native wheel/pick; unchanged strict native build/remove/genuine old13/Save/Export/reload/normal resource and shared-origin full typed restore; one sole Chrome, no local server, no new advances or full matrix replay.",
+  "rootActualGateFile": "/Volumes/WD/code/workspaces/coaster-consumable-art/coaster-tycoon-3d/docs/verification/classic-showcase/root-public-bootstrap-acceptance.json",
+  "rootActualGateSHA256": "2cf08adde671d57382f0d9c21d1174d50b4bd7615126ac28b2767db3dc0a4b12",
+  "next": "Root authorizes exact driver9b75bb00 public-r1 after sole-owner fresh source/profile/known PID and port preflight. Actual runtime identity/outcome still pending.",
+  "actualPreparationClosure": {
+    "preparerChildExit": 0,
+    "preparerPostwaitExists": false,
+    "sshExit": 0,
+    "inputSCPExit": 0,
+    "mirrorSCPExit": 0,
+    "mirrorAttemptSCPExit": 0,
+    "stderrBytes": 0,
+    "actualAttemptRoot": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/administrative-attempt/public-classic-preparation-r2",
+    "actualTransportRoot": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/transport/public-classic-preparation-r2"
+  },
+  "rootGateTransfer": {
+    "remotePath": "/workspace/coaster-classic-showcase-browser-r1/inputs/root-public-gate-2cf08add.json",
+    "scpAndIndependentRemoteHashCheckExit": 0,
+    "sha256": "2cf08adde671d57382f0d9c21d1174d50b4bd7615126ac28b2767db3dc0a4b12"
+  }
+}

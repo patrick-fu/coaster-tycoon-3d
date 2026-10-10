@@ -1,0 +1,242 @@
+{
+  "observedUTC": "2026-10-10T13:18:38.209876+00:00",
+  "scope": "Root consumption of the actual terminal R4 subset. Full raw HTTP/CDP/save retention and independent review remain pending; earlier failed runs remain failed.",
+  "sourceCommit": "93b5e2397c9dfd61f2ceb6df1f41d17361453558",
+  "readySHA256": "0423eebe4dfe4c93a06340fc8cccbc90d547fcd59cc8ae3e7d94ed5c89e6cc89",
+  "evidenceRoot": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/early-r4",
+  "actualRunner": {
+    "pid": 1515895,
+    "childExit": 0,
+    "postwaitExists": false,
+    "endUTC": "2026-10-10T13:10:39.970391+00:00"
+  },
+  "routeChecks": 53,
+  "routePassed": true,
+  "nativeConstruction": {
+    "tile": {
+      "x": 19,
+      "y": 12
+    },
+    "height": 32,
+    "id": 156,
+    "quotedCost": 30,
+    "removeQuotedCost": -15,
+    "nativeMoveDownUpExactTile": true,
+    "causalSHA256": "e3af905f65fb1c2d11c9e83dfe930a7363abac007cb63ea62eecbe76c902a3ce"
+  },
+  "resources": [
+    {
+      "file": "local/actual-owned-scene-disposal.json",
+      "sha256": "23dbf9063dbd67a3710473f16c30f9bcce2939b8149097b1d273a96d3ca0b647",
+      "observedCounts": {
+        "geometries": 67,
+        "materials": 48,
+        "textures": 30,
+        "bitmaps": 30
+      },
+      "actualEachCountOne": true,
+      "foreignPreserved": true,
+      "ownedSceneTargetOnceAndNull": true
+    },
+    {
+      "file": "local/actual-scene-final-disposal.json",
+      "sha256": "c7a4abbeda0689f3726b3ce1e4b0fbfc42a5aa881b904deec05813e89b1b7b79",
+      "observedCounts": {
+        "geometries": 67,
+        "materials": 48,
+        "textures": 30,
+        "bitmaps": 30
+      },
+      "actualEachCountOne": true,
+      "foreignPreserved": true,
+      "ownedSceneTargetOnceAndNull": true
+    }
+  ],
+  "typedDatabase": {
+    "originalCount": 0,
+    "wholeBytesEqual": true,
+    "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+  },
+  "ownedClosure": {
+    "knownChildren": 14,
+    "allHaveCapturedTreeRecords": true,
+    "allKnownAbsent": true,
+    "portsOpen": {
+      "8777": false,
+      "9237": false
+    },
+    "preterminationAncestryCount": 13,
+    "missingOwnEarlierAncestryPIDs": [
+      1516104
+    ],
+    "recordingLimit": "1516104 first appears adopted/zombie in settlement-0. Every known child has a captured record and is absent; thirteen have their own earlier ancestry/status."
+  },
+  "pngRootViewed": [
+    "local/player-built-picked-1920x1080.png",
+    "local/reloaded-overview-1920x1080.png"
+  ],
+  "completeAuthorities": "All nine complete actual save replies and their Chrome Rules binding are now consumed in root-r4-retention-acceptance.json.",
+  "remaining": [
+    "Final retainer/tool closure supplement",
+    "Independent pre-public findings disposition",
+    "Actual public publication and player qualification",
+    "Two whole rounds each of Design and Drift"
+  ],
+  "files": [
+    {
+      "path": "attempt/actual-child-exit.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "attempt/input-make-player-save-tail.py",
+      "bytes": 8458,
+      "sha256": "066ec217d2859e54b1e8290171ae3fdb7fbfc5e6d22172dd4f8d9424793f3906"
+    },
+    {
+      "path": "attempt/input-read-only-construction-witness.js",
+      "bytes": 3681,
+      "sha256": "2bda287f9054a5dad3c33f0ce31d6a1f20814dde56cf4fff5b5385646441360a"
+    },
+    {
+      "path": "attempt/input-run-player-save-tail.py",
+      "bytes": 41005,
+      "sha256": "e841858f4648c047715306ac93b0097bffe96dd6ee0c7d0be9e347ea1f27e7ed"
+    },
+    {
+      "path": "attempt/input-wrapper.sh",
+      "bytes": 1377,
+      "sha256": "624fac1fb6084d50cdf0f5aa08d84cbb48249902ecfae1b65e2cf42ce3ce2788"
+    },
+    {
+      "path": "attempt/input.sha256",
+      "bytes": 625,
+      "sha256": "21c3dd45c753d26ff51118eda64ca395ef087388d0c58a0df28959f2d87b4b18"
+    },
+    {
+      "path": "attempt/post-wait-process-state.json",
+      "bytes": 31,
+      "sha256": "4850dd33733f886bca8f62c2af94d03b1e609fbbfd66068521e17b121241a12d"
+    },
+    {
+      "path": "attempt/runner-pid.txt",
+      "bytes": 8,
+      "sha256": "8738abb3f865653e84c0f1a7588dbe72b6dab90608f7eba082866bd0fb6cd4bf"
+    },
+    {
+      "path": "attempt/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "attempt/stdout.log",
+      "bytes": 467,
+      "sha256": "59fa193c2ab41fa48fea5d99feb9099e345ed37230e215af831ae7ddf4006caa"
+    },
+    {
+      "path": "local/actual-owned-scene-disposal.json",
+      "bytes": 31786,
+      "sha256": "23dbf9063dbd67a3710473f16c30f9bcce2939b8149097b1d273a96d3ca0b647"
+    },
+    {
+      "path": "local/actual-player-build.json",
+      "bytes": 904,
+      "sha256": "614f71c236f096eee83685858b1277eba484c70f733978a041e8bd0d2d14e4a7"
+    },
+    {
+      "path": "local/actual-player-picking.json",
+      "bytes": 405,
+      "sha256": "21eb655154020e98a182acae46e2f35b0c5838211b89fd54d879daed75bb6a6d"
+    },
+    {
+      "path": "local/actual-player-remove.json",
+      "bytes": 353,
+      "sha256": "feb78ec1b296765539a6dcfcb97c8ccff3a73b016e262c005cf368fc8f137a21"
+    },
+    {
+      "path": "local/actual-saved-typed-inventory.json",
+      "bytes": 855863,
+      "sha256": "03bff14892cffff84fd571cf3a67a8a0dc197334c03e42dabae7f43b5731d816"
+    },
+    {
+      "path": "local/actual-scene-final-disposal.json",
+      "bytes": 31786,
+      "sha256": "c7a4abbeda0689f3726b3ce1e4b0fbfc42a5aa881b904deec05813e89b1b7b79"
+    },
+    {
+      "path": "local/causal-tile-19-12.json",
+      "bytes": 180145,
+      "sha256": "e3af905f65fb1c2d11c9e83dfe930a7363abac007cb63ea62eecbe76c902a3ce"
+    },
+    {
+      "path": "local/complete-paused-authority-stages.json",
+      "bytes": 1379,
+      "sha256": "7f3ac85570eed783cd2436b128d5adbb7099d8612e9fd45e3b0fd9bdcb3817e9"
+    },
+    {
+      "path": "local/player-built-picked-1920x1080.png",
+      "bytes": 1586464,
+      "sha256": "a563a1f96adc9283d350d2faba522b84aff1508ed6138221bffc9a859a3b64d4"
+    },
+    {
+      "path": "local/protected-original-databases.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "local/reloaded-overview-1920x1080.png",
+      "bytes": 1500138,
+      "sha256": "2e62e65a5b57247a8e1379193052c55f1409906fba043bab25b416bb67ed6696"
+    },
+    {
+      "path": "local/restored-original-databases.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "local/summary.json",
+      "bytes": 51713,
+      "sha256": "7f6ee82212b972bc871c2351e63e5bd1f6507322f8772620d70ad65b8e50c08d"
+    },
+    {
+      "path": "preflight/actual-ready.json",
+      "bytes": 127144,
+      "sha256": "0423eebe4dfe4c93a06340fc8cccbc90d547fcd59cc8ae3e7d94ed5c89e6cc89"
+    },
+    {
+      "path": "preflight/actual-shipping-hashes.json",
+      "bytes": 16795,
+      "sha256": "1c4ded3a1f64310566086f4704dc545b85c91efe3b546d2d589da065ff2b4624"
+    },
+    {
+      "path": "preflight/actual-source-hashes.json",
+      "bytes": 100817,
+      "sha256": "2ba3b62e244077ae049d53e00914196ccc91bf0c4b4f91125d04876f55a56d16"
+    },
+    {
+      "path": "preflight/input-preflight.py",
+      "bytes": 6236,
+      "sha256": "2d3c71984dbd33e195c86e0b29c1270717d1430aaf8f4b49b6e6c334685ae044"
+    },
+    {
+      "path": "preflight/pid.txt",
+      "bytes": 8,
+      "sha256": "ae03b7b2047412828d360d871ed9335796b3734f1d07a9ea0d877dadbb0d120f"
+    },
+    {
+      "path": "preflight/preflight-terminal.json",
+      "bytes": 6451,
+      "sha256": "345cf0ba6649d5aaa5b99d6f43ec6badd6669018a9762d4fb8ba58760d0bb0de"
+    },
+    {
+      "path": "result.json",
+      "bytes": 71859,
+      "sha256": "b71982d72415c21bcb7701f39bd442c98e19c79ca8bc6766992d7746653647f8"
+    },
+    {
+      "path": "running-state.json",
+      "bytes": 289,
+      "sha256": "9a28644e14c431f28f84bfc54f2feb793e91e5f7e69858cb6e52c617ba337e8d"
+    }
+  ]
+}

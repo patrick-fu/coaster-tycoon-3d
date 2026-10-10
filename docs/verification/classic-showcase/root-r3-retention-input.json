@@ -1,0 +1,18 @@
+{
+  "temporaryPreparation": "/var/folders/5c/f170nvbx6t7105zg26q08zvh0000gn/T/coaster-root-r3-retention-a_dvrlxe",
+  "helper": "/var/folders/5c/f170nvbx6t7105zg26q08zvh0000gn/T/coaster-root-r3-retention-a_dvrlxe/retain-r3.py",
+  "sha256": "b1b0ccbbf1b3b503c8fcfe046a75aecad1564b696774f6a5eaa3e881c43ff355",
+  "rootOwnedRemotePrefix": "/workspace/coaster-classic-showcase-browser-r1/root-retained-r3-r1",
+  "selectedPrefixes": [
+    "runtime-r3",
+    "attempts/runtime-r3",
+    "diagnosis-r3-pointer",
+    "transport/runtime-r3"
+  ],
+  "originalsReadOnly": true,
+  "buildTestRuntimeActions": false,
+  "temporaryPreparationDisposed": true,
+  "freedLogicalBytes": 2666,
+  "retainedHelper": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/root-retained-r3-r1/input-retainer.py",
+  "cleanupUTC": "2026-10-10T12:57:23.078026+00:00"
+}

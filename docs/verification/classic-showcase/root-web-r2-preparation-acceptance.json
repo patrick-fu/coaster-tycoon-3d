@@ -1,0 +1,36 @@
+{
+  "utc": "2026-10-10T10:45:12.449972+00:00",
+  "scope": "Root accepts replacement canonical web package. Actual remote runtime, canonical fulltest and public acceptance remain pending. Oldcc0 immutable.",
+  "readyPath": "/workspace/coaster-classic-showcase-integration-r1/evidence/web-r2/web-ready.json",
+  "readySHA256": "2b3950c3e6dc91185449d58609c3d2855ff6d265947523be3edd641bbccdbf04",
+  "shippingRoot": "/workspace/coaster-classic-showcase-integration-r1/source-web-r2/web-dist",
+  "files": 164,
+  "changedComparedToR1": [
+    "models/detailed-stalls/material-provenance.json",
+    "park-scene.js",
+    "style.css"
+  ],
+  "unchangedShippingFiles": 161,
+  "actualCanonicalWebScriptExit": 0,
+  "actualSSHExit": 0,
+  "actualMirrorExit": 0,
+  "blankStderr": true,
+  "knownRemotePIDsAbsent": [
+    1458949,
+    1458956
+  ],
+  "knownMacPIDsAbsent": [
+    50760,
+    50762
+  ],
+  "closureLimitation": "Known helper/child PIDs only, not complete compiler descendant tree",
+  "nodeFullSaveOracleSHA256": "a91139e868bf21eebb1cc75e049e368fa3e285795f011e833c48d4ca8d8bef4a",
+  "runtimeSourcePins": {
+    "ui/park-scene.js": "978e4d8db17b29578e71a56a7e62adce3751f50b555db081553a75b5daeed0ca",
+    "ui/style.css": "8e3c3f777a576248e349c5b6e93fadd47ff9b44c33822d55c128993d34d8c089",
+    "src/simulation/browser-worker.ts": "a155d48eb73f45de4990a2d84f8fda138190a3da923244364745ad4dbb0f0346",
+    "src/content/classic-showcase.ts": "6ebc0c99ed13c628530e9fb3befe417701010aeef50c378d02902a36b752e35a",
+    "ui/game.js": "b2bdfe532312e68ed20b096616813ec9999b913a666b31e5c7cbe6e42e82f22e",
+    "ui/models/detailed-stalls/material-provenance.json": "89fb57dc0d19a4291fb2875c2d94ce455870b1dfde1669ef63ad042ca2c03875"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "observedUTC": "2026-10-10T14:25:20.681027+00:00",
+  "scope": "Exact Root-owned disposable HTTP helper/input copy only. No source, master, proof, global cache, profile or frozen route removed.",
+  "deletedFiles": [
+    "/var/folders/5c/f170nvbx6t7105zg26q08zvh0000gn/T/coaster-public-bootstrap-0p2f4d6j/expected.json",
+    "/var/folders/5c/f170nvbx6t7105zg26q08zvh0000gn/T/coaster-public-bootstrap-0p2f4d6j/verify-public.py"
+  ],
+  "deletedEmptyDirectory": "/var/folders/5c/f170nvbx6t7105zg26q08zvh0000gn/T/coaster-public-bootstrap-0p2f4d6j",
+  "retainedCopies": "/Volumes/WD/code/workspaces/coaster-consumable-art/evidence/classic-public-bootstrap-r1",
+  "allWholeBytesEqualBeforeDelete": true,
+  "actualLsofExit": 1,
+  "actualLsofOutputEmpty": true,
+  "knownRemoteProducer1533464AbsentFromAcceptedHTTPReceipt": true,
+  "freedLogicalBytes": 3911
+}

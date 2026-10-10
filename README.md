@@ -8,18 +8,26 @@ Project code is licensed under [MIT](LICENSE). The implementation and required
 game resources are independent; see the [source strategy decision](docs/adr/0001-independent-mit-implementation.md).
 
 Try the [current Classic showcase](https://patrick-fu.github.io/coaster-tycoon-3d/?showcase=classic)
-in desktop Chrome or Edge. Its three steel layouts, detailed wooden coaster and
-sixteen-seat Carousel, shops,
-gardens and local save use a separate showcase slot, preserving your existing
-park at the [regular preview](https://patrick-fu.github.io/coaster-tycoon-3d/).
+in desktop Chrome or Edge. This branch composes a four-ride starter park: a
+ground-level wooden coaster, steel lift/drop circuit, single four-seat Log Flume
+and sixteen-seat Carousel, with detailed Burger/Soft-drink stalls, restrooms,
+connected paths and gardens. Its local and actual public player checks pass at
+[the frozen preview](https://patrick-fu.github.io/coaster-tycoon-3d/previews/classic-93b5e23/?showcase=classic).
+Two newly identified interaction candidates remain under narrow investigation in
+[the live record](PROGRESS.md). The showcase uses
+a separate save slot, preserving your existing park at the
+[regular preview](https://patrick-fu.github.io/coaster-tycoon-3d/).
 Build and manage Copper Meadows with mouse/keyboard;
 drag to orbit, right-drag to pan and scroll to zoom. Space pauses the park.
 Saves remain in this browser. Export/Import provides file backups;
 cross-runtime default-rule portability is not yet qualified.
 An earlier local park remains intact; choose **New park** after saving/exporting
-it to start the current five-ride layout.
+it to start this branch's four-ride layout.
 
-![Actual mixed park with steel, timber and fixed Carousel rides](docs/verification/carousel/overview.png)
+![Actual published Classic93 park with wood, steel, Log Flume and Carousel](docs/verification/classic-showcase/overview.png)
+
+[Current finite checks](docs/verification/classic-showcase/README.md) distinguish
+actual local/public operation and player controls from unresolved interaction, human and hardware acceptance.
 
 The current art iteration adds detailed oak meshes, real CC0 bark and leaf
 surfaces, masked shadows and three camera-selected levels of detail to the
@@ -53,8 +61,8 @@ The retained Log Flume checkpoint adds an independent four-seat log boat, textur
 timber supports, a covered station and connected entrance/exit stairs. Build
 it from **Library → Water rides → Log Flume**, complete the closed lift/drop/
 splash circuit and its empty Test, then Open it for real paid guests. Successful
-test results remain available until an explicit new Test. Fresh parks retain
-the five-ride layout; this ride is available for construction. Its published source uses
+test results remain available until an explicit new Test. That checkpoint retained
+the earlier five-ride starter layout and exposed the Flume for construction. Its source uses
 save11/content4/protocol4 and validates older parks before adding declared
 fields. [Finite checks and actual paid image](docs/verification/log-flume/README.md)
 record 238 kernel checks and seven current production-worker paid controls.
@@ -64,26 +72,27 @@ records the current build, HTTP and browser boundaries; the
 retains this source. Original LFB1 agreement and Patrick's visual/play acceptance
 remain open.
 
-The working consumables branch adds independently identified Burger and Soft-drink
+The earlier consumables checkpoint adds independently identified Burger and Soft-drink
 stalls to the existing food/drink Library families. Actual purchases give guests
 unfinished items; use changes their needs over time and ends in an empty box or
 can, which goes to a bin or becomes typed ground litter. Stock expense and gross
-margin reflect each selected product. This working source uses save12/content5/
+margin reflect each selected product. That checkpoint uses save12/content5/
 protocol5 and retains complete historical continuation checks. [Current finite
 evidence](docs/verification/consumables/README.md) records263 passing kernel checks,
 actual two-buyer ownership/disposal and protected historical browser persistence.
-Exact new sourcefddd files are published at the root and
+The exact sourcefddd distribution remains at the
 [pinned consumables candidate](https://patrick-fu.github.io/coaster-tycoon-3d/previews/consumables-fddd5b0/?showcase=classic).
 Actual public root8/pin8 player/source flows and Root raw/retention audits qualify.
 Both whole-delivery Design/Drift closure rounds are accepted; source and proof are integrated in PR74/main1373dbd. This finite candidate does not qualify full commercial or original-game behaviour.
 
-The current detailed-building branch adds two separate variants with authored
+The qualified detailed-building checkpoint adds two separate variants with authored
 Burger/Soft-drink models, unit-scale placement, a 32-unit dry-ground reservation
 and real open/closed shutters. Old identities keep their 16-unit reservation.
-This branch uses save13/content6/protocol6 and validates historical v12 before
+The current source uses save13/content6/protocol6 and validates historical v12 before
 migration. [Resource provenance](ui/models/detailed-stalls/README.md) retains
-editable source and exact model identity. Integrated browser and public
-acceptance remain pending in [the live record](PROGRESS.md).
+editable source and exact model identity. Integrated browser/public checks and
+two whole Design/Drift rounds passed for the [d232 frozen preview](https://patrick-fu.github.io/coaster-tycoon-3d/previews/detailed-stalls-d2320d5/?showcase=classic),
+merged in PR76. The four-family composition has its own pending public gate.
 
 The [earlier art checkpoint](https://patrick-fu.github.io/coaster-tycoon-3d/previews/classic-a7d6451/?showcase=classic)
 has procedural materials and composed models, three steel-coaster
