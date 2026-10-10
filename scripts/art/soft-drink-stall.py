@@ -903,7 +903,8 @@ def _create_commercial_soda_dispenser(name, origin, mat_metal, mat_brass, mat_da
     tray_d = 0.12
     tray_h = 0.045
     _create_prism(f"{name}_DripTray", (-dw / 2 + 0.02, -dd / 2 - tray_d, 0.0), (dw / 2 - 0.02, -dd / 2, tray_h), mat=mat_metal, parent=disp_root)
-    _create_prism(f"{name}_DrainGrille", (-dw / 2 + 0.03, -dd / 2 - tray_d + 0.01, tray_h - 0.006), (dw / 2 - 0.03, -dd / 2 - 0.01, tray_h), mat=mat_dark, parent=disp_root)
+    # Avoid coplanar depth competition with the metal tray top.
+    _create_prism(f"{name}_DrainGrille", (-dw / 2 + 0.03, -dd / 2 - tray_d + 0.01, tray_h - 0.005), (dw / 2 - 0.03, -dd / 2 - 0.01, tray_h + 0.001), mat=mat_dark, parent=disp_root)
 
     # 3. Dispenser splash backpanel
     _create_prism(f"{name}_SplashPanel", (-dw / 2 + 0.02, -dd / 2 - 0.005, tray_h), (dw / 2 - 0.02, -dd / 2, dh - 0.02), mat=mat_metal, parent=disp_root)

@@ -76,9 +76,11 @@ surface](root-grille-coplanarity-disposition.json), independently confirmed in
 exported GLB triangles and nine integer raster rays. An isolated AGY repair lifts
 only the dark grille1mm, keeping6mm thickness. New source04c03cfd/GLBc166d2e2/
 master5c09f398 were exported on Grok and all eight output hashes transferred
-exactly. Independent source/GLB/master verification and the original affected
-browser raster/pose checks are pending. The new asset is not integrated;
-sourcef535 still ships old Soft6f4. Root inspected all four new CPU poses for
+exactly. [Independent source/GLB/master parity](root-grille-export-acceptance.json) and
+[actual affected browser raster/pose checks](root-grille-browser-acceptance.json)
+are Root-consumed. The working draft integrates exact source04c/GLBc166 plus
+matching manifest/provenance; compiled baselinef535 still contains old6f4.
+Fresh immutable candidate build and full newasset owner retention are pending. Root inspected all four new CPU poses for
 continued siding/roof/can/counter/closure appearance; those previews do not
 qualify the browser pixels or human style agreement.
 

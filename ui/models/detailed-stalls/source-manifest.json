@@ -696,21 +696,21 @@
       "contentVariant": "independent.detailed-soft-drink-stand",
       "resource": {
         "path": "ui/models/detailed-stalls/soft-drink.glb",
-        "sha256": "6f4cc5cec0d49ab3c9bc9601906d7a705f6a253d39e22ee2dc28db7f784b5066",
-        "bytes": 8546680
+        "sha256": "c166d2e28c2be1ab49dec4d26078b26f66a14520ea7a9c011a559d6e6d5a825e",
+        "bytes": 8546676
       },
       "source": {
         "path": "scripts/art/soft-drink-stall.py",
-        "sha256": "1183394caa7d22fade3d95f99bcdfa462c325a5280ac2dfb86b934b10d62017d",
-        "exportInputSha256": "1183394caa7d22fade3d95f99bcdfa462c325a5280ac2dfb86b934b10d62017d",
-        "retainedExportInput": "/Volumes/WD/code/workspaces/coaster-detailed-stall-materials/root-candidate-r4/soft-drink-stall.py",
-        "geometryUnchangedFromPreviousCandidate": true
+        "sha256": "04c03cfd3eba1cf717ea96db44eddcb40f270ed8426a6e8fed2b521efe0bbda4",
+        "exportInputSha256": "04c03cfd3eba1cf717ea96db44eddcb40f270ed8426a6e8fed2b521efe0bbda4",
+        "retainedExportInput": "/Volumes/WD/code/workspaces/coaster-detailed-stall-grille-r1/soft-drink-stall.py",
+        "geometryChange": "Only DrainGrille translated one millimetre upward; all other geometry is exact against material-r4."
       },
       "editableMaster": {
         "file": "soft-drink-stall.blend",
-        "sha256": "4a7dcb84c04e00c5b1d37133ccf2b2a0448b6aba9995f8db96b22773159b90c0",
-        "bytes": 26234251,
-        "retainedPath": "/Volumes/WD/code/workspaces/coaster-detailed-stall-materials/evidence/export-material-r4/export-soft-drink/soft-drink-stall.blend"
+        "sha256": "5c09f39806990d7d7903fdb4bb9c401403a3aa038a308144d5d306ab5b51ec38",
+        "bytes": 26234584,
+        "retainedPath": "/Volumes/WD/code/workspaces/coaster-detailed-stall-grille-r1/evidence/export-soft-drink/soft-drink-stall.blend"
       },
       "blender": "4.3.2",
       "geometry": {
@@ -1340,8 +1340,38 @@
         }
       ],
       "exportEvidence": {
-        "path": "/Volumes/WD/code/workspaces/coaster-detailed-stall-materials/evidence/export-material-r4/export-soft-drink/soft-drink-stall.json",
-        "sha256": "dad9ef9b49231e3a97bf7739a9718b356e55e0e127d31c40a0f70c2184e93b05"
+        "path": "/Volumes/WD/code/workspaces/coaster-detailed-stall-grille-r1/evidence/export-soft-drink/soft-drink-stall.json",
+        "sha256": "b6e104ca78c38a7d1038bfd90caad3e2aadfc931b7399cef240c34847cb72bab"
+      },
+      "previousMaterialCandidate": {
+        "resource": {
+          "path": "ui/models/detailed-stalls/soft-drink.glb",
+          "sha256": "6f4cc5cec0d49ab3c9bc9601906d7a705f6a253d39e22ee2dc28db7f784b5066",
+          "bytes": 8546680
+        },
+        "source": {
+          "path": "scripts/art/soft-drink-stall.py",
+          "sha256": "1183394caa7d22fade3d95f99bcdfa462c325a5280ac2dfb86b934b10d62017d",
+          "exportInputSha256": "1183394caa7d22fade3d95f99bcdfa462c325a5280ac2dfb86b934b10d62017d",
+          "retainedExportInput": "/Volumes/WD/code/workspaces/coaster-detailed-stall-materials/root-candidate-r4/soft-drink-stall.py",
+          "geometryUnchangedFromPreviousCandidate": true
+        },
+        "editableMaster": {
+          "file": "soft-drink-stall.blend",
+          "sha256": "4a7dcb84c04e00c5b1d37133ccf2b2a0448b6aba9995f8db96b22773159b90c0",
+          "bytes": 26234251,
+          "retainedPath": "/Volumes/WD/code/workspaces/coaster-detailed-stall-materials/evidence/export-material-r4/export-soft-drink/soft-drink-stall.blend"
+        },
+        "exportEvidence": {
+          "path": "/Volumes/WD/code/workspaces/coaster-detailed-stall-materials/evidence/export-material-r4/export-soft-drink/soft-drink-stall.json",
+          "sha256": "dad9ef9b49231e3a97bf7739a9718b356e55e0e127d31c40a0f70c2184e93b05"
+        },
+        "status": "Material-r4 parity qualified; original DrainGrille and tray top were coplanar."
+      },
+      "grilleRepairQualification": {
+        "sourceGLBMaster": "docs/verification/detailed-stalls/root-grille-export-acceptance.json",
+        "actualBrowser": "docs/verification/detailed-stalls/root-grille-browser-acceptance.json",
+        "allOtherGeometry15ImagesAndDefaultStateExact": true
       }
     }
   ]

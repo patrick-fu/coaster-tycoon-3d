@@ -231,8 +231,8 @@
     },
     {
       "contentVariant": "independent.detailed-soft-drink-stand",
-      "glbSHA256": "6f4cc5cec0d49ab3c9bc9601906d7a705f6a253d39e22ee2dc28db7f784b5066",
-      "editableMasterSHA256": "4a7dcb84c04e00c5b1d37133ccf2b2a0448b6aba9995f8db96b22773159b90c0",
+      "glbSHA256": "c166d2e28c2be1ab49dec4d26078b26f66a14520ea7a9c011a559d6e6d5a825e",
+      "editableMasterSHA256": "5c09f39806990d7d7903fdb4bb9c401403a3aa038a308144d5d306ab5b51ec38",
       "textures": [
         {
           "image": "RoofingTiles013A_1K-PNG_Color_teal",

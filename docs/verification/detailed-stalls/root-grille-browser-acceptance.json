@@ -1,0 +1,70 @@
+{
+  "recordedUTC": "2026-10-10 04:38 UTC",
+  "sourceSHA256": "04c03cfd3eba1cf717ea96db44eddcb40f270ed8426a6e8fed2b521efe0bbda4",
+  "glbSHA256": "c166d2e28c2be1ab49dec4d26078b26f66a14520ea7a9c011a559d6e6d5a825e",
+  "codeCandidate": "f535f199682957830d512a213f606e38b5d494de",
+  "rawDirectory": "/Volumes/WD/code/workspaces/coaster-consumable-art/evidence/grille-browser-early",
+  "selectedManifestSHA256": "496168135f9f86fb6c3d2dac127a7cd5156d9d8a01bbaa775f8619a37c457061",
+  "rootAll26SelectedFilesExact": true,
+  "rootActualSemanticChecks": {
+    "originalFloatAndNineRaysNearestDarkAndPositiveMetalDistance": true,
+    "all7PixelsPass": true,
+    "all15NativeMapBindingsExact": true,
+    "threeRealPosesUnitExclusiveAndOriginalPointer": true,
+    "completeAuthorityRows": [
+      {
+        "stage": "new-open-off",
+        "file": "authority-new-open-off.json",
+        "bytes": 777197,
+        "sha256": "5d34d86c6342d4670013ead2f07ce4eae9fd6a19d7319a3c5cddeb4e7b7d6cd1",
+        "wholeSaveEqual": true
+      },
+      {
+        "stage": "new-open-scoped",
+        "file": "authority-new-open-scoped.json",
+        "bytes": 777197,
+        "sha256": "5d34d86c6342d4670013ead2f07ce4eae9fd6a19d7319a3c5cddeb4e7b7d6cd1",
+        "wholeSaveEqual": true
+      },
+      {
+        "stage": "new-open-recovered-off",
+        "file": "authority-new-open-recovered-off.json",
+        "bytes": 777197,
+        "sha256": "5d34d86c6342d4670013ead2f07ce4eae9fd6a19d7319a3c5cddeb4e7b7d6cd1",
+        "wholeSaveEqual": true
+      },
+      {
+        "stage": "pose-open",
+        "file": "authority-pose-open.json",
+        "bytes": 777197,
+        "sha256": "5d34d86c6342d4670013ead2f07ce4eae9fd6a19d7319a3c5cddeb4e7b7d6cd1",
+        "wholeSaveEqual": true
+      },
+      {
+        "stage": "pose-closed",
+        "file": "authority-pose-closed.json",
+        "bytes": 777198,
+        "sha256": "077e36dbd3ed593c96663baec812057cd3f032ad1b474d1ea84ad54cb7cd9595",
+        "wholeSaveEqual": true
+      },
+      {
+        "stage": "pose-reopened",
+        "file": "authority-pose-reopened.json",
+        "bytes": 777197,
+        "sha256": "72445296939ae95209d76f59dc4f7a1e9e40a6c93a268ca1fe45b36f3701ae53",
+        "wholeSaveEqual": true
+      }
+    ],
+    "separateNeutralRecoveryOriginalDBExact": true,
+    "poseTailOriginalDBExact": true,
+    "all26RecordedOwnedPidsAbsentAndPortsClosed": true
+  },
+  "actuallyViewedPNGs": {
+    "runtime-r1/local/new-open-scoped.png": "120743a324f0d54847ad523d034541322836def8dc7b581d014f73cb9a043424",
+    "runtime-r2-pose-tail/local/pose-closed.png": "579eb85dea1dd423e631a2a79906258788c87558d61da7e05d967a0ce2c6f923"
+  },
+  "rootVisualObservation": "Actual open and closed browser views preserve cream/teal roof/sign/can/counter and exclusive shutter appearance; metal/brass are visible. No human/original style agreement asserted.",
+  "failureRetained": "Original first runtime child/SSH1 from driver URL variable shadowing and blocked DB cleanup; separate neutral recovery0 and remaining pose-tail0 do not rewrite it.",
+  "closureLimitation": "Neutral recovery did not capture its complete pretermination child tree. Audit checks recorded PIDs/log PIDs only; no unknown-tree completeness claim.",
+  "gate": "Bounded newasset actual semantic gate accepted for draft integration/freeze/remote build. Complete lossless owner retention still pending before final/public acceptance; cumulative/hardware/human open."
+}

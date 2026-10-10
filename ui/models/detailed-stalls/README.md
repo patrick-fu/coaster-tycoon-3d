@@ -14,8 +14,13 @@ retained editable masters. `material-provenance.json` records CC0 permissions
 and source member hashes. Original game media are not included.
 
 The independent authoring modules and exporter are in `scripts/art`. Their
-geometry, UVs, anchors and shutter poses remain exact against the previous
-candidate. Cream siding and the terracotta/teal roofs use portable albedos
+UVs, anchors, shutter poses and unaffected geometry remain exact against the
+material candidate. The Soft-drink DrainGrille alone is lifted one millimetre
+to separate its dark top from the metal tray; its six-millimetre thickness is
+unchanged. [Source/master proof](../../../docs/verification/detailed-stalls/root-grille-export-acceptance.json)
+and [actual browser proof](../../../docs/verification/detailed-stalls/root-grille-browser-acceptance.json)
+retain the original failed surface and corrected rays, pixels and poses.
+Cream siding and the terracotta/teal roofs use portable albedos
 derived from the CC0 sources: resize512, decode sRGB, apply the authored linear
 MIX and encode sRGB. The exporter preserves the first packed payload; repacking
 a generated image after it becomes FILE discards that payload in Blender4.3.2.

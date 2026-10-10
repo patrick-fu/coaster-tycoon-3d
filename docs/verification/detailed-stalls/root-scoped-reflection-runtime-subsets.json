@@ -1,0 +1,150 @@
+{
+  "recordedUTC": "2026-10-10 04:06 UTC",
+  "sourceCommit": "f535f199682957830d512a213f606e38b5d494de",
+  "sceneSHA256": "a91fa8194249d03c5d2885e3822e82e0dffb01ed795ea5d1955ec6028127dc48",
+  "loaderSHA256": "92bed64a2c2383070696da3307f2ff8a82cd8295d61f738c8392e55fb2be4721",
+  "evidenceDirectory": "/Volumes/WD/code/workspaces/coaster-detailed-stalls-browser/reflection-scoped-r1",
+  "retentionManifestSHA256": "7241116a3beb2cfe45c566c68683ec8ec7e01c3990c3df5700a25cc40aa32dfa",
+  "rootActualRawSemantics": {
+    "pixelPassed": 359,
+    "pixelFailed": 1,
+    "nativeCaseCounts": [
+      [
+        67,
+        72,
+        30,
+        30
+      ],
+      [
+        36,
+        33,
+        15,
+        15
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        24,
+        30,
+        30
+      ],
+      [
+        36,
+        46,
+        29,
+        29
+      ]
+    ],
+    "everyCreatedResourceOnce": true,
+    "everyBitmapClosed": true,
+    "foreignTextureUnchangedAndUnreleasedByFactory": true,
+    "sceneTargetDisposesOnceAcrossRepeat": true,
+    "preallocationFailureReadyWithNoTarget": true,
+    "generatorDisposedOnce": true,
+    "actualCallbackErrorThenImportSuccess": true,
+    "completeAuthoritySnapshots": [
+      {
+        "stage": "classic-before-detailed-classic",
+        "bytes": 826333,
+        "sha256": "6b83fc4b75e10a632a7023a0c3d556beb7942277cc4583ce286b4af449d229c6"
+      },
+      {
+        "stage": "baseline-off-food",
+        "bytes": 777197,
+        "sha256": "5d34d86c6342d4670013ead2f07ce4eae9fd6a19d7319a3c5cddeb4e7b7d6cd1"
+      },
+      {
+        "stage": "baseline-off-drink",
+        "bytes": 777197,
+        "sha256": "5d34d86c6342d4670013ead2f07ce4eae9fd6a19d7319a3c5cddeb4e7b7d6cd1"
+      },
+      {
+        "stage": "scoped-on-food",
+        "bytes": 777197,
+        "sha256": "5d34d86c6342d4670013ead2f07ce4eae9fd6a19d7319a3c5cddeb4e7b7d6cd1"
+      },
+      {
+        "stage": "scoped-on-drink",
+        "bytes": 777197,
+        "sha256": "5d34d86c6342d4670013ead2f07ce4eae9fd6a19d7319a3c5cddeb4e7b7d6cd1"
+      },
+      {
+        "stage": "recovered-off-food",
+        "bytes": 777197,
+        "sha256": "5d34d86c6342d4670013ead2f07ce4eae9fd6a19d7319a3c5cddeb4e7b7d6cd1"
+      },
+      {
+        "stage": "recovered-off-drink",
+        "bytes": 777197,
+        "sha256": "5d34d86c6342d4670013ead2f07ce4eae9fd6a19d7319a3c5cddeb4e7b7d6cd1"
+      },
+      {
+        "stage": "static-refresh-0",
+        "bytes": 777197,
+        "sha256": "5d34d86c6342d4670013ead2f07ce4eae9fd6a19d7319a3c5cddeb4e7b7d6cd1"
+      },
+      {
+        "stage": "static-refresh-1",
+        "bytes": 777197,
+        "sha256": "5d34d86c6342d4670013ead2f07ce4eae9fd6a19d7319a3c5cddeb4e7b7d6cd1"
+      },
+      {
+        "stage": "static-refresh-2",
+        "bytes": 777197,
+        "sha256": "5d34d86c6342d4670013ead2f07ce4eae9fd6a19d7319a3c5cddeb4e7b7d6cd1"
+      },
+      {
+        "stage": "classic-after-detailed-classic",
+        "bytes": 826333,
+        "sha256": "6b83fc4b75e10a632a7023a0c3d556beb7942277cc4583ce286b4af449d229c6"
+      },
+      {
+        "stage": "reimport-reuses-target",
+        "bytes": 777197,
+        "sha256": "5d34d86c6342d4670013ead2f07ce4eae9fd6a19d7319a3c5cddeb4e7b7d6cd1"
+      },
+      {
+        "stage": "native-tail-initial",
+        "bytes": 777197,
+        "sha256": "5d34d86c6342d4670013ead2f07ce4eae9fd6a19d7319a3c5cddeb4e7b7d6cd1"
+      },
+      {
+        "stage": "five-shared-target-native-cases",
+        "bytes": 777197,
+        "sha256": "5d34d86c6342d4670013ead2f07ce4eae9fd6a19d7319a3c5cddeb4e7b7d6cd1"
+      },
+      {
+        "stage": "scene-target-disposed",
+        "bytes": 777197,
+        "sha256": "5d34d86c6342d4670013ead2f07ce4eae9fd6a19d7319a3c5cddeb4e7b7d6cd1"
+      },
+      {
+        "stage": "explicit-preallocation-failure",
+        "bytes": 777197,
+        "sha256": "5d34d86c6342d4670013ead2f07ce4eae9fd6a19d7319a3c5cddeb4e7b7d6cd1"
+      },
+      {
+        "stage": "explicit-failure-scene-disposed",
+        "bytes": 777197,
+        "sha256": "5d34d86c6342d4670013ead2f07ce4eae9fd6a19d7319a3c5cddeb4e7b7d6cd1"
+      }
+    ],
+    "allOwnedPidsAbsent": true,
+    "allPortsClosed": true,
+    "allOriginalStorageRestored": true
+  },
+  "scope": "Scoped source ownership/nonmetal/lazy and bounded optional availability subsets accepted; full visual gate remains failed on oldcoplanarGLB6f4. r1-r4 preserve actual failed exits. New c166 asset/pixel, public/cumulative/GPU/human pending.",
+  "reportErratumPending": false,
+  "reportErratum": {
+    "path": "/Volumes/WD/code/workspaces/coaster-detailed-stalls-browser/reflection-scoped-r1/REPORT-ERRATUM.md",
+    "sha256": "c2bcc84b054a2928989876812ec34da742378dded8292aaa8a90c5c9771a82a4",
+    "supplementManifestSHA256": "68f087441a838c9f4dedd1b447db45d0cb4c15ccc2cd2fbe356a9a87e64ea04c",
+    "all23SidecarPayloadsRootExact": true,
+    "initialSSH1IsObservedCompletionProjectionWithoutOriginalScalar": true
+  }
+}
