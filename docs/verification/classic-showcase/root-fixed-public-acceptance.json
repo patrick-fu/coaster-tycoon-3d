@@ -1,0 +1,397 @@
+{
+  "utc": "2026-10-10T21:05:00.412134+00:00",
+  "accepted": true,
+  "rootConsumed": true,
+  "sourceCommit": "7a0bbac668ece30416cceefb97997c0de17d1376",
+  "readySHA256": "8547297526a21a602ee783e7e8d02579b700782d3cd3afe16aaed575b8790669",
+  "hostingCommit": "0f6c585b98fb786d8966c28b6aaab022c3064459",
+  "fullRawConsumed": true,
+  "allMainEncodedDecodedWDBytesConsumed": true,
+  "fullToolConsumed": true,
+  "rawReceipt": "root-fixed-public-r1-full-consumption.json",
+  "mainReceipt": "root-fixed-public-main-acceptance.json",
+  "mainManifestSHA256": "c381d0ec44f666d16dcb458425f69eb4541c1aa7aa5c4d88f2bd5166d4175926",
+  "mainFiles": 1102,
+  "finiteToolManifestSHA256": "38b3642267f444cf607a5ff4f0ec72a419a5195c13fe5e628eadcbb0222e0438",
+  "finiteToolChecksSHA256": "67ba1fbbc50d9f0175bb9a87c47b3d6d8d8c6a27b99d0dfe56c710191cf9ac29",
+  "finiteToolFiles": 92,
+  "finiteToolBytes": 146502,
+  "lastIndexSHA256": "ce8b35f408f275f360d0741fe81d5da4faafc7be26bc32db4cc8f3fd0591229a",
+  "finalReportSHA256": "31c03e23b5e7c40956c2c2127fdf9a9f47d2c7463224a4792a70d90967c7c83d",
+  "finalOutsideFiles": [
+    {
+      "path": "terminal-r1/attempt-r1/actual-child-exit.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "terminal-r1/attempt-r1/actual-wrapper-exit.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "terminal-r1/attempt-r1/input-helper.py",
+      "bytes": 4461,
+      "sha256": "3bd79d99ae5cc62e15d5954ebe1ed020ae4a02190f766a824cd8e23d0d3a3ed6"
+    },
+    {
+      "path": "terminal-r1/attempt-r1/pid.txt",
+      "bytes": 8,
+      "sha256": "2613748329496dad509d8be1ac7933a59d9246b14a2e1c1c6ee0a38a915d72ca"
+    },
+    {
+      "path": "terminal-r1/attempt-r1/post-wait-child.txt",
+      "bytes": 6,
+      "sha256": "2ed27c1421e6928dbe13dbfdb5c59e1045b30341fe7ebe05700006bc5ac572c0"
+    },
+    {
+      "path": "terminal-r1/attempt-r1/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "terminal-r1/attempt-r1/stdout.log",
+      "bytes": 404,
+      "sha256": "634205c83a41b35fe87d70e4352317107844dec00f6c85553696bb2d1b26292a"
+    },
+    {
+      "path": "terminal-r1/attempt-r1/wrapper-pid.txt",
+      "bytes": 8,
+      "sha256": "d4eda5633c134722619ac78ad8563d97801fbc7527f7dc9428f2e0bc81af7dad"
+    },
+    {
+      "path": "proof-r1/transport/closure-r1/actual-ssh-outer-exit.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "proof-r1/transport/closure-r1/actual-upload-ssh-exit.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "proof-r1/transport/closure-r1/actual-upload-tar-exit.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "proof-r1/transport/closure-r1/actual-wrapper-exit.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "proof-r1/transport/closure-r1/input-wrapper.sh",
+      "bytes": 3607,
+      "sha256": "8d7f37533bc55f41945247afab6297784ad2c71169aa8852042e2b8e55dbd0d3"
+    },
+    {
+      "path": "proof-r1/transport/closure-r1/known-mac-pids.txt",
+      "bytes": 94,
+      "sha256": "09a55071b0fe0534daf11ff92b5bc00fdc283ac0144d2bd6e9a636d774b928ab"
+    },
+    {
+      "path": "proof-r1/transport/closure-r1/post-wait-ssh.txt",
+      "bytes": 6,
+      "sha256": "2ed27c1421e6928dbe13dbfdb5c59e1045b30341fe7ebe05700006bc5ac572c0"
+    },
+    {
+      "path": "proof-r1/transport/closure-r1/ssh-pid.txt",
+      "bytes": 6,
+      "sha256": "1dec88dde81377fbae4eb30c34fc4960e123ad82a8c67594b2f6c6a7e3daca32"
+    },
+    {
+      "path": "proof-r1/transport/closure-r1/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "proof-r1/transport/closure-r1/stdout.log",
+      "bytes": 404,
+      "sha256": "634205c83a41b35fe87d70e4352317107844dec00f6c85553696bb2d1b26292a"
+    },
+    {
+      "path": "proof-r1/transport/closure-r1/upload-ssh-pid.txt",
+      "bytes": 6,
+      "sha256": "7eb904fa220f87ca2a4c5e3b50a3989e2a95d403973c9776872b5c9e5efd1622"
+    },
+    {
+      "path": "proof-r1/transport/closure-r1/upload-tar-pid.txt",
+      "bytes": 6,
+      "sha256": "cde4a416d95dda1cf15fa3e5420f264d3740582d688e35bfa61672916aeff0ae"
+    },
+    {
+      "path": "proof-r1/transport/closure-r1/upload-tar.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "proof-r1/transport/closure-r1/upload.stderr.log",
+      "bytes": 7098,
+      "sha256": "6c9d28a79a07c707f7d9406ecb67d61666d5826d3531fcb8cac9b0dd1eecce83"
+    },
+    {
+      "path": "proof-r1/transport/closure-r1/upload.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "proof-r1/transport/closure-r1/wrapper-pid.txt",
+      "bytes": 6,
+      "sha256": "e43d618d92884d626174a69d8c5bf72c20bb29f9eb7c8c50e64ff61eba3e734c"
+    },
+    {
+      "path": "transport/mirror-terminal-r1/actual-hash-exit.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "transport/mirror-terminal-r1/actual-local-tar-exit.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "transport/mirror-terminal-r1/actual-ssh-outer-exit.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "transport/mirror-terminal-r1/actual-wrapper-exit.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "transport/mirror-terminal-r1/hash-pid.txt",
+      "bytes": 6,
+      "sha256": "0aca4e8a4669146bd2eca7b71d5aebd3a8637b10a26f21cfbc9ccf4106433da1"
+    },
+    {
+      "path": "transport/mirror-terminal-r1/hash.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "transport/mirror-terminal-r1/hash.stdout.log",
+      "bytes": 5997,
+      "sha256": "2c6267737e898e5410dd3ee8aa115010782db64223e6d3e891b376b1acba8387"
+    },
+    {
+      "path": "transport/mirror-terminal-r1/input-wrapper.sh",
+      "bytes": 2189,
+      "sha256": "c85c4cfaec1ef4acacbd0546432ae519d1cc1829896b335f6fedcb82b3cc4fe0"
+    },
+    {
+      "path": "transport/mirror-terminal-r1/post-wait-hash.txt",
+      "bytes": 6,
+      "sha256": "2ed27c1421e6928dbe13dbfdb5c59e1045b30341fe7ebe05700006bc5ac572c0"
+    },
+    {
+      "path": "transport/mirror-terminal-r1/post-wait-local-tar.txt",
+      "bytes": 6,
+      "sha256": "2ed27c1421e6928dbe13dbfdb5c59e1045b30341fe7ebe05700006bc5ac572c0"
+    },
+    {
+      "path": "transport/mirror-terminal-r1/post-wait-ssh.txt",
+      "bytes": 6,
+      "sha256": "2ed27c1421e6928dbe13dbfdb5c59e1045b30341fe7ebe05700006bc5ac572c0"
+    },
+    {
+      "path": "transport/mirror-terminal-r1/ssh-pid.txt",
+      "bytes": 6,
+      "sha256": "4967f227641a7c2bc0c3d6abd469b8c530c5a31b934fb8d22f2aab12a69b5d80"
+    },
+    {
+      "path": "transport/mirror-terminal-r1/ssh.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "transport/mirror-terminal-r1/tar-pid.txt",
+      "bytes": 6,
+      "sha256": "54fd329b9e0286096f84711c471fbc78b32c4fd5d4550e6862c9a36b7b9f463b"
+    },
+    {
+      "path": "transport/mirror-terminal-r1/tar.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "transport/mirror-terminal-r1/tar.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "transport/mirror-terminal-r1/wrapper-pid.txt",
+      "bytes": 6,
+      "sha256": "5e421ee8407fe839b785e7ae822725802bea4b5652a9736e4f1aa926686aca3c"
+    },
+    {
+      "path": "proof-r1/transport/last-receipt-r1/actual-ssh-outer-exit.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "proof-r1/transport/last-receipt-r1/actual-wrapper-exit.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "proof-r1/transport/last-receipt-r1/input-wrapper.sh",
+      "bytes": 2027,
+      "sha256": "11f62481e9872ac99618574c8efc90541396d0d9cb053b600402d46837bccffc"
+    },
+    {
+      "path": "proof-r1/transport/last-receipt-r1/known-mac-process-state.tsv",
+      "bytes": 107,
+      "sha256": "40daaccbf06219e871fa098c9516bb95cbf0ef2d66a9545502fe2dd289222289"
+    },
+    {
+      "path": "proof-r1/transport/last-receipt-r1/post-wait-ssh.txt",
+      "bytes": 6,
+      "sha256": "2ed27c1421e6928dbe13dbfdb5c59e1045b30341fe7ebe05700006bc5ac572c0"
+    },
+    {
+      "path": "proof-r1/transport/last-receipt-r1/remote-receipts.txt",
+      "bytes": 531,
+      "sha256": "a0fa44e0dc80b3c82513cd88dc53f7f320fd88d1c2512572b969ed9c9be84163"
+    },
+    {
+      "path": "proof-r1/transport/last-receipt-r1/ssh-pid.txt",
+      "bytes": 6,
+      "sha256": "abebbfc909696e36cba846308077d857e767f8d9492e587db98a26a9489a2d05"
+    },
+    {
+      "path": "proof-r1/transport/last-receipt-r1/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "proof-r1/transport/last-receipt-r1/wrapper-pid.txt",
+      "bytes": 6,
+      "sha256": "bb81eb668d3903703c03133f1d4d5820642d1dcef4c187229af4885d20ea8d51"
+    }
+  ],
+  "actualOutsideToolBodies": {
+    "terminal-r1/attempt-r1/actual-child-exit.txt": "0",
+    "terminal-r1/attempt-r1/actual-wrapper-exit.txt": "0",
+    "terminal-r1/attempt-r1/post-wait-child.txt": "false",
+    "proof-r1/transport/closure-r1/actual-ssh-outer-exit.txt": "0",
+    "proof-r1/transport/closure-r1/actual-upload-ssh-exit.txt": "0",
+    "proof-r1/transport/closure-r1/actual-upload-tar-exit.txt": "0",
+    "proof-r1/transport/closure-r1/actual-wrapper-exit.txt": "0",
+    "proof-r1/transport/closure-r1/post-wait-ssh.txt": "false",
+    "transport/mirror-terminal-r1/actual-hash-exit.txt": "0",
+    "transport/mirror-terminal-r1/actual-local-tar-exit.txt": "0",
+    "transport/mirror-terminal-r1/actual-ssh-outer-exit.txt": "0",
+    "transport/mirror-terminal-r1/actual-wrapper-exit.txt": "0",
+    "transport/mirror-terminal-r1/post-wait-hash.txt": "false",
+    "transport/mirror-terminal-r1/post-wait-local-tar.txt": "false",
+    "transport/mirror-terminal-r1/post-wait-ssh.txt": "false",
+    "proof-r1/transport/last-receipt-r1/actual-ssh-outer-exit.txt": "0",
+    "proof-r1/transport/last-receipt-r1/actual-wrapper-exit.txt": "0",
+    "proof-r1/transport/last-receipt-r1/post-wait-ssh.txt": "false"
+  },
+  "finalRemoteOriginalBodies": {
+    "utc": "2026-10-10T21:05:00.313332+00:00",
+    "observerPID": 1707015,
+    "originalBodies": [
+      {
+        "path": "terminal-r1/attempt-r1/actual-child-exit.txt",
+        "body": "0\n",
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      {
+        "path": "terminal-r1/attempt-r1/actual-wrapper-exit.txt",
+        "body": "0\n",
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      {
+        "path": "terminal-r1/attempt-r1/post-wait-child.txt",
+        "body": "false\n",
+        "sha256": "2ed27c1421e6928dbe13dbfdb5c59e1045b30341fe7ebe05700006bc5ac572c0"
+      },
+      {
+        "path": "mirror-terminal-r1/actual-tar-exit.txt",
+        "body": "0\n",
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      {
+        "path": "mirror-terminal-r1/actual-wrapper-exit.txt",
+        "body": "0\n",
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      {
+        "path": "mirror-terminal-r1/post-wait-tar.txt",
+        "body": "false\n",
+        "sha256": "2ed27c1421e6928dbe13dbfdb5c59e1045b30341fe7ebe05700006bc5ac572c0"
+      }
+    ],
+    "actualKnownProcessState": [
+      {
+        "pid": 1703565,
+        "exists": false
+      },
+      {
+        "pid": 1703562,
+        "exists": false
+      },
+      {
+        "pid": 1703902,
+        "exists": false
+      },
+      {
+        "pid": 1703918,
+        "exists": false
+      },
+      {
+        "pid": 1699609,
+        "exists": false
+      },
+      {
+        "pid": 1704116,
+        "exists": false
+      },
+      {
+        "pid": 1706138,
+        "exists": false
+      }
+    ]
+  },
+  "actualRootObserverWait": {
+    "utc": "2026-10-10T21:05:00.412134+00:00",
+    "observerMacPID": 24160,
+    "sshPID": 24163,
+    "exitCode": 0,
+    "postWaitPresent": false
+  },
+  "actualRuntime": {
+    "runnerPID": 1686979,
+    "chromePID": 1687054,
+    "childSSHWrapperExit": [
+      0,
+      0,
+      0
+    ],
+    "rootChecks": [
+      178,
+      178
+    ],
+    "pinChecks": [
+      101,
+      101
+    ],
+    "originalDBCountEachRoute": 1,
+    "typedInventoryBytes": 1857485,
+    "typedInventorySHA256": "595e4cc33bc3a1286cfc5da456c94b213fec80476f09b5a15d13b7e4d5571b68",
+    "originalInventoryRestoredEachRoute": true,
+    "knownRuntimeChildrenAbsent": 16,
+    "childrenWithEarlierCapturedAncestry": 14,
+    "lastPreterminationTreeChildCount": 12,
+    "settlementOnlyChildren": [
+      1687084,
+      1689322
+    ],
+    "ports8777And9237Closed": true
+  },
+  "wholeDeliveryClosed": false,
+  "scope": "Complete source7a current public root+pin original raw, all retained bytes and actual main/finite/final producer/mirror/tool/self closure consumed. Every original failure remains immutable.14 own pretermination+2 late-only ancestry and reachable borrowed67/48/30/30/softwareGL scope remain explicit. Full programme/original/human/representative GPU/scale and unobserved overlapping/unavailable failures remain open; whole reviews still required."
+}

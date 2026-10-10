@@ -1,0 +1,22 @@
+{
+  "utc": "2026-10-10T20:16:12.731547+00:00",
+  "authorized": true,
+  "sourceCommit": "7a0bbac668ece30416cceefb97997c0de17d1376",
+  "sourceTree": "6c942d435e5a093d4a471182d5030ad1ecf594f6",
+  "readySHA256": "8547297526a21a602ee783e7e8d02579b700782d3cd3afe16aaed575b8790669",
+  "hostingCommit": "0f6c585b98fb786d8966c28b6aaab022c3064459",
+  "pagesStatus": "built",
+  "pagesBuiltUTC": "2026-10-10T19:50:47Z",
+  "routes": {
+    "root": "https://patrick-fu.github.io/coaster-tycoon-3d/?showcase=classic",
+    "pin": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/classic-7a0bbac/?showcase=classic"
+  },
+  "driverSHA256": "dc7edf9d8df8c56206120e2f073ce39de2a32c71abe073ab0f3cd5b245c5925d",
+  "contractSHA256": "8ff8dfff8a0552d6a46390ef7114e1bea15d7a9f23839e51df047b1a4e9a190b",
+  "nativeAcceptanceSHA256": "e2fcbc8e31386c5acb425318891e535cac421f1689237a4dbdc692387023be34",
+  "preparedReceipt": "root-fixed-public-preparation.json",
+  "HTTPAcceptanceSHA256": "dd7093c5cbd70b60ea16b18bae591c2d762634259ff311222d621f9bd08e56ae",
+  "allowedRuntimePrefix": "interactions/fix-r1/public-fixed-r1/runtime-r1",
+  "soleOwner": "/root/detailed_stalls_browser_sol_max",
+  "scope": "Exactly one current public root+frozen-pin run after fresh actual source/input/known-owner/profile/port preflight. Actual native inputs/genuine fixtures/full typed backup+restore, root-only representative repairs and common player/save/resources. No source/hosting writes, paid/history/fault replay, direct camera/control setters or invented occupants. Retain actual result/raw/full sources/whole saves/typed/resources/PNGs/tool waits and failed attempts."
+}

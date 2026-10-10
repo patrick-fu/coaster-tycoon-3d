@@ -1,0 +1,12 @@
+{
+  "utc": "2026-10-10T20:32:16.779511+00:00",
+  "actualPNG": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/interactions/fix-r1/public-fixed-r1/early-r1/root/overview-1920x1080.png",
+  "actualPNGBytes": 1499448,
+  "sha256": "ca4687dbb8eebbd601ac20f9b7c64eb2ab35bb7f4d0ea3670469869fb59ea03d",
+  "sourceCommit": "7a0bbac668ece30416cceefb97997c0de17d1376",
+  "previousActualSource93SHA256": "e549df946a1c5897121b6734ddd7c6905e42371425e863bcb1527a68c41aba21",
+  "previousPreservation": "Committed documentation checkpointcfe and immutable source93 public proof remain unchanged.",
+  "humanAcceptance": false,
+  "fullPublicRawAcceptedAtCopy": false,
+  "scope": "Byte-identical actual Grok source7a public capture; Root viewed original PNG before copying. No image edit/render or app run on Mac."
+}

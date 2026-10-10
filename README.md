@@ -8,17 +8,21 @@ Project code is licensed under [MIT](LICENSE). The implementation and required
 game resources are independent; see the [source strategy decision](docs/adr/0001-independent-mit-implementation.md).
 
 Try the [current Classic showcase](https://patrick-fu.github.io/coaster-tycoon-3d/?showcase=classic)
-in desktop Chrome or Edge. This branch composes a four-ride starter park: a
-ground-level wooden coaster, steel lift/drop circuit, single four-seat Log Flume
-and sixteen-seat Carousel, with detailed Burger/Soft-drink stalls, restrooms,
-connected paths and gardens. Its local and actual public player checks pass at
-[the frozen preview](https://patrick-fu.github.io/coaster-tycoon-3d/previews/classic-93b5e23/?showcase=classic).
-Two interaction defects were subsequently reproduced: a held stationary pointer
-can disable responsive Overview after camera inertia, and New can retain the old
-ride selection. The source repair resets construction after File import, normalizes the received ride/piece, and keeps replacement controls disabled until the new park view is applied. The final Grok build and actual affected native run pass; complete native raw/tool verification passes; a revised public preview is pending in
-[the live record](PROGRESS.md). The showcase uses
-a separate save slot, preserving your existing park at the
-[regular preview](https://patrick-fu.github.io/coaster-tycoon-3d/).
+in desktop Chrome or Edge, or use its
+[fixed preview](https://patrick-fu.github.io/coaster-tycoon-3d/previews/classic-7a0bbac/?showcase=classic).
+Copper Meadows combines a ground-level wooden coaster, steel lift/drop circuit,
+a four-seat Log Flume and sixteen-seat Carousel with detailed Burger/Soft-drink
+stalls, restrooms, connected paths and gardens. A separate showcase save slot
+preserves your park at the [regular preview](https://patrick-fu.github.io/coaster-tycoon-3d/).
+
+Affected native and public checks, complete original traces, storage recovery and
+resource/tool closure pass. Final cumulative review is recorded in [PROGRESS.md](PROGRESS.md).
+A creation/tool-switch overlap remains an identified risk for the next repair;
+normal-path checks do not cover it. Earlier source93 defects and all failed attempts
+remain in [the verification history](docs/verification/classic-showcase/README.md).
+The preview still requires human style/play, original-game and representative
+hardware/scale qualification.
+
 Build and manage Copper Meadows with mouse/keyboard;
 drag to orbit, right-drag to pan and scroll to zoom. Space pauses the park.
 Saves remain in this browser. Export/Import provides file backups;
@@ -26,7 +30,7 @@ cross-runtime default-rule portability is not yet qualified.
 An earlier local park remains intact; choose **New park** after saving/exporting
 it to start this branch's four-ride layout.
 
-![Actual published Classic93 park with wood, steel, Log Flume and Carousel](docs/verification/classic-showcase/overview.png)
+![Actual published source7a Classic park with wood, steel, Log Flume and Carousel](docs/verification/classic-showcase/overview.png)
 
 [Current finite checks](docs/verification/classic-showcase/README.md) distinguish
 actual local/public operation and player controls from unresolved interaction, human and hardware acceptance.
@@ -94,7 +98,7 @@ The current source uses save13/content6/protocol6 and validates historical v12 b
 migration. [Resource provenance](ui/models/detailed-stalls/README.md) retains
 editable source and exact model identity. Integrated browser/public checks and
 two whole Design/Drift rounds passed for the [d232 frozen preview](https://patrick-fu.github.io/coaster-tycoon-3d/previews/detailed-stalls-d2320d5/?showcase=classic),
-merged in PR76. The four-family composition has its own pending public gate.
+merged in PR76. The four-family composition passes its actual affected public run; its complete public retention/tool verification passes, with final cumulative acceptance pending.
 
 The [earlier art checkpoint](https://patrick-fu.github.io/coaster-tycoon-3d/previews/classic-a7d6451/?showcase=classic)
 has procedural materials and composed models, three steel-coaster
