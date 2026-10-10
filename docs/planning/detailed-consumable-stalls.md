@@ -1,14 +1,15 @@
 # Detailed consumable stalls at authored scale
 
 Status: Detailed models and normal public paths are qualified at sourcee915,
-ready2d51 and hosting6f4. Prepared source27b82604486189ef68983a1d76884c5f7df81a24
-on draft PR76 adds scoped cleanup for a failed embedded-image URL; canonical
-Grok ready1395 passes compilation and13 module controls. Actual failed-URL
-baseline/fixed-native and affected new public qualification remain pending.
-Finite75/main1373 remain open/unchanged; TWO whole cumulative rounds of each
-review lens still await the final repair evidence. See [PROGRESS.md](../../PROGRESS.md)
-for live ownership and [qualification](../verification/detailed-stalls/README.md)
-for exact proof. Original/human/representative GPU/full programme remain open.
+ready2d51 and hosting6f4. Prepared final source d2320d5e324d548fdba3b30f7d4e0a2d11235466
+on draft PR76 repairs failed embedded-image URL ownership and explicit stored-undefined
+presence. Canonical Grok r6 readybc4130df passes compilation and13 module controls;
+792 source and162 shipping bytes correspond. Actual fixed-native final identity,
+explicit-undefined storage and affected new public qualification remain pending.
+Finite75/main1373 remain open/unchanged; TWO whole cumulative rounds of each review
+lens still await final repair evidence. See [PROGRESS.md](../../PROGRESS.md) for live
+ownership and [qualification](../verification/detailed-stalls/README.md) for exact proof.
+Original/human/representative GPU/full programme remain open.
 
 ## Player outcome and boundary
 
