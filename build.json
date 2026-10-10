@@ -1,13 +1,13 @@
 {
-  "sourceCommit": "93b5e2397c9dfd61f2ceb6df1f41d17361453558",
-  "sourceTree": "6f6cbf0bb87a21c0d962591765e1d3c6204317a2",
+  "sourceCommit": "7a0bbac668ece30416cceefb97997c0de17d1376",
+  "sourceTree": "6c942d435e5a093d4a471182d5030ad1ecf594f6",
   "sourcePullRequest": "https://github.com/patrick-fu/coaster-tycoon-3d/pull/78",
   "sourceIssue": "https://github.com/patrick-fu/coaster-tycoon-3d/issues/77",
   "saveVersion": 13,
   "contentVersion": 6,
   "protocolVersion": 6,
   "verification": "https://github.com/patrick-fu/coaster-tycoon-3d/blob/p/patrick/feature/classic-four-family-showcase/PROGRESS.md",
-  "buildReadySHA256": "0423eebe4dfe4c93a06340fc8cccbc90d547fcd59cc8ae3e7d94ed5c89e6cc89",
-  "scope": "Playable Classic park with four independent implemented ride families, detailed Burger/Soft-drink stalls, restrooms and real connected routes. Save13/content6/protocol6 unchanged. Public qualification and final cumulative reviews pending; full catalogue/management, original fidelity, human style/play and representative GPU/scale remain open.",
+  "buildReadySHA256": "8547297526a21a602ee783e7e8d02579b700782d3cd3afe16aaed575b8790669",
+  "scope": "Playable Classic four-family park with authored stalls and real connected routes. Source/static/build and affected native player/save/typed-storage checks are accepted; actual public qualification and final cumulative reviews are pending. Full catalogue/management, original fidelity, human style/play and representative GPU/scale remain open.",
   "buildHost": "Grok Bot"
 }
