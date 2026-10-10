@@ -1,10 +1,13 @@
 # Detailed consumable stalls at authored scale
 
-Status: Root accepts the bounded design direction after a read-only Sol Max
-source investigation. Production is not implemented; current public runtime
-remains save12/content5/protocol5. The representative Burger source is undergoing
-AGY repair after actual Grok export and measured geometry failures. Human style,
-original agreement and representative GPU/scale are separate gates.
+Status: Implemented in the unmerged source checkpoint689296a on draft PR76.
+The kernel, integrated remote build, isolated controls and final independent
+Burger/Soft-drink source, masters and GLBs are qualified. Actual detailed browser
+acceptance is running under the separately frozen Chrome receiver0434; public
+runtime remains save12/content5/protocol5. Required remaining checks and exact
+execution history are in [the live progress record](../../PROGRESS.md) and
+[qualification evidence](../verification/detailed-stalls/README.md). Human style,
+original agreement and representative GPU/scale remain separate open gates.
 
 ## Player outcome and boundary
 

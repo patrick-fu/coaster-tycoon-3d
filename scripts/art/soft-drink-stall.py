@@ -91,81 +91,69 @@ def _authored_mat(materials, key, name, color, roughness=0.6, metalness=0.0):
 
 
 def _copy_and_tint_material(mat, tint_color, factor=0.80, name_suffix="_tinted"):
-    """Create an independent copy of a material and tint its Base Color, preserving normal/roughness maps."""
-    if not mat:
-        return mat
+    """Bake the existing linear MIX into a portable sRGB albedo; preserve native sources."""
+    import numpy as np
+
     mat_copy = mat.copy()
     mat_copy.name = f"{mat.name}{name_suffix}"
-    if not mat_copy.use_nodes or not mat_copy.node_tree:
-        return mat_copy
+    nodes, links = mat_copy.node_tree.nodes, mat_copy.node_tree.links
+    bsdf = next(node for node in nodes if node.type == 'BSDF_PRINCIPLED')
+    source_link = next(link for link in links if link.to_socket == bsdf.inputs["Base Color"])
+    source_node = source_link.from_node
+    source = source_node.image
+    if source.source != 'FILE' or source.is_float or source.colorspace_settings.name != 'sRGB':
+        raise ValueError(f"Tint requires the qualified byte/sRGB source: {source.name}")
+    if min(source.size) <= 0 or not source.filepath:
+        raise ValueError(f"Tint source dimensions or identity are invalid: {source.name}")
+    source.use_fake_user = True
 
-    nodes = mat_copy.node_tree.nodes
-    links = mat_copy.node_tree.links
-
-    bsdf = None
-    for n in nodes:
-        if n.type == 'BSDF_PRINCIPLED':
-            bsdf = n
-            break
-    if not bsdf or "Base Color" not in bsdf.inputs:
-        return mat_copy
-
-    from_socket = None
-    for link in list(links):
-        if link.to_socket == bsdf.inputs["Base Color"]:
-            from_socket = link.from_socket
-            links.remove(link)
-            break
-
-    if from_socket:
-        mix_node = None
-        try:
-            m = nodes.new("ShaderNodeMix")
-            m.data_type = 'RGBA'
-            m.blend_type = 'MIX'
-            if "Factor" in m.inputs:
-                m.inputs["Factor"].default_value = factor
-            elif len(m.inputs) > 0:
-                m.inputs[0].default_value = factor
-
-            sock_a = m.inputs.get("A")
-            sock_b = m.inputs.get("B")
-            if sock_a is not None and sock_b is not None:
-                links.new(from_socket, sock_a)
-                sock_b.default_value = (*tint_color[:3], 1.0)
-            else:
-                color_in = [inp for inp in m.inputs if inp.type == 'RGBA']
-                if len(color_in) >= 2:
-                    links.new(from_socket, color_in[0])
-                    color_in[1].default_value = (*tint_color[:3], 1.0)
-
-            out_sock = m.outputs.get("Result")
-            if out_sock is None and len(m.outputs) > 2:
-                out_sock = m.outputs[2]
-            elif out_sock is None and len(m.outputs) > 0:
-                out_sock = m.outputs[0]
-            if out_sock:
-                links.new(out_sock, bsdf.inputs["Base Color"])
-            mix_node = m
-        except Exception:
-            mix_node = None
-
-        if mix_node is None:
-            try:
-                m = nodes.new("ShaderNodeMixRGB")
-                m.blend_type = 'MIX'
-                if "Fac" in m.inputs:
-                    m.inputs["Fac"].default_value = factor
-                links.new(from_socket, m.inputs["Color1"])
-                m.inputs["Color2"].default_value = (*tint_color[:3], 1.0)
-                links.new(m.outputs["Color"], bsdf.inputs["Base Color"])
-                mix_node = m
-            except Exception:
-                bsdf.inputs["Base Color"].default_value = (*tint_color[:3], 1.0)
-    else:
-        bsdf.inputs["Base Color"].default_value = (*tint_color[:3], 1.0)
-
+    # Match the existing export's resize-before-MIX order without changing native source pixels.
+    sample = source.copy()
+    try:
+        sample.scale(512, 512)
+        sample_pixel_count = len(sample.pixels)
+        pixels = np.empty(512 * 512 * 4, dtype=np.float32)
+        sample.pixels.foreach_get(pixels)
+    finally:
+        bpy.data.images.remove(sample)
+    rgba = pixels.reshape(-1, 4)
+    if not np.isfinite(rgba).all():
+        raise ValueError(f"Non-finite tint source pixels: {source.name}")
+    encoded = rgba[:, :3].copy()
+    linear = np.where(encoded <= 0.04045, encoded / 12.92,
+                      ((encoded + 0.055) / 1.055) ** 2.4)
+    mixed = (1.0 - factor) * linear + factor * np.asarray(tint_color[:3], dtype=np.float32)
+    rgba[:, :3] = np.where(mixed <= 0.0031308, 12.92 * mixed,
+                          1.055 * mixed ** (1.0 / 2.4) - 0.055)
+    rgba[:, 3] = (1.0 - factor) * rgba[:, 3] + factor
+    if not np.isfinite(rgba).all() or np.any(rgba < 0.0) or np.any(rgba > 1.0):
+        raise ValueError(f"Invalid derived tint pixels: {source.name}")
+    image = bpy.data.images.new(source.name.rsplit('.', 1)[0] + name_suffix,
+                                width=512, height=512, alpha=True, float_buffer=False)
+    image.colorspace_settings.name = 'sRGB'
+    image.pixels.foreach_set(np.ascontiguousarray(rgba.reshape(-1)))
+    image.update()
+    image['coaster_derivation'] = 'srgb-decode-linear-mix-srgb-encode-v1'
+    image['source_image'] = source.name
+    image['source_filepath'] = source.filepath
+    image['tint_color'] = list(tint_color[:3])
+    image['mix_factor'] = factor
+    image['color_space'] = 'sRGB'
+    image['sample_dimensions'] = [512, 512]
+    image['source_channels'] = source.channels
+    image['sample_pixel_count'] = sample_pixel_count
+    image.pack()
+    if not image.packed_file or not image.packed_file.data or tuple(image.size) != (512, 512):
+        raise ValueError(f"Derived tint was not packed: {image.name}")
+    source_node.label = 'Native source reference'
+    links.remove(source_link)
+    derived_node = nodes.new('ShaderNodeTexImage')
+    derived_node.image = image
+    for link in source_node.inputs['Vector'].links:
+        links.new(link.from_socket, derived_node.inputs['Vector'])
+    links.new(derived_node.outputs['Color'], bsdf.inputs['Base Color'])
     return mat_copy
+
 
 
 def _link_and_assign(mesh, name, mat, parent=None, smooth=False, authored_edge_finish=False):
@@ -1455,7 +1443,27 @@ def build(materials):
             "default": "open",
         },
         "restraints": [],
-        "notes": "Independent single-frontage detailed stall with unit anchors and exclusive open/closed shutter states. Authored dimensions are design intent; actual exported bounds and resource measurements are recorded in the source manifest.",
+        "derivedTextures": [
+            {
+                "material": "boards_cream",
+                "sourceTexture": "WoodFloor043_1K-PNG_Color.png",
+                "derivedTexture": "WoodFloor043_1K-PNG_Color_cream",
+                "tint": [0.96, 0.93, 0.84],
+                "factor": 0.82,
+                "role": "Wall lap-board siding cream albedo",
+            },
+            {
+                "material": "roof_teal",
+                "sourceTexture": "RoofingTiles013A_1K-PNG_Color.png",
+                "derivedTexture": "RoofingTiles013A_1K-PNG_Color_teal",
+                "tint": [0.24, 0.54, 0.52],
+                "factor": 0.78,
+                "role": "Broad pavilion roof teal albedo",
+            },
+        ],
+        "notes": (
+            'Independent single-frontage detailed stall with unit anchors and exclusive open/closed shutter states. Authored dimensions are design intent; actual exported bounds and resource measurements are recorded in the source manifest.'
+        ),
         "geometryIntent": (
             "Theme-park consumable beverage stall serving exclusively Soft-drink products. "
             "Provides a distinct broad low pavilion silhouette contrasting with the Burger hipped roof, "

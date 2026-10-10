@@ -172,5 +172,118 @@
         }
       ]
     }
-  ]
+  ],
+  "derivedAlbedos": [
+    {
+      "contentVariant": "independent.detailed-burger-stand",
+      "glbSHA256": "9b646bdd004390fd8c240091d0e85df6bec3def0ba33dfa2826aa4160527ebfe",
+      "editableMasterSHA256": "06803db208873608c6b35d8a8c9b37fe6426aba49e09779c218554d496a8fb4d",
+      "textures": [
+        {
+          "image": "RoofingTiles013A_1K-PNG_Color_terracotta",
+          "sourceFile": "RoofingTiles013A_1K-PNG_Color.png",
+          "sourceSha256": "ae2037e4c4934b42b60c799b2755cb73c164a883410f89e22ac54ed5ecb4d1de",
+          "algorithm": "srgb-decode-linear-mix-srgb-encode-v1",
+          "linearTint": [
+            0.78,
+            0.24,
+            0.16
+          ],
+          "mixFactor": 0.8,
+          "sampleDimensions": [
+            512,
+            512
+          ],
+          "sourceChannels": 4,
+          "samplePixelCount": 1048576,
+          "packedMasterSha256": "732a439243a71431ace68da66bbd0f40954043b2fb01b4a6496d82fb7a88a92b",
+          "packedMasterBytes": 73962,
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "image": "WoodFloor043_1K-PNG_Color_cream",
+          "sourceFile": "WoodFloor043_1K-PNG_Color.png",
+          "sourceSha256": "55a7c25c191c8eb501d87a8872438dcfba307b3a043fee00ad9e89f0c413d684",
+          "algorithm": "srgb-decode-linear-mix-srgb-encode-v1",
+          "linearTint": [
+            0.96,
+            0.92,
+            0.82
+          ],
+          "mixFactor": 0.82,
+          "sampleDimensions": [
+            512,
+            512
+          ],
+          "sourceChannels": 4,
+          "samplePixelCount": 1048576,
+          "packedMasterSha256": "173f87f4d7f1c4448045b4edbbdeec9b19def32ea9eec2a6dc447e8b488bc4e2",
+          "packedMasterBytes": 198208,
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        }
+      ]
+    },
+    {
+      "contentVariant": "independent.detailed-soft-drink-stand",
+      "glbSHA256": "6f4cc5cec0d49ab3c9bc9601906d7a705f6a253d39e22ee2dc28db7f784b5066",
+      "editableMasterSHA256": "4a7dcb84c04e00c5b1d37133ccf2b2a0448b6aba9995f8db96b22773159b90c0",
+      "textures": [
+        {
+          "image": "RoofingTiles013A_1K-PNG_Color_teal",
+          "sourceFile": "RoofingTiles013A_1K-PNG_Color.png",
+          "sourceSha256": "ae2037e4c4934b42b60c799b2755cb73c164a883410f89e22ac54ed5ecb4d1de",
+          "algorithm": "srgb-decode-linear-mix-srgb-encode-v1",
+          "linearTint": [
+            0.24,
+            0.54,
+            0.52
+          ],
+          "mixFactor": 0.78,
+          "sampleDimensions": [
+            512,
+            512
+          ],
+          "sourceChannels": 4,
+          "samplePixelCount": 1048576,
+          "packedMasterSha256": "2a1344690cbe4f2f6b53fe5b5041f875d76c48997981aebb0d220d37a8fb9a64",
+          "packedMasterBytes": 72247,
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "image": "WoodFloor043_1K-PNG_Color_cream",
+          "sourceFile": "WoodFloor043_1K-PNG_Color.png",
+          "sourceSha256": "55a7c25c191c8eb501d87a8872438dcfba307b3a043fee00ad9e89f0c413d684",
+          "algorithm": "srgb-decode-linear-mix-srgb-encode-v1",
+          "linearTint": [
+            0.96,
+            0.93,
+            0.84
+          ],
+          "mixFactor": 0.82,
+          "sampleDimensions": [
+            512,
+            512
+          ],
+          "sourceChannels": 4,
+          "samplePixelCount": 1048576,
+          "packedMasterSha256": "2696d85571dbab2ef9d20003ba8292aa267c3f4db33fedc3593ca2ba9c6fb405",
+          "packedMasterBytes": 177831,
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        }
+      ]
+    }
+  ],
+  "derivation": "Resize a copy of the original byte/sRGB source to512, decode sRGB, apply the independently authored linear MIX, encode sRGB and pack once. Seventeen original source maps are preserved in each master; two derived albedos per model are embedded in the fifteen-image runtime GLB."
 }

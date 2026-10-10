@@ -1,5 +1,5 @@
 {
-  "scope": "Exact independently authored detailed Burger and Soft-drink resources; CPU candidate/export qualification, integrated/browser/public/GPU/original/human acceptance recorded separately",
+  "scope": "Exact independently authored detailed Burger and Soft-drink resources; source, geometry, GLB, editable-master and material-color parity qualified; actual new browser/public/GPU/original/human acceptance recorded separately",
   "mapping": {
     "tileMetres": 4,
     "glTFUp": "+Y",
@@ -17,12 +17,23 @@
   },
   "exporter": {
     "path": "scripts/art/export-detailed-stall.py",
-    "sha256": "ef9b63349dc925aaf04c3ad2b47d2a1f85567d1cdd2b9ba766daffd0b7ce4328",
+    "sha256": "34a11bbdfce6c01991ea39035d8e9404d00f0221e247a6786acd69b461471db6",
+    "exportInputSha256": "34a11bbdfce6c01991ea39035d8e9404d00f0221e247a6786acd69b461471db6",
+    "retainedExportInput": "/Volumes/WD/code/workspaces/coaster-detailed-stall-materials/root-candidate-r4/export-detailed-stall.py",
     "options": [
       "--batch-static",
       "--render"
     ],
-    "note": "Repository source metadata notes/trailing whitespace are normalized from retained export input; geometry-producing source AST is unchanged."
+    "note": "Geometry remains exact; derived portable albedos preserve original linear MIX palette and native CC0 packed maps.",
+    "previousCandidate": {
+      "path": "scripts/art/export-detailed-stall.py",
+      "sha256": "ef9b63349dc925aaf04c3ad2b47d2a1f85567d1cdd2b9ba766daffd0b7ce4328",
+      "options": [
+        "--batch-static",
+        "--render"
+      ],
+      "note": "Repository source metadata notes/trailing whitespace are normalized from retained export input; geometry-producing source AST is unchanged."
+    }
   },
   "assets": [
     {
@@ -30,21 +41,21 @@
       "contentVariant": "independent.detailed-burger-stand",
       "resource": {
         "path": "ui/models/detailed-stalls/burger.glb",
-        "sha256": "791873b3e107d09b8c9dee437b6ec67570493674fd283bdfaf18e5c4c738bf31",
-        "bytes": 8983132
+        "sha256": "9b646bdd004390fd8c240091d0e85df6bec3def0ba33dfa2826aa4160527ebfe",
+        "bytes": 8583376
       },
       "source": {
         "path": "scripts/art/burger-stall.py",
-        "sha256": "f3657aec2605dbb424aa4247fd1b0387f690ff1cdc51246425da5d536d44ef7d",
-        "exportInputSha256": "04b1a0d3bc1d922e37a2feaaa3a7ca8a568f6f0b90faa4273d9934f20ff6b881",
-        "retainedExportInput": "/Volumes/WD/code/workspaces/coaster-consumable-art/evidence/author-r8/sources/burger-stall.py",
-        "nonGeometryNormalizationOnly": true
+        "sha256": "1ace1d7083fcef3579e642f010d21e7bc6d825e033d5e1cd1dfe3fabb61a8b5c",
+        "exportInputSha256": "1ace1d7083fcef3579e642f010d21e7bc6d825e033d5e1cd1dfe3fabb61a8b5c",
+        "retainedExportInput": "/Volumes/WD/code/workspaces/coaster-detailed-stall-materials/root-candidate-r4/burger-stall.py",
+        "geometryUnchangedFromPreviousCandidate": true
       },
       "editableMaster": {
         "file": "burger-stall.blend",
-        "sha256": "b4cbf8c74569c610ce3047f0b71409830e57100d9f2fbe757580dfdc5597c883",
-        "bytes": 25988180,
-        "retainedPath": "/Volumes/WD/code/workspaces/coaster-consumable-art/evidence/export-r8/burger-stall.blend"
+        "sha256": "06803db208873608c6b35d8a8c9b37fe6426aba49e09779c218554d496a8fb4d",
+        "bytes": 26262606,
+        "retainedPath": "/Volumes/WD/code/workspaces/coaster-detailed-stall-materials/evidence/export-material-r4/export-burger/burger-stall.blend"
       },
       "blender": "4.3.2",
       "geometry": {
@@ -236,11 +247,11 @@
           },
           {
             "index": 10,
-            "name": "WoodFloor043_1K-PNG_Color",
+            "name": "WoodFloor043_1K-PNG_Color_cream",
             "width": 512,
             "height": 512,
-            "bytes": 394292,
-            "sha256": "5b9fcfec7d4c44aa7cf898418f38e100f4c6ae7988507e5823a7c5002fa1f78a"
+            "bytes": 198208,
+            "sha256": "173f87f4d7f1c4448045b4edbbdeec9b19def32ea9eec2a6dc447e8b488bc4e2"
           },
           {
             "index": 11,
@@ -260,11 +271,11 @@
           },
           {
             "index": 13,
-            "name": "RoofingTiles013A_1K-PNG_Color",
+            "name": "RoofingTiles013A_1K-PNG_Color_terracotta",
             "width": 512,
             "height": 512,
-            "bytes": 277650,
-            "sha256": "da4e1f3f15fcc89f4ca2cbb53c6e6d082380e8d7f4eab7ef4764ecdd853c323f"
+            "bytes": 73962,
+            "sha256": "732a439243a71431ace68da66bbd0f40954043b2fb01b4a6496d82fb7a88a92b"
           },
           {
             "index": 14,
@@ -603,28 +614,103 @@
             512
           ]
         }
-      ]
+      ],
+      "previousCandidate": {
+        "resource": {
+          "path": "ui/models/detailed-stalls/burger.glb",
+          "sha256": "791873b3e107d09b8c9dee437b6ec67570493674fd283bdfaf18e5c4c738bf31",
+          "bytes": 8983132
+        },
+        "source": {
+          "path": "scripts/art/burger-stall.py",
+          "sha256": "f3657aec2605dbb424aa4247fd1b0387f690ff1cdc51246425da5d536d44ef7d",
+          "exportInputSha256": "04b1a0d3bc1d922e37a2feaaa3a7ca8a568f6f0b90faa4273d9934f20ff6b881",
+          "retainedExportInput": "/Volumes/WD/code/workspaces/coaster-consumable-art/evidence/author-r8/sources/burger-stall.py",
+          "nonGeometryNormalizationOnly": true
+        },
+        "editableMaster": {
+          "file": "burger-stall.blend",
+          "sha256": "b4cbf8c74569c610ce3047f0b71409830e57100d9f2fbe757580dfdc5597c883",
+          "bytes": 25988180,
+          "retainedPath": "/Volumes/WD/code/workspaces/coaster-consumable-art/evidence/export-r8/burger-stall.blend"
+        },
+        "status": "Source689 mechanical evidence retained; actual exported palette failed"
+      },
+      "derivedTextures": [
+        {
+          "image": "RoofingTiles013A_1K-PNG_Color_terracotta",
+          "sourceFile": "RoofingTiles013A_1K-PNG_Color.png",
+          "sourceSha256": "ae2037e4c4934b42b60c799b2755cb73c164a883410f89e22ac54ed5ecb4d1de",
+          "algorithm": "srgb-decode-linear-mix-srgb-encode-v1",
+          "linearTint": [
+            0.78,
+            0.24,
+            0.16
+          ],
+          "mixFactor": 0.8,
+          "sampleDimensions": [
+            512,
+            512
+          ],
+          "sourceChannels": 4,
+          "samplePixelCount": 1048576,
+          "packedMasterSha256": "732a439243a71431ace68da66bbd0f40954043b2fb01b4a6496d82fb7a88a92b",
+          "packedMasterBytes": 73962,
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "image": "WoodFloor043_1K-PNG_Color_cream",
+          "sourceFile": "WoodFloor043_1K-PNG_Color.png",
+          "sourceSha256": "55a7c25c191c8eb501d87a8872438dcfba307b3a043fee00ad9e89f0c413d684",
+          "algorithm": "srgb-decode-linear-mix-srgb-encode-v1",
+          "linearTint": [
+            0.96,
+            0.92,
+            0.82
+          ],
+          "mixFactor": 0.82,
+          "sampleDimensions": [
+            512,
+            512
+          ],
+          "sourceChannels": 4,
+          "samplePixelCount": 1048576,
+          "packedMasterSha256": "173f87f4d7f1c4448045b4edbbdeec9b19def32ea9eec2a6dc447e8b488bc4e2",
+          "packedMasterBytes": 198208,
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        }
+      ],
+      "exportEvidence": {
+        "path": "/Volumes/WD/code/workspaces/coaster-detailed-stall-materials/evidence/export-material-r4/export-burger/burger-stall.json",
+        "sha256": "1e5ef8ee851db546ac80f87e16665abccb5e4baad8849f717847fb88e88604f6"
+      }
     },
     {
       "kind": "soft-drink",
       "contentVariant": "independent.detailed-soft-drink-stand",
       "resource": {
         "path": "ui/models/detailed-stalls/soft-drink.glb",
-        "sha256": "b5f526da18b3aedcd689a5278347e64fddccd274859cf39239ae45f2748e0ea8",
-        "bytes": 8968532
+        "sha256": "6f4cc5cec0d49ab3c9bc9601906d7a705f6a253d39e22ee2dc28db7f784b5066",
+        "bytes": 8546680
       },
       "source": {
         "path": "scripts/art/soft-drink-stall.py",
-        "sha256": "48b13d539ac62a2bcae6e390c2d2441fb5990b3e97755e173e7ce1b9d732650a",
-        "exportInputSha256": "bcf509b884d5b9520cf7205f7767331855768f8f2ae2c5087921fbd2a7f7a211",
-        "retainedExportInput": "/Volumes/WD/code/workspaces/coaster-soft-drink-art/evidence/author-r4/sources/soft-drink-stall.py",
-        "nonGeometryNormalizationOnly": true
+        "sha256": "1183394caa7d22fade3d95f99bcdfa462c325a5280ac2dfb86b934b10d62017d",
+        "exportInputSha256": "1183394caa7d22fade3d95f99bcdfa462c325a5280ac2dfb86b934b10d62017d",
+        "retainedExportInput": "/Volumes/WD/code/workspaces/coaster-detailed-stall-materials/root-candidate-r4/soft-drink-stall.py",
+        "geometryUnchangedFromPreviousCandidate": true
       },
       "editableMaster": {
         "file": "soft-drink-stall.blend",
-        "sha256": "0c8f7484d0d6c4026b831523430b8ff817b94759db5830c1585359c3b86bfe92",
-        "bytes": 25983289,
-        "retainedPath": "/Volumes/WD/code/workspaces/coaster-soft-drink-art/evidence/export-r4/soft-drink-stall.blend"
+        "sha256": "4a7dcb84c04e00c5b1d37133ccf2b2a0448b6aba9995f8db96b22773159b90c0",
+        "bytes": 26234251,
+        "retainedPath": "/Volumes/WD/code/workspaces/coaster-detailed-stall-materials/evidence/export-material-r4/export-soft-drink/soft-drink-stall.blend"
       },
       "blender": "4.3.2",
       "geometry": {
@@ -814,11 +900,11 @@
           },
           {
             "index": 10,
-            "name": "WoodFloor043_1K-PNG_Color",
+            "name": "WoodFloor043_1K-PNG_Color_cream",
             "width": 512,
             "height": 512,
-            "bytes": 394292,
-            "sha256": "5b9fcfec7d4c44aa7cf898418f38e100f4c6ae7988507e5823a7c5002fa1f78a"
+            "bytes": 177831,
+            "sha256": "2696d85571dbab2ef9d20003ba8292aa267c3f4db33fedc3593ca2ba9c6fb405"
           },
           {
             "index": 11,
@@ -838,11 +924,11 @@
           },
           {
             "index": 13,
-            "name": "RoofingTiles013A_1K-PNG_Color",
+            "name": "RoofingTiles013A_1K-PNG_Color_teal",
             "width": 512,
             "height": 512,
-            "bytes": 277650,
-            "sha256": "da4e1f3f15fcc89f4ca2cbb53c6e6d082380e8d7f4eab7ef4764ecdd853c323f"
+            "bytes": 72247,
+            "sha256": "2a1344690cbe4f2f6b53fe5b5041f875d76c48997981aebb0d220d37a8fb9a64"
           },
           {
             "index": 14,
@@ -1181,7 +1267,82 @@
             512
           ]
         }
-      ]
+      ],
+      "previousCandidate": {
+        "resource": {
+          "path": "ui/models/detailed-stalls/soft-drink.glb",
+          "sha256": "b5f526da18b3aedcd689a5278347e64fddccd274859cf39239ae45f2748e0ea8",
+          "bytes": 8968532
+        },
+        "source": {
+          "path": "scripts/art/soft-drink-stall.py",
+          "sha256": "48b13d539ac62a2bcae6e390c2d2441fb5990b3e97755e173e7ce1b9d732650a",
+          "exportInputSha256": "bcf509b884d5b9520cf7205f7767331855768f8f2ae2c5087921fbd2a7f7a211",
+          "retainedExportInput": "/Volumes/WD/code/workspaces/coaster-soft-drink-art/evidence/author-r4/sources/soft-drink-stall.py",
+          "nonGeometryNormalizationOnly": true
+        },
+        "editableMaster": {
+          "file": "soft-drink-stall.blend",
+          "sha256": "0c8f7484d0d6c4026b831523430b8ff817b94759db5830c1585359c3b86bfe92",
+          "bytes": 25983289,
+          "retainedPath": "/Volumes/WD/code/workspaces/coaster-soft-drink-art/evidence/export-r4/soft-drink-stall.blend"
+        },
+        "status": "Source689 mechanical evidence retained; actual exported palette failed"
+      },
+      "derivedTextures": [
+        {
+          "image": "RoofingTiles013A_1K-PNG_Color_teal",
+          "sourceFile": "RoofingTiles013A_1K-PNG_Color.png",
+          "sourceSha256": "ae2037e4c4934b42b60c799b2755cb73c164a883410f89e22ac54ed5ecb4d1de",
+          "algorithm": "srgb-decode-linear-mix-srgb-encode-v1",
+          "linearTint": [
+            0.24,
+            0.54,
+            0.52
+          ],
+          "mixFactor": 0.78,
+          "sampleDimensions": [
+            512,
+            512
+          ],
+          "sourceChannels": 4,
+          "samplePixelCount": 1048576,
+          "packedMasterSha256": "2a1344690cbe4f2f6b53fe5b5041f875d76c48997981aebb0d220d37a8fb9a64",
+          "packedMasterBytes": 72247,
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "image": "WoodFloor043_1K-PNG_Color_cream",
+          "sourceFile": "WoodFloor043_1K-PNG_Color.png",
+          "sourceSha256": "55a7c25c191c8eb501d87a8872438dcfba307b3a043fee00ad9e89f0c413d684",
+          "algorithm": "srgb-decode-linear-mix-srgb-encode-v1",
+          "linearTint": [
+            0.96,
+            0.93,
+            0.84
+          ],
+          "mixFactor": 0.82,
+          "sampleDimensions": [
+            512,
+            512
+          ],
+          "sourceChannels": 4,
+          "samplePixelCount": 1048576,
+          "packedMasterSha256": "2696d85571dbab2ef9d20003ba8292aa267c3f4db33fedc3593ca2ba9c6fb405",
+          "packedMasterBytes": 177831,
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        }
+      ],
+      "exportEvidence": {
+        "path": "/Volumes/WD/code/workspaces/coaster-detailed-stall-materials/evidence/export-material-r4/export-soft-drink/soft-drink-stall.json",
+        "sha256": "dad9ef9b49231e3a97bf7739a9718b356e55e0e127d31c40a0f70c2184e93b05"
+      }
     }
   ]
 }

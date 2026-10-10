@@ -1,0 +1,45 @@
+{
+  "recordedUTC": "2026-10-10T01:10:04.347454+00:00",
+  "source": "AGY Gemini3.8flashhigh useful partial, actual CLI8m timeout retained as INCOMPLETE; Root bounded correctness/integration repairs unintegrated.",
+  "designReview": {
+    "reviewer": "stall_material_export_design_sol_max",
+    "state": "terminal/consumed",
+    "actualHost": "Grok Blender4.3.2/exporter4.3.47",
+    "adopted": [
+      "Confirmed actual GLB original-texture tint loss.",
+      "sRGB byte getter/packing needs decode\u2192linear MIX\u2192encode.",
+      "Temporary raw512 resize before affine bake preserves old512 evaluation up to8bit quantization.",
+      "Explicit derivative lineage/packed PNG/source hashes,normal androughness preserved."
+    ],
+    "actualQuantizationBound": {
+      "fourMaterialsLinearMax": 0.004039,
+      "nativeBakeThenResizeMismatchMax": 0.01264718
+    }
+  },
+  "adversarialReview": {
+    "reviewer": "stall_material_bake_adversarial_luna_max",
+    "state": "independent terminal plus narrowre-review consumed",
+    "adopted": [
+      "Raw sRGB mixing is wrong.",
+      "Fail closed on bake/pack/source errors.",
+      "Explicit derivative metadata and empty-path handling."
+    ],
+    "adjusted": [
+      "Original GENERATED-skips-FILE claim refuted by actual pack\u2192FILE; metadata branch addresses actual empty-path/source identity issue.",
+      "ColorPNG channels question resolved by actualGroksource channels4/pixel2097152; no RGBfallback."
+    ]
+  },
+  "rootActualFailures": {
+    "r2": "Unsupported square1024 source guard; qualifiedboards native1024\u00d7512.",
+    "r3": "Existing cleanup repacks FILE-from-GENERATED emptypath,removes derivedpacked bytes; failedmaster reopening shows0\u00d70/0bytes.",
+    "packAblation": "Grokactual0: first4\u00d74 pack186bytes; secondpack0bytes."
+  },
+  "currentCandidate": "root-candidate-r4; preserve first validpacked payload and requirepositivepixels/bytes. Actual export/masterreopen/GLB/pixel/decoder qualification pending.",
+  "loaderRepair": {
+    "sourceSha256": "aa4c3bc91499762033588f5889efd34e5d39871a1b496ad6e75b264480b9c331",
+    "reviewer": "detailed_stalls_loader_audit_luna_max",
+    "state": "terminal source review consumed",
+    "disposition": "Only weak texture identity guard; actualcached re-entry andnewlatebitmap paths covered in source; realaffected greenpending."
+  },
+  "reviewBoundary": "These are phase Design/adversarial/material reviews,not either of two finalwhole-cumulative Design/Drift rounds."
+}

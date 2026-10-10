@@ -272,7 +272,8 @@ def main():
     for image in list(bpy.data.images):
         if image.users == 0:
             bpy.data.images.remove(image)
-        elif image.source == "FILE":
+        elif image.source == "FILE" and not image.packed_file:
+            # Repacking a generated image after it becomes FILE loses its packed PNG.
             image.pack()
     master = options.output.with_suffix(".blend")
     restore_viewport_visibility(viewport_visibility)
@@ -281,12 +282,30 @@ def main():
     if options.batch_static:
         batch_export_meshes()
     texture_sources = []
+    derived_sources = []
     for image in bpy.data.images:
-        if image.source != "FILE" or image.users == 0:
+        if image.users == 0:
             continue
-        file = Path(bpy.path.abspath(image.filepath))
-        texture_sources.append({"file": file.name, "sourceSha256": sha256(file),
-                                "sourceDimensions": list(image.size), "runtimeDimensions": [512, 512]})
+        if image.get("coaster_derivation") == "srgb-decode-linear-mix-srgb-encode-v1":
+            if not image.packed_file or tuple(image.size) != (512, 512):
+                raise ValueError(f"Derived albedo is not a packed 512 image: {image.name}")
+            source_file = Path(bpy.path.abspath(image["source_filepath"]))
+            packed = bytes(image.packed_file.data)
+            derived_sources.append({"image": image.name, "sourceFile": source_file.name,
+                                    "sourceSha256": sha256(source_file),
+                                    "algorithm": image["coaster_derivation"],
+                                    "linearTint": list(image["tint_color"]),
+                                    "mixFactor": image["mix_factor"],
+                                    "sampleDimensions": list(image["sample_dimensions"]),
+                                    "sourceChannels": image["source_channels"],
+                                    "samplePixelCount": image["sample_pixel_count"],
+                                    "packedMasterSha256": hashlib.sha256(packed).hexdigest(),
+                                    "packedMasterBytes": len(packed),
+                                    "runtimeDimensions": list(image.size)})
+        elif image.source == "FILE":
+            file = Path(bpy.path.abspath(image.filepath))
+            texture_sources.append({"file": file.name, "sourceSha256": sha256(file),
+                                    "sourceDimensions": list(image.size), "runtimeDimensions": [512, 512]})
         if max(image.size) > 512:
             image.scale(512, 512)
     bpy.ops.export_scene.gltf(filepath=str(options.output), export_format="GLB", export_yup=True,
@@ -294,7 +313,7 @@ def main():
                               export_lights=False)
     result = {"authoring": metadata, "geometry": evidence, "blender": bpy.app.version_string,
               "sourceSha256": sha256(options.source), "driverSha256": sha256(Path(__file__)),
-              "textureSources": texture_sources,
+              "textureSources": texture_sources, "derivedTextures": derived_sources,
               "batchStatic": options.batch_static,
               "glb": {"file": options.output.name, "sha256": sha256(options.output), "bytes": options.output.stat().st_size},
               "editableMaster": {"file": master.name, "sha256": sha256(master), "bytes": master.stat().st_size},

@@ -8,14 +8,19 @@ identities retain their previous models and 16-unit reservation.
 
 The Burger model has 11,322 evaluated triangles and 13 materials; Soft-drink
 has 10,888 and 11. Each GLB embeds fifteen 512-pixel images. Blender 4.3.2
-masters preserve seventeen packed source maps and the default open pose.
+masters preserve seventeen original packed source maps, two derived albedos and the default open pose.
 `source-manifest.json` records exact outputs, measured bounds, anchors and
 retained editable masters. `material-provenance.json` records CC0 permissions
 and source member hashes. Original game media are not included.
 
 The independent authoring modules and exporter are in `scripts/art`. Their
-geometry-producing source is unchanged from the retained export inputs;
-repository metadata notes omit historical authoring attempts. Execute only on
+geometry, UVs, anchors and shutter poses remain exact against the previous
+candidate. Cream siding and the terracotta/teal roofs use portable albedos
+derived from the CC0 sources: resize512, decode sRGB, apply the authored linear
+MIX and encode sRGB. The exporter preserves the first packed payload; repacking
+a generated image after it becomes FILE discards that payload in Blender4.3.2.
+Exact source, master, GLB and four-color parity are retained in the
+[material qualification](../../../docs/verification/detailed-stalls/root-repaired-material-acceptance.json). Execute only on
 Grok Bot, with the recorded material corpus available:
 
 ```sh
@@ -28,6 +33,6 @@ blender --background --python-exit-code 1 --threads 4 \
 
 Use `scripts/art/soft-drink-stall.py` for the second building. The exporter
 checks finite UV/geometry and the union of both supported poses before writing
-the packed master and delivery model. CPU render and asset checks qualify
-these candidates; browser, public, representative GPU, original agreement and
+the packed master and delivery model. CPU render and independent actual GLB/master checks qualify
+these resources; new browser, public, representative GPU, original agreement and
 Patrick's visual/play acceptance have separate evidence and status.

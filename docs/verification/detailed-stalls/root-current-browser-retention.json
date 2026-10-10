@@ -1,0 +1,8 @@
+{
+  "fileCount": 1538,
+  "uniquePayloads": 1532,
+  "logicalBytes": 1192656588,
+  "allRetainedAndLogicalHashesExact": true,
+  "manifestSha256": "328773b8de1a7739d28f96a37385fc61da166542e1d134fbad580f47b5d5c22f",
+  "scope": "Root independent file-I/O retention audit only; source689 remains unqualified for material/lifetime defects."
+}

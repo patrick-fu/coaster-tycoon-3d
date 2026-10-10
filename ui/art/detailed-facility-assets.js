@@ -5,6 +5,7 @@ export function createDetailedFacilityAssets(renderer) {
   const geometries = new Set();
   const materials = new Set();
   const textures = new Set();
+  const releasedTextures = new WeakSet();
   const bitmaps = new Set();
   const templates = new Map();
   const depths = new Map();
@@ -17,7 +18,7 @@ export function createDetailedFacilityAssets(renderer) {
   };
 
   const ownTexture = texture => {
-    if (!texture) return;
+    if (!texture || releasedTextures.has(texture)) return;
     textures.add(texture);
     if (typeof ImageBitmap !== 'undefined') {
       if (texture.source?.data instanceof ImageBitmap) {
@@ -55,6 +56,7 @@ export function createDetailedFacilityAssets(renderer) {
     for (const geometry of geometries) geometry.dispose();
     for (const material of materials) material.dispose();
     for (const texture of textures) {
+      releasedTextures.add(texture);
       texture.dispose();
       texture.image = null;
       if (texture.source) texture.source.data = null;

@@ -1,0 +1,29 @@
+{
+  "recordedUTC": "2026-10-10T00:54:29.641065+00:00",
+  "qualifiedSourceCommit": "689296ae1481d364e7f7d326cdacb6d715e01a73",
+  "retentionFilesVerified": 381,
+  "rawBytes": 507810982,
+  "actualPartialGroups": 10,
+  "actualChecks": 216,
+  "attemptStillFailed": "retainedPath schema error; actual material palette fails; later local-r5 native-decode cancellation texture counterexample retained separately.",
+  "rootCompleteAuthorityEquality": {
+    "paidExportManualReload": true,
+    "paidTick": 6502,
+    "shopSales": 27,
+    "stock": 8,
+    "retiredExportContinuation": true,
+    "retiredIncome": 12,
+    "retiredStock": 3,
+    "reusedInstance": 3
+  },
+  "rootRawCancellationCounts": {
+    "texturesDispose2": 20,
+    "texturesDispose3": 10,
+    "nativeBitmapsClosedOnce": 30
+  },
+  "sourceRepairNotYetExecuted": {
+    "loaderSha256": "aa4c3bc91499762033588f5889efd34e5d39871a1b496ad6e75b264480b9c331",
+    "weakIdentityScope": "Texture only; independent source review consumed. Actual affected browser rerun pending."
+  },
+  "scope": "Mechanical/backend/authority proof from exact source689 only. No final repaired-art/resource/public/hardware/human acceptance."
+}

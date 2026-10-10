@@ -25,10 +25,23 @@ The five Node cases qualify their matching receiver. Browser migration must use
 provenance-qualified genuine matching browser inputs, including held/typed/
 retired ownership; foreign Rule configurations remain protected rejections.
 
-Remaining gates are actual detailed Library/pointer/cardinal poses/picking,
-paid worker/save/storage and real loading/failure/cancellation/disposal, exact
-public root/pin delivery, and two complete cumulative Design and Drift rounds
-each. The live [progress record](../../../PROGRESS.md) tracks these outcomes.
+Actual source689 browser r4/r5/r6 completes the detailed placement, actual paid
+ownership/save/retirement/typed paths, six provenance-qualified browser-v12
+bridges, six storage priorities and twelve protected invalid/null cases. These
+observations are retained as partial proof; r4 and r5 remain failed attempts.
+[Root's retained raw audit](root-browser-partial-acceptance.json) verifies all381
+r4 files and complete paid/export/manual-reload and retired/export equality.
+
+Two real delivery defects prevent final acceptance: [lost authored material
+palette](root-material-export-failure.json), and repeated texture disposal after
+native image decoding completes after cancellation. Root's minimal weak texture
+identity repair is source-reviewed; its actual green runtime is pending. AGY's
+useful material partial is retained as an incomplete timeout, then corrected
+against independent actual Blender color-space/resize evidence. New exports,
+packed-master reopen, decoded GLB/color/geometry parity, affected real browser
+poses/loading/resource controls, exact public root/pin and two complete
+cumulative Design and Drift rounds each remain required. The live
+[progress record](../../../PROGRESS.md) distinguishes running from verified work.
 Current public runtime is still fddd/save12/content5/protocol5. Original
 numerical/art agreement, representative GPU/scale, catalogue breadth and
 Patrick's visual/play acceptance remain open.
