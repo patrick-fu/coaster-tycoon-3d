@@ -1,0 +1,6 @@
+Independently authored oak geometry and source: MIT.
+Surface materials: ambientCG Bark014 and LeafSet026, CC0-1.0.
+Sources: https://ambientcg.com/a/Bark014 and https://ambientcg.com/a/LeafSet026
+License: https://docs.ambientcg.com/license/
+See export-manifest.json and the project THIRD_PARTY_NOTICES.md for provenance and measured export hashes.
+No original RCT2 game graphics are included.
