@@ -1,0 +1,94 @@
+{
+  "sourceCommit": "689296ae1481d364e7f7d326cdacb6d715e01a73",
+  "buildReadySha256": "42ccf4643f44fd8cc276eb9f15a681db21847fa6f13fe24e67688d097255fd6b",
+  "sourceInputFiles": 754,
+  "shippingFiles": 162,
+  "versions": {
+    "save": 13,
+    "content": 6,
+    "protocol": 6
+  },
+  "receivingRulesSha256": "b123fee6c14e7b2df2b32b694639258a721f43a9552046d636f651c0af2d3fcb",
+  "moduleControls": {
+    "tests": 13,
+    "pass": 13,
+    "fail": 0
+  },
+  "actualOuterExit": 0,
+  "buildRuns": [
+    {
+      "phase": "extract",
+      "startedUTC": "2026-10-09T23:34:46.048651+00:00",
+      "runnerPid": 944932,
+      "childPid": 944933,
+      "command": [
+        "tar",
+        "-xzf",
+        "/workspace/coaster-detailed-stalls-integrated-r1/source.tar.gz",
+        "-C",
+        "/workspace/coaster-detailed-stalls-integrated-r1/source"
+      ],
+      "cwd": "/workspace/coaster-detailed-stalls-integrated-r1",
+      "finishedUTC": "2026-10-09T23:34:47.112987+00:00",
+      "actualExit": 0,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrBytes": 0
+    },
+    {
+      "phase": "web-build",
+      "startedUTC": "2026-10-09T23:34:47.271835+00:00",
+      "runnerPid": 944932,
+      "childPid": 944938,
+      "command": [
+        "npm",
+        "run",
+        "build:web"
+      ],
+      "cwd": "/workspace/coaster-detailed-stalls-integrated-r1/source",
+      "finishedUTC": "2026-10-09T23:34:48.556370+00:00",
+      "actualExit": 0,
+      "stdoutSha256": "120b133d25a41fc01f174dbb1129e91fbbc95e7d931def7b534c319a71105eb4",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrBytes": 0
+    },
+    {
+      "phase": "module-controls",
+      "startedUTC": "2026-10-09T23:34:48.557491+00:00",
+      "runnerPid": 944932,
+      "childPid": 945000,
+      "command": [
+        "node",
+        "--test",
+        "test/detailed-facility-batching.test.mjs",
+        "test/detailed-facility-loader-check.mjs",
+        "test/detailed-facility-picking-check.mjs"
+      ],
+      "cwd": "/workspace/coaster-detailed-stalls-integrated-r1/source",
+      "finishedUTC": "2026-10-09T23:34:49.006624+00:00",
+      "actualExit": 0,
+      "stdoutSha256": "bb23b328824516b00572faa13d76661fc2784761ba07e759f35b1f2fbdae0b09",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrBytes": 0
+    },
+    {
+      "phase": "actual-receiver",
+      "startedUTC": "2026-10-09T23:34:49.007891+00:00",
+      "runnerPid": 944932,
+      "childPid": 945046,
+      "command": [
+        "node",
+        "--input-type=module",
+        "-e",
+        "\nimport {createHash} from 'node:crypto';\nimport {mixedRules,newCarouselPark} from './dist/content/mixed-park.js';\nimport {withFlumeProfile} from './dist/content/log-flume.js';\nimport {withConsumablesProfile} from './dist/content/consumables.js';\nimport {withDetailedStallsProfile} from './dist/content/facility-profiles.js';\nimport {WORKER_PROTOCOL_VERSION} from './dist/simulation/protocol.js';\nconst browserRules=withDetailedStallsProfile(withConsumablesProfile(withFlumeProfile(mixedRules)));\nconst snapshot=newCarouselPark(browserRules).snapshot();\nprocess.stdout.write(JSON.stringify({versions:{save:snapshot.version,content:snapshot.contentVersion,protocol:WORKER_PROTOCOL_VERSION},receivingRulesSha256:createHash('sha256').update(snapshot.rules).digest('hex')})+'\\n');\n"
+      ],
+      "cwd": "/workspace/coaster-detailed-stalls-integrated-r1/source",
+      "finishedUTC": "2026-10-09T23:34:54.158981+00:00",
+      "actualExit": 0,
+      "stdoutSha256": "5c825ac7b3a9266bf5e36832c13e1588f31007e0187d015bd22a75604c24a67d",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrBytes": 0
+    }
+  ],
+  "scope": "Actual immutable integrated build/13 controls and source/art correspondence; browser/public/GPU/human/original pending"
+}

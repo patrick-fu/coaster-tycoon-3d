@@ -1,0 +1,17 @@
+{
+  "phase": "Runtime receiver qualification",
+  "designReviewer": "receiver_binding_design_sol_max",
+  "designOutcome": "No blocking counterexample; exact Rules and historical-input gates preserved",
+  "driftReviewer": "receiver_binding_drift_luna_max",
+  "driftOutcome": "Core qualification confirmed; require explicit failed-digest/blocked-cleanup/separate-recovery chronology",
+  "rootDisposition": "Accept diagnosis and bounded runtime-specific qualification; amend proposal with exact failure/recovery chronology before material re-review. No production or numerical tolerance changes.",
+  "runtimeGate": "Freeze actual Chrome155/V8 15.5.35.20/source689/Rules78b; original Node-ready42cc/b123 retained",
+  "historicalInputGate": "Provenance-check genuine old browser direct saves before actual import; Node5/100pairs remain immutable and Node-bound",
+  "retiredCandidate": {
+    "remote": "/workspace/coaster-consumables/consumer-browser-sol/r4/mid-container-actual-export.json.gz",
+    "decodedSha256": "4486861a0aac7b8b004f86d909d92882644ab8be3f684e8d3b25ae544b9e3b33",
+    "state": "Only bytes/profile identified; provenance and actual current browser bridge pending"
+  },
+  "reviewerLinkCorrection": "Drift final local link omitted coaster-consumables workspace; actual old public evidence is /Volumes/WD/code/workspaces/coaster-consumables/public-browser-sol and its matching Grok path, not a new art-parent public-browser-sol folder.",
+  "scope": "Bounded acceptance conflict phase; no final cumulative round or migration/public/GPU/human acceptance"
+}
