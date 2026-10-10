@@ -1,0 +1,124 @@
+{
+  "utc": "2026-10-10T22:38:29.729490+00:00",
+  "rootConsumed": true,
+  "sourceCommit": "1bdec0dd377f922c9168f454c4b2eaba92a1bbc4",
+  "sourceTree": "8ea8918269e119fde5c8a0b7603214db5541041a",
+  "readySHA256": "d8218203fc294a3316c8751697d5f412c286e3df9c700b5e5906c1c16fc79ee7",
+  "readyBytes": 139237,
+  "shippingRoot": "/workspace/coaster-creation-input/source-r1/web-dist",
+  "sourceFileCount": 883,
+  "shippingFileCount": 164,
+  "changedExecutableFiles": [
+    "ui/game.js"
+  ],
+  "changedShippingFiles": [
+    "game.js"
+  ],
+  "unchangedShippingFiles": 163,
+  "unchangedCompiledFiles": 74,
+  "actualRemotePid": 1738535,
+  "actualCommands": [
+    {
+      "name": "snapshot-source",
+      "pid": 1738536,
+      "args": [
+        "cp",
+        "-a",
+        "--reflink=auto",
+        "/workspace/coaster-classic-showcase-interaction-fix-r1/source-r5",
+        "/workspace/coaster-creation-input/source-r1"
+      ],
+      "startUTC": "2026-10-10T22:36:50.976103+00:00",
+      "actualExit": 0,
+      "endUTC": "2026-10-10T22:36:51.243716+00:00",
+      "stdoutSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrBytes": 0
+    },
+    {
+      "name": "editor-syntax",
+      "pid": 1738543,
+      "args": [
+        "node",
+        "--check",
+        "ui/game.js"
+      ],
+      "startUTC": "2026-10-10T22:36:51.414437+00:00",
+      "actualExit": 0,
+      "endUTC": "2026-10-10T22:36:51.534219+00:00",
+      "stdoutSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrBytes": 0
+    },
+    {
+      "name": "canonical-web",
+      "pid": 1738550,
+      "args": [
+        "node",
+        "scripts/build-web.mjs"
+      ],
+      "startUTC": "2026-10-10T22:36:51.535042+00:00",
+      "actualExit": 0,
+      "endUTC": "2026-10-10T22:36:51.778692+00:00",
+      "stdoutSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrBytes": 0
+    }
+  ],
+  "knownChildrenAbsent": [
+    {
+      "pid": 1738536,
+      "exists": false
+    },
+    {
+      "pid": 1738543,
+      "exists": false
+    },
+    {
+      "pid": 1738550,
+      "exists": false
+    }
+  ],
+  "actualTransport": {
+    "pid": 76514,
+    "startUTC": "2026-10-10T22:36:39.117950+00:00",
+    "scope": "Mac upload/SSH transport only. Fresh syntax and canonical web execute solely on Grok.",
+    "phases": [
+      {
+        "name": "upload-build-r1",
+        "pid": 76516,
+        "args": [
+          "scp",
+          "/Volumes/WD/code/workspaces/coaster-creation-input/evidence/source-identity-r1.json",
+          "/Volumes/WD/code/workspaces/coaster-creation-input/evidence/source-delta-r1.tar",
+          "/Volumes/WD/code/workspaces/coaster-creation-input/evidence/build-ui-repair-r1.py",
+          "grok-build:/workspace/coaster-creation-input/"
+        ],
+        "startUTC": "2026-10-10T22:36:39.120955+00:00",
+        "actualExit": 0,
+        "endUTC": "2026-10-10T22:36:48.191748+00:00",
+        "postWaitExists": false,
+        "stderrBytes": 0
+      },
+      {
+        "name": "actual-build-r1",
+        "pid": 76560,
+        "args": [
+          "ssh",
+          "grok-build",
+          "python3 /workspace/coaster-creation-input/build-ui-repair-r1.py"
+        ],
+        "startUTC": "2026-10-10T22:36:48.204327+00:00",
+        "actualExit": 0,
+        "endUTC": "2026-10-10T22:36:51.999671+00:00",
+        "postWaitExists": false,
+        "stderrBytes": 0
+      }
+    ],
+    "actualExit": 0,
+    "endUTC": "2026-10-10T22:36:52.005694+00:00"
+  },
+  "reuse": "Reuse exact unchanged accepted313 kernel/factory checks and full oracle; fresh game syntax/canonical web only. No unchanged camera/art/kernel matrix replay.",
+  "scope": "Fresh remote syntax/canonical web pass only. Native/public/failure behavior remain unexecuted; no fixed product-pass claim.",
+  "evidenceRoot": "/Volumes/WD/code/workspaces/coaster-creation-input/evidence/remote-build-r1"
+}

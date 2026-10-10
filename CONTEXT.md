@@ -85,6 +85,16 @@ A guest's purchased food or drink that has not yet been fully used. Its ownershi
 continues when the selling facility closes or is demolished.
 _Avoid_: Wrapper, vendor inventory, instant need relief
 
+**Owned merchandise**:
+A guest's purchased reusable item, such as a park map or umbrella, that remains
+their property during the visit and is separate from food, drink and packaging.
+_Avoid_: Owned consumable, vendor inventory, discard container
+
+**Counter approach**:
+A public path position from which a guest can reach a facility's active counter
+and receive its product or service. A facility can have several counter approaches.
+_Avoid_: Ride entrance, decorative counter, any neighbouring path
+
 **Discard container**:
 Empty packaging retained by a guest after using a consumable, until disposal.
 It differs from waste already left on the ground.

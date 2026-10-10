@@ -1,0 +1,73 @@
+{
+  "utc": "2026-10-10T23:09:11.977197+00:00",
+  "scope": "Fixed preparation gate only; original causal baseline and fresh UI build acceptance unchanged.",
+  "verdict": "HOLD",
+  "runtimeAuthorized": false,
+  "sourceCommit": "1bdec0dd377f922c9168f454c4b2eaba92a1bbc4",
+  "readySHA256": "d8218203fc294a3316c8751697d5f412c286e3df9c700b5e5906c1c16fc79ee7",
+  "driverSHA256": "323fc4cff3236c154a54e82ec314dc85adc423e0b011ccea0ff42e5dd6a08547",
+  "contractSHA256": "52ee797d6ec13188b6a9f9fe88821632efe32406ee5510fe1237e93e92a566cc",
+  "observerSHA256": "88572cdf52ff32d208219714aec558576b710ec413d550974e1042fc851943e5",
+  "independentWDProof": {
+    "utc": "2026-10-10T22:59:31.116826+00:00",
+    "scope": "Root Mac proof-byte streaming only; no Mac compilation, browser or runtime.",
+    "actualExit": 0,
+    "fileCount": 58,
+    "bytes": 69617956,
+    "manifestSHA256": "6c985400df875ba709def01213a3f6fa280e0f4fd707d6ceda10ca7654ae2a1e",
+    "driverSHA256": "323fc4cff3236c154a54e82ec314dc85adc423e0b011ccea0ff42e5dd6a08547",
+    "contractSHA256": "52ee797d6ec13188b6a9f9fe88821632efe32406ee5510fe1237e93e92a566cc",
+    "observerSHA256": "88572cdf52ff32d208219714aec558576b710ec413d550974e1042fc851943e5"
+  },
+  "remoteRootReaderPID": 1746256,
+  "remoteRootReaderActualSSHExit": 0,
+  "confirmedFindings": [
+    {
+      "owner": "Luna Max",
+      "location": "inputs/run-fixed.py:447",
+      "problem": "A preview quote rejection can satisfy the check without actual creation quote/input lock/recovery.",
+      "disposition": "Bind actual inert create-ride quote/request/reply and full successful forced recovery before unlock."
+    },
+    {
+      "owner": "Luna Max",
+      "location": "inputs/run-fixed.py:463",
+      "problem": "Ambiguous timeout Export attempt has no no-capture/synchronous-native-save assertion.",
+      "disposition": "Small-projection blocked-input/download check before release; no forced authority."
+    },
+    {
+      "owner": "Sol Max",
+      "location": "inputs/creation-view-delay.js:63",
+      "problem": "Quote rejection and oversize Import recovery views are metadata-only because they lack creation receipt.",
+      "disposition": "Retain full actual forced recovery packets for both no-receipt cases."
+    },
+    {
+      "owner": "Sol Max",
+      "location": "inputs/run-fixed.py:477",
+      "problem": "Reload destroys case=null actual File/autosave records not included in case snapshots.",
+      "disposition": "Persist complete thinned history after original events release and before reload."
+    },
+    {
+      "owner": "Sol Max",
+      "location": "inputs/run-fixed.py:470",
+      "problem": "Stale operated-only reload annotation contradicts actual durable13/autosave source.",
+      "disposition": "Use actual durable state scope."
+    }
+  ],
+  "terminalReceipts": {
+    "remote-receipts.txt": "c326609cf65dcf28dd58254ba904f7e731014a226c6fd2a9a43d1a944c0d3dee",
+    "known-mac-process-state.tsv": "b33165d90c3b74f629ea682684b8cda2319bdee4e988786428b7c7e740c17a84",
+    "actual-wrapper-exit.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+  },
+  "nextAction": "Same sole owner writes isolated preparation-r2, independent material re-review before Root gate. No Chrome/HTTP or production change.",
+  "withdrawnFinding": {
+    "owner": "Root",
+    "utc": "2026-10-10T23:09:49.360410+00:00",
+    "problem": "Root wrongly inferred side48 was the terrain backing stride.",
+    "actualEvidence": [
+      "src/simulation/engine.ts:27 uses y*256+x",
+      "src/simulation/engine.ts:468 requires65536 terrain/water/owned records",
+      "src/simulation/view.ts:53 exports matching256-stride surfaces"
+    ],
+    "disposition": "False positive. side is active extent; strict19,12 ground32 is correct. Do not implement stride48 change. Earlier Root numerical16 was a different tile; original baseline remains valid."
+  }
+}

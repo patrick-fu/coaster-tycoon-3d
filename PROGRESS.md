@@ -1,6 +1,6 @@
 # Project progress and recovery
 
-Last updated: 2026-10-10 22:33 UTC.
+Last updated: 2026-10-10 23:09 UTC.
 Root owns this live record and the [UTC journal](docs/progress/2026-10-10.md).
 [Previous detailed checkpoint](docs/progress/2026-10-10-progress-before-final-public-acceptance.md)
 retains the source/native/public/tool repair sequence. `CONTEXT.md` remains the domain glossary;
@@ -29,11 +29,17 @@ complete typed saves, editable masters and every frozen preview.
   `p/patrick/fix/creation-view-adoption`, exact merged main basecb922ccea03841033de32ca5840219b056ea7173.
   Root alone writes production/docs. Previous composition worktree remains proof/history only.
 - Accepted executable baseline source7a0bbac668ece30416cceefb97997c0de17d1376, tree6c942d435e5a093d4a471182d5030ad1ecf594f6,
-  gameaad24598/cameraf562b92d. Git HEADcb922ccea03841033de32ca5840219b056ea7173 is the actual composition merge; executable
+  gameaad24598/cameraf562b92d. Git HEAD1bdec0dd377f922c9168f454c4b2eaba92a1bbc4/tree8ea8918269e119fde5c8a0b7603214db5541041a
+  is the actual reviewed creation-input source commit; original composition mergecb922 remains its base. The
   published UI remains source7a. Canonical main fast-forward0/clean is independently verified.
-  Root now integrates identical reviewed gamec4fd4cff into dirty ui/game.js; camera and all
-  other executable files remain unchanged. No fixed syntax/build/native/public run yet.
+  Root commits identical reviewed gamec4fd4cff in ui/game.js; camera and all
+  other executable files remain unchanged. Fresh Grok syntax/web now pass; native/public remain unexecuted.
   Prior docs commitc810 remains immutable; documentation HEAD is not a new build identity.
+- Source branch push actual0 and [draft PR80](https://github.com/patrick-fu/coaster-tycoon-3d/pull/80)
+  is OPEN/draft at exact head1bdec0d, title Preserve the new ride until its view is adopted.
+  Actual push78926/create78946 finish22:42:41Z; Root readback matches exact body/head/draft and
+  attaches the PR to this task. Finite79 remains OPEN; no merge or public deployment is claimed.
+  Final native/public acceptance and whole finite79 review still precede readiness/closure.
 - [Final source repair](docs/verification/classic-showcase/root-replacement-input-source-repair.json)
   combines exact Sol/Luna r20 review: pending New/File uses existing inert/keyboard exclusion;
   invalidate staticRevision before replacement/recovery, commit it after current-epoch Scene/
@@ -45,6 +51,13 @@ complete typed saves, editable masters and every frozen preview.
 - Canonical313 checks, complete810792B Node oraclea911,182 legal factory commands and+12288 real
   operation ticks reuse unchanged code. Detailed CC0 model/source/picking/lifecycle and prior
   full72-material/paid/history/fault proofs keep their original scopes. Finite75/PR76 remain merged.
+- [Creation-input build](docs/verification/creation-view-adoption/root-build-acceptance.json)
+  is actual source1bdec0d/tree8ea/gamec4fd, ready d8218203fc294a3316c8751697d5f412c286e3df9c700b5e5906c1c16fc79ee7
+  (139237B), `/workspace/coaster-creation-input/source-r1/web-dist`. Grok1738535/children
+  1738536/1738543/1738550, Mac76514/upload76516/SSH76560 all actual0 at22:36:52Z; waited
+  children absent. Root consumes complete ready/all883 source bindings/164 shipping/74compiled
+  pins and real command logs. Onlygame.js differs;163 shipping/compiled/camera/core/art remain
+  exact. Reuse313 under those unchanged bytes; do not present a fresh313 test run.
 
 ## Accepted native and published public evidence
 
@@ -157,7 +170,7 @@ the risk or closing the composition does not resolve it. Previous publication br
    No baseline replay. Actual151 CDP call bindings now show complete
    snapshot replies growing17.68→77.49MB and1.91→6.90s, including45.1→77.5MB/4.60→6.903s
    near the failed cases. This supports bounded observation; it does not uniquely attribute all
-   Queue/Escape delay to the observer. Root integrates only the reviewed UI candidate, unbuilt.
+   Queue/Escape delay to the observer. Root integrates and builds only the reviewed UI candidate.
    Driver retains original trusted MessageEvents, real receipt7, actual native inputs and each
    Export click→unique synchronous save request→exact real reply. Timing/timeout failure cannot
    become completion; Root additionally qualifies only <14s actual request-to-final delivery.
@@ -167,15 +180,17 @@ the risk or closing the composition does not resolve it. Previous publication br
    quoteawait/preview and down invalidation, current marker+receiptID adoption, successful receipt
    recovery return/feedback, ambiguous sent fail-closed, and existing Import lock reorder.
    Candidate gamec4fd4cff/diffe63b4ee3/deltac7f2072a remains frozen in evidence/candidate-source-r2;
-   r1 stays unchanged. Identical productiongamec4fd is now integrated, no fixed syntax/build/runtime.
+   r1 stays unchanged. Identical productiongamec4fd is integrated and syntax/web-pass, no fixed runtime.
    Actual causal baseline precedes production integration. Quote recovery failure remains
    fail-closed/reload; later ordinary polls do not silently unlock it. No shared queue/flag,
    worker/kernel/save/art/camera/dependency change or general execute rollback guarantee.
-3. Exact candidate r2 reviews are PASS. Root prepares only evidence/build-ui-repair-r1.py
-   from the accepted canonical packaging recipe; no command is run yet. Actual read-only SSH0
+3. Exact candidate r2 reviews are PASS. Root executes evidence/build-ui-repair-r1.py
+   from the accepted canonical packaging recipe; actual syntax/web0 is consumed above. Read-only SSH0
    confirms the absolute unchanged node_modules symlink and ready854, available workspace
-   space; current878 tracked source paths add31 documents versus old847, so the next source
-   identity must truthfully include the committed docs rather than inherit old count.
+   space. Actual English source commit1bdec0d at22:36:01Z is clean immediately after commit;
+   883 tracked paths include36 additional documents versus old847, not a copied old count.
+   Exact source-identity-r1.json binds1b/tree8ea/gamec4fd, all883 files and2,344,960-byte delta
+   archiveeab6286e; no removed files and onlyui/game.js changes executable source.
    Full failed-run retention is now terminal0:1733258,426payloads/2486624114 logical/
    300968147 encoded bytes, manifestd3001292/checks2e1dfd0a. Mirror69003/SSH69011/tar69010/
    hash69986 and finite terminal70629/SSH70635 actually end0; known16remote/20Mac tools absent
@@ -199,9 +214,43 @@ the risk or closing the composition does not resolve it. Previous publication br
    consumes evidence; no build, HTTP or Chrome launch before the exact fixed source/driver gate.
    Preserve full held/receipt/quote/execute/Export authority; fixed inert input must be observed
    blocked during hold, then exported natively after real adoption. Do not forcibly unlock.
-   Root has integrated the minimal repair after full baseline consumption. Commit exact source
-   identity, then run only affected remote syntax/web/native/
+   The preparation draft now includes native blocked Track/Queue/Escape and a creating-down/
+   inert-repress/unlocked-release contrast; real quote rejection, one pre-Scene-update throw,
+   intentionally delayed real execute success past original20s despite successful fresh view,
+   and native oversize Import recovery. Ordinary cases still require actual<14s. Root asks for
+   one real legal Station build after cross-lock verification and Portal's actual station ID.
+   Root also finds current saveLocal does not exclude the unchanged60s autosave: intentional
+   timeout reload must bind actual durable typed current13 bytes, not presume rollback to the
+   initial fixture. Keep autosave enabled, preserve its full real response and original final
+   storage restoration. These are prep corrections, not observed product failures or runtime passes.
+   Root has committed/built the minimal repair after full baseline consumption. Run only affected remote native/
    public integration and complete actual evidence. No broad camera/art/kernel/matrix replay.
+   Fixed preparation-r1 is now COMPLETE, not launched: driver323fc4cf/contract52ee797d/
+   observer88572cdf, exact source1b/readyd821. Grok1743206/generator1743209/Node1743212 and
+   Mac82573/SSH82608 actual0 at22:53:22Z;57 literals+5helpers/all883source/164ship/74compiled.
+   Sole mirror1743744/tar1743745/Mac82980/SSH83006/tar83005/hash83022 actual0 retains58files/
+   69617956B, preparation-files.json6c985400/checksdaf418c2. Finite83155/SSH83160 actual0,
+   blankstderr/known5remote+11Mac absent at22:54:57Z; collector itself closes by actual wait.
+   Final proposal includes legal native Station build and actual Portal station, cross-lock
+   before that build, actual durable13 recovery under unchanged autosave, and bounded faults.
+   Root full byte/driver/gate consumption is next, then two clean-context independent lenses;
+   no HTTP, Chrome, public update or fixed runtime acceptance yet. Root's guessed top-level
+   driver/contract read1 is corrected from actual inputs/contract.json inventory, not a retry;
+   exact context-guard patch1 changes nothing and is corrected in this anchored update.
+   Root and both fresh independent fixed-gate lenses consume exact r1 bytes and actual
+   waits; Root58 WD files and Grok1746256/SSH0 match all58/69617956B plus883/164/74 pins.
+   Fixed gate is HOLD, no runtime launch: Luna confirms rejection can be satisfied by a
+   preview quote without the real create lock/recovery, and timeout Export attempt lacks
+   the required no-native-save assertion. Sol confirms quote/oversize recovery full packets
+   are incorrectly metadata-only, and pre-reload case=null File/autosave history would be
+   lost. Correct one stale fault-reload annotation too. Root verifies these source counterexamples.
+   Root's proposed side-based terrain-stride change is a FALSE POSITIVE, now withdrawn:
+   owner supplies Engine27/468 and View53; Root independently reads fixed256 stride and65536
+   backing records. side48 is active extent, actual ground19,12=32;32-ground description and
+   original baseline remain correct. Keep stride256/+1 alignment probe. The earlier Root
+   side48→stride48 assumption was wrong; no source/driver mutation implemented it.
+   No product/source defect or runtime failure inferred from these preparation gaps. Sole owner
+   prepares isolated r2, then the same independent reviewers inspect the material repairs.
 4. Continue [programme27](https://github.com/patrick-fu/coaster-tycoon-3d/issues/27) and the full Goal.
    Next P4 foundation should honestly implement an independent information kiosk's Map/Umbrella
    dual-product transaction, permanent guest ownership separate from consumables, four counter
@@ -209,6 +258,11 @@ the risk or closing the composition does not resolve it. Previous publication br
    is optional parallel C03 work, not a prerequisite or substitute. Current authored kiosk is
    laboratory-only and exceeds existing detailed-stall bounds; its placement/loader/model and
    actual human qualification remain separate required integration work. Broad40/41/42 stayOPEN.
+   Root now records the resolved domain terms Owned merchandise and Counter approach in
+   CONTEXT.md, consistent with the existing Product/Owned consumable distinction. Current
+   services code still has one need-driven product/price/frontage and no merchandise inventory;
+   these glossary additions are planned domain vocabulary, not an implemented kiosk or map/rain effect.
+   No new ADR or kernel/UI capability is introduced. First finish finite79 qualification.
 
 ## Cleanup
 
@@ -218,3 +272,7 @@ absent producers and empty lsof. Current exact cleanup removes only3 completed o
 No general cache cleanup is claimed from process exit or OS free-space change. Source/masters/profile/frozen previews/all proof remain. Current outputs
 are WD/Grok, never Mac builds/tests. Perform further exact owned duplicate cleanup only after
 these final proof consumers release their inputs; update this record/journal immediately.
+Root's exact redundant remote upload-archive cleanup probe1742352/SSH actual0 at22:50:20Z
+does not meet its file-owner guard and removes nothing. WD2,344,960B archive is independently
+rehashed eab6286e exact; original build processes are absent. No cleanup-success or reclaimed-
+space claim; preserve the archive rather than bypass the guard.
