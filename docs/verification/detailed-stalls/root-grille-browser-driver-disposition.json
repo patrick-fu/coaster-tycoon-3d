@@ -1,0 +1,28 @@
+{
+  "recordedUTC": "2026-10-10 04:20 UTC",
+  "attempt": "grille-r1-browser/runtime-r1",
+  "actualRuntimeFinishedUTC": "2026-10-10T04:18:01Z",
+  "actualChildAndSSHExit": 1,
+  "ownerReportedPassedSubsets": [
+    "Original floating ray and nine integer rays have separated planes/nearest dark",
+    "All15native map bindings exact",
+    "Seven pixel checks pass: original center OFF/ON/OFF66,77,85; metal0,0,0->145,157,159; boards/teal/grass unchanged",
+    "Open unit/exclusive geometry"
+  ],
+  "failedPredicate": "Pose driver reuses base for height/8, shadowing URL base; CDP reader invokes startsWith on float, then pointer times out.",
+  "cleanup": "Owned Chrome/server absent/ports closed; complete original IndexedDB restoration did not succeed.",
+  "nextAction": "Owner neutral-only full DB restoration before new pose tail; rename local foundation_y and run only remaining3pose/picking.",
+  "scope": "Owner actual report pending Root raw consumption. First attempt remains failed, original maps/pixels not replayed; no asset adoption/public/cumulative acceptance.",
+  "separateStorageRecovery": {
+    "finishedUTC": "2026-10-10T04:22:21Z",
+    "runnerPid": 1096663,
+    "chromePid": 1096664,
+    "actualOuterExit": 0,
+    "chromeActualExit": 0,
+    "originalFullDBRestored": true,
+    "debugPortClosed": true,
+    "onlyTaskNeutralNavigation": true,
+    "evidenceDirectory": "/Volumes/WD/code/workspaces/coaster-detailed-stalls-browser/grille-r1-browser/storage-recovery-r1",
+    "rootRawConsumptionPending": true
+  }
+}

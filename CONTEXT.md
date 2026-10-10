@@ -93,3 +93,9 @@ _Avoid_: Ground litter, unfinished consumable
 **Ground litter**:
 Discarded waste left on a park path and available for cleanup.
 _Avoid_: Carried container, guest inventory
+
+**Facility placement profile**:
+The saved numerical construction envelope for a selected facility capability.
+It determines occupied space and receiving availability, while product operation
+and the authored visual bound remain separate.
+_Avoid_: Building appearance, product rule, visual bound

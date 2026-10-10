@@ -75,7 +75,7 @@ assumption changed; no runtime/data replay or weaker continuation comparison.
 The producer's post-run metadata-parser failure also remains explicit.
 
 The finite source/public behavior and both whole-delivery Design/Drift rounds
-qualify; source integration remains pending. The
+qualify; source and proof are integrated in PR74/main1373dbd. The
 [transport cleanup](publication-transport-cleanup.json) frees234,174,364 redundant
 bytes after exact116-input/119-shipping/hash guards; frozen science,masters and
 failed attempts remain. Procedural props are mechanical candidates,

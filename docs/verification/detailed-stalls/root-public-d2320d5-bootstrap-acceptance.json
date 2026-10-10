@@ -1,0 +1,228 @@
+{
+  "utc": "2026-10-10T08:03:00.033848+00:00",
+  "scope": "Actual deployment and20fresh root/new frozen preview bodies. Player/browser acceptance remains pending.",
+  "hostingCommit": "07be9c4cd36588e08e3fcc9dc0162dd80221affb",
+  "sourceCommit": "d2320d5e324d548fdba3b30f7d4e0a2d11235466",
+  "sourceTree": "7fbf1a616adbb0ab7ccc238930cc2067569283aa",
+  "readySHA256": "bc4130dfb1727a12c73d45fd74904b5e81e6b4cc6e3d9513da7cdcfa41a745bf",
+  "pagesStatus": "built",
+  "pagesCreatedUTC": "2026-10-10T07:57:42Z",
+  "pagesUpdatedUTC": "2026-10-10T07:58:29Z",
+  "remoteHTTPHelperPID": 1378594,
+  "remoteActualExit": 0,
+  "actualSSHExit": 0,
+  "actualRawSCPExit": 0,
+  "actualHTTPBodies": 20,
+  "rawResultSHA256": "388215ae1344fc0257d6caa1cbefcf4be7dc7633a320ebb808b4a3db708ee2e0",
+  "rawEvidenceDirectory": "/Volumes/WD/code/workspaces/coaster-consumable-art/evidence/public-d2320d5-plan/coaster-detailed-stalls-public-d2320d5-bootstrap",
+  "allBodyHashesBytesMatched": true,
+  "onlyTwoRuntimeChanges": [
+    "game.js",
+    "art/detailed-facility-assets.js"
+  ],
+  "priorFrozenFilesPreserved": 1098,
+  "unchangedRuntimeFiles": 160,
+  "requests": [
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/index.html?root-bootstrap=d2320d5-1378594",
+      "relativePath": "index.html",
+      "prefix": "",
+      "status": 200,
+      "bytes": 11495,
+      "sha256": "fd88b27beca574ed17a2fb04dfaa08194bb886c386b762667dc8da9a5151ad6a",
+      "expectedSHA256": "fd88b27beca574ed17a2fb04dfaa08194bb886c386b762667dc8da9a5151ad6a",
+      "retainedFile": "actual-http/0/index.html"
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/game.js?root-bootstrap=d2320d5-1378594",
+      "relativePath": "game.js",
+      "prefix": "",
+      "status": 200,
+      "bytes": 33873,
+      "sha256": "b82b661d8425bd39520a889e19e508cffcd280f5def5d1553a7b442f962dab58",
+      "expectedSHA256": "b82b661d8425bd39520a889e19e508cffcd280f5def5d1553a7b442f962dab58",
+      "retainedFile": "actual-http/0/game.js"
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/park-scene.js?root-bootstrap=d2320d5-1378594",
+      "relativePath": "park-scene.js",
+      "prefix": "",
+      "status": 200,
+      "bytes": 19290,
+      "sha256": "a91fa8194249d03c5d2885e3822e82e0dffb01ed795ea5d1955ec6028127dc48",
+      "expectedSHA256": "a91fa8194249d03c5d2885e3822e82e0dffb01ed795ea5d1955ec6028127dc48",
+      "retainedFile": "actual-http/0/park-scene.js"
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/art/detailed-facility-assets.js?root-bootstrap=d2320d5-1378594",
+      "relativePath": "art/detailed-facility-assets.js",
+      "prefix": "",
+      "status": 200,
+      "bytes": 17086,
+      "sha256": "9ca3bf9c26077a2e31a857760c15086b12ce530ba160abb31f207e30723e0cd2",
+      "expectedSHA256": "9ca3bf9c26077a2e31a857760c15086b12ce530ba160abb31f207e30723e0cd2",
+      "retainedFile": "actual-http/0/art/detailed-facility-assets.js"
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/browser-worker.js?root-bootstrap=d2320d5-1378594",
+      "relativePath": "simulation/browser-worker.js",
+      "prefix": "",
+      "status": 200,
+      "bytes": 3294,
+      "sha256": "01e80804d890b57a4d94a0c9b1d9210ef1c461d105717ed749e43b3000eb9e62",
+      "expectedSHA256": "01e80804d890b57a4d94a0c9b1d9210ef1c461d105717ed749e43b3000eb9e62",
+      "retainedFile": "actual-http/0/simulation/browser-worker.js"
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/simulation/protocol.js?root-bootstrap=d2320d5-1378594",
+      "relativePath": "simulation/protocol.js",
+      "prefix": "",
+      "status": 200,
+      "bytes": 42,
+      "sha256": "a4f880302025d29608227a39508403ec1b5c09554bfe0f9fd7db054ecc9d560d",
+      "expectedSHA256": "a4f880302025d29608227a39508403ec1b5c09554bfe0f9fd7db054ecc9d560d",
+      "retainedFile": "actual-http/0/simulation/protocol.js"
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/models/detailed-stalls/burger.glb?root-bootstrap=d2320d5-1378594",
+      "relativePath": "models/detailed-stalls/burger.glb",
+      "prefix": "",
+      "status": 200,
+      "bytes": 8583376,
+      "sha256": "9b646bdd004390fd8c240091d0e85df6bec3def0ba33dfa2826aa4160527ebfe",
+      "expectedSHA256": "9b646bdd004390fd8c240091d0e85df6bec3def0ba33dfa2826aa4160527ebfe",
+      "retainedFile": "actual-http/0/models/detailed-stalls/burger.glb"
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/models/detailed-stalls/soft-drink.glb?root-bootstrap=d2320d5-1378594",
+      "relativePath": "models/detailed-stalls/soft-drink.glb",
+      "prefix": "",
+      "status": 200,
+      "bytes": 8546676,
+      "sha256": "c166d2e28c2be1ab49dec4d26078b26f66a14520ea7a9c011a559d6e6d5a825e",
+      "expectedSHA256": "c166d2e28c2be1ab49dec4d26078b26f66a14520ea7a9c011a559d6e6d5a825e",
+      "retainedFile": "actual-http/0/models/detailed-stalls/soft-drink.glb"
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/build.json?root-bootstrap=d2320d5-1378594",
+      "relativePath": "build.json",
+      "prefix": "",
+      "status": 200,
+      "bytes": 996,
+      "sha256": "3d3b8e0faae3f51c13821029a80f83f3b736a63746f8d66494fd30b444b812b1",
+      "expectedSHA256": "3d3b8e0faae3f51c13821029a80f83f3b736a63746f8d66494fd30b444b812b1",
+      "retainedFile": "actual-http/0/build.json"
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/preview-manifest.json?root-bootstrap=d2320d5-1378594",
+      "relativePath": "preview-manifest.json",
+      "prefix": "",
+      "status": 200,
+      "bytes": 17603,
+      "sha256": "675392b3d11e69b1862173e801bc2fd4c619b1798677cda87faa82625d037f0a",
+      "expectedSHA256": "675392b3d11e69b1862173e801bc2fd4c619b1798677cda87faa82625d037f0a",
+      "retainedFile": "actual-http/0/preview-manifest.json"
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/detailed-stalls-d2320d5/index.html?root-bootstrap=d2320d5-1378594",
+      "relativePath": "index.html",
+      "prefix": "previews/detailed-stalls-d2320d5/",
+      "status": 200,
+      "bytes": 11495,
+      "sha256": "fd88b27beca574ed17a2fb04dfaa08194bb886c386b762667dc8da9a5151ad6a",
+      "expectedSHA256": "fd88b27beca574ed17a2fb04dfaa08194bb886c386b762667dc8da9a5151ad6a",
+      "retainedFile": "actual-http/1/index.html"
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/detailed-stalls-d2320d5/game.js?root-bootstrap=d2320d5-1378594",
+      "relativePath": "game.js",
+      "prefix": "previews/detailed-stalls-d2320d5/",
+      "status": 200,
+      "bytes": 33873,
+      "sha256": "b82b661d8425bd39520a889e19e508cffcd280f5def5d1553a7b442f962dab58",
+      "expectedSHA256": "b82b661d8425bd39520a889e19e508cffcd280f5def5d1553a7b442f962dab58",
+      "retainedFile": "actual-http/1/game.js"
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/detailed-stalls-d2320d5/park-scene.js?root-bootstrap=d2320d5-1378594",
+      "relativePath": "park-scene.js",
+      "prefix": "previews/detailed-stalls-d2320d5/",
+      "status": 200,
+      "bytes": 19290,
+      "sha256": "a91fa8194249d03c5d2885e3822e82e0dffb01ed795ea5d1955ec6028127dc48",
+      "expectedSHA256": "a91fa8194249d03c5d2885e3822e82e0dffb01ed795ea5d1955ec6028127dc48",
+      "retainedFile": "actual-http/1/park-scene.js"
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/detailed-stalls-d2320d5/art/detailed-facility-assets.js?root-bootstrap=d2320d5-1378594",
+      "relativePath": "art/detailed-facility-assets.js",
+      "prefix": "previews/detailed-stalls-d2320d5/",
+      "status": 200,
+      "bytes": 17086,
+      "sha256": "9ca3bf9c26077a2e31a857760c15086b12ce530ba160abb31f207e30723e0cd2",
+      "expectedSHA256": "9ca3bf9c26077a2e31a857760c15086b12ce530ba160abb31f207e30723e0cd2",
+      "retainedFile": "actual-http/1/art/detailed-facility-assets.js"
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/detailed-stalls-d2320d5/simulation/browser-worker.js?root-bootstrap=d2320d5-1378594",
+      "relativePath": "simulation/browser-worker.js",
+      "prefix": "previews/detailed-stalls-d2320d5/",
+      "status": 200,
+      "bytes": 3294,
+      "sha256": "01e80804d890b57a4d94a0c9b1d9210ef1c461d105717ed749e43b3000eb9e62",
+      "expectedSHA256": "01e80804d890b57a4d94a0c9b1d9210ef1c461d105717ed749e43b3000eb9e62",
+      "retainedFile": "actual-http/1/simulation/browser-worker.js"
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/detailed-stalls-d2320d5/simulation/protocol.js?root-bootstrap=d2320d5-1378594",
+      "relativePath": "simulation/protocol.js",
+      "prefix": "previews/detailed-stalls-d2320d5/",
+      "status": 200,
+      "bytes": 42,
+      "sha256": "a4f880302025d29608227a39508403ec1b5c09554bfe0f9fd7db054ecc9d560d",
+      "expectedSHA256": "a4f880302025d29608227a39508403ec1b5c09554bfe0f9fd7db054ecc9d560d",
+      "retainedFile": "actual-http/1/simulation/protocol.js"
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/detailed-stalls-d2320d5/models/detailed-stalls/burger.glb?root-bootstrap=d2320d5-1378594",
+      "relativePath": "models/detailed-stalls/burger.glb",
+      "prefix": "previews/detailed-stalls-d2320d5/",
+      "status": 200,
+      "bytes": 8583376,
+      "sha256": "9b646bdd004390fd8c240091d0e85df6bec3def0ba33dfa2826aa4160527ebfe",
+      "expectedSHA256": "9b646bdd004390fd8c240091d0e85df6bec3def0ba33dfa2826aa4160527ebfe",
+      "retainedFile": "actual-http/1/models/detailed-stalls/burger.glb"
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/detailed-stalls-d2320d5/models/detailed-stalls/soft-drink.glb?root-bootstrap=d2320d5-1378594",
+      "relativePath": "models/detailed-stalls/soft-drink.glb",
+      "prefix": "previews/detailed-stalls-d2320d5/",
+      "status": 200,
+      "bytes": 8546676,
+      "sha256": "c166d2e28c2be1ab49dec4d26078b26f66a14520ea7a9c011a559d6e6d5a825e",
+      "expectedSHA256": "c166d2e28c2be1ab49dec4d26078b26f66a14520ea7a9c011a559d6e6d5a825e",
+      "retainedFile": "actual-http/1/models/detailed-stalls/soft-drink.glb"
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/detailed-stalls-d2320d5/build.json?root-bootstrap=d2320d5-1378594",
+      "relativePath": "build.json",
+      "prefix": "previews/detailed-stalls-d2320d5/",
+      "status": 200,
+      "bytes": 996,
+      "sha256": "3d3b8e0faae3f51c13821029a80f83f3b736a63746f8d66494fd30b444b812b1",
+      "expectedSHA256": "3d3b8e0faae3f51c13821029a80f83f3b736a63746f8d66494fd30b444b812b1",
+      "retainedFile": "actual-http/1/build.json"
+    },
+    {
+      "url": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/detailed-stalls-d2320d5/preview-manifest.json?root-bootstrap=d2320d5-1378594",
+      "relativePath": "preview-manifest.json",
+      "prefix": "previews/detailed-stalls-d2320d5/",
+      "status": 200,
+      "bytes": 17603,
+      "sha256": "675392b3d11e69b1862173e801bc2fd4c619b1798677cda87faa82625d037f0a",
+      "expectedSHA256": "675392b3d11e69b1862173e801bc2fd4c619b1798677cda87faa82625d037f0a",
+      "retainedFile": "actual-http/1/preview-manifest.json"
+    }
+  ],
+  "next": "Sole existing default-Chrome owner may now run bounded affected public root/new frozen preview checks."
+}

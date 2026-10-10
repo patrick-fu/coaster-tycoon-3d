@@ -1,0 +1,48 @@
+{
+  "recordedUTC": "2026-10-10 06:35 UTC",
+  "sourceCommit": "d2320d5e324d548fdba3b30f7d4e0a2d11235466",
+  "sourceTree": "7fbf1a616adbb0ab7ccc238930cc2067569283aa",
+  "buildReadySHA256": "bc4130dfb1727a12c73d45fd74904b5e81e6b4cc6e3d9513da7cdcfa41a745bf",
+  "rawDirectory": "/Volumes/WD/code/workspaces/coaster-consumable-art/evidence/integrated-build-r6/build-r6",
+  "actualFourChildAndSshExit": 0,
+  "moduleTestsPassed": 13,
+  "moduleTestsFailed": 0,
+  "sourceFilesVerified": 792,
+  "shippingFilesVerified": 162,
+  "sourceAndTestsUnchanged": true,
+  "baselineSourceAndShippingUnmodified": true,
+  "changedShippingAgainst27b": [
+    "game.js"
+  ],
+  "unchangedShippingAgainst27b": 161,
+  "loaderSHA256": "9ca3bf9c26077a2e31a857760c15086b12ce530ba160abb31f207e30723e0cd2",
+  "gameSHA256": "b82b661d8425bd39520a889e19e508cffcd280f5def5d1553a7b442f962dab58",
+  "actualNodeRulesSHA256": "b123fee6c14e7b2df2b32b694639258a721f43a9552046d636f651c0af2d3fcb",
+  "versions": {
+    "save": 13,
+    "content": 6,
+    "protocol": 6
+  },
+  "postbuildAuditSHA256": "f27ffd1add13a0af1d3edf7dd4548b1da29fc8357c4b498ab33e1fb9f0c2f38a",
+  "recordedKnownFiveBuildPidsAbsent": true,
+  "retainedRawSHA256": {
+    "actual-receiver.launch.json": "4d39db1db3c36f106514eff6ba80012991d0c98cb2afd43a716819675a40145f",
+    "actual-receiver.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "actual-receiver.stdout": "5c825ac7b3a9266bf5e36832c13e1588f31007e0187d015bd22a75604c24a67d",
+    "build-ready.json": "bc4130dfb1727a12c73d45fd74904b5e81e6b4cc6e3d9513da7cdcfa41a745bf",
+    "module-controls.launch.json": "d0b337d0399a64080047b3365cbc6e168294efaddb0b539de0dfa3e4883815da",
+    "module-controls.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "module-controls.stdout": "5234b649b2ab08998b9dec4d22838c8758d89f5f26d0cbfb9ec868f0600de64b",
+    "prepare-source.launch.json": "06c82742d3d149129f203126e61d0af61848d4a0e042bbfeaa05bd1e99628f93",
+    "prepare-source.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "prepare-source.stdout": "aa68a3321e62a77ff9ed9cbb8bb44d633d18e6cf70b45cce705b8a2ae9f8dcd6",
+    "root-postbuild-audit.json": "f27ffd1add13a0af1d3edf7dd4548b1da29fc8357c4b498ab33e1fb9f0c2f38a",
+    "run-integrated-build.py": "9217af84552aaae56b6f2f7c23ae21c4c9dc0795c974bae9d844e5b16d187397",
+    "source-prepare-receipt.json": "798a13fde2a487f760381a68c0ea4e6ea2d0221847435b48ecb16a290d1edcc1",
+    "terminal.json": "8d2e31cfd7d4ae5f26ef6b5f468ddc2c26048dcdda4c5f34a60be4921d290c09",
+    "web-build.launch.json": "4c5a536ee20a8a04b3d8cb9ad56897aef807afea06a6d66bd0b861fbe419069e",
+    "web-build.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "web-build.stdout": "120b133d25a41fc01f174dbb1129e91fbbc95e7d931def7b534c319a71105eb4"
+  },
+  "scope": "Compile and 13 meaningful module controls accepted. Real explicit-undefined storage controls, fixed native final identity, affected public and two each cumulative review rounds remain pending. Human, representative GPU and full programme remain open."
+}

@@ -1,0 +1,10 @@
+{
+  "recordedUTC": "2026-10-10T00:37:53.684268+00:00",
+  "operation": "Root local file-I/O extraction of already hash-verified r4 evidence archive",
+  "actualExit": 1,
+  "failure": "TypeError: extractall() got an unexpected keyword argument 'filter'",
+  "pythonVersion": "3.9.6",
+  "actualExtractallSignature": "(self, path='.', members=None, *, numeric_owner=False)",
+  "sideEffects": "Archive member paths/types were checked; unsupported call failed before extraction. No source/runtime/browser mutation.",
+  "disposition": "Use installed API extractall(path) only after explicit absolute/parent/symlink/type/manifest/no-overwrite guard; retain first failure."
+}

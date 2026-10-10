@@ -1,0 +1,10 @@
+{
+  "recordedUTC": "2026-10-10 06:35 UTC",
+  "rawDirectory": "/Volumes/WD/code/workspaces/coaster-detailed-stalls-browser/blob-url-r1/retained-r1",
+  "manifestSHA256": "27ddb867dacf47a4e4428ea0b719885b71af4e23679e96a72255ca1548ee01fd",
+  "payloadsVerifiedEncodedAndDecoded": 175,
+  "logicalBytes": 186814957,
+  "retainedBytes": 137877039,
+  "allExact": true,
+  "scope": "Full lossless readback includes failed first app driver, separate neutral recovery, successful native control and actual old leak. Sidecar final closure/report consumption remains separate."
+}

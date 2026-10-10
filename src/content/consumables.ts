@@ -52,8 +52,9 @@ export function productRule(id:unknown,rules:Rules):ProductRule{
 
 export function facilityProduct(content:ContentIdentity,rules:Rules):{id:ProductId,rule:ProductRule}|null{
  const {construction:c,operation:o}=resolveContent(content).capabilities;
- if(c.kind!=='facility'||c.profileId!==commerceProfileId)return null;
- ensure(o.kind==='service'&&o.profileId===commerceProfileId&&o.productId===c.productId&&productService(c.productId)===c.service,'INVALID_CONTENT','Facility product capabilities disagree.');
+ if(c.kind!=='facility')return null;
+ if(c.profileId==='independent-services-v1'){ensure(o.kind==='service'&&o.profileId===c.profileId&&o.service===c.service,'INVALID_CONTENT','Facility service capabilities disagree.');return null;}
+ ensure((c.profileId===commerceProfileId||c.profileId==='independent.detailed-stalls-v1')&&o.kind==='service'&&o.profileId===commerceProfileId&&o.productId===c.productId&&o.service===c.service&&productService(c.productId)===c.service,'INVALID_CONTENT','Facility product capabilities disagree.');
  return{id:c.productId,rule:productRule(c.productId,rules)};
 }
 

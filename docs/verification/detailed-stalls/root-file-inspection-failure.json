@@ -1,0 +1,7 @@
+{
+  "actualExit": 1,
+  "classification": "Root file-only schema assumption",
+  "cause": "complete retention jsonGzipRecords is a count, not a record list",
+  "correction": "Use the actual common-file manifest to enumerate148 gzip files and verify bytes/decode/parse; compare the122 declared index records directly",
+  "runtimeReplayed": false
+}

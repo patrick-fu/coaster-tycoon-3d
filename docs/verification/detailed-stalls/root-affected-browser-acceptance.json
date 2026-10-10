@@ -1,0 +1,121 @@
+{
+  "recordedUTC": "2026-10-10T02:00:32.511235+00:00",
+  "sourceCommit": "7ab4d7e35bc2d4d07456b00d5aaaafe122eb105d",
+  "acceptedFor": "Affected palette/cardinal-state-picking, native cancellation/disposal and unchanged-proof reuse only; final metal appearance/public/cumulative/GPU/human remain pending",
+  "browserReady": {
+    "path": "/Volumes/WD/code/workspaces/coaster-detailed-stalls-browser/browser-ready-7ab.json",
+    "sha256": "d0602afa2321dbbd2c5aef5efe0f068a88413ed4d31c7811ca0058341f738c82",
+    "sourceFiles": 767,
+    "shippingFiles": 162,
+    "actualChromeRulesSHA256": "78b58b23912d6653fde12fbd57249a5a67182867f354edd76c7a4e58fd17fc50",
+    "actualNodeRulesSHA256": "b123fee6c14e7b2df2b32b694639258a721f43a9552046d636f651c0af2d3fcb"
+  },
+  "retention": {
+    "manifest": "/Volumes/WD/code/workspaces/coaster-detailed-stalls-browser/retained-affected-7ab-r1/retention-manifest.json",
+    "sha256": "d77e60dfce2b7ee81d8c2c2fc863008d161f00d54c7e9fc9e6756fd0820a36d3",
+    "logicalFiles": 366,
+    "logicalBytes": 392594712,
+    "uniquePayloads": 366,
+    "encodedAndDecodedAllExact": true
+  },
+  "resourceRawSHA256": "39c0797e11993e7fca5bc38a93213d28b2c63d7a3fe576c5babeaef4a88a1e85",
+  "actualFiveCases": [
+    {
+      "name": "actual qualified parse and idempotent complete release",
+      "status": {
+        "ready": false,
+        "error": null,
+        "disposed": true,
+        "geometries": 0,
+        "materials": 0,
+        "textures": 0,
+        "bitmaps": 0
+      },
+      "observedObjects": {
+        "geometries": 67,
+        "materials": 72,
+        "textures": 30,
+        "bitmaps": 30
+      },
+      "everyReleaseExactlyOnce": true
+    },
+    {
+      "name": "actual asset HTTP503 / partial sibling decode / no primitive fallback",
+      "status": {
+        "ready": false,
+        "error": "Detailed facility burger model returned HTTP 503.",
+        "disposed": true,
+        "geometries": 0,
+        "materials": 0,
+        "textures": 0,
+        "bitmaps": 0
+      },
+      "observedObjects": {
+        "geometries": 36,
+        "materials": 33,
+        "textures": 15,
+        "bitmaps": 15
+      },
+      "everyReleaseExactlyOnce": true
+    },
+    {
+      "name": "cancellation after actual HTTP fetch / real late completion",
+      "status": {
+        "ready": false,
+        "error": null,
+        "disposed": true,
+        "geometries": 0,
+        "materials": 0,
+        "textures": 0,
+        "bitmaps": 0
+      },
+      "observedObjects": {
+        "geometries": 0,
+        "materials": 0,
+        "textures": 0,
+        "bitmaps": 0
+      },
+      "everyReleaseExactlyOnce": true
+    },
+    {
+      "name": "cancellation during native image decode / late bitmap completion",
+      "status": {
+        "ready": false,
+        "error": null,
+        "disposed": true,
+        "geometries": 0,
+        "materials": 0,
+        "textures": 0,
+        "bitmaps": 0
+      },
+      "observedObjects": {
+        "geometries": 0,
+        "materials": 24,
+        "textures": 30,
+        "bitmaps": 30
+      },
+      "everyReleaseExactlyOnce": true
+    },
+    {
+      "name": "one explicit native-image decode rejection / complete partial release",
+      "status": {
+        "ready": false,
+        "error": "Detailed facility texture could not decode.",
+        "disposed": true,
+        "geometries": 0,
+        "materials": 0,
+        "textures": 0,
+        "bitmaps": 0
+      },
+      "observedObjects": {
+        "geometries": 36,
+        "materials": 46,
+        "textures": 29,
+        "bitmaps": 29
+      },
+      "everyReleaseExactlyOnce": true
+    }
+  ],
+  "affectedR1FailedAttemptPreserved": true,
+  "scope": "Root file-I/O/hash/raw-result acceptance, all actual runtime ran on Grok. No Mac runtime or human/GPU/public assertion."
+}

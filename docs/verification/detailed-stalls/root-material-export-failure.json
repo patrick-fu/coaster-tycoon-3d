@@ -1,0 +1,72 @@
+{
+  "recordedUTC": "2026-10-10T00:29:26.857093+00:00",
+  "sourceCommit": "689296ae1481d364e7f7d326cdacb6d715e01a73",
+  "disposition": "Confirmed actual exported-palette discrepancy; candidate cannot receive final representative-art/public acceptance until material-only repair and affected browser/resource checks. Independent diagnosis follows before repair integration.",
+  "observed": {
+    "burger": "Accepted Blender warm cream siding and terracotta roof appear raw brown boards and dark gray tile in actual Chrome.",
+    "softDrink": "Accepted cream/teal palette appears raw brown boards and dark gray roof in actual Chrome.",
+    "structuralCauseCandidate": "Both authoring modules insert ShaderNodeMix on Principled Base Color; exported tinted roof material contains source texture and no baseColorFactor tint."
+  },
+  "actualRuntimePngs": {
+    "detailed-eight-overview.png": {
+      "bytes": 1494637,
+      "sha256": "d4370bd94d62811d017f946fda3e8c86768ba115289afc712dd87075bf568469"
+    },
+    "pose-drink-direction-0-closed.png": {
+      "bytes": 1630923,
+      "sha256": "0571d74d774ade2961c2919c58c5734d0a1e1899a5b364ff58689a36fce94439"
+    },
+    "pose-drink-direction-0-open.png": {
+      "bytes": 1651265,
+      "sha256": "24c14210b9ab980aa3468dd06775fc50cf2e158a7b808d2a4b4037eb5153c1fa"
+    },
+    "pose-food-direction-0-closed.png": {
+      "bytes": 1602616,
+      "sha256": "038bcc3c3413dd3f9da5ac3d44776bbdedeb8d8004ca4cee710e648afda0222b"
+    },
+    "pose-food-direction-0-open.png": {
+      "bytes": 1625343,
+      "sha256": "b8a42dc1092c2287dce8f3515a1fdb54dc92f5fb3960c3729cb499e6afb3d6b2"
+    }
+  },
+  "gltfRoofMaterials": {
+    "burger": [
+      {
+        "doubleSided": true,
+        "name": "roof_terracotta",
+        "normalTexture": {
+          "index": 12,
+          "scale": 0.4000000059604645
+        },
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 13
+          },
+          "metallicFactor": 0,
+          "metallicRoughnessTexture": {
+            "index": 14
+          }
+        }
+      }
+    ],
+    "soft-drink": [
+      {
+        "doubleSided": true,
+        "name": "roof_teal",
+        "normalTexture": {
+          "index": 12,
+          "scale": 0.4000000059604645
+        },
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 13
+          },
+          "metallicFactor": 0,
+          "metallicRoughnessTexture": {
+            "index": 14
+          }
+        }
+      }
+    ]
+  }
+}

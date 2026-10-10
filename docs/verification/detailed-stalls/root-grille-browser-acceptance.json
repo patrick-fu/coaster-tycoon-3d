@@ -1,0 +1,93 @@
+{
+  "recordedUTC": "2026-10-10 04:38 UTC",
+  "sourceSHA256": "04c03cfd3eba1cf717ea96db44eddcb40f270ed8426a6e8fed2b521efe0bbda4",
+  "glbSHA256": "c166d2e28c2be1ab49dec4d26078b26f66a14520ea7a9c011a559d6e6d5a825e",
+  "codeCandidate": "f535f199682957830d512a213f606e38b5d494de",
+  "rawDirectory": "/Volumes/WD/code/workspaces/coaster-consumable-art/evidence/grille-browser-early",
+  "selectedManifestSHA256": "496168135f9f86fb6c3d2dac127a7cd5156d9d8a01bbaa775f8619a37c457061",
+  "rootAll26SelectedFilesExact": true,
+  "rootActualSemanticChecks": {
+    "originalFloatAndNineRaysNearestDarkAndPositiveMetalDistance": true,
+    "all7PixelsPass": true,
+    "all15NativeMapBindingsExact": true,
+    "threeRealPosesUnitExclusiveAndOriginalPointer": true,
+    "completeAuthorityRows": [
+      {
+        "stage": "new-open-off",
+        "file": "authority-new-open-off.json",
+        "bytes": 777197,
+        "sha256": "5d34d86c6342d4670013ead2f07ce4eae9fd6a19d7319a3c5cddeb4e7b7d6cd1",
+        "wholeSaveEqual": true
+      },
+      {
+        "stage": "new-open-scoped",
+        "file": "authority-new-open-scoped.json",
+        "bytes": 777197,
+        "sha256": "5d34d86c6342d4670013ead2f07ce4eae9fd6a19d7319a3c5cddeb4e7b7d6cd1",
+        "wholeSaveEqual": true
+      },
+      {
+        "stage": "new-open-recovered-off",
+        "file": "authority-new-open-recovered-off.json",
+        "bytes": 777197,
+        "sha256": "5d34d86c6342d4670013ead2f07ce4eae9fd6a19d7319a3c5cddeb4e7b7d6cd1",
+        "wholeSaveEqual": true
+      },
+      {
+        "stage": "pose-open",
+        "file": "authority-pose-open.json",
+        "bytes": 777197,
+        "sha256": "5d34d86c6342d4670013ead2f07ce4eae9fd6a19d7319a3c5cddeb4e7b7d6cd1",
+        "wholeSaveEqual": true
+      },
+      {
+        "stage": "pose-closed",
+        "file": "authority-pose-closed.json",
+        "bytes": 777198,
+        "sha256": "077e36dbd3ed593c96663baec812057cd3f032ad1b474d1ea84ad54cb7cd9595",
+        "wholeSaveEqual": true
+      },
+      {
+        "stage": "pose-reopened",
+        "file": "authority-pose-reopened.json",
+        "bytes": 777197,
+        "sha256": "72445296939ae95209d76f59dc4f7a1e9e40a6c93a268ca1fe45b36f3701ae53",
+        "wholeSaveEqual": true
+      }
+    ],
+    "separateNeutralRecoveryOriginalDBExact": true,
+    "poseTailOriginalDBExact": true,
+    "all26RecordedOwnedPidsAbsentAndPortsClosed": true
+  },
+  "actuallyViewedPNGs": {
+    "runtime-r1/local/new-open-scoped.png": "120743a324f0d54847ad523d034541322836def8dc7b581d014f73cb9a043424",
+    "runtime-r2-pose-tail/local/pose-closed.png": "579eb85dea1dd423e631a2a79906258788c87558d61da7e05d967a0ce2c6f923"
+  },
+  "rootVisualObservation": "Actual open and closed browser views preserve cream/teal roof/sign/can/counter and exclusive shutter appearance; metal/brass are visible. No human/original style agreement asserted.",
+  "failureRetained": "Original first runtime child/SSH1 from driver URL variable shadowing and blocked DB cleanup; separate neutral recovery0 and remaining pose-tail0 do not rewrite it.",
+  "closureLimitation": "Neutral recovery did not capture its complete pretermination child tree. Audit checks recorded PIDs/log PIDs only; no unknown-tree completeness claim.",
+  "gate": "Bounded source/asset/native pixel/pose/whole-authority plus complete407 retained proof accepted for draft release preparation. Fresh canonical/public/cumulative/hardware/human acceptance remains open.",
+  "fullOwnerRetention": {
+    "directory": "/Volumes/WD/code/workspaces/coaster-detailed-stalls-browser/grille-r1-browser/retained-r1",
+    "logicalFiles": 407,
+    "logicalBytes": 153497439,
+    "encodedBytes": 107284549,
+    "manifestSHA256": "a3f18923e661a501f4351585f3e9b227c65e1ad4f6984a9af3d1267fa7c8101d",
+    "checksSHA256": "ba64d832a6ca67f830494b82e667ef1d90e5b48cf22324b9c44d6a79cccf2ed1",
+    "rootAll407EncodedDecodedExact": true,
+    "terminalToolClosureSHA256": "52df2860fa3ffa0ba67073b9d8f7afa5fc2d84b74766e659d61073d51c59e4cc",
+    "all29RecordedOwnedPriorPidsAbsent": true,
+    "helper1109334SeparatelyReportedAbsent": true,
+    "overlayReadySHA256": "e5b09190b1ac069991657b4f14eb90578ceaf7007d3ba358e056f8d9e746b1ab",
+    "reportSHA256": "6d33dbb95b1985d741895ddf62d36b8d01a5ed65cbb414b63b9dc30ec5befd13",
+    "observationsSHA256": "0f37983d348fa63790074f9a93ee9f850f19d7183df4d927c8d0fa0b0d665953",
+    "completeAuthorityIndexSHA256": "bf37666992b34dc9bd359a7a1b6e8a6769ad1e2f184ae9124d6483ff697e929b",
+    "supplement": {
+      "directory": "/Volumes/WD/code/workspaces/coaster-detailed-stalls-browser/grille-r1-browser/supplement-r1",
+      "logicalFiles": 51,
+      "logicalBytes": 48660,
+      "manifestSHA256": "f0428ea9d2fcc84a633bb75b7f3a4f29516f31f9b75e85819b8363ecf9fc92d6",
+      "all51RootEncodedDecodedExact": true
+    }
+  }
+}

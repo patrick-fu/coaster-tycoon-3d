@@ -1,0 +1,41 @@
+{
+  "recordedUTC": "2026-10-10T00:24:15.836313+00:00",
+  "sourceCommit": "689296ae1481d364e7f7d326cdacb6d715e01a73",
+  "browserReadySha256": "0434a3e6ec8bd388c8ff8c7c4d994d000b97981773fd419218280bfa43c0b7bc",
+  "attempt": "local-r3",
+  "actualResultSha256": "c2806fc17b8404e3b9f2ad024a8c7e47b9be010f6311e7f92360ad9708044767",
+  "actualBuildEvidenceSha256": "40d77498eec59ac2c651fcdd349c1f2b7f237fb17273791e8e67a8e93cf15dd6",
+  "outerExit": 1,
+  "stderrBytes": 0,
+  "actualRootRawRead": {
+    "authoritySide": 48,
+    "terrainLength": 65536,
+    "fixed256TileHeight": 32,
+    "water": 0,
+    "incorrectUsableSideTileHeight": 16,
+    "cashDelta": 200,
+    "facilityId": 0,
+    "instanceId": 1,
+    "nextInstanceMatched": true,
+    "originalRecordsRestored": true,
+    "cleanupFailure": null
+  },
+  "disposition": "Isolated acceptance driver indexed serialized terrain by usableSide48 instead of fixed256. Production source unchanged; local-r3 remains failed. Corrected local-r4 is separate and still running.",
+  "qualifiedScope": "First real detailed food direction0 quote/build and failure diagnosis only; no full detailed, paid, storage, resource, public or hardware/human acceptance.",
+  "wdRetention": {
+    "localR3Files": 101,
+    "keyRawSha256Matched": 3,
+    "actualScpSessions": [
+      86994,
+      65293
+    ],
+    "actualScpExits": [
+      0,
+      0
+    ],
+    "wrapperExitConfirmed": 1,
+    "blankStderrConfirmed": true,
+    "authorityDiagnosisIndependentlyRechecked": true,
+    "directory": "/Volumes/WD/code/workspaces/coaster-consumable-art/browser-evidence/local-r3"
+  }
+}

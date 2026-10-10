@@ -1,0 +1,22 @@
+{
+  "recordedUTC": "2026-10-10 06:37 UTC",
+  "ownedRunnerAndCliAbsent": true,
+  "noOpenFileOwners": true,
+  "exactDuplicateFiles": [
+    {
+      "path": "/var/folders/5c/f170nvbx6t7105zg26q08zvh0000gn/T/coaster-showcase-agy-r1-tm46r3g6/stdout.jsonl",
+      "retainedPath": "/Volumes/WD/code/workspaces/coaster-classic-showcase-design-r1/evidence/agy-r1/stdout.jsonl",
+      "bytes": 140808,
+      "sha256": "ca8ddee15f34bdd2258dda18f4783715884ca09570ab5a1438f789f45e8b0cfb"
+    },
+    {
+      "path": "/var/folders/5c/f170nvbx6t7105zg26q08zvh0000gn/T/coaster-showcase-agy-r1-tm46r3g6/stderr.log",
+      "retainedPath": "/Volumes/WD/code/workspaces/coaster-classic-showcase-design-r1/evidence/agy-r1/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "bytesFreed": 140808,
+  "captureDirectoryRemoved": true,
+  "scope": "Only two exact duplicate temporary AGY read-only captures removed; WD raw/tool evidence, proposal and readonly snapshots retained."
+}

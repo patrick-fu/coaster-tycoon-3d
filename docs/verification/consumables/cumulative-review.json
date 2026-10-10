@@ -93,8 +93,7 @@
   ],
   "wholeFiniteClosureQualified": true,
   "remainingGates": [
-    "Final proof/current-context commit and single source integration",
-    "Finite issue73 resolution after integration"
+    "Finite issue73 resolution and scoped map pointer"
   ],
   "broaderUnqualified": [
     "Direct original numerical/art agreement",
@@ -107,5 +106,14 @@
     "Design": 2,
     "Drift": 2
   },
-  "unresolvedVerifiedP0P1P2": 0
+  "unresolvedVerifiedP0P1P2": 0,
+  "sourceIntegration": {
+    "pullRequest": "https://github.com/patrick-fu/coaster-tycoon-3d/pull/74",
+    "qualifiedHead": "6a4d74c2b9718bb0f7f9eee7b6e8a12394ca900e",
+    "mergeCommit": "1373dbd2ff302cfe6e5a1404d09a143ea356a26a",
+    "mergedUTC": "2026-10-09T20:06:10Z",
+    "canonicalAdoptionActualExit": 0,
+    "canonicalClean": true,
+    "canonicalTreeMatchesQualifiedHead": true
+  }
 }

@@ -6,6 +6,7 @@ import {createHash} from 'node:crypto';
 import {Engine} from '../dist/simulation/index.js';
 import {initialWorld} from '../dist/content/steel-coaster.js';
 import {withConsumablesProfile} from '../dist/content/consumables.js';
+import {withDetailedStallsProfile} from '../dist/content/facility-profiles.js';
 import {beforeCommerceState,beforeCommerceView} from './consumables-fixtures.mjs';
 import {apply} from './fixtures.mjs';
 
@@ -19,8 +20,8 @@ function oldView(view){
  copy.commandRevision='<SESSION>:<RESTORE_GENERATION>:'+token[2];return copy;
 }
 
-for(const c of frozen.cases)for(const commerce of [false,true])for(const batch of [17,1200])test('actual old v11 '+c.id+' retains complete running authority and view with commerce '+commerce+' and '+batch+' tick batches',()=>{
- const receiver=JSON.parse(c.rulesText),engine=new Engine(initialWorld,commerce?withConsumablesProfile(receiver):receiver);
+for(const c of frozen.cases)for(const [commerce,detailed] of [[false,false],[true,false],[true,true]])for(const batch of [17,1200])test('actual old v11 '+c.id+' retains complete running authority and view with commerce '+commerce+' detailed '+detailed+' and '+batch+' tick batches',()=>{
+ const receiver=JSON.parse(c.rulesText),selected=commerce?withConsumablesProfile(receiver):receiver,engine=new Engine(initialWorld,detailed?withDetailedStallsProfile(selected):selected);
  assert.deepEqual(engine.restoreSave(c.initialAuthority),{ok:true,value:undefined});assert.equal(JSON.stringify(beforeCommerceState(engine.snapshot())),c.initialAuthority);
  apply(engine,c.unpauseCommand.command);assert.equal(JSON.stringify(beforeCommerceState(engine.snapshot())),c.initialPostCommandAuthority);
  let previous=0;

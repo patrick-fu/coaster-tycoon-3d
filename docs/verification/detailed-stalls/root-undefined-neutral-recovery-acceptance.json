@@ -1,0 +1,15 @@
+{
+  "recordedUTC": "2026-10-10 07:32 UTC",
+  "rawDirectory": "/Volumes/WD/code/workspaces/coaster-detailed-stalls-browser/storage-undefined-r1/early-neutral-r1",
+  "resultSHA256": "652acf575f51cada780400f2ca5a0aee18c7690868aa2eb4b565935e8456c432",
+  "completeOriginalAndRestoredInventorySHA256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+  "originalDatabaseCount": 0,
+  "actualChildExit": 0,
+  "blankStderr": true,
+  "fullOwnedTrees": 3,
+  "all12KnownDescendantsAbsent": true,
+  "portsClosed": true,
+  "neutralRunnerPostWaitAbsent": true,
+  "actualSCPExit": 0,
+  "scope": "Independent neutral recovery consumed; original UIr1 child1/restorefalse remains unchanged. Corrected UIr2 fullproof/outer SSH/retention remain pending Root consumption."
+}

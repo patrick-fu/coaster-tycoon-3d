@@ -1,0 +1,21 @@
+{
+  "qualifiedUTC": "2026-10-10T00:08:12.483528+00:00",
+  "sourceCommit": "689296ae1481d364e7f7d326cdacb6d715e01a73",
+  "nodeBuildReadySha256": "42ccf4643f44fd8cc276eb9f15a681db21847fa6f13fe24e67688d097255fd6b",
+  "browserReadySha256": "0434a3e6ec8bd388c8ff8c7c4d994d000b97981773fd419218280bfa43c0b7bc",
+  "nodeReceivingRulesSha256": "b123fee6c14e7b2df2b32b694639258a721f43a9552046d636f651c0af2d3fcb",
+  "browserReceivingRulesSha256": "78b58b23912d6653fde12fbd57249a5a67182867f354edd76c7a4e58fd17fc50",
+  "browser": {
+    "Browser": "Chrome/155.0.8059.39",
+    "Protocol-Version": "1.3",
+    "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+    "V8-Version": "15.5.35.20",
+    "WebKit-Version": "537.36 (@3ff7ac5a9224be9156d7f8703a06e22890aafd34)"
+  },
+  "workerSha256": "01e80804d890b57a4d94a0c9b1d9210ef1c461d105717ed749e43b3000eb9e62",
+  "parsedModuleCount": 96,
+  "oldV12ProjectionSha256": "57cc1b924785a73d53b29f08d6030986b30c5956d62e1c8c024bccbbeebcabc4",
+  "reviewDisposition": "DesignSol and DriftLuna terminal consumed; necessary failure/blocked/recovery chronology amendment independently re-reviewed and closed",
+  "history": "local-r2 remains failed; original42cc/Node corpus retained; neutral-only restoration is separate",
+  "scope": "Integrated source689/build/module-controls plus explicit actual Chrome155/V8 15.5.35.20 receiver binding; detailed/browser migration/resource/public/GPU/human qualification still pending"
+}

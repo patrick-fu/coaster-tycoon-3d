@@ -1,0 +1,166 @@
+{
+  "recordedUTC": "2026-10-10 04:49 UTC",
+  "sourceCommit": "e9159150f0828cddd38ae95f740c7e1601b4b481",
+  "sourceTree": "a84e6d25515e3f1bb1b32578499cd1874cc5334f",
+  "buildReady": "/Volumes/WD/code/workspaces/coaster-consumable-art/evidence/integrated-build-r4/build-ready.json",
+  "buildReadySHA256": "2d51cba17f0b64460d329699dc3df5c529d1aa498612ad730dc8c0356420bfb7",
+  "actualRemoteAndSshOuterExit": 0,
+  "childRuns": [
+    {
+      "phase": "prepare-source",
+      "childPid": 1109296,
+      "actualExit": 0,
+      "stderrBytes": 0
+    },
+    {
+      "phase": "web-build",
+      "childPid": 1109301,
+      "actualExit": 0,
+      "stderrBytes": 0
+    },
+    {
+      "phase": "module-controls",
+      "childPid": 1109382,
+      "actualExit": 0,
+      "stderrBytes": 0
+    },
+    {
+      "phase": "actual-receiver",
+      "childPid": 1109421,
+      "actualExit": 0,
+      "stderrBytes": 0
+    }
+  ],
+  "sourceFilesVerified": 788,
+  "old778SourceUnmodified": true,
+  "shippingFilesVerified": 162,
+  "actualModuleTests": {
+    "passed": 13,
+    "failed": 0
+  },
+  "changedShippingAgainstF535": [
+    "models/detailed-stalls/README.md",
+    "models/detailed-stalls/material-provenance.json",
+    "models/detailed-stalls/soft-drink.glb",
+    "models/detailed-stalls/source-manifest.json"
+  ],
+  "unchangedShippingAgainstF535": 158,
+  "nodeReceivingRulesSHA256": "b123fee6c14e7b2df2b32b694639258a721f43a9552046d636f651c0af2d3fcb",
+  "versions": {
+    "save": 13,
+    "content": 6,
+    "protocol": 6
+  },
+  "postbuildAudit": {
+    "helperPid": 1111140,
+    "sourceFilesVerified": 788,
+    "shippingFilesVerified": 162,
+    "old778SourceVerifiedUnchanged": 778,
+    "ownedBuildPids": [
+      {
+        "pid": 1109292,
+        "exists": false
+      },
+      {
+        "pid": 1109296,
+        "exists": false
+      },
+      {
+        "pid": 1109301,
+        "exists": false
+      },
+      {
+        "pid": 1109382,
+        "exists": false
+      },
+      {
+        "pid": 1109421,
+        "exists": false
+      }
+    ],
+    "allExact": true
+  },
+  "browserToFreshCanonical": {
+    "browserOverlayReadySHA256": "e5b09190b1ac069991657b4f14eb90578ceaf7007d3ba358e056f8d9e746b1ab",
+    "all159RuntimeEffectiveShippingPinsEqual": true,
+    "onlyThreeAssetDocumentationDifferences": [
+      "models/detailed-stalls/README.md",
+      "models/detailed-stalls/material-provenance.json",
+      "models/detailed-stalls/source-manifest.json"
+    ],
+    "browserRulesRemainSeparateExact78b": true,
+    "workerParsedBodyUnchanged": true
+  },
+  "retainedRawDirectory": "/Volumes/WD/code/workspaces/coaster-consumable-art/evidence/integrated-build-r4",
+  "retainedRaw": {
+    "actual-receiver.launch.json": {
+      "bytes": 1063,
+      "sha256": "d32d7301fc930934e4f8b54c34069893f7c39656a2ff6ec5ac6bd81942c96ad6"
+    },
+    "actual-receiver.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "actual-receiver.stdout": {
+      "bytes": 140,
+      "sha256": "5c825ac7b3a9266bf5e36832c13e1588f31007e0187d015bd22a75604c24a67d"
+    },
+    "build-ready.json": {
+      "bytes": 119075,
+      "sha256": "2d51cba17f0b64460d329699dc3df5c529d1aa498612ad730dc8c0356420bfb7"
+    },
+    "module-controls.launch.json": {
+      "bytes": 388,
+      "sha256": "e471d84c63bb0920406416663cc31a50e6954e785f172fe029944c8a3ab346a7"
+    },
+    "module-controls.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "module-controls.stdout": {
+      "bytes": 2459,
+      "sha256": "2ded1f97f266fc2b76182bb289d550da4392344a4ae0faabe7afe5bea6ee0090"
+    },
+    "prepare-source.launch.json": {
+      "bytes": 300,
+      "sha256": "b09d0796d60f47334af592895b51cd99ec95462d6b8ef14dc58c90fa78e013eb"
+    },
+    "prepare-source.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "prepare-source.stdout": {
+      "bytes": 1725,
+      "sha256": "bfb0fa5e88e939bc0a90ab7a23b5a7de2b29ec408c42b011e2f56747cb079c04"
+    },
+    "root-postbuild-audit.json": {
+      "bytes": 460,
+      "sha256": "de832a15852f719550df75aeff8e3c0799dbb0553d3f65136ce6d2b356766f20"
+    },
+    "run-integrated-build.py": {
+      "bytes": 5043,
+      "sha256": "ce602c0149a308cdffdc31766617664ea53c778913f5f14df36abf3b12c5f894"
+    },
+    "source-prepare-receipt.json": {
+      "bytes": 1829,
+      "sha256": "f58d14e4208262846062c586cd3242afd33fe9f1f618f1d4a8964c00182c4901"
+    },
+    "terminal.json": {
+      "bytes": 3591,
+      "sha256": "947f6e78e8eb0d8b3ff8302d0add198374a813e1196367211bf9f3d7d960cc45"
+    },
+    "web-build.launch.json": {
+      "bytes": 252,
+      "sha256": "2b3c9b28fb8ee396ffffde3fa356d6907b50b81c012896cd7294f115207aebdd"
+    },
+    "web-build.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "web-build.stdout": {
+      "bytes": 141,
+      "sha256": "120b133d25a41fc01f174dbb1129e91fbbc95e7d931def7b534c319a71105eb4"
+    }
+  },
+  "scope": "Fresh immutable final-asset compile/modules/full source and shipping correspondence accepted; affected actual browser proof159 effective bytes exact. Fullpublicroot/pin/cumulative/hardware/human open."
+}

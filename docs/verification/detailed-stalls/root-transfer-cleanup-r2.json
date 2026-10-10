@@ -1,0 +1,19 @@
+{
+  "recordedUTC": "2026-10-10T01:40:12.399309+00:00",
+  "removedPath": "/Volumes/WD/code/workspaces/coaster-consumable-art/browser-evidence/coaster-detailed-stalls-root-retention-r4/local-r4.tar.gz",
+  "removedBytes": 143245293,
+  "sha256": "64a5cc9a8bb03a453f0c6adea4c82f3494c8e0d272c9a631892127c3b940cb1e",
+  "operation": "Remove only a duplicate task-owned transfer archive after all381 extracted files rehashed exact and no open file owner",
+  "rawRetainedRoot": "/Volumes/WD/code/workspaces/coaster-consumable-art/browser-evidence/local-r4",
+  "retainedManifest": "/Volumes/WD/code/workspaces/coaster-consumable-art/browser-evidence/coaster-detailed-stalls-root-retention-r4/retention.json",
+  "retainedFileCount": 381,
+  "retainedRawBytes": 507810982,
+  "independentlyRetainedCurrentBrowserManifest": "/Volumes/WD/code/workspaces/coaster-detailed-stalls-browser/retained-current-689-r1/retention-manifest-final-r2.json",
+  "recordedArchiveProcessesAbsent": [
+    969919,
+    969920
+  ],
+  "lsofActualExit": 1,
+  "failedAttemptsUnmodified": true,
+  "globalCachesAndMastersUnmodified": true
+}

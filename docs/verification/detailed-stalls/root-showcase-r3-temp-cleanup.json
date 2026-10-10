@@ -1,0 +1,33 @@
+{
+  "utc": "2026-10-10T09:33:44.274009+00:00",
+  "scope": "Exact duplicated AGY r3 temporary captures only. Retained incomplete timeout/raw/diff/candidate stay immutable.",
+  "files": [
+    {
+      "temporary": "/var/folders/5c/f170nvbx6t7105zg26q08zvh0000gn/T/coaster-showcase-visual-agy-r3-4avkazo5/stderr.log",
+      "retained": "/Volumes/WD/code/workspaces/coaster-classic-showcase-visual-r1/evidence/agy-r3/stderr.log",
+      "bytes": 79,
+      "sha256": "66fac1db5ea5f11626c447224fa91de55101f12b5669baad6c175da61a770cb7"
+    },
+    {
+      "temporary": "/var/folders/5c/f170nvbx6t7105zg26q08zvh0000gn/T/coaster-showcase-visual-agy-r3-4avkazo5/stdout.jsonl",
+      "retained": "/Volumes/WD/code/workspaces/coaster-classic-showcase-visual-r1/evidence/agy-r3/stdout.jsonl",
+      "bytes": 26984,
+      "sha256": "7ff55ef6e5ad9d2994b48e36d6a0c6f0141193c4945e53bdef1c73ce19c2ab5a"
+    }
+  ],
+  "freedBytes": 27063,
+  "actualKnownPIDsAbsent": [
+    {
+      "pid": 6730,
+      "exists": false
+    },
+    {
+      "pid": 6735,
+      "exists": false
+    }
+  ],
+  "lsofExit": 1,
+  "lsofStdoutBytes": 0,
+  "lsofStderrBytes": 0,
+  "directoryAbsent": true
+}

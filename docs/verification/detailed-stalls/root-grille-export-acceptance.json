@@ -1,0 +1,96 @@
+{
+  "recordedUTC": "2026-10-10 04:09 UTC",
+  "qualifiedFiles": {
+    "qualifiedSource": {
+      "localPath": "/Volumes/WD/code/workspaces/coaster-detailed-stall-grille-r1/soft-drink-stall.py",
+      "path": "/workspace/coaster-detailed-stall-grille-r1/soft-drink-stall.py",
+      "sha256": "04c03cfd3eba1cf717ea96db44eddcb40f270ed8426a6e8fed2b521efe0bbda4",
+      "bytes": 69975
+    },
+    "qualifiedGLB": {
+      "localPath": "/Volumes/WD/code/workspaces/coaster-detailed-stall-grille-r1/evidence/export-soft-drink/soft-drink-stall.glb",
+      "path": "/workspace/coaster-detailed-stall-grille-r1/export-soft-drink/soft-drink-stall.glb",
+      "sha256": "c166d2e28c2be1ab49dec4d26078b26f66a14520ea7a9c011a559d6e6d5a825e",
+      "bytes": 8546676
+    },
+    "qualifiedMaster": {
+      "localPath": "/Volumes/WD/code/workspaces/coaster-detailed-stall-grille-r1/evidence/export-soft-drink/soft-drink-stall.blend",
+      "path": "/workspace/coaster-detailed-stall-grille-r1/export-soft-drink/soft-drink-stall.blend",
+      "sha256": "5c09f39806990d7d7903fdb4bb9c401403a3aa038a308144d5d306ab5b51ec38",
+      "bytes": 26234584
+    },
+    "unchangedExporter": {
+      "localPath": "/Volumes/WD/code/workspaces/coaster-detailed-stall-grille-r1/export-detailed-stall.py",
+      "path": "/workspace/coaster-detailed-stall-grille-r1/export-detailed-stall.py",
+      "sha256": "34a11bbdfce6c01991ea39035d8e9404d00f0221e247a6786acd69b461471db6",
+      "bytes": 16566
+    }
+  },
+  "evidenceDirectory": "/Volumes/WD/code/workspaces/coaster-stall-grille-verification-r1",
+  "reportSHA256": "8e6ca100dff1605fbe535e212b628c1772db8c20e5d0ac3d266e77b7e066e515",
+  "full52PayloadManifestSHA256": "1fff38defa634202e939840d8ea6fa357c0d49a38c5360f9119d1377e08a3520",
+  "rootAll52PayloadsExact": true,
+  "rootActualRawChildAndOuterZeroBlankStderr": true,
+  "inputPins": 21,
+  "sourceOnlyUniqueGrilleCallAndReasonComment": true,
+  "only24GLBAnd8MasterVerticesMove": true,
+  "quantization": {
+    "vertices": 24,
+    "axis": 1,
+    "intendedMetres": 0.001,
+    "actualDeltaMin": 0.000999998301267624,
+    "actualDeltaMax": 0.000999998301267624,
+    "maxResidual": 1.6987323761194495e-09,
+    "float32QuantizationBoundMax": 3.725290298461914e-09,
+    "quantizationCriterion": "Half ULP(old) + half ULP(new), no gameplay/Rules tolerance",
+    "oldAxisLevels": [
+      0.039000000804662704,
+      0.04500000178813934
+    ],
+    "newAxisLevels": [
+      0.03999999910593033,
+      0.04600000008940697
+    ]
+  },
+  "oldPlane": {
+    "grilleWorldYMin": 1.0889999531209469,
+    "grilleWorldYMax": 1.0949999541044235,
+    "grilleThickness": 0.006000000983476639,
+    "trayTopWorldY": 1.0949999541044235,
+    "topSeparationMetres": 0.0,
+    "grilleMaterial": "mat_softdrink_dark",
+    "trayMaterial": "metal",
+    "trayTriangles": [
+      112,
+      113
+    ]
+  },
+  "newPlane": {
+    "grilleWorldYMin": 1.0899999514222145,
+    "grilleWorldYMax": 1.0959999524056911,
+    "grilleThickness": 0.006000000983476639,
+    "trayTopWorldY": 1.0949999541044235,
+    "topSeparationMetres": 0.000999998301267624,
+    "grilleMaterial": "mat_softdrink_dark",
+    "trayMaterial": "metal",
+    "trayTriangles": [
+      112,
+      113
+    ]
+  },
+  "allOtherGeometryAnd15PNGExact": true,
+  "master17NativePlus2DerivedPackedDataExact": true,
+  "counts": {
+    "meshes": 36,
+    "nodes": 49,
+    "triangles": 10888,
+    "materials": 11,
+    "embedded512PNGs": 15,
+    "nativeCC0PackedImages": 17,
+    "derived512PackedImages": 2
+  },
+  "allOwnedVerificationAndTransportPidsAbsent": true,
+  "originalCheckerFailureRetainedSHA256": "e5cfa5397a3a477435ac7e30547137cbb5ad8c40307a481f0d45cff195604977",
+  "rootFirstAuditPathMappingFailureRetainedInJournal": true,
+  "scope": "Independent source/GLB/master parity accepted. Browser original failed pixels must pass before production asset adoption; public/cumulative/hardware/human remain open."
+}

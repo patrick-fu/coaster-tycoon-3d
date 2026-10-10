@@ -1,0 +1,47 @@
+{
+  "recordedUTC": "2026-10-10 06:35 UTC",
+  "sourceCommit": "27b82604486189ef68983a1d76884c5f7df81a24",
+  "loaderSHA256": "9ca3bf9c26077a2e31a857760c15086b12ce530ba160abb31f207e30723e0cd2",
+  "rawDirectory": "/Volumes/WD/code/workspaces/coaster-consumable-art/evidence/blob-url-fixed-early",
+  "rawCases": [
+    {
+      "attempt": "factory-runtime-r1",
+      "rawSHA256": "efbfd5902540bcd9cfb11288d68be983bbdc72feca3bf40e05d0242762ab8165",
+      "originalCompletedFlag": false,
+      "originalRunnerExit": 1,
+      "heldOwnURLs": 30,
+      "releasedOwnURLsOnceAfterLateRejection": 30,
+      "allocatedNativeCounts": {
+        "geometries": 0,
+        "materials": 24,
+        "textures": 29,
+        "bitmaps": 29
+      },
+      "allAllocatedNativeResourcesReleasedOnce": true,
+      "foreignUntouched": true,
+      "actualScriptHashFieldsMatchEarlierBodyMap": true,
+      "freshOwnBodyReceipts": 0
+    },
+    {
+      "attempt": "factory-runtime-r2-tail",
+      "rawSHA256": "8015103b03bba46abd0923e707d91cc76ec6a841e122c392154bb65bdaafeed6",
+      "originalCompletedFlag": false,
+      "originalRunnerExit": 1,
+      "heldOwnURLs": 30,
+      "releasedOwnURLsOnceAfterLateRejection": 30,
+      "allocatedNativeCounts": {
+        "geometries": 0,
+        "materials": 24,
+        "textures": 29,
+        "bitmaps": 29
+      },
+      "allAllocatedNativeResourcesReleasedOnce": true,
+      "foreignUntouched": true,
+      "actualScriptHashFieldsMatchEarlierBodyMap": true,
+      "freshOwnBodyReceipts": 0
+    }
+  ],
+  "sourceDisposition": "Cancellation before mesh allocation permits zero geometries; all allocated resources still release once. Disposed readyPromise intentionally retains error=null. Both original predicates were driver defects; original runner1 and completed=false are preserved. Actual Debugger hash fields map to earlier body-qualified source, but own third-case HTTP/source body receipts are missing.",
+  "decision": "Authorize exactly one third-only tail, capture 9 actual HTTP bodies and 6 getScriptSource bodies before fault injection/assertion, correct both source-derived predicates; do not replay success/rejection controls.",
+  "scope": "Recorded native semantics consumed, final complete per-case identity and fixed case0/1 retained bodies still pending."
+}

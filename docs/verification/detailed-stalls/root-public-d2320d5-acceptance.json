@@ -1,0 +1,326 @@
+{
+  "utc": "2026-10-10T09:14:59.994722+00:00",
+  "scope": "Root accepts actual d232 public main and complete77-file administrative sidecar. Whole cumulative reviews and finite75 closure remain separate.",
+  "sourceCommit": "d2320d5e324d548fdba3b30f7d4e0a2d11235466",
+  "sourceTree": "7fbf1a616adbb0ab7ccc238930cc2067569283aa",
+  "readySHA256": "bc4130dfb1727a12c73d45fd74904b5e81e6b4cc6e3d9513da7cdcfa41a745bf",
+  "hostingCommit": "07be9c4cd36588e08e3fcc9dc0162dd80221affb",
+  "pagesBuiltUTC": "2026-10-10T07:58:29Z",
+  "manifestSHA256": "51409b13f1e1156a7a898767e916873b0627e62b4b36d57a67cb38b8e85643e2",
+  "retainedFiles": 1028,
+  "logicalBytes": 419877493,
+  "encodedBytes": 284345363,
+  "allEncodedDecodedHashesAndLengthsMatched": true,
+  "actualHTTPBodies": 324,
+  "actualCDPSourceBodies": 582,
+  "actualLoadedDocumentBodies": 2,
+  "routes": [
+    {
+      "route": "root",
+      "checks": 79,
+      "allPassed": true,
+      "actualFreshHTTPBodies": 162,
+      "actualCDPParsedBodies": 291,
+      "actualPageReloads": 1,
+      "allFourErrorListsEmpty": true,
+      "completeOriginalTypedDBBytes": 1857485,
+      "completeOriginalTypedDBSHA256": "595e4cc33bc3a1286cfc5da456c94b213fec80476f09b5a15d13b7e4d5571b68",
+      "originalRecordCount": 2,
+      "fullOriginalTypedDBRestored": true
+    },
+    {
+      "route": "pin",
+      "checks": 79,
+      "allPassed": true,
+      "actualFreshHTTPBodies": 162,
+      "actualCDPParsedBodies": 291,
+      "actualPageReloads": 1,
+      "allFourErrorListsEmpty": true,
+      "completeOriginalTypedDBBytes": 1857485,
+      "completeOriginalTypedDBSHA256": "595e4cc33bc3a1286cfc5da456c94b213fec80476f09b5a15d13b7e4d5571b68",
+      "originalRecordCount": 2,
+      "fullOriginalTypedDBRestored": true
+    }
+  ],
+  "wholeAuthorityPairs": [
+    {
+      "route": "root",
+      "stage": "genuine-empty-import",
+      "bytes": 774411,
+      "sha256": "03ed33f8215fa364716fbbbdc1d5f0e88367704f43f482437b08b3399af53f0b",
+      "exactImmediateLegalBaseline": true,
+      "boundToActualCDPSaveResponse": true
+    },
+    {
+      "route": "root",
+      "stage": "0-open",
+      "bytes": 775254,
+      "sha256": "5e389a519e066a882154215de06e2a3a601bab060697682e95a6813db20035ac",
+      "exactImmediateLegalBaseline": true,
+      "boundToActualCDPSaveResponse": true
+    },
+    {
+      "route": "root",
+      "stage": "1-open",
+      "bytes": 775253,
+      "sha256": "6aaeb37230da32aba4a8041f11dab0ea6f683e797ebb24e5e79f35965e6e1809",
+      "exactImmediateLegalBaseline": true,
+      "boundToActualCDPSaveResponse": true
+    },
+    {
+      "route": "root",
+      "stage": "real-save",
+      "bytes": 775253,
+      "sha256": "6aaeb37230da32aba4a8041f11dab0ea6f683e797ebb24e5e79f35965e6e1809",
+      "exactImmediateLegalBaseline": true,
+      "boundToActualCDPSaveResponse": true
+    },
+    {
+      "route": "root",
+      "stage": "scene-disposal",
+      "bytes": 775253,
+      "sha256": "6aaeb37230da32aba4a8041f11dab0ea6f683e797ebb24e5e79f35965e6e1809",
+      "exactImmediateLegalBaseline": true,
+      "boundToActualCDPSaveResponse": true
+    },
+    {
+      "route": "root",
+      "stage": "real-reload",
+      "bytes": 775253,
+      "sha256": "6aaeb37230da32aba4a8041f11dab0ea6f683e797ebb24e5e79f35965e6e1809",
+      "exactImmediateLegalBaseline": true,
+      "boundToActualCDPSaveResponse": true
+    },
+    {
+      "route": "root",
+      "stage": "reloaded-render-picking",
+      "bytes": 775253,
+      "sha256": "6aaeb37230da32aba4a8041f11dab0ea6f683e797ebb24e5e79f35965e6e1809",
+      "exactImmediateLegalBaseline": true,
+      "boundToActualCDPSaveResponse": true
+    },
+    {
+      "route": "pin",
+      "stage": "genuine-empty-import",
+      "bytes": 774411,
+      "sha256": "03ed33f8215fa364716fbbbdc1d5f0e88367704f43f482437b08b3399af53f0b",
+      "exactImmediateLegalBaseline": true,
+      "boundToActualCDPSaveResponse": true
+    },
+    {
+      "route": "pin",
+      "stage": "0-open",
+      "bytes": 775254,
+      "sha256": "5e389a519e066a882154215de06e2a3a601bab060697682e95a6813db20035ac",
+      "exactImmediateLegalBaseline": true,
+      "boundToActualCDPSaveResponse": true
+    },
+    {
+      "route": "pin",
+      "stage": "1-open",
+      "bytes": 775253,
+      "sha256": "6aaeb37230da32aba4a8041f11dab0ea6f683e797ebb24e5e79f35965e6e1809",
+      "exactImmediateLegalBaseline": true,
+      "boundToActualCDPSaveResponse": true
+    },
+    {
+      "route": "pin",
+      "stage": "real-save",
+      "bytes": 775253,
+      "sha256": "6aaeb37230da32aba4a8041f11dab0ea6f683e797ebb24e5e79f35965e6e1809",
+      "exactImmediateLegalBaseline": true,
+      "boundToActualCDPSaveResponse": true
+    },
+    {
+      "route": "pin",
+      "stage": "scene-disposal",
+      "bytes": 775253,
+      "sha256": "6aaeb37230da32aba4a8041f11dab0ea6f683e797ebb24e5e79f35965e6e1809",
+      "exactImmediateLegalBaseline": true,
+      "boundToActualCDPSaveResponse": true
+    },
+    {
+      "route": "pin",
+      "stage": "real-reload",
+      "bytes": 775253,
+      "sha256": "6aaeb37230da32aba4a8041f11dab0ea6f683e797ebb24e5e79f35965e6e1809",
+      "exactImmediateLegalBaseline": true,
+      "boundToActualCDPSaveResponse": true
+    },
+    {
+      "route": "pin",
+      "stage": "reloaded-render-picking",
+      "bytes": 775253,
+      "sha256": "6aaeb37230da32aba4a8041f11dab0ea6f683e797ebb24e5e79f35965e6e1809",
+      "exactImmediateLegalBaseline": true,
+      "boundToActualCDPSaveResponse": true
+    }
+  ],
+  "observableOwnedResources": [
+    {
+      "route": "root",
+      "actualReferences": {
+        "geometries": 67,
+        "materials": 48,
+        "textures": 30,
+        "bitmaps": 30
+      },
+      "allObservedReleasedOnce": true,
+      "allBitmapsZeroSized": true,
+      "foreignPreserved": true,
+      "sceneTargetOnceAndNull": true,
+      "unreachableSourceMaterialsNotObserved": 24
+    },
+    {
+      "route": "root",
+      "actualReferences": {
+        "geometries": 67,
+        "materials": 48,
+        "textures": 30,
+        "bitmaps": 30
+      },
+      "allObservedReleasedOnce": true,
+      "allBitmapsZeroSized": true,
+      "foreignPreserved": true,
+      "sceneTargetOnceAndNull": true,
+      "unreachableSourceMaterialsNotObserved": 24
+    },
+    {
+      "route": "pin",
+      "actualReferences": {
+        "geometries": 67,
+        "materials": 48,
+        "textures": 30,
+        "bitmaps": 30
+      },
+      "allObservedReleasedOnce": true,
+      "allBitmapsZeroSized": true,
+      "foreignPreserved": true,
+      "sceneTargetOnceAndNull": true,
+      "unreachableSourceMaterialsNotObserved": 24
+    },
+    {
+      "route": "pin",
+      "actualReferences": {
+        "geometries": 67,
+        "materials": 48,
+        "textures": 30,
+        "bitmaps": 30
+      },
+      "allObservedReleasedOnce": true,
+      "allBitmapsZeroSized": true,
+      "foreignPreserved": true,
+      "sceneTargetOnceAndNull": true,
+      "unreachableSourceMaterialsNotObserved": 24
+    }
+  ],
+  "actualRawCDPScreenshots": [
+    {
+      "route": "root",
+      "stage": "0-open",
+      "sha256": "f15a6cbe0acf29f1c09ac146e566c5f0620656cf67c07f5aeebccfefb4be4b19"
+    },
+    {
+      "route": "root",
+      "stage": "1-open",
+      "sha256": "e08fa9862cd4230f0b59c5a2e3e6aca701ef85be3aad0090011a546f12db8362"
+    },
+    {
+      "route": "root",
+      "stage": "reloaded-0",
+      "sha256": "4cc5a8bcb6c329f740c3ef6aef46f26fdc471ac53c0d79de122bba985a2016a9"
+    },
+    {
+      "route": "root",
+      "stage": "reloaded-1",
+      "sha256": "fd8d7086fce6d5ce02dc7c1a4321503ce43d4630251a89272d3117ba49ce9fbc"
+    },
+    {
+      "route": "root",
+      "stage": "classic",
+      "sha256": "bf27277815d702e689152dccda206a9e42fc0ca5d71466b2cc8a436a3e0ba889"
+    },
+    {
+      "route": "pin",
+      "stage": "0-open",
+      "sha256": "f15a6cbe0acf29f1c09ac146e566c5f0620656cf67c07f5aeebccfefb4be4b19"
+    },
+    {
+      "route": "pin",
+      "stage": "1-open",
+      "sha256": "e08fa9862cd4230f0b59c5a2e3e6aca701ef85be3aad0090011a546f12db8362"
+    },
+    {
+      "route": "pin",
+      "stage": "reloaded-0",
+      "sha256": "4cc5a8bcb6c329f740c3ef6aef46f26fdc471ac53c0d79de122bba985a2016a9"
+    },
+    {
+      "route": "pin",
+      "stage": "reloaded-1",
+      "sha256": "fd8d7086fce6d5ce02dc7c1a4321503ce43d4630251a89272d3117ba49ce9fbc"
+    },
+    {
+      "route": "pin",
+      "stage": "classic",
+      "sha256": "0c02f7639fc4f088853fe565aeb6942dd8071707b0056d6b24fd98676344803c"
+    }
+  ],
+  "runtimePID": 1388221,
+  "runtimeExit": 0,
+  "actualRuntimeSSHExit": 0,
+  "actualMirrorSSHAndTarAndHashExit": 0,
+  "recordedChromeSubtrees": 4,
+  "recordedTreeUnion": 12,
+  "knownTerminalPIDsAbsent": 15,
+  "treeCoverageLimit": "Snapshots are rooted at Chrome. Three additional owned/adopted PIDs are not in these snapshots; their exact pretermination ancestry/status bodies were not recorded. Actual runner-owned subreaper discovery/reap and final absence are retained. No new Chrome replay.",
+  "allKnownPortsClosed": true,
+  "preservedFailures": [
+    "First offline report1395360/childSSH1 incorrect union==known assertion.",
+    "First mirror prelaunch workdir missing: tool rejected before child/SSH; retained in later sidecar."
+  ],
+  "proofReuse": "All160 unchanged runtime files and full native67/72/30/30 pool proof reuse under exact9ca/GLB/source pins. Actual public event observation is67/48/30/30 only. No stronger native count inferred from empty Sets.",
+  "remaining": [
+    "Two whole cumulative Design/Drift review rounds",
+    "PR76 exact-head integration and finite75 tracker closure",
+    "Independent finite77 showcase actual Chrome/composition/usability gates",
+    "Full original catalogue/numerical/art/human/representative integrated-GPU qualification"
+  ],
+  "mainReceiptSHA256": "6fbe9c0aa1e9595aaabfa70ebe0be90b5a562810919e70530bc09849b97edf31",
+  "administrativeSidecar": {
+    "manifestSHA256": "567163235b7d07079ef20aa752530c69d70a941855e41a3cf5a5c972cddcb75c",
+    "files": 77,
+    "logicalBytes": 101054,
+    "encodedBytes": 101054,
+    "allEncodedDecodedBytesMatch": true,
+    "closureSHA256": "65f859256c070b1b406e392ab331f67bee28efc18865619eeb473e63586f4ffd",
+    "knownPriorPIDsAbsent": 21,
+    "postWaitHelpers": [
+      {
+        "pid": 1398857,
+        "exists": false
+      },
+      {
+        "pid": 1402404,
+        "exists": false
+      },
+      {
+        "pid": 1404364,
+        "exists": false
+      }
+    ],
+    "actualChildSSHMirrorHashExit": 0,
+    "actualLocalMirrorPIDAbsent": 24014,
+    "preservedFailedAuditExit": 1,
+    "prelaunchToolRejectionHadNoChild": true
+  },
+  "rootViewedActualPNGs": [
+    "public-classic.png",
+    "public-detailed-0-open.png",
+    "public-detailed-1-open.png",
+    "public-reloaded-detailed-0.png",
+    "public-reloaded-detailed-1.png"
+  ],
+  "visualObservation": "Both detailed storefronts are visible before/after actual reload. Classic overview visible. No human style/original numerical/art or representative hardware acceptance.",
+  "publicAcceptancePassed": true
+}

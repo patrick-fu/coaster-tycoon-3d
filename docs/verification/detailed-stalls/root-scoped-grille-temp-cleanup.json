@@ -1,0 +1,79 @@
+{
+  "recordedUTC": "2026-10-10 04:01 UTC",
+  "freedBytes": 46553,
+  "records": [
+    {
+      "terminalPath": "/Volumes/WD/code/workspaces/coaster-detailed-stall-reflections-r3/evidence/agy-r3/terminal.json",
+      "terminalSHA256": "07f56eaa9c77652919bccad428124de35a9d808dcd869af5fde76daef56bb6dc",
+      "ownedChildPid": 3919,
+      "ownedChildAbsent": true,
+      "files": [
+        {
+          "temporaryPath": "/var/folders/5c/f170nvbx6t7105zg26q08zvh0000gn/T/coaster-reflection-agy-r3-1tk95oiw/stdout.jsonl",
+          "retainedPath": "/Volumes/WD/code/workspaces/coaster-detailed-stall-reflections-r3/evidence/agy-r3/stdout.jsonl",
+          "bytes": 24263,
+          "sha256": "b7ba577628e5c5509e72ee6a9a9d2bbf25318844050d483b7f0299c14b917be3",
+          "lsofActualExit": 1,
+          "deleted": true
+        },
+        {
+          "temporaryPath": "/var/folders/5c/f170nvbx6t7105zg26q08zvh0000gn/T/coaster-reflection-agy-r3-1tk95oiw/stderr.log",
+          "retainedPath": "/Volumes/WD/code/workspaces/coaster-detailed-stall-reflections-r3/evidence/agy-r3/stderr.log",
+          "bytes": 79,
+          "sha256": "b49ec4e77bb03c54a2e3f03e84f82c7a8cc9dd27f0e1c335369a20e752ba0c48",
+          "lsofActualExit": 1,
+          "deleted": true
+        }
+      ]
+    },
+    {
+      "terminalPath": "/Volumes/WD/code/workspaces/coaster-detailed-stall-reflections-r4/evidence/agy-r4/terminal.json",
+      "terminalSHA256": "bb2aea07f965744db059df85a1b96457192455f049b7e7270a394b5e7f4348a0",
+      "ownedChildPid": 5459,
+      "ownedChildAbsent": true,
+      "files": [
+        {
+          "temporaryPath": "/var/folders/5c/f170nvbx6t7105zg26q08zvh0000gn/T/coaster-reflection-agy-r4-0whoxuej/stdout.jsonl",
+          "retainedPath": "/Volumes/WD/code/workspaces/coaster-detailed-stall-reflections-r4/evidence/agy-r4/stdout.jsonl",
+          "bytes": 12764,
+          "sha256": "989c38673ebbef0798cb324f10ed98e84b4d7c8f8799cf582b160f7d8ffc8e39",
+          "lsofActualExit": 1,
+          "deleted": true
+        },
+        {
+          "temporaryPath": "/var/folders/5c/f170nvbx6t7105zg26q08zvh0000gn/T/coaster-reflection-agy-r4-0whoxuej/stderr.log",
+          "retainedPath": "/Volumes/WD/code/workspaces/coaster-detailed-stall-reflections-r4/evidence/agy-r4/stderr.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "lsofActualExit": 1,
+          "deleted": true
+        }
+      ]
+    },
+    {
+      "terminalPath": "/Volumes/WD/code/workspaces/coaster-detailed-stall-grille-r1/evidence/agy-grille-r1/terminal.json",
+      "terminalSHA256": "dc6d9810b29b7bcada099d7e5a79c53a1b4c92768d523dcdcc8cba1f34163235",
+      "ownedChildPid": 19406,
+      "ownedChildAbsent": true,
+      "files": [
+        {
+          "temporaryPath": "/var/folders/5c/f170nvbx6t7105zg26q08zvh0000gn/T/coaster-grille-agy-r1-lirtyik_/stdout.jsonl",
+          "retainedPath": "/Volumes/WD/code/workspaces/coaster-detailed-stall-grille-r1/evidence/agy-grille-r1/stdout.jsonl",
+          "bytes": 9447,
+          "sha256": "e11c8f0a68091016c0046fdb731f32c4fedc6414151617a89fa77b0f6425b23f",
+          "lsofActualExit": 1,
+          "deleted": true
+        },
+        {
+          "temporaryPath": "/var/folders/5c/f170nvbx6t7105zg26q08zvh0000gn/T/coaster-grille-agy-r1-lirtyik_/stderr.log",
+          "retainedPath": "/Volumes/WD/code/workspaces/coaster-detailed-stall-grille-r1/evidence/agy-grille-r1/stderr.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "lsofActualExit": 1,
+          "deleted": true
+        }
+      ]
+    }
+  ],
+  "scope": "Only six exact retained duplicate temporary AGY captures removed after terminal, owned child absence, byte identity and no open-file owner checks. No source/master/raw retained evidence/profile/cache changes."
+}

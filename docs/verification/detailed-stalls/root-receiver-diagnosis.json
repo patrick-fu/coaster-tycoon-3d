@@ -1,0 +1,166 @@
+{
+  "scope": "Root static exact raw receiver/hash and full field comparison; no numerical equality/tolerance acceptance or runtime override",
+  "nodeRulesSha256": "b123fee6c14e7b2df2b32b694639258a721f43a9552046d636f651c0af2d3fcb",
+  "browserRulesSha256": "78b58b23912d6653fde12fbd57249a5a67182867f354edd76c7a4e58fd17fc50",
+  "completeKeyOrderAndArrayShapesMatch": true,
+  "differences": [
+    {
+      "path": "Rules.pieces.left.motion.samples.15.y",
+      "node": -16.57912797728261,
+      "browser": -16.579127977282617,
+      "delta": -7.105427357601002e-15
+    },
+    {
+      "path": "Rules.pieces.left.motion.samples.17.y",
+      "node": -21.02022688979082,
+      "browser": -21.020226889790827,
+      "delta": -7.105427357601002e-15
+    },
+    {
+      "path": "Rules.pieces.left.motion.samples.18.x",
+      "node": 49.47266901521516,
+      "browser": 49.47266901521517,
+      "delta": 7.105427357601002e-15
+    },
+    {
+      "path": "Rules.pieces.right.motion.samples.15.y",
+      "node": 16.57912797728261,
+      "browser": 16.579127977282617,
+      "delta": 7.105427357601002e-15
+    },
+    {
+      "path": "Rules.pieces.right.motion.samples.17.y",
+      "node": 21.02022688979082,
+      "browser": 21.020226889790827,
+      "delta": 7.105427357601002e-15
+    },
+    {
+      "path": "Rules.pieces.right.motion.samples.18.x",
+      "node": 49.47266901521516,
+      "browser": 49.47266901521517,
+      "delta": 7.105427357601002e-15
+    },
+    {
+      "path": "Rules.rideProfiles.independent.wooden-circuit-v1.pieces.left.motion.samples.30.y",
+      "node": -33.15825595456522,
+      "browser": -33.158255954565234,
+      "delta": -1.4210854715202004e-14
+    },
+    {
+      "path": "Rules.rideProfiles.independent.wooden-circuit-v1.pieces.left.motion.samples.34.y",
+      "node": -42.04045377958164,
+      "browser": -42.040453779581654,
+      "delta": -1.4210854715202004e-14
+    },
+    {
+      "path": "Rules.rideProfiles.independent.wooden-circuit-v1.pieces.left.motion.samples.35.x",
+      "node": 96.92273235283002,
+      "browser": 96.92273235283001,
+      "delta": -1.4210854715202004e-14
+    },
+    {
+      "path": "Rules.rideProfiles.independent.wooden-circuit-v1.pieces.left.motion.samples.35.y",
+      "node": -44.39387610191656,
+      "browser": -44.393876101916575,
+      "delta": -1.4210854715202004e-14
+    },
+    {
+      "path": "Rules.rideProfiles.independent.wooden-circuit-v1.pieces.left.motion.samples.36.x",
+      "node": 98.94533803043032,
+      "browser": 98.94533803043034,
+      "delta": 1.4210854715202004e-14
+    },
+    {
+      "path": "Rules.rideProfiles.independent.wooden-circuit-v1.pieces.right.motion.samples.30.y",
+      "node": 33.15825595456522,
+      "browser": 33.158255954565234,
+      "delta": 1.4210854715202004e-14
+    },
+    {
+      "path": "Rules.rideProfiles.independent.wooden-circuit-v1.pieces.right.motion.samples.34.y",
+      "node": 42.04045377958164,
+      "browser": 42.040453779581654,
+      "delta": 1.4210854715202004e-14
+    },
+    {
+      "path": "Rules.rideProfiles.independent.wooden-circuit-v1.pieces.right.motion.samples.35.x",
+      "node": 96.92273235283002,
+      "browser": 96.92273235283001,
+      "delta": -1.4210854715202004e-14
+    },
+    {
+      "path": "Rules.rideProfiles.independent.wooden-circuit-v1.pieces.right.motion.samples.35.y",
+      "node": 44.39387610191656,
+      "browser": 44.393876101916575,
+      "delta": 1.4210854715202004e-14
+    },
+    {
+      "path": "Rules.rideProfiles.independent.wooden-circuit-v1.pieces.right.motion.samples.36.x",
+      "node": 98.94533803043032,
+      "browser": 98.94533803043034,
+      "delta": 1.4210854715202004e-14
+    },
+    {
+      "path": "Rules.channelProfiles.independent.log-flume-v1.pieces.left.motion.samples.30.y",
+      "node": -16.57912797728261,
+      "browser": -16.579127977282617,
+      "delta": -7.105427357601002e-15
+    },
+    {
+      "path": "Rules.channelProfiles.independent.log-flume-v1.pieces.left.motion.samples.34.y",
+      "node": -21.02022688979082,
+      "browser": -21.020226889790827,
+      "delta": -7.105427357601002e-15
+    },
+    {
+      "path": "Rules.channelProfiles.independent.log-flume-v1.pieces.left.motion.samples.35.x",
+      "node": 48.46136617641501,
+      "browser": 48.461366176415005,
+      "delta": -7.105427357601002e-15
+    },
+    {
+      "path": "Rules.channelProfiles.independent.log-flume-v1.pieces.left.motion.samples.35.y",
+      "node": -22.19693805095828,
+      "browser": -22.196938050958288,
+      "delta": -7.105427357601002e-15
+    },
+    {
+      "path": "Rules.channelProfiles.independent.log-flume-v1.pieces.left.motion.samples.36.x",
+      "node": 49.47266901521516,
+      "browser": 49.47266901521517,
+      "delta": 7.105427357601002e-15
+    },
+    {
+      "path": "Rules.channelProfiles.independent.log-flume-v1.pieces.right.motion.samples.30.y",
+      "node": 16.57912797728261,
+      "browser": 16.579127977282617,
+      "delta": 7.105427357601002e-15
+    },
+    {
+      "path": "Rules.channelProfiles.independent.log-flume-v1.pieces.right.motion.samples.34.y",
+      "node": 21.02022688979082,
+      "browser": 21.020226889790827,
+      "delta": 7.105427357601002e-15
+    },
+    {
+      "path": "Rules.channelProfiles.independent.log-flume-v1.pieces.right.motion.samples.35.x",
+      "node": 48.46136617641501,
+      "browser": 48.461366176415005,
+      "delta": -7.105427357601002e-15
+    },
+    {
+      "path": "Rules.channelProfiles.independent.log-flume-v1.pieces.right.motion.samples.35.y",
+      "node": 22.19693805095828,
+      "browser": 22.196938050958288,
+      "delta": 7.105427357601002e-15
+    },
+    {
+      "path": "Rules.channelProfiles.independent.log-flume-v1.pieces.right.motion.samples.36.x",
+      "node": 49.47266901521516,
+      "browser": 49.47266901521517,
+      "delta": 7.105427357601002e-15
+    }
+  ],
+  "sourceComparisonSha256": "07887f56ee63f37944d752660f16efe9c2ff75aec1b4cc573171971e96156286",
+  "browserSnapshotSha256": "d7a7cc707975d06b63cbdfb2aea51d9aa7b309ff932ed9805b4e4a206fde89b8"
+}

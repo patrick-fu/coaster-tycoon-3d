@@ -1,0 +1,20 @@
+{
+  "recordedUTC": "2026-10-10T06:46:35.415250+00:00",
+  "rawDirectory": "/Volumes/WD/code/workspaces/coaster-detailed-stalls-browser/blob-url-r1/retained-r1",
+  "actualAuditSHA256": "a06b7b0ec408d528ac6b81616a717839852bcc13a94592167b1543371ec44481",
+  "originalDatabaseCount": 0,
+  "originalInputSHA256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+  "actualRestoredInventorySHA256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+  "completeOriginalNeutralRestored": true,
+  "separateNeutralChildAndSSHExit": 0,
+  "separateNeutralBlankStderr": true,
+  "neutralCompleteOwnedTrees": 3,
+  "neutralKnown11PidsAbsent": true,
+  "neutralRunnerPostWaitAbsent": true,
+  "actual43PriorKnownPidsAbsent": true,
+  "portsClosed": true,
+  "factoryOnlyMakesNoIndexedDBCalls": true,
+  "noPostHarnessStorageSnapshotClaimed": true,
+  "failedFirstAppDriverPreserved": true,
+  "scope": "Root consumes separate complete neutral recovery and known process closure; first driver1 and blocked restoration flag remain separate. Final administrative sidecars are still owned by browser delegate."
+}

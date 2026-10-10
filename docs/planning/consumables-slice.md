@@ -6,7 +6,7 @@ and passes263 canonical kernel checks after the narrow malformed-import repair. 
 Classic controls and corrected typed-waste visibility are accepted; cumulative
 integration reviews are consumed. Exact public file/deploy identity qualifies;
 actual public root8/pin8 player/source flow and Root raw/retention audits qualify.
-Both whole-delivery Design/Drift closure rounds are accepted; source integration remains pending.
+Both whole-delivery Design/Drift closure rounds are accepted; source and proof are integrated in PR74/main1373dbd.
 Current public candidate files use save12/content5/protocol5, sourcefddd5b0.
 The procedural can/box meshes are finite mechanical and pixel candidates; they
 do not qualify ADR0003's final detailed editable Blender/GLB props or human art acceptance.

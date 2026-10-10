@@ -1,0 +1,267 @@
+{
+  "recordedUTC": "2026-10-10T01:28:50.063237+00:00",
+  "operation": "Root consumes independent actual Grok material-r4 outputs, raw terminal and retained byte hashes; no Mac runtime or image computation",
+  "acceptedFor": "Source and resource integration only",
+  "terminal": {
+    "path": "/Volumes/WD/code/workspaces/coaster-detailed-stall-material-verification-r1/raw/attempt-r1/terminal.json",
+    "sha256": "2c1af67bd599625fc3c8876e559d9806a86a6183e61f3af3776006a543a9ef2e",
+    "actualOuterExit": 0,
+    "runnerPid": 994053,
+    "children": [
+      {
+        "stage": 0,
+        "command": [
+          "python3",
+          "/workspace/coaster-detailed-stall-material-verification-r1/raw/attempt-r1/inputs/glb_and_source.py",
+          "/workspace/coaster-detailed-stall-material-verification-r1/raw/attempt-r1/inputs/config.json",
+          "/workspace/coaster-detailed-stall-material-verification-r1/results/attempt-r1/glb-source-result.json"
+        ],
+        "pid": 994054,
+        "startUTC": "2026-10-10T01:18:59.909535+00:00",
+        "endUTC": "2026-10-10T01:19:01.069425+00:00",
+        "actualExit": 0,
+        "stdout": {
+          "path": "/workspace/coaster-detailed-stall-material-verification-r1/raw/attempt-r1/stage-0.stdout",
+          "bytes": 222,
+          "sha256": "7cc82e9555451675381cad9453ad41ccf4573eb499be7d38cb5dcfbdc6a8928b"
+        },
+        "stderr": {
+          "path": "/workspace/coaster-detailed-stall-material-verification-r1/raw/attempt-r1/stage-0.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      {
+        "stage": 1,
+        "command": [
+          "blender",
+          "--background",
+          "--factory-startup",
+          "--python-exit-code",
+          "1",
+          "--threads",
+          "2",
+          "--python",
+          "/workspace/coaster-detailed-stall-material-verification-r1/raw/attempt-r1/inputs/master_and_baseline.py",
+          "--",
+          "/workspace/coaster-detailed-stall-material-verification-r1/raw/attempt-r1/inputs/config.json",
+          "/workspace/coaster-detailed-stall-material-verification-r1/results/attempt-r1"
+        ],
+        "pid": 994066,
+        "startUTC": "2026-10-10T01:19:01.070403+00:00",
+        "endUTC": "2026-10-10T01:19:04.099332+00:00",
+        "actualExit": 0,
+        "stdout": {
+          "path": "/workspace/coaster-detailed-stall-material-verification-r1/raw/attempt-r1/stage-1.stdout",
+          "bytes": 612,
+          "sha256": "494949a34c695b652d6c09562f0833ff3670697724612db55e57fbf22566ed05"
+        },
+        "stderr": {
+          "path": "/workspace/coaster-detailed-stall-material-verification-r1/raw/attempt-r1/stage-1.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      {
+        "stage": 2,
+        "command": [
+          "python3",
+          "/workspace/coaster-detailed-stall-material-verification-r1/raw/attempt-r1/inputs/compare_colors.py",
+          "/workspace/coaster-detailed-stall-material-verification-r1/raw/attempt-r1/inputs/config.json",
+          "/workspace/coaster-detailed-stall-material-verification-r1/results/attempt-r1"
+        ],
+        "pid": 994114,
+        "startUTC": "2026-10-10T01:19:04.100512+00:00",
+        "endUTC": "2026-10-10T01:19:05.060048+00:00",
+        "actualExit": 0,
+        "stdout": {
+          "path": "/workspace/coaster-detailed-stall-material-verification-r1/raw/attempt-r1/stage-2.stdout",
+          "bytes": 211,
+          "sha256": "e30801d34d6b4de2dead8d48ccd2ba9dd2311c24b5d8ba34f518ed305618e464"
+        },
+        "stderr": {
+          "path": "/workspace/coaster-detailed-stall-material-verification-r1/raw/attempt-r1/stage-2.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      }
+    ]
+  },
+  "rawFilesVerified": 6,
+  "retainedFilesVerified": 30,
+  "retainedBytes": 59506097,
+  "retentionReceipt": {
+    "path": "/Volumes/WD/code/workspaces/coaster-detailed-stall-material-verification-r1/results/retention-receipt.json",
+    "sha256": "26a8e46e7d6cc38ca36e576e7d4614fc0699fedc11aa24877afe977dff6d574b"
+  },
+  "reports": {
+    "glb-source-result.json": {
+      "path": "/Volumes/WD/code/workspaces/coaster-detailed-stall-material-verification-r1/results/attempt-r1/glb-source-result.json",
+      "sha256": "cebdf7bdf27f26c4f389ebaf93d32c338b5b9b5c788db3ce3dad06f808e548f4"
+    },
+    "master-reopen-result.json": {
+      "path": "/Volumes/WD/code/workspaces/coaster-detailed-stall-material-verification-r1/results/attempt-r1/master-reopen-result.json",
+      "sha256": "858c6678f09a4a9b89b61caf6da21fa59f40dbba1e633947fd918c03418a1454"
+    },
+    "actual-color-result.json": {
+      "path": "/Volumes/WD/code/workspaces/coaster-detailed-stall-material-verification-r1/results/attempt-r1/actual-color-result.json",
+      "sha256": "480d3015d47a557b870eed1d139cc37c508812b89625d2aac3aac9eded6ecfef"
+    },
+    "supplement-base-bindings.json": {
+      "path": "/Volumes/WD/code/workspaces/coaster-detailed-stall-material-verification-r1/results/attempt-r1/supplement-base-bindings.json",
+      "sha256": "14fa70ee06ce3335f2c9188bc860830c515036b346c66778ce3cd54e71ea3427"
+    }
+  },
+  "assets": [
+    {
+      "kind": "burger",
+      "glbSHA256": "9b646bdd004390fd8c240091d0e85df6bec3def0ba33dfa2826aa4160527ebfe",
+      "masterSHA256": "06803db208873608c6b35d8a8c9b37fe6426aba49e09779c218554d496a8fb4d",
+      "actualGLBTriangles": 11322,
+      "materials": 13,
+      "unchangedImages": 13,
+      "derivedAlbedos": [
+        {
+          "material": "boards_cream",
+          "pngSHA256": "173f87f4d7f1c4448045b4edbbdeec9b19def32ea9eec2a6dc447e8b488bc4e2",
+          "linearErrorMax": 0.004038660503485447,
+          "lineage": {
+            "image": "WoodFloor043_1K-PNG_Color_cream",
+            "sourceFile": "WoodFloor043_1K-PNG_Color.png",
+            "sourceSha256": "55a7c25c191c8eb501d87a8872438dcfba307b3a043fee00ad9e89f0c413d684",
+            "algorithm": "srgb-decode-linear-mix-srgb-encode-v1",
+            "linearTint": [
+              0.96,
+              0.92,
+              0.82
+            ],
+            "mixFactor": 0.82,
+            "sampleDimensions": [
+              512,
+              512
+            ],
+            "sourceChannels": 4,
+            "samplePixelCount": 1048576,
+            "packedMasterSha256": "173f87f4d7f1c4448045b4edbbdeec9b19def32ea9eec2a6dc447e8b488bc4e2",
+            "packedMasterBytes": 198208,
+            "runtimeDimensions": [
+              512,
+              512
+            ]
+          }
+        },
+        {
+          "material": "roof_terracotta",
+          "pngSHA256": "732a439243a71431ace68da66bbd0f40954043b2fb01b4a6496d82fb7a88a92b",
+          "linearErrorMax": 0.0033956747037930946,
+          "lineage": {
+            "image": "RoofingTiles013A_1K-PNG_Color_terracotta",
+            "sourceFile": "RoofingTiles013A_1K-PNG_Color.png",
+            "sourceSha256": "ae2037e4c4934b42b60c799b2755cb73c164a883410f89e22ac54ed5ecb4d1de",
+            "algorithm": "srgb-decode-linear-mix-srgb-encode-v1",
+            "linearTint": [
+              0.78,
+              0.24,
+              0.16
+            ],
+            "mixFactor": 0.8,
+            "sampleDimensions": [
+              512,
+              512
+            ],
+            "sourceChannels": 4,
+            "samplePixelCount": 1048576,
+            "packedMasterSha256": "732a439243a71431ace68da66bbd0f40954043b2fb01b4a6496d82fb7a88a92b",
+            "packedMasterBytes": 73962,
+            "runtimeDimensions": [
+              512,
+              512
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "kind": "soft-drink",
+      "glbSHA256": "6f4cc5cec0d49ab3c9bc9601906d7a705f6a253d39e22ee2dc28db7f784b5066",
+      "masterSHA256": "4a7dcb84c04e00c5b1d37133ccf2b2a0448b6aba9995f8db96b22773159b90c0",
+      "actualGLBTriangles": 10888,
+      "materials": 11,
+      "unchangedImages": 13,
+      "derivedAlbedos": [
+        {
+          "material": "boards_cream",
+          "pngSHA256": "2696d85571dbab2ef9d20003ba8292aa267c3f4db33fedc3593ca2ba9c6fb405",
+          "linearErrorMax": 0.004038660503485447,
+          "lineage": {
+            "image": "WoodFloor043_1K-PNG_Color_cream",
+            "sourceFile": "WoodFloor043_1K-PNG_Color.png",
+            "sourceSha256": "55a7c25c191c8eb501d87a8872438dcfba307b3a043fee00ad9e89f0c413d684",
+            "algorithm": "srgb-decode-linear-mix-srgb-encode-v1",
+            "linearTint": [
+              0.96,
+              0.93,
+              0.84
+            ],
+            "mixFactor": 0.82,
+            "sampleDimensions": [
+              512,
+              512
+            ],
+            "sourceChannels": 4,
+            "samplePixelCount": 1048576,
+            "packedMasterSha256": "2696d85571dbab2ef9d20003ba8292aa267c3f4db33fedc3593ca2ba9c6fb405",
+            "packedMasterBytes": 177831,
+            "runtimeDimensions": [
+              512,
+              512
+            ]
+          }
+        },
+        {
+          "material": "roof_teal",
+          "pngSHA256": "2a1344690cbe4f2f6b53fe5b5041f875d76c48997981aebb0d220d37a8fb9a64",
+          "linearErrorMax": 0.002687313256344026,
+          "lineage": {
+            "image": "RoofingTiles013A_1K-PNG_Color_teal",
+            "sourceFile": "RoofingTiles013A_1K-PNG_Color.png",
+            "sourceSha256": "ae2037e4c4934b42b60c799b2755cb73c164a883410f89e22ac54ed5ecb4d1de",
+            "algorithm": "srgb-decode-linear-mix-srgb-encode-v1",
+            "linearTint": [
+              0.24,
+              0.54,
+              0.52
+            ],
+            "mixFactor": 0.78,
+            "sampleDimensions": [
+              512,
+              512
+            ],
+            "sourceChannels": 4,
+            "samplePixelCount": 1048576,
+            "packedMasterSha256": "2a1344690cbe4f2f6b53fe5b5041f875d76c48997981aebb0d220d37a8fb9a64",
+            "packedMasterBytes": 72247,
+            "runtimeDimensions": [
+              512,
+              512
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "exclusions": [
+    "Actual new browser material/state/picking and decoder disposal",
+    "Current public root and new frozen preview",
+    "Two final cumulative Design rounds and two Drift rounds",
+    "Representative GPU, original agreement and Patrick visual/play acceptance"
+  ],
+  "ownedProcessesAbsent": [
+    994053,
+    994054,
+    994066,
+    994114,
+    995074
+  ],
+  "processClosureMethod": "Root actual SSH /proc presence check, exit0; all five absent"
+}

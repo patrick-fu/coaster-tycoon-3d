@@ -1,0 +1,29 @@
+{
+  "recordedUTC": "2026-10-10 04:04 UTC",
+  "retainedDirectory": "/Volumes/WD/code/workspaces/coaster-detailed-stalls-browser/reflection-scoped-r1/retained-r1",
+  "manifestSHA256": "7241116a3beb2cfe45c566c68683ec8ec7e01c3990c3df5700a25cc40aa32dfa",
+  "checksSHA256": "31c035a70aeef264e54618caad4d14b61eb69d18e351b3f13dae5ac208aa8e49",
+  "logicalFiles": 901,
+  "logicalBytes": 349668790,
+  "encodedBytes": 236061705,
+  "compressedFiles": 38,
+  "rootEncodedAndDecodedIndependentlyVerified": true,
+  "closurePath": "/Volumes/WD/code/workspaces/coaster-detailed-stalls-browser/reflection-scoped-r1/terminal-tool-closure.json",
+  "closureSHA256": "c9e7613c3ac01e409a557163c5271bf98d256c4a55cb877d734f90dbb5775e93",
+  "all63OwnedPriorProcessesAbsent": true,
+  "allPortsClosed": true,
+  "reportSHA256": "d5d5d37b96b13cdce9633f442fc3cae0d6963b9ddc348b98f13987ed38b08f94",
+  "observationsSHA256": "95f7dfb234df622b9864a3aeb1a9f2fc14b6c9fb9b816d0b417a57175ad51eee",
+  "readySHA256": "26ffa3b440bbe57330cc27f06cbb239c4619a77f5f9e041be0eb87c1a42bab20",
+  "acceptedScope": "Lossless retained proof transport and terminal process/port closure. Scoped native ownership/before-allocation availability proof awaiting selected actual raw semantic consumption; oldGLB visual gate remains failed.",
+  "reportTextFinding": "Original terminal disposition table incorrectly describes r1 dark equality, r2 independent opaque seed and r3 passed native subset. Additive owner erratum requested; original report and manifest immutable.",
+  "newAssetQualification": "Separate c166 raster/pose and newGLB/master verifier results pending Root consumption; no public/cumulative/hardware/human acceptance.",
+  "reportErratumPending": false,
+  "reportErratum": {
+    "path": "/Volumes/WD/code/workspaces/coaster-detailed-stalls-browser/reflection-scoped-r1/REPORT-ERRATUM.md",
+    "sha256": "c2bcc84b054a2928989876812ec34da742378dded8292aaa8a90c5c9771a82a4",
+    "supplementManifestSHA256": "68f087441a838c9f4dedd1b447db45d0cb4c15ccc2cd2fbe356a9a87e64ea04c",
+    "all23SidecarPayloadsRootExact": true,
+    "initialSSH1IsObservedCompletionProjectionWithoutOriginalScalar": true
+  }
+}

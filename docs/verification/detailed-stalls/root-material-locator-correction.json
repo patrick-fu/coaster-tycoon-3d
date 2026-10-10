@@ -1,0 +1,133 @@
+{
+  "utc": "2026-10-10T09:43:03.435683+00:00",
+  "scope": "Single non-executable retained-material locator correction. Models, packed masters, map/license bytes, physics/economics/Rules/save/runtime modules unchanged. Existing d232 frozen/public and isolated77 package stay immutable; next publication carries corrected metadata.",
+  "priority": "P3",
+  "oldSHA256": "cee6edff26f0a9cccc1b9f62b04d41902aa05918d0d9b5800f97b1d29d5ce1ec",
+  "newSHA256": "89fb57dc0d19a4291fb2875c2d94ce455870b1dfde1669ef63ad042ca2c03875",
+  "oldRoot": "/Volumes/WD/code/workspaces/coaster-detailed-assets/materials",
+  "newRoot": "/Volumes/WD/code/workspaces/coaster-rct2-program/evidence",
+  "onlyJSONFieldChanged": "retainedMaterialRoot",
+  "licenseAndArchiveCount": 6,
+  "nativeMembers": 17,
+  "allBytesAndHashesMatch": true,
+  "resolvedFiles": [
+    {
+      "path": "materials/ambientCG-license.html",
+      "bytes": 34106,
+      "sha256": "60138e09b277c89977841462634b36e99d7bae5b77174777813502069c59461c"
+    },
+    {
+      "path": "materials/Wood096_1K-PNG.zip",
+      "bytes": 15153371,
+      "sha256": "08bb999fff1a56789e33f77ab94124f1734238185fd2ff40e0ab109ce2f555b5"
+    },
+    {
+      "path": "materials/WoodFloor043_1K-PNG.zip",
+      "bytes": 7581590,
+      "sha256": "6211c1589cc988b72fc74c3ad638be8db789a7cb619537d02cf7b6e0e6b30bb8"
+    },
+    {
+      "path": "materials/RoofingTiles013A_1K-PNG.zip",
+      "bytes": 12212479,
+      "sha256": "fc4025f4b5b5a83463406b73f38eca674a9976a3b2785c7e41da5ff23567e3e8"
+    },
+    {
+      "path": "materials/Metal049A_1K-PNG.zip",
+      "bytes": 6456067,
+      "sha256": "802ac78fec292e86642630a510f9e6f869bd702fc2f2e81ad3a2160e80047880"
+    },
+    {
+      "path": "materials/Bricks051_1K-PNG.zip",
+      "bytes": 16665975,
+      "sha256": "9223035fb3a281eeb86caf0aba499994b5b790b3b4b6b6a3633274f2097a937a"
+    }
+  ],
+  "resolvedMembers": [
+    {
+      "asset": "Wood096",
+      "member": "Wood096_1K-PNG_Color.png",
+      "sha256": "2635d3b950808e52d5de4ce4ee4b3aa35430ffd3117e00c1b2cfb155168e6b47"
+    },
+    {
+      "asset": "Wood096",
+      "member": "Wood096_1K-PNG_NormalGL.png",
+      "sha256": "5b9f71b56cc74a397c9263619f7ef0cfc7d668762f4f2c960e4bd883dc2891c5"
+    },
+    {
+      "asset": "Wood096",
+      "member": "Wood096_1K-PNG_Roughness.png",
+      "sha256": "bcba2c9b971c17875e0d8b6e11b234ce86a1c4110bd72725c2586b8950738418"
+    },
+    {
+      "asset": "WoodFloor043",
+      "member": "WoodFloor043_1K-PNG_Color.png",
+      "sha256": "55a7c25c191c8eb501d87a8872438dcfba307b3a043fee00ad9e89f0c413d684"
+    },
+    {
+      "asset": "WoodFloor043",
+      "member": "WoodFloor043_1K-PNG_Metalness.png",
+      "sha256": "46ca3dbd1939c6c89b437c195afe51d816336baa0376b9289d6e7dc0757a69dc"
+    },
+    {
+      "asset": "WoodFloor043",
+      "member": "WoodFloor043_1K-PNG_NormalGL.png",
+      "sha256": "ac8e1221726a512c4eb3cae98674bf0dda774382b2ba2577d36cbf8192986a6e"
+    },
+    {
+      "asset": "WoodFloor043",
+      "member": "WoodFloor043_1K-PNG_Roughness.png",
+      "sha256": "c15241e172c474ad147003f8e957cf88d305d9e8d82809de201f04f7b969ec26"
+    },
+    {
+      "asset": "RoofingTiles013A",
+      "member": "RoofingTiles013A_1K-PNG_Color.png",
+      "sha256": "ae2037e4c4934b42b60c799b2755cb73c164a883410f89e22ac54ed5ecb4d1de"
+    },
+    {
+      "asset": "RoofingTiles013A",
+      "member": "RoofingTiles013A_1K-PNG_NormalGL.png",
+      "sha256": "2488e6f327db93fe29558a9326ee4dba94022f944e2daf070a7ed47825fa82ab"
+    },
+    {
+      "asset": "RoofingTiles013A",
+      "member": "RoofingTiles013A_1K-PNG_Roughness.png",
+      "sha256": "575b1674cfd09dde9db152b917503c77fa4187693762bf2f8824521975bac812"
+    },
+    {
+      "asset": "Metal049A",
+      "member": "Metal049A_1K-PNG_Color.png",
+      "sha256": "3c5be68c8a56534f120e88cff835a321ca51459c8f31482f984958c7fbfda8e6"
+    },
+    {
+      "asset": "Metal049A",
+      "member": "Metal049A_1K-PNG_Metalness.png",
+      "sha256": "61c66550ad5636c9fb8bfb13fc5b2ff4b2ba7cb66831e8c68509124915be045e"
+    },
+    {
+      "asset": "Metal049A",
+      "member": "Metal049A_1K-PNG_NormalGL.png",
+      "sha256": "5b80adcc8092618a127bb7dfa547e3a35d156efd027c9daa579ac26f9098a678"
+    },
+    {
+      "asset": "Metal049A",
+      "member": "Metal049A_1K-PNG_Roughness.png",
+      "sha256": "a42d9eaba9bc232739c7cb86dee03805e66f50a065cecfbbfe906aaeb6b3ded2"
+    },
+    {
+      "asset": "Bricks051",
+      "member": "Bricks051_1K-PNG_Color.png",
+      "sha256": "9adbf36c4f0d6a7f7eb3b85dc35c5c022c15bea802562e5bf9966d83d29facd4"
+    },
+    {
+      "asset": "Bricks051",
+      "member": "Bricks051_1K-PNG_NormalGL.png",
+      "sha256": "8b14ad4bd834773a26b0bbc4f4afd80fe92c939aa3f49385a41a1fb8165646e8"
+    },
+    {
+      "asset": "Bricks051",
+      "member": "Bricks051_1K-PNG_Roughness.png",
+      "sha256": "fce4ec1fb6301336503c0d65dd6c14aaf7288dfba5b20c4cd6ab15abf9f33a9d"
+    }
+  ],
+  "runtimeRecheck": "Static JSON/member verification only; no build/test/browser replay warranted for locator metadata. Final runtime evidence remains explicitly pinned to immutable d232."
+}
