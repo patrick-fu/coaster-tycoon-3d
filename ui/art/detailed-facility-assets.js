@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import { GLTFLoader } from '../vendor/addons/loaders/GLTFLoader.js';
 
-export function createDetailedFacilityAssets(renderer) {
+export function createDetailedFacilityAssets(renderer, {reflectionTexture = null} = {}) {
   const geometries = new Set();
   const materials = new Set();
   const textures = new Set();
@@ -18,7 +18,7 @@ export function createDetailedFacilityAssets(renderer) {
   };
 
   const ownTexture = texture => {
-    if (!texture || releasedTextures.has(texture)) return;
+    if (!texture || texture === reflectionTexture || releasedTextures.has(texture)) return;
     textures.add(texture);
     if (typeof ImageBitmap !== 'undefined') {
       if (texture.source?.data instanceof ImageBitmap) {
@@ -249,9 +249,15 @@ export function createDetailedFacilityAssets(renderer) {
       object.receiveShadow = true;
       const material = object.material;
       for (const value of Object.values(material)) {
-        if (value?.isTexture) {
+        if (value?.isTexture && value !== reflectionTexture) {
           value.anisotropy = Math.min(4, maxAnisotropy);
         }
+      }
+
+      if (reflectionTexture && (material.name === 'metal' || material.name === 'brass')) {
+        material.envMap = reflectionTexture;
+        material.envMapIntensity = .35;
+        material.needsUpdate = true;
       }
 
       if (!depths.has(material)) {

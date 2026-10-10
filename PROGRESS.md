@@ -1,9 +1,9 @@
 # Project progress and recovery
 
-Last updated: 2026-10-10 02:58 UTC.
+Last updated: 2026-10-10 03:04 UTC.
 Root owns this live record and its [dated journal](docs/progress/2026-10-10.md).
 Active worktree: `/Volumes/WD/code/workspaces/coaster-consumable-art/coaster-tycoon-3d`.
-Branch: `p/patrick/feature/detailed-consumable-stalls`; production source is frozen and pushed `7ab4d7e35bc2d4d07456b00d5aaaafe122eb105d`, tree `bc814658c807bb04af68eda5b7cea5b39b1c88ce`. Previous runtime/build689 is immutable and retains two confirmed failures. Main stays1373dbd; new build/runtime/public qualification is pending.
+Branch: `p/patrick/feature/detailed-consumable-stalls`; prior qualified runtime source7ab/treebc81 is immutable. Root now freezes the independently reviewed scoped source as a draft candidate for parallel remote build and isolated browser qualification. Source689 retains two confirmed failures. Main stays1373dbd; runtime/public qualification is pending.
 Draft [PR76](https://github.com/patrick-fu/coaster-tycoon-3d/pull/76) is created and attached; source7ab4d7e is unmerged and runtime unpublished.
 Active finite task: [Integrate detailed Burger and Soft-drink buildings at authored scale](https://github.com/patrick-fu/coaster-tycoon-3d/issues/75), OPEN/assigned Patrick, map27 child with closed native dependencies73/35/37.
 `CONTEXT.md` is the domain glossary. This record and its append-only journal retain execution context; the programme, fidelity register and map27 retain full scope.
@@ -35,7 +35,7 @@ Root owns production integration, acceptance, Git/tracker and context. Logic use
 
 ## Ownership and recovery
 
-Root is the sole production/UI/docs/tests integration writer. Source7ab integrated-r2 and affected browser proof are terminal and retained; kernel/material/loader phase owners and reviewers are consumed. SolMax browser owner has finished global reflection evidence; Root independently verifies all687 encoded/decoded payloads,44ownedPIDs absent/fourfullDB restorations/closed ports. The global candidate is rejected, not integrated. LunaMax conceptual ownership review consumed; monitored AGY scoped-r3 session42972/runner3917/CLI3919 actually launched02:46:00Z in its isolated directory. Actual CLI0/emptyresponse79Btimeout02:50:03Z is INCOMPLETE_TIMEOUT; useful partial source awaits independent review, not author-complete. No overlapping default-profile browser actor or production writer is assigned.
+Root is the sole production/UI/docs/tests integration writer. Source7ab integrated-r2 and affected browser proof are terminal and retained; kernel/material/loader phase owners and reviewers are consumed. SolMax browser owner has finished global reflection evidence; Root independently verifies all687 encoded/decoded payloads,44ownedPIDs absent/fourfullDB restorations/closed ports. The global candidate is rejected, not integrated. LunaMax conceptual ownership review consumed; monitored AGY scoped-r3 session42972/runner3917/CLI3919 actually launched02:46:00Z in its isolated directory. Scene r3 remains useful INCOMPLETE_TIMEOUT; remaining one-file AGY r4 actually completed0/blankstderr/nonempty02:53:01Z. Exact Scenea91fa819/loader92bed64a reviewed by Luna/no confirmeddefect; Sol actual scoped browser qualification is gated open but launch/terminal pending. No overlapping default-profile browser actor or production writer is assigned.
 
 Canonical `/Volumes/WD/code/projects/coaster-tycoon-3d` stays clean main1373. Prior `coaster-consumables` recovery pointer remains. The physical kernel web-dist received a Root picking-only scene/loader overlay; frozen dated build evidence is preserved and must not be relabelled as current integrated build. The journal preserves exact hashes/PIDs/failures/dispositions.
 

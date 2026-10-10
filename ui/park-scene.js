@@ -51,7 +51,7 @@ export class ParkScene{
   });
   this.carouselAssets=createCarouselAssets(this.renderer);this.carousels=createCarousels(this.art,this.carouselAssets);this.scene.add(this.carousels.group);
   this.carouselAssets.readyPromise.then(()=>{if(this.disposed)return;if(this.carouselAssets.error){this.onAssetError?.('Carousel models could not load: '+this.carouselAssets.error);return;}if(this.packet)this.carousels.update(this.packet,this.elements??[]);if(this.scenery)this.setStatic(this.scenery,this.entry);});
-  this.flumeAssets=null;this.boats=null;this.detailedFacilityAssets=null;
+  this.flumeAssets=null;this.boats=null;this.detailedFacilityAssets=null;this.detailedReflectionTarget=null;
   this.litter=new THREE.InstancedMesh(this.art.geometry('litter-box',()=>new THREE.BoxGeometry(1,1,1)),this.art.material('litter',{color:'#fff0be',roughness:1}),10000);this.litter.count=0;this.scene.add(this.litter);
   this.waste=createConsumableWaste(this.scene);
   this.ghost=new THREE.Group();this.scene.add(this.ghost);this.ghostMaterial=new THREE.MeshBasicMaterial({color:'#80bd53',transparent:true,opacity:.48,depthWrite:false});this.selection=new THREE.Mesh(new THREE.BoxGeometry(4.08,.06,4.08),new THREE.MeshBasicMaterial({color:'#ffd35e',transparent:true,opacity:.5,depthWrite:false}));this.selection.visible=false;this.scene.add(this.selection);
@@ -76,8 +76,18 @@ export class ParkScene{
   this.flumeAssets.readyPromise.then(()=>{if(this.disposed)return;if(this.flumeAssets.error){this.onAssetError?.('Log Flume models could not load: '+this.flumeAssets.error);return;}if(this.scenery)this.setStatic(this.scenery,this.entry);if(this.packet)this.boats.update(this.packet);});
  }
  ensureDetailedFacilityAssets(){
-  if(this.detailedFacilityAssets)return;
-  this.detailedFacilityAssets=createDetailedFacilityAssets(this.renderer);
+  if(this.disposed||this.detailedFacilityAssets)return;
+  const aux=new THREE.Scene();aux.background=this.scene.background.clone();
+  const generator=new THREE.PMREMGenerator(this.renderer);
+  try{
+   this.detailedReflectionTarget=generator.fromScene(aux,0,.1,100,{size:64});
+  }catch(error){
+   this.detailedReflectionTarget=null;
+   this.onAssetError?.('Detailed shop lighting could not load: '+(error?.message??error));
+  }finally{
+   generator.dispose();
+  }
+  this.detailedFacilityAssets=createDetailedFacilityAssets(this.renderer,{reflectionTexture:this.detailedReflectionTarget?.texture??null});
   this.detailedFacilityAssets.readyPromise.then(()=>{
    if(this.disposed)return;
    if(this.detailedFacilityAssets.error){this.onAssetError?.('Detailed shop models could not load: '+this.detailedFacilityAssets.error);return;}
@@ -152,5 +162,5 @@ export class ParkScene{
  overview(){const mixed=this.packet?.rides.some(r=>r.presentation.kind==='detailed-wooden-coaster')||this.packet?.rides.length>=4;if(mixed){this.controls.target.set(74,4,80);this.camera.position.set(146,64,156);this.camera.zoom=.98;}else{this.controls.target.set(82,4,74);this.camera.position.set(154,64,150);this.camera.zoom=1.18;}this.camera.updateProjectionMatrix();}
  requestOverview(){this.overviewPending=true;}
  close(){this.controls.target.set(82,4,67);this.camera.position.set(124,40,113);this.camera.zoom=2.5;this.camera.updateProjectionMatrix();}
- dispose(){this.disposed=true;this.renderer.setAnimationLoop(null);this.resizeObserver.disconnect();this.controls.dispose();this.clearStatic();this.people.dispose();this.vehicles.dispose();this.woodenVehicles.dispose();this.carousels.dispose();this.boats?.dispose();this.litter.dispose();this.waste?.dispose();this.ghostMaterial.dispose();this.selection.geometry.dispose();this.selection.material.dispose();this.treeAssets.dispose();this.surfaceAssets.dispose();this.woodenAssets.dispose();this.carouselAssets.dispose();this.flumeAssets?.dispose();this.detailedFacilityAssets?.dispose();this.art.surfacePalette=null;this.art.dispose();this.renderer.dispose();}
+ dispose(){this.disposed=true;this.renderer.setAnimationLoop(null);this.resizeObserver.disconnect();this.controls.dispose();this.clearStatic();this.people.dispose();this.vehicles.dispose();this.woodenVehicles.dispose();this.carousels.dispose();this.boats?.dispose();this.litter.dispose();this.waste?.dispose();this.ghostMaterial.dispose();this.selection.geometry.dispose();this.selection.material.dispose();this.treeAssets.dispose();this.surfaceAssets.dispose();this.woodenAssets.dispose();this.carouselAssets.dispose();this.flumeAssets?.dispose();this.detailedFacilityAssets?.dispose();this.detailedReflectionTarget?.dispose();this.detailedReflectionTarget=null;this.art.surfacePalette=null;this.art.dispose();this.renderer.dispose();}
 }
