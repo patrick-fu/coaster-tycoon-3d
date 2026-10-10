@@ -1,0 +1,55 @@
+{
+  "recordedUTC": "2026-10-10 03:35 UTC",
+  "classification": "CONFIRMED_ASSET_COPLANAR_OVERLAP",
+  "source": "scripts/art/soft-drink-stall.py:905-906",
+  "glbSHA256": "6f4cc5cec0d49ab3c9bc9601906d7a705f6a253d39e22ee2dc28db7f784b5066",
+  "independentGLBEvidence": {
+    "reviewer": "stall_reflection_design_luna_max",
+    "darkNode": 27,
+    "darkMesh": 18,
+    "darkTriangles": [
+      8,
+      9
+    ],
+    "metalNode": 29,
+    "metalMesh": 20,
+    "metalTriangles": [
+      112,
+      113
+    ],
+    "exactSameWorldY": 1.0949999541044235,
+    "darkXBounds": [
+      0.1899999976158142,
+      0.7300000190734863
+    ],
+    "darkZBounds": [
+      0.8799999803304672,
+      0.9799999892711639
+    ],
+    "metalTopContainsEntireDarkTop": true
+  },
+  "actualRasterEvidence": {
+    "owner": "detailed_stalls_browser_sol_max",
+    "path": "/workspace/coaster-detailed-stalls-browser/reflection-scoped-r1/runtime-r2-tail/local/actual-old-floating-ray-integer-raster-counterexample.json",
+    "darkTriangle": 9,
+    "metalTriangle": 113,
+    "samePlaneNormal": [
+      0,
+      1,
+      0
+    ],
+    "samePlaneConstant": -5.095000192523003,
+    "floatingIntersectionDistanceDelta": 7.1054e-15,
+    "integerCenter": [
+      1009.5,
+      684.5
+    ],
+    "neighborNineAllHaveBothCoplanarHits": true,
+    "observedDistanceDeltaRange": [
+      0,
+      1.4211e-14
+    ]
+  },
+  "rootDisposition": "Minimal AGY candidate lifts only the grille by1mm preserving6mm thickness. Actual export/pixel/plane qualification required; no envMap or tolerance change.",
+  "scope": "Confirmed overlapping actual asset surfaces; dark-labelled old metric is mixed depth/raster attribution, not evidence of dark material envMap change. No claim about universal hardware z-fighting."
+}

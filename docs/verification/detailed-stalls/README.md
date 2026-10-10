@@ -1,6 +1,6 @@
 # Detailed consumable building qualification
 
-Current candidate source is `7ab4d7e35bc2d4d07456b00d5aaaafe122eb105d` on
+Current compiled candidate source is `f535f199682957830d512a213f606e38b5d494de` on
 [draft PR76](https://github.com/patrick-fu/coaster-tycoon-3d/pull/76).
 [Finite task75](https://github.com/patrick-fu/coaster-tycoon-3d/issues/75)
 remains open. All execution below occurred on Grok Bot; WD retains the inputs,
@@ -13,7 +13,7 @@ raw results, failed attempts and editable masters.
 | Independent geometry candidate | Burger11,322/Soft-drink10,888 triangles; unit anchors/all-state bounds/UVs and eight CPU poses inspected. Source689 actual exported palette later failed; that candidate is retained | [Original art record](root-final-art-acceptance.json), [provenance](../../../ui/models/detailed-stalls/README.md) |
 | Repaired material resources | Exact unchanged geometry/UV/nodes/states;17 native source maps plus2 derived albedos in each reopened master. Four actual GLB colors match independently observed old linear MIX within8-bit quantization;13 unaffected images exact | [Repaired material acceptance](root-repaired-material-acceptance.json) |
 | Isolated regressions | Fixed loader9 and picking3 controls pass after actual counterexamples; original red runs retained | [Isolated acceptance](root-ui-isolated-acceptance.json) |
-| Current integrated build | Source7ab, exact767 committed inputs/162 shipping files; build and13 meaningful module controls pass with child+outer0/blankstderr. Six shipping files changed from689;156 exact including kernel/worker | [Current build acceptance](root-integrated-build-r2-acceptance.json), [immutable prior build](root-integrated-build-acceptance.json) |
+| Current integrated build | Sourcef535, exact778 committed inputs/162 shipping files; four children/SSH0 and13 meaningful module controls pass with blankstderr. Only Scene/loader changed from7ab;160 shipping files and Node binding exact | [Current build acceptance](root-integrated-build-r3-acceptance.json), [immutable7ab build](root-integrated-build-r2-acceptance.json) |
 | Existing browser behavior | Actual Classic27/Library10/lifecycle3 pass in local-r2; that attempt remains failed on receiver digest and blocked cleanup | External `browser-evidence/local-r2` and `attempts/local-r2` |
 | Receiver qualification | Distinct exact Nodeb123 andChrome78b;26 actual curve tails differ. Current Chrome's old-v12 projection57cc matches genuine historical Chrome bytes | [Raw diagnosis](root-receiver-diagnosis.json), [review disposition](receiver-review-disposition.json), [explicit browser binding](root-browser-receiver-binding.json) |
 | Original storage recovery | Separate neutral-only runner952095/Chrome952097 exits0 and restores originalDB[]; failed cleanup is not relabelled | External `browser-evidence/storage-recovery-r1` |
@@ -52,20 +52,35 @@ failed; its offline correction and successful lifecycle tail remain separate.
 
 A new actual black-metal observation prompted a bounded reflection control.
 The global neutral environment makes metal visible but also substantially
-brightens intentional dark parts, cream boards, grass and the genuine Classic
-gate. Root [rejects the global source](root-global-reflection-rejection.json)
+brightens cream boards, grass and the genuine Classic gate. The old dark-labelled
+sample includes coplanar metal and is not a pure dark-material measurement. Root [rejects the global source](root-global-reflection-rejection.json)
 and verifies all687 retained encoded/decoded files,44 owned process identities,
 closed ports and four byte-exact original storage restorations. The transient
 zombie and incorrect Soft-roof driver attempts retain their original failures.
 
-The current isolated scoped source assigns the shared reflection only to the
-authored `metal` and `brass` materials; global environment and nonmetal maps stay
-unchanged. One lazy Scene-owned size64 target is excluded from factory ownership.
+The compiled scoped candidate assigns the shared reflection only to the authored
+`metal` and `brass` materials; global environment and nonmetal maps stay unchanged.
+One lazy Scene-owned size64 target is excluded from factory ownership.
 [Source gate](root-scoped-reflection-source-gate.json) records the exact two-file
 candidate, the completed one-file AGY author and the earlier useful Scene partial
-that remains an incomplete timeout. The candidate is not integrated or published;
-independent concrete source review and actual scoped browser controls are pending.
-Actual GPU failure after partial PMREM allocation remains unqualified.
+that remains an incomplete timeout. Independent Luna source review found no
+confirmed ownership defect. Actual scoped Chrome passes359/360 pixel checks,
+fresh Classic0 targets, five native foreign-texture ownership cases and an
+optional before-allocation lighting-failure availability case. R1-r4 attempts
+remain failed; corrected callback-tail r5 passes. Final import success may cover
+the transient lighting feedback, so persistent visible failure feedback is not
+claimed. Actual GPU failure after partial PMREM allocation remains unqualified.
+
+The one failed pixel is an actual [coplanar DrainGrille/metal tray
+surface](root-grille-coplanarity-disposition.json), independently confirmed in
+exported GLB triangles and nine integer raster rays. An isolated AGY repair lifts
+only the dark grille1mm, keeping6mm thickness. New source04c03cfd/GLBc166d2e2/
+master5c09f398 were exported on Grok and all eight output hashes transferred
+exactly. Independent source/GLB/master verification and the original affected
+browser raster/pose checks are pending. The new asset is not integrated;
+sourcef535 still ships old Soft6f4. Root inspected all four new CPU poses for
+continued siding/roof/can/counter/closure appearance; those previews do not
+qualify the browser pixels or human style agreement.
 
 Prior complete paid/storage/legacy matrices remain reusable only under unchanged
 input pins. Exact public root/pin and TWO whole cumulative Design rounds and TWO

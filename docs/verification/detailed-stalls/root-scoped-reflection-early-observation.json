@@ -1,0 +1,19 @@
+{
+  "recordedUTC": "2026-10-10 03:29 UTC",
+  "sourceCandidate": "f535f199682957830d512a213f606e38b5d494de",
+  "actualImages": [
+    {
+      "path": "/Volumes/WD/code/workspaces/coaster-consumable-art/evidence/scoped-r1-early/drink-scoped-contact.png",
+      "bytes": 1645551,
+      "sha256": "d1a47cbe54281c33d6ac4836968678a84dda0aa3737a8d77ba6220031535ed33"
+    },
+    {
+      "path": "/Volumes/WD/code/workspaces/coaster-consumable-art/evidence/scoped-r1-early/food-scoped-contact.png",
+      "bytes": 1632510,
+      "sha256": "459825e1a157b34ef700b6af2f2c6628bfbe850ef6e537cd24ff6d5ebe0d33fc"
+    }
+  ],
+  "rootObservation": "Scoped ON panels make only metal/brass vent, kitchen/dispenser equipment and corner posts visible. Cream siding, warm/teal roofs and surrounding grass preserve the OFF appearance. Root viewed actual transferred OFF/ON/recovered contact sheets; no image edited or processed on Mac.",
+  "qualification": "UNQUALIFIED_FULL_VISUAL",
+  "reason": "First source runtime retains a failed dark-labelled pixel. Exact pixel-center and coplanar GLB diagnosis plus remaining native/failure/teardown controls pending. Human/GPU/public/cumulative not accepted."
+}

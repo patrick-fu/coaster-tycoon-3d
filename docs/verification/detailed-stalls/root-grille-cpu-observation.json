@@ -1,0 +1,26 @@
+{
+  "recordedUTC": "2026-10-10 03:59 UTC",
+  "sourceSHA256": "04c03cfd3eba1cf717ea96db44eddcb40f270ed8426a6e8fed2b521efe0bbda4",
+  "glbSHA256": "c166d2e28c2be1ab49dec4d26078b26f66a14520ea7a9c011a559d6e6d5a825e",
+  "retainedDirectory": "/Volumes/WD/code/workspaces/coaster-detailed-stall-grille-r1/evidence/export-soft-drink",
+  "actuallyViewed": {
+    "soft-drink-stall-open-front.png": {
+      "sha256": "d15d44611f471e8666eedf75475c38e2a7bb826334e88b642f5323b118ef1eee",
+      "bytes": 945196
+    },
+    "soft-drink-stall-closed-front.png": {
+      "sha256": "aea4943124f9bbf83e0fe242d2cecfdb9d58afb4def2e7179b52cde5d5a2304a",
+      "bytes": 948332
+    },
+    "soft-drink-stall-open-rear.png": {
+      "sha256": "00ad0f2c940a827727a8eceacc5b7fde7dcc5393e252c8138b62164d348b3b5c",
+      "bytes": 939403
+    },
+    "soft-drink-stall-closed-rear.png": {
+      "sha256": "12aeece0905a9fffd5e594d5b8c2eb24af7be672e9544656df00f3a20d0b18b0",
+      "bytes": 939579
+    }
+  },
+  "rootObservation": "All four actual exported CPU poses preserve coherent cream siding, teal roof/seams/can/sign, counter and closed shutter. No visible broad pose or palette regression observed.",
+  "scope": "CPU visual observation only; new source/GLB/master structural verification and actual original browser pixel gate remain pending. No human style, hardware or publication acceptance."
+}

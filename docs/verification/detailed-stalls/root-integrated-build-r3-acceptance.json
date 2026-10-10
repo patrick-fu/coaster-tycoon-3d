@@ -1,0 +1,151 @@
+{
+  "recordedUTC": "2026-10-10 03:15 UTC",
+  "sourceCommit": "f535f199682957830d512a213f606e38b5d494de",
+  "sourceTree": "58a60bfda44f3277528538e3956a4e6c6ae11778",
+  "buildReady": "/Volumes/WD/code/workspaces/coaster-consumable-art/evidence/integrated-build-r3/build-ready.json",
+  "buildReadySHA256": "3221a77fc83f87c10eaf884d9608f4ac04622ca08f78a583659ef7db82eef574",
+  "actualRemoteAndSshOuterExit": 0,
+  "childRuns": [
+    {
+      "phase": "prepare-source",
+      "pid": 1042740,
+      "actualExit": 0,
+      "stderrBytes": 0
+    },
+    {
+      "phase": "web-build",
+      "pid": 1042744,
+      "actualExit": 0,
+      "stderrBytes": 0
+    },
+    {
+      "phase": "module-controls",
+      "pid": 1042810,
+      "actualExit": 0,
+      "stderrBytes": 0
+    },
+    {
+      "phase": "actual-receiver",
+      "pid": 1042852,
+      "actualExit": 0,
+      "stderrBytes": 0
+    }
+  ],
+  "sourceFilesVerified": 778,
+  "old767SourceVerifiedBeforeAndAfter": true,
+  "shippingFilesVerified": 162,
+  "changedShipping": [
+    "park-scene.js",
+    "art/detailed-facility-assets.js"
+  ],
+  "unchangedShipping": 160,
+  "actualModuleTests": {
+    "passed": 13,
+    "failed": 0
+  },
+  "nodeReceivingRulesSHA256": "b123fee6c14e7b2df2b32b694639258a721f43a9552046d636f651c0af2d3fcb",
+  "versions": {
+    "save": 13,
+    "content": 6,
+    "protocol": 6
+  },
+  "postbuildAudit": {
+    "sourceFilesVerifiedPostBuild": 778,
+    "shippingVerifiedPostBuild": 162,
+    "allExact": true,
+    "ownedPids": [
+      {
+        "pid": 1042739,
+        "exists": false
+      },
+      {
+        "pid": 1042740,
+        "exists": false
+      },
+      {
+        "pid": 1042744,
+        "exists": false
+      },
+      {
+        "pid": 1042810,
+        "exists": false
+      },
+      {
+        "pid": 1042852,
+        "exists": false
+      }
+    ]
+  },
+  "retainedRawDirectory": "/Volumes/WD/code/workspaces/coaster-consumable-art/evidence/integrated-build-r3",
+  "retainedRaw": {
+    "actual-receiver.launch.json": {
+      "sha256": "9d9e248b346582072e3719d1082681dfa61615c159836073bf2fe0b0190bb787",
+      "bytes": 1063
+    },
+    "actual-receiver.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "actual-receiver.stdout": {
+      "sha256": "5c825ac7b3a9266bf5e36832c13e1588f31007e0187d015bd22a75604c24a67d",
+      "bytes": 140
+    },
+    "build-ready.json": {
+      "sha256": "3221a77fc83f87c10eaf884d9608f4ac04622ca08f78a583659ef7db82eef574",
+      "bytes": 117589
+    },
+    "module-controls.launch.json": {
+      "sha256": "6d34a198aa0afbfe0e93b031171c701a1ec3d21a55320b193ade6acb2378b04c",
+      "bytes": 388
+    },
+    "module-controls.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "module-controls.stdout": {
+      "sha256": "8e34fdab8b7e4f35cd49dd7171e264db53416eabac957020e8eca24cf371387b",
+      "bytes": 2460
+    },
+    "prepare-source.launch.json": {
+      "sha256": "44d5aa3f70b5e89adee8eaf69b477da4330621df6f3ac3c8d6915e2fcbfcce72",
+      "bytes": 300
+    },
+    "prepare-source.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "prepare-source.stdout": {
+      "sha256": "95bf4cb61a8d43041bae54e921ee9849c4fcde593b8a9e2d0e81cdc36728995e",
+      "bytes": 1637
+    },
+    "root-postbuild-audit.json": {
+      "sha256": "75016b958818f6787d8d89723e634eaaece46e32ee9f0ac223aeb4770be88161",
+      "bytes": 404
+    },
+    "run-integrated-build.py": {
+      "sha256": "01342099585d0762e8af62633aeb1694fbbada15099ce7ed7b2757afb3842b33",
+      "bytes": 5043
+    },
+    "source-prepare-receipt.json": {
+      "sha256": "230656f15192f518c4159919a8ce4ce65f59d2c016046b1ac37ce0b249837ac7",
+      "bytes": 1733
+    },
+    "terminal.json": {
+      "sha256": "51b34be2a685c479d703d783f478ada55572c65876eaa4be416aafe116d45acb",
+      "bytes": 3591
+    },
+    "web-build.launch.json": {
+      "sha256": "0794d315a964b8949b9d699f340d379bb9e3d088bdc5ce5a3c577fe7e790dab7",
+      "bytes": 252
+    },
+    "web-build.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "web-build.stdout": {
+      "sha256": "120b133d25a41fc01f174dbb1129e91fbbc95e7d931def7b534c319a71105eb4",
+      "bytes": 141
+    }
+  },
+  "scope": "Exact final candidate compile/module and file/process correspondence only. Isolated actual same-source browser controls running; publication/cumulative/hardware/human pending. Old312/61 and paid/storage/legacy reused under unchanged pins."
+}
