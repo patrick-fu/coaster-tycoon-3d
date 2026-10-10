@@ -1,0 +1,78 @@
+{
+  "startedAt": "2026-10-10T23:27:08.522673+00:00",
+  "localObserverPid": 2824,
+  "scope": "read-only Tailscale and SSH availability diagnosis; no build or product launch",
+  "commands": [
+    {
+      "label": "tailscale-status",
+      "argv": [
+        "tailscale",
+        "status",
+        "--json"
+      ],
+      "pid": 2826,
+      "actualWaitExit": 0,
+      "stdoutBytes": 17377,
+      "stdoutSha256": "5e3dc061bb60daf2ed97b6abac017a2de3799a8bad69a07afbc3885ffb3a2cec",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "selfOnline": true,
+      "grokPeer": [
+        {
+          "HostName": "grok-bot-2",
+          "TailscaleIPs": [
+            "100.106.65.13",
+            "fd7a:115c:a1e0::b036:410e"
+          ],
+          "Online": false,
+          "LastSeen": "2026-10-10T23:10:00.1Z"
+        }
+      ]
+    },
+    {
+      "label": "tailscale-ping",
+      "argv": [
+        "tailscale",
+        "ping",
+        "--c",
+        "1",
+        "--timeout",
+        "3s",
+        "--until-direct=false",
+        "100.106.65.13"
+      ],
+      "pid": 2828,
+      "actualWaitExit": 1,
+      "stdoutBytes": 31,
+      "stdoutSha256": "fb2775b847fe172615fab73e22f9bea11ec22de3903b1b8ff162277aea396992",
+      "stderrBytes": 29,
+      "stderrSha256": "133e81657971ad6b6f5c27ce1e05e95028caffea11b242a90386fe78a8702faf",
+      "stdout": "ping \"100.106.65.13\" timed out\n",
+      "stderr": "2026/10/11 07:27:11 no reply\n"
+    },
+    {
+      "label": "ssh-availability",
+      "argv": [
+        "ssh",
+        "-o",
+        "BatchMode=yes",
+        "-o",
+        "ConnectionAttempts=1",
+        "-o",
+        "ConnectTimeout=5",
+        "grok-build",
+        "date -u +%FT%TZ"
+      ],
+      "pid": 2841,
+      "actualWaitExit": 255,
+      "stdoutBytes": 0,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrBytes": 65,
+      "stderrSha256": "bf51d76dcfef3fb5bcad08cee6e2dbf7a654109f63a520c52a0517c8428a7b3d",
+      "stdout": "",
+      "stderr": "ssh: connect to host 100.106.65.13 port 22: Operation timed out\r\n"
+    }
+  ],
+  "finishedAt": "2026-10-10T23:27:16.917112+00:00",
+  "rootDisposition": "Target-offline access failure; no remote build/product producer. Stop retries, preserve255, never fall back to Mac. Goal ACTIVE; runtime waits for actual restored access."
+}

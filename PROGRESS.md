@@ -1,6 +1,6 @@
 # Project progress and recovery
 
-Last updated: 2026-10-10 23:09 UTC.
+Last updated: 2026-10-10 23:40 UTC.
 Root owns this live record and the [UTC journal](docs/progress/2026-10-10.md).
 [Previous detailed checkpoint](docs/progress/2026-10-10-progress-before-final-public-acceptance.md)
 retains the source/native/public/tool repair sequence. `CONTEXT.md` remains the domain glossary;
@@ -13,7 +13,14 @@ art, RCT2 gameplay breadth and substantive park management. Full79 families/155 
 41 shops/35 products, admissions/finance/research/scenarios, original numerical/art agreement,
 human style/play and representative integrated-GPU/scale acceptance remain OPEN. Finite77 is
 one four-family composition milestone; it is not the full game or first-playable acceptance.
-No new human decision is required for the current finite creation-input repair.
+No new gameplay decision is required for the current finite creation-input repair.
+Grok100.106.65.13 is actually offline; restoring that machine's Tailscale/SSH access is
+required before its pending static/native/public verification. The Goal remains ACTIVE.
+
+Latest durable outcome: actual PR80 body update/readback8131/tool0 at23:40:10Z keeps
+OPEN/draft/headd201 and explicitly records authored-pass versus unexecuted static/native/
+public checks plus target-offline failure. Bodybd4187e4 is retained in evidence/root-draft-context-r2.
+Root is saving this context/proof checkpoint; no executable or public update is included.
 
 English project artifacts; Chinese chat. Root owns production, integration, GitHub, hosting
 and this context. Logical work uses Sol Max, visual work AGY, adversarial review Luna Max.
@@ -29,17 +36,22 @@ complete typed saves, editable masters and every frozen preview.
   `p/patrick/fix/creation-view-adoption`, exact merged main basecb922ccea03841033de32ca5840219b056ea7173.
   Root alone writes production/docs. Previous composition worktree remains proof/history only.
 - Accepted executable baseline source7a0bbac668ece30416cceefb97997c0de17d1376, tree6c942d435e5a093d4a471182d5030ad1ecf594f6,
-  gameaad24598/cameraf562b92d. Git HEAD1bdec0dd377f922c9168f454c4b2eaba92a1bbc4/tree8ea8918269e119fde5c8a0b7603214db5541041a
-  is the actual reviewed creation-input source commit; original composition mergecb922 remains its base. The
+  gameaad24598/cameraf562b92d. Built source1bdec0dd377f922c9168f454c4b2eaba92a1bbc4/tree8ea8918269e119fde5c8a0b7603214db5541041a
+  is the actual reviewed creation-input source; original composition mergecb922 remains its base.
+  Prior docs checkpointd20180512ae745ac85b5a5e75eb76d0f09600390 is committed/pushed0 at23:12:01Z;
+  only five documentation files change, no executable/new build. The
   published UI remains source7a. Canonical main fast-forward0/clean is independently verified.
   Root commits identical reviewed gamec4fd4cff in ui/game.js; camera and all
   other executable files remain unchanged. Fresh Grok syntax/web now pass; native/public remain unexecuted.
   Prior docs commitc810 remains immutable; documentation HEAD is not a new build identity.
 - Source branch push actual0 and [draft PR80](https://github.com/patrick-fu/coaster-tycoon-3d/pull/80)
-  is OPEN/draft at exact head1bdec0d, title Preserve the new ride until its view is adopted.
+  has title Preserve the new ride until its view is adopted. Last readback at23:33 confirms
+  OPEN/draft at documentation headd201; executable source remains1bdec0d.
   Actual push78926/create78946 finish22:42:41Z; Root readback matches exact body/head/draft and
   attaches the PR to this task. Finite79 remains OPEN; no merge or public deployment is claimed.
   Final native/public acceptance and whole finite79 review still precede readiness/closure.
+  The later docs checkpointd201/push93657 actual0 retains build/gate/context and the explicitly
+  withdrawn Root stride finding. Draft source remains identical1b/gamec4fd; no public change.
 - [Final source repair](docs/verification/classic-showcase/root-replacement-input-source-repair.json)
   combines exact Sol/Luna r20 review: pending New/File uses existing inert/keyboard exclusion;
   invalidate staticRevision before replacement/recovery, commit it after current-epoch Scene/
@@ -251,6 +263,51 @@ the risk or closing the composition does not resolve it. Previous publication br
    side48→stride48 assumption was wrong; no source/driver mutation implemented it.
    No product/source defect or runtime failure inferred from these preparation gaps. Sole owner
    prepares isolated r2, then the same independent reviewers inspect the material repairs.
+   Sole owner now reports r2 actual file adaptation complete, static/mirror not launched yet:
+   locked create quote/exact reply/locked feedback/full forced recovery/unlock chain;
+   no-receipt quote/oversize full packets; timeout no Export/save/command/Blob/download;
+   complete case=null pre-reload history and stopped tail; actual durable13 annotation.
+   Read-only terrain probe1748286/SSH0 binds frozen Engine/View/genuine65536 backing and
+   correct256 stride, evidence2776530b. Preparation remains unqualified until actual static,
+   frozen diff/manifest/waits and both independent material verdicts; no HTTP/Chrome.
+   The first r2 static launch actually fails255 before any remote Python/Node producer:
+   Mac99309/SSH99313 times out at100.106.65.13:22; both actual exits and65B stderr are
+   retained in browser/fixed-preparation-r2/transport/static-r1. Authored inputs/deltas are
+   readable on WD, but no final driver/static/HTTP/Chrome exists. Both Mac owners are absent.
+   Root's actual Tailscale inventory now marks grok-bot-2-5 offline, last seen16m ago.
+   This is a remote-access failure, not a product result; no Mac fallback or blind app retry.
+   Root diagnoses access while the same reviewers can inspect the isolated authored delta.
+   Root's first context patch has a nonmatching anchor and changes nothing; this exact patch
+   records the failure and preserves the corrected next action.
+   Root's bounded read-only access diagnosis is COMPLETE, observer2824/tool40870 actual0:
+   Tailscale status2826 actual0 says selfOnline=true/targetOnline=false, LastSeen23:10:00.1Z;
+   single ping2828 actual1 and SSH2841 actual255 at23:27:16Z confirm no access. Evidence is
+   evidence/root-grok-access-r1/result.json plus exact command/log hashes. This distinguishes
+   target unavailability from a build/product/authentication result. Stop connection retries;
+   target must return online before static/native/public verification can proceed. Goal remains
+   ACTIVE and authored delta review/domain-contract work can advance independently.
+   Existing fixed DesignSol and DriftLuna resume only read-only authored-r2 material review,
+   not runtime launch or a substitute for unexecuted final static/mirror/process evidence.
+   Both authored delta reviews are now COMPLETE/PASS and Root consumes the actual repairs:
+   exact locked create quote/reply/feedback/full recovery/unlock; small timeout no-native-
+   Export/save/command/Blob/download; no-receipt full recovery; complete case=null history/
+   stopped tail; corrected actual durable13 scope. These close the preparation counterexamples,
+   not observed product behavior or the final launch gate. Root's durable
+   [authored disposition](docs/verification/creation-view-adoption/root-fixed-authored-disposition-r2.json)
+   reads all9 listed files135349B, pins938a9ea4 and the label-only recovery wrapper0c0caf71.
+   Root6689/tool0 confirms known6 local owners absent, no final driver/contract and no runtime.
+   Current sourcegamec4fd and readyd821 stay unchanged. Sole owner completes its pure-file
+   checkpoint and stops connections; reviewers complete without writes or runtime.
+   Restore actual target access, then same owner runs /bin/sh run-static.sh static-r2 in
+   browser/fixed-preparation-r2. Keep original transport/static-r1 FAILED255. First remote
+   producer remains attempt-static-r1 because the failed attempt never reached a producer.
+   Inspect actual generation/static/mirror/finite receipts and fresh remote source/profile/
+   ports/owners before a separately signed fixed-runtime-r1 gate. Do not presume remote owners
+   remain absent while offline. Actual native/public and twice whole Design/Drift closure
+   still precede finite79/PR80 readiness/merge. No automatic connection retry or Mac fallback.
+   Root's early reader used a stale7-count after two docs were added; all9 payload hashes were
+   exact. Convenience source-cwd/glob/camera-path reads also fail without mutation or product
+   execution; actual inventory-based reads and this final receipt correct the administrative scope.
 4. Continue [programme27](https://github.com/patrick-fu/coaster-tycoon-3d/issues/27) and the full Goal.
    Next P4 foundation should honestly implement an independent information kiosk's Map/Umbrella
    dual-product transaction, permanent guest ownership separate from consumables, four counter
@@ -263,6 +320,41 @@ the risk or closing the composition does not resolve it. Previous publication br
    services code still has one need-driven product/price/frontage and no merchandise inventory;
    these glossary additions are planned domain vocabulary, not an implemented kiosk or map/rain effect.
    No new ADR or kernel/UI capability is introduced. First finish finite79 qualification.
+   Existing commerce_frontier_sol_max resumes only a read-only minimal saved-domain/worker
+   contract outcome while79 waits: exact v13 migration whitelist, separate merchandise product
+   accounting/ownership/counter approach, atomic purchase and nested rollback counterexamples.
+   No source/docs writer, new research/experiment, model integration or runtime delegation. Root
+   will consume this next-contract preparation after79; it cannot become kiosk implementation.
+   That read-only proposal is now COMPLETE: candidate14/7/7, strict old13/content6 identities/
+   Rules/key whitelist, independent merchandise profile, strict information-facility union,
+   separate active/retired per-product sales/income, permanent guest ownership plus selected
+   product/counter, immutable nested replacement and atomic RNG/payment. It correctly catches
+   current v12→13 migration using future constants and presentation-gated executableContent.
+   Suggested authority-only identity/profile/8colour/money bounds are unaccepted proposals,
+   not source changes or original verification. Root must review/freeze the finite contract,
+   immutable old13 oracle and its useful counterexamples after79; no repeated broad research.
+   Root independently checks Engine134-136/154 and registry76: explicit historical13/content6
+   codec/identity gates and nested immutable rollback are necessary seams. A targeted reference
+   recheck now rejects three unsupported purchase/color seeds:8colors, every-new-guest always-
+   buying Umbrella and unconditional one-RNG-per-successful-Umbrella. Pinned Guest1438-1592
+   instead applies non-rain souvenir eligibility/value/cash; rain changes eligibility/value,
+   and default item color comes from vendor color unless random shop colors are enabled.
+   Original palette0-31 is different from modern54; source behavior remains reconstructed,
+   not observed original acceptance. Keep this proposal UNACCEPTED; Root requests exact source
+   paths/lines and conservative boundaries, not new weather or presentation implementation.
+   Separate four-counter transaction/owned-merchandise foundation from real map navigation,
+   rain eligibility/opening and authored kiosk integration. New product income must remain
+   0<=income<=maxPrice*sales using BigInt, retaining zero price and historical repricing.
+   Targeted commerce recheck is COMPLETE and Root reads the exact unmodified local reference
+   HEAD1151322: Guest1438-1597/3370-3388, Colour.h22-86 and Colour.cpp99-102. Map is explicitly
+   exempt from the ordinary souvenir rides/happiness gate. Reference kiosk metadata at
+   HEAD978f596/file0981b0e5 lists Map then Umbrella; second-item-first source behavior means
+   Umbrella then Map fallback, so the earlier Map-first seed is withdrawn too. Four proposal
+   corrections, exact source hashes and the still-unaccepted structural/codec/rollback
+   foundation are retained in evidence/information-merchandise-candidate-r1/root-proposal-disposition.json
+   (26d83569). No GPL implementation is copied. Demand RNG may occur on a refused decision and
+   is separate from optional color RNG/financial commit/whole-batch rollback; no blanket RNG
+   claim is accepted. P4 policy/weather/navigation/model work remains OPEN after79.
 
 ## Cleanup
 
@@ -276,3 +368,8 @@ Root's exact redundant remote upload-archive cleanup probe1742352/SSH actual0 at
 does not meet its file-owner guard and removes nothing. WD2,344,960B archive is independently
 rehashed eab6286e exact; original build processes are absent. No cleanup-success or reclaimed-
 space claim; preserve the archive rather than bypass the guard.
+
+A second exact archive probe1750321/SSH0 at23:16:09Z confirms archive eab6286e and known
+build processes absent, but protected Linux FD directories remain unreadable. Guard remains
+fail-closed; removes nothing. Stop this cleanup route and preserve the small duplicate. No
+unprivileged scan or absent lsof can establish all file owners; no cleanup or space claim.
