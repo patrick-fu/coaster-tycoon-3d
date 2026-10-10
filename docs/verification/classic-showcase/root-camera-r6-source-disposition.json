@@ -1,0 +1,29 @@
+{
+  "utc": "2026-10-10T10:53:03.850920+00:00",
+  "sourceSHA256": "368ff05e5bb0c980c7cef8e8cca55a0cba620132aeb8a8d78149caa457e7a517",
+  "priorSourceSHA256": "978e4d8db17b29578e71a56a7e62adce3751f50b555db081553a75b5daeed0ca",
+  "scope": "Root source acceptance of bounded AGY actual-motion repair. Independent P2 recheck and actual Grok runtime remain pending.",
+  "model": "gemini-3.8-flash-high",
+  "conversationId": "86e53158-fcac-474f-b1ec-070766482c78",
+  "effectivePermissionMode": "request-review",
+  "actualChildExit": 0,
+  "responseBytes": 1631,
+  "stderrBytes": 0,
+  "stdoutSHA256": "1a522b82ff52a5f83bfde5dd860e717e174446610935e6c81b9d575c0293963d",
+  "completedTools": [
+    "view_file",
+    "replace_file_content",
+    "view_file"
+  ],
+  "unchangedInputCount": 12,
+  "knownPIDsAbsent": [
+    52690,
+    52692
+  ],
+  "rootFindingDisposition": "Confirmed P2 source repair: input start snapshots pose only; actual camera/target/zoom change clears Overview; no-motion click and programmatic updates retain it. Threshold1e-6 rejects harmless float jitter.",
+  "unqualified": [
+    "actual stationary-click then resize fit",
+    "actual orbit/pan/wheel manual preservation",
+    "actual finalframes/picking1024toolbar/fullsavebrowser controls"
+  ]
+}

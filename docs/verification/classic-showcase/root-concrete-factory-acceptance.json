@@ -1,0 +1,146 @@
+{
+  "utc": "2026-10-10T08:45:27.706938+00:00",
+  "scope": "Root consumption of isolated concrete TS factory compile and exact complete Node start-save equivalence to independently accepted recipe. Not production or browser/render acceptance.",
+  "baseSourceCommit": "d2320d5e324d548fdba3b30f7d4e0a2d11235466",
+  "readySHA256": "bc4130dfb1727a12c73d45fd74904b5e81e6b4cc6e3d9513da7cdcfa41a745bf",
+  "nodeRulesSHA256": "b123fee6c14e7b2df2b32b694639258a721f43a9552046d636f651c0af2d3fcb",
+  "sourceFilesPinned": 36,
+  "compiledFilesPinned": 74,
+  "unchangedOldCompiledFiles": 71,
+  "onlyOldSourceChange": [
+    "src/simulation/browser-worker.ts"
+  ],
+  "onlyOldCompiledChange": [
+    "simulation/browser-worker.js"
+  ],
+  "newCompiledFiles": [
+    "content/classic-showcase.d.ts",
+    "content/classic-showcase.js"
+  ],
+  "fullStartSaveBytes": 810792,
+  "fullStartSaveSHA256": "a91139e868bf21eebb1cc75e049e368fa3e285795f011e833c48d4ca8d8bef4a",
+  "completeIndependentOracleBytesEqual": true,
+  "actualCommands": [
+    {
+      "name": "compile",
+      "pid": 1389440,
+      "actualExit": 0,
+      "stdoutBytes": 0,
+      "stderrBytes": 0,
+      "stdoutSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "full-save-equivalence",
+      "pid": 1389464,
+      "actualExit": 0,
+      "stdoutBytes": 254,
+      "stderrBytes": 0,
+      "stdoutSHA256": "8b9768107fadbb08b16d219e7652e61e7e378ce77a04f6e9cf0633e50568c2e4",
+      "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "actualHelperExit": 0,
+  "actualSSHExit": 0,
+  "rawMirrorExit": 0,
+  "knownRecordedPIDsAbsent": [
+    {
+      "pid": 1387342,
+      "exists": false
+    },
+    {
+      "pid": 1387343,
+      "exists": false
+    },
+    {
+      "pid": 1389439,
+      "exists": false
+    },
+    {
+      "pid": 1389440,
+      "exists": false
+    },
+    {
+      "pid": 1389464,
+      "exists": false
+    },
+    {
+      "pid": 1378594,
+      "exists": false
+    }
+  ],
+  "closureLimitation": "Post-wait absence of known recorded isolated compiler/probe and HTTP-bootstrap PIDs only; complete descendant trees were not captured",
+  "allRetainedFiles": {
+    "full-save-equivalence.stdout.log": {
+      "bytes": 254,
+      "sha256": "8b9768107fadbb08b16d219e7652e61e7e378ce77a04f6e9cf0633e50568c2e4"
+    },
+    "compile.stdout.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "result.json": {
+      "bytes": 22595,
+      "sha256": "45bdc08d479921f5cbb040611688b647fe84ce954a9bc3f2e456f6f63b1de9c5"
+    },
+    "actual-start.save.json": {
+      "bytes": 810792,
+      "sha256": "a91139e868bf21eebb1cc75e049e368fa3e285795f011e833c48d4ca8d8bef4a"
+    },
+    "compile.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "full-save-equivalence.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "post-wait-closure.json": {
+      "bytes": 612,
+      "sha256": "844fe3baede0a78edd21a770abd744aa8f0f0743daa70264be7c49979fbe11b7"
+    },
+    "actual-source/probe.mjs": {
+      "bytes": 1381,
+      "sha256": "96de85f842cddfc9ec70c35201ec20dd69b22a6fcc8e4ce2a3a5d09534161bf4"
+    },
+    "actual-source/package.json": {
+      "bytes": 397,
+      "sha256": "172e90b48e8307ef4d104ee318542f505f14c0a84ede11e47a00dac890244ae4"
+    },
+    "actual-source/tsconfig.json": {
+      "bytes": 254,
+      "sha256": "e01550b6d0a8394c7cd5c0a75205890361e444b25a933e922c51c8e866fdab54"
+    },
+    "actual-source/src/simulation/browser-worker.ts": {
+      "bytes": 2815,
+      "sha256": "a155d48eb73f45de4990a2d84f8fda138190a3da923244364745ad4dbb0f0346"
+    },
+    "actual-source/src/content/classic-showcase.ts": {
+      "bytes": 6288,
+      "sha256": "6ebc0c99ed13c628530e9fb3befe417701010aeef50c378d02902a36b752e35a"
+    },
+    "emitted/simulation/browser-worker.js": {
+      "bytes": 3352,
+      "sha256": "8f3df7fc3b46b364320d60204cf8622edd205fe3a3e5e21c361ce71e329d49c2"
+    },
+    "emitted/simulation/browser-worker.d.ts": {
+      "bytes": 11,
+      "sha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+    },
+    "emitted/content/classic-showcase.d.ts": {
+      "bytes": 169,
+      "sha256": "418d185b2383d0f4e96cc3875d46b6ee3951af6dcf732cfb8bf7a690bc1807b0"
+    },
+    "emitted/content/classic-showcase.js": {
+      "bytes": 6788,
+      "sha256": "540a7bc6bd76a148af9af5f83b9892988cbf0aa779bdf43ea89eb5746586f55b"
+    }
+  },
+  "preservedFailure": "First TS compile2/helperSSH1, missing tracked-ride type guard, preserved separately. Full-save check was not run in that failed attempt.",
+  "remaining": [
+    "Actual new worker startup/New park Chrome binding and save/reload",
+    "Overview/storefront composition and Classic CSS usability",
+    "Full finite77 cumulative reviews/publication",
+    "Original fidelity/human/hardware GPU/full programme"
+  ]
+}

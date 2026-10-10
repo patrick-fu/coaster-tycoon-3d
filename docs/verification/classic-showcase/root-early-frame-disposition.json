@@ -1,0 +1,72 @@
+{
+  "utc": "2026-10-10T10:17:07.420008+00:00",
+  "scope": "Root transferred-image/terminal subset disposition only, not complete runtime/source/native/public acceptance. Full raw CDP/HTTP/authority retention awaits producer.",
+  "readySHA256": "cc0de8bf74caccb64da58940ff039872dfb0155fcb10c0ad2abdbc8586dee40e",
+  "runtimeActualChildSSHExit": 1,
+  "failure": "Second conditional data-select-ride click while selection is already nonnull; genuine clear-selection required",
+  "photos": [
+    {
+      "file": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/early-r1/local/overview-1920x1080.png",
+      "bytes": 1519740,
+      "sha256": "7f1ec9108c04fac73aa5230d5ab444b1540066f323a56e40004bd3742d0bad9b",
+      "window": {
+        "width": 1920,
+        "height": 1080
+      }
+    },
+    {
+      "file": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/early-r1/local/close-1920x1080.png",
+      "bytes": 2111536,
+      "sha256": "166b3b0ef1ce622b2501d60fc1785860f7f50347749a9290090515890cfbdb53",
+      "window": {
+        "width": 1920,
+        "height": 1080
+      }
+    },
+    {
+      "file": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/early-r1/local/close-1024x768.png",
+      "bytes": 729920,
+      "sha256": "1007da38970fd5f1709b7d06460f309efeeaae93ec9c3be96f504070ea09e0b4",
+      "window": {
+        "width": 1024,
+        "height": 768
+      }
+    },
+    {
+      "file": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/early-r1/local/overview-1024x768.png",
+      "bytes": 584917,
+      "sha256": "03b57ee8e39abd42830ba313b3fa16b570ae98921a37782c61cd6238b4479455",
+      "window": {
+        "width": 1024,
+        "height": 768
+      }
+    }
+  ],
+  "allFourTransferredBytesMatchActualFrameIndex": true,
+  "rootActuallyViewedAllFour": true,
+  "observations": [
+    "1920 Overview shows all four real ride families; two counters visible",
+    "Close targets detailed counters/Carousel; cropped outer coasters are expected",
+    "1024 Overview Carousel obscured by right inspector",
+    "1024 native DOM/frame metadata: New/Close display:none"
+  ],
+  "rootDisposition": "Repair only responsive camera framing and toolbar via separate isolated AGY tasks. Keep r1 failed and reuse exact accepted operation/history/native proof; no fake riders/extra matrices.",
+  "fullOriginalDBBodyRestored": true,
+  "originalDBSHA256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+  "originalDBBytes": 3,
+  "knownOwnedPIDsAbsent": 15,
+  "runnerPostWait": {
+    "pid": 1438603,
+    "exists": false
+  },
+  "allPortsClosed": true,
+  "treeCoverageLimit": "13 captured child PIDs plus2 termination-discovered/reaped extras1438811/1439491 lack preterm ancestry/status; not a complete15-node capture.",
+  "ownerSubsetAudit": "r1-subset-audit.json/13 actual raw controls0; Root full raw consumption pending",
+  "ownerAuditSHA256": "deeec52fdf91dc37c7d0af36930d188a951c4a79baa9fcac830b4779d484510a",
+  "driverDiagnosisSHA256": "d571c259627bdfc7e40cd5a12018e11eb03550331642c4a7d9488ca2ccb5703f",
+  "preservedFailures": [
+    "runtime r1 childSSH1",
+    "first offline tree-union assertion audit1",
+    "AGY prelaunch parent-directory Python1/no-child in both fresh tasks"
+  ]
+}

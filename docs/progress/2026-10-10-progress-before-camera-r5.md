@@ -1,6 +1,6 @@
 # Project progress and recovery
 
-Last updated: 2026-10-10 10:54 UTC.
+Last updated: 2026-10-10 10:30 UTC.
 Root owns this live context and its [dated journal](docs/progress/2026-10-10.md).
 Earlier details remain in the [pre-public checkpoint](docs/progress/2026-10-10-progress-before-final-public.md).
 `CONTEXT.md` is the domain glossary, not this execution record.
@@ -35,7 +35,7 @@ process and file-owner checks. Preserve failed raw observations and the default 
   actual Pages built at07:58:29Z. Root accepted20 fresh root/new-preview HTTP bodies.
   [Root](https://patrick-fu.github.io/coaster-tycoon-3d/?showcase=classic),
   [d232 frozen preview](https://patrick-fu.github.io/coaster-tycoon-3d/previews/detailed-stalls-d2320d5/?showcase=classic).
-  Root has consumed the complete main player evidence: 1028 encoded/decoded payloads,324 fresh HTTP bodies,582 actual CDP source bodies,14 whole legal authority pairs,10 actual PNG bodies and both full original typed DB restores. All77 sidecar bytes, actual child/SSH/mirror/hash exits and21 prior PID+three helper absences are accepted. Finite75 cumulative Design and Drift both completed TWO whole rounds; no unresolved confirmed findings.
+  Root has consumed the complete main player evidence: 1028 encoded/decoded payloads,324 fresh HTTP bodies,582 actual CDP source bodies,14 whole legal authority pairs,10 actual PNG bodies and both full original typed DB restores. All77 sidecar bytes, actual child/SSH/mirror/hash exits and21 prior PID+three helper absences are accepted. Cumulative reviews remain pending.
 - Current public runtime qualification: `d2320d5e324d548fdba3b30f7d4e0a2d11235466`. Previous `e9159150f0828cddd38ae95f740c7e1601b4b481`,
   tree `a84e6d25515e3f1bb1b32578499cd1874cc5334f`, retained at its [frozen preview](https://patrick-fu.github.io/coaster-tycoon-3d/previews/detailed-stalls-e915915/?showcase=classic).
 - Canonical `/Volumes/WD/code/projects/coaster-tycoon-3d` remains clean main
@@ -60,69 +60,58 @@ process and file-owner checks. Preserve failed raw observations and the default 
 | Public baseline and final dispatch | e915 actual324 HTTP/390 parsed/10 full authority pairs/original public DB1 restored/8 unit poses+picking/native lifecycle and1006+62 retention accepted. New hosting preserves all1098 older frozen/.nojekyll files and only changes2 runtime files. Actual root/pin each79 checks pass; Root consumes324 HTTP/582 actual CDP bodies,2 documents,14 complete authority pairs,10 actual PNGs,4 resource controls and original DB1/two typed records fully restored. All77 sidecar payloads/tool child+SSH/mirror/hash0 and21 priorPID/three helper absences accepted. Recorded Chrome subtree union12 with3 terminal adopted extras remains an explicit recording limit. | [e915 public](docs/verification/detailed-stalls/root-public-e915915-acceptance.json), [d232 HTTP gate](docs/verification/detailed-stalls/root-public-d2320d5-bootstrap-acceptance.json), [actual public acceptance](docs/verification/detailed-stalls/root-public-d2320d5-acceptance.json). |
 | Cumulative reviews | TWO whole Design rounds and TWO whole Drift rounds completed independently. Both R1 P2 repairs and R2 P3 locator are Root-confirmed and independently rechecked. No unresolved confirmed findings. Old six encoded metadata conflicts are preserved r1 failures, refuted by accepted final-r2/all1538 exact. | [Whole review disposition](docs/verification/detailed-stalls/cumulative-review-disposition.json). |
 
-## Current finite77 delivery and owners
+## Owners and next-showcase work
 
-[Finite77](https://github.com/patrick-fu/coaster-tycoon-3d/issues/77) is OPEN and unblocked.
-Scope: playable Classic showcase with detailed wood, steel, ONE-boat Flume and Carousel,
-Burger/Soft-drink/toilet, actual paid operation, all-four Overview, detailed Close, usable1024
-controls, legal construction/picking/removal and genuine old-save import/save/export/reload.
-No new Rules, products, physics, save version or original-equivalence claim.
-[Contract](docs/planning/classic-four-family-showcase.md).
+- Sole default-Chrome owner `/root/detailed_stalls_browser_sol_max` is terminal, with final owner verdict matching Root acceptance in isolated
+  `/Volumes/WD/code/workspaces/coaster-detailed-stalls-browser/public-d2320d5-r1` and remote counterpart.
+  WD/remote input access and deployment receiptc21f4653 confirmed. Static preflight1387131/SSH0/blankstderr08:22:00Z verifies792source/162shipping/2changes+160reuse. Frozen driverae03f236/ownership7573f233; runtime1388221/Chrome1388336 terminal08:26:56Z/childSSH0,79checks perroute/7authority/2presentations. Main1028+sidecar77/Root actual acceptance complete. Administrative report1395360/SSH1 wrongtree-union assertion retained. Offline report1397907/SSH0/blankstderr now0; recordedtrees union12/known15,3 reapedextras lack individualpreterminationancestry/status bodies. Lossless main retention1028/Root consumption complete;77-file administrative sidecar/tool postwait is accepted; no newChrome. Root released actual Pages/20HTTP gate.
+  Outcome: affected root/new-preview source identity, Classic/Library/placement/render/picking,
+  real save/reload, owned disposal/foreign preservation, complete original public DB restoration
+  and full known tree closure. No expanded historical/native fault matrices or hardware claims.
+  Do not start another Chrome owner.
+- Terminal read-only cumulative R1 owners: `/root/stalls_cumulative_design_r1_sol_max` and
+  `/root/stalls_cumulative_drift_r1_luna_max`. Both final verdicts consumed, Root disposition recorded. Fresh R2 whole Design owner `/root/stalls_cumulative_design_r2_sol_max` and Drift owner `/root/stalls_cumulative_drift_r2_luna_max` are terminal clean-context/read-only over all finite75; do not count slice-only reviews as whole rounds.
+- Root accepted isolated next-showcase recipe at
+  `/Volumes/WD/code/workspaces/coaster-classic-showcase-logic-r1`:
+  wood/steel/ONE-boat Flume/Carousel, detailed Burger/Soft-drink/toilet,
+ 182 strict commands, all routes/frontages and four complete save checks plus five atomic refusals.
+  Actual+12288ticks paid admissions44/70/9/139, sales65/140/31.
+  Starttick4800 wood income0; first positive sample6464. Reservation x3–36/y5–32 is not
+  rendered mesh/camera bounds. First failed toilet placement and mislabeled original-control
+  failure-save erratum retained. Independent LunaMax finds no logic blocker;26 scenery pieces
+  remain subject to actual visual value. Production/default75 is unchanged.
+  [Root recipe evidence](../evidence/classic-showcase-recipe-root-acceptance.json).
+- AGY next-showcase visual workspace
+  `/Volumes/WD/code/workspaces/coaster-classic-showcase-visual-r1`:
+  initial r1 timeout/empty response/NO EDITS remains INCOMPLETE.
+  Camera r2 completed actual0/nonempty3189-byte response/6 reads+2 writes with exact
+  Gemini3.8FlashHigh/request-review identity; only isolated Scene initial/overview/close changed.
+  All12 other input hashes exact/runner97306+CLI97308 absent. Candidate0307d3e4 retained in
+  `root-r2-camera-disposition.json`; actual remote framing/occlusion remains unqualified.
+- AGY Classic CSS r3 monitor70425, runner6730/CLI6735, launched08:04:49Z with8m deadline.
+  Same model/conversation; only isolated ui/style.css and ui/content-browser.css editable.
+  All other inputs/camera/production readonly, no commands/runtime/browser. Effective init is
+  observed exact Gemini3.8FlashHigh/request-review. Turn ended08:12:51Z/exit0 but8m timeout/emptyresponse: INCOMPLETE. Four actual style.css writes are retained as a scoped partial candidate; Library CSS unchanged. Root prunes money animation/unused classes. Both PIDs absent; actual render/usability pending.
+- Latest exact cleanup: old e915162-file duplicate shipping stage removed,79285502 logicalB freed after full retained frozen-preview byte equality, empty lsof and accepted prior18-PID/port closure. [Stage cleanup](docs/verification/detailed-stalls/root-old-public-stage-cleanup.json). Prior four duplicated AGY temporary capture files/empty dirs removed,68388B freed after four owned PID absences, lsof and retained-byte equality.
+  [Cleanup](docs/verification/detailed-stalls/root-showcase-visual-temp-cleanup.json). Two further exact r3 temp captures removed,27063B freed after6730/6735 absences, blank lsof and retained-byte equality; [r3 cleanup](docs/verification/detailed-stalls/root-showcase-r3-temp-cleanup.json).
+  Preserve masters, raw failures, immutable oracles, source, default profile and all frozen previews.
 
-- Root owns active77 branch, production, integration, acceptance, GitHub and this record.
-  Factory `6ebc0c99`, worker `a155d48e`, Rides labels `b2bdfe53`, camera `368ff05e`
-  and Classic CSS `8e3c3f77` are copied. Existing legacy elevated-path check is moved
-  after its genuine legacy import without changing any assertion. Main provenance89fb
-  must ship with77. Root is freezing the accepted source checkpoint for final canonical remote build/test. P2 independent recheck/realbrowser remainspending.
-- Independent SolMax recipe182 legal commands/four complete saves/five atomic refusals
-  and actual+12288tick operation are Root-accepted. Wood/steel/Flume/Carousel paid
-  admissions44/70/9/139 and Burger/Soft-drink/toilet sales65/140/31. Wood starts with
-  income0 at4800; first positive sample6464. ONE4-seat boat, not an unsupported fleet.
-  Reservation x3–36/y5–32 is not mesh/camera bounds. LunaMax independent logic review
-  has no blocker; original breadth/numerical/art and hardware/human gates remain open.
-- Integration workspace `/Volumes/WD/code/workspaces/coaster-classic-showcase-integration-r1`:
-  corrected compile r2 helper1389439/TS1389440/Node1389464 andSSH0/blankstderr,74 compiled
-  files, whole810792B Node save exactly equals independent oraclea91139e8. First TS2345
-  failed attempt remainsfailed. Initial164-file shipping readycc0de8bf remains immutable
-  at remote source-r2/web-dist. Replacement shipping for978e/8e3/89fb is Root-accepted: ready2b3950c3,164 files/161 oldexact/threechanged; actualcanonicalweb child/SSH/mirror0 and fourknown helperPIDsabsent. Root fulltest/browser/public remainpending.
-- Sole default-Chrome owner `/root/detailed_stalls_browser_sol_max` is retaining r1 and
-  has accepted Root replacement gate2b3950c3 and is terminal with no r2 app launch; prepared tail waits repaired gate. No second Chrome owner. Do not start
-  a second owner. WD `/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1`.
-  R1 runtime1438603/HTTP1438610/Chrome1438781 childSSH1 remainsFAILED: missing guessed
-  selected-ride click. Actual selector is valid only after clear selection. Root's
-  earlier wrong alternative selector was withdrawn. Real first9 paid advances and four
-  PNGs may be reused; genuine pausedChrome saved8327f2a stays exact across four frames.
-  Whole original typedDB37517e5f restored,15 known children/runner absent/portsclosed;
- 13 captured+2late-reaped ancestry/status recording gap remains explicit. Corrected
-  offline13 subset checks0 follows preserved repeated strict-union audit1. Complete
-  r1 retained411 payloads/147192355logicalB,manifest e25d9d8f reported childSSH0;
-  local mirror/hash exit0; Root all411 encoded/decoded lengths and hashes accepted. Root also consumes164HTTP/194 actualCDP-bound source entries/fivewholeauthorities/nine paidoperation saves/61sidecar and19priorPID+portclosure. R1loadedDocument/GLBreply gate unexecuted. Tail0326ac39 may now proceed against accepted replacementready2b3950c3; retain exact launch identity when observed. Existing early-frame receipt qualifies
-  only transferred images and terminal subset, not full raw HTTP/CDP bodies.
-- AGY camera/toolbar r4 both actual0 butdeadline/emptyresponse/NO EDITS: INCOMPLETE.
-  Narrowed same conversations/model r5 now both terminal with actual0/blankstderr and
-  nonempty responses. Toolbar one replace/two reads changes only two hide selectors;
-  camera two reads/two replaces adds inspector-aware view offset/usable-width Overview
-  and manual-preset state. All other inputs exact and four known producerPIDs absent.
-  Root dispositions at camera/toolbar isolated workspaces accepted SOURCE CANDIDATES,
-  not actual1024 render/picking. No AGY currently live. Narrow readonly LunaMax review terminal confirmsP2: OrbitControls.start clears Overview even on a no-movement selection click. Root confirmsactualinstalledThree/game trigger; soleowner confirmsNO r2Chrome/HTTP/runner launched. Pose-based bounded AGYr6 terminal10:52:13Z actual0/blankstderr/nonempty1631B; one source-line replacement accepted368ff05e, bothPIDs absent and all12 otherinputs exact. Independent readonly LunaMax P2 recheck launched; nextgate pending; actual camera movement must determine manual state.
-
-Latest guardedcleanup: four r4/r5 duplicate AGY capture directories removed,82006 logicalB freed after exact retainedbytes, eight producerabsences and emptylsof. Live r6 and all proof/source preserved. [Receipt](docs/verification/classic-showcase/root-agy-r4-r5-temp-cleanup.json).
-
-Earlier finite75 owner history and all failed/preparation observations are preserved in
-[pre-camera checkpoint](docs/progress/2026-10-10-progress-before-camera-r5.md) and the
-[dated journal](docs/progress/2026-10-10.md). Finite75 is merged/closed with actual public,
-whole retained proof and TWO independent rounds per lens accepted; do not re-open its
-review or replay unchanged historical/native/storage matrices.
+- Root next-showcase integration candidate is prepared in isolated
+  `/Volumes/WD/code/workspaces/coaster-classic-showcase-integration-r1` (five pinned files).
+  Concrete TS factory/worker wiring mechanically adapts accepted recipe; camera/CSS candidates copied.
+  First isolated Grok compiler1387343 exits2 (helper1387342/SSH1),299-byte stdout/stderr0. Full Node start-save equivalence did not execute. TS2345 generic Ride/FixedRide track mismatch is corrected with actual Flume track guard, with first source retained; Separate attempt-r2 helper1389439/TS1389440/Node1389464 andSSH0/blankstderr reported complete810792B start-save equality to preaccepted recipe a91139e8. Root accepts actual raw source/emitted bytes, full810792B independent Node oracle equality and six known PID absences. Entire descendant trees not recorded. Isolated canonical web package1424267/Node1424268/SSH0/blankstderr is prepared:164 shipping files,158 old exact,4 changed+2 new; both known PIDs absent. Actual Chrome/render/usability remains pending.
+  Production75 and publicd232 remain unchanged.
+  Sole finite77 browser owner runr1 driver84136a1f/runner1438603/HTTP1438610/Chrome1438781 starts09:51:24Z and ends09:52:24Z childSSH1: actual startup/New/four1920+1024 frames/real operation precede a guessed missing data-select-ride click. Four PNGs transferred0/Root byte matched and viewed. Full original private DB body restored/hash37517e5f,15 known children+runner absent/portsclosed;13 captured+2late-reaped preterm recordinggap explicit. Owner offline13 checks0 after repeated tree-union audit1; full raw Root consumption pending. Driver failure is not product acceptance. Genuine d232 Chrome13 File-import bytes supply the old-save control; Node save is never injected. Runner-rooted trees are required for this new run.
 
 ## Next actions and open scope
 
-1. Repair confirmed no-movement-click cameraP2 through bounded AGY; Luna rechecks; retain978e/2b395 as superseded candidates.
-2. Freeze separate replacement164-file shipping with camera978e/CSS8e3/provenance89fb,
-   retaining oldcc0 unchanged; sole owner verifies remaining actual frames and controls.
-3. Once candidate source is final, execute canonical build/test/web on Grok, consume
-   actual results, and complete finite77 public paths, TWO whole Design and Drift rounds
-   and concrete human play/style checkpoint. Keep this unlimited Goal ACTIVE.
-4. Continue complete programme and guarded task-owned disposable/cache cleanup.
+1. Final public runtime/retention/DB recovery/closure and owner verdict are Root-accepted; update stale verification
+   README/finite-contract pending flags to actual results.
+2. Both whole R1 and R2 lenses and confirmed repairs are accepted. No runtime replay is needed.
+3. PR76 exact reviewed head is merged/75closed; resolution comment6096337302 and fresh map27 pointer published0. Canonical main is refreshed clean b6f03f9b; active checkout reused on the77 branch.
+4. Actual1920 frames accepted as useful presentation;1024 Carousel occlusion and hidden New/Close require isolated AGY camera/toolbar repair. Two prelaunch Python1 calls fail before AGY child at missing evidence parent; scripts corrected; monitors launched10:12:54Z: camera session34724/runner42088/CLI42093, toolbar session50116/runner42089/CLI42092,6m/Gemini3.8FlashHigh. Both monitors terminal10:18:57/58Z/exit0 but6m timeout/emptyresponse/NO EDITS: INCOMPLETE, fourPIDs absent. Source snapshots/PNG/raw retained; repeated same failure needs changed route, not blind retry. Production scene/style not yet copied.
+   compare real composition and usability before accepting visual edits.
+5. Continue full catalogue/management/content programme and guarded workspace/cache cleanup.
 
 Full79 family/155 variant/41 shop/35 product coverage, finance/research/scenarios, original
 numerical/art agreement, human acceptance, representative integrated-GPU/scale qualification
@@ -130,5 +119,10 @@ and GPU mid-allocation failure remain OPEN. Initial unexplained Node native SIGA
 a risk; later unchanged passing checks are not a root-cause explanation.
 
 Update this record immediately after each meaningful outcome, failure, decision, launch,
-termination, publication or cleanup, before dependent work. Root writes this live execution
-context; `CONTEXT.md` remains the domain glossary. Do not copy raw logs into this record.
+termination, publication or cleanup, before dependent work; retain detail in the dated journal.
+
+Current77 source preparation: Root copies only the already Node-qualified concrete factory, worker startup/New park binding and two overview Rides labels into the77 branch. All Rules/save/economics/modules beyond these remain unchanged; primary scene/style wait AGY actual-frame candidates and remote validation.
+
+AGY recovery route: all completed r4 reads have no reported tool error/denial, both source snapshots unchanged. Resume the same effective model/conversations with concrete bounded edits: two selector removals for toolbar; inspector-aware projection/overview fit for camera. No repeated image/source survey;3m deadline. Actual launched10:28:22Z: camera24342/runner45724/CLI45729 and toolbar91989/runner45725/CLI45728. This changes the stalled design route and does not relabel r4 as success.
+
+AGY toolbar r5 complete10:29:16Z/child0/blankstderr/nonempty1079B/exactrequestedmodel; two selector removals only, all other snapshots exact and45725/45728 absent. Root copies candidate style to77 branch/integration; actual1024 visibility/click/overlap stillpending. Camera r5 remainsrunning.

@@ -1,0 +1,15 @@
+# Playable Classic showcase across four implemented ride families
+
+Finite task: [Compose a playable Classic showcase across four implemented ride families](https://github.com/patrick-fu/coaster-tycoon-3d/issues/77). The detailed-stall prerequisite is merged at mainb6f03f9b. Current state and recovery remain in root `PROGRESS.md`.
+
+Present four independently implemented capabilities together: ground-level wooden coaster, steel lift/drop circuit, one four-seat Log Flume and16-seat Carousel. Two authored detailed Burger/Soft-drink facilities, restrooms, connected paths/queues, services and scenery use authoritative commands and existing content/Rules. Preserve all existing saved parks.
+
+The concrete factory mechanically adapts the independently qualified182-command recipe. Its complete810792B Node start save at tick4800 equals the retained independent oracle under exact Node Rulesb123. Actual Chrome Rules78b are bound independently; do not load the Node oracle into Chrome. At tick4800 wood income is stillzero; first positive Node sample6464. Runtime demonstrations use actual ordered riders, transactions and legal advances, never manufactured visual occupants.
+
+Actual Overview must show all four families within the unobstructed play area at1920x1080 and1024x768. Close focuses the two west-facing counters and Carousel; outer coaster cropping in this view is expected. New park, Overview, Close view, Library, Save, Import and Export remain visible and usable at the tested minimum1024 width. Preserve manual camera interaction and selection, Classic visual hierarchy and inspector access.
+
+Verify real startup/New park, current receiving Rules, paid operations, construction/selection/removal, unchanged whole authority through presentation, old genuine Chrome13 File import, real Save/Export/Page.reload and complete original typed DB restoration. Retain actual shipping HTTP, parsed CDP sources, documents, saves and PNGs, owned resource/process/port closure and all failed attempts. Reuse exact unchanged native/kernel/historical evidence. Independently challenge the cumulative source/visual/local/public delivery before publication and preserve prior frozen previews.
+
+No new wooden hills, boats, products, finance/scenario features, fake guests, save schema or original-reference capability is added. The published provenance metadata will carry the already source-repaired material locator. Original numerical/art agreement, full catalogue/management, human style/play and representative hardware GPU/scale remain open.
+
+Initial actual r1 frames reveal1024 Carousel occlusion and hidden New/Close controls. The r1 driver fails at a second conditional ride-list click while a ride is already selected; clear selection first. Corrected framing/toolbar candidates and remaining browser checks are pending. The existing legacy overpass browser control now runs after its genuine legacy import, retaining its original assertions and bytes rather than imposing old16-unit expectations on new32-unit detailed stalls.
