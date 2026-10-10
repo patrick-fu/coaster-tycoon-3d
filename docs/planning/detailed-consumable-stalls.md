@@ -1,13 +1,14 @@
 # Detailed consumable stalls at authored scale
 
-Status: Implemented in the unmerged source checkpoint689296a on draft PR76.
-The kernel, integrated remote build, isolated controls and final independent
-Burger/Soft-drink source, masters and GLBs are qualified. Actual detailed browser
-acceptance is running under the separately frozen Chrome receiver0434; public
-runtime remains save12/content5/protocol5. Required remaining checks and exact
-execution history are in [the live progress record](../../PROGRESS.md) and
-[qualification evidence](../verification/detailed-stalls/README.md). Human style,
-original agreement and representative GPU/scale remain separate open gates.
+Status: Implemented in frozen sourcee9159150f0828cddd38ae95f740c7e1601b4b481
+on draft PR76; finite75 remains open and main1373 is unchanged. Canonical
+Grok ready2d51/save13-content6-protocol6 and actual local source/asset/native/
+compatibility evidence are Root-qualified. Hosting6f4 is actually deployed to
+the public root/new frozen preview; eight bootstrap bodies match. Full public
+user-path qualification and TWO whole cumulative rounds of each review lens
+remain pending. See [PROGRESS.md](../../PROGRESS.md) for live ownership and
+[qualification](../verification/detailed-stalls/README.md) for exact proof.
+Original/human/representative GPU/full-programme agreement remain open.
 
 ## Player outcome and boundary
 
