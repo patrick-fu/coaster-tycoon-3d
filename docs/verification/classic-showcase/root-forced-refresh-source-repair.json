@@ -1,0 +1,19 @@
+{
+  "utc": "2026-10-10T17:26:35.448109+00:00",
+  "sourceCommit": "2d797d3cd2a3a77ddb5edf5df31372c608642919",
+  "sourceTree": "6ece87dfeb689b95b5806f3fbc7eafe519ca6f1a",
+  "parentCommit": "29c2b0db9c4e18368f6efb2f181850d1b6981818",
+  "integratedPaths": [
+    "ui/game.js"
+  ],
+  "gameSHA256": "1555fe284d2e2412d30d768dd10d90b2e983eba35c21161c43f085298494cd69",
+  "cameraSHA256": "f562b92da35a35792fe36c3b6ebfdcbc31b42368ce2f48ff0bbc65f5645cf79b",
+  "candidateDeltaSHA256": "b830c40b8592f51681eeef478d2ae1cbad44a86976464bfeb6b4775ff18112de",
+  "actualCommitAndDiffChecks": 0,
+  "sourceVerdict": "Independent Sol Max and Luna Max exact r14 source reviews pass; Root checks actual diff and integrates. Native failure not observed; build/native/public pending.",
+  "reviewers": [
+    "/root/classic_cumulative_design_r2_sol_max",
+    "/root/classic_cumulative_drift_r1_luna_max"
+  ],
+  "scope": "Minimal forced-refresh active count and awaited replacement adoption; no queue/UI framework/worker/authority/schema/art change; broader overlapping replacement transactions and old marker P3 not claimed fixed."
+}

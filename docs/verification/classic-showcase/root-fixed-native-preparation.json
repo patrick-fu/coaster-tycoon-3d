@@ -1,0 +1,47 @@
+{
+  "utc": "2026-10-10T17:45:12.550652+00:00",
+  "acceptedStatic": true,
+  "sourceCommit": "2d797d3cd2a3a77ddb5edf5df31372c608642919",
+  "sourceTree": "6ece87dfeb689b95b5806f3fbc7eafe519ca6f1a",
+  "readySHA256": "fa7323d0fb407b9dda57dc20b5f260388a00299845ce2654ca1e0c9e4fa9c119",
+  "pins": {
+    "inputs/run-fixed.py": "01f5eafbe3937482b52d0d08a553d23423e1de3cacbd4d97454bb505b11ef65e",
+    "inputs/contract.json": "84d380cce3dd0d4dedefd4487f1dd125d0da1e1fc00da5aa0ba503dc98d43826",
+    "inputs/replacement-success.js": "c422471b3cb632b0a64e4aabf1313b74238f4820a712dfb47543aa89fcc63ad1",
+    "inputs/build-ready.json": "fa7323d0fb407b9dda57dc20b5f260388a00299845ce2654ca1e0c9e4fa9c119",
+    "proof/preparation-terminal.json": "edb31f96ca501bd2073e689b1d9aaed2abccb45b77c1131c1e33c069a5def77a",
+    "driver.diff": "2d78622b6a085c8263e5557006513b988a3d3f07299bc6e7336ffe470eced38f"
+  },
+  "readInputCount": 14,
+  "preparerPID": 1620941,
+  "actualChildRecords": [
+    {
+      "label": "generator",
+      "pid": 1620942,
+      "startUTC": "2026-10-10T17:40:11.737469+00:00",
+      "actualExit": 0,
+      "endUTC": "2026-10-10T17:40:11.775509+00:00",
+      "postWaitExists": false
+    },
+    {
+      "label": "literal-expression-syntax",
+      "pid": 1620943,
+      "startUTC": "2026-10-10T17:40:11.790245+00:00",
+      "actualExit": 0,
+      "endUTC": "2026-10-10T17:40:11.875409+00:00",
+      "postWaitExists": false
+    },
+    {
+      "label": "new-observer-syntax",
+      "pid": 1620950,
+      "startUTC": "2026-10-10T17:40:11.876207+00:00",
+      "actualExit": 0,
+      "endUTC": "2026-10-10T17:40:11.955202+00:00",
+      "postWaitExists": false
+    }
+  ],
+  "rootReviewed": "Full actual driver delta from accepted086, passive success observer/generator, captured versus requested float32 pointer, bound genuine fixtures and full typed-finally/owned-process settlement. Feedback callback identity compares native current packet against complete genuine Import/New states before driver refresh/pause. No synthetic worker response/private camera/authority setter or input-name preservation claim.",
+  "rawToolResult": "Actual helper/static children, attempt/SSH/wrapper/mirror exit files0 and blank stderr read; exact source847/shipping164 read-only hash tables match ready. Old29 input/driver pins stay exact.",
+  "nativePassed": false,
+  "next": "Fresh source/driver/contract/gate/known owners/profile/ports preflight, then sole owner one native runtime."
+}

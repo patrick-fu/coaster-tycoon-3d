@@ -1,0 +1,20 @@
+{
+  "utc": "2026-10-10T18:44:08.220341+00:00",
+  "sourceCommit": "7a0bbac668ece30416cceefb97997c0de17d1376",
+  "sourceTree": "6c942d435e5a093d4a471182d5030ad1ecf594f6",
+  "parentCommit": "0b38018b2e28b741d888006e9e174f6e28c394ed",
+  "integratedPaths": [
+    "ui/game.js"
+  ],
+  "gameSHA256": "aad245986349d541e3c022280c222aad8aa73989db7cd283a654df8577001b19",
+  "cameraSHA256": "f562b92da35a35792fe36c3b6ebfdcbc31b42368ce2f48ff0bbc65f5645cf79b",
+  "candidateDeltaSHA256": "cbd00628de08c4eef0e4d81ccb3e1c0a4f846fca0db4f8f52f9b51f2ce61aa1f",
+  "actualCommitAndDiffChecks": 0,
+  "reviewers": [
+    "/root/classic_cumulative_design_r2_sol_max",
+    "/root/classic_cumulative_drift_r1_luna_max"
+  ],
+  "sourceVerdict": "Exact independent Sol/Luna20 PASS; Root verifies actual delta and integrates only game.js. Source-only pending replacement and failed-adoption paths repaired, not claimed native-observed.",
+  "scope": "Reuse body.inert/staticRevision. Replacement input excludes old controls and shortcuts; success requires current static marker after Scene/editor completion; failure retries one current forced view, keeps input inert if unavailable. No new flag/queue/authority/art/camera.",
+  "limits": "Worker/view/Scene unavailable failure paths are source-reviewed, not runtime injected. No all-concurrent-transaction, custom-name, human/original/representative-GPU claim."
+}

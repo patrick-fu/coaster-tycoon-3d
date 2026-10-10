@@ -1,0 +1,272 @@
+{
+  "utc": "2026-10-10T18:37:30.121736+00:00",
+  "rootConsumed": true,
+  "sourceCommit": "2d797d3cd2a3a77ddb5edf5df31372c608642919",
+  "readySHA256": "fa7323d0fb407b9dda57dc20b5f260388a00299845ce2654ca1e0c9e4fa9c119",
+  "manifestSHA256": "cd425d696191a0651d4e2704f5e23d1615b1b07f7ac6c5b0a2a18b3d7650335a",
+  "payloads": 572,
+  "logicalBytes": 274038543,
+  "retainedBytes": 146693402,
+  "gzipCopies": 31,
+  "rawCDPLines": 6163,
+  "rawCDPBytes": 97642269,
+  "rawCDPSHA256": "6963fbf37303e2d7efe38e8599c0161b5c0e314d6976032ac240277bef6aee23",
+  "bindings": {
+    "http": 164,
+    "sources": 97,
+    "loaded": 3,
+    "chronologicalSaves": 11,
+    "nativeSamples": 8,
+    "png": 2,
+    "fullTyped": 2,
+    "resources": 1
+  },
+  "actualRuntimeExit": 1,
+  "sourcePass": false,
+  "preInputOrdinals": [
+    98,
+    99
+  ],
+  "postInputOrdinals": [
+    100
+  ],
+  "disposition": "Native zoom changes and Overview exits; old completed phase admits pre-input samples. Failed1 preserved, post2frame/downstream checks unqualified. Full raw actual objects corroborate the early subset, including original observed6066/after6077 replies omitted from the small window.",
+  "typed": "Actual local-origin []/37517e5f restored byte-exact; distinct from public original595e4cc3",
+  "knownRuntimeChildren": 15,
+  "preterminationRecords": 13,
+  "settlementOnly": [
+    1624951,
+    1625734
+  ],
+  "retentionFailures": "Missing transferred PROPOSAL and WD-only diagnosis prefixes preserve administrative r1/r2 exits1 before copying. Actual existing-prefix inventory passes for finite572 package. Slow SFTP interrupted/reaped before sole tar stream0; actual self terminals remain pending one supplement.",
+  "terminalSupplementPending": false,
+  "next": "Consume one terminal supplement/self waits; reviewed corrected causal/creation/current-source static and exact launch gate, affected native/public and whole reviews.",
+  "terminalSupplement": {
+    "utc": "2026-10-10T18:36:05.189147+00:00",
+    "rootConsumed": true,
+    "payloads": 73,
+    "logicalBytes": 75340,
+    "retainedBytes": 75340,
+    "manifestSHA256": "d5b623da8bb2837daefa210a45f88de2cbfd1d21ac88c53e01ab45e53d3ca8ae",
+    "indexedSelfFiles": {
+      "OWNER-VERDICT.md": {
+        "sha256": "c710996f7acb8c88ea1ed0b9251f6158802326ef69c2d71ad260a11572b87a07",
+        "bytes": 3013
+      },
+      "final-self-terminal-r1/actual-remote-owned-state.json": {
+        "sha256": "f0fe814a931d10c014db75c1bd46c90165058fc6bc7142364e228e6a58cdf31d",
+        "bytes": 5153
+      },
+      "terminal-r1/final-mac-known-owned-state.jsonl": {
+        "sha256": "178d6fde1b501e810f6b444c408665bd433ef22be0955aa7615e56a0e57e6d51",
+        "bytes": 1363
+      },
+      "supplement-runtime-r1/retention-manifest.json": {
+        "sha256": "d5b623da8bb2837daefa210a45f88de2cbfd1d21ac88c53e01ab45e53d3ca8ae",
+        "bytes": 40606
+      },
+      "supplement-runtime-r1/retained-files.sha256": {
+        "sha256": "4fd915a44ab87410dc92da72bbe8a253643b41338b5f7005c4e9a15de015bbf0",
+        "bytes": 9183
+      },
+      "retained-runtime-r3/retention-manifest.json": {
+        "sha256": "cd425d696191a0651d4e2704f5e23d1615b1b07f7ac6c5b0a2a18b3d7650335a",
+        "bytes": 281945
+      },
+      "retained-runtime-r3/retained-files.sha256": {
+        "sha256": "138918207fa2a7392debdadd26ca064d99cbae24897a0fffd738c6aa4d5893b9",
+        "bytes": 74231
+      }
+    },
+    "supplementKnownRemoteAbsent": 44,
+    "supplementKnownMacAbsent": 41,
+    "latestKnownRemoteAbsent": 48,
+    "latestKnownMacAbsent": 47,
+    "portsClosed": true,
+    "metadataProducer": 1640892,
+    "actualDirectSelfTerminalReceipts": {
+      "terminal-attempt-r1/pid.txt": {
+        "bytes": 8,
+        "sha256": "39fc5eeb165785eadcf50a9e0acb76567ef69eabb1986a5b87be1f52da026760",
+        "actualText": "1639519"
+      },
+      "terminal-attempt-r1/wrapper-pid.txt": {
+        "bytes": 8,
+        "sha256": "6f492d23dc7d5569486cb916cdcef2175c74c898f48c50f38c6b20332bbf01b7",
+        "actualText": "1639516"
+      },
+      "terminal-attempt-r1/actual-child-exit.txt": {
+        "bytes": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "actualText": "0"
+      },
+      "terminal-attempt-r1/post-wait-child.txt": {
+        "bytes": 6,
+        "sha256": "2ed27c1421e6928dbe13dbfdb5c59e1045b30341fe7ebe05700006bc5ac572c0",
+        "actualText": "false"
+      },
+      "mirror-tar-terminal-r1/tar-pid.txt": {
+        "bytes": 8,
+        "sha256": "4222def128944b21d43eac512b28345b7a436a8aa9ab1fbcc606e16fa4c2af5f",
+        "actualText": "1639927"
+      },
+      "mirror-tar-terminal-r1/wrapper-pid.txt": {
+        "bytes": 8,
+        "sha256": "2ba7cdc765823e4c4210d4faedd0c785fb5ecc70715ee3ef151cca506a75c867",
+        "actualText": "1639925"
+      },
+      "mirror-tar-terminal-r1/actual-tar-exit.txt": {
+        "bytes": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "actualText": "0"
+      },
+      "mirror-tar-terminal-r1/actual-wrapper-exit.txt": {
+        "bytes": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "actualText": "0"
+      },
+      "mirror-tar-terminal-r1/post-wait-tar.txt": {
+        "bytes": 6,
+        "sha256": "2ed27c1421e6928dbe13dbfdb5c59e1045b30341fe7ebe05700006bc5ac572c0",
+        "actualText": "false"
+      }
+    },
+    "runtimeOriginalExit": 1,
+    "scope": "Failed source2d finite proof terminal only. No application replay or correction of failed guard; metadata self-absence not claimed.",
+    "outsideSelfTerminalFiles": {
+      "final-self-terminal-r1/stderr.log": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "final-self-terminal-r1/post-wait-ssh.txt": {
+        "bytes": 6,
+        "sha256": "2ed27c1421e6928dbe13dbfdb5c59e1045b30341fe7ebe05700006bc5ac572c0"
+      },
+      "final-self-terminal-r1/index.sha256": {
+        "bytes": 755,
+        "sha256": "fb67ac43ae42f55e9afc07faa1d638a4c94ac66f98e6cce2177f2edb44a1ce81"
+      },
+      "final-self-terminal-r1/ssh-pid.txt": {
+        "bytes": 6,
+        "sha256": "2c215f9aeab527121cfdf94dde948f7ca94511f1fe16772a5ef4a8e95478cd57"
+      },
+      "final-self-terminal-r1/actual-remote-owned-state.json": {
+        "bytes": 5153,
+        "sha256": "f0fe814a931d10c014db75c1bd46c90165058fc6bc7142364e228e6a58cdf31d"
+      },
+      "final-self-terminal-r1/actual-ssh-outer-exit.txt": {
+        "bytes": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      "final-self-terminal-r1/input-command.py": {
+        "bytes": 1930,
+        "sha256": "5ed1d1d6b74ffa0647281c59ad0c196ab725272efaf403711ab6cbb462309acb"
+      },
+      "final-self-terminal-r1/read-owned.py": {
+        "bytes": 1930,
+        "sha256": "5ed1d1d6b74ffa0647281c59ad0c196ab725272efaf403711ab6cbb462309acb"
+      },
+      "transport/terminal-r1/stderr.log": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "transport/terminal-r1/actual-wrapper-exit.txt": {
+        "bytes": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      "transport/terminal-r1/stdout.log": {
+        "bytes": 376,
+        "sha256": "a0b905c2de42710136d7dcf501cc08b1036648a46279bea36fb14c327b99c9c6"
+      },
+      "transport/terminal-r1/post-wait-ssh.txt": {
+        "bytes": 6,
+        "sha256": "2ed27c1421e6928dbe13dbfdb5c59e1045b30341fe7ebe05700006bc5ac572c0"
+      },
+      "transport/terminal-r1/ssh-pid.txt": {
+        "bytes": 6,
+        "sha256": "1d778e645e678bdf542a4b857a57a5cec750d714bb06ce19442c3793fd21fd22"
+      },
+      "transport/terminal-r1/actual-ssh-outer-exit.txt": {
+        "bytes": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      "transport/terminal-r1/wrapper-pid.txt": {
+        "bytes": 6,
+        "sha256": "a1ef55f6c5a985d0829700c8df8612f8275e5f7bd3948d502ab72d4df2d99ddb"
+      },
+      "transport/mirror-tar-terminal-r1/tar-pid.txt": {
+        "bytes": 6,
+        "sha256": "425d9e41d0a4477ae7532a080dc0d6a7e1aed7cdd5f6a7f930b53f5fb513a5df"
+      },
+      "transport/mirror-tar-terminal-r1/post-wait-hash.txt": {
+        "bytes": 6,
+        "sha256": "2ed27c1421e6928dbe13dbfdb5c59e1045b30341fe7ebe05700006bc5ac572c0"
+      },
+      "transport/mirror-tar-terminal-r1/hash-pid.txt": {
+        "bytes": 6,
+        "sha256": "a7ce16aabbd371eca22d4c89a694834a192059def1c13f9adff96cf16e89b862"
+      },
+      "transport/mirror-tar-terminal-r1/actual-wrapper-exit.txt": {
+        "bytes": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      "transport/mirror-tar-terminal-r1/hash.stderr.log": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "transport/mirror-tar-terminal-r1/actual-local-tar-exit.txt": {
+        "bytes": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      "transport/mirror-tar-terminal-r1/tar.stderr.log": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "transport/mirror-tar-terminal-r1/ssh.stderr.log": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "transport/mirror-tar-terminal-r1/input-wrapper.sh": {
+        "bytes": 2196,
+        "sha256": "96449fcbb4f2133771653ecee4f4357ae9e339cb53a11451ba88e89b730b0110"
+      },
+      "transport/mirror-tar-terminal-r1/post-wait-ssh.txt": {
+        "bytes": 6,
+        "sha256": "2ed27c1421e6928dbe13dbfdb5c59e1045b30341fe7ebe05700006bc5ac572c0"
+      },
+      "transport/mirror-tar-terminal-r1/ssh-pid.txt": {
+        "bytes": 6,
+        "sha256": "1992f24204a9002a8f67052dc2e5760485b1be3beb639afb2fd43c92ebc99a79"
+      },
+      "transport/mirror-tar-terminal-r1/actual-ssh-outer-exit.txt": {
+        "bytes": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      "transport/mirror-tar-terminal-r1/hash.stdout.log": {
+        "bytes": 4595,
+        "sha256": "d4d41ed726031799a05f9ca75a9a19b7983f0ed4ae5d24330035c264ff74b08e"
+      },
+      "transport/mirror-tar-terminal-r1/actual-hash-exit.txt": {
+        "bytes": 2,
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      "transport/mirror-tar-terminal-r1/post-wait-local-tar.txt": {
+        "bytes": 6,
+        "sha256": "2ed27c1421e6928dbe13dbfdb5c59e1045b30341fe7ebe05700006bc5ac572c0"
+      },
+      "transport/mirror-tar-terminal-r1/tar.stdout.log": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "transport/mirror-tar-terminal-r1/wrapper-pid.txt": {
+        "bytes": 6,
+        "sha256": "0fd715df0696dd496b655ee3e3923e154a1b0bc5da182fd77d6b8af785d4634e"
+      }
+    },
+    "ownTransportActualZero": true
+  },
+  "externalMainReceipt": "/Volumes/WD/code/workspaces/coaster-consumable-art/evidence/classic-fixed-native-root-r1/failed-r1-full-consumption.json",
+  "externalTerminalReceipt": "/Volumes/WD/code/workspaces/coaster-consumable-art/evidence/classic-fixed-native-root-r1/failed-r1-terminal-consumption.json",
+  "readerFailures": "Root initial54863 and81648 consumers exited1 on two lookups that assumed every native row had branch. Actual mixed phase/branch row shape repaired; corrected34706 consumer actual0. No app/runtime replay.",
+  "remaining": "Final replacement-input/Scene-adoption source20 build, corrected causal/creation/input native driver, public execution and cumulative whole reviews. Original runtime remains FAILED1."
+}

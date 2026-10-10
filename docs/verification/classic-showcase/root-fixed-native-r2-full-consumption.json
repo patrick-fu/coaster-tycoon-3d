@@ -1,0 +1,78 @@
+{
+  "utc": "2026-10-10T19:37:43.089164+00:00",
+  "pid": 1669011,
+  "rootConsumed": true,
+  "sourceCommit": "7a0bbac668ece30416cceefb97997c0de17d1376",
+  "readySHA256": "8547297526a21a602ee783e7e8d02579b700782d3cd3afe16aaed575b8790669",
+  "manifestSHA256": "03f71192f8680d1f8985cff1925754d2a1f238a9bb0f60e467c32666f07ba11e",
+  "payloads": 466,
+  "logicalBytes": 531590272,
+  "retainedBytes": 226614146,
+  "rawCDPLines": 15736,
+  "rawCDPBytes": 319218667,
+  "rawCDPSHA256": "2ac065b14a9073fd87e3992621852f4f35d47e98d79515ff5da5e8c92c167827",
+  "actualRuntimeExit": 0,
+  "checks": 215,
+  "fullRawConsumed": true,
+  "sourceBodies": 194,
+  "HTTPFiles": 164,
+  "networkBodies": 6,
+  "preservedAuthorities": 45,
+  "actualAuthorityFiles": 57,
+  "saveRPCs": 58,
+  "PNGs": 4,
+  "originalTypedRecordsRestored": true,
+  "wholeTypedSHA256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+  "knownChildren": 15,
+  "preterminationChildren": 13,
+  "lateSettlementOnly": [
+    1653085,
+    1655024
+  ],
+  "resourceScope": "Two observed reachable borrowed67/48/30/30 release tuples, software WebGL. Full72-material ownership/fault matrix reused, no integrated-GPU or global idempotence claim.",
+  "toolSupplementPending": true,
+  "publicPending": true,
+  "wholeReviewsPending": true,
+  "rawComponentTargets": 240,
+  "fullConsumptionPath": "/Volumes/WD/code/workspaces/coaster-consumable-art/evidence/classic-fixed-native-root-r1/runtime-r2-full-consumption.json",
+  "fullConsumptionSHA256": "89688fe69f0ded5de7852437d16a431aef448b93c9f683e3663f207013c5c630",
+  "consumerActualWait": {
+    "startUTC": "2026-10-10T19:37:28.910174+00:00",
+    "wrapperPID": 67121,
+    "command": [
+      "ssh",
+      "grok-build",
+      "python3",
+      "/workspace/coaster-classic-showcase-interaction-fix-r1/root-consume-native-r2.py"
+    ],
+    "sshPID": 67123,
+    "actualExit": 0,
+    "postWaitLive": false,
+    "endUTC": "2026-10-10T19:37:43.105088+00:00"
+  },
+  "preservedFirstConsumerFailure": {
+    "startUTC": "2026-10-10T19:36:02.191997+00:00",
+    "wrapperPID": 66410,
+    "command": [
+      "ssh",
+      "grok-build",
+      "python3",
+      "/workspace/coaster-classic-showcase-interaction-fix-r1/root-consume-native-r2.py"
+    ],
+    "sshPID": 66412,
+    "actualExit": 1,
+    "postWaitLive": false,
+    "endUTC": "2026-10-10T19:36:05.900304+00:00"
+  },
+  "wdMirror": {
+    "utc": "2026-10-10T19:36:24.868691+00:00",
+    "rootConsumed": true,
+    "manifestSHA256": "03f71192f8680d1f8985cff1925754d2a1f238a9bb0f60e467c32666f07ba11e",
+    "encodedFiles": 466,
+    "encodedBytes": 226614146,
+    "literalSidecars": 22,
+    "literalSidecarBytes": 3586,
+    "scope": "Mac file I/O/hash only; decoded raw and semantic consumption performed separately on Grok."
+  },
+  "scope": "Root independently consumes all encoded/decoded bytes and actual raw source/save/native/resource/typed replies on Grok. Main proof is accepted; finite retainer/transport/self-terminal supplement and revised public/whole reviews remain pending. No publication authorization yet."
+}

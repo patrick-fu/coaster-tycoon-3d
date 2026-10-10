@@ -1,0 +1,33 @@
+{
+  "utc": "2026-10-10T16:25:13.499589+00:00",
+  "candidateRoot": "/Volumes/WD/code/workspaces/coaster-classic-showcase-camera-r4/review-r10",
+  "candidatePins": {
+    "park-scene.js": "f562b92da35a35792fe36c3b6ebfdcbc31b42368ce2f48ff0bbc65f5645cf79b",
+    "game.js": "c5f488821a9827adcdc0c52aa97656b621bf4dbffb2595b1e425381de61a4aa5"
+  },
+  "sourceCommit": "879364c1a5130aef2b153070e740302c29f88797",
+  "sourceTree": "3cef1d672bdc71ee4a48855ac27401703dc9ce6a",
+  "previousExecutableSource": "93b5e2397c9dfd61f2ceb6df1f41d17361453558",
+  "actualCommitExit": 0,
+  "actualDiffAndStagedChecks": 0,
+  "integratedPaths": [
+    "ui/game.js",
+    "ui/park-scene.js"
+  ],
+  "originalPins": {
+    "park-scene.js": "368ff05e5bb0c980c7cef8e8cca55a0cba620132aeb8a8d78149caa457e7a517",
+    "game.js": "b2bdfe532312e68ed20b096616813ec9999b913a666b31e5c7cbe6e42e82f22e"
+  },
+  "independentSourceReviewers": [
+    "/root/classic_cumulative_design_r2_sol_max",
+    "/root/classic_camera_review_luna_max"
+  ],
+  "sourceVerdict": "Both exact r10 source reviews find no blocker; narrow review only. Root directly inspects and accepts.",
+  "r9Disposition": "Native callback microtask sequence is a concrete standards counterexample; Sol objection accepted despite initial Luna pass, which Luna explicitly withdraws. r8/r9 remain immutable; r10 uses synchronous capture-before/bubble-after actual zoom.",
+  "remaining": [
+    "Actual affected remote build and native/public paths",
+    "Required cumulative whole rounds",
+    "Human style/play and representative hardware/full programme"
+  ],
+  "temporaryCommitMessage": "/var/folders/5c/f170nvbx6t7105zg26q08zvh0000gn/T/coaster-classic-interaction-commit-hrwffxjy/message.md"
+}

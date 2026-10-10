@@ -1,0 +1,102 @@
+{
+  "utc": "2026-10-10T17:29:57.772264+00:00",
+  "sourceCommit": "2d797d3cd2a3a77ddb5edf5df31372c608642919",
+  "sourceTree": "6ece87dfeb689b95b5806f3fbc7eafe519ca6f1a",
+  "readySHA256": "fa7323d0fb407b9dda57dc20b5f260388a00299845ce2654ca1e0c9e4fa9c119",
+  "shippingRoot": "/workspace/coaster-classic-showcase-interaction-fix-r1/source-r3/web-dist",
+  "sourceFiles": 847,
+  "shippingFiles": 164,
+  "compiledFiles": 74,
+  "actualHelperExit": 0,
+  "actualTransportExit": 0,
+  "helperPID": 1616473,
+  "commands": [
+    {
+      "name": "snapshot-source",
+      "pid": 1616474,
+      "args": [
+        "cp",
+        "-a",
+        "--reflink=auto",
+        "/workspace/coaster-classic-showcase-interaction-fix-r1/source-r2",
+        "/workspace/coaster-classic-showcase-interaction-fix-r1/source-r3"
+      ],
+      "startUTC": "2026-10-10T17:27:53.008538+00:00",
+      "actualExit": 0,
+      "endUTC": "2026-10-10T17:27:53.151164+00:00",
+      "stdoutSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrBytes": 0
+    },
+    {
+      "name": "editor-syntax",
+      "pid": 1616475,
+      "args": [
+        "node",
+        "--check",
+        "ui/game.js"
+      ],
+      "startUTC": "2026-10-10T17:27:53.299091+00:00",
+      "actualExit": 0,
+      "endUTC": "2026-10-10T17:27:53.384419+00:00",
+      "stdoutSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrBytes": 0
+    },
+    {
+      "name": "canonical-web",
+      "pid": 1616482,
+      "args": [
+        "node",
+        "scripts/build-web.mjs"
+      ],
+      "startUTC": "2026-10-10T17:27:53.385358+00:00",
+      "actualExit": 0,
+      "endUTC": "2026-10-10T17:27:53.634844+00:00",
+      "stdoutSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrBytes": 0
+    }
+  ],
+  "knownRemoteChildren": [
+    {
+      "pid": 1616474,
+      "exists": false
+    },
+    {
+      "pid": 1616475,
+      "exists": false
+    },
+    {
+      "pid": 1616482,
+      "exists": false
+    }
+  ],
+  "knownLocalStates": [
+    {
+      "pid": 28057,
+      "exists": false
+    },
+    {
+      "pid": 28061,
+      "exists": false
+    },
+    {
+      "pid": 28102,
+      "exists": false
+    },
+    {
+      "pid": 28122,
+      "exists": false
+    }
+  ],
+  "rootConsumed": "Actual complete ready/source delta/compiled equality/factory oracle; raw snapshot and two Node launch/stdout/stderr digests; all3 real SSH/SCP phase exits0/postwaitfalse and fresh known local absence. All runtime/build is Grok.",
+  "sourcePush": {
+    "actualToolExit": 0,
+    "branch": "p/patrick/feature/classic-four-family-showcase",
+    "from": "29c2b0d",
+    "to": "2d797d3"
+  },
+  "reuse": "Exact prior camera/art/kernel/Rules/save/dependencies/factory/74compiled/313 checks; no broad replay. Compared public93 executable only two UI files changed.",
+  "remaining": "Exact final driver/source gate; actual affected native/public, full raw/tool consumption and two whole rounds per lens."
+}

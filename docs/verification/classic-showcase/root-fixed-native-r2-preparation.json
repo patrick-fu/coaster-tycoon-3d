@@ -1,0 +1,168 @@
+{
+  "utc": "2026-10-10T18:50:50.709267+00:00",
+  "rootConsumed": true,
+  "sourceCommit": "7a0bbac668ece30416cceefb97997c0de17d1376",
+  "sourceTree": "6c942d435e5a093d4a471182d5030ad1ecf594f6",
+  "readySHA256": "8547297526a21a602ee783e7e8d02579b700782d3cd3afe16aaed575b8790669",
+  "driverSHA256": "5da7cc73904a62c981c6d310c4df7df5851ff7f87f038213472f18135b9585c4",
+  "contractSHA256": "5a3adbe8a9ff10d04afee335fc3684235405477bcfb723477e4a536b800ac232",
+  "observerSHA256": "e3a7d57bc9c7e2808050e27eeb0303df1b1ef91c357127c38c354659025a7d8c",
+  "diffSHA256": "13c8db6718ed232e7ba17cfcace9176e4092807c3e14cd5ecd3ae9e41d01bf9a",
+  "boundInputCount": 14,
+  "sourceFileCount": 847,
+  "shippingFileCount": 164,
+  "unchangedCompiledFileCount": 74,
+  "actualRemoteStatic": {
+    "pid": 1648507,
+    "startUTC": "2026-10-10T18:47:19.847557+00:00",
+    "passed": true,
+    "browserOrHttpLaunched": false,
+    "archiveSHA256": "e532e95b24da2434d715acf6869ac9b836026e163f18137649f162d486a44a9d",
+    "children": [
+      {
+        "label": "literal-expression-syntax",
+        "pid": 1648512,
+        "startUTC": "2026-10-10T18:47:20.101293+00:00",
+        "actualExit": 0,
+        "endUTC": "2026-10-10T18:47:20.192381+00:00",
+        "postWaitExists": false
+      },
+      {
+        "label": "replacement-observer-syntax",
+        "pid": 1648519,
+        "startUTC": "2026-10-10T18:47:20.193210+00:00",
+        "actualExit": 0,
+        "endUTC": "2026-10-10T18:47:20.277442+00:00",
+        "postWaitExists": false
+      }
+    ],
+    "ports": {
+      "8777": false,
+      "9237": false
+    },
+    "profileLock": {
+      "symlink": true,
+      "pid": 1624921,
+      "exists": false
+    },
+    "sourceCommit": "7a0bbac668ece30416cceefb97997c0de17d1376",
+    "sourceTree": "6c942d435e5a093d4a471182d5030ad1ecf594f6",
+    "readySHA256": "8547297526a21a602ee783e7e8d02579b700782d3cd3afe16aaed575b8790669",
+    "sourceFileCount": 847,
+    "shippingFileCount": 164,
+    "compiledUnchangedFileCount": 74,
+    "driverSHA256": "5da7cc73904a62c981c6d310c4df7df5851ff7f87f038213472f18135b9585c4",
+    "contractSHA256": "5a3adbe8a9ff10d04afee335fc3684235405477bcfb723477e4a536b800ac232",
+    "observerSHA256": "e3a7d57bc9c7e2808050e27eeb0303df1b1ef91c357127c38c354659025a7d8c",
+    "diffSHA256": "13c8db6718ed232e7ba17cfcace9176e4092807c3e14cd5ecd3ae9e41d01bf9a",
+    "inputPins": {
+      "genuine-initial-r1.save.json": "d8327f2a7bd3a37b34bc68533515ac7aeea359ca30c33d4a65ca5ff4a0775f63",
+      "run-fixed.py": "5da7cc73904a62c981c6d310c4df7df5851ff7f87f038213472f18135b9585c4",
+      "contract.json": "5a3adbe8a9ff10d04afee335fc3684235405477bcfb723477e4a536b800ac232",
+      "passive-resize-witness.js": "62ee2b7cb472a6cb85e244dcbdb4054b1f543743837c093f69208a747e5eaaa9",
+      "intentionally-invalid-park.json": "a6fb08fda1acb957b6116bd37811a1fe41a01611c0631edbf786d6889a27a55c",
+      "genuine-operated-r1.save.json": "afd73e9ee79516cab02365bbe7219954009c59f1d03631e21618ae59578f2602",
+      "genuine-old-d232.save.json": "6aaeb37230da32aba4a8041f11dab0ea6f683e797ebb24e5e79f35965e6e1809",
+      "genuine-five-ride-chrome13.json": "6b83fc4b75e10a632a7023a0c3d556beb7942277cc4583ce286b4af449d229c6",
+      "typed-storage.js": "ea075d3dd07e7715e05cd768baaf678123ac7acd33ba819f018a326b46e37c56",
+      "public-ownership.js": "7573f23308617823fffe6abb0ee5ad030b2ef2e7f217664651bec956f29d8292",
+      "immutable-source2d-01f5.py": "01f5eafbe3937482b52d0d08a553d23423e1de3cacbd4d97454bb505b11ef65e",
+      "interaction-events.js": "cbaa9f108a8e8cc40f6437cc544eaa8e32ac6f8b82c3328d1604a955daef1261",
+      "genuine-current-four-chrome13.json": "2e8effd035e879eeaac6bafc96d8109b51e1e86ab1ac3c64cc9822c0adceb8ef",
+      "replacement-success.js": "e3a7d57bc9c7e2808050e27eeb0303df1b1ef91c357127c38c354659025a7d8c",
+      "read-only-construction-witness.js": "2bda287f9054a5dad3c33f0ce31d6a1f20814dde56cf4fff5b5385646441360a",
+      "build-ready.json": "8547297526a21a602ee783e7e8d02579b700782d3cd3afe16aaed575b8790669",
+      "public-helpers.js": "11477797f7dd7ef6442d855969f858595afc73123e966c01134d90949e24211b"
+    },
+    "pythonVersion": "3.13.5 (main, Aug 10 2026, 12:06:59) [GCC 14.2.0]",
+    "scope": "Exact frozen Root causal/creation/input exclusion driver. Python AST and browser expression/observer syntax only; no Chrome, HTTP, native success or fault qualification. Separate Root launch gate required.",
+    "endUTC": "2026-10-10T18:47:20.282696+00:00"
+  },
+  "actualMacTransport": {
+    "pid": 50030,
+    "startUTC": "2026-10-10T18:47:03.146875+00:00",
+    "phases": [
+      {
+        "name": "upload-inputs",
+        "pid": 50032,
+        "args": [
+          "scp",
+          "-q",
+          "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/interactions/fix-r1/static-r3/static-r3-inputs.tar",
+          "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/interactions/fix-r1/static-r3/prepare-static-r3.py",
+          "grok-build:/workspace/coaster-classic-showcase-browser-r1/interactions/fix-r1/"
+        ],
+        "startUTC": "2026-10-10T18:47:03.152966+00:00",
+        "actualExit": 0,
+        "endUTC": "2026-10-10T18:47:17.339371+00:00",
+        "postWaitExists": false,
+        "stdoutSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "remote-static",
+        "pid": 50084,
+        "args": [
+          "ssh",
+          "-o",
+          "BatchMode=yes",
+          "grok-build",
+          "python3 /workspace/coaster-classic-showcase-browser-r1/interactions/fix-r1/prepare-static-r3.py /workspace/coaster-classic-showcase-browser-r1/interactions/fix-r1/static-r3-inputs.tar e532e95b24da2434d715acf6869ac9b836026e163f18137649f162d486a44a9d"
+        ],
+        "startUTC": "2026-10-10T18:47:17.342875+00:00",
+        "actualExit": 0,
+        "endUTC": "2026-10-10T18:47:20.145432+00:00",
+        "postWaitExists": false,
+        "stdoutSHA256": "e0591c35343286836575fe2c11cd99fee0adc831830c01c1cb4d481bb34807de",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "retain-proof",
+        "pid": 50093,
+        "args": [
+          "scp",
+          "-q",
+          "-r",
+          "grok-build:/workspace/coaster-classic-showcase-browser-r1/interactions/fix-r1/static-r3/proof",
+          "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/interactions/fix-r1/static-r3/remote-proof"
+        ],
+        "startUTC": "2026-10-10T18:47:20.150303+00:00",
+        "actualExit": 0,
+        "endUTC": "2026-10-10T18:47:37.125509+00:00",
+        "postWaitExists": false,
+        "stdoutSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ],
+    "scope": "Mac file transport only; static syntax/source verification executes on Grok, no Chrome/HTTP",
+    "actualExit": 0,
+    "sourceCommit": "7a0bbac668ece30416cceefb97997c0de17d1376",
+    "readySHA256": "8547297526a21a602ee783e7e8d02579b700782d3cd3afe16aaed575b8790669",
+    "driverSHA256": "5da7cc73904a62c981c6d310c4df7df5851ff7f87f038213472f18135b9585c4",
+    "contractSHA256": "5a3adbe8a9ff10d04afee335fc3684235405477bcfb723477e4a536b800ac232",
+    "archiveSHA256": "e532e95b24da2434d715acf6869ac9b836026e163f18137649f162d486a44a9d",
+    "remoteHelperPid": 1648507,
+    "remoteChildren": [
+      {
+        "label": "literal-expression-syntax",
+        "pid": 1648512,
+        "startUTC": "2026-10-10T18:47:20.101293+00:00",
+        "actualExit": 0,
+        "endUTC": "2026-10-10T18:47:20.192381+00:00",
+        "postWaitExists": false
+      },
+      {
+        "label": "replacement-observer-syntax",
+        "pid": 1648519,
+        "startUTC": "2026-10-10T18:47:20.193210+00:00",
+        "actualExit": 0,
+        "endUTC": "2026-10-10T18:47:20.277442+00:00",
+        "postWaitExists": false
+      }
+    ],
+    "endUTC": "2026-10-10T18:47:37.126874+00:00"
+  },
+  "nativeExecuted": false,
+  "scope": "Exact Root after-input ordinal/performance barriers, real create7 selection/quote, passive replacement identity/input exclusion and one intentionally invalid File input. Remote AST/twoNode syntax/source/ports/profile0 only; original failed runtime remains immutable.",
+  "limits": "No native success yet; no full-authority-only-bookkeeping assertion or successful station quote promise. Unavailable worker/Scene failure is source-reviewed, not injected."
+}

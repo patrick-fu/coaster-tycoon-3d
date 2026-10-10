@@ -13,7 +13,9 @@ ground-level wooden coaster, steel lift/drop circuit, single four-seat Log Flume
 and sixteen-seat Carousel, with detailed Burger/Soft-drink stalls, restrooms,
 connected paths and gardens. Its local and actual public player checks pass at
 [the frozen preview](https://patrick-fu.github.io/coaster-tycoon-3d/previews/classic-93b5e23/?showcase=classic).
-Two newly identified interaction candidates remain under narrow investigation in
+Two interaction defects were subsequently reproduced: a held stationary pointer
+can disable responsive Overview after camera inertia, and New can retain the old
+ride selection. The source repair resets construction after File import, normalizes the received ride/piece, and keeps replacement controls disabled until the new park view is applied. The final Grok build and actual affected native run pass; complete native raw/tool verification passes; a revised public preview is pending in
 [the live record](PROGRESS.md). The showcase uses
 a separate save slot, preserving your existing park at the
 [regular preview](https://patrick-fu.github.io/coaster-tycoon-3d/).

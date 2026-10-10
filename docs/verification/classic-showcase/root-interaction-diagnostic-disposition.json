@@ -1,0 +1,102 @@
+{
+  "utc": "2026-10-10T15:41:38.407019+00:00",
+  "status": "Root consumes complete488 raw package and83 terminal supplement, actual tool waits/full typed recovery/known closure; both old source93 P2 defects confirmed. Repair native/public pending.",
+  "sourceCommit": "93b5e2397c9dfd61f2ceb6df1f41d17361453558",
+  "driverSHA256": "a690244a1f62c01b3a11aa4de0a1498d2bc6efc667659adf3756f71d149aac60",
+  "gateSHA256": "3228fb8aa6a67d8779157b2ee0cea0ab287885f973c1e5924817099648e7ab92",
+  "runtimeRoot": "/workspace/coaster-classic-showcase-browser-r1/diagnostics/overview-held-r1/runtime-r1",
+  "runtimeResultSHA256": "12dc538b8ff4e354df64e7651addb5f9ebd9d320b5501337346c0c6dbdf6030d",
+  "runnerPID": 1572694,
+  "chromePID": 1572707,
+  "launchUTC": "2026-10-10T15:35:43.275873Z",
+  "endUTC": "2026-10-10T15:36:54.425037Z",
+  "actualObservationChildExit": 0,
+  "actualObservationSSHExit": 0,
+  "actualPlayerObservationChecks": 30,
+  "completeOriginalTypedRestoredReported": true,
+  "heldClick": {
+    "baseline": {
+      "noPointerMoveInsideStationaryDownInterval": true,
+      "completedHeldRenders": 2,
+      "overviewFlags": [
+        true,
+        true
+      ],
+      "nativeResizeZoom": 0.9194166666666667,
+      "nativeResizeOverviewFlags": [
+        true,
+        true
+      ]
+    },
+    "realManualResidual": {
+      "noPointerMoveInsideStationaryDownInterval": true,
+      "completedHeldRenders": 2,
+      "afterOverviewFlag": true,
+      "afterPressFlag": true,
+      "overviewFlags": [
+        false,
+        false
+      ],
+      "nativeResizeZoom": 1.18,
+      "nativeResizeOverviewFlags": [
+        false,
+        false
+      ]
+    },
+    "rootVerdict": "P2 confirmed: old residual pose change is misattributed to a new stationary pointer gesture, preventing responsive Overview fit.",
+    "inputCountingBoundary": "Filter the stationary down performance interval and phase. The broader observer events array also includes the intentional preceding manual drag; do not count those manual moves as stationary-hold moves."
+  },
+  "newSelection": {
+    "genuineOldChromeSaveSHA256": "6b83fc4b75e10a632a7023a0c3d556beb7942277cc4583ce286b4af449d229c6",
+    "actualWholeImportExact": true,
+    "selectedOldCarouselID": 7,
+    "actualNewRideIDs": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "actualVisibleDropdownValue": "0",
+    "nativeTrackQuote": {
+      "requestID": 648,
+      "ride": 7,
+      "resultError": "UNKNOWN_RIDE"
+    },
+    "nativeQueueQuote": {
+      "requestID": 710,
+      "queueFor": 7,
+      "resultError": "UNKNOWN_RIDE"
+    },
+    "rootVerdict": "P2 confirmed: visible selection and native quote refer to different ride identities after actual New. No build executes and paused authority is preserved through quote."
+  },
+  "repairBoundary": "AGY file-only authoring in isolated workspace; only ui/park-scene.js actual fresh user-input detection and ui/game.js new-park editor context reset. Root integrates. No Rules/save/physics/content/art/broad UI changes. Preserve damping and real gestures.",
+  "next": "Read complete actual raw/tool proof; integrate bounded AGY repair only after exact diff and independent Sol/Luna review, then affected native/web/public qualification under new source pins.",
+  "fullRawRetentionRootConsumption": {
+    "utc": "2026-10-10T16:14:10.301169+00:00",
+    "consumerPath": "/Volumes/WD/code/workspaces/coaster-consumable-art/evidence/classic-interaction-diagnostic-root-r1/consume.py",
+    "receiptPath": "/Volumes/WD/code/workspaces/coaster-consumable-art/evidence/classic-interaction-diagnostic-root-r1/consumption.json",
+    "receiptSHA256": "70b850bf8af429f479cd1607b4af0c9972cc0add7f9112e47e31768b27df70d0",
+    "payloads": 488,
+    "manifestSHA256": "09a37098487911312ab7377413732bc9e9e6075f70c49e277e43b3554c44a869",
+    "rawLines": 5168,
+    "sourceReplies": 97,
+    "httpBodies": 9,
+    "loadedBodies": 3,
+    "chronologicalDistinctWholeSaveReplies": 13,
+    "actualConsumerExit": 0,
+    "knownRuntimeChildrenAbsent": 13,
+    "preterminationAncestryRecords": 12,
+    "settlementOnlyChild": 1572738,
+    "terminalToolSupplement": "Complete83 tool supplement independently consumed; separate terminal receipt",
+    "extraWholeAuthorityCheck": "Exact actual New before/track/queue hover saves and imported/selected old5 saves are byte-identical."
+  },
+  "terminalToolRootConsumption": {
+    "receiptPath": "/Volumes/WD/code/workspaces/coaster-consumable-art/evidence/classic-interaction-diagnostic-root-r1/terminal-consumption.json",
+    "receiptSHA256": "75776a8618d0c8de8fda8ac4b3f3db6c6cd38ffe6fea1307d15f44b9e09574e3",
+    "manifestSHA256": "7f88e0d4172a5c3b3be9b33c3fe741b077c8dcfd3f906af1c2ccc2e34831126f",
+    "payloads": 83,
+    "actualConsumerAndFreshSSHExit": 0,
+    "knownMacPIDsFreshAbsent": 45,
+    "knownRemotePIDsFreshAbsent": 33
+  }
+}

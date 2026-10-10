@@ -1,0 +1,41 @@
+{
+  "utc": "2026-10-10T18:09:49.212567+00:00",
+  "sourceCommit": "2d797d3cd2a3a77ddb5edf5df31372c608642919",
+  "readySHA256": "fa7323d0fb407b9dda57dc20b5f260388a00299845ce2654ca1e0c9e4fa9c119",
+  "rootConsumed": true,
+  "manifestSHA256": "f8169a97a3acd5cc4220e609499616ccc40a77e9c0ab91c3af0d39b8ae9f7449",
+  "payloads": 31,
+  "logicalBytes": 28232575,
+  "actualRuntimeExit": 1,
+  "reportedCheckCount": 57,
+  "reportedPassCount": 56,
+  "nativeWheel": {
+    "capturePerformance": 76093.40000000596,
+    "bubblePerformance": 76093.80000001192,
+    "zoomBefore": 0.9194166666666667,
+    "zoomAfter": 1.008346702987308,
+    "captureOverview": true,
+    "bubbleOverview": false,
+    "actualClient": [
+      337,
+      357
+    ],
+    "deltaY": -180
+  },
+  "preInputRenderOrdinals": [
+    98,
+    99
+  ],
+  "postInputRenderOrdinals": [
+    100
+  ],
+  "disposition": "Root actual object comparison confirms native vertical wheel changes zoom/exits Overview; phase-before-input helper contaminates collected frames. Driver failure, not product wheel defect. Original failed1 preserved; cannot claim two post-input renders or downstream editor/player/save checks.",
+  "wholeTypedSHA256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+  "typedInventory": "Actual local-origin empty inventory[]; never label as prior public1DB/2keys595e4cc3",
+  "knownProcessCount": 15,
+  "knownAllAbsent": true,
+  "portsClosed": true,
+  "resourceDisposition": "Actual enumerated67/48/30/30 normal disposal once/foreign preserved; no broader full72/GPU/memory claim",
+  "rawBoundary": "Immediate actual input window does not include full observed reply6066/after6077. Both independent Design owners read actual full raw6163/97642269B/SHA6963fbf3; Root requires full original retained before final acceptance.",
+  "remaining": "Root full raw/tool package consumption, reviewed causal after-input driver, source0b/r16 native creation and unaffected player/replacement tails, final public and whole cadence."
+}
