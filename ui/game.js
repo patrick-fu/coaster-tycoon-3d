@@ -93,7 +93,29 @@ document.addEventListener('keydown',e=>{if(document.activeElement.closest('dialo
 $('finance').onclick=()=>{if(!packet)return;const l=packet.ledger;$('finance-summary').innerHTML=`<p class="lead">${money(packet.cash)}</p><table class="finance-table"><tr><td>Ticket sales</td><td>${money(l.rideSales)}</td></tr><tr><td>Shop sales</td><td>${money(l.shopSales)}</td></tr>${[['Stock cost',l.stock],['Wages',l.wages],['Upkeep',l.upkeep],['Interest',l.interest]].map(([label,n])=>`<tr><td>${label}</td><td class="expense">− ${money(n)}</td></tr>`).join('')}<tr class="total"><td>Operating balance</td><td>${money(l.rideSales+l.shopSales-l.stock-l.wages-l.upkeep-l.interest)}</td></tr></table>`;$('loan').value=packet.loan/10;$('loan').max=packet.maxLoan/10;$('loan-feedback').textContent='Maximum loan '+money(packet.maxLoan);$('finance-dialog').showModal();};$('set-loan').onclick=async()=>{const receipt=await execute({type:'set-loan',amount:Math.round(Number($('loan').value)*10)});$('loan-feedback').textContent=receipt?'Loan updated.':'Unable to update loan. See the park message.';};
 function db(){return new Promise((resolve,reject)=>{const req=indexedDB.open('coaster-tycoon-3d',1);req.onupgradeneeded=()=>req.result.createObjectStore('parks');req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error);});}
 async function saveLocal(quiet=false){if(!localSaveAllowed){if(!quiet)feedback('Saving disabled: an invalid save is present in storage.',true);return;}try{const save=await request('save',null),database=await db();await new Promise((resolve,reject)=>{const tx=database.transaction('parks','readwrite');tx.objectStore('parks').put(save,saveSlot);tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error);});database.close();localSaveAllowed=true;$('save-status').textContent='Saved '+new Date().toLocaleTimeString('en',{hour:'2-digit',minute:'2-digit'});if(!quiet)feedback('Your park has been saved in this browser.');}catch(e){feedback('Save failed: '+e.message,true);}}
-async function restoreLocal(){try{const database=await db(),save=await new Promise((resolve,reject)=>{const store=database.transaction('parks').objectStore('parks');const read=index=>{const r=store.get(saveSlots[index]);r.onsuccess=()=>{if(r.result!==undefined||index===saveSlots.length-1)resolve(r.result);else read(index+1);};r.onerror=()=>reject(r.error);};read(0);});database.close();if(save!==undefined){await request('load',save);staticRevision=null;feedback('Your saved park has been restored.');}}catch(e){localSaveAllowed=false;feedback('Saved park was not loaded: '+e.message,true);}finally{ready=true;await refresh(true);renderPalette();document.body.inert=false;if(!document.getElementById('feedback').classList.contains('error'))feedback('Your park is ready. Select a tool to build or inspect.');}}
+async function restoreLocal(){
+ try{
+  const database=await db();let save;
+  try{
+   save=await new Promise((resolve,reject)=>{
+    const store=database.transaction('parks').objectStore('parks');
+    const read=index=>{
+     // A stored undefined value is present and must be validated, not skipped.
+     const r=store.openCursor(saveSlots[index]);
+     r.onsuccess=()=>{
+      if(r.result)resolve({present:true,value:r.result.value});
+      else if(index===saveSlots.length-1)resolve({present:false});
+      else read(index+1);
+     };
+     r.onerror=()=>reject(r.error);
+    };
+    read(0);
+   });
+  }finally{database.close();}
+  if(save.present){await request('load',save.value);staticRevision=null;feedback('Your saved park has been restored.');}
+ }catch(e){localSaveAllowed=false;feedback('Saved park was not loaded: '+e.message,true);}
+ finally{ready=true;await refresh(true);renderPalette();document.body.inert=false;if(!document.getElementById('feedback').classList.contains('error'))feedback('Your park is ready. Select a tool to build or inspect.');}
+}
 $('save').onclick=()=>saveLocal();setInterval(()=>{if(ready)saveLocal(true);},60000);$('export').onclick=async()=>{try{const save=await request('save',null),url=URL.createObjectURL(new Blob([save],{type:'application/json'})),a=document.createElement('a');a.href=url;a.download='coaster-park.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);feedback('Park exported. Keep the file as a backup of this park.');}catch(e){feedback(e.message,true);}};$('import').onclick=()=>$('import-file').click();$('import-file').onchange=async e=>{const file=e.target.files[0];if(!file)return;try{if(file.size>64*1024*1024)throw new Error('This park file is too large.');await request('load',await file.text());localSaveAllowed=true;selection=null;inspectSignature='';staticRevision=null;await refresh(true);feedback('Park imported successfully.');}catch(error){feedback('Import failed: '+error.message,true);}finally{e.target.value='';}};$('new').onclick=async()=>{if(!confirm('Start a new Copper Meadows park? Save or export this park first if you want to keep it.'))return;try{await request('new-park',null);localSaveAllowed=true;scene.requestOverview();selection=null;staticRevision=null;inspectSignature='';await refresh(true);renderPalette();feedback('A new park is ready.');}catch(e){feedback(e.message,true);}};
 renderPalette();
 

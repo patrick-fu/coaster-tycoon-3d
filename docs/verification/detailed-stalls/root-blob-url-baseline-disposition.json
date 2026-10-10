@@ -1,0 +1,42 @@
+{
+  "recordedUTC": "2026-10-10T06:18:47.169297+00:00",
+  "sourceCommit": "e9159150f0828cddd38ae95f740c7e1601b4b481",
+  "canonicalReadySHA256": "2d51cba17f0b64460d329699dc3df5c529d1aa498612ad730dc8c0356420bfb7",
+  "loaderSHA256": "92bed64a2c2383070696da3307f2ff8a82cd8295d61f738c8392e55fb2be4721",
+  "classification": "CONFIRMED P2: one failed embedded PNG URL remains native-fetchable after repeated factory disposal. Normal decoding cleans all URLs. No per-frame growth claimed.",
+  "retainedFailedBlobBytes": 392332,
+  "retainedFailedBlobSHA256": "d057034d60a384a3ea89162f4d2ad415a4cc238eaa8da39870c2c6981773487d",
+  "actualNativeRows": [
+    {
+      "path": "/Volumes/WD/code/workspaces/coaster-consumable-art/evidence/blob-url-baseline-early/case-0/actual-native-url-observations.json",
+      "SHA256": "81271890e3f41df5a28e34fdee854e1ab79f6584e1e43f601d1bd3eba24d98ce",
+      "actualNativeResourceCounts": {
+        "geometries": 67,
+        "materials": 72,
+        "textures": 30,
+        "bitmaps": 30
+      },
+      "liveOwnURLsAfterTwoFactoryDisposes": 0,
+      "foreignURLAndTextureUntouched": true,
+      "allOwnedAllocatedResourcesOnce": true,
+      "all31OriginalBlobByteHashesExact": true
+    },
+    {
+      "path": "/Volumes/WD/code/workspaces/coaster-consumable-art/evidence/blob-url-baseline-early/case-1/actual-native-url-observations.json",
+      "SHA256": "eed5e96b8774cbb727f597d60519f915f0103dde2ed8639f575060f87a563f90",
+      "actualNativeResourceCounts": {
+        "geometries": 36,
+        "materials": 46,
+        "textures": 29,
+        "bitmaps": 29
+      },
+      "liveOwnURLsAfterTwoFactoryDisposes": 1,
+      "foreignURLAndTextureUntouched": true,
+      "allOwnedAllocatedResourcesOnce": true,
+      "all31OriginalBlobByteHashesExact": true
+    }
+  ],
+  "adapter": "Anisotropy capability1 adapter; actual Three/GLTF/browserImageBitmap/URL. No renderer/GPU/app/worker/simulation involved.",
+  "fixCandidateLoaderSHA256": "9ca3bf9c26077a2e31a857760c15086b12ce530ba160abb31f207e30723e0cd2",
+  "scope": "Baseline mechanism and actual consequence accepted. Fixed-native late cancel/source receipts and whole retention remain pending; cursor/UI/newpublic/reviews remain open."
+}

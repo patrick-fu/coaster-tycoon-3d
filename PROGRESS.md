@@ -1,6 +1,6 @@
 # Project progress and recovery
 
-Last updated: 2026-10-10 05:54 UTC.
+Last updated: 2026-10-10 06:13 UTC.
 Root owns this live record and its [dated journal](docs/progress/2026-10-10.md).
 Active worktree: `/Volumes/WD/code/workspaces/coaster-consumable-art/coaster-tycoon-3d`.
 Branch: `p/patrick/feature/detailed-consumable-stalls`.
@@ -48,3 +48,9 @@ No new Patrick decision is needed for these bounded steps. Original numerical/ar
 Prepared URL-failure repair27b8260/tree2175da4: Grok r5 ready1395a5ad now Root-qualified for compile/13modules/789source/162shipping/all788baseline-source+162shipping unchanged/fivePIDabsence. Onlyloader9ca3 changes;161shipping/entire src andtest corpus/Nodeb123/13-6-6 exact. Actualnativebaseline/fix andaffectednewpublic/cumulativequalification remain pending. See [r5 build receipt](docs/verification/detailed-stalls/root-integrated-build-r5-acceptance.json).
 
 Latest URL baseline runtime-r1 failed05:52:25Z before either native case: driver assumed game.request returned an .ok envelope instead of its already-unwrapped receipt. Runner1135955/HTTP1135956/Chrome1135957/child+SSH1 are retained. Portsclosed but original localhostDB[] restore false; soleowner must complete separate neutral-only full recovery first. Root narrows subsequent inventory to an isolated native factory/module harness with no game.js/worker/park/request/save/IndexedDB actions, preserving actual Chrome/GLTF/ImageBitmap/URL behavior. Existing publice915 proof is unaffected.
+
+AGY Gemini3.8FlashHigh read-only next-showcase proposal actually launched06:00:01Z, runner58305/CLI58313/session7623 in `/Volumes/WD/code/workspaces/coaster-classic-showcase-design-r1`. It may only view11 hashed readonly snapshots and return<=1000 English words; no production/command/runtime/writes. This is follow-on planning, not a change to finite75. Root will consume actual terminal/tool evidence before accepting its proposal.
+
+DesignR1 identifies a second finite contract gap: restoreLocal uses get().result===undefined for absence, so a present explicit undefined slot can fall back and be overwritten. Root confirms contract absence-only protection and traces the W3C API distinction; a same-transaction openCursor lookup with explicit presence/value is the bounded repair. Actual old/fixed browser cases and immutable storage recovery remain required; no user policy decision or extra product scope is needed.
+
+Prepared cursor-presence repair is currently UNQUALIFIED in `ui/game.js`, SHA b82b661d8425bd39520a889e19e508cffcd280f5def5d1553a7b442f962dab58. It reads each priority key with openCursor in one readonly transaction, distinguishes {present,value}, passes any present value to existing worker validation, and closes the database in finally. Save/protocol/content/Rules are unchanged. It requires a new immutable build and actual old/fixed storage cases; r5/publice915 cannot qualify this edit.
