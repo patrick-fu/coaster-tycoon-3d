@@ -1,0 +1,80 @@
+{
+  "recordedUTC": "2026-10-10T05:48:10.947025+00:00",
+  "sourceCommit": "e9159150f0828cddd38ae95f740c7e1601b4b481",
+  "sourceTree": "a84e6d25515e3f1bb1b32578499cd1874cc5334f",
+  "canonicalBuildReadySHA256": "2d51cba17f0b64460d329699dc3df5c529d1aa498612ad730dc8c0356420bfb7",
+  "hostingCommit": "6f4bc39fad252a3e802bb6fb8091453dca8818f7",
+  "publicReadySHA256": "87a5b1a9877d5175858dff26469a6bf6bfeaede4a841fa7aa195c850d8f2016c",
+  "actualDriverSHA256": "1d9b42acc2f0f07b1db0484f0f42f421405cfc96e96d3629d5bdd26fbf9debc5",
+  "routes": [
+    {
+      "route": "root",
+      "httpBodiesActuallyHashed": 162,
+      "parsedSourceBodiesActuallyHashed": [
+        96,
+        99
+      ],
+      "actualPostBatchUnitExclusivePoses": 4,
+      "actualOwnerPointers": 4,
+      "originalDatabaseCount": 1,
+      "completeOriginalStorageBytesEqual": true,
+      "originalStorageSHA256": "dbfd40a37bb11781f337f6ba5af0ca413cd6de3fda0f6fafbbddfbb00d733aed",
+      "targetDisposedOnceAndOwnerNull": true
+    },
+    {
+      "route": "pin",
+      "httpBodiesActuallyHashed": 162,
+      "parsedSourceBodiesActuallyHashed": [
+        96,
+        99
+      ],
+      "actualPostBatchUnitExclusivePoses": 4,
+      "actualOwnerPointers": 4,
+      "originalDatabaseCount": 1,
+      "completeOriginalStorageBytesEqual": true,
+      "originalStorageSHA256": "dbfd40a37bb11781f337f6ba5af0ca413cd6de3fda0f6fafbbddfbb00d733aed",
+      "targetDisposedOnceAndOwnerNull": true
+    }
+  ],
+  "wholePausedAuthorityBodiesEqual": 10,
+  "actualPNGsRetainedByteExact": 10,
+  "originalPublicDatabaseFullBodyBytes": 1857169,
+  "mainRetention": {
+    "logicalFiles": 1006,
+    "logicalBytes": 391340696,
+    "encodedBytes": 279464597,
+    "allRootEncodedDecodedExact": true,
+    "manifestSHA256": "6bffe5518cfc4095385cc7bea54469ae475e569d18df7857c6ddf087def17fdb",
+    "checksSHA256": "fdaabbe5e6b407c4a2b1b2501492d6d5bf9c5a509f90fea0370853b715019ef6"
+  },
+  "supplementRetention": {
+    "logicalFiles": 62,
+    "logicalBytes": 1953545,
+    "encodedBytes": 129270,
+    "allRootEncodedDecodedExact": true,
+    "manifestSHA256": "e32a2a1d0c40fd5ddfa105cca2a8250ff18e715baad00d5674498a4e273b09cb",
+    "checksSHA256": "7489f069f1fbea652d2ca01f5e35fe3dc6d5de624fae31c3aeb318b52aabc8a8"
+  },
+  "rawDirectory": "/Volumes/WD/code/workspaces/coaster-detailed-stalls-browser/public-e915915-r1",
+  "reportSHA256": "2ffbdf8fbca1fabc1c6760281774b81fc64773b1446f999f3a0ccfbac85da58a",
+  "browserReadySHA256": "e89c1b6f55d731d16ee2c4ef6001a1917e4e636cb306f91b34cac1005964fbb2",
+  "terminalAuditSHA256": "819c2145bc9b1b4053798555e7beb992d026d2e10dfd934eb9f25f4185503bef",
+  "audit18KnownPidsAbsent": true,
+  "ports8777And9237Closed": true,
+  "scope": "Actual e915 public root/pin bounded source/bootstrap/Library/detailed unit/state/picking/full-authority/storage paths accepted. New27b URL repair, cumulative review, human/original/GPU/full programme remain open.",
+  "actuallyViewedPNGs": [
+    {
+      "path": "/Volumes/WD/code/workspaces/coaster-detailed-stalls-browser/public-e915915-r1/runtime-r1/root/public-detailed-0-open.png",
+      "sha256": "f15a6cbe0acf29f1c09ac146e566c5f0620656cf67c07f5aeebccfefb4be4b19"
+    },
+    {
+      "path": "/Volumes/WD/code/workspaces/coaster-detailed-stalls-browser/public-e915915-r1/runtime-r1/root/public-detailed-1-open.png",
+      "sha256": "e08fa9862cd4230f0b59c5a2e3e6aca701ef85be3aad0090011a546f12db8362"
+    },
+    {
+      "path": "/Volumes/WD/code/workspaces/coaster-detailed-stalls-browser/public-e915915-r1/runtime-r1/root/public-classic.png",
+      "sha256": "0cd3ab693116214acd436e08e1c0e3b2f13d2d8aa6d0581c1ba40db98a990264"
+    }
+  ],
+  "rootVisualObservation": "Actual public Burger and Soft-drink front views retain authored roof signs, striped awnings, textured siding/counters and fitted unit placement. The Classic constructor still uses its existing five rides and three legacy facilities, so these two new detailed assets are Library-built rather than silently replacing historical/default content. Human/original style approval remains open."
+}

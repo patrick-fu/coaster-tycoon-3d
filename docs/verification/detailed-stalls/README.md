@@ -1,6 +1,6 @@
 # Detailed consumable building qualification
 
-Current compiled candidate source is `e9159150f0828cddd38ae95f740c7e1601b4b481` on
+Current prepared code candidate is `27b82604486189ef68983a1d76884c5f7df81a24` on
 [draft PR76](https://github.com/patrick-fu/coaster-tycoon-3d/pull/76).
 [Finite task75](https://github.com/patrick-fu/coaster-tycoon-3d/issues/75)
 remains open. All execution below occurred on Grok Bot; WD retains the inputs,
@@ -13,7 +13,7 @@ raw results, failed attempts and editable masters.
 | Independent geometry candidate | Burger11,322/Soft-drink10,888 triangles; unit anchors/all-state bounds/UVs and eight CPU poses inspected. Source689 actual exported palette later failed; that candidate is retained | [Original art record](root-final-art-acceptance.json), [provenance](../../../ui/models/detailed-stalls/README.md) |
 | Repaired material resources | Exact unchanged geometry/UV/nodes/states;17 native source maps plus2 derived albedos in each reopened master. Four actual GLB colors match independently observed old linear MIX within8-bit quantization;13 unaffected images exact | [Repaired material acceptance](root-repaired-material-acceptance.json) |
 | Isolated regressions | Fixed loader9 and picking3 controls pass after actual counterexamples; original red runs retained | [Isolated acceptance](root-ui-isolated-acceptance.json) |
-| Current integrated build | Sourcee915, exact788 committed inputs/162 shipping files; four children/SSH0 and13 meaningful module controls pass with blankstderr. Only SoftGLB+3assetdocs change fromf535;158 shipping files/Node binding exact. Tested browser159effective bodies equal;3documentation differences explicit | [Current build acceptance](root-integrated-build-r4-acceptance.json), [immutablef535 build](root-integrated-build-r3-acceptance.json) |
+| Current integrated build | Source27b,789 committed inputs/162 shipping files; four children/SSH0 and13 module controls pass. Only detailed loader9ca3 changes frome915;161 shipping files, complete src/test corpus andNode binding exact. Actual URL baseline/fixed-native/public pending | [Current build acceptance](root-integrated-build-r5-acceptance.json), [immutablee915 build](root-integrated-build-r4-acceptance.json) |
 | Existing browser behavior | Actual Classic27/Library10/lifecycle3 pass in local-r2; that attempt remains failed on receiver digest and blocked cleanup | External `browser-evidence/local-r2` and `attempts/local-r2` |
 | Receiver qualification | Distinct exact Nodeb123 andChrome78b;26 actual curve tails differ. Current Chrome's old-v12 projection57cc matches genuine historical Chrome bytes | [Raw diagnosis](root-receiver-diagnosis.json), [review disposition](receiver-review-disposition.json), [explicit browser binding](root-browser-receiver-binding.json) |
 | Original storage recovery | Separate neutral-only runner952095/Chrome952097 exits0 and restores originalDB[]; failed cleanup is not relabelled | External `browser-evidence/storage-recovery-r1` |
@@ -93,13 +93,24 @@ Drift rounds remain required. The [progress record](../../../PROGRESS.md) retain
 planned, running, verified and published scope. Exact owned duplicate transport
 and temporary captures were removed only after retained-byte/process checks;
 masters, raw failures, oracles and default browser profile remain intact.
-Hosting6f4/Pagesbuilt deploys candidatee915/save13/content6/protocol6 to the
-root and [new frozen preview](https://patrick-fu.github.io/coaster-tycoon-3d/previews/detailed-stalls-e915915/?showcase=classic).
-Eight actual bootstrap HTTP bodies match; full public162body/user-path
-qualification has actually launched under the frozen gate (runner1122535/
-Chrome1122667); actual user-path terminal and Root raw consumption are pending.
-Whole cumulative first-round
-DesignSol andDriftLuna reviews are independently running; no final rounds have
-completed. Prior fddd/save12/content5/protocol5 remains at its immutable preview. Original
+Hosting6f4/Pagesbuilt deploys qualified normale915/save13-content6-protocol6
+to the root and [frozen preview](https://patrick-fu.github.io/coaster-tycoon-3d/previews/detailed-stalls-e915915/?showcase=classic).
+Root consumed324 actual HTTP bodies,390 actual parsed source records,10 whole
+authority pairs, complete original publicDB1 restoration, eight unit/exclusive
+poses/picking,10 native PNG byte identities andall1006+62 retained payloads.
+[Actual public acceptance](root-public-e915915-acceptance.json) separates these
+bounded paths from human/GPU/full programme. Root viewed actual two detailed
+front views and Classic; the default park still contains the old facilities.
+
+Independent DesignR1/DriftR1 found a concrete success-only Blob URL cleanup
+mechanism in the pinned loader. Prepared27b adds its own LoadingManager,
+membership-gated error revoke and settlement-only member clearing. Successful
+URL cleanup stays upstream; in-flight disposal does not revoke or forget URLs.
+Actual baseline/fixed-native and affected new public checks are pending. Both
+whole cumulative first-round reviewers hold final verdicts for those results;
+no final review rounds are counted. Permanently hung decoding and partial GPU
+allocation remain unexecuted boundaries.
+
+Prior fddd/save12/content5/protocol5 remains at its immutable preview. Original
 numerical/art agreement, representative GPU/scale, catalogue breadth and
 Patrick's visual/play acceptance remain open.

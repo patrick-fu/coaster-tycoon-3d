@@ -1,14 +1,14 @@
 # Detailed consumable stalls at authored scale
 
-Status: Implemented in frozen sourcee9159150f0828cddd38ae95f740c7e1601b4b481
-on draft PR76; finite75 remains open and main1373 is unchanged. Canonical
-Grok ready2d51/save13-content6-protocol6 and actual local source/asset/native/
-compatibility evidence are Root-qualified. Hosting6f4 is actually deployed to
-the public root/new frozen preview; eight bootstrap bodies match. Full public
-user-path qualification and TWO whole cumulative rounds of each review lens
-remain pending. See [PROGRESS.md](../../PROGRESS.md) for live ownership and
-[qualification](../verification/detailed-stalls/README.md) for exact proof.
-Original/human/representative GPU/full-programme agreement remain open.
+Status: Detailed models and normal public paths are qualified at sourcee915,
+ready2d51 and hosting6f4. Prepared source27b82604486189ef68983a1d76884c5f7df81a24
+on draft PR76 adds scoped cleanup for a failed embedded-image URL; canonical
+Grok ready1395 passes compilation and13 module controls. Actual failed-URL
+baseline/fixed-native and affected new public qualification remain pending.
+Finite75/main1373 remain open/unchanged; TWO whole cumulative rounds of each
+review lens still await the final repair evidence. See [PROGRESS.md](../../PROGRESS.md)
+for live ownership and [qualification](../verification/detailed-stalls/README.md)
+for exact proof. Original/human/representative GPU/full programme remain open.
 
 ## Player outcome and boundary
 

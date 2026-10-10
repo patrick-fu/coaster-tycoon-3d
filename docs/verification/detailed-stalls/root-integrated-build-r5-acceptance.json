@@ -1,0 +1,46 @@
+{
+  "sourceCommit": "27b82604486189ef68983a1d76884c5f7df81a24",
+  "sourceTree": "2175da498945e5fc2a1e40407c0355f8dbfa92af",
+  "buildReadySHA256": "1395a5ada5096ce09d4875f6c35020a368ef1ae1250a957372314152a893ff85",
+  "rawDirectory": "/Volumes/WD/code/workspaces/coaster-consumable-art/evidence/integrated-build-r5/build-r5",
+  "actualFourChildAndSshExit": 0,
+  "moduleTestsPassed": 13,
+  "moduleTestsFailed": 0,
+  "sourceFilesVerified": 789,
+  "shippingFilesVerified": 162,
+  "sourceAndTestsUnchanged": true,
+  "baselineSourceAndShippingUnmodified": true,
+  "changedShippingAgainstE915": [
+    "art/detailed-facility-assets.js"
+  ],
+  "unchangedShippingAgainstE915": 161,
+  "loaderSHA256": "9ca3bf9c26077a2e31a857760c15086b12ce530ba160abb31f207e30723e0cd2",
+  "actualNodeRulesSHA256": "b123fee6c14e7b2df2b32b694639258a721f43a9552046d636f651c0af2d3fcb",
+  "versions": {
+    "save": 13,
+    "content": 6,
+    "protocol": 6
+  },
+  "postbuildAuditSHA256": "df0c2611901ad1882f225d5d88c562d5feef1e367ce6c720bae2fbec8aa8ba6e",
+  "recordedKnownFiveBuildPidsAbsent": true,
+  "retainedRawSHA256": {
+    "actual-receiver.launch.json": "a35d2b004cc88eda04e57c564e76b268db2b1d87b1a574547a09e669c45e45df",
+    "actual-receiver.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "actual-receiver.stdout": "5c825ac7b3a9266bf5e36832c13e1588f31007e0187d015bd22a75604c24a67d",
+    "build-ready.json": "1395a5ada5096ce09d4875f6c35020a368ef1ae1250a957372314152a893ff85",
+    "module-controls.launch.json": "32e2fa909e0eb348f2699e6020b3d33eeebdb9e2fb7401ee7c9ac0c6b2772352",
+    "module-controls.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "module-controls.stdout": "3d0679d452bd8c86191c470dca32a5a7948caa2911c313fa95f32868a378bfa9",
+    "prepare-source.launch.json": "edc97d081adfc0259165515a1fc3be633ed7c0a7b6b32a6cb0f954af310c3ba2",
+    "prepare-source.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "prepare-source.stdout": "a9d8b4b476a5708262c31ed693abeee5a16071e098592088d9549e58e53d9cf3",
+    "root-postbuild-audit.json": "df0c2611901ad1882f225d5d88c562d5feef1e367ce6c720bae2fbec8aa8ba6e",
+    "run-integrated-build.py": "8b1b5d3d2345dbef6169b99bac59e58eba078bdb69f8dc93b8347a5e51c4f47b",
+    "source-prepare-receipt.json": "a396cb1b398b2cc96289f543a8a35414da9e77b4b0aaabb3d9397b048e45d295",
+    "terminal.json": "20d318b4710a558ec8cbe2e1179d672d4595c297845dca1138688c912902e46c",
+    "web-build.launch.json": "0ca9bdff6d689729cc3a1852c8ff0d854199761fff1fddb57681d98021756a09",
+    "web-build.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "web-build.stdout": "120b133d25a41fc01f174dbb1129e91fbbc95e7d931def7b534c319a71105eb4"
+  },
+  "scope": "Prepared fix compile/13 meaningful controls and complete source/shipping correspondence accepted. Actual Blob baseline/fix and new public affected qualification, cumulative reviews, human/GPU/full programme remain open."
+}
