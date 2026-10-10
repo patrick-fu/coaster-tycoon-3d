@@ -81,7 +81,17 @@ export function createDetailedFacilityAssets(renderer, {reflectionTexture = null
     'MenuPanel'
   ];
 
-  const loader = new GLTFLoader();
+  const objectURLs = new Set();
+  const manager = new THREE.LoadingManager();
+  manager.setURLModifier(url => {
+    if (url.startsWith('blob:')) objectURLs.add(url);
+    return url;
+  });
+  // GLTFLoader revokes embedded image URLs only after successful decoding.
+  manager.onError = url => {
+    if (objectURLs.delete(url)) URL.revokeObjectURL(url);
+  };
+  const loader = new GLTFLoader(manager);
   loader.register(parser => ({
     name: 'ParkDetailedFacilityAssetOwnership',
     loadMesh: async index => {
@@ -360,6 +370,7 @@ export function createDetailedFacilityAssets(renderer, {reflectionTexture = null
   }
 
   assets.readyPromise = Promise.allSettled(['burger', 'soft-drink'].map(loadModel)).then(results => {
+    objectURLs.clear();
     const failure = results.find(result => result.status === 'rejected');
     if (disposed || failure) {
       release();
