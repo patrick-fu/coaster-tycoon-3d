@@ -1,0 +1,163 @@
+{
+  "recordedUTC": "2026-10-10 01:37 UTC",
+  "acceptedFor": "Affected actual browser qualification only; not public, human/GPU or final cumulative review",
+  "sourceCommit": "7ab4d7e35bc2d4d07456b00d5aaaafe122eb105d",
+  "sourceTree": "bc814658c807bb04af68eda5b7cea5b39b1c88ce",
+  "buildReady": {
+    "path": "/Volumes/WD/code/workspaces/coaster-consumable-art/evidence/integrated-build-r2/build-ready.json",
+    "remotePath": "/workspace/coaster-detailed-stalls-integrated-r2/evidence/build-r2/build-ready.json",
+    "sha256": "79cc1c00cdbd008caff60d3e6992e9fc20c7ac3d91558d262da02ebd658cbe97"
+  },
+  "terminal": {
+    "path": "/Volumes/WD/code/workspaces/coaster-consumable-art/evidence/integrated-build-r2/terminal.json",
+    "sha256": "c1cfacf4e08c86bf7c30dfc01a40fce639c382d153b091f2085adf67e946ab06",
+    "actualOuterExit": 0,
+    "runs": [
+      {
+        "phase": "prepare-source",
+        "startedUTC": "2026-10-10T01:35:38.879141+00:00",
+        "runnerPid": 1000558,
+        "childPid": 1000559,
+        "command": [
+          "python3",
+          "/workspace/coaster-detailed-stalls-integrated-r2/prepare-source.py"
+        ],
+        "cwd": "/workspace/coaster-detailed-stalls-integrated-r2",
+        "finishedUTC": "2026-10-10T01:35:39.825942+00:00",
+        "actualExit": 0,
+        "stdoutSha256": "7b3752b4983731fd373dd274d834320bd1f758d1c8bd3a0ff599ee965dbfb409",
+        "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderrBytes": 0
+      },
+      {
+        "phase": "web-build",
+        "startedUTC": "2026-10-10T01:35:39.981509+00:00",
+        "runnerPid": 1000558,
+        "childPid": 1000564,
+        "command": [
+          "npm",
+          "run",
+          "build:web"
+        ],
+        "cwd": "/workspace/coaster-detailed-stalls-integrated-r2/source",
+        "finishedUTC": "2026-10-10T01:35:41.427467+00:00",
+        "actualExit": 0,
+        "stdoutSha256": "120b133d25a41fc01f174dbb1129e91fbbc95e7d931def7b534c319a71105eb4",
+        "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderrBytes": 0
+      },
+      {
+        "phase": "module-controls",
+        "startedUTC": "2026-10-10T01:35:41.428262+00:00",
+        "runnerPid": 1000558,
+        "childPid": 1000627,
+        "command": [
+          "node",
+          "--test",
+          "test/detailed-facility-batching.test.mjs",
+          "test/detailed-facility-loader-check.mjs",
+          "test/detailed-facility-picking-check.mjs"
+        ],
+        "cwd": "/workspace/coaster-detailed-stalls-integrated-r2/source",
+        "finishedUTC": "2026-10-10T01:35:41.822603+00:00",
+        "actualExit": 0,
+        "stdoutSha256": "23e604cffc30bac982b801fba978467dcb52c0ae482e6e8ca479849c6673a078",
+        "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderrBytes": 0
+      },
+      {
+        "phase": "actual-receiver",
+        "startedUTC": "2026-10-10T01:35:41.823530+00:00",
+        "runnerPid": 1000558,
+        "childPid": 1000673,
+        "command": [
+          "node",
+          "--input-type=module",
+          "-e",
+          "\nimport {createHash} from 'node:crypto';\nimport {mixedRules,newCarouselPark} from './dist/content/mixed-park.js';\nimport {withFlumeProfile} from './dist/content/log-flume.js';\nimport {withConsumablesProfile} from './dist/content/consumables.js';\nimport {withDetailedStallsProfile} from './dist/content/facility-profiles.js';\nimport {WORKER_PROTOCOL_VERSION} from './dist/simulation/protocol.js';\nconst browserRules=withDetailedStallsProfile(withConsumablesProfile(withFlumeProfile(mixedRules)));\nconst snapshot=newCarouselPark(browserRules).snapshot();\nprocess.stdout.write(JSON.stringify({versions:{save:snapshot.version,content:snapshot.contentVersion,protocol:WORKER_PROTOCOL_VERSION},receivingRulesSha256:createHash('sha256').update(snapshot.rules).digest('hex')})+'\\n');\n"
+        ],
+        "cwd": "/workspace/coaster-detailed-stalls-integrated-r2/source",
+        "finishedUTC": "2026-10-10T01:35:47.549751+00:00",
+        "actualExit": 0,
+        "stdoutSha256": "5c825ac7b3a9266bf5e36832c13e1588f31007e0187d015bd22a75604c24a67d",
+        "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderrBytes": 0
+      }
+    ]
+  },
+  "sourcePreparation": {
+    "recordedUTC": "2026-10-10T01:35:39.792602+00:00",
+    "pid": 1000559,
+    "baselineCommit": "689296ae1481d364e7f7d326cdacb6d715e01a73",
+    "baselineSourceFilesVerifiedBeforeAndAfter": 754,
+    "baselineReadySha256": "42ccf4643f44fd8cc276eb9f15a681db21847fa6f13fe24e67688d097255fd6b",
+    "sourceCommit": "7ab4d7e35bc2d4d07456b00d5aaaafe122eb105d",
+    "sourceTree": "bc814658c807bb04af68eda5b7cea5b39b1c88ce",
+    "sourceFilesVerified": 767,
+    "changedPaths": [
+      "PROGRESS.md",
+      "docs/planning/detailed-consumable-stalls.md",
+      "docs/progress/2026-10-10.md",
+      "docs/verification/detailed-stalls/README.md",
+      "docs/verification/detailed-stalls/material-repair-review-disposition.json",
+      "docs/verification/detailed-stalls/receiver-qualification-plan.md",
+      "docs/verification/detailed-stalls/receiver-review-disposition.json",
+      "docs/verification/detailed-stalls/root-browser-partial-acceptance.json",
+      "docs/verification/detailed-stalls/root-browser-receiver-binding.json",
+      "docs/verification/detailed-stalls/root-current-browser-retention.json",
+      "docs/verification/detailed-stalls/root-driver-failure-r3.json",
+      "docs/verification/detailed-stalls/root-integrated-build-acceptance.json",
+      "docs/verification/detailed-stalls/root-material-export-failure.json",
+      "docs/verification/detailed-stalls/root-r4-retention-checker-failure.json",
+      "docs/verification/detailed-stalls/root-receiver-diagnosis.json",
+      "docs/verification/detailed-stalls/root-repaired-material-acceptance.json",
+      "scripts/art/burger-stall.py",
+      "scripts/art/export-detailed-stall.py",
+      "scripts/art/soft-drink-stall.py",
+      "ui/art/detailed-facility-assets.js",
+      "ui/models/detailed-stalls/README.md",
+      "ui/models/detailed-stalls/burger.glb",
+      "ui/models/detailed-stalls/material-provenance.json",
+      "ui/models/detailed-stalls/soft-drink.glb",
+      "ui/models/detailed-stalls/source-manifest.json"
+    ],
+    "deltaArchiveSHA256": "8c0b73df7bec08de2dd412dd8fdb303f2e19a2c1c3b2a15a64737e13824b2fd9",
+    "archiveKind": "Exact tracked-file delta; not a complete source archive",
+    "baselineUnmodified": true,
+    "allExact": true
+  },
+  "sourceFilesVerified": 767,
+  "shippingFilesVerified": 162,
+  "remoteRootCorrespondence": "Actual Root SSH rehashes all767 source and162 shipping files after build; no mismatch",
+  "changedShippingPaths": [
+    "art/detailed-facility-assets.js",
+    "models/detailed-stalls/README.md",
+    "models/detailed-stalls/burger.glb",
+    "models/detailed-stalls/material-provenance.json",
+    "models/detailed-stalls/soft-drink.glb",
+    "models/detailed-stalls/source-manifest.json"
+  ],
+  "unchangedShippingFiles": 156,
+  "moduleControls": {
+    "tests": 13,
+    "pass": 13,
+    "fail": 0,
+    "stdoutSHA256": "23e604cffc30bac982b801fba978467dcb52c0ae482e6e8ca479849c6673a078"
+  },
+  "versions": {
+    "save": 13,
+    "content": 6,
+    "protocol": 6
+  },
+  "nodeReceivingRulesSHA256": "b123fee6c14e7b2df2b32b694639258a721f43a9552046d636f651c0af2d3fcb",
+  "chromeReceivingQualification": "Pending exact fresh actual Chrome binding; retain distinct Node b123/Chrome78b/old57cc receivers",
+  "ownedProcessesAbsent": [
+    1000558,
+    1000559,
+    1000564,
+    1000627,
+    1000673
+  ],
+  "preservedBaselineReadySHA256": "42ccf4643f44fd8cc276eb9f15a681db21847fa6f13fe24e67688d097255fd6b",
+  "scope": "No Mac runtime. Delta is16.4MB changed tracked files against immutable baseline, not full source archive; full767 source identity is exact."
+}
