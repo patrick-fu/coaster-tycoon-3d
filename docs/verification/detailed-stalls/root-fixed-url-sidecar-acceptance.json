@@ -1,0 +1,27 @@
+{
+  "recordedUTC": "2026-10-10 07:11 UTC",
+  "rawDirectory": "/Volumes/WD/code/workspaces/coaster-detailed-stalls-browser/blob-url-r2",
+  "supplementManifestSHA256": "80211be7827a248107c4e8db26ad903690f67acd3334fa92a968d9178d02a5a1",
+  "supplementChecksSHA256": "15aa6dd4b341158d10fa51de6ca8d23250c4c126a4e3a66fc68cbff57c458a2f",
+  "all81PayloadsEncodedAndDecodedExact": true,
+  "main244ManifestUnchanged": true,
+  "finalClosureSHA256": "6864f71fdde37f68be183e435d18239f5b3087ab14f842fcd5483b7dc1ebb3e4",
+  "all98PriorKnownOwnedPidsAbsent": true,
+  "portsClosed": true,
+  "closureAndSupplementHelpersPostWaitAbsent": true,
+  "preservedAdministrativeErrors": [
+    {
+      "path": "supplement-tool-attempt/stderr.log",
+      "lastLine": "AssertionError"
+    },
+    {
+      "path": "terminal-tool-audit/stderr.log",
+      "lastLine": "FileNotFoundError: [Errno 2] No such file or directory: '/workspace/coaster-detailed-stalls-browser/blob-url-r2/transport/retention-r1/actual-ssh-outer-exit.txt'"
+    },
+    {
+      "path": "transport/supplement-r1/mirror-scp.stderr.log",
+      "lastLine": "scp: failed to upload directory /Volumes/WD/code/workspaces/coaster-detailed-stalls-browser/blob-url-r2/mirror/main-r1 to /workspace/coaster-detailed-stalls-browser/blob-url-r2/mirror/"
+    }
+  ],
+  "scope": "Fixed main244+sidecar81, allthree native outcomes and complete known process closure accepted. Earlier browser1/completedfalse and administrative failures remain preserved. No more native replay; changed r6 game.js explicit-undefined UI, new public and cumulative reviews remain pending."
+}

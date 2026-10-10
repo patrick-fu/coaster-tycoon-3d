@@ -13,7 +13,7 @@ raw results, failed attempts and editable masters.
 | Independent geometry candidate | Burger11,322/Soft-drink10,888 triangles; unit anchors/all-state bounds/UVs and eight CPU poses inspected. Source689 actual exported palette later failed; that candidate is retained | [Original art record](root-final-art-acceptance.json), [provenance](../../../ui/models/detailed-stalls/README.md) |
 | Repaired material resources | Exact unchanged geometry/UV/nodes/states;17 native source maps plus2 derived albedos in each reopened master. Four actual GLB colors match independently observed old linear MIX within8-bit quantization;13 unaffected images exact | [Repaired material acceptance](root-repaired-material-acceptance.json) |
 | Isolated regressions | Fixed loader9 and picking3 controls pass after actual counterexamples; original red runs retained | [Isolated acceptance](root-ui-isolated-acceptance.json) |
-| Current integrated build | Sourced232,792 committed inputs/162 shipping files; four children/SSH0 and13 module controls pass. Loader9ca3 and gameb82b change frome915;160 shipping files, complete src/test corpus andNode binding exact. Final native identity/storage/public checks pending | [Current build acceptance](root-integrated-build-r6-acceptance.json), [prior repair build](root-integrated-build-r5-acceptance.json), [immutablee915 build](root-integrated-build-r4-acceptance.json) |
+| Current integrated build | Sourced232,792 committed inputs/162 shipping files; four children/SSH0 and13 module controls pass. Loader9ca3 and gameb82b change frome915;160 shipping files, complete src/test corpus andNode binding exact. Root-qualified final native identity, actual typed-storage controls and final affected public paths | [Current build acceptance](root-integrated-build-r6-acceptance.json), [prior repair build](root-integrated-build-r5-acceptance.json), [immutablee915 build](root-integrated-build-r4-acceptance.json) |
 | Existing browser behavior | Actual Classic27/Library10/lifecycle3 pass in local-r2; that attempt remains failed on receiver digest and blocked cleanup | External `browser-evidence/local-r2` and `attempts/local-r2` |
 | Receiver qualification | Distinct exact Nodeb123 andChrome78b;26 actual curve tails differ. Current Chrome's old-v12 projection57cc matches genuine historical Chrome bytes | [Raw diagnosis](root-receiver-diagnosis.json), [review disposition](receiver-review-disposition.json), [explicit browser binding](root-browser-receiver-binding.json) |
 | Original storage recovery | Separate neutral-only runner952095/Chrome952097 exits0 and restores originalDB[]; failed cleanup is not relabelled | External `browser-evidence/storage-recovery-r1` |
@@ -111,10 +111,13 @@ baseline payloads. Two fixed cancellation bodies show correct release timing and
 ownership but original drivers ended1 on incorrect predicates; their own HTTP/source
 body receipts are missing. A single third-only prebound tail closes that identity
 gap. See [source-backed cancellation disposition](root-fixed-url-cancellation-disposition.json).
-Final fixed-native, actual explicit-undefined storage and affected public checks
-are pending. Both
-whole cumulative first-round reviewers hold final verdicts for those results;
-no final review rounds are counted. Permanently hung decoding and partial GPU
+Root accepts all three fixed-native outcomes and the prebound third-only tail,
+including full244+81 retention and98knownPID closure.
+[Actual native acceptance](root-fixed-url-native-acceptance.json) preserves both
+failed observers; [final sidecar](root-fixed-url-sidecar-acceptance.json) preserves
+administrative failures separately. Root also accepts the actual old2/fixed4
+[typed-storage controls](root-explicit-undefined-storage-acceptance.json).
+Final affected d232 public paths are Root-qualified: all1028+77 encoded/decoded retained payloads,324 actual HTTP bodies,582 actual CDP source responses,2 loaded documents,14 whole authority pairs,10 native PNGs and both complete original typed DB restores match. Root/pin each79 checks pass, with known PID/port closure and explicit3-PID pretermination recording limit. See [final actual public acceptance](root-public-d2320d5-acceptance.json). Both whole cumulative R1 Design/Drift reviewers are terminal without unresolved confirmed findings; [Root disposition](cumulative-review-disposition.json) accepts the two repaired P2s and preserves limits. Fresh whole R2 Design/Drift remains pending. Permanently hung decoding and partial GPU
 allocation remain unexecuted boundaries.
 
 Prior fddd/save12/content5/protocol5 remains at its immutable preview. Original
@@ -124,6 +127,10 @@ Patrick's visual/play acceptance remain open.
 The second bounded repair uses actual cursor presence because a present stored
 undefined and an absent key share get().result. The priority and existing invalid-save
 protection contract are unchanged; all present values reach worker validation.
-R6 compile proof does not establish its real manual/autosave behavior. The authorized
-old2/fixed4 controls preserve typed values and original complete databases; the prior
-null/JSON-only matrix remains distinct.
+Actual old2/fixed4 controls are now Root-qualified:1412+53 retained payloads,
+324HTTP/576rawCDPparsed/6document body pins,12full authorities and6original typed DB
+restorations. Both fixed manual Save deltas0 and real60000.3/60506.4ms autosaves0writes
+preserve full schema/keys/typed values and paused authority. HTML Save.disabled stays
+false; the handler guard and visible feedback provide protection. The prior
+null/JSON-only matrix remains distinct; the first driver1 and separate recovery
+remain separately recorded. Final65knownPIDs absent and ports closed.

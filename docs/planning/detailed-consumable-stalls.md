@@ -1,14 +1,15 @@
 # Detailed consumable stalls at authored scale
 
-Status: Detailed models and normal public paths are qualified at sourcee915,
-ready2d51 and hosting6f4. Prepared final source d2320d5e324d548fdba3b30f7d4e0a2d11235466
-on draft PR76 repairs failed embedded-image URL ownership and explicit stored-undefined
-presence. Canonical Grok r6 readybc4130df passes compilation and13 module controls;
-792 source and162 shipping bytes correspond. Actual fixed-native final identity,
-explicit-undefined storage and affected new public qualification remain pending.
-Finite75/main1373 remain open/unchanged; TWO whole cumulative rounds of each review
-lens still await final repair evidence. See [PROGRESS.md](../../PROGRESS.md) for live
-ownership and [qualification](../verification/detailed-stalls/README.md) for exact proof.
+Status: Detailed models and actual public paths are qualified at frozen runtime
+`d2320d5e324d548fdba3b30f7d4e0a2d11235466`, canonical Grok r6 readybc4130df,
+and hosting07be9c4c. Compilation,13 module controls,792 source/162 shipping pins,
+fixed-native identity, explicit stored-undefined protection and affected root/pin
+checks are Root-accepted. Full public1028+77 retained payloads,324HTTP/582actualCDP,
+14 complete authority pairs and both full original typed DB restores are verified.
+ONE whole cumulative Design/Drift round is complete; fresh R2 is running.
+Finite75/main1373 remain open/unchanged until exact-head integration and tracker
+closure. See [PROGRESS.md](../../PROGRESS.md) for live ownership and
+[qualification](../verification/detailed-stalls/README.md) for exact proof.
 Original/human/representative GPU/full programme remain open.
 
 ## Player outcome and boundary

@@ -1,0 +1,13 @@
+{
+  "recordedUTC": "2026-10-10 06:57 UTC",
+  "rawDirectory": "/Volumes/WD/code/workspaces/coaster-detailed-stalls-browser/blob-url-r1",
+  "supplementManifestSHA256": "69e5d88ed0d3a9a315898c7a600277c7f56d52f26db40c54223eca0c570a78f6",
+  "supplementChecksSHA256": "5220530b8f89ba9c28a83a7296f31468eb01f805f08a5241ea2b5c4cad23f919",
+  "all48PayloadsEncodedAndDecodedExact": true,
+  "main175ManifestUnchanged": true,
+  "finalClosureSHA256": "18862cb10ea862d85e2fcab05f8bf5c4e34737ad4ecd86d1f03dacc377708c11",
+  "all45PriorKnownOwnedPidsAbsent": true,
+  "portsClosed": true,
+  "closureHelperPostWaitAbsent": true,
+  "scope": "Baseline main175+sidecar48 lossless raw and separate complete neutral restoration/known process closure consumed. Old source has confirmed failed PNG URL leak; original app-driver1 remains failed. No product fix/public/GPU/whole programme completion claimed."
+}

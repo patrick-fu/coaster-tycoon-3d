@@ -1,0 +1,134 @@
+{
+  "acceptedUTC": "2026-10-10T07:54:58.512592+00:00",
+  "scope": "Actual e915 old2/d232 fixed4 typed-storage UI controls. Root independently consumes all encoded/decoded retained bytes, raw CDP source/document bodies, native click deltas, real60s callbacks, whole authority and typed DB preservation, restoration and owned closure. No new runtime replay.",
+  "sourceCommit": "d2320d5e324d548fdba3b30f7d4e0a2d11235466",
+  "sourceTree": "7fbf1a616adbb0ab7ccc238930cc2067569283aa",
+  "readySHA256": "bc4130dfb1727a12c73d45fd74904b5e81e6b4cc6e3d9513da7cdcfa41a745bf",
+  "chromeRulesSHA256": "78b58b23912d6653fde12fbd57249a5a67182867f354edd76c7a4e58fd17fc50",
+  "expectedVersions": {
+    "save": 13,
+    "content": 6,
+    "protocol": 6
+  },
+  "retention": {
+    "manifestSHA256": "ed98b5eb091adb914489351f1ea26b55211ef5d21db8440adc4066aaf42e6134",
+    "count": 1412,
+    "logicalBytes": 563656892,
+    "encodedBytes": 374111464,
+    "allEncodedAndDecodedMatched": true
+  },
+  "sidecar": {
+    "manifestSHA256": "2b60ee0a7513c8f1c18c94481b28dd79de1742269516f3187ab4f0f5e5db569d",
+    "count": 53,
+    "logicalBytes": 126110,
+    "encodedBytes": 126110,
+    "allEncodedAndDecodedMatched": true
+  },
+  "httpBodiesMatched": 324,
+  "actualParsedCDPBodiesMatched": 576,
+  "actualLoadedDocumentBodiesMatched": 6,
+  "cases": [
+    {
+      "case": "old-highest-undefined-over-genuine-v12",
+      "checkCount": 10,
+      "allChecksPassed": true,
+      "parsedBodies": 96,
+      "documentBodyBoundToRawCDP": true,
+      "fullOriginalTypedDBRestored": true,
+      "authorityBodies": 2,
+      "authorityByteEquality": true,
+      "startupWorkerLoadRequests": 1,
+      "nativeClickSaveRequestDelta": 1
+    },
+    {
+      "case": "old-last-unversioned-undefined",
+      "checkCount": 9,
+      "allChecksPassed": true,
+      "parsedBodies": 96,
+      "documentBodyBoundToRawCDP": true,
+      "fullOriginalTypedDBRestored": true,
+      "authorityBodies": 2,
+      "authorityByteEquality": true,
+      "startupWorkerLoadRequests": 0,
+      "nativeClickSaveRequestDelta": 1
+    },
+    {
+      "case": "fixed-highest-undefined-over-genuine-v12",
+      "checkCount": 14,
+      "allChecksPassed": true,
+      "parsedBodies": 96,
+      "documentBodyBoundToRawCDP": true,
+      "fullOriginalTypedDBRestored": true,
+      "authorityBodies": 3,
+      "authorityByteEquality": true,
+      "startupWorkerLoadRequests": 1,
+      "nativeClickSaveRequestDelta": 0,
+      "realNativeAutosaveElapsedMs": 60000.29999999702,
+      "autosaveSaveRequestsAfterCallback": 0,
+      "fullTypedStoragePreserved": true,
+      "saveProtection": "handler guard and feedback; HTML disabled attribute remains false"
+    },
+    {
+      "case": "fixed-last-unversioned-undefined",
+      "checkCount": 14,
+      "allChecksPassed": true,
+      "parsedBodies": 96,
+      "documentBodyBoundToRawCDP": true,
+      "fullOriginalTypedDBRestored": true,
+      "authorityBodies": 3,
+      "authorityByteEquality": true,
+      "startupWorkerLoadRequests": 1,
+      "nativeClickSaveRequestDelta": 0,
+      "realNativeAutosaveElapsedMs": 60506.40000000596,
+      "autosaveSaveRequestsAfterCallback": 0,
+      "fullTypedStoragePreserved": true,
+      "saveProtection": "handler guard and feedback; HTML disabled attribute remains false"
+    },
+    {
+      "case": "fixed-absent-higher-genuine-v12",
+      "checkCount": 6,
+      "allChecksPassed": true,
+      "parsedBodies": 96,
+      "documentBodyBoundToRawCDP": true,
+      "fullOriginalTypedDBRestored": true,
+      "authorityBodies": 1,
+      "authorityByteEquality": true,
+      "startupWorkerLoadRequests": 1
+    },
+    {
+      "case": "fixed-valid-current-lower-ignored",
+      "checkCount": 6,
+      "allChecksPassed": true,
+      "parsedBodies": 96,
+      "documentBodyBoundToRawCDP": true,
+      "fullOriginalTypedDBRestored": true,
+      "authorityBodies": 1,
+      "authorityByteEquality": true,
+      "startupWorkerLoadRequests": 1
+    }
+  ],
+  "runtimePID": 1338329,
+  "runtimeExit": 0,
+  "runtimeSSHExit": 0,
+  "runtimeStderrBytes": 0,
+  "completeOwnedRuntimeTrees": 8,
+  "runtimeKnownPIDsAbsent": 31,
+  "finalKnownPIDsAbsent": 65,
+  "portsClosed": true,
+  "separatelyRetainedSupplementPostWaitSHA256": "68098bc548c73eb0b291e14e8591b3ae9eb2e785add7a92036946812e146861e",
+  "closureSHA256": "0b42b372f7b99991087513f997946ff72b314d7b50381f0d6453cdbcb8c827e9",
+  "rootReaderCorrections": [
+    "Worker path is simulation/browser-worker.js.",
+    "Authority exports use save RPC; actual manual click deltas and pre-export autosave segment distinguish them.",
+    "Closure fields are knownOwnedProcessState/allKnownOwnedAbsent.",
+    "Ready files is a hash dictionary; earlier Root inspection slicing error retained in tool output.",
+    "First consumer text had an indentation error before execution.",
+    "Final supplement post-wait file is separately retained outside its own manifest; actual path/hash bound after manifest discovery."
+  ],
+  "preservedFailure": "Original runtime-r1 child+SSH1 failed before UI semantics; false restoration flag retained. Separate neutral recovery and corrected runtime-r2 succeed without relabelling r1.",
+  "limits": [
+    "Final d232 public verification pending.",
+    "Whole cumulative R1/R2 reviews pending.",
+    "Human original style/numerical agreement and representative hardware GPU unqualified."
+  ]
+}

@@ -1,0 +1,664 @@
+{
+  "utc": "2026-10-10T09:28:38.191402+00:00",
+  "scope": "Exact task-owned duplicated old shipping stage only; raw observations/masters/oracles/defaultprofile/frozenpreview untouched",
+  "removedPath": "/Volumes/WD/code/workspaces/coaster-consumable-art/evidence/public-e915915-staging/web-dist",
+  "retainedEquivalent": "/Volumes/WD/code/workspaces/coaster-content-library-publication/coaster-tycoon-3d/previews/detailed-stalls-e915915",
+  "fileCount": 162,
+  "freedLogicalBytes": 79285502,
+  "all162FullBytesAndHashesEqual": true,
+  "lsofActualExit": 1,
+  "lsofStdoutBytes": 0,
+  "lsofStderrBytes": 0,
+  "oldPublicKnown18PIDClosureAccepted": true,
+  "oldPublicPortsClosed": true,
+  "replacementFiles": {
+    "content-browser.js": {
+      "sha256": "a72a11c2d9189755bbf3aca713764754fe7e567e2ec0c51e77bc7fe117ad5848",
+      "bytes": 48713
+    },
+    "game.js": {
+      "sha256": "3307fb7e9d6909f522a66dcbbedd014c36d59b4c7727093b909d31cdc2037147",
+      "bytes": 33622
+    },
+    "index.html": {
+      "sha256": "fd88b27beca574ed17a2fb04dfaa08194bb886c386b762667dc8da9a5151ad6a",
+      "bytes": 11495
+    },
+    "LICENSE": {
+      "sha256": "f68cef6a23271aa6fa5022cd7acebc98de572571df4a97077b0ecd7b385aa45d",
+      "bytes": 1067
+    },
+    "consumable-waste.js": {
+      "sha256": "6a61d96ab774507781b9bfce61198b9599230f0c176df05f8d8f28a8e9d02bac",
+      "bytes": 5991
+    },
+    "consumable-controls.js": {
+      "sha256": "4e77687b8a5578a9fd15e89db3ef22bf0156304b22542be8e833b062862a118e",
+      "bytes": 6373
+    },
+    "park-scene.js": {
+      "sha256": "a91fa8194249d03c5d2885e3822e82e0dffb01ed795ea5d1955ec6028127dc48",
+      "bytes": 19290
+    },
+    "flume-controls.js": {
+      "sha256": "86f9e7c264d023d5599eea7c5a8c3dc920733090f8fb5f4c6ac574fe05a42821",
+      "bytes": 3309
+    },
+    "THIRD_PARTY_NOTICES.md": {
+      "sha256": "5fb73c2ab227eb5d5d26eb5af6e850c3fd73eed2fc4d6425a7e650432cb03ce5",
+      "bytes": 6861
+    },
+    "content-browser.css": {
+      "sha256": "b0ca6136234806692e643b6117b5b3df9696161a86a8f3590c30dfcd5d1cd566",
+      "bytes": 22049
+    },
+    "style.css": {
+      "sha256": "8cc71e1901683b6a8c889ef80f22f1ec357198eb41221eeb90a07f259a60cee3",
+      "bytes": 28300
+    },
+    "favicon.svg": {
+      "sha256": "60879a890648c630ab1dc7cdc25975693b3c0610be77a4a11d2e7c7315d5c697",
+      "bytes": 213
+    },
+    "textures/flume/Wood096/Wood096_1K-PNG_Roughness.png": {
+      "sha256": "bcba2c9b971c17875e0d8b6e11b234ce86a1c4110bd72725c2586b8950738418",
+      "bytes": 609059
+    },
+    "textures/flume/Wood096/Wood096_1K-PNG_NormalGL.png": {
+      "sha256": "5b9f71b56cc74a397c9263619f7ef0cfc7d668762f4f2c960e4bd883dc2891c5",
+      "bytes": 5092366
+    },
+    "textures/flume/Wood096/Wood096_1K-PNG_Color.png": {
+      "sha256": "2635d3b950808e52d5de4ce4ee4b3aa35430ffd3117e00c1b2cfb155168e6b47",
+      "bytes": 1076245
+    },
+    "textures/flume/RoofingTiles013A/RoofingTiles013A_1K-PNG_Color.png": {
+      "sha256": "ae2037e4c4934b42b60c799b2755cb73c164a883410f89e22ac54ed5ecb4d1de",
+      "bytes": 813925
+    },
+    "textures/flume/RoofingTiles013A/RoofingTiles013A_1K-PNG_Roughness.png": {
+      "sha256": "575b1674cfd09dde9db152b917503c77fa4187693762bf2f8824521975bac812",
+      "bytes": 523350
+    },
+    "textures/flume/RoofingTiles013A/RoofingTiles013A_1K-PNG_NormalGL.png": {
+      "sha256": "2488e6f327db93fe29558a9326ee4dba94022f944e2daf070a7ed47825fa82ab",
+      "bytes": 4029497
+    },
+    "textures/flume/WoodFloor043/WoodFloor043_1K-PNG_NormalGL.png": {
+      "sha256": "ac8e1221726a512c4eb3cae98674bf0dda774382b2ba2577d36cbf8192986a6e",
+      "bytes": 2205607
+    },
+    "textures/flume/WoodFloor043/WoodFloor043_1K-PNG_Roughness.png": {
+      "sha256": "c15241e172c474ad147003f8e957cf88d305d9e8d82809de201f04f7b969ec26",
+      "bytes": 190238
+    },
+    "textures/flume/WoodFloor043/WoodFloor043_1K-PNG_Color.png": {
+      "sha256": "55a7c25c191c8eb501d87a8872438dcfba307b3a043fee00ad9e89f0c413d684",
+      "bytes": 659574
+    },
+    "textures/flume/Metal049A/Metal049A_1K-PNG_Roughness.png": {
+      "sha256": "a42d9eaba9bc232739c7cb86dee03805e66f50a065cecfbbfe906aaeb6b3ded2",
+      "bytes": 325089
+    },
+    "textures/flume/Metal049A/Metal049A_1K-PNG_Color.png": {
+      "sha256": "3c5be68c8a56534f120e88cff835a321ca51459c8f31482f984958c7fbfda8e6",
+      "bytes": 535253
+    },
+    "textures/flume/Metal049A/Metal049A_1K-PNG_NormalGL.png": {
+      "sha256": "5b80adcc8092618a127bb7dfa547e3a35d156efd027c9daa579ac26f9098a678",
+      "bytes": 1791977
+    },
+    "textures/flume/Concrete034/Concrete034_1K-PNG_Roughness.png": {
+      "sha256": "b2f8b937d4c9d1d305fc30b915b28712d166939bba1c3823ad39767dd22e1f07",
+      "bytes": 206202
+    },
+    "textures/flume/Concrete034/Concrete034_1K-PNG_NormalGL.png": {
+      "sha256": "7378313b5e38d138a2048d0a300194444ba7b205b062751a93a91bde8dfbccf9",
+      "bytes": 2715117
+    },
+    "textures/flume/Concrete034/Concrete034_1K-PNG_Color.png": {
+      "sha256": "dffbbd0fd7249e938a30b650675262034fe0face516b0d036e9c34cae5a99190",
+      "bytes": 288279
+    },
+    "textures/surfaces/paving-normal.png": {
+      "sha256": "0b3097df90811489d17d1ae9c7fa6437cf26c9c65370bd6785b607e15ad3fafb",
+      "bytes": 256304
+    },
+    "textures/surfaces/grass-color.png": {
+      "sha256": "fdfda01eb989b5eff677408c822f37097394711e569fe4b28f02787aa723af92",
+      "bytes": 509645
+    },
+    "textures/surfaces/paving-color.png": {
+      "sha256": "b34277b63dc34dc1c90639329843c75137532fc9c3066a4f1a6edcb3bf92802b",
+      "bytes": 249959
+    },
+    "textures/surfaces/grass-normal.png": {
+      "sha256": "9c72876ec82f95e6ca3b50d14199055bba17248a358520b9948da0a497ff22b0",
+      "bytes": 636185
+    },
+    "textures/surfaces/grass-roughness.png": {
+      "sha256": "4cd9ae5b58a46cd172816974664f19b1aaf540c0ef1cfed8719bf59b702ec4e3",
+      "bytes": 194627
+    },
+    "textures/surfaces/paving-roughness.png": {
+      "sha256": "7b0958ee8f21e7844a0f9d441bf4e1e0e0c288eec59a24da479235c255fdc654",
+      "bytes": 83498
+    },
+    "art/surface-palette.js": {
+      "sha256": "91adbb55a95dc3b0b2ad670084a7f93366c266a09df6ed36bf414cb23b538768",
+      "bytes": 2093
+    },
+    "art/runtime.js": {
+      "sha256": "c51087ac087db82fb765b119dc2463f48e1f45c19f583723b64fc7f2f7771b35",
+      "bytes": 5404
+    },
+    "art/flume-boats.js": {
+      "sha256": "cc5840239a11dec4468376741c99eadaaddf7168d31c1e2fb9ecc36df1b28781",
+      "bytes": 4369
+    },
+    "art/detailed-facility-assets.js": {
+      "sha256": "92bed64a2c2383070696da3307f2ff8a82cd8295d61f738c8392e55fb2be4721",
+      "bytes": 16699
+    },
+    "art/flume-approach.js": {
+      "sha256": "e310a6f68f399ae180e70b2988990e4280dc018ca0267bf6deed9de03f50b89e",
+      "bytes": 1344
+    },
+    "art/flume-terrain.js": {
+      "sha256": "c541601fa7f37777d1a259c9e3c8103d7d3bba87ad24b4376b1dba7b6f7f7808",
+      "bytes": 6384
+    },
+    "art/flume-portal.js": {
+      "sha256": "9f71639544385fa5108fa8106e93fa3b5f70c55b8735a6d9cb66ce2d7c6c4913",
+      "bytes": 9988
+    },
+    "art/flume-channel.js": {
+      "sha256": "931974b2615e49f9a1ffe59b5514b5811e8c68ac10bf48eb6ecc4ba9cd4649e8",
+      "bytes": 23672
+    },
+    "art/wooden-assets.js": {
+      "sha256": "3475acd3d3975ad8951135e0e3382ab7f530b5fa87824ec0013575086522a237",
+      "bytes": 5815
+    },
+    "art/flume-support-box.js": {
+      "sha256": "554a01c412ec368a02841eb525fba61f1541453467e25877d7d42081d33ab26d",
+      "bytes": 10826
+    },
+    "art/tree-assets.js": {
+      "sha256": "daa01cc5d707a402a6523adb3e815a6ce7d1d88e4c9b1f0c72702467f8c6e054",
+      "bytes": 5027
+    },
+    "art/carousel-portal.js": {
+      "sha256": "be22f0a550df9625640910022bbfae67ee19aac0913330bcba9fc482152b4eac",
+      "bytes": 7877
+    },
+    "art/buildings.js": {
+      "sha256": "fd59e83c14589dc1db7cf43ef79a0ad02ebede0569f092465349387a0161e720",
+      "bytes": 33871
+    },
+    "art/wooden-coaster.js": {
+      "sha256": "9ebceda15d406332d37ab8dae756a1725b7a36cc7278ab7ac8b6d7438c920898",
+      "bytes": 38791
+    },
+    "art/coaster.js": {
+      "sha256": "acea0401e86ca920fefdca2d25ac43c6ca88f6ad78d980b995967c9a19d42951",
+      "bytes": 65435
+    },
+    "art/carousel.js": {
+      "sha256": "02173c16094d2caf950e1c7908bf51268f36ef955d91af09b7457705272b15e8",
+      "bytes": 11175
+    },
+    "art/flume-assets.js": {
+      "sha256": "f45315ab423b590a61d3715a33f928d09db2b810046e48c3d91b0157892186bb",
+      "bytes": 6336
+    },
+    "art/surface-assets.js": {
+      "sha256": "11495b97bf3daaffcf49f7fd991da882fdf2321347739fda88d6fcf35ced2927",
+      "bytes": 2332
+    },
+    "art/environment.js": {
+      "sha256": "b94f58adf2419866af798467d6af0af2a5355dbd0cc797cb866234745d6f8933",
+      "bytes": 61081
+    },
+    "art/carousel-assets.js": {
+      "sha256": "5b437923981d7728133e4fdf3173808dced188f66cc7b18ab653470738c92453",
+      "bytes": 4536
+    },
+    "simulation/wooden-placement.d.ts": {
+      "sha256": "d409be26409dee0a62273c78f9b0c0f7f89e6ce565cc9bcce94e26843d6e0eb5",
+      "bytes": 1098
+    },
+    "simulation/protocol.js": {
+      "sha256": "a4f880302025d29608227a39508403ec1b5c09554bfe0f9fd7db054ecc9d560d",
+      "bytes": 42
+    },
+    "simulation/geometry.d.ts": {
+      "sha256": "7f9748530e1641db5515ee36491598adfb17c22049dfb22dcfacb5ab818c3107",
+      "bytes": 564
+    },
+    "simulation/clock.js": {
+      "sha256": "32820b03a12b9bde816654f4e58fd37a24c32b9c8dc035b52d157636e58d9fbd",
+      "bytes": 834
+    },
+    "simulation/motion.d.ts": {
+      "sha256": "8be5beafd8e4c0dfeddaea5373350c8061ac82fa16f91b953c3d4335f644dc71",
+      "bytes": 1863
+    },
+    "simulation/housekeeping.d.ts": {
+      "sha256": "201ace87034dfbb5b691c1df0dfb793c63e831fbcd18c51e65a9292a6c32512a",
+      "bytes": 2015
+    },
+    "simulation/clock.d.ts": {
+      "sha256": "3743b968c76cf0406ef9e81b77056b24bb39fec52a1d1ee203ec620667a36567",
+      "bytes": 298
+    },
+    "simulation/browser-worker.js": {
+      "sha256": "01e80804d890b57a4d94a0c9b1d9210ef1c461d105717ed749e43b3000eb9e62",
+      "bytes": 3294
+    },
+    "simulation/host.js": {
+      "sha256": "d2dfa7c018b25214231009e850e56507019cea9a7484459d990247bed9f775b2",
+      "bytes": 2139
+    },
+    "simulation/operation.js": {
+      "sha256": "90a079ea7b4ed724d214a334b8cd006bcb07a40774b7f431051c554e9c620e69",
+      "bytes": 6695
+    },
+    "simulation/host.d.ts": {
+      "sha256": "8efd00e456ab9b0c59b5c2377f2aed3f0bba232e8684ddd762852cc2710ac8f9",
+      "bytes": 14669
+    },
+    "simulation/scenery.js": {
+      "sha256": "af181426f98f7c6daab583055906264db929940ecb25a3fe50c1ca219d9ee520",
+      "bytes": 408
+    },
+    "simulation/types.js": {
+      "sha256": "1a6231381895d5abcccbc927e582be7270c22e19c76be7c5c3e560d83ea97d91",
+      "bytes": 147
+    },
+    "simulation/flume-native.js": {
+      "sha256": "735c2d793a1daf76844e1eeac6ea3342e37f84b1f49e5de6edc8e914073f02ae",
+      "bytes": 9442
+    },
+    "simulation/services.d.ts": {
+      "sha256": "369068a8f3bec3ed22028db37c05d247c447b2dff43bf503ebfe418747618197",
+      "bytes": 2837
+    },
+    "simulation/wooden-motion.js": {
+      "sha256": "aaed1ed31a0764f8ecc8b07db1d2c6bc6e2a0230b2002daff30729a20c5da12d",
+      "bytes": 5888
+    },
+    "simulation/types.d.ts": {
+      "sha256": "ea8228de6772e673c7b255df3c6c083aab0f824dd7371a23477beb725822035f",
+      "bytes": 9322
+    },
+    "simulation/patrol.d.ts": {
+      "sha256": "ccd72adedd54103092d2887e31753f8d745417372834c6c4054f3e50979e3273",
+      "bytes": 193
+    },
+    "simulation/services.js": {
+      "sha256": "171566ab11852ed81f086e098bb2d85f46d790267ee3cad56c1e47f55c0b0aee",
+      "bytes": 12107
+    },
+    "simulation/view.d.ts": {
+      "sha256": "970f520edd5704c3ce72ddb3ac9973657d95d7f768e60e60b75667394992843b",
+      "bytes": 8577
+    },
+    "simulation/scenery.d.ts": {
+      "sha256": "b4c948c6004a2de0dbc5141a1c3fe28038ab036458e5b7824d8a30e0e6286bfb",
+      "bytes": 299
+    },
+    "simulation/flume-profile.js": {
+      "sha256": "e89e86ea002b94f7339ef7c5e4bcc73c33998abf0252c17ed2b430b2394f7f58",
+      "bytes": 2917
+    },
+    "simulation/engine.d.ts": {
+      "sha256": "5874c85f115ebecc5d47eae48d55afb1f9ca8f35fe7cbcdcbc079882ca35f7df",
+      "bytes": 14335
+    },
+    "simulation/flume-portal.js": {
+      "sha256": "877ba9c562c874ee742a77ec67aa64cb68012885ce96f288e6d4f9b128e621c3",
+      "bytes": 5486
+    },
+    "simulation/index.js": {
+      "sha256": "346366ed60f6c42fcb47aa83210f541b512704500f290f203513ca17b0a809c4",
+      "bytes": 132
+    },
+    "simulation/wooden-motion.d.ts": {
+      "sha256": "a2a40e7671a441b7201c5287e35a069ef5b5c2095e6892b348ab3671f58df74c",
+      "bytes": 644
+    },
+    "simulation/flume-native.d.ts": {
+      "sha256": "94e41ecc170dc238b9f2c9b66a8e13bd6074eee0a0621f806f726e359ec338c7",
+      "bytes": 1752
+    },
+    "simulation/flume-portal.d.ts": {
+      "sha256": "9fcb8edd3f788501c2eb081ea3f9b5e543c983566f95a4bf489bca3e37c83c46",
+      "bytes": 847
+    },
+    "simulation/wooden-placement.js": {
+      "sha256": "66b9590399dfd6235cbf6c04401744df1611d7fa1b55a72c1daf6950393a586c",
+      "bytes": 5951
+    },
+    "simulation/carousel.d.ts": {
+      "sha256": "2af4efcab47bfd4e658d994a2abb32799e7487cb02756d01cd9accec9e66d626",
+      "bytes": 1316
+    },
+    "simulation/flume-profile.d.ts": {
+      "sha256": "a5ceb9667c70404c3cb82fad0c47ab0ee0afbed28928e1828ced4152c21a0716",
+      "bytes": 361
+    },
+    "simulation/validation.js": {
+      "sha256": "10a2f21ddd134f16105bf4f0153d57a6e660d7938157e30c1958487498b66056",
+      "bytes": 1191
+    },
+    "simulation/routes.js": {
+      "sha256": "ec098e36c6a24155b4d10da3118a7240e08850a4b38c52eb7d4891be556c3453",
+      "bytes": 3156
+    },
+    "simulation/validation.d.ts": {
+      "sha256": "b5a15290a701b60b3d0ccfa2c8b0968fefe4b639623effee2e2f8d3cc121a43d",
+      "bytes": 518
+    },
+    "simulation/protocol.d.ts": {
+      "sha256": "a2943aa596436524fdf95ec0099f925d4ba6b5d2ba008b9f2ec4f6de06a33579",
+      "bytes": 49
+    },
+    "simulation/operation.d.ts": {
+      "sha256": "4be5cf50780fee55e4602037219873aff1236a984d140de8a730f4ab92ae03dc",
+      "bytes": 715
+    },
+    "simulation/engine.js": {
+      "sha256": "f15a5646359ecab5d2b870712b0ad2f5b0adc843d9d8815cf1cac64681e0ba75",
+      "bytes": 115480
+    },
+    "simulation/motion.js": {
+      "sha256": "4c3d5c27617302f607d0235a10eeda4cd4fafc9c81cb7859327fba0b407f34e6",
+      "bytes": 8356
+    },
+    "simulation/view.js": {
+      "sha256": "1742bc023dc22f8624ecefac4b1b5076ab1aa89a0a35090536bdb00af1f8c75d",
+      "bytes": 9747
+    },
+    "simulation/housekeeping.js": {
+      "sha256": "588c5c06187c0bcfd9d5b52a69ea33fece6a22aa89246df1189e4a247fb5cc7b",
+      "bytes": 7226
+    },
+    "simulation/carousel.js": {
+      "sha256": "c707db6b92deb1742b2c84f9cdb7c65a50fbdd9908387e64b29e53e0f3b29f6a",
+      "bytes": 4791
+    },
+    "simulation/people.js": {
+      "sha256": "96ef0885c3c3719ff5827e9ea63f370508d5e21f2e8b2d31799099a1855f8a5e",
+      "bytes": 22632
+    },
+    "simulation/people.d.ts": {
+      "sha256": "c36e8088da592cdecef0b474d5f95480551d5839cadbd9a09098f625d40eb600",
+      "bytes": 4678
+    },
+    "simulation/index.d.ts": {
+      "sha256": "ff7c5c26ad7c54ab4e64bdc958da4afc382f8731f870954fef49d518ee5451e5",
+      "bytes": 312
+    },
+    "simulation/patrol.js": {
+      "sha256": "4a59eec5e274c541fecf413cb62cd27cabfe5fb13aaa6104d5543b8498b16e16",
+      "bytes": 562
+    },
+    "simulation/browser-worker.d.ts": {
+      "sha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
+      "bytes": 11
+    },
+    "simulation/geometry.js": {
+      "sha256": "495a3b626f79bd316f012a564a70dffa9ae627b60fe96fb5fde59be8ffaac775",
+      "bytes": 15170
+    },
+    "simulation/boat.d.ts": {
+      "sha256": "b5dab920ad6ec0de1e4d23b03021ade0b001b06a07afb62bb5b25dd345c91196",
+      "bytes": 1915
+    },
+    "simulation/routes.d.ts": {
+      "sha256": "59198c54257a442d97c716a79d773a68d8c3e0c3475f0148c954d0557c4abaa8",
+      "bytes": 707
+    },
+    "simulation/boat.js": {
+      "sha256": "d4ca78dc773f712086b995b5bf870d48dd9a3feb35fb9765f8296b499fb80199",
+      "bytes": 5489
+    },
+    "content/rct2-reference.js": {
+      "sha256": "23ad185689097bbc9b21d87de63f4d62a4d2365fa019f983cf8b8ae85f7836ee",
+      "bytes": 113071
+    },
+    "content/registry.js": {
+      "sha256": "f54ac235840492819e4afa279222034b0ed4cd184640d69cfd49dfe33e56aa9d",
+      "bytes": 10972
+    },
+    "content/registry.d.ts": {
+      "sha256": "24b4e3d0449bdfed0ebabfc68a4baf31538acb4e0cb6a27b686dc91e1e93d1e9",
+      "bytes": 3697
+    },
+    "content/wooden-footprints.d.ts": {
+      "sha256": "ba3813d9ef80c8ade8a7156e5d23151699fe3bcf44f520559b64e9481528af43",
+      "bytes": 125
+    },
+    "content/steel-coaster.d.ts": {
+      "sha256": "fc52bfae7e5a3859038b4287c6587f198a5dea994f009024cac097ad87f66bbc",
+      "bytes": 262
+    },
+    "content/mixed-park.js": {
+      "sha256": "5c1ccc0fd7a8b0778ba81de453580ee25aebac14670cebbb0db24b87311b4875",
+      "bytes": 4818
+    },
+    "content/ride-profiles.d.ts": {
+      "sha256": "412c257525090d27e4417e04d52ba18f3d6ed8d444b861dbf29684b38a305277",
+      "bytes": 763
+    },
+    "content/wooden-footprints.js": {
+      "sha256": "ef471c76a23274bf86a3f17acc00bcd69ed9f8eca1a3fb17b74b8c0c9c86f9d2",
+      "bytes": 10283
+    },
+    "content/mixed-park.d.ts": {
+      "sha256": "4a8b4a7bcea5a7715b7300fb703daae14517e87a0cdf18e1ac18b96f4cd1a574",
+      "bytes": 286
+    },
+    "content/log-flume.d.ts": {
+      "sha256": "31f885f64d8dd802f3ae3f8fd700190607802bf6e712d737e3f8c288d70a2f25",
+      "bytes": 1628
+    },
+    "content/wooden-coaster.d.ts": {
+      "sha256": "1d18eb70495ec22dff370d91b6067aeba342afa4f0973ca74da91ffb7d8c798e",
+      "bytes": 341
+    },
+    "content/facility-profiles.d.ts": {
+      "sha256": "8284008a4aced280ba348b72e2c4d7c08f5bb577a8428ad3d13bcc3e01ad64b4",
+      "bytes": 563
+    },
+    "content/facility-profiles.js": {
+      "sha256": "ad558ff5f276662019ea662a22c0637d6eb1ecc061364cda8c9dcd2bb28aa2a4",
+      "bytes": 1971
+    },
+    "content/rct2-reference.d.ts": {
+      "sha256": "e327772f17f7fff8360c33ab5c95ce74c818d5ff121763ed8730d224cc78eb34",
+      "bytes": 384
+    },
+    "content/carousel.d.ts": {
+      "sha256": "a0110738e7568d46eca29d85f8b77d74d37546752f91c5dcac1aee5d372f8c3c",
+      "bytes": 261
+    },
+    "content/wooden-coaster.js": {
+      "sha256": "c3a0c2c2f43aeb88a1ad81f64e45dd185f894b84d2e9400b4da944e12f6a3c70",
+      "bytes": 1734
+    },
+    "content/consumables.d.ts": {
+      "sha256": "feb4a5ecea919e30046668b929adf12a0523d01aa045270354b6041d6d910101",
+      "bytes": 2143
+    },
+    "content/consumables.js": {
+      "sha256": "f5c7f277329113b8f79e3575189d76a642c00810aed2eff6206e511305f99b9c",
+      "bytes": 5626
+    },
+    "content/steel-coaster.js": {
+      "sha256": "d248ab39ba5695c5402872b634d514cc81517673c44d77e9e0da3deaaf683335",
+      "bytes": 9691
+    },
+    "content/carousel.js": {
+      "sha256": "29f71f912001cf341916541fbf678bf8fb1985d6c1979cf1e541e8e79318ceb9",
+      "bytes": 1424
+    },
+    "content/log-flume.js": {
+      "sha256": "6f71b4fc57dd403647c725f0e018a0439ce226108dc5459d837cfc9d0e469aa1",
+      "bytes": 4252
+    },
+    "content/ride-profiles.js": {
+      "sha256": "4b2a025833ac73762ddc16eb29a26cfece126fc9a4a6839d039f5bf4ea65974e",
+      "bytes": 2364
+    },
+    "models/flume/source-manifest.json": {
+      "sha256": "bf289db68061cf41058bb442a77fe4c94197ae38384fb54e130e3fdf59a13ddd",
+      "bytes": 4502
+    },
+    "models/flume/rider.glb": {
+      "sha256": "e0bb0c5ecb4821bbf40b2524817c77763933c941b068ea2159aa66273dc05286",
+      "bytes": 5763204
+    },
+    "models/flume/material-provenance.json": {
+      "sha256": "d4386d2bd0a062287caf11cbf63dc78ebe334cbb9b8f0a2bdb092ca9601137a5",
+      "bytes": 8134
+    },
+    "models/flume/boat.glb": {
+      "sha256": "0336a6e7dc4aaa54136193d47187d67d2710ba53c4ccca3f93cf81e9dc693549",
+      "bytes": 5411656
+    },
+    "models/flume/README.md": {
+      "sha256": "5ff416addf23b2b2ede5a74acb86d4197698a3ee042917484f24acd9737cfe3f",
+      "bytes": 1669
+    },
+    "models/trees/ASSET-NOTICES.txt": {
+      "sha256": "db561c35b988de25d8e7bd545b6bdab4a7da81b5b220d11f4c11c7e6f7b40999",
+      "bytes": 392
+    },
+    "models/trees/organic-tree-lod1.gltf": {
+      "sha256": "0d74981a915d491cf2ad8de496f7340cb7f09c7aa8e2c76a8095d39d3000ea85",
+      "bytes": 6543
+    },
+    "models/trees/organic-tree-lod0.gltf": {
+      "sha256": "852ac0bfce78bd271c8484a724f5c95fc0339786c9553d4d32aae159f43be3fa",
+      "bytes": 6555
+    },
+    "models/trees/organic-tree-lod2.bin": {
+      "sha256": "ccc5f2c623bd5e86c62b52375bd9b9489309bdfcc333bb107200b7ab7c02dd86",
+      "bytes": 60740
+    },
+    "models/trees/organic-tree-lod1.bin": {
+      "sha256": "47fbd4f8e6fea1c5e80998c15dbb058e468e17e6316e6940a83c8c394166ae0e",
+      "bytes": 146264
+    },
+    "models/trees/organic-tree-lod2.gltf": {
+      "sha256": "9f6b829b9a0446f89f413ceb84fa3be6bbec981f91fd6a288ad4264f7edf5a2d",
+      "bytes": 6519
+    },
+    "models/trees/organic-tree-lod0.bin": {
+      "sha256": "f1480d960bc1b380527d1514b4056348db2e5cff9cd8a0f3faaa4e1f1a1a6534",
+      "bytes": 443040
+    },
+    "models/trees/export-manifest.json": {
+      "sha256": "b2a56814faea97e0157c96c7ac5676146aaed0e93096e0deab2ed4b578e26496",
+      "bytes": 18321
+    },
+    "models/trees/textures/Bark014_1K-PNG_Color.png": {
+      "sha256": "5091ca295325cb289cc40fdd13d182b00a45c767ecc949edd76db4c183de900e",
+      "bytes": 555611
+    },
+    "models/trees/textures/LeafSet026_1K-PNG_Color-LeafSet026_1K-PNG_Opacity.png": {
+      "sha256": "ea06aba219626ed20d94ac895eee043ae28dc5dabe29d2ee8ecfcc7534a60752",
+      "bytes": 601809
+    },
+    "models/trees/textures/LeafSet026_1K-PNG_NormalGL.png": {
+      "sha256": "172fdfadddb68ef4a0a95c37d6e484e5c1511074f9c8b160babc30e93c115e30",
+      "bytes": 1773840
+    },
+    "models/trees/textures/Bark014_1K-PNG_Roughness.png": {
+      "sha256": "14c8111cb5ef1f5b60c6bd9f30041b468e64d451ac70c04a35982630af104cdd",
+      "bytes": 312830
+    },
+    "models/trees/textures/Bark014_1K-PNG_NormalGL.png": {
+      "sha256": "fad0e06319bf5a7f642a324941d9d71448d61eabe70495babb3e27b3d85a2112",
+      "bytes": 1411595
+    },
+    "models/wooden/car.glb": {
+      "sha256": "ed293d53712c1bc02ce01a5c027d69dd7b31e60ae41c8a811d9a9464274f9adc",
+      "bytes": 3636520
+    },
+    "models/wooden/station.glb": {
+      "sha256": "32214cdb6f388bcda1bdbbd59b8ac5a59ba454d947d2fde45380898572809cbd",
+      "bytes": 9199772
+    },
+    "models/wooden/link.glb": {
+      "sha256": "bd65312ab91197d08d66fd6258e31f31e46b6d529832a0d741fcb729e0fec671",
+      "bytes": 988980
+    },
+    "models/carousel/source-manifest.json": {
+      "sha256": "555652533c5075a281537cc938eafd520c759c102dc680a949d6e0d6f6e8d5c2",
+      "bytes": 41266
+    },
+    "models/carousel/material-provenance.json": {
+      "sha256": "964c76789c39952ab9a40b3be44f95549f83cb31a5274d45d7954490cc2c84b1",
+      "bytes": 3628
+    },
+    "models/carousel/README.md": {
+      "sha256": "4d1644cc1ab198454719d649db6540708a1c70afa4dec44ec54cc337fe27c2cf",
+      "bytes": 797
+    },
+    "models/carousel/body.glb": {
+      "sha256": "405e14e1d2f6a54bd7f05676697f1d96193b7f0378c2426601d0de1484a9464f",
+      "bytes": 5369400
+    },
+    "models/detailed-stalls/source-manifest.json": {
+      "sha256": "48717bbc2342f8bec1d651f95718f891abc60d4987b20f15bcd4746a0574cc0b",
+      "bytes": 40501
+    },
+    "models/detailed-stalls/material-provenance.json": {
+      "sha256": "cee6edff26f0a9cccc1b9f62b04d41902aa05918d0d9b5800f97b1d29d5ce1ec",
+      "bytes": 10912
+    },
+    "models/detailed-stalls/burger.glb": {
+      "sha256": "9b646bdd004390fd8c240091d0e85df6bec3def0ba33dfa2826aa4160527ebfe",
+      "bytes": 8583376
+    },
+    "models/detailed-stalls/README.md": {
+      "sha256": "8753750819bc37a2e5c8ab44de84c6095c509cae9d008043492caf0b81e37aa6",
+      "bytes": 2742
+    },
+    "models/detailed-stalls/soft-drink.glb": {
+      "sha256": "c166d2e28c2be1ab49dec4d26078b26f66a14520ea7a9c011a559d6e6d5a825e",
+      "bytes": 8546676
+    },
+    "vendor/three.module.js": {
+      "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea",
+      "bytes": 662772
+    },
+    "vendor/THREE-LICENSE.txt": {
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+      "bytes": 1081
+    },
+    "vendor/three.core.js": {
+      "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
+      "bytes": 1458113
+    },
+    "vendor/OrbitControls.js": {
+      "sha256": "3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b",
+      "bytes": 40755
+    },
+    "vendor/addons/utils/SkeletonUtils.js": {
+      "sha256": "b1632a703206c3d830de9fcbe515696770d04b71a15ee6b50afa6d2c3298c86f",
+      "bytes": 11535
+    },
+    "vendor/addons/utils/BufferGeometryUtils.js": {
+      "sha256": "9fb63427ce6641fa14fd0baff9cc4d1b5f9c3d85fd084bf2e90e803c44ec1797",
+      "bytes": 37712
+    },
+    "vendor/addons/loaders/GLTFLoader.js": {
+      "sha256": "131c0f78c01d19368ae495caa65b3adaa10487810a36a05bb5901b769a35ac16",
+      "bytes": 117570
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "recordedUTC": "2026-10-10 07:01 UTC",
+  "rawDirectory": "/Volumes/WD/code/workspaces/coaster-detailed-stalls-browser/blob-url-r2/retained-r1",
+  "manifestSHA256": "267e24db51ce0f5ffd03cdf838a84459653eb8e39a3dfed691e9d44e54297317",
+  "checksSHA256": "5b063072659f55c440d5499d33622b780081d909a33965d6838184b1515bb7b1",
+  "all244PayloadsEncodedAndDecodedExact": true,
+  "logicalBytes": 409905035,
+  "retainedBytes": 304385308,
+  "r6BodyReuse": "Same actual loader9ca3/vendor/two model bodies verified against finald232 readybc4130df; only changed UIgameb82b is outside factory-only native scope.",
+  "successAndSingleRejectCases": [
+    {
+      "index": 0,
+      "rawObservationSHA256": "a165785011369086cecac170721623f8dfcc43ee5e9bd8046835f5f3cf50f21c",
+      "completeObserver": true,
+      "actualNativeResourceCounts": {
+        "geometries": 67,
+        "materials": 72,
+        "textures": 30,
+        "bitmaps": 30
+      },
+      "allAllocatedResourcesReleasedOnce": true,
+      "all30OwnedURLsRevokedOnce": true,
+      "all31BlobBytesVerified": true,
+      "actual9HTTPAnd6ParsedBodiesMatchR6": true,
+      "retainedBodiesMatchActualCDPResponseBytes": true,
+      "foreignUntouched": true,
+      "injectedRejectCount": 0
+    },
+    {
+      "index": 1,
+      "rawObservationSHA256": "25b27033e4e1d073523b6407fad374ebaefb80333072524b1608e402b76e59bc",
+      "completeObserver": true,
+      "actualNativeResourceCounts": {
+        "geometries": 36,
+        "materials": 46,
+        "textures": 29,
+        "bitmaps": 29
+      },
+      "allAllocatedResourcesReleasedOnce": true,
+      "all30OwnedURLsRevokedOnce": true,
+      "all31BlobBytesVerified": true,
+      "actual9HTTPAnd6ParsedBodiesMatchR6": true,
+      "retainedBodiesMatchActualCDPResponseBytes": true,
+      "foreignUntouched": true,
+      "injectedRejectCount": 1
+    }
+  ],
+  "thirdOnlyFinalTailRootReceipt": "root-fixed-url-prebound-tail-acceptance.json",
+  "finalNativeAuditSHA256": "3a0fd00c944f8943bf6798c159379992f3050f4a7797314f4d4b63ec7c4a3d3b",
+  "all94PriorKnownOwnedPidsAbsent": true,
+  "portsClosed": true,
+  "actualChildAndSSHExits": {
+    "attempts/factory-runtime-r1/actual-child-exit.txt": "1",
+    "attempts/factory-runtime-r2-tail/actual-child-exit.txt": "1",
+    "attempts/factory-runtime-r3-prebound/actual-child-exit.txt": "0",
+    "transport/factory-runtime-r1/actual-ssh-outer-exit.txt": "1",
+    "transport/factory-runtime-r2-tail/actual-ssh-outer-exit.txt": "1",
+    "transport/factory-runtime-r3-prebound/actual-ssh-outer-exit.txt": "0",
+    "transport/fixed-audit-r1/actual-ssh-outer-exit.txt": "0",
+    "transport/held-diagnosis-r1/actual-ssh-outer-exit.txt": "1",
+    "transport/prebound-audit-r1/actual-ssh-outer-exit.txt": "0",
+    "transport/third-metadata-r1/actual-ssh-outer-exit.txt": "0"
+  },
+  "originalTwoFailedRunnersUnmodified": true,
+  "scope": "All three fixed native outcomes and complete main244 lossless bytes accepted. Final administrative transport/closure sidecar still pending; actual r6 storage and affected public/whole reviews remain open."
+}
