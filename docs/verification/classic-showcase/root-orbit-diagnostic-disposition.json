@@ -1,0 +1,55 @@
+{
+  "utc": "2026-10-10T12:00:08.431284+00:00",
+  "scope": "Root consumes exact diagnostic subset and independently recomputes all 65 RAF samples and 64 deltas. Narrow observer design is provisionally accepted; actual repaired driver and final local tail remain unverified.",
+  "sourceCommit": "93b5e2397c9dfd61f2ceb6df1f41d17361453558",
+  "readySHA256": "0423eebe4dfe4c93a06340fc8cccbc90d547fcd59cc8ae3e7d94ed5c89e6cc89",
+  "evidenceRoot": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/early-orbit-diagnostic-r1",
+  "payloads": {
+    "actual-native-orbit-metrics.json": "1bdd91dc12424df925a9dbab6dff19b4b8154a0f8d1d6d4c7b5e28c219ba3c1d",
+    "actual-native-orbit-observations.json": "c6d12bcc99de39727034cc6350a7710763c5bc34c66c673bf1e292e82dd6c5c3",
+    "result.json": "fcc170b3326a0c6615745b10228772be4d6a3531ab847ee844baec49b91f8b57",
+    "summary.json": "ab0e18e30ccf3b79b33434b79f76d048745d8c826276f853b67871cdcb07a269",
+    "post-wait-process-state.json": "5c45e931b18fbf32e954d4cd0b4c3815a8d9a444fdaf4a180e86ce624d354169"
+  },
+  "rootRecomputed": {
+    "afterInputSampleCount": 212,
+    "afterNativeSeconds": 48.02179999999702,
+    "afterNativeRAFCount": 65,
+    "exactPosePairCount": 0,
+    "all64DeltasEqualActualMetrics": true,
+    "lastPositionDelta": [
+      -0.0018519464279762587,
+      0.000527450977003241,
+      0.00036512226273544
+    ],
+    "lastPositionDeltaNormRatio": 0.8999964961925075,
+    "allAfterInputOverviewFalse": true
+  },
+  "actualChildExit": 0,
+  "runnerPostWaitAbsent": true,
+  "fullOriginalTypedDB": {
+    "bytes": 3,
+    "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "completeBytesRestored": true
+  },
+  "diagnosis": "About 1.35 native RAF/s and nonzero position deltas decaying by about 0.9 per frame make exact repeated-pose settlement an invalid 60-second observer in this environment. No product camera failure is established.",
+  "acceptedObserverDesign": {
+    "sourceSceneSHA256": "368ff05e5bb0c980c7cef8e8cca55a0cba620132aeb8a8d78149caa457e7a517",
+    "independentNarrowReview": "/root/classic_cumulative_design_r1_sol_max",
+    "requirements": [
+      "Passively wrap actual instance resize; preserve this, original single invocation, return and exception.",
+      "Witness actual 1024 target callback and real projection/renderer-size response.",
+      "Each target callback keeps exact physical position/target/zoom and Overview false before and after.",
+      "After callback observe at least two native RAFs and an ordinary newly delivered packet; Overview and overviewPending remain false.",
+      "Native orbit, pan and wheel respectively change position, target and zoom; complete authority and Rules remain exact.",
+      "No camera/controls/damping mutation, Rules/save tolerance, new advances or replay of passed matrices."
+    ]
+  },
+  "rootParsingFailure": "First file-only recomputation incorrectly selected lowercase raf; raw field is uppercase RAF. Assertion failed before writing any receipt. Corrected parser reproduces all actual deltas exactly.",
+  "fullRawRetentionRootConsumptionPending": false,
+  "fullFinite77Acceptance": false,
+  "wholeCumulativeReview": false,
+  "next": "Read repaired driver diff/preflight and lossless R2/diagnostic retention; run only affected controls and remaining player/storage tail.",
+  "completePartialRetentionReceipt": "root-r2-diagnostic-retention-acceptance.json",
+  "retentionConsumptionUTC": "2026-10-10T12:07:34.880154+00:00"
+}

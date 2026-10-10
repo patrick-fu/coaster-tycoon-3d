@@ -52,10 +52,6 @@
     "transport/r1-sidecar-preparation/scp-actual-exit.txt": 0
   },
   "knownPriorPIDsAbsent": 19,
-  "portsClosed": {
-    "8777": false,
-    "9237": false
-  },
   "retainedLimits": [
     "Original runtime-r1 is partial/not passed; remaining user paths and new camera/CSS are gated.",
     "13 pretermination tree children plus2 additional late-discovered/reaped known children; the latter lack individual pretermination status/PPid bodies.",
@@ -67,5 +63,10 @@
   "actualLoadedDocumentBodyAndGLBReplyGate": "Unexecuted in r1; required in bounded r2 tail",
   "rawRoot": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/retained-r1",
   "sidecarRoot": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/supplement-r1",
-  "terminalAuditSHA256": "299f0319356680b4b68ca96dc7099994bfd82b79ba7e3273a47c6d5e7d4a1931"
+  "terminalAuditSHA256": "299f0319356680b4b68ca96dc7099994bfd82b79ba7e3273a47c6d5e7d4a1931",
+  "portsOpen": {
+    "8777": false,
+    "9237": false
+  },
+  "allPortsClosed": true
 }

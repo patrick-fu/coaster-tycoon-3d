@@ -1,134 +1,162 @@
 # Project progress and recovery
 
-Last updated: 2026-10-10 10:54 UTC.
-Root owns this live context and its [dated journal](docs/progress/2026-10-10.md).
-Earlier details remain in the [pre-public checkpoint](docs/progress/2026-10-10-progress-before-final-public.md).
-`CONTEXT.md` is the domain glossary, not this execution record.
+Last updated: 2026-10-10 13:42 UTC.
+Root owns this live execution context and its [dated journal](docs/progress/2026-10-10.md).
+[Earlier detailed state](docs/progress/2026-10-10-progress-before-classic-public.md) retains
+all prior decisions, failed attempts and evidence limits. `CONTEXT.md` is the domain glossary.
 
 ## Target and boundaries
 
 Deliver an independently authored MIT browser park-management game with Classic controls,
-polished detailed 3D art, original RCT2 content breadth and substantive management.
-Finite slices qualify their observed mechanics and assets; the full catalogue, original
-numerical/art agreement, human play/style acceptance and representative integrated-GPU
-qualification remain open. The unlimited Goal is ACTIVE. No new Patrick decision is needed
-for the current repairs or next-showcase work.
+polished 3D art, RCT2 content breadth and substantive management. Finite slices qualify only
+their observed mechanics and assets. The full catalogue, original numerical/art agreement,
+human play/style and representative integrated-GPU/scale qualification remain OPEN.
+The unlimited Goal is ACTIVE. The current integration and publication require no new decision.
 
 Use English for project artifacts and Chinese in chat. Root owns production, integration,
-acceptance, GitHub, hosting and this context. Logic uses Sol Max, visual authoring uses AGY,
-and requested adversarial review uses Luna Max. All builds, tests, simulations, Blender and
-browser runtime run on Grok through `ssh grok-build`; never on Patrick's Mac. The Mac is for
-editing, orchestration, Git, byte hashing/file I/O and viewing transferred images. Keep local
-sources/masters/proof on WD. Clean only exact owned disposable copies after retention,
-process and file-owner checks. Preserve failed raw observations and the default profile.
+acceptance, GitHub, hosting and this record. Logic uses Sol Max; visual authoring uses AGY;
+requested adversarial review uses Luna Max. All builds, tests, simulations, Blender and
+browser runtime run on Grok through `ssh grok-build`, never on Patrick's Mac. Local editing,
+Git, orchestration, proof hashing/file I/O and viewing transferred images are allowed.
+Keep sources, masters and proof on WD. Clean exact owned disposable copies only after
+retention and process/file-owner checks. Preserve failures, the default profile and frozen routes.
 
-## Exact current versions
+## Current source and publication
 
-- Active worktree: `/Volumes/WD/code/workspaces/coaster-consumable-art/coaster-tycoon-3d`.
-  Branch `p/patrick/feature/classic-four-family-showcase`, based on merged main `b6f03f9b97e67ef5601cf248b2b0515601787836`, last committed source/proof checkpoint `f866c736d121359144fbcc879ef15de8f90534d8` before these live updates.
-- Frozen runtime candidate: `d2320d5e324d548fdba3b30f7d4e0a2d11235466`,
-  tree `7fbf1a616adbb0ab7ccc238930cc2067569283aa`.
-  Grok dist `/workspace/coaster-detailed-stalls-integrated-r6/source/web-dist`.
-  Build-ready SHA `bc4130dfb1727a12c73d45fd74904b5e81e6b4cc6e3d9513da7cdcfa41a745bf`.
-  Branch-only non-executable provenance locator correction89fb57dc follows R2 P3; all six source/license files and17 ZIP members match. Published/frozen d232 and isolated77 package stay immutable; next publication carries this metadata. [Locator receipt](docs/verification/detailed-stalls/root-material-locator-correction.json).
-- Candidate hosting `07be9c4cd36588e08e3fcc9dc0162dd80221affb` pushed to gh-pages with actual exit0;
-  actual Pages built at07:58:29Z. Root accepted20 fresh root/new-preview HTTP bodies.
-  [Root](https://patrick-fu.github.io/coaster-tycoon-3d/?showcase=classic),
-  [d232 frozen preview](https://patrick-fu.github.io/coaster-tycoon-3d/previews/detailed-stalls-d2320d5/?showcase=classic).
-  Root has consumed the complete main player evidence: 1028 encoded/decoded payloads,324 fresh HTTP bodies,582 actual CDP source bodies,14 whole legal authority pairs,10 actual PNG bodies and both full original typed DB restores. All77 sidecar bytes, actual child/SSH/mirror/hash exits and21 prior PID+three helper absences are accepted. Finite75 cumulative Design and Drift both completed TWO whole rounds; no unresolved confirmed findings.
-- Current public runtime qualification: `d2320d5e324d548fdba3b30f7d4e0a2d11235466`. Previous `e9159150f0828cddd38ae95f740c7e1601b4b481`,
-  tree `a84e6d25515e3f1bb1b32578499cd1874cc5334f`, retained at its [frozen preview](https://patrick-fu.github.io/coaster-tycoon-3d/previews/detailed-stalls-e915915/?showcase=classic).
-- Canonical `/Volumes/WD/code/projects/coaster-tycoon-3d` remains clean main
-  `b6f03f9b97e67ef5601cf248b2b0515601787836`; HOME/dev path is a symlink.
-- [PR76](https://github.com/patrick-fu/coaster-tycoon-3d/pull/76) is MERGED at09:54:13Z, main `b6f03f9b97e67ef5601cf248b2b0515601787836`, reviewed headf866c736.
-  [Finite task75](https://github.com/patrick-fu/coaster-tycoon-3d/issues/75) is CLOSED by merge keyword; actual77 native blocked_by0/total1 confirms unblocked.
-  Task75 is a native child of [programme map27](https://github.com/patrick-fu/coaster-tycoon-3d/issues/27).
-  Closed dependencies73/35/37 stay closed. Only75 is closed after actual acceptance;
-  full programme27 and broad human/GPU/content/management issues remain open.
+- Active source: `/Volumes/WD/code/workspaces/coaster-consumable-art/coaster-tycoon-3d`,
+  branch `p/patrick/feature/classic-four-family-showcase`, base main
+  `b6f03f9b97e67ef5601cf248b2b0515601787836`.
+- Frozen executable source: `93b5e2397c9dfd61f2ceb6df1f41d17361453558`, tree
+  `6f6cbf0bb87a21c0d962591765e1d3c6204317a2`. Later changes are context/verification only.
+  Factory `6ebc0c99`, worker `a155d48e`, labels `b2bdfe53`, camera `368ff05e`, CSS `8e3c3f77`
+  and provenance `89fb57dc` identify the candidate. Rules/save/content/protocol remain unchanged.
+- Grok canonical dist: `/workspace/coaster-classic-showcase-canonical-r1/source/web-dist`.
+  Ready `/workspace/coaster-classic-showcase-canonical-r1/evidence/build-r2/build-ready.json`,
+  SHA `0423eebe4dfe4c93a06340fc8cccbc90d547fcd59cc8ae3e7d94ed5c89e6cc89`.
+- [Finite77](https://github.com/patrick-fu/coaster-tycoon-3d/issues/77) is OPEN/unblocked.
+  [Contract](docs/planning/classic-four-family-showcase.md): four implemented ride families,
+  detailed Burger/Soft-drink stalls, restrooms, connected paths, real operation and player controls.
+  No77 source PR, source push, hosting push or public qualification yet.
+- Hosting worktree: `/Volumes/WD/code/workspaces/coaster-content-library-publication/coaster-tycoon-3d`,
+  branch `p/patrick/publish/classic-93b5e23`, clean starting HEAD/remote gh-pages
+  `07be9c4cd36588e08e3fcc9dc0162dd80221affb`.
+  Root staged164 exact canonical runtime files at root and `previews/classic-93b5e23`, plus
+  two truthful metadata files per route. All1262 existing preview/.nojekyll files are byte-identical.
+  Source PR metadata stays null until a real PR exists. [Preparation](docs/verification/classic-showcase/root-public-preparation.json).
+- Live root and [d232 preview](https://patrick-fu.github.io/coaster-tycoon-3d/previews/detailed-stalls-d2320d5/?showcase=classic)
+  still serve finite75 source `d2320d5e324d548fdba3b30f7d4e0a2d11235466`, ready `bc4130df`.
+  Older e915 preview is preserved. Canonical `/Volumes/WD/code/projects/coaster-tycoon-3d`
+  remains clean mainb6; `/Users/patrickfu/dev/coaster-tycoon-3d` is its symlink.
 
-## Accepted evidence and unresolved gates
+## Accepted finite77 evidence
 
-| Area | Root-observed result | Evidence |
-| --- | --- | --- |
-| Frozen contract | Two new detailed Burger/Soft-drink identities at authored32 envelope/dry ground/mask15; old five retain16 and exact economics. Native Y-up/+Z front/unit scale/six anchors, exclusive open/closed states, no fit/squash/fallback. Save13/content6/protocol6. Same absence-only13→12→11→10→9→unversioned storage priority. No new products, finance, support, presets or default layout in75. | [Contract](docs/planning/detailed-consumable-stalls.md), [ADR0004](docs/adr/0004-detailed-facility-placement.md). |
-| Kernel and historical saves | Actual61 targeted/312 canonical checks0,20 unchanged source pins. Genuine old Node Engine719: five cases/25 checkpoints/100 full authority-view continuation pairs. Six genuine Chrome v12 bridge controls accepted. Node Rulesb123 and Chrome78b are distinct; old Chrome projection57cc is exact. | [Kernel](docs/verification/detailed-stalls/root-kernel-acceptance.json), [historical oracle](docs/verification/detailed-stalls/root-v12-oracle-audit.json), [receiver](docs/verification/detailed-stalls/receiver-review-disposition.json). |
-| Canonical r6 | Four child exits/SSH0, blank stderr,13 module controls,792 source/162 shipping pins. Full src/test corpus unchanged. Five build PIDs absent. Only gameb82 differs from r5; only gameb82 and loader9ca differ from fully qualified e915, with160 runtime files unchanged. | [r6 build](docs/verification/detailed-stalls/root-integrated-build-r6-acceptance.json). |
-| Detailed art | Burger GLB9b646bdd/master06803db2; Soft GLBc166d2e2/master5c09f398. Actual11322/10888 triangles,13/11 materials,15 embedded512 PNG each. Reopened masters retain17 CC0 native+2 derived packed maps. Linear color conversion/UV/geometry/anchors/states exact except one1mm Soft grille lift. | [Materials](docs/verification/detailed-stalls/root-repaired-material-acceptance.json), [grille export](docs/verification/detailed-stalls/root-grille-export-acceptance.json), [sources/provenance](ui/models/detailed-stalls/README.md). |
-| Placement, UI, ownership | Actual8 cardinal/24 pose+picking, paid27-8-net19/full export/reload/retirement/typed containers; historical migrations and storage/late-instance controls accepted. Scoped neutral PMREM64/global environment unchanged/foreign resources untouched/dispose once. Corrected actual grille407+51 and scoped901+23 retained payloads consumed. | [Affected UI](docs/verification/detailed-stalls/root-affected-browser-acceptance.json), [grille](docs/verification/detailed-stalls/root-grille-browser-acceptance.json), [scoped reflection](docs/verification/detailed-stalls/root-scoped-reflection-retention.json). |
-| Native loader repair | Actual old baseline leaks one392332B failed PNG Blob URL. Fixed normal decode/rejection/held late-cancel outcomes qualify all30 embedded PNG identities, once-only native disposal/URL revocation and foreign-resource preservation. Root consumes baseline175+48 and fixed244+81 payloads; final98 known fixed PIDs absent/ports closed. Failed observer/admin attempts stay failed. | [Fixed native](docs/verification/detailed-stalls/root-fixed-url-native-acceptance.json), [prebound tail](docs/verification/detailed-stalls/root-fixed-url-prebound-tail-acceptance.json), [sidecar](docs/verification/detailed-stalls/root-fixed-url-sidecar-acceptance.json). |
-| Typed storage repair | Actual old2/fixed4 controls,1412+53 encoded/decoded payloads,324 HTTP/576 actual CDP parsed bodies/6 actual documents,12 full authority bodies and six complete original DB restores accepted. Fixed negative manual deltas0; real60000.3/60506.4ms callbacks0writes/whole typed DB and authority exact. Save.disabled remainsfalse; handler guard/feedback protects. Final65 known PIDs absent/ports closed. | [Actual storage acceptance](docs/verification/detailed-stalls/root-explicit-undefined-storage-acceptance.json). |
-| Public baseline and final dispatch | e915 actual324 HTTP/390 parsed/10 full authority pairs/original public DB1 restored/8 unit poses+picking/native lifecycle and1006+62 retention accepted. New hosting preserves all1098 older frozen/.nojekyll files and only changes2 runtime files. Actual root/pin each79 checks pass; Root consumes324 HTTP/582 actual CDP bodies,2 documents,14 complete authority pairs,10 actual PNGs,4 resource controls and original DB1/two typed records fully restored. All77 sidecar payloads/tool child+SSH/mirror/hash0 and21 priorPID/three helper absences accepted. Recorded Chrome subtree union12 with3 terminal adopted extras remains an explicit recording limit. | [e915 public](docs/verification/detailed-stalls/root-public-e915915-acceptance.json), [d232 HTTP gate](docs/verification/detailed-stalls/root-public-d2320d5-bootstrap-acceptance.json), [actual public acceptance](docs/verification/detailed-stalls/root-public-d2320d5-acceptance.json). |
-| Cumulative reviews | TWO whole Design rounds and TWO whole Drift rounds completed independently. Both R1 P2 repairs and R2 P3 locator are Root-confirmed and independently rechecked. No unresolved confirmed findings. Old six encoded metadata conflicts are preserved r1 failures, refuted by accepted final-r2/all1538 exact. | [Whole review disposition](docs/verification/detailed-stalls/cumulative-review-disposition.json). |
+The [verification index](docs/verification/classic-showcase/README.md) connects the full receipts.
+README now describes the actual four-family source and embeds the exact R4 local screenshot;
+public qualification stays explicitly pending. Earlier five-ride/consumable versions are dated checkpoints.
+Evidence reused from exact source/art inputs stays accepted; failed runs remain failed.
 
-## Current finite77 delivery and owners
+- [Canonical](docs/verification/classic-showcase/root-canonical-build-acceptance.json): all823
+  source files,164 shipping files and74 compiled outputs match. All313 canonical tests pass,
+  with no failures, skips, cancellation or TODO. The complete810792-byte Node initial save
+  exactly matches independent oracle `a91139e8`. The first helper exited1 on Root's stale312
+  count assertion after all tests passed; a separate continuation reused those passing results.
+  Seven known remote/seven Mac PIDs are absent; full npm/TS descendant ancestry was not captured.
+- [Recipe](docs/verification/classic-showcase/root-concrete-factory-acceptance.json):182 legal
+  commands and real +12288-tick operation. Four ride admissions44/70/9/139 and three facility
+  sales65/140/31. Wood income is0 at start4800 and first positive at sample6464. One four-seat
+  boat only. Node Rulesb123 and Chrome Rules78b are independently bound; no Node save enters Chrome.
+- [R1 partial](docs/verification/classic-showcase/root-r1-partial-retention-acceptance.json):
+  all411+61 payloads consumed. Nine actual paid steps, last tick7402, four ride incomes
+  80/320/60/390 and ten Soft-drink sales. Burger/restroom sales remain0 in this Chrome sample.
+  Full operated save `afd73e9e`, initial `d8327f2a`, original typed[] restore exact.
+  Conditional selected-ride card click ends runtime/SSH1. Nineteen known PIDs absent/ports closed;
+  thirteen children have earlier trees, two late-reaped PIDs lack their own earlier ancestry/status.
+- [R2 frames](docs/verification/classic-showcase/root-r2-early-frame-disposition.json): Root views
+  actual1920/1024 Overview/Close images. Both Overviews show all four families clear of the
+  inspector; Close shows counters/Carousel.1024 New/Close visible. Actual stationary click,
+  responsive resize, New and both Library/inspector paths pass. Human style acceptance remains open.
+- [R2/diagnostic retention](docs/verification/classic-showcase/root-r2-diagnostic-retention-acceptance.json):
+  all706 payloads consumed;328 HTTP/194 actual parsed sources/three loaded HTML+GLB bodies/
+  eleven whole authorities bound to raw replies, complete typed[] restores and15+14 captured
+  children closed. R2 runtime1 is the60-second exact-pose observer timeout. One passive
+  diagnostic passes:65 RAFs in48.02s,64 nonzero deltas decaying0.8999965, no exact repetitions.
+  Low actual software frame rate with normal damping explains the observer failure.
+  No direct camera/control/damping mutation or passing test replay was used.
+- [R3 controls](docs/verification/classic-showcase/root-r3-retention-acceptance.json): all315
+  payloads consumed. Actual orbit/pan/wheel,1024 resize, unchanged synchronous physical pose,
+  projection/canvas response, two later RAFs, ordinary packet flags and manual facility pick pass.
+  Runtime1 occurs later: projected19,12 becomes18,15 before flower press/up. No wrong build
+  executes. Missing inter-call pose/projection prevents a unique causal claim; independent Luna
+  supports stale driver coordinates rather than an established product pick defect.
+- [Administrative closure](docs/verification/classic-showcase/root-administrative-sidecar-acceptance.json):
+  all90 sidecar payloads and separate self-tool terminal supplement consumed. Forty-one prior
+  remote/eight Mac PIDs absent; profile-lock owner inactive, ports closed. Actual preparations,
+  retainer1502946 and SCP5320/SSH/hash/postwait close. Old static/retention failures are retained.
+- [R4 terminal subset](docs/verification/classic-showcase/root-r4-early-disposition.json): actual
+  runner1515895/HTTP1515902/defaultChrome1516072, accepted drivere841858f/witness2bda287f,
+  fresh preflight1515577; ends13:10:39Z child/SSH0. Root consumes53 passing checks, strict
+  native move/down/up19,12/height32, flower156 quote30, normal pick/remove quote-15 and two
+  actual construction/reload PNGs. Both native lifecycle records enumerate67 geometry/
+  48 borrowed material/30 texture/30 bitmap releases exactlyonce, foreign preservation and
+  owned Scene target once/null. Full typed[] restore exact; fourteen known children have
+  tree records and are absent, runnerpostwait absent, ports closed. Six complete authority
+  identities and all nine full save replies/Chrome Rules78b are now consumed in the
+  [full R4 receipt](docs/verification/classic-showcase/root-r4-retention-acceptance.json).
+  Root independently decodes/hashes all490 payloads,211932642 logical/167144667 retained
+  bytes, manifesta9e8ae91, and binds164 HTTP/194 Debugger/six loaded bodies/nine full save
+  replies, input-time causal objects and both resource/whole typed inventories to actual raw.
+  Full paused build/remove differences match quote30/refund15 exactly; original elements
+  return. Genuine old13 is775253B/6aaeb372; Save/Export/reload829227B/afd73e9e are exact.
+  Retainer1523234 child/SSH0/postwait absent; mirror SSH/tar/hash/wrapper0, five known Mac
+  orchestration PIDs absent. One record limit is explicit:1516104 first appears adopted/Z
+  during settlement; thirteen children have their own pretermination ancestry/status, all14
+  are actually reaped/absent. Final71-payload/69281-byte tool sidecar is now fully consumed;89 prior remote PIDs,
+  closure1524918/retainers1523234+1526300, all SSH/SCP/hash terminals and18 Mac known PIDs
+  close. Default-profile owner inactive/ports closed; raw490 and71 unchanged. No new Chrome.
 
-[Finite77](https://github.com/patrick-fu/coaster-tycoon-3d/issues/77) is OPEN and unblocked.
-Scope: playable Classic showcase with detailed wood, steel, ONE-boat Flume and Carousel,
-Burger/Soft-drink/toilet, actual paid operation, all-four Overview, detailed Close, usable1024
-controls, legal construction/picking/removal and genuine old-save import/save/export/reload.
-No new Rules, products, physics, save version or original-equivalence claim.
-[Contract](docs/planning/classic-four-family-showcase.md).
+R4 preserves the strict requested tile and post-manual scenario using read-only completed-render
+projection, actual resize/render barriers and input-time causal records. Passed R3 gestures and
+R2/R1 controls are reused. The synthetic v7 overpass fixture is separate from genuine old Chrome13
+File import. [Preparation](docs/verification/classic-showcase/root-player-save-tail-preparation-acceptance.json).
 
-- Root owns active77 branch, production, integration, acceptance, GitHub and this record.
-  Factory `6ebc0c99`, worker `a155d48e`, Rides labels `b2bdfe53`, camera `368ff05e`
-  and Classic CSS `8e3c3f77` are copied. Existing legacy elevated-path check is moved
-  after its genuine legacy import without changing any assertion. Main provenance89fb
-  must ship with77. Root is freezing the accepted source checkpoint for final canonical remote build/test. P2 independent recheck/realbrowser remainspending.
-- Independent SolMax recipe182 legal commands/four complete saves/five atomic refusals
-  and actual+12288tick operation are Root-accepted. Wood/steel/Flume/Carousel paid
-  admissions44/70/9/139 and Burger/Soft-drink/toilet sales65/140/31. Wood starts with
-  income0 at4800; first positive sample6464. ONE4-seat boat, not an unsupported fleet.
-  Reservation x3–36/y5–32 is not mesh/camera bounds. LunaMax independent logic review
-  has no blocker; original breadth/numerical/art and hardware/human gates remain open.
-- Integration workspace `/Volumes/WD/code/workspaces/coaster-classic-showcase-integration-r1`:
-  corrected compile r2 helper1389439/TS1389440/Node1389464 andSSH0/blankstderr,74 compiled
-  files, whole810792B Node save exactly equals independent oraclea91139e8. First TS2345
-  failed attempt remainsfailed. Initial164-file shipping readycc0de8bf remains immutable
-  at remote source-r2/web-dist. Replacement shipping for978e/8e3/89fb is Root-accepted: ready2b3950c3,164 files/161 oldexact/threechanged; actualcanonicalweb child/SSH/mirror0 and fourknown helperPIDsabsent. Root fulltest/browser/public remainpending.
-- Sole default-Chrome owner `/root/detailed_stalls_browser_sol_max` is retaining r1 and
-  has accepted Root replacement gate2b3950c3 and is terminal with no r2 app launch; prepared tail waits repaired gate. No second Chrome owner. Do not start
-  a second owner. WD `/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1`.
-  R1 runtime1438603/HTTP1438610/Chrome1438781 childSSH1 remainsFAILED: missing guessed
-  selected-ride click. Actual selector is valid only after clear selection. Root's
-  earlier wrong alternative selector was withdrawn. Real first9 paid advances and four
-  PNGs may be reused; genuine pausedChrome saved8327f2a stays exact across four frames.
-  Whole original typedDB37517e5f restored,15 known children/runner absent/portsclosed;
- 13 captured+2late-reaped ancestry/status recording gap remains explicit. Corrected
-  offline13 subset checks0 follows preserved repeated strict-union audit1. Complete
-  r1 retained411 payloads/147192355logicalB,manifest e25d9d8f reported childSSH0;
-  local mirror/hash exit0; Root all411 encoded/decoded lengths and hashes accepted. Root also consumes164HTTP/194 actualCDP-bound source entries/fivewholeauthorities/nine paidoperation saves/61sidecar and19priorPID+portclosure. R1loadedDocument/GLBreply gate unexecuted. Tail0326ac39 may now proceed against accepted replacementready2b3950c3; retain exact launch identity when observed. Existing early-frame receipt qualifies
-  only transferred images and terminal subset, not full raw HTTP/CDP bodies.
-- AGY camera/toolbar r4 both actual0 butdeadline/emptyresponse/NO EDITS: INCOMPLETE.
-  Narrowed same conversations/model r5 now both terminal with actual0/blankstderr and
-  nonempty responses. Toolbar one replace/two reads changes only two hide selectors;
-  camera two reads/two replaces adds inspector-aware view offset/usable-width Overview
-  and manual-preset state. All other inputs exact and four known producerPIDs absent.
-  Root dispositions at camera/toolbar isolated workspaces accepted SOURCE CANDIDATES,
-  not actual1024 render/picking. No AGY currently live. Narrow readonly LunaMax review terminal confirmsP2: OrbitControls.start clears Overview even on a no-movement selection click. Root confirmsactualinstalledThree/game trigger; soleowner confirmsNO r2Chrome/HTTP/runner launched. Pose-based bounded AGYr6 terminal10:52:13Z actual0/blankstderr/nonempty1631B; one source-line replacement accepted368ff05e, bothPIDs absent and all12 otherinputs exact. Independent readonly LunaMax P2 recheck launched; nextgate pending; actual camera movement must determine manual state.
+## Review, prior closure and cleanup
 
-Latest guardedcleanup: four r4/r5 duplicate AGY capture directories removed,82006 logicalB freed after exact retainedbytes, eight producerabsences and emptylsof. Live r6 and all proof/source preserved. [Receipt](docs/verification/classic-showcase/root-agy-r4-r5-temp-cleanup.json).
+Finite77 cumulative R1 owners: Design `/root/classic_cumulative_design_r1_sol_max`, Drift
+`/root/classic_cumulative_drift_r1_luna_max`. Initial/pre-public stages are terminal with no
+confirmed source/canonical/composition defect. Design final local tail is terminal: no new blocker, independent490/raw/native/state
+consumption accepted. Drift final local tail is terminal with no substantive blocker. Its stale contract pending
+wording P3 is Root-confirmed and repaired; final public reviews will recheck it. Public remains pending.
+Two whole Design and two whole Drift rounds remain required. Root confirmed/repaired the
+stationary-click Overview P2; AGY source368ff, independent Luna review and actual R2 trigger
+close it. Narrow forensic reviews do not count as whole rounds.
+[Cumulative disposition](docs/verification/classic-showcase/cumulative-review-disposition.json).
 
-Earlier finite75 owner history and all failed/preparation observations are preserved in
-[pre-camera checkpoint](docs/progress/2026-10-10-progress-before-camera-r5.md) and the
-[dated journal](docs/progress/2026-10-10.md). Finite75 is merged/closed with actual public,
-whole retained proof and TWO independent rounds per lens accepted; do not re-open its
-review or replay unchanged historical/native/storage matrices.
+Finite75 is CLOSED and [PR76](https://github.com/patrick-fu/coaster-tycoon-3d/pull/76) MERGED
+09:54:13Z at mainb6. Two whole rounds per lens, actual public root/pin, native success/rejection/
+late cancellation, whole typed storage/historical kernel and material/master proof are accepted.
+[Finite75 public receipt](docs/verification/detailed-stalls/root-public-d2320d5-acceptance.json).
+Reuse exact inputs; do not reopen75 or replay unchanged matrices. Detailed art has17 native
+CC0 maps plus two derivatives per reopened master; actual11322/10888 triangles and15 embedded
+512 PNGs per GLB. Borrowed public resource visibility67/48/30/30 does not imply the full native72
+material pool was directly observed. Three finite75 reaped PIDs lack their own earlier ancestry.
+
+Latest cleanup: eight duplicate AGY captures/four empty directories freed82006 logical bytes;
+Root's byte-identical retained retainer helper/empty temp directory freed2666 bytes after
+producer absence. Preserve masters, sources, proof, failed observations, profile and frozen previews.
+No broad cache deletion. Last measured WD468Gi and Mac data15Gi free.
 
 ## Next actions and open scope
 
-1. Repair confirmed no-movement-click cameraP2 through bounded AGY; Luna rechecks; retain978e/2b395 as superseded candidates.
-2. Freeze separate replacement164-file shipping with camera978e/CSS8e3/provenance89fb,
-   retaining oldcc0 unchanged; sole owner verifies remaining actual frames and controls.
-3. Once candidate source is final, execute canonical build/test/web on Grok, consume
-   actual results, and complete finite77 public paths, TWO whole Design and Drift rounds
-   and concrete human play/style checkpoint. Keep this unlimited Goal ACTIVE.
-4. Continue complete programme and guarded task-owned disposable/cache cleanup.
+1. Commit/push the verified source and current documentation, create/attach the concrete
+   draft PR, and update truthful hosting metadata with its actual identity.
+2. Commit/push the prepared exact frozen runtime; verify actual Pages root/new pin HTTP and
+   fresh player behavior using the sole Grok default-Chrome owner.
+3. Finish both whole R1 tails and fresh whole R2 Design/Drift rounds. Close/merge finite77
+   only after required actual acceptance. Present the actual preview for human style/play.
+4. Continue the full programme and guarded owned cleanup; the unlimited Goal remains ACTIVE.
 
-Full79 family/155 variant/41 shop/35 product coverage, finance/research/scenarios, original
-numerical/art agreement, human acceptance, representative integrated-GPU/scale qualification
-and GPU mid-allocation failure remain OPEN. Initial unexplained Node native SIGABRT remains
-a risk; later unchanged passing checks are not a root-cause explanation.
-
-Update this record immediately after each meaningful outcome, failure, decision, launch,
-termination, publication or cleanup, before dependent work. Root writes this live execution
-context; `CONTEXT.md` remains the domain glossary. Do not copy raw logs into this record.
+Full79 families/155 variants/41 shops/35 products, finance/research/scenarios, original numerical/
+art agreement, human style/play, representative integrated-GPU/scale and GPU mid-allocation
+failure remain OPEN. The older unexplained Node native SIGABRT remains a risk; unchanged passing
+checks do not explain its cause. Programme [map27](https://github.com/patrick-fu/coaster-tycoon-3d/issues/27)
+stays OPEN. Update this context after meaningful outcomes before dependent work.

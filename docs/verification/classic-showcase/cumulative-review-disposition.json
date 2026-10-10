@@ -1,0 +1,72 @@
+{
+  "utc": "2026-10-10T13:42:07.063700+00:00",
+  "scope": "Frozen93 source/art/canonical and complete accepted local R1/R2/R3/R4 proof including490+71 and actual tool closure. Both pre-public local lenses terminal/no substantive blocker. Public and whole cadence remain pending.",
+  "requiredCadence": "Two independent whole Design and two independent whole Drift rounds over final entire finite77 delivery. Source/partial stages do not count as whole closure.",
+  "rounds": [
+    {
+      "round": 1,
+      "design": {
+        "owner": "/root/classic_cumulative_design_r1_sol_max",
+        "status": "Initial, canonical/framing and final local tails terminal/no confirmed blocker. Independently consumes complete R3/R4 raw and490 retained payloads; source/art/README/actual native build/import/Save/Export/reload reviewed. Final public tail remains pending.",
+        "wholeDeliveryClosed": false
+      },
+      "drift": {
+        "owner": "/root/classic_cumulative_drift_r1_luna_max",
+        "status": "Initial, canonical/framing and final local tails terminal/no substantive blocker. Independently consumes full490/raw6168/HTTP164/source194/loaded6/save9 and current source/docs. Stale contract raw-retention-pending P3 is Root-fixed, public-tail recheck pending.",
+        "wholeDeliveryClosed": false
+      }
+    },
+    {
+      "round": 2,
+      "design": {
+        "status": "Not started",
+        "wholeDeliveryClosed": false
+      },
+      "drift": {
+        "status": "Not started",
+        "wholeDeliveryClosed": false
+      }
+    }
+  ],
+  "confirmedFindings": [
+    {
+      "id": "camera-no-motion-start",
+      "severity": "P2",
+      "trigger": "Native no-motion selection click startsOrbitControls and formerlydisabled responsive Overview fit on later resize.",
+      "rootDisposition": "AGY source368ff, Luna static recheck and actual fully consumed R2 stationary native click/1024 responsive fit close the original trigger. R3 three native manual controls and R4 player/save integration are fully consumed separately.",
+      "status": "Source repair and actual stationary native click\u2192responsive resize verified in fully consumed R2 partial proof; broader tail remains distinct."
+    },
+    {
+      "id": "ports-field-name",
+      "severity": "P3",
+      "rootDisposition": "Rename contradictory portsClosed:false to portsOpen:false plusallPortsClosed:true; exactunderlying closureunchanged.",
+      "status": "Fixed andindependently rechecked"
+    },
+    {
+      "id": "camera-scope-stale",
+      "severity": "P3",
+      "rootDisposition": "Source scope nowreflects independentP2source-rechecked/runtimepending, matchingactualrecord.",
+      "status": "Fixed andindependently rechecked"
+    },
+    {
+      "id": "contract-retention-state-stale",
+      "severity": "P3",
+      "trigger": "Final contract paragraph still called full raw retention pending after Root consumed R4.",
+      "rootDisposition": "Replace with complete raw R4 and terminal tool sidecar consumed, public qualification pending. Exact runtime/gates unchanged.",
+      "status": "Root verified factual repair; independent public-tail recheck pending."
+    }
+  ],
+  "nativeOldSaveBoundary": "Genuine priorChrome13 Fileinput import is separate from syntheticv7 UIcontrol; requiredfinaltail gate.",
+  "next": "Commit/push source/docs, create/attach source draft PR, publish/qualify fresh public root and pin, then complete both whole R1 tails and fresh whole R2 rounds.",
+  "currentCheckpoint": {
+    "observedUTC": "2026-10-10T13:42:07.063700+00:00",
+    "phase": "Both pre-public local tails terminal/no substantive blocker; Root tool closure accepted",
+    "designOwner": "/root/classic_cumulative_design_r1_sol_max",
+    "driftOwner": "/root/classic_cumulative_drift_r1_luna_max",
+    "inputs": [
+      "root-r4-retention-acceptance.json",
+      "Actual490+71 unchanged proof and separate self-terminal receipts"
+    ],
+    "wholeDeliveryClosed": false
+  }
+}

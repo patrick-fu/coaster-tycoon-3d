@@ -1,0 +1,80 @@
+{
+  "utc": "2026-10-10T12:25:25.974391+00:00",
+  "scope": "Root consumes hash-bound early R3 subset and independently recomputes native manual/resize witnesses. Complete raw CDP/authority/HTTP retention is pending; R3 runtime/SSH1 remains FAILED.",
+  "sourceCommit": "93b5e2397c9dfd61f2ceb6df1f41d17361453558",
+  "readySHA256": "0423eebe4dfe4c93a06340fc8cccbc90d547fcd59cc8ae3e7d94ed5c89e6cc89",
+  "driverSHA256": "da223b9b5cfd66f2d349a9165aebfe187ce6e4d905f36902c626e6b234e4c5dc",
+  "evidenceRoot": "/Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/early-r3",
+  "summarySHA256": "ce55aa123ea3fd215fff87010b49b412b076c16711503db889fbe7aa93762516",
+  "resultSHA256": "62e934b578157eb7296adcb4c592e71017904d45272c6767473f2f45e24ed71f",
+  "nativeRowsSHA256": "37287a1c38a745d4d77489c7dda55623d452ba9ff819b14dda35498b69e1b0b1",
+  "rootRecomputedNativeWitnesses": [
+    {
+      "gesture": "orbit",
+      "nativeFieldActuallyChanged": true,
+      "exactPhysicalPoseWithinActual1024Resize": true,
+      "rendererAndProjectionActuallyChanged": true,
+      "twoLaterNativeRAFsPreserveManual": true,
+      "ordinaryNewPacketsPreserveManual": true
+    },
+    {
+      "gesture": "pan",
+      "nativeFieldActuallyChanged": true,
+      "exactPhysicalPoseWithinActual1024Resize": true,
+      "rendererAndProjectionActuallyChanged": true,
+      "twoLaterNativeRAFsPreserveManual": true,
+      "ordinaryNewPacketsPreserveManual": true
+    },
+    {
+      "gesture": "wheel",
+      "nativeFieldActuallyChanged": true,
+      "exactPhysicalPoseWithinActual1024Resize": true,
+      "rendererAndProjectionActuallyChanged": true,
+      "twoLaterNativeRAFsPreserveManual": true,
+      "ordinaryNewPacketsPreserveManual": true
+    }
+  ],
+  "actualManualFacilityPickAndInspectorPassed": true,
+  "actualFailedStage": "Later scenery construction tile guard before mousePressed/mouseReleased, not manual facility pick.",
+  "actualFailedCheck": {
+    "name": "Actual public pointer resolves expected tile/owner",
+    "passed": false,
+    "data": {
+      "point": {
+        "x": 822.8255329531776,
+        "y": 483.02631556192614,
+        "height": 32,
+        "tile": {
+          "x": 19,
+          "y": 12
+        },
+        "element": {
+          "tag": "CANVAS",
+          "id": ""
+        }
+      },
+      "picked": {
+        "x": 18,
+        "y": 15
+      }
+    }
+  },
+  "typedOriginalDBCompleteBytesRestored": true,
+  "typedOriginalDBSHA256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+  "capturedKnownChildren": 15,
+  "knownChildrenAndRunnerAbsent": true,
+  "portsClosed": true,
+  "rootStaticHypotheses": [
+    "Inherited p.project explicitly calls controls.update, advancing damping while calculating coordinates.",
+    "Construction resets viewport1024\u21921920 without waiting for the actual resize callback/render before projection.",
+    "Overview resets physical pose while OrbitControls may still retain damping offsets."
+  ],
+  "causalLimits": "No independent physical pose/projection sample exists between the failed p.tile projection and subsequent Scene.pointer. No product-selection or exact causal mechanism is established yet.",
+  "remainingUnexecuted": [
+    "Scenery construction/removal",
+    "Genuine prior-d232 Chrome13 File import",
+    "Save/Export/actual reload",
+    "Final public preview/whole cumulative review closure"
+  ],
+  "next": "Consume exact raw failed call/input timing and narrow independent Luna diagnosis, then choose the smallest discriminating remaining-path observation/repair without replaying passed native checks."
+}
