@@ -117,7 +117,7 @@ including full244+81 retention and98knownPID closure.
 failed observers; [final sidecar](root-fixed-url-sidecar-acceptance.json) preserves
 administrative failures separately. Root also accepts the actual old2/fixed4
 [typed-storage controls](root-explicit-undefined-storage-acceptance.json).
-Final affected d232 public paths are Root-qualified: all1028+77 encoded/decoded retained payloads,324 actual HTTP bodies,582 actual CDP source responses,2 loaded documents,14 whole authority pairs,10 native PNGs and both complete original typed DB restores match. Root/pin each79 checks pass, with known PID/port closure and explicit3-PID pretermination recording limit. See [final actual public acceptance](root-public-d2320d5-acceptance.json). Both whole cumulative R1 Design/Drift reviewers are terminal without unresolved confirmed findings; [Root disposition](cumulative-review-disposition.json) accepts the two repaired P2s and preserves limits. Fresh whole R2 Design/Drift remains pending. Permanently hung decoding and partial GPU
+Final affected d232 public paths are Root-qualified: all1028+77 encoded/decoded retained payloads,324 actual HTTP bodies,582 actual CDP source responses,2 loaded documents,14 whole authority pairs,10 native PNGs and both complete original typed DB restores match. Root/pin each79 checks pass, with known PID/port closure and explicit3-PID pretermination recording limit. See [final actual public acceptance](root-public-d2320d5-acceptance.json). Both whole cumulative R1 Design/Drift reviewers are terminal without unresolved confirmed findings; [Root disposition](cumulative-review-disposition.json) accepts the two repaired P2s and preserves limits. Whole R2 Design/Drift is also terminal; TWO whole rounds of EACH lens are accepted. No unresolved confirmed finding. Permanently hung decoding and partial GPU
 allocation remain unexecuted boundaries.
 
 Prior fddd/save12/content5/protocol5 remains at its immutable preview. Original
@@ -134,3 +134,11 @@ preserve full schema/keys/typed values and paused authority. HTML Save.disabled 
 false; the handler guard and visible feedback provide protection. The prior
 null/JSON-only matrix remains distinct; the first driver1 and separate recovery
 remain separately recorded. Final65knownPIDs absent and ports closed.
+
+Whole Drift R2 confirms one P3 retained-material locator error. Root corrects only
+`retainedMaterialRoot` to the existing research evidence root; five original ZIPs,
+the complete license page and all17 named native image members are byte/hash exact.
+[Locator correction](root-material-locator-correction.json) preserves all other
+metadata fields, models and runtime modules. Both independent R2 narrow tails accept the corrected locator.
+The current immutable d232 public preview and isolated77 package retain their
+original metadata; the next publication will carry the corrected source locator.

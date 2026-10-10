@@ -1,5 +1,5 @@
 {
-  "utc": "2026-10-10T09:22:41.890583+00:00",
+  "utc": "2026-10-10T09:49:10.327389+00:00",
   "scope": "Whole finite75 cumulative delivery, base1373dbd2 to frozend2320d5; source/art/kernel/UI/local/native/typed/public including repairs. Does not close full programme.",
   "runtimeSource": "d2320d5e324d548fdba3b30f7d4e0a2d11235466",
   "runtimeTree": "7fbf1a616adbb0ab7ccc238930cc2067569283aa",
@@ -17,6 +17,18 @@
       "unresolvedConfirmedP0P1P2": 0,
       "newActionableP3": 0,
       "rootDisposition": "Accept independently traceable whole-scope reviews. Root source/actual byte and behavior checks independently support the two repairs; model consensus alone is not acceptance."
+    },
+    {
+      "round": 2,
+      "designOwner": "/root/stalls_cumulative_design_r2_sol_max",
+      "designModel": "gpt-6.1-sol/max",
+      "driftOwner": "/root/stalls_cumulative_drift_r2_luna_max",
+      "driftModel": "gpt-6-luna/max",
+      "bothTerminal": true,
+      "independentWholeScope": true,
+      "unresolvedConfirmedP0P1P2": 0,
+      "unresolvedP3": 0,
+      "rootDisposition": "Accept whole independent reviews plus actual narrow locator tails.180 frozen source/test/resource pins, actual61/312/r6 controls and whole1028+77 public proof independently checked. Oldr1 six encoded-metadata conflicts refuted against accepted final-r2 manifest328773b8/all1538 exact."
     }
   ],
   "closedFindings": [
@@ -42,6 +54,16 @@
         "root-explicit-undefined-storage-acceptance.json"
       ],
       "rootDisposition": "Confirmed actual old/fixed controls. Fixed manual deltas0 and real60000.3/60506.4ms callback0writes plus whole typed DB/authority preserved."
+    },
+    {
+      "priority": "P3",
+      "trigger": "retainedMaterialRoot points to nonexistent old folder",
+      "consequence": "Reader cannot follow recorded source/archive/license paths",
+      "repair": "Change only retainedMaterialRoot to actual research evidence root",
+      "evidence": [
+        "root-material-locator-correction.json"
+      ],
+      "rootDisposition": "Root and both independent R2 tails verify five complete archives,license page and17 native members; all other JSON/model/source/runtime fields unchanged. Immutable d232 published metadata remains original, next publication carries corrected locator."
     }
   ],
   "preservedLimits": [
@@ -52,5 +74,6 @@
     "Initial Node20 SIGABRT unresolved despite later unchanged passes",
     "Original numerical/art agreement,human style/play,representative hardwareGPU and full catalogue/programme remain open"
   ],
-  "next": "Fresh clean-context whole cumulative R2 Design SolMax and Drift LunaMax; no runtime replay unless material finding."
+  "next": "Finalize exact-head PR76 integration and finite75 tracker closure. Continue separate finite77; original/human/hardware/full programme remain open.",
+  "completedWholeRoundsPerLens": 2
 }
