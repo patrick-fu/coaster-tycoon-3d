@@ -1,6 +1,6 @@
 # Project progress and recovery
 
-Last updated: 2026-10-11 16:38 UTC.
+Last updated: 2026-10-11 17:12 UTC.
 Root owns this live record and the [UTC journal](docs/progress/2026-10-11.md).
 [Previous detailed checkpoint](docs/progress/2026-10-10-progress-before-final-public-acceptance.md)
 retains the source/native/public/tool repair sequence. `CONTEXT.md` remains the domain glossary;
@@ -28,109 +28,115 @@ preserve default profile, complete typed saves, editable masters and frozen prev
 ## Current finite79 state and next action
 
 Patrick resumes work and authorizes local Grok Bot cloud-control recovery when unreachable;
-AGENTS holds that standing procedure. Actual app is `Grok Bot`/`com.anysphere.sand`.
-Fresh72251/status72267 actual0 at15:45:02Z shows designated100.106.65.13Online/selfOnline.
-Root73958/SSH73960/tool45111 actual0 at15:48:05Z, remote95542/same hostname, confirms
-readyd821/source1b/tree8ea/gamec4fd/13-6-6;883/164/74 are manifest counts, not fresh full
-source-byte qualification. All241 recorded owners absent,8777/9237closed, default-profile
-lock owner1760905absent. No R5 preparation or runtime-r2 existed at that probe. No cloud
-control click was required; only app inventory was inspected.
+AGENTS holds the standing procedure. CUA conversation details -> Computer -> Open computer
+actually restored SSH on the designated host at16:14:59Z, same hostname and bootIDa5c4f692.
+Keep that cloud-control view open during remote validation; do not send Bot chat messages.
+The latest Goal API still reports prior BLOCKED; the explicit human resume authorizes ongoing
+work, but this record does not invent an ACTIVE transition.
 
-Executable remains1bdec0dd377f922c9168f454c4b2eaba92a1bbc4, gamec4fd4cff and readyd8218203.
-Docs HEAD5475db3c1c8edd10982cf6a2dc85761cb2d130e8 was pushed/read back with PR80 OPEN/draft;
-current public source remains7a0bbac/hosting0f6. No later GitHub or publication qualification.
-Only AGENTS and the two live context files are newer than that docs checkpoint.
+Executable remains1bdec0dd377f922c9168f454c4b2eaba92a1bbc4/tree8ea89182/gamec4fd4cff,
+readyd8218203. Root docs-only commit3636e0b10f05311276fb5553c849734d24f2ddcd completes
+actual0 at16:42:55.770787Z, Root96539/commit96545, exactly six documentation files and
+clean immediately afterward. Evidence: ../evidence/root-recovery-context-commit-r5.
+This live context update is newer than that checkpoint. Root99561/push99564 actual0 and
+PR99641/issue99651 readbacks0 at16:51:28.525003Z match exact3636e0b/OPEN/draft and issue79
+OPEN. Evidence: ../evidence/root-recovery-context-push-r5. PR body6b9121a2 still retains the
+earlier checkpoint; update after final preparation consumption. Public remains7a0bbac/hosting0f6.
 
-Frozen R2 preparation passed generation/static/full883source/164shipping/74compiled pins,
-all72 retained payloads and terminal verification. Root gateb2f47493 permitted one actual
-fixed-runtime-r1: runner1760734/HTTP1760735/Chrome1760905 ended FAILED1 at00:21:05.305537Z,
-Queue reader KeyError('reply'), after Track/new7 and125 completed assertions. Queue completion,
-Escape/Scene recovery/rejection/intentional execute-timeout/oversize cases remain unexecuted;
-125/125 completed assertions never qualifies the whole run. [Original failure disposition](docs/verification/creation-view-adoption/root-fixed-native-failure-r1.json)
-remains immutable. Prior original baseline FAILED1, rejected R3/R4 authoring and SSH255
-receipts remain retained. [Detailed earlier checkpoint](docs/progress/2026-10-11-creation-checkpoint-before-proof-recovery.md)
-contains all original pins, review corrections, transport failures and offline audits.
+Original fixed-runtime-r1 remains FAILED1 at00:21:05.305537Z, runner1760734/HTTP1760735/
+Chrome1760905. Track/new7 and125 completed assertions ran; the driver stopped on Queue
+KeyError('reply'). Queue case completion, Escape/Scene recovery/rejection/intentional
+execute-timeout/oversize cases were not completed. The complete failed proof is now
+accepted only as failed-proof consumption by [Root disposition](docs/verification/creation-view-adoption/root-fixed-native-consumption-disposition-r2.json)
+2765dfea. Root independently consumes all340 originals,229 encoded and decoded payloads,
+16 canonical refs, full87,517,634B/6128 raw rows, all164 HTTP/97 source bodies,11 trusted
+Export/save/native/full-byte/Blob/download bindings, exact typed restoration, resources
+and actual process/port closure. All300 WD primary and76 terminal files hash exact.
 
-Actual current agent inventory initially contained only Root, so the previous sole owner
-was unavailable. New /root/fixed_proof_sol_max owns only immutable-failure retention into
-WD/Grok fixed-failure-retention-r2; originals are read-only, no App or product execution.
-Inventory Mac76961/SSH76966/tool48748/remote97860 actually0 reports340 original files
-352,214,894B;16 canonical refs69,329,833B avoid fixture duplication. Full WD retention and
-independent Root consumption are pending, not accepted from that report alone.
+Actual CDP710 snapshots Queue722/ordinal3147 complete and740/ordinal3218 without reply.
+Later original740 reply/delivery3222->3223->3224 completes in4.4ms before observer stop,
+confirming the driver race; the whole Queue case remains unqualified. Independent Luna's
+corrected narrow read reaches the same chronology. Earlier truncated reads, transfer255,
+AppleDouble mirror1, and their explicit corrections remain in the journal and proof.
 
-Root schema77892/SSH77923/remote98489/tool65299 actual0. Independent raw consumer78866/
-SSH78868/remote99292/tool21005 actual0 reads all87,517,634B/6128JSON rows, SHA7418bef113f00ae8d840d6f81873d111695d08643dfa7797f92225841ed91cf9,
-all CDP calls replied. Actual CDP710 returns Queue request722/ordinal3147 with reply and
-740/ordinal3218 without a reply property; both target queueFor7. Earlier Track456 and
-Portal503 projections are complete and target7. The driver directly accesses the missing
-key, confirming the race at the actual failed call. Full authority/typed/resource/tree
-consumption still required; this is a driver diagnosis, not whole product qualification.
-Root80966/SSH80971/remote101597/tool90593 actually0 at15:58:44Z independently consumes
-all164 actual HTTP and97 executed-source bodies, all11 trusted Export/save/full-byte/Blob/
-download bindings, exact original/restored typed[]/37517e5f, all four held original views
-within6.14s Track/2.99s Queue, and real resource/15-process terminal closure. No route errors,
-all125 completed assertions; whole run stillFAILED1 and remaining cases unexecuted.
-Collector remote retention100947/tool69594 actually0 reports340 original pins unchanged,
-229 unique payloads97,683,532 encodedB/252,486,862 decodedB. Root82922/SSH82924/remote103820/
-tool99796 actual0 at16:03:53Z independently rehashes all340 originals,229 encoded and every
-decoded body plus16 canonical refs exact, manifest3d8d3ef5. First WD mirror/tool69167 fails
-local auxiliary metadata hash1 despite SSH0/tar0: bsdtar hydrates three AppleDouble bodies.
-Narrow recovery83116/toolfea112 reports all300 frozen files98,431,150B exact; first1 preserved.
-Root83827/tool0 independently hashes all300 WD frozen files98,431,150B/indexa4c76c6e,
-229 encoded payloads plus16 local canonical refs exact; no Mac codec execution. Root own
-semantic-results mirror83828/SSH83831/tool23629 actually255 at16:06:34Z, archive0, connection
-timeout. Collector terminal84163/SSH84168/tool24762 also255 before remote producer. All
-existing tools now terminal; local85146 actual0 proves22 explicit collector Mac owners
-absent. Remote semantic JSON/remote mirror wait and fresh finite closure remain unmirrored.
-Root opens authorized `Grok Bot` via CUA: conversation details -> Computer -> Open
-computer. Screen is connecting; actual86596/status86599/tool0 at16:13:55Z now shows target
-Online/selfOnline. Actual Root86913/SSH86915/remote108388/tool63513 wait0 at16:14:59Z
-confirms same hostname/bootIDa5c4f692/source1b/gamec4fd/readyd821 and original FAILED1 raw/
-result/diagnosis intact;253 known owners absent, portsclosed/profileownerabsent, no R5/r2.
-The authorized cloud-control route is now verified to restore SSH; subsequent CUA state
-shows a live noVNC screen for the same hostname (URL/auth tokens are not persisted).
-Root semantic mirror88199/SSH88201/tar88252/tool9668 actual0 at16:17:48Z saves three JSON
-results85,075/46,624/190,856B. Collector terminal-r2/tool55590 actually1 reaches host after
-340/883/164 reads but finds missing dist/simulation/host.js. Root89574/SSH89576/remote111976/
-tool53839 diagnosis0 at16:21:39Z proves all74 compiled files missing/dist absent, no present
-mismatches; TypeScript target package missing. Original source/shipping/failed proof unchanged.
-R5 static cannot start until exact generated artifacts/dependencies are restored. Canonical
-recipe and historical shared node_modules link are read; next inspect only known accepted
-compiled/dependency pools before choosing byte-exact recovery or canonical remote build.
-Collector terminal-r3/tool92266 and final90071/90075 actual0 are complete. Root91962/tool0
-consumes all28 final control pins/ca057a78 and verifies29 collector/final owners absent;
-all76 terminal frozen bodies1,422,075B independently hashed exact. No remaining failure-proof
-retention gap; original run remainsFAILED1. Root90911/SSH90914/remote113639/tool8433 actual0
-at16:24:44Z confirms both known canonical compiled pools have0/74 outputs and their shared
-node_modules target is missing; source-r1 still has its original dangling symlink. Root93381/SSH93383/tool6703 actual0 at16:32:49Z restores the exact shared pinned
-dependencies117937 and canonical compile117954, parent117936/all0/blank stderr. Source883/
-shipping164 unchanged, all74 regenerated outputs byte-exact to original ready; original
-node_modules symlink preserved, no source/ready/public edit. Prior313 is reused, not rerun.
-[Root failure-proof disposition](docs/verification/creation-view-adoption/root-fixed-native-consumption-disposition-r2.json)
-accepts complete original-proof consumption and records exact recovery; product/run remains
-FAILED1. Separate R5 preparation gate7272f4f7 authorizes only reviewed input upload,
-generation/static/full retention and terminal. Same /root/fixed_proof_sol_max is assigned
-that single new outcome, new remote fixed-preparation-r5; no authored/source changes or
-HTTP/Chrome/App launch. Actual launch PID/handle awaits checkpoint. Native gate separate. No product pass from UI.
-Delegates stopped new SSH; tools terminal. Full WD manifest actually lists six roots with
-303+8+4+7+10+8 rows=340. Root withdraws runtime-only coverage concern: the schema preview
-intentionally sampled only one list entry; no material proof/root gap existed. Root consumer writes only separate evidence/root-fixed-native-consumption-r2. New read-only
-/root/fixed_failure_drift_luna_max independently challenges actual failure attribution and
-cleanup/deadline boundaries on Grok; no whole finite79 closure round is counted.
+Missing generated cache is resolved: Root93381/SSH93383/tool6703 actual0 at16:32:49Z,
+remote117936/npmci117937/compile117954 all0. Canonical pinned dependency restoration and
+Grok compile reproduce all74 original compiled hashes, with source883/shipping164 and
+original node_modules symlink unchanged. Prior313 tests are reused, not freshly rerun.
+Evidence: ../evidence/root-generated-recovery-r1 and remote generated-recovery-r1 result.
 
-[Root reviewed R5 disposition](docs/verification/creation-view-adoption/root-fixed-authored-disposition-r5.json)
-519203d9 accepts authored-only9 files93684B/index50f237fd. Atomic all-pair snapshots and
-unique trusted original delivery<14s qualify quotes; per-pair proof is written before
-complete/9s/all-qualified/target assertions. Negative/pending/late/duplicate data stays
-visible. Derived20s is not timer-creation evidence; the intentional execute exception
-never applies to quotes, and9s is not hard CDP cancellation. Independent Sol/Luna narrow
-PASS and original R3/R4 HOLD remain preserved. No R5 generation/static/runtime launch.
+[Authored R5 disposition](docs/verification/creation-view-adoption/root-fixed-authored-disposition-r5.json)
+519203d9 accepts only reviewed9 files93684B/index50f237fd. Unique atomic quote snapshots,
+per-pair proof before assertions, and real trusted delivery<14s are required; pending,
+late, duplicate and negative data stay visible. R3/R4 HOLD remain immutable. Separate
+[preparation gate](docs/verification/creation-view-adoption/root-fixed-preparation-gate-r5.json)
+7272f4f7 authorizes sole /root/fixed_proof_sol_max only exact R5 upload/generation/static/
+retention/terminal; no source repair, HTTP/Chrome/App or runtime authorization.
 
-Next: separately authorize exact reviewed R5 remote generation/static/mirror/terminal,
-consume the final source/driver/contract/observer and real waits, obtain independent
-preparation verdicts, then bind a fresh runtime gate before one affected native rerun. Actual native/public and twice whole Design plus twice whole
-Drift finite79 closure precede PR80 readiness/merge and issue79 closure. Information kiosk/
-merchandise proposal stays unaccepted; full original/gameplay/human/GPU/scale breadth open.
+First R5 upload static-r1 is actual2 (Mac96450/tar96452 actual0/SSH96453/tool62498): remote
+background tar loses stdin. Control-only fd3 fix is authorized; no authored upload or
+preparer reached. Static-r2 actual1 (Mac98096/tar98127 actual0/SSH98136/tool34683) fails
+nested precheck newline quoting before tar; raw control-string fix preserves both failures.
+Corrected static-r3 Mac98689/tar98697/SSH98698/tool38947 completes actual0/blank stderr;
+remote125996 byte audit and125997 preparer actual0 at16:48:50Z. All9/index/gate exact,
+source883/shipping164/compiled74 fresh hashes exact,59 literal expressions and5helpers pass.
+Generated driver09f30964d3b98fc096bab6c7f8235ea19fb7d594c948c8a64e9c67a5c9e646c5,
+contract9fd2025bc4b8f7f0c1255568029d449859370b5b67d7ad7ec94dd46cb15dc026,
+observered487ddf unchanged. Actual transport receipts are in ../browser/fixed-preparation-r5/
+transport/static-r{1,2,3}. Frozen mirror Mac274/SSH276/tool13577 and remote128189/freezer128192/tar128199 actually0;
+85 logical payloads69555122B, manifestae3a292c/checkse6996da2. WD64MiB+1 probe references
+the byte-exact canonical R2 file; remote generated inputs are normal files. Actual mirror
+wait/finite/local terminal still collecting under the same owner. No native/product pass.
+Root2322 actual0 at16:56:49.653956Z independently hashes all85 WD logical payloads
+69555122B/indexae3a292c/checkse6996da2, all13 input pins and actual source883/shipping164/
+compiled74 saved maps exact. Canonical symlink and real59+5 child waits match. Evidence:
+../evidence/root-r5-preparation-consumption-r1/wd-result.json. Remote independent byte
+consumption and final finite terminal still pending; no native authorization.
+
+Finite terminal mirror Mac2120/SSH2124/tool78302 and remote129906/129909/129911/129912/
+129913 actually0;24 control bodies38025B at WD terminal-frozen-r1. Final Mac3617/tool9f377f
+actual0 at17:00:01Z and later82cfee proves3617 absent. Owner final-local-r1/result.json
+95442398 binds25 control pins/all85+24 and13 Mac producers absent; Root consumption next.
+Root remote consumer3209/SSH3211/remote131134 actual1 before any payload reads: it assumes
+a remote frozen-r1 directory which does not exist. Actual retained orchestration writes
+remote preparation-files.json/.sha256 directly under R5 root, while only WD uses frozen-r1.
+Original consumer input/result1 stays preserved. Corrected Root3976/SSH3980/remote132299
+actual0 at17:01:06.314953Z independently rehashes all85 remote payloads,13 inputs and all
+883source/164shipping/74compiled bytes exact. Evidence: ../evidence/root-r5-preparation-
+consumption-r1/remote-result-r2.json and actual wait. No source or App execution.
+
+Clean-context /root/r5_preparation_design_sol_max and existing /root/fixed_failure_drift_luna_max
+independently review final preparation only. DesignSol final PASS consumes full source/
+input/85+24 packet and actual final tool receipt (readers130628/131487 all0, no material
+finding). Drift final PASS consumes25 control pins/actual local5111 exit0, final3617 absence and
+Root132299 remote byte receipt with that explicit scope; no separate Luna SSH run is claimed. Root4730 actual0 at17:03:17.214747Z consumes
+all25 final control pins and24 terminal bodies38025B, actual0 tool receipts and14 Mac
+owners absent. Root independently distinguishes819B GNU tar macOS provenance notices
+from blank outer SSH/static child stderr under complete byte equality. No whole finite79
+closure round or runtime permission is inferred.
+
+Root cleanup342 actual0 at16:53:11.676081Z removes only completed commit TMP296B and
+semantic transfer tar327680B after11 exact owners absent, retained body/hash equality and
+blank lsof checks. All retained proof remains readable; no remote/source/profile cleanup.
+Evidence: ../evidence/root-recovery-disposable-cleanup-r5.
+Root7623 further cleanup0 at17:11:02.773487Z removes completed retained.tar98785280B
+only after all302 contained bodies98533704B match retained files,29 exact owners absent
+and lsof closed. Evidence: ../evidence/root-completed-retention-transfer-cleanup-r1.
+Original full proof/encoded payloads/typed saves remain retained; no remote cleanup.
+
+[Root R5 preparation disposition](docs/verification/creation-view-adoption/root-fixed-preparation-disposition-r5.json)
+accepts only complete preparation/independent verdicts. Separate
+[Root runtime gate](docs/verification/creation-view-adoption/root-fixed-launch-gate-r5.json)
+authorizes sole /root/fixed_proof_sol_max exactly one unchanged fixed-runtime-r2 after
+fresh full pins/known owners plus all62 new actual remote readers absent/ports/profile checks.
+No native launch or product pass yet.
+
+Next: sole owner fresh preflight and one actual source-bound native run, full retention/
+Root consumption and affected public integration. Actual native/public and twice whole Design plus twice
+whole Drift finite79 closure precede PR80 readiness/merge and issue79 closure. Information/
+merchandise work stays unaccepted. The UTC journal retains detailed recovery/control history;
+[earlier checkpoint](docs/progress/2026-10-11-creation-checkpoint-before-proof-recovery.md)
+retains the original pins, source reviews, failed runs and offline audits.
 
 ## Current identity
 
