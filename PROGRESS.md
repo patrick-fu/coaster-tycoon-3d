@@ -1,6 +1,6 @@
 # Project progress and recovery
 
-Last updated: 2026-10-11 00:34 UTC.
+Last updated: 2026-10-11 01:15 UTC.
 Root owns this live record and the [UTC journal](docs/progress/2026-10-11.md).
 [Previous detailed checkpoint](docs/progress/2026-10-10-progress-before-final-public-acceptance.md)
 retains the source/native/public/tool repair sequence. `CONTEXT.md` remains the domain glossary;
@@ -26,7 +26,7 @@ preserve default profile, complete typed saves, editable masters and frozen prev
 ## Current finite79 state and next action
 
 Source1bdec0dd/tree8ea89182/gamec4fd4cff/readyd8218203 is unchanged. Documentation HEAD is
-3411c098aa4643c4799c7ec9667a1acdd33160e3; PR80 remains OPEN/draft. Current public UI is
+25614bc9ec8d263bb27b67abc97000855dc2013f; actual pushed PR80 head matches25614bc9 and stays OPEN/draft. Current public UI is
 source7a0bbac. No new executable, hosting or whole-game completion is claimed.
 
 Final fixed-preparation-r2 is COMPLETE/PASS **preparation only**. Actual static1757554,
@@ -73,13 +73,50 @@ same complete nonempty snapshot reaches original target7/UNKNOWN_RIDE checks and
 Pending/negative replies stay visible and timeout fails. An initial fixed cohort could
 omit later matching requests and is not adopted.
 
-The original browser owner is now solely authoring isolated fixed-preparation-r3 body/
-maker/preparer/material diff/pins for fixed-runtime-r2. This is source-only preparation:
-no Mac generation/static/test, network/upload/App, production/fixture/observer edit.
-Root and independent material review are pending. Existing publication checkout0f6c585b
-on p/patrick/publish/classic-7a0bbac is actually clean; read-only inspection only.
+R3 authored-only9 files115197B/index8eb766a9 are frozen **HOLD/unrun**. Both independent
+reviews now agree: nine-second sampling starts later than the quote's own20s lifetime and
+cannot qualify late complete replies. Sol's initial material PASS is explicitly withdrawn
+after the source-based cross-check. [Root R3 disposition](docs/verification/creation-view-adoption/root-fixed-authored-disposition-r3.json)
+49cda95c retains the counterexample and Root's withdrawn field false positive. Actual R2
+writer132/133 writes terminalOwnedProcessState, matching the preparer; auxiliary extractor
+get(terminalKnownOwnedProcessState) may return null. Consume the original result table,
+not that projection alias; no schema-key repair is warranted.
 
-Next: finish and review this minimum authored candidate; after changed Grok access evidence,
+R4 authored-only9 files106404B/index5ce70421 is frozen HOLD **evidence order only**:
+DriftLuna passes the real late-reply repair, while DesignSol confirms complete/9s check
+precedes qualification-file write for pending/9.2s samples. Root accepts a one-line order
+correction; complete snapshots remain retained and all failures stay closed. [Root R4 disposition](docs/verification/creation-view-adoption/root-fixed-authored-disposition-r4.json)
+3ddbb515 preserves actual scopes; no product/pass-criteria defect is inferred.
+
+The sole owner completes isolated fixed-preparation-r5 authored-only9 files93684B,
+index50f237fd/body278379be/makerf1ba7e7b/preparer882103a9/diffcefadc71. Root32557/tool0
+streams all nine exact and proves text scope: removing that one identical check line makes
+R4/R5 body exact; helper outside still matchesR2, no generated inputs. The sole change
+moves complete/9s assertion below qualification JSON write and before all-qualified check.
+Every full snapshot keeps all pairs/received-native/original before/after/error records;
+unique trusted ordinal/id/source/request stamp/deliveryOrdinal and receive+finished
+handler<14s guards stay unchanged. Pending/negative/late/duplicate/throwing/missing evidence
+is never filtered. Original target7/domain-error guard and all seven cases remain exact.
+Derived20s is not observed timer creation; intentional execute fault never applies to
+quotes. Sample9s is not hard cancellation; unchanged CDP can take60s and fail.
+
+Only file authoring occurred, no network/template/AST/syntax/test/App/production/observer/
+fixture edit. Existing DesignSol/DriftLuna receive only this one-line/diff-metadata increment
+for finite read-only re-review; both now narrow PASS, no whole finite79 rounds counted.
+Root accepts authored-only in root-fixed-authored-disposition-r5.json (519203d9).
+All direct delegates are terminal; no App/HTTP/static producer is pending. Fresh33552/
+status33555 wait0 at01:06:35Z still reports targetOffline/selfOnline, cachedLastSeen00:40.
+No new SSH or host substitution. Full failed raw consumption, restored host, actual remote
+generation/static/terminal and new exact Root runtime gate remain hard prerequisites.
+This turn made actual static/native/diagnostic/authoring progress, then reaches an external
+access impasse. The resumed blocked audit is fresh; Goal remains ACTIVE below3-turn
+threshold, never complete or user-paused. No resolved work is reopened to create activity.
+
+Actual draft-body edit/readback26154/tool82407 wait0 at00:36:08Z, body69be6e10 matches
+OPEN/draft/head25614bc9 and retains nativeFAILED1/remote proof gap. Existing publication
+checkout0f6c585b on p/patrick/publish/classic-7a0bbac is actually clean; read-only inspection.
+
+Next: after changed Grok access evidence,
 mirror and fully consume the same original failed proof, then remote generation/static/
 terminal and a new exact Root gate before an affected App run. Actual native/public checks
 and two entire Design plus two entire Drift finite79 closure rounds precede PR80 readiness,
@@ -92,6 +129,11 @@ one extra EOF blank line in the new UTC journal. Actual outputs remain in eviden
 context-commit-r3; no executable/Git commit occurs. Correct only that blank and recheck.
 A subsequent metadata read mistakenly runs Git in the non-Git workspace parent and exits128;
 use the actual project checkout for Git. Both administrative failures remain explicit.
+
+Actual corrected docs-only commit25614bc9ec8d263bb27b67abc97000855dc2013f completes0 at00:34:29Z,
+Root25801; six expected docs files only, clean immediately after commit, gamec4fd unchanged.
+Push/readback wrapper25911/tool81369 actual0 at00:35:00Z matches exact PR80 head/draft.
+Retain actual staged-check2/parent-Git128; both corrected without a production edit.
 
 ## Current identity
 
@@ -420,6 +462,12 @@ the risk or closing the composition does not resolve it. Previous publication br
    claim is accepted. P4 policy/weather/navigation/model work remains OPEN after79.
 
 ## Cleanup
+
+Current Root26520/tool0 removes only two completed owned TMPDIR commit/PR bodies3124B,
+retained byte-exact,14 explicit producers absent and actual lsof empty/exit1. Evidence/root-
+completed-body-cleanup-r3/result.json retains guards and the prior failed wrapper PID gap;
+its actual tool1 is terminal. Source/profile/masters/fullproof/frozen routes are untouched.
+
 
 Current exact Root8881/tool0 cleanup removes only2 completed owned TMPDIR PR/commit bodies,
 2159B, after byte-exact retained Markdown/message, all recorded producers absent and actual empty
