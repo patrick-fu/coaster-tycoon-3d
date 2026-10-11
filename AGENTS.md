@@ -16,6 +16,11 @@ on the external storage volume, and keep generated build output on the remote
 host. Do not silently fall back to local execution when the remote host is
 unavailable.
 
+If Grok Bot becomes unreachable, Patrick authorizes opening the local `Grok Bot`
+app (`com.anysphere.sand`), choose the Bot header's conversation details, then
+`Computer` -> `Open computer` to restore access. Verify SSH connectivity and
+remote ownership afterward before resuming execution.
+
 ## Agent skills
 
 Before adding simulation code, dependencies or game resources, read

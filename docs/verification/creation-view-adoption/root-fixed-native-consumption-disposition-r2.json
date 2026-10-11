@@ -1,0 +1,155 @@
+{
+  "utc": "2026-10-11 16:35:49 UTC",
+  "verdict": "ACCEPT_COMPLETE_FAILED_PROOF_ONLY",
+  "sourceCommit": "1bdec0dd377f922c9168f454c4b2eaba92a1bbc4",
+  "gameSHA256": "c4fd4cff74d6cf3a3b9599c9f82772fb73fea672fdde3157ffbafe00358f2001",
+  "readySHA256": "d8218203fc294a3316c8751697d5f412c286e3df9c700b5e5906c1c16fc79ee7",
+  "originalRuntime": {
+    "prefix": "fixed-runtime-r1",
+    "runnerPID": 1760734,
+    "actualExit": 1,
+    "passed": false,
+    "endedUTC": "2026-10-11T00:21:05.305537+00:00",
+    "completedAssertions": 125,
+    "wholeQueueCaseCompleted": false,
+    "failure": "KeyError('reply')"
+  },
+  "retained": {
+    "originalFiles": 340,
+    "originalBytes": 352214894,
+    "originalRootCounts": [
+      303,
+      8,
+      4,
+      7,
+      10,
+      8
+    ],
+    "manifestSHA256": "3d8d3ef5bc993629b9a6cc224ddc0f115089b0ffa98af02d1db8bb1606655c29",
+    "uniquePayloads": 229,
+    "encodedPayloadBytes": 97683532,
+    "decodedUniquePayloadBytes": 252486862,
+    "canonicalReferences": 16,
+    "canonicalReferenceBytes": 69329833,
+    "allOriginalAndRemoteEncodedDecodedBytesConsumed": true,
+    "allWDEncodedAndCanonicalReferencesConsumed": true,
+    "frozenPrimaryMirrorFiles": 300,
+    "frozenPrimaryMirrorBytes": 98431150,
+    "frozenFinalMirrorFiles": 76,
+    "frozenFinalMirrorBytes": 1422075,
+    "finalReceiptSHA256": "ca057a78ce27a90c1a80cc8655a1ef36160254c1d50410b5855e78ec6de0da28",
+    "all28ControlPinsConsumed": true,
+    "remainingRetentionGaps": []
+  },
+  "rootEvidence": {
+    "path": "/Volumes/WD/code/workspaces/coaster-creation-input/evidence/root-fixed-native-consumption-r2",
+    "rawReaderPID": 99292,
+    "rawToolExit": 0,
+    "rawBytes": 87517634,
+    "rawRows": 6128,
+    "rawSHA256": "7418bef113f00ae8d840d6f81873d111695d08643dfa7797f92225841ed91cf9",
+    "nativeAuthorityReaderPID": 101597,
+    "retainedReaderPID": 103820,
+    "wdPayloadReaderPID": 83827,
+    "finalPinReaderPID": 91962,
+    "wdFinalReaderPID": 92825,
+    "allActualExits": 0,
+    "semanticResultsMirroredActualSSHExit": 0,
+    "semanticResultsMirroredActualTarExit": 0
+  },
+  "semantic": {
+    "actualHTTPBodies": 164,
+    "actualExecutedSourceBodies": 97,
+    "nativeExportAuthorities": 11,
+    "allCompleteAuthorityClickSaveRPCBlobDownloadBindingsExact": true,
+    "typedOriginalAndRestoredSHA256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "typedOriginalDatabaseCount": 0,
+    "borrowedResources": {
+      "geometries": 67,
+      "materials": 48,
+      "textures": 30,
+      "bitmaps": 30,
+      "allReleaseOnce": true,
+      "foreignTargetAndURLPreserved": true
+    },
+    "actualOriginalOwnedProcesses": 15,
+    "actualOriginalOwnedProcessesTerminated": true,
+    "actualTrackHeldHandlerCompletionMs": [
+      6137.199999988079,
+      6130.0999999940395
+    ],
+    "actualQueueHeldHandlerCompletionMs": [
+      2981.0999999940395,
+      2980.2999999821186
+    ],
+    "ordinaryHeldOriginalHandlersWithin14s": true,
+    "routeErrors": 0
+  },
+  "diagnosis": {
+    "actualCDPSnapshot": 710,
+    "firstQueueQuote": {
+      "requestID": 722,
+      "requestOrdinal": 3147,
+      "replyPresentInSnapshot": true
+    },
+    "secondQueueQuote": {
+      "requestID": 740,
+      "requestOrdinal": 3218,
+      "replyPresentInSnapshot": false,
+      "subsequentTrustedNativeReplyOrdinal": 3222,
+      "subsequentDeliveryBeforeOrdinal": 3223,
+      "subsequentDeliveryAfterOrdinal": 3224,
+      "subsequentQuoteOK": true,
+      "requestToDeliveryApproximatelyMs": 4.4
+    },
+    "conclusion": "Driver snapshots a growing cohort after waiting only for its first reply. Python accesses an omitted pending reply key. The later original quote reply arrives normally, but the already-failed whole Queue case is not retrospectively qualified.",
+    "independentReview": "Luna Max reader110248/SSH88406 actual0 independently confirms original Queue chronology; prior hash/exception/lock wording and truncated output explicitly corrected.",
+    "wholeFinite79ClosureRoundsCounted": 0
+  },
+  "generatedRecovery": {
+    "actualRootWrapperPID": 93381,
+    "actualSSHPID": 93383,
+    "remotePID": 117936,
+    "dependencyPID": 117937,
+    "compilePID": 117954,
+    "allActualExits": 0,
+    "endedUTC": "2026-10-11T16:32:49.057161+00:00",
+    "compiledPins74MatchOriginalReady": true,
+    "source883AndShipping164Unchanged": true,
+    "versions": {
+      "typescript": "7.0.2",
+      "three": "0.186.1"
+    },
+    "originalNodeModulesSymlinkUnchanged": true,
+    "originalMissingCompiledFailureRetained": true,
+    "prior313Tests": "Reused under identical source/compiled bytes, not freshly rerun"
+  },
+  "recovery": {
+    "userAuthorizedLocalAppProcedure": "Grok Bot com.anysphere.sand -> Bot conversation details -> Computer -> Open computer",
+    "actualRecoveredSSHExit": 0,
+    "actualRecoveredRemotePID": 108388,
+    "liveNoVNCHostMatches": true,
+    "authURLsAndTokensPersisted": false
+  },
+  "preservedFailures": [
+    "Original native FAILED1",
+    "First SSH255",
+    "Mirror local metadata hash1 despite SSH0/tar0; narrowly repaired AppleDouble489B",
+    "Interrupted Root semantic-mirror SSH255",
+    "Finite terminal255",
+    "Current missing compiled-artifact terminal1 before exact generated recovery"
+  ],
+  "runtimeLaunchAuthorized": false,
+  "next": "Separately authorize the reviewed immutable R5 authored inputs for remote generation/static/retention and terminal verification. Consume exact generated driver/contract/source/observer/pins, obtain independent preparation verdicts and an exact Root gate before fixed-runtime-r2. Native/public and twice whole Design/Drift closure remain required.",
+  "unexecuted": [
+    "R5 generation/static",
+    "fixed-runtime-r2",
+    "Remaining original affected native cases",
+    "Candidate public integration",
+    "Whole finite79 twice Design and twice Drift closure",
+    "Whole original breadth/human/GPU/scale acceptance"
+  ],
+  "productPass": false,
+  "wholeFinite79Pass": false,
+  "wholeGoalComplete": false
+}
