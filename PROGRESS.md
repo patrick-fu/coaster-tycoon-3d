@@ -1,186 +1,136 @@
 # Project progress and recovery
 
-Last updated: 2026-10-11 19:30 UTC. Root owns this record and the
-[UTC journal](docs/progress/2026-10-11.md). Full preceding state is preserved in
-[the pre-tail checkpoint](docs/progress/2026-10-11-progress-before-r6-tail.md).
-`CONTEXT.md` is the domain glossary; this file records execution and recovery.
+Last updated: 2026-10-11 20:53 UTC. Root owns this record and the
+[UTC journal](docs/progress/2026-10-11.md). Detailed native-tail history is preserved in
+[the pre-public checkpoint](docs/progress/2026-10-11-progress-before-public-creation-qualification.md)
+and [the earlier pre-tail checkpoint](docs/progress/2026-10-11-progress-before-r6-tail.md).
+`CONTEXT.md` remains the domain glossary; this file records execution and recovery.
 
 ## Objective and ownership
 
-The accepted first-playable independent MIT browser park game remains unfinished.
-Classic controls, polished 3D art, substantive RCT2 gameplay breadth, original-scale
-runtime, representative integrated-GPU/scale and human style/play qualification remain
-required. Full79 families/155 variants/41 shops/35 products plus admissions, finance,
-research, scenarios and original numerical/art agreement remain OPEN. Finite77 is one
-accepted four-family composition. No new gameplay decision is required for finite79.
-Goal API actually returned ACTIVE/updated1791741767 at18:02; earlier BLOCKED is history.
+The independent MIT browser park game remains unfinished. Patrick selected Classic controls
+and original gameplay fidelity, substantial 3D art and breadth. Full79 families/155 variants/
+41 shops/35 products, admissions, finance, research, scenarios, weather and presets remain
+OPEN. Original numerical/art agreement, human style/play and representative integrated-GPU/
+original-scale qualification remain mandatory. Finite77 is one accepted four-family composition;
+finite79 is its creation-view repair. No new gameplay decision is required now. Goal API is ACTIVE.
 
 English project artifacts, Chinese chat. Root alone owns production/docs/GitHub/integration.
-Logic uses Sol Max, visuals AGY and adversarial review Luna Max. All builds, tests,
-simulations, Blender, Chrome and raw/codec semantic parsing run on designated Grok over
-`ssh grok-build`, never Mac. Mac editing/Git/orchestration/plain proof I/O/hash and small
-JSON (<=256KiB) are allowed. Source, masters and proof live on WD, generated builds on Grok.
-Preserve default browser profile, complete typed saves, failed runs, masters and previews.
+Logic uses Sol Max, visuals AGY and adversarial review Luna Max. Builds/tests/simulation/
+Blender/Chrome/raw/codec/AST run on designated Grok via ssh grok-build, never Mac. Mac edits,
+Git/orchestration/plain IO/hash/small JSON <=256KiB are allowed. Workspaces and retained proof
+live on WD; generated builds on Grok. Preserve default profile, typed saves, masters and previews.
 
 ## Authoritative identities
 
-- Worktree `/Volumes/WD/code/workspaces/coaster-creation-input/coaster-tycoon-3d`;
-  branch `p/patrick/fix/creation-view-adoption`; merged main basecb922ccea03841033de32ca5840219b056ea7173.
-- Documentation HEAD8e038f592f5d10598d70a3fe29ae01194dee7ba9, actual commit/push/readback0.
-  AGENTS/PROGRESS/journal are newer uncommitted context. Documentation HEAD is not a build.
-- Executable source1bdec0dd377f922c9168f454c4b2eaba92a1bbc4/tree8ea8918269e119fde5c8a0b7603214db5541041a;
-  gamec4fd4cff74d6cf3a3b9599c9f82772fb73fea672fdde3157ffbafe00358f2001.
-  Ready d8218203fc294a3316c8751697d5f412c286e3df9c700b5e5906c1c16fc79ee7.
-  Remote source `/workspace/coaster-creation-input/source-r1`, shipping `source-r1/web-dist`.
-  Source883/shipping164/compiled74 pinned. Grok cache recovery reproduces all74 exactly;
-  unchanged313 checks and Node factory oracle810792B/a911 are reused, not freshly rerun.
-- [Draft PR80](https://github.com/patrick-fu/coaster-tycoon-3d/pull/80),
-  Preserve the new ride until its view is adopted, remains OPEN/draft;
-  [issue79](https://github.com/patrick-fu/coaster-tycoon-3d/issues/79) remains OPEN.
-  PR body6b9121a2 predates the latest failure outcome; update at the concrete disposition.
+- Worktree /Volumes/WD/code/workspaces/coaster-creation-input/coaster-tycoon-3d;
+  branch p/patrick/fix/creation-view-adoption; main basecb922ccea03841033de32ca5840219b056ea7173.
+- Documentation HEAD74cbeeef1b2417cb9a13c0904dfa77ee8867096e actually committed/pushed/read back0.
+  Current progress/journal/static gate/native disposition are newer uncommitted documentation.
+- Executable source1bdec0dd377f922c9168f454c4b2eaba92a1bbc4;
+  tree8ea8918269e119fde5c8a0b7603214db5541041a;
+  gamec4fd4cff74d6cf3a3b9599c9f82772fb73fea672fdde3157ffbafe00358f2001;
+  Readyd8218203fc294a3316c8751697d5f412c286e3df9c700b5e5906c1c16fc79ee7.
+  Grok /workspace/coaster-creation-input/source-r1 and shipping source-r1/web-dist;
+  full source883/shipping164/compiled74/inputs16 exact. Cached74 are reproduced exactly;
+  unchanged313 canonical checks and full Node factory oracle810792B/a911 are reused.
+- [PR80](https://github.com/patrick-fu/coaster-tycoon-3d/pull/80), Preserve the new ride until
+  its view is adopted, stays OPEN/draft; [issue79](https://github.com/patrick-fu/coaster-tycoon-3d/issues/79),
+  Preserve the created ride target through pending view adoption, stays OPEN. PR body0ea3f115
+  is the prior read-back description and now needs the actual native acceptance update.
 - Public source7a0bbac668ece30416cceefb97997c0de17d1376/hosting0f6c585b98fb786d8966c28b6aaab022c3064459
-  remains unchanged. [Classic](https://patrick-fu.github.io/coaster-tycoon-3d/?showcase=classic)
-  and its frozen classic-7a0bbac preview retain prior native215/public178+101 scopes.
-  No candidate1b publication, merge, first-playable or human style acceptance is claimed.
+  is unchanged. [Classic](https://patrick-fu.github.io/coaster-tycoon-3d/?showcase=classic) and
+  [frozen7a](https://patrick-fu.github.io/coaster-tycoon-3d/previews/classic-7a0bbac/?showcase=classic)
+  retain accepted prior root178/pin101 scopes. Source1b is not published or merged yet.
 
-## Finite79 observed outcome
+## Accepted scoped native composition
 
-Original fixed-runtime-r1 remains FAILED1 (Queue snapshot race); complete failed proof
-accepted by root-fixed-native-consumption-disposition-r2.json/2765dfea. Do not replay it.
-R5 preparation is accepted only as preparation: authored index50f237fd, driver09f30964,
-contract9fd2025b, observered487ddf; full85 payloads/24 terminal controls and independent
-DesignSol/DriftLuna pass. Gate2b053b2a was exhausted by one fixed-runtime-r2.
+[Native disposition](docs/verification/creation-view-adoption/root-r6-tail-native-disposition.json)
+c13b08c867374425dd1b119614927757be3155f5edb3fa84c6f24cfd3ec38575 is Root-accepted.
+Original runtime-r1/r2 remain FAILED1. R2 has304 passing recorded assertions and six completed
+cases: Track, Queue, Escape, Scene once, quote rejection and intentional26.3999s execute timeout
+under the unchanged20s timer. Its stale script11 collector failure and physically unexecuted
+final route assertion stay explicit. Complete R2 proof was independently accepted by f8ab0f9c;
+raw221661358B/f3bc6c7f and404 lossless originals are retained. Do not replay these six cases.
 
-Original fixed-runtime-r2 also remains FAILED1, runner140832/HTTP140835/Chrome141005.
-Native failed17:27:33Z; original SSH9405/tool92391 is255, stdout tail140833 is141.
-The driver queried stale page script11 after explicit reload created game1270/context4.
-Both independent Sol/Luna raw diagnoses confirm this collector lifecycle defect.
-Six cases complete: Track, Queue, Escape, Scene update once, quote rejection and deliberate
-execute timeout;304/304 recorded assertions. Ordinary trusted held events are delivered once
-under14s; intentional26.3999s late execute is separately labeled under the unchanged20s timer.
-97 startup executed sources/164 HTTP bodies/26 complete native Export authorities are real.
-Original/reloaded durable829577B SHA59948f8a3b17e9cd3acd0827cec7354d06dff0263edd473a6c585d0947e9ad47
-is full native evidence. Typed original[] restores exactly, both observed resource disposal
-reports and actual15 native descendants/ports/profile closure are preserved.
-Missing scopes: actual-reload source bodies and network bodies, Oversize import and final
-route assertion. Do not relabel the original run PASS or infer a product defect.
+R6 static disposition0e08492e accepts full108 logical payloads/9 controls/37 final pins,
+154 actual remote checks and assembled dynamic autosave syntax. Driver7ca7fd8c/contractfdb02123
+are frozen. Two independent Sol/Luna source reviews close earlier autosave attribution P1;
+all old authored/handshake/reader failures remain. Native gatebfdf42df is exhausted by one run.
 
-## Complete retention and Root consumption
+Fresh runtime-r3-tail wrapper228440 waits runner228441 exit0 at20:02:19Z, result4999780B/
+2e564a5e and269 passing recorded checks. Full raw105257033B/8653 rows/e9c5c46f is consumed.
+Actual non-click saves758/1593 are59,999.9ms apart; original typed slot changes afd73→59948
+only after real autonomous commit, observed106.8/190.5ms from each request. Changed marker3057
+precedes native File Import; each full atomic window has exactly one eligible request.
+Actual durable inventory/cursor/stop/tail/reload are contiguous CDP627/628/629/630/631.
+New loader/default context3→4/worker target and97+97 complete actual sources/3+3 bodies join
+original raw. Four native Export authorities and exact Blob/completed GUIDs are real. Oversize
+67108865B gives locked feedback338/full trusted recovery340/unlock343, zero load requests.
+Full original typed[] restores exactly; two67/48/30/30 resource inventories dispose once,
+bitmaps close and foreign ownership survives. Full raw/final four error sets are empty.
+Native15 descendants plus runner/wrapper end; fresh406 known owners/profile/ports close.
 
-WD `../browser/fixed-runtime-r2-retention-r1`:404 originals731852845B retained losslessly as
-267 payloads123744007 encodedB/616276540 decodedB and16 canonical refs69337018B.
-Full raw221661358B/18065 rows/f3bc6c7f; manifest6a17bdec (276336B; parse only Grok).
-Collector fully COMPLETE:300 primary124790059B plus75 terminal2272868B; final26069B/9c30bba3,
-83 control pins and actual final tool21034/d4fc1d/exit0, later31068 proves final owners absent.
-346 recorded remote owners absent/portsclosed/profileinactive, fresh883/164/74/13 exact.
+Lossless native retention:318 originals364215572B,211 payloads110753291 encodedB/
+243865230 decodedB,26 refs75165170B/18 existing canonicals. WD288 mirrors112133796B+9
+controls371B, manifest220663B/d9cb0d43, collector80810/deb3b1 actual0. Final local publisher
+72695/e31859 actual0, final13390B/5e70b88c. Root71964/ad0eef independently consumes all
+packet/canonical bytes; Root73456/89f7c6 consumes37 final controls and actual terminal.
+Proof: ../browser/fixed-runtime-r3-tail-retention-r1 and ../evidence/root-r6-native-consumption-r1.
 
-Root34391/tool16da11 independently streams all300+75 WD/16 refs/83+7 final pins,20 Mac owners
-absent. Reader172623/Mac35177/SSH35179 actually1: all404 originals/267 encoded+decoded/16 refs
-exact, full raw/26 authorities/typed/resources/six cases and3624+12 evidence checks pass.
-One Root matcher wrongly used repository /ui/game.js rather than shipping /game.js.
-Targeted181215/Mac10895/SSH10897 actual0 at18:22:48Z resolves it with exact original raw
-lifecycle; combined3637 checks resolved. Original reader1 is immutable, not silently PASS.
-Same outer transfer toolc1893f is1 because Mac Python lacks extractall(filter=); original
-completed plain tar is preserved. Corrected plain IO12625/tool469b56 extracts nine reports
-without Mac raw/codec parsing. Root remote report-index185983/Mac18795/SSH18797/tool1181cb
-actual0 at18:30:34Z verifies all nine WD reports exact. Original durable is paused=true and
-differs from operated829227B/afd73e9e. Root's
-[failed-proof disposition](docs/verification/creation-view-adoption/root-fixed-native-consumption-disposition-r3.json)
-f8ab0f9c accepts full failed-r2 consumption and six-case reuse only; original FAILED1 remains.
-Do not repeat original packet or six native cases. Evidence: ../evidence/root-fixed-native-consumption-r3.
+Root remote246902 actual1 retains260 of261 passing predicates; its sole false assumption
+compares the final reused download pathname to startup. Targeted diagnosis252464 actual0
+and supplement254552 (8cb050/a1ff54) actual0 resolve this exact stage attribution. Original
+startup GUID completes829227B/afd73; three later GUIDs overwrite the same path with durable
+829577B/59948. Startup full trusted reply/authority/Blob/completion are retained; startup disk
+bytes after overwrite are not claimed. Do not relabel the Root reader1 as0. No runtime replay.
+Both independent Sol Max/Luna Max native reviews are consumed scoped PASS. Their earlier
+wrong-path/unscoped snapshot reader1 failures remain; none counts whole finite79 review.
 
 ## Recovery and current owners
 
-Patrick authorizes Grok Bot app/com.anysphere.sand -> details -> Computer -> Open computer;
-activate the existing window and resume a visible paused overlay. AGENTS records this.
-No Bot chat or remote desktop typing. Same-host viewer is visibly live and foreground.
-Latest actual remote180911/SSH10600/tool9b9540 verifies hostnamegrok-bot-vm-405605737,
-boota5c4f692-8733-4bea-a09f-cd449a2e6054 and prior Root readers absent at18:22:10Z.
+Patrick authorizes local Grok Bot/com.anysphere.sand -> existing window -> Bot details ->
+Computer -> Open computer; click visible paused play/resume when present. Verify SSH host/
+boot and old/new owners afterward. No Bot message or remote desktop typing is authorized.
+Same hostgrok-bot-vm-405605737/boota5c4f692-8733-4bea-a09f-cd449a2e6054 is verified;
+Tailscale aliasgrok-build targets100.106.65.13. Recovery-r3 activates the viewer with one
+visible Retry after Unable to connect; SSH210109 actually0. Earlier255/Tailscale Stopped and
+DERP-only ping1 remain in the checkpoint/journal. No blind retry or Mac runtime fallback.
 
-First resumed SSH255 was diagnosed as local Tailscale Stopped/selfOffline, not auth/product
-failure. No-flag tailscale up9312/observer9308/tool7ab0ae actual0 preserves node settings;
-fresh10007/tool23dc48 proves local+targetOnline. Later index SSH11855 actually255 timeout;
-status12161/tool2ec300 still Running/self+targetOnline/Active, CUA live clock18:25.
-One ping12629/tool d39814 actually1: real DERP(iad) pong795ms, no direct connection.
-Preserve the exit1 distinction. Evidence: ../evidence/root-native-cloud-recovery-r2.
-No App/build is running under current authorization; fresh ownership checks precede any run.
-Current native/static owners are stopped. Sole R6 preparer /root/r6_tail_preparation_sol_max
-returned COMPLETE after Root HOLD: handshake49920/SSH49922 actual255, no remote R6 producer.
-Root toolf1f1c2 actual0 verifies the immutable five authored files and stop0e56c47d/SSHbec824d9;
-49920/49922/stop observer52140 are freshly absent. Stop receipt b9498c actual0 is consumed.
-Local27 files196404B remain preserved. Unexecuted draft remote-static-r1.py has an import-order
-issue and is not runnable/accepted. No stale upload/retry or runtime is authorized.
-
-## Current R6 tail preparation
-
-Revised contract21cc5296 passed independent DesignSol/DriftLuna for authoring/static only.
-Root authored-r1 driver2215479c remains HOLD: independent Sol/Luna confirmed an earlier
-excluded or later masking autosave could hide the selected save's DB abort. Root disposition
-33933111 accepts that P1 and the stopped preparer's original SSH255/no remote producer.
-Immutable r1 draft orchestration also has an import-order issue; never claim it runnable.
-
-Root authored-r2 driver55479B/7ca7fd8c closes P1: changed marker before native import;
-one browser continuation awaits the full typed cursor then copies every non-click save from
-that marker, all trusted replies/original deliveries, and observed performance. Exactly one
-request and full changed cursor within request14s are mandatory; extra/pending/late evidence
-persists before failure. Generic post-reply cursor wait is removed. Final durable/history/
-stopped-tail -> reload, enforced source/network epochs, Oversize and helpers are unchanged.
-
-Both material source re-reviews confirm P1 closure; copied template still had old driver
-input pin. Root metadata-only authored-r3 keeps driver7ca7fd8c byte-identical, corrects only
-that input pin, and freezes template19198B/9bfbce45/indexf1eea4bb. Both independent final
-Sol/Luna pin checks PASS. Root850325 actual0 verifies all preserved r1/r2/r3 indices (5/6/7
-files), exact single metadata delta and unchanged production game. Source disposition-r2/
-da671a15 accepts source and metadata for static preparation only; no runtime authority.
-
-Sole r6_tail_preparation_sol_max is RUNNING a new orchestration-r2 against authored-r3.
-It owns only isolated orchestration/transport/Grok static/frozen proof; no authored/source/
-repo-docs/GitHub/HTTP/Chrome/runtime/gate writes. Generated input pins must derive from actual
-final inputs before assertions. Heavy syntax/AST/Node/semantic checks remain Grok-only.
-Original revisions, failed handshake and unused draft remain immutable. One bounded SSH255
-must preserve the failure and return HOLD for Root recovery; no blind retry or Mac fallback.
-Actual static PID and final evidence are pending; do not infer a static/native PASS.
+All native/static/retention/review delegates are COMPLETE. Latest contract Sol Max read-only
+public recipe is COMPLETE, with exact prior runner and163 unchanged shipping files verified;
+no source/App/SSH/runtime writes. Root alone prepares the next public delivery. No native
+HTTP/Chrome remains running; public preflight must freshen full prior/new owner union.
 
 ## Next concrete action
 
-1. Consume the new actual full Grok static/frozen packet, source883/shipping164/compiled74/
-   fixture/summary/inventory and all old/new owner pins, exact WD mirrors and terminal controls.
-   Only after Root acceptance, freeze a separate one-run source/driver/contract-bound gate.
-2. Complete fresh real differential autosave/reload source+network/Oversize/final errors and
-   typed/resource/process closure. Preserve original R2 FAILED1 and its physically unexecuted
-   final route assertion; compose only the six accepted original cases with fresh tail evidence.
-3. Qualify affected public integration; then complete twice whole Design and twice whole Drift
-   over cumulative finite79 before PR readiness/merge/issue closure. Those rounds are unexecuted.
-4. Continue programme27. Information/merchandise P4 foundation remains UNACCEPTED: candidate14/7/7,
-   genuine old13 oracle, immutable rollback, permanent ownership/four counter approaches and
-   per-product accounting. Proposed Map/Umbrella policy/color/RNG defaults were corrected from
-   pinned reference source; no GPL implementation copy or kiosk integration. CONTEXT contains
-   planned vocabulary. Artlab kiosk bounds exceed accepted stalls; do not blindly integrate.
+1. Commit/push/read back the accepted static/native/context checkpoint and refresh draft PR80.
+2. Prepare affected source1b public root + new frozen classic-1bdec0d pin. Preserve all old
+   preview bytes. Each route needs164 actual HTTP bodies and startup/reload frame/context/new
+   worker/97 sources/HTML+two GLB bodies, actual default profile and full public typed inventory.
+   Public origin's prior1DB/2strings1857485B must not be assumed to equal current local[].
+   Root route: one held Track create7/cross-lock, native Station/Portal/Queue target7, exact
+   trusted Export and one Oversize. Pin route: source and native Import/Export/Save/reload smoke.
+   Real native Save→trusted reply→full cursor→reload→Export suffices for public save recovery;
+   unchanged60s autosave remains enabled, R6 differential autosave and six fault cases are reused.
+   Prior public runner: /Volumes/WD/code/workspaces/coaster-classic-showcase-browser-r1/
+   interactions/fix-r1/public-fixed-r1/preparation-r1/inputs/run-public.py (dc7edf9d).
+   Bind new runner to accepted compositionc13b, not original R2 passed=false; preserve actual
+   Export click/RPC/Blob/completed GUID attribution. Public preparation/runtime is unexecuted.
+3. After actual public proof is consumed, finish twice whole Design and twice whole Drift over
+   cumulative finite79. These rounds remain unexecuted; then PR readiness/merge/issue closure.
+4. Continue programme27. Information/merchandise P4 remains UNACCEPTED: candidate14/7/7,
+   genuine old13 oracle, immutable rollback, permanent ownership/four counter approaches,
+   per-product accounting. Pinned original Map/Umbrella/color/RNG corrections remain retained;
+   no GPL implementation copy. Artlab kiosk exceeds accepted stall bounds; do not integrate it
+   blindly. Full catalogue, art polish, original agreement, human and GPU/scale remain required.
 
 ## Cleanup
 
-Only exact owned completed disposables may be removed after retained byte equality, producer
-absence and actual file-handle guards. Prior guarded327976B and98785280B cleanup is recorded
-in the checkpoint/journal. No general cache/source/profile/proof/masters deletion.
-Pending candidate: exact 8e038f59 TMPDIR commit body. The two completed transfers were
-qualified and removed at18:48; do not list them as still present.
-
-Exact duplicate cleanup b4e3c2 fails closed before hashing/unlink;38975/4d6a39 confirms
-both archives remain, removedBytes0. PIDs8230/34414/34417 now identify later system/Node/REA
-processes, not the old producers. Do not kill them or assume numeric PID equality means
-continued ownership. Further exact cleanup must prove the original owner identity ended.
-
-Root43017/toolc60ce8 cleanup0 at18:48:45Z removes only two completed plain transfer
-archives127406080B after all302+9 contained files equal retained bytes,46 original owners
-ended (three later PID reuses explicitly identified by start time) and empty lsof.
-All original retained/control/encoded/reference bytes remain. Evidence: ../evidence/root-
-completed-retention-transfer-cleanup-r3/result.json. The earlier cleanup1 is preserved.
-
-Fresh recovery-r3 succeeds via authorized Grok Bot Computer/Open computer and one visible
-Retry after Unable to connect. Viewer is live; no Bot message/remote typing or retained
-credential URL. Local Tailscale Running/self+targetOnline. Root54847/SSH54849/remote210109
-actually0 at19:22:26Z (f86449/b67e0e), same host/boot,243 known owners absent, ports closed,
-default profile owner141005 absent, no remote R6/runtime-r3-tail and gamec4fd4cff exact.
-Root37597c consumes actual small terminal and freshly absent local54847/54849. This recovery
-probe grants no runtime authority; preparer must freshen full ownership before static/run.
-Evidence: ../evidence/root-native-cloud-recovery-r3/probe-r1.
+Root77924/22d1f1 actually0 at20:51:09Z removes only four exact completed R6 static/native
+plain transfer archives119329792B after454 retained member byte equivalence,17 original
+producers absent and four empty lsof guards. All encoded/canonical/original/control proof
+remains. Evidence: ../evidence/root-completed-r6-transfer-cleanup-r1/result.json.
+Earlier guarded127406080B archive and2434B TMP cleanup remain recorded. Earlier failed
+cleanup1 and later PID reuse were diagnosed; no unrelated process was killed. Source/profile/
+masters/frozen previews are preserved. No broad cache or source cleanup is claimed.

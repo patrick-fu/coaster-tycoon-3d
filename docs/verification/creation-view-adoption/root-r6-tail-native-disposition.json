@@ -1,0 +1,326 @@
+{
+  "utc": "2026-10-11T20:43:26.070348+00:00",
+  "rootObserverPID": 75821,
+  "verdict": "ACCEPTED_SCOPED_NATIVE_COMPOSITION",
+  "scope": "Finite79 actual native six-case reuse plus completed R6 tail only. Public affected integration and cumulative closure reviews remain unexecuted. The original R2 runtime stays FAILED1.",
+  "sourceCommit": "1bdec0dd377f922c9168f454c4b2eaba92a1bbc4",
+  "sourceTree": "8ea8918269e119fde5c8a0b7603214db5541041a",
+  "gameSHA256": "c4fd4cff74d6cf3a3b9599c9f82772fb73fea672fdde3157ffbafe00358f2001",
+  "readySHA256": "d8218203fc294a3316c8751697d5f412c286e3df9c700b5e5906c1c16fc79ee7",
+  "driverSHA256": "7ca7fd8c9c9cee4f0d8c94b72089287fa6c93f3663eec5a019885f944e12261f",
+  "contractSHA256": "fdb02123d1b9544ee8d155496bfda196003e90cd49e5561c2f4d5a057fae9c78",
+  "staticDisposition": {
+    "path": "/Volumes/WD/code/workspaces/coaster-creation-input/coaster-tycoon-3d/docs/verification/creation-view-adoption/root-r6-tail-static-disposition.json",
+    "bytes": 4118,
+    "sha256": "0e08492e63c98db3ceb6d997d6065f325d56bad6bf25da218214c1a3b862fe1c"
+  },
+  "exhaustedGate": {
+    "path": "/Volumes/WD/code/workspaces/coaster-creation-input/coaster-tycoon-3d/docs/verification/creation-view-adoption/root-r6-tail-launch-gate.json",
+    "bytes": 8996,
+    "sha256": "bfdf42dfb40b42344926c3d54eb2eca4aa89c57a8d0069909a13e16e252db6d9"
+  },
+  "originalAcceptedFailedProof": {
+    "path": "/Volumes/WD/code/workspaces/coaster-creation-input/coaster-tycoon-3d/docs/verification/creation-view-adoption/root-fixed-native-consumption-disposition-r3.json",
+    "bytes": 10352,
+    "sha256": "f8ab0f9c7782ee6ad467077e4aed706735235d3456813827f294dee99d7805c2"
+  },
+  "originalRun": {
+    "passed": false,
+    "runnerExit": 1,
+    "recordedAssertions": 304,
+    "reusedCompletedCases": [
+      "Track",
+      "Queue",
+      "Escape",
+      "Scene update once",
+      "quote rejection",
+      "intentional execute timeout"
+    ],
+    "physicallyUnexecutedFinalRouteAssertion": true,
+    "freshIntentionalFaultClaim": false
+  },
+  "freshNative": {
+    "runnerPID": 228441,
+    "wrapperPID": 228440,
+    "actualExit": 0,
+    "actualEndUTC": "2026-10-11T20:02:19.532081+00:00",
+    "recordedAssertions": 269,
+    "resultBytes": 4999780,
+    "resultSHA256": "2e564a5ed81623ba5cf0b4cdc77306e76ded5623c3121a3edfebe4334922fae5",
+    "fullRawBytes": 105257033,
+    "fullRawLines": 8653,
+    "fullRawSHA256": "e9c5c46fa2845ca5047c00992e7d824cb42fb77e4e47a7f52c816e312170d09a"
+  },
+  "losslessRetention": {
+    "originalFiles": 318,
+    "originalBytes": 364215572,
+    "uniquePayloads": 211,
+    "encodedBytes": 110753291,
+    "decodedBytes": 243865230,
+    "canonicalReferences": 26,
+    "canonicalReferenceBytes": 75165170,
+    "existingCanonicalCount": 18,
+    "WDCompleteMirrors": 288,
+    "WDMirrorBytes": 112133796,
+    "completedIndexControls": 9,
+    "completedIndexControlBytes": 371,
+    "manifestBytes": 220663,
+    "manifestSHA256": "d9cb0d439b2ea456d3d03352603cad6ace9d7762f1571833147699edf3e5edb9",
+    "actualCollectorToolExit": 0,
+    "actualCollectorCompletion": "deb3b1",
+    "actualFinalPublisherExit": 0,
+    "actualFinalPublisherCompletion": "e31859",
+    "finalPublisherResult": {
+      "path": "/Volumes/WD/code/workspaces/coaster-creation-input/browser/fixed-runtime-r3-tail-retention-r1/final-local-r1/result.json",
+      "bytes": 13390,
+      "sha256": "5e70b88cbbafdc78bb6fa87a384a5f3b5dc9eb7302cfd63327b21bd121c953ea"
+    }
+  },
+  "rootIndependentConsumption": {
+    "fullWDBytes": {
+      "path": "/Volumes/WD/code/workspaces/coaster-creation-input/evidence/root-r6-native-consumption-r1/local-byte-consumption.json",
+      "bytes": 95957,
+      "sha256": "c669aac823525c8e15c7f552944f122aaa66b4b5d192a22fdc7951b9b18739cc"
+    },
+    "final37Controls": {
+      "path": "/Volumes/WD/code/workspaces/coaster-creation-input/evidence/root-r6-native-consumption-r1/final-control-consumption.json",
+      "bytes": 11120,
+      "sha256": "12ef367119f5a2b25804311848d10d34be2a027ce0409ddd80bbc43d6718eb25"
+    },
+    "fullRemoteReader": {
+      "PID": 246902,
+      "actualExit": 1,
+      "completedPredicates": 261,
+      "passingPredicates": 260,
+      "report": {
+        "path": "/Volumes/WD/code/workspaces/coaster-creation-input/evidence/root-r6-native-consumption-r1/remote-stdout.json",
+        "bytes": 99398,
+        "sha256": "a321344f256941861b247d143a0c2d7c6fc3260f52d24571d220cdf8e1882604"
+      },
+      "actualWait": {
+        "path": "/Volumes/WD/code/workspaces/coaster-creation-input/evidence/root-r6-native-consumption-r1/remote-wait.json",
+        "bytes": 328,
+        "sha256": "1057ca1695cbdd50ddf115c2a9bc77595a8ef6abd08cbde2d1224facb45d470e"
+      },
+      "singleFailure": "Compared final reused download pathname to startup Export instead of that final file stage."
+    },
+    "targetedDiagnosis": {
+      "PID": 252464,
+      "actualExit": 0,
+      "report": {
+        "path": "/Volumes/WD/code/workspaces/coaster-creation-input/evidence/root-r6-native-startup-export-diagnosis-r1/stdout.json",
+        "bytes": 8543,
+        "sha256": "acf6de557f7dda5336ab97dc980e649eb323963b10e4d95fc8ace5d9911c294c"
+      }
+    },
+    "targetedActualRequalification": {
+      "PID": 254552,
+      "actualExit": 0,
+      "allSevenPredicatesPass": true,
+      "report": {
+        "path": "/Volumes/WD/code/workspaces/coaster-creation-input/evidence/root-r6-native-startup-export-supplement-r2/remote-stdout.json",
+        "bytes": 9242,
+        "sha256": "15e1e495549626a12261c7cbb6dffed92cf247a280ad4e294e3a6fcebc3c3bb6"
+      },
+      "actualWait": {
+        "path": "/Volumes/WD/code/workspaces/coaster-creation-input/evidence/root-r6-native-startup-export-supplement-r2/remote-wait.json",
+        "bytes": 805,
+        "sha256": "709cb90bed0c4209109aea284ba4c48867b06cd938614467dc84f0941ba40fc8"
+      }
+    },
+    "originalReaderFailurePreserved": true,
+    "broadRuntimeReplayPerformed": false
+  },
+  "observedSemantics": {
+    "all318OriginalEncodedDecodedReferenceBytesExact": true,
+    "actualSourceShippingCompiledInputs": [
+      883,
+      164,
+      74,
+      16
+    ],
+    "differentialAutosave": {
+      "baselineWorkerID": 758,
+      "baselineOrdinals": [
+        3037,
+        3038,
+        3039,
+        3040
+      ],
+      "changedMarkerBeforeNativeImport": 3057,
+      "changedWorkerID": 1593,
+      "changedOrdinals": [
+        6384,
+        6385,
+        6386,
+        6387
+      ],
+      "uniqueNonClickSaveEachFullAtomicWindow": true,
+      "observedCommitDelayMs": [
+        106.8,
+        190.5
+      ],
+      "actualRequestIntervalMs": 59999.9,
+      "operatedBytes": 829227,
+      "operatedSHA256": "afd73e9ee79516cab02365bbe7219954009c59f1d03631e21618ae59578f2602",
+      "changedDurableBytes": 829577,
+      "changedDurableSHA256": "59948f8a3b17e9cd3acd0827cec7354d06dff0263edd473a6c585d0947e9ad47",
+      "nativeImportLeavesOldSlotUntilAutosave": true
+    },
+    "actualReload": {
+      "uninterruptedInventoryCursorStopTailReloadCDPIDs": [
+        627,
+        628,
+        629,
+        630,
+        631
+      ],
+      "startupAndReloadSources": [
+        97,
+        97
+      ],
+      "startupAndReloadNativeBodies": [
+        3,
+        3
+      ],
+      "oldLoader": "AB8E0B3B28457C7281E5C157B511173C",
+      "newLoader": "EF3122FBF7687E9BF80724B47E2E46A3",
+      "defaultContexts": [
+        3,
+        4
+      ],
+      "newWorkerTargetVerified": true,
+      "fullRawSourceAndNetworkEpochJoins": true,
+      "newDocumentObserverWaitActuallyTrue": true
+    },
+    "nativeExports": {
+      "fourFullTrustedClickRPCBlobDownloadStagesConsumed": true,
+      "startupCompletedGUID": "cdf92dc7-9c60-4954-80a2-680cab534bc5",
+      "startupCompletedDownloadBytes": 829227,
+      "threeLaterDurableExportsBytes": 829577,
+      "currentReusedDownloadFileSHA256": "59948f8a3b17e9cd3acd0827cec7354d06dff0263edd473a6c585d0947e9ad47",
+      "startupPhysicalFileAfterLaterOverwriteQualified": false,
+      "reason": "Raw GUID completion chronology and native Blob source bind each stage; the final same pathname belongs to the latest durable Export."
+    },
+    "oversize": {
+      "actualNegativeFileBytes": 67108865,
+      "fullCaseRecords": 93,
+      "feedbackRecoveryUnlockOrdinals": [
+        338,
+        340,
+        343
+      ],
+      "originalRecoveryDeliveredExactlyOnce": true,
+      "loadRequests": 0,
+      "fullNativeRecoveredExportExact": true
+    },
+    "originalTypedInventory": [],
+    "fullTypedOriginalRestoredExactly": true,
+    "twoRawBoundResourceReports": true,
+    "actualResourceCountsEach": {
+      "geometry": 67,
+      "material": 48,
+      "texture": 30,
+      "bitmap": 30
+    },
+    "allNativeResourceDisposalsExactlyOnce": true,
+    "allObservedBitmapsClosed": true,
+    "foreignOwnershipPreserved": true,
+    "fullFourRawAndFinalErrorSetsEmpty": true,
+    "nativeDescendantsAbsent": 15,
+    "runnerAndWrapperEnded": true,
+    "freshKnownRemoteOwnersAbsent": 406,
+    "defaultProfileOwnerAbsent": true,
+    "ownedPortsClosed": [
+      8777,
+      9237
+    ]
+  },
+  "independentReviews": [
+    {
+      "model": "gpt-6.1-sol",
+      "effort": "max",
+      "agent": "r6_tail_source_sol_max",
+      "verdict": "PASS scoped native tail",
+      "actualMainReaderExit": 0,
+      "mainReaderPID": 239100,
+      "inventoryReaderPID": 236033,
+      "failedSupplementReaderPID": 240469,
+      "failedSupplementActualExit": 1,
+      "reason": "Unscoped typed snapshot matcher selected pre-reload and neutral-restoration reads.",
+      "correctedSupplementReaderPID": 241478,
+      "correctedSupplementActualExit": 0,
+      "writingPerformed": false,
+      "wholeFinite79Credit": false
+    },
+    {
+      "model": "gpt-6-luna",
+      "effort": "max",
+      "agent": "r6_tail_source_luna_max",
+      "verdict": "PASS scoped native tail",
+      "successfulReaderPIDs": [
+        239070,
+        239976
+      ],
+      "actualSuccessfulSSHExits": [
+        0,
+        0
+      ],
+      "twoEarlierWrongPathReadOnlyReaderExits": [
+        1,
+        1
+      ],
+      "writingPerformed": false,
+      "wholeFinite79Credit": false
+    }
+  ],
+  "freshCompletedMacOwners": [
+    {
+      "pid": 73691,
+      "exists": false
+    },
+    {
+      "pid": 73694,
+      "exists": false
+    },
+    {
+      "pid": 74473,
+      "exists": false
+    },
+    {
+      "pid": 74477,
+      "exists": false
+    },
+    {
+      "pid": 75166,
+      "exists": false
+    },
+    {
+      "pid": 75169,
+      "exists": false
+    },
+    {
+      "pid": 73456,
+      "exists": false
+    },
+    {
+      "pid": 72695,
+      "exists": false
+    },
+    {
+      "pid": 71964,
+      "exists": false
+    }
+  ],
+  "unexecuted": [
+    "Affected public candidate integration",
+    "First cumulative whole Design and Drift rounds",
+    "Second cumulative whole Design and Drift rounds",
+    "PR readiness and merge",
+    "Issue79 closure",
+    "Full first-playable and human style acceptance",
+    "Representative integrated-GPU and original-scale qualification"
+  ],
+  "publicSourceUnchanged": "7a0bbac668ece30416cceefb97997c0de17d1376",
+  "goalStatus": "ACTIVE"
+}
