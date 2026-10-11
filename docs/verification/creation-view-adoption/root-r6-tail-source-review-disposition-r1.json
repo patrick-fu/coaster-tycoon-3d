@@ -1,0 +1,55 @@
+{
+  "utc": "2026-10-11T19:17:24.251140+00:00",
+  "scope": "Root acceptance of independent source-review findings and stopped R6 preparation, before isolated material repair. No static or runtime success.",
+  "authoredRevision": "authored-r1",
+  "driverSHA256": "2215479c11005be8bcdf3069241d79f92b39e6bf543e553a20847ebefd904292",
+  "verdict": "HOLD",
+  "independentReviewers": [
+    {
+      "agent": "/root/r6_tail_source_sol_max",
+      "verdict": "HOLD",
+      "lens": "Source correctness and save attribution"
+    },
+    {
+      "agent": "/root/r6_tail_source_luna_max",
+      "verdict": "HOLD",
+      "lens": "Adversarial source counterexample"
+    }
+  ],
+  "acceptedFinding": {
+    "priority": "P1",
+    "problem": "The changed-save marker is created after native import and the old cursor read. An earlier excluded save can commit durable bytes; a later selected save may abort its IndexedDB write while the cursor check still passes. The iteration-bounded post-reply wait can also cross a later autosave.",
+    "sourceLines": [
+      375,
+      393,
+      395,
+      396,
+      398
+    ],
+    "productDBFailureBehavior": "ui/game.js catches storage errors as feedback, so empty final error arrays do not prove the selected DB write.",
+    "repair": "Freeze changed marker before import; sample complete typed cursor and every non-click save since that marker atomically after awaiting the cursor; accept only one selected request and its trusted full reply/delivery and actual cursor within the original 14-second request bound. Preserve all late/extra observations then fail; keep existing CDP 60-second transport behavior and final durable/history/stop/reload sequence."
+  },
+  "preparerStop": {
+    "agent": "/root/r6_tail_preparation_sol_max",
+    "stopPath": "../browser/fixed-preparation-r6-tail/local-stop-r1/result.json",
+    "stopSHA256": "0e56c47deecdde5378e0a0ebf73fb41713e18f9c21635b24b586fdd7090e872b",
+    "toolChunk": "b9498c",
+    "actualToolExit": 0,
+    "actualHandshakeSSHExit": 255,
+    "handshakeSHA256": "bec824d9d8e0764c947d6270bf4b63197ceec255bf65a8e9d9ca7a462b57bb40",
+    "RootConsumptionToolChunk": "f1f1c2",
+    "RootConsumptionActualExit": 0,
+    "freshLocalOwnersAbsent": [
+      49920,
+      49922,
+      52140
+    ],
+    "authoredFiveFilesUnchanged": true,
+    "noRemoteR6Producer": true,
+    "unexecutedDraftIssue": "remote-static-r1.py references pathlib before importing it; preserve this unexecuted draft, never claim it runnable."
+  },
+  "next": "Root authors isolated authored-r2 without overwriting r1, independently re-reviews material repair, then resumes one bounded new static preparer revision. All builds/tests remain remote.",
+  "originalR2Status": "FAILED1",
+  "wholeFinite79ClosureCredit": false,
+  "runtimeLaunchAuthorized": false
+}

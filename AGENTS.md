@@ -18,8 +18,9 @@ unavailable.
 
 If Grok Bot becomes unreachable, Patrick authorizes opening the local `Grok Bot`
 app (`com.anysphere.sand`), choose the Bot header's conversation details, then
-`Computer` -> `Open computer` to restore access. Verify SSH connectivity and
-remote ownership afterward before resuming execution.
+`Computer` -> `Open computer` to restore access. Activate the existing window;
+if its cloud viewer is paused, click the visible play/resume overlay. Verify SSH
+connectivity and remote ownership afterward before resuming execution.
 
 ## Agent skills
 
