@@ -1,0 +1,13 @@
+{
+  "sourceCommit": "1bdec0dd377f922c9168f454c4b2eaba92a1bbc4",
+  "sourceTree": "8ea8918269e119fde5c8a0b7603214db5541041a",
+  "sourcePullRequest": "https://github.com/patrick-fu/coaster-tycoon-3d/pull/80",
+  "sourceIssue": "https://github.com/patrick-fu/coaster-tycoon-3d/issues/79",
+  "saveVersion": 13,
+  "contentVersion": 6,
+  "protocolVersion": 6,
+  "verification": "https://github.com/patrick-fu/coaster-tycoon-3d/blob/p/patrick/fix/creation-view-adoption/PROGRESS.md",
+  "buildReadySHA256": "d8218203fc294a3316c8751697d5f412c286e3df9c700b5e5906c1c16fc79ee7",
+  "scope": "Playable Classic four-family park with authored stalls and real connected routes. Creation-view repair and scoped native composition are accepted; affected public verification and final cumulative reviews are pending. Full catalogue/management, original numerical/art fidelity, human style/play and representative GPU/scale remain open.",
+  "buildHost": "Grok Bot"
+}
