@@ -1,34 +1,97 @@
 # Project progress and recovery
 
-Last updated: 2026-10-10 23:40 UTC.
-Root owns this live record and the [UTC journal](docs/progress/2026-10-10.md).
+Last updated: 2026-10-11 00:34 UTC.
+Root owns this live record and the [UTC journal](docs/progress/2026-10-11.md).
 [Previous detailed checkpoint](docs/progress/2026-10-10-progress-before-final-public-acceptance.md)
 retains the source/native/public/tool repair sequence. `CONTEXT.md` remains the domain glossary;
 this file is execution context.
 
 ## Objective and boundaries
 
-The unlimited Goal is ACTIVE: independent MIT browser game, Classic controls, polished 3D
-art, RCT2 gameplay breadth and substantive park management. Full79 families/155 variants/
-41 shops/35 products, admissions/finance/research/scenarios, original numerical/art agreement,
-human style/play and representative integrated-GPU/scale acceptance remain OPEN. Finite77 is
-one four-family composition milestone; it is not the full game or first-playable acceptance.
-No new gameplay decision is required for the current finite creation-input repair.
-Grok100.106.65.13 is actually offline; restoring that machine's Tailscale/SSH access is
-required before its pending static/native/public verification. The Goal remains ACTIVE.
+The unlimited Goal is ACTIVE after actual reactivation. Build an independent MIT browser
+park game with Classic controls, polished 3D art and substantive RCT2 gameplay breadth.
+Full79 families/155 variants/41 shops/35 products, admissions/finance/research/scenarios,
+original numerical/art agreement, human style/play and representative integrated-GPU/scale
+acceptance remain OPEN. Finite77 is accepted as one four-family composition; it is not
+whole-game or first-playable acceptance. No new gameplay decision is needed for finite79.
 
-Latest durable outcome: actual PR80 body update/readback8131/tool0 at23:40:10Z keeps
-OPEN/draft/headd201 and explicitly records authored-pass versus unexecuted static/native/
-public checks plus target-offline failure. Bodybd4187e4 is retained in evidence/root-draft-context-r2.
-Root is saving this context/proof checkpoint; no executable or public update is included.
+English project artifacts; Chinese chat. Root owns production, docs, integration, GitHub
+and publication. Logic uses Sol Max, visuals AGY and adversarial review Luna Max. All
+builds/tests/simulation/Blender/Chrome run on designated Grok over `ssh grok-build`; never
+on Mac. Mac editing/Git/orchestration/proof I/O/hash/small JSON/retained PNG viewing are
+allowed. Keep source/masters/proof on WD, generated builds on Grok. Clean only exact
+owned disposable copies after retained equality and actual owner/file-handle checks;
+preserve default profile, complete typed saves, editable masters and frozen previews.
 
-English project artifacts; Chinese chat. Root owns production, integration, GitHub, hosting
-and this context. Logical work uses Sol Max, visual work AGY, adversarial review Luna Max.
-All builds/tests/simulation/Blender/Chrome run on Grok through `ssh grok-build`; never on Mac.
-Mac editing/Git/orchestration/proof I/O/hash/small JSON/transferred PNG viewing are allowed.
-Source/masters/proof stay on WD, generated builds on Grok. Clean only exact owned disposable
-copies after retained equality and actual process/file-owner checks; preserve default profile,
-complete typed saves, editable masters and every frozen preview.
+## Current finite79 state and next action
+
+Source1bdec0dd/tree8ea89182/gamec4fd4cff/readyd8218203 is unchanged. Documentation HEAD is
+3411c098aa4643c4799c7ec9667a1acdd33160e3; PR80 remains OPEN/draft. Current public UI is
+source7a0bbac. No new executable, hosting or whole-game completion is claimed.
+
+Final fixed-preparation-r2 is COMPLETE/PASS **preparation only**. Actual static1757554,
+children1757561/1757562, unique mirror1757801/1757803/1757804 and finite17360/SSH17364
+all wait0:60 literals/5helpers,883source/164shipping/74compiled exact. Root consumes every
+WD72 payload/69789503B and73main/84terminal/9authored rows; independent Root remote1758502
+and Design1758480 actual0 rehash all payload/source/shipping/compiled bytes. DesignSol and
+DriftLuna final preparation PASS. Manifest0e316fb6/checks97dccacd/terminalindexb06d320e,
+driver9eb367a7/contractbb4fba0a/observered487ddf. [Root preparation disposition](docs/verification/creation-view-adoption/root-fixed-preparation-disposition-r2.json)
+corrects frozen report wording:182B upload stderr ignores two macOS provenance headers;
+actual producer/collector stderr is blank and all payload bytes/transfer waits are exact0.
+Earlier255/r1HOLD/baselineFAILED1/early-tail1 and withdrawn stride48 finding remain retained.
+
+[Separate Root gate](docs/verification/creation-view-adoption/root-fixed-launch-gate-r2.json)
+b2f47493 permits only sole-owner fixed-runtime-r1. Fresh1760664 preflight actual0 at00:19:32Z
+checks exact source/inputs, prior owners plus1758480/1758502 absent, portsclosed/profileinactive.
+Runner1760734/HTTP1760735/defaultChrome1760905 starts00:19:46Z and ends **FAILED1** at
+00:21:05.305537Z; child/SSH/tool13186 actual1, both8777/9237closed. Actual stdout records
+Track completed/new7 at00:20:39Z. Queue post-adoption hover stops at frozen driver418→366,
+KeyError('reply').125/125 completed assertions do not qualify Queue or the entire run.
+Escape/Scene recovery/quote rejection/intentional timeout/oversize cases are unexecuted.
+
+[Root failure disposition](docs/verification/creation-view-adoption/root-fixed-native-failure-r1.json)
+consumes all67 local runtime/preflight/extractor/mirror/finite receipts24243B, index28586729,
+Root24435/tool0. Actual extractor1762087 wait0 retains full traceback, originalDB[] restoration
+true and dated closedports. Fourteen explicit Mac owners are absent; successful helper SCP
+lacks recorded OS PID/ancestry. Full raw/26selected payloads80270799B/resource/tree/typed bytes
+remain unread on Grok. Neither dated closure nor source review is full runtime acceptance.
+
+Failed mirror22909/SSH22919/tool54319 actual1/SSH255/localtar0 leaves an empty WD prefix.
+Root's sole read23657/SSH23659/tool68704 likewise actual255 at00:26:35Z. Each reviewer has
+one SSH255 and no retry. Fresh24043/status24045 wait0 at00:27:35Z reports target100.106.65.13
+Offline/selfOnline; cachedLastSeen00:10 does not replace observed runtime timestamps.
+Original remote proof remains at fixed-runtime-r1/diagnosis-fixed-runtime-r1. Prior blocked
+Goal audit is preserved; reactivation resets it and this turn made material preparation/
+native/source-diagnosis progress. Goal is ACTIVE, not complete or user-paused.
+
+Both independent source readers confirm a reachable reader defect: first-reply wait then
+recollecting a growing all-request set can omit an undefined reply on serialization. This
+matches the actual KeyError but specific raw request IDs/chronology remain unverified.
+Root accepts the minimum repair design: each bounded poll atomically snapshots every
+matching request and exact requestOrdinal+id reply, explicit null for pending; only the
+same complete nonempty snapshot reaches original target7/UNKNOWN_RIDE checks and return.
+Pending/negative replies stay visible and timeout fails. An initial fixed cohort could
+omit later matching requests and is not adopted.
+
+The original browser owner is now solely authoring isolated fixed-preparation-r3 body/
+maker/preparer/material diff/pins for fixed-runtime-r2. This is source-only preparation:
+no Mac generation/static/test, network/upload/App, production/fixture/observer edit.
+Root and independent material review are pending. Existing publication checkout0f6c585b
+on p/patrick/publish/classic-7a0bbac is actually clean; read-only inspection only.
+
+Next: finish and review this minimum authored candidate; after changed Grok access evidence,
+mirror and fully consume the same original failed proof, then remote generation/static/
+terminal and a new exact Root gate before an affected App run. Actual native/public checks
+and two entire Design plus two entire Drift finite79 closure rounds precede PR80 readiness,
+merge and issue79 closure. The next information-kiosk/owned-merchandise proposal stays
+unaccepted pending finite79 and a genuine immutable old13 oracle. Detailed sequence,
+failures, decisions and evidence remain in the linked UTC journals and Root receipts.
+
+Root docs-only commit preflight stops before commit: staged whitespace check2 identifies
+one extra EOF blank line in the new UTC journal. Actual outputs remain in evidence/root-
+context-commit-r3; no executable/Git commit occurs. Correct only that blank and recheck.
+A subsequent metadata read mistakenly runs Git in the non-Git workspace parent and exits128;
+use the actual project checkout for Git. Both administrative failures remain explicit.
 
 ## Current identity
 
@@ -42,7 +105,7 @@ complete typed saves, editable masters and every frozen preview.
   only five documentation files change, no executable/new build. The
   published UI remains source7a. Canonical main fast-forward0/clean is independently verified.
   Root commits identical reviewed gamec4fd4cff in ui/game.js; camera and all
-  other executable files remain unchanged. Fresh Grok syntax/web now pass; native/public remain unexecuted.
+  other executable files remain unchanged. Fresh Grok syntax/web pass; candidate native attempt is FAILED1 and public remains unexecuted.
   Prior docs commitc810 remains immutable; documentation HEAD is not a new build identity.
 - Source branch push actual0 and [draft PR80](https://github.com/patrick-fu/coaster-tycoon-3d/pull/80)
   has title Preserve the new ride until its view is adopted. Last readback at23:33 confirms
@@ -357,6 +420,11 @@ the risk or closing the composition does not resolve it. Previous publication br
    claim is accepted. P4 policy/weather/navigation/model work remains OPEN after79.
 
 ## Cleanup
+
+Current exact Root8881/tool0 cleanup removes only2 completed owned TMPDIR PR/commit bodies,
+2159B, after byte-exact retained Markdown/message, all recorded producers absent and actual empty
+lsof. Evidence/root-completed-body-cleanup-r2/result.json retains every guard; no source,
+profile, masters, proof, general cache or remote archive is removed.
 
 Only prior guarded17469B duplicates and3emptydirs were removed, after retained equality,
 absent producers and empty lsof. Current exact cleanup removes only3 completed owned TMPDIR issue/PR/commit body files,

@@ -1,0 +1,84 @@
+{
+  "utc": "2026-10-11T00:16:59.657394+00:00",
+  "verdict": "PASS_PREPARATION_ONLY",
+  "scope": "Final generated r2 source/byte/actual static+mirror+terminal gate; not runtime acceptance",
+  "sourceCommit": "1bdec0dd377f922c9168f454c4b2eaba92a1bbc4",
+  "readySHA256": "d8218203fc294a3316c8751697d5f412c286e3df9c700b5e5906c1c16fc79ee7",
+  "driverSHA256": "9eb367a7c42547c157e615a5e6658753bcd2a9305a98064d917ae021c1cc30cb",
+  "contractSHA256": "bb4fba0aa43909293d1246103ebda83786b1c9d7813acee43dc6e243027efc21",
+  "observerSHA256": "ed487ddf592953f6648c25b54d176f1c011f0703c2a28105baa1147b3ea2e056",
+  "manifestSHA256": "0e316fb646a7cec97310742ba8c5cf8243a3db48caf34bfff6ed1b94603efbd7",
+  "fileCount": 72,
+  "bytes": 69789503,
+  "rootWDConsumption": "/Volumes/WD/code/workspaces/coaster-creation-input/evidence/root-fixed-preparation-consumption-r2.json",
+  "rootRemoteConsumption": {
+    "utc": "2026-10-11T00:13:25.180674+00:00",
+    "wrapperPid": 19622,
+    "sshPid": 19624,
+    "actualSSHExit": 0,
+    "stdoutSHA256": "bd1dd788d5b3d8ce5c945a1f37949bbb0e82f79367e4f0286bb58e987b93c5b5",
+    "stderrBytes": 0,
+    "remote": {
+      "utc": "2026-10-11T00:13:25.313108+00:00",
+      "pid": 1758502,
+      "fileCount": 72,
+      "bytes": 69789503,
+      "manifestSHA256": "0e316fb646a7cec97310742ba8c5cf8243a3db48caf34bfff6ed1b94603efbd7",
+      "badPins": [],
+      "counts": {
+        "source": 883,
+        "shipping": 164,
+        "compiled": 74
+      },
+      "knownOwnerCount": 214,
+      "presentKnownOwners": [],
+      "portsOpen": {
+        "8777": false,
+        "9237": false
+      },
+      "fixedRuntimeExists": false,
+      "scope": "Root independent read-only all remote payload/source/shipping/compiled rehash; no product launch"
+    }
+  },
+  "independentDesign": {
+    "agent": "/root/creation_fixed_design_sol_max",
+    "verdict": "PASS",
+    "independentRemotePID": 1758480,
+    "actualSession": 18811,
+    "actualSSHExit": 0,
+    "wdAndRemotePayloadsExact": true,
+    "generatedBodyAndDifflibMatch": true,
+    "knownMacOwnersAbsent": 16,
+    "knownRemoteOwnersAbsent": 221
+  },
+  "independentDrift": {
+    "agent": "/root/creation_fixed_drift_luna_max",
+    "verdict": "PASS",
+    "rejectionCannotBeSatisfiedByPreview": true,
+    "timeoutExportDenialCannotBeSatisfiedByAutosave": true,
+    "fullRecoveryAndHistoryRetained": true,
+    "terminalActual0": true
+  },
+  "reportWordingCorrection": {
+    "frozenReportPreserved": true,
+    "actualProducerAndCollectorStderrBytes": 0,
+    "actualUploadStderrBytes": 182,
+    "actualUploadWarning": "Two tar notices ignore LIBARCHIVE.xattr.com.apple.provenance metadata; transfer/hash/all payload checks0. Do not call all transport stderr blank.",
+    "noChangedPayload": true
+  },
+  "pathCorrection": "task means /Volumes/WD/code/workspaces/coaster-creation-input. Actual recovery receipt is /Volumes/WD/code/workspaces/coaster-creation-input/evidence/root-resumed-ssh-r1/result.json; no folder task exists inside repo. Actual later generation/remote0 independently establish access.",
+  "unexecuted": [
+    "all fixed native cases",
+    "affected public integration",
+    "twice cumulative Design/Drift finite79 closure",
+    "representative GPU",
+    "human/original/full programme acceptance"
+  ],
+  "originalFailuresPreserved": [
+    "static-r1 SSH255",
+    "early archive-tail read1",
+    "fixed-r1 HOLD/unrun",
+    "original baseline FAILED1/Track-only"
+  ],
+  "next": "Separate exact gate permits only fixed-runtime-r1 with original sole browser owner after fresh preflight."
+}

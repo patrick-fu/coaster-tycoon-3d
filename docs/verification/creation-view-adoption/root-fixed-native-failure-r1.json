@@ -1,0 +1,100 @@
+{
+  "utc": "2026-10-11T00:30:11.269345+00:00",
+  "scope": "FAILED1 disposition and source-only reader diagnosis; full remote runtime proof remains unread",
+  "originalRuntime": {
+    "prefix": "fixed-runtime-r1",
+    "sourceCommit": "1bdec0dd377f922c9168f454c4b2eaba92a1bbc4",
+    "readySHA256": "d8218203fc294a3316c8751697d5f412c286e3df9c700b5e5906c1c16fc79ee7",
+    "driverSHA256": "9eb367a7c42547c157e615a5e6658753bcd2a9305a98064d917ae021c1cc30cb",
+    "contractSHA256": "bb4fba0aa43909293d1246103ebda83786b1c9d7813acee43dc6e243027efc21",
+    "observerSHA256": "ed487ddf592953f6648c25b54d176f1c011f0703c2a28105baa1147b3ea2e056",
+    "launchGateSHA256": "b2f474933b89095c4f460c8fa286aee673bdf500b5518cdf8efafb31037f7a55",
+    "runnerPID": 1760734,
+    "httpPID": 1760735,
+    "chromePID": 1760905,
+    "actualToolSession": 13186,
+    "actualToolExit": 1,
+    "endedUTC": "2026-10-11T00:21:05.305537+00:00",
+    "passed": false,
+    "failure": "'reply'",
+    "actualTraceback": "Traceback (most recent call last):\n  File \"/workspace/coaster-creation-input/browser/fixed-preparation-r2/inputs/run-fixed.py\", line 418, in run_route\n    reference=await hover_reference(label,'queue'if label=='queue'else'track')\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/coaster-creation-input/browser/fixed-preparation-r2/inputs/run-fixed.py\", line 366, in hover_reference\n    await check('Native reference quote targets received newID7 '+label,bool(pairs)and all((pair['request']['message']['request']['payload'].get('ride')if kind in ['track','portal']else pair['request']['message']['request']['payload'].get('queueFor'))==7 and pair['reply']and(pair['reply']['message']['result']['ok']or pair['reply']['message']['result']['error']['code']!='UNKNOWN_RIDE')for pair in pairs),pairs)\n                                                                                       ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/coaster-creation-input/browser/fixed-preparation-r2/inputs/run-fixed.py\", line 366, in <genexpr>\n    await check('Native reference quote targets received newID7 '+label,bool(pairs)and all((pair['request']['message']['request']['payload'].get('ride')if kind in ['track','portal']else pair['request']['message']['request']['payload'].get('queueFor'))==7 and pair['reply']and(pair['reply']['message']['result']['ok']or pair['reply']['message']['result']['error']['code']!='UNKNOWN_RIDE')for pair in pairs),pairs)\n                                                                                                                                                                                                                                                                   ~~~~^^^^^^^^^\nKeyError: 'reply'\n",
+    "completedChecks": 125,
+    "passedCompletedChecks": 125,
+    "reportedOriginalRecordsRestored": true,
+    "reportedOriginalDatabaseCount": 0,
+    "datedTerminalPorts": {
+      "8777": false,
+      "9237": false
+    }
+  },
+  "rootLocalByteConsumption": {
+    "utc": "2026-10-11T00:28:59.809519+00:00",
+    "readerPID": 24435,
+    "indexPath": "/Volumes/WD/code/workspaces/coaster-creation-input/browser/fixed-preparation-r2/runtime-failure-local-files.sha256",
+    "indexSHA256": "28586729c3cc356f5d6c682ceae51865f8beebef02f4ed5300f2bdb6a1e8a31c",
+    "files": 67,
+    "bytes": 24243,
+    "allExact": true,
+    "scope": "Byte consumption of dated local preflight/runtime/extractor/failed-mirror/finite known-Mac receipts only; no full remote raw/payload/resource consumption or product pass"
+  },
+  "independentReview": {
+    "design": "creation_fixed_design_sol_max: WD source confirms first-reply wait followed by growing all-request projection; actual one SSH255, no independent raw read",
+    "drift": "creation_fixed_drift_luna_max: WD source confirms omitted undefined reply can cause exact KeyError; actual one SSH255, no independent raw read",
+    "notWholeClosureRounds": true
+  },
+  "diagnosis": {
+    "confirmedSourceReachability": "run-fixed.py364 waits only for the first matching native quote reply;365 reevaluates all matching requests;undefined replies are omitted on serialization;366 directly accesses missing reply key",
+    "specificRuntimeRequestIDsAndEventChronologyVerified": false,
+    "productFailureEstablished": false,
+    "minimalRepairCandidate": "Within a bounded loop atomically project every matching request plus its exact requestOrdinal/id native reply, using explicit null for pending. Retain the same nonempty complete snapshot for original target7/UNKNOWN_RIDE assertions. Never discard pending or negative replies; on timeout retain actual pending/full case and fail."
+  },
+  "proofTransport": {
+    "firstMirrorActualSSHExit": 255,
+    "firstMirrorActualLocalTarExit": 0,
+    "firstMirrorActualToolExit": 1,
+    "wdOriginalPayloadFiles": 0,
+    "remoteDecisiveFilesReported": 26,
+    "remoteDecisiveBytesReported": 80270799,
+    "originalRawSHA256": null,
+    "fullPayloadManifestConsumed": false,
+    "rootSingleDiagnosisActualSSHExit": 255,
+    "rootSingleDiagnosisEvidence": "/Volumes/WD/code/workspaces/coaster-creation-input/evidence/root-fixed-native-diagnosis-r1",
+    "freshStatus": {
+      "utc": "2026-10-11T00:27:35.745532+00:00",
+      "observerPID": 24043,
+      "statusPID": 24045,
+      "actualWaitExit": 0,
+      "stdoutBytes": 17455,
+      "stdoutSHA256": "a471a296fbb2e06fffec30f4d0bbfd0f02ca257488d66215ab6b50599ef69e0a",
+      "stderrBytes": 0,
+      "selfOnline": true,
+      "target": [
+        {
+          "HostName": "grok-bot-2",
+          "TailscaleIPs": [
+            "100.106.65.13",
+            "fd7a:115c:a1e0::b036:410e"
+          ],
+          "Online": false,
+          "LastSeen": "2026-10-11T00:10:00.1Z"
+        }
+      ],
+      "scope": "Read-only fresh status after actual failed native mirror and Root SSH255; no host substitution, SSH retry or App launch"
+    }
+  },
+  "explicitlyUnexecuted": [
+    "Queue completion",
+    "Escape case",
+    "controlled Scene.update recovery",
+    "actual locked quote rejection",
+    "intentional ambiguous execute timeout",
+    "oversize native File import",
+    "candidate public routes",
+    "whole finite79 twice Design and twice Drift closure"
+  ],
+  "next": "Author/review only a minimal isolated reader candidate while offline. Restore designated Grok access, retain and consume the same failed original proof, then actual generated/static/terminal checks and a separate source-bound runtime gate. No App rerun or public change is authorized by this receipt.",
+  "goalStatus": "ACTIVE",
+  "productPass": false,
+  "wholeFinite79Pass": false,
+  "preserveOriginalFailure": true
+}
