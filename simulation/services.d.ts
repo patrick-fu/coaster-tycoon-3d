@@ -2,19 +2,28 @@ import type { Amenity, Litter, CleanupJob } from './housekeeping.js';
 import { type Direction, type State, type Rules, type Tile } from './types.js';
 import type { Guest, PathPoint, PeopleIndex, Routing } from './people.js';
 import type { ContentIdentity } from '../content/registry.js';
-export type FacilityKind = 'food' | 'drink' | 'restroom';
-export type Facility = {
+import { type InformationProducts } from '../content/merchandise.js';
+export type FacilityKind = 'food' | 'drink' | 'restroom' | 'information';
+type FacilityBase = {
     id: number;
     instanceId: number;
     content: ContentIdentity;
     name: string;
-    kind: FacilityKind;
     element: number;
     open: boolean;
+};
+export type OrdinaryFacility = FacilityBase & {
+    kind: Exclude<FacilityKind, 'information'>;
     price: number;
     income: number;
     sales: number;
 };
+export type InformationFacility = FacilityBase & {
+    kind: 'information';
+    products: InformationProducts;
+    umbrellaColour: number;
+};
+export type Facility = OrdinaryFacility | InformationFacility;
 export type FacilityElement = {
     id: number;
     kind: 'facility';
@@ -68,16 +77,17 @@ export type ServiceIndex = PeopleIndex & {
     staff: Map<number, Staff>;
 };
 export declare function validateServiceRules(input: ServiceRules): ServiceRules;
-export declare function facilityApproach(e: FacilityElement): PathPoint;
+export declare function facilityApproach(e: FacilityElement, counter?: number): PathPoint;
 export declare function sharedCount(s: State): number;
 export declare function chooseFacility(g: Guest, s: State, rules: Rules, index: ServiceIndex, route: Routing): {
     facility: number;
     goal: PathPoint;
 } | null;
-export declare function recoverFacility(g: Guest, index: ServiceIndex): boolean;
+export declare function recoverFacility(g: Guest, index: ServiceIndex, rules: Rules): boolean;
 export declare function buy(g: Guest, s: State, rules: Rules, index: ServiceIndex): void;
 export declare function consume(g: Guest, s: State, rules: Rules): void;
 export declare function accessible(staff: Staff, goal: PathPoint, index: PeopleIndex, route: Routing): boolean;
 export declare function recoverStaff(s: State, index: ServiceIndex, route: Routing): void;
 export declare function stepStaff(s: State, rules: Rules, index: ServiceIndex, route: Routing): void;
 export declare function stepFinance(s: State, rules: Rules): void;
+export {};

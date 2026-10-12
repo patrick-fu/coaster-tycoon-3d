@@ -1,0 +1,14 @@
+{
+  "sourceCommit": "47af1efb1539de5865f60441fd83f25615178fbe",
+  "sourceTree": "60fad78219b2ef10abdbb9a379f87c3e92b315c4",
+  "sourcePullRequest": "https://github.com/patrick-fu/coaster-tycoon-3d/pull/82",
+  "sourceIssue": "https://github.com/patrick-fu/coaster-tycoon-3d/issues/81",
+  "saveVersion": 14,
+  "contentVersion": 7,
+  "protocolVersion": 7,
+  "verification": "https://github.com/patrick-fu/coaster-tycoon-3d/blob/47af1efb1539de5865f60441fd83f25615178fbe/docs/verification/information-merchandise/README.md",
+  "buildReadySHA256": "c7b3aa4196adf835b742cc9912194032e2e5e50197a2c941a8ab1156a657a217",
+  "executedSourcePinsSHA256": "f181481555e32d8a2a744694b39f30f59d4a7738a1b21f83d29551c7a00446e3",
+  "scope": "Playable Classic four-family park with an independently authored information kiosk and permanent Map/Umbrella sales. Scoped core/native/canonical/pixel/max-input checks and both cumulative review rounds pass with explicit maximum-input stalls; actual public-route qualification is pending. Full catalogue, original numerical/art agreement, human play/style and representative GPU/scale remain open.",
+  "buildHost": "Grok Bot"
+}

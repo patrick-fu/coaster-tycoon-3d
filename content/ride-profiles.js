@@ -26,22 +26,27 @@ export function rideFootprint(origin, piece, profile, pieceId) {
     return profile.footprints[pieceId][origin.direction].map(c => ({ x: (origin.x + c.x) / 32, y: (origin.y + c.y) / 32, low: origin.z + c.low, high: origin.z + c.high, mask: c.mask }));
 }
 export function legacyRuleJSON(rules) {
-    const { rideProfiles, fixedProfiles, channelProfiles, commerceProfiles, facilityProfiles, ...common } = rules;
+    const { rideProfiles, fixedProfiles, channelProfiles, commerceProfiles, facilityProfiles, merchandiseProfiles, ...common } = rules;
     return JSON.stringify(common);
 }
 export function v9RuleJSON(rules) {
-    const { fixedProfiles, channelProfiles, commerceProfiles, facilityProfiles, ...previous } = rules;
+    const { fixedProfiles, channelProfiles, commerceProfiles, facilityProfiles, merchandiseProfiles, ...previous } = rules;
     return JSON.stringify(previous);
 }
 export function v10RuleJSON(rules) {
-    const { channelProfiles, commerceProfiles, facilityProfiles, ...previous } = rules;
+    const { channelProfiles, commerceProfiles, facilityProfiles, merchandiseProfiles, ...previous } = rules;
     return JSON.stringify(previous);
 }
 export function v11RuleJSON(rules) {
-    const { commerceProfiles, facilityProfiles, ...previous } = rules;
+    const { commerceProfiles, facilityProfiles, merchandiseProfiles, ...previous } = rules;
     return JSON.stringify(previous);
 }
 export function v12RuleJSON(rules) {
-    const { facilityProfiles, ...previous } = rules;
+    const { facilityProfiles, merchandiseProfiles, ...previous } = rules;
     return JSON.stringify(previous);
+}
+export function v13RuleJSON(rules) {
+    const { merchandiseProfiles, ...previous } = rules;
+    // Historical13 has only the delivered stall placement profile.
+    return JSON.stringify({ ...previous, facilityProfiles: Object.fromEntries(Object.entries(rules.facilityProfiles ?? {}).filter(([id]) => id === 'independent.detailed-stalls-v1')) });
 }

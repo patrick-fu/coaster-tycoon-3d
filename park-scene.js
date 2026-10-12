@@ -51,7 +51,7 @@ export class ParkScene{
   });
   this.carouselAssets=createCarouselAssets(this.renderer);this.carousels=createCarousels(this.art,this.carouselAssets);this.scene.add(this.carousels.group);
   this.carouselAssets.readyPromise.then(()=>{if(this.disposed)return;if(this.carouselAssets.error){this.onAssetError?.('Carousel models could not load: '+this.carouselAssets.error);return;}if(this.packet)this.carousels.update(this.packet,this.elements??[]);if(this.scenery)this.setStatic(this.scenery,this.entry);});
-  this.flumeAssets=null;this.boats=null;this.detailedFacilityAssets=null;this.detailedReflectionTarget=null;
+  this.flumeAssets=null;this.boats=null;this.detailedFacilityAssets=null;this.informationAssets=null;this.detailedReflectionTarget=null;this.detailedLightingAttempted=false;
   this.litter=new THREE.InstancedMesh(this.art.geometry('litter-box',()=>new THREE.BoxGeometry(1,1,1)),this.art.material('litter',{color:'#fff0be',roughness:1}),10000);this.litter.count=0;this.scene.add(this.litter);
   this.waste=createConsumableWaste(this.scene);
   this.ghost=new THREE.Group();this.scene.add(this.ghost);this.ghostMaterial=new THREE.MeshBasicMaterial({color:'#80bd53',transparent:true,opacity:.48,depthWrite:false});this.selection=new THREE.Mesh(new THREE.BoxGeometry(4.08,.06,4.08),new THREE.MeshBasicMaterial({color:'#ffd35e',transparent:true,opacity:.5,depthWrite:false}));this.selection.visible=false;this.scene.add(this.selection);
@@ -75,8 +75,9 @@ export class ParkScene{
   this.flumeAssets=createFlumeAssets(this.renderer);this.boats=createBoats(this.flumeAssets);this.scene.add(this.boats.group);
   this.flumeAssets.readyPromise.then(()=>{if(this.disposed)return;if(this.flumeAssets.error){this.onAssetError?.('Log Flume models could not load: '+this.flumeAssets.error);return;}if(this.scenery)this.setStatic(this.scenery,this.entry);if(this.packet)this.boats.update(this.packet);});
  }
- ensureDetailedFacilityAssets(){
-  if(this.disposed||this.detailedFacilityAssets)return;
+ ensureDetailedReflection(){
+  if(this.disposed||this.detailedLightingAttempted)return;
+  this.detailedLightingAttempted=true;
   const aux=new THREE.Scene();aux.background=this.scene.background.clone();
   const generator=new THREE.PMREMGenerator(this.renderer);
   try{
@@ -87,12 +88,35 @@ export class ParkScene{
   }finally{
    generator.dispose();
   }
+ }
+ ensureDetailedFacilityAssets(){
+  if(this.disposed||this.detailedFacilityAssets)return;
+  this.ensureDetailedReflection();
   this.detailedFacilityAssets=createDetailedFacilityAssets(this.renderer,{reflectionTexture:this.detailedReflectionTarget?.texture??null});
   this.detailedFacilityAssets.readyPromise.then(()=>{
    if(this.disposed)return;
    if(this.detailedFacilityAssets.error){this.onAssetError?.('Detailed shop models could not load: '+this.detailedFacilityAssets.error);return;}
    if(this.packet&&this.scenery)this.setStatic(this.scenery,this.packet.entry);
   });
+ }
+ ensureInformationAssets(){
+  if(this.disposed||this.informationAssets)return;
+  this.ensureDetailedReflection();
+  this.informationAssets=createDetailedFacilityAssets(this.renderer,{reflectionTexture:this.detailedReflectionTarget?.texture??null,information:true});
+  this.informationAssets.readyPromise.then(()=>{
+   if(this.disposed)return;
+   if(this.informationAssets.error){this.onAssetError?.('Information kiosk model could not load: '+this.informationAssets.error);return;}
+   if(this.packet&&this.scenery)this.setStatic(this.scenery,this.packet.entry);
+  });
+ }
+ informationPresentationReady(){const status=this.informationAssets?.status();return !this.disposed&&status?.ready===true&&!status.error&&!status.disposed;}
+ async qualifyInformationPresentation(){
+  this.ensureInformationAssets();const assets=this.informationAssets;let timer;
+  if(assets&&!assets.status().disposed&&!assets.error&&!assets.ready){
+   try{await Promise.race([assets.readyPromise,new Promise((resolve,reject)=>{timer=setTimeout(()=>{assets.dispose();reject(new Error('The information kiosk model did not load in time.'));},20000);})]);}
+   finally{clearTimeout(timer);}
+  }
+  if(!this.informationPresentationReady())throw new Error('The information kiosk model is unavailable. This park was not changed.');
  }
  flumeFrames(track,ride){
   const count=ride.channelProfile.pieces[track.piece].motion.samples.length;
@@ -113,7 +137,8 @@ export class ParkScene{
     const facility=this.packet?.facilities.find(f=>f.id===e.facility);
     if(facility?.presentation.kind==='detailed-facility'){
      group.userData.detailedFacility=true;
-     if(this.detailedFacilityAssets?.ready){const model=this.detailedFacilityAssets.cloneFacility(facility);model.position.set(e.tile.x*4+2,e.height/8,e.tile.y*4+2);model.rotation.y=Math.PI/2-e.direction*Math.PI/2;group.add(model);}
+     const assets=facility.kind==='information'?this.informationAssets:this.detailedFacilityAssets;
+     if(assets?.ready){const model=assets.cloneFacility(facility);model.position.set(e.tile.x*4+2,e.height/8,e.tile.y*4+2);model.rotation.y=Math.PI/2-e.direction*Math.PI/2;group.add(model);}
     }else buildFacility(this.art,group,e,facility);
    }
    else if(e.kind==='amenity')buildAmenity(this.art,group,e,{...this.packet?.amenities.find(a=>a.id===e.id),capacity:steelRules.housekeeping.binCapacity});
@@ -131,12 +156,14 @@ export class ParkScene{
   for(const ride of packet.rides)if(!(ride.presentation.kind==='procedural-coaster'&&ride.presentation.profileId==='classic-candidate-v1'||ride.presentation.kind==='detailed-wooden-coaster'&&ride.presentation.profileId==='detailed-wooden-candidate-v1'&&ride.trackProfile||ride.presentation.kind==='detailed-carousel'&&ride.presentation.profileId==='detailed-carousel-candidate-v1'&&Number.isSafeInteger(ride.body)||ride.presentation.kind==='detailed-log-flume'&&ride.presentation.profileId==='detailed-log-flume-candidate-v1'&&ride.channelProfile&&ride.capacity===4))throw new Error('This ride has no supported presentation.');
   for(const facility of packet.facilities){
    const p=facility.presentation,legacy=p.kind==='procedural-facility'&&p.profileId==='classic-candidate-v1'&&p.service===facility.kind,detailed=p.kind==='detailed-facility'&&p.profileId==='detailed-consumable-stalls-v1'&&p.service===facility.kind&&typeof facility.open==='boolean'&&(facility.kind==='food'&&facility.product?.id==='independent.burger'||facility.kind==='drink'&&facility.product?.id==='independent.soft-drink');
-   if(!legacy&&!detailed)throw new Error('This facility has no supported presentation.');
+   const information=p.kind==='detailed-facility'&&p.profileId==='detailed-information-kiosk-v1'&&p.service==='information'&&facility.kind==='information'&&typeof facility.open==='boolean'&&facility.products&&Object.keys(facility.products).length===2&&['independent.map','independent.umbrella'].every(id=>Number.isSafeInteger(facility.products[id]?.price));
+   if(!legacy&&!detailed&&!information)throw new Error('This facility has no supported presentation.');
   }
   if(packet.coordinates.metresPerTile!==steelRules.motion.tileMetres)throw new Error('Unsupported park coordinate profile.');
   const frameOverview=!this.packet||this.overviewPending;this.packet=packet;this.art.packet=packet;if(frameOverview){this.overview();this.overviewPending=false;}
   if(packet.rides.some(ride=>ride.presentation.kind==='detailed-log-flume'))this.ensureFlumeAssets();
-  if(packet.facilities.some(f=>f.presentation.kind==='detailed-facility'))this.ensureDetailedFacilityAssets();
+  if(packet.facilities.some(f=>f.presentation.kind==='detailed-facility'&&f.kind!=='information'))this.ensureDetailedFacilityAssets();
+  if(packet.facilities.some(f=>f.kind==='information'))this.ensureInformationAssets();
   const facilities=packet.facilities.map(f=>`${f.id}:${f.open}`).join(','),amenities=packet.amenities.map(a=>`${a.id}:${a.fill}`).join(',');
   if(packet.scenery)this.setStatic(packet.scenery,packet.entry);
   else if(this.scenery&&(facilities!==this.visibleFacilityState||amenities!==this.visibleAmenityState))this.setStatic(this.scenery,packet.entry);
@@ -162,5 +189,5 @@ export class ParkScene{
  overview(){this.overviewActive=true;const mixed=!this.packet||this.packet.rides.some(r=>r.presentation.kind==='detailed-wooden-coaster')||this.packet.rides.length>=4;if(mixed){this.controls.target.set(80,4,72);this.camera.position.set(152,64,144);}else{this.controls.target.set(82,4,74);this.camera.position.set(154,64,150);}const availableWidth=this.availableWidth||this.container.clientWidth||960;this.camera.zoom=Math.max(this.controls.minZoom,1.18*Math.min(1,availableWidth/960));this.camera.updateProjectionMatrix();}
  requestOverview(){this.overviewPending=true;}
  close(){this.overviewActive=false;this.controls.target.set(87,4.5,50);this.camera.position.set(51,35,86);this.camera.zoom=2.6;this.camera.updateProjectionMatrix();}
- dispose(){this.disposed=true;this.renderer.setAnimationLoop(null);this.resizeObserver.disconnect();this.renderer.domElement.removeEventListener('pointerdown',this.onPointerDown,{capture:true});this.renderer.domElement.removeEventListener('pointermove',this.onPointerMove,{capture:true});this.renderer.domElement.removeEventListener('wheel',this.onWheelStart,{capture:true});this.renderer.domElement.removeEventListener('wheel',this.onWheel);this.controls.dispose();this.clearStatic();this.people.dispose();this.vehicles.dispose();this.woodenVehicles.dispose();this.carousels.dispose();this.boats?.dispose();this.litter.dispose();this.waste?.dispose();this.ghostMaterial.dispose();this.selection.geometry.dispose();this.selection.material.dispose();this.treeAssets.dispose();this.surfaceAssets.dispose();this.woodenAssets.dispose();this.carouselAssets.dispose();this.flumeAssets?.dispose();this.detailedFacilityAssets?.dispose();this.detailedReflectionTarget?.dispose();this.detailedReflectionTarget=null;this.art.surfacePalette=null;this.art.dispose();this.renderer.dispose();}
+ dispose(){this.disposed=true;this.renderer.setAnimationLoop(null);this.resizeObserver.disconnect();this.renderer.domElement.removeEventListener('pointerdown',this.onPointerDown,{capture:true});this.renderer.domElement.removeEventListener('pointermove',this.onPointerMove,{capture:true});this.renderer.domElement.removeEventListener('wheel',this.onWheelStart,{capture:true});this.renderer.domElement.removeEventListener('wheel',this.onWheel);this.controls.dispose();this.clearStatic();this.people.dispose();this.vehicles.dispose();this.woodenVehicles.dispose();this.carousels.dispose();this.boats?.dispose();this.litter.dispose();this.waste?.dispose();this.ghostMaterial.dispose();this.selection.geometry.dispose();this.selection.material.dispose();this.treeAssets.dispose();this.surfaceAssets.dispose();this.woodenAssets.dispose();this.carouselAssets.dispose();this.flumeAssets?.dispose();this.detailedFacilityAssets?.dispose();this.informationAssets?.dispose();this.detailedReflectionTarget?.dispose();this.detailedReflectionTarget=null;this.art.surfacePalette=null;this.art.dispose();this.renderer.dispose();}
 }

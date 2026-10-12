@@ -1,7 +1,7 @@
 import { Engine } from './engine.js';
 export declare function createHost(engine: Engine): (message: unknown) => import("./types.js").Result<{
     id: number;
-    protocolVersion: 6;
+    protocolVersion: 7;
     result: {
         ok: true;
         value: void;
@@ -17,8 +17,8 @@ export declare function createHost(engine: Engine): (message: unknown) => import
     } | {
         ok: true;
         value: {
-            protocolVersion: 6;
-            contentVersion: 6;
+            protocolVersion: 7;
+            contentVersion: 7;
             coordinates: {
                 nativeUnitsPerTile: number;
                 nativeHeightStep: number;
@@ -267,13 +267,47 @@ export declare function createHost(engine: Engine): (message: unknown) => import
                     label: string;
                 };
             }[];
-            facilities: {
+            facilities: ({
                 id: number;
                 instanceId: number;
                 name: string;
-                kind: import("./services.js").FacilityKind;
                 element: number;
                 open: boolean;
+                kind: 'information';
+                umbrellaColour: number;
+                content: {
+                    familyId: string;
+                    variantId: string;
+                    modeId: string;
+                };
+                presentation: import("../content/registry.js").Presentation;
+                products: {
+                    'independent.map': {
+                        sales: number;
+                        income: number;
+                        price: number;
+                        maxPrice: number;
+                        stockCost: number;
+                        stockExpense: number;
+                        grossMargin: number;
+                    };
+                    'independent.umbrella': {
+                        sales: number;
+                        income: number;
+                        price: number;
+                        maxPrice: number;
+                        stockCost: number;
+                        stockExpense: number;
+                        grossMargin: number;
+                    };
+                };
+            } | {
+                id: number;
+                instanceId: number;
+                name: string;
+                element: number;
+                open: boolean;
+                kind: Exclude<import("./services.js").FacilityKind, 'information'>;
                 price: number;
                 income: number;
                 sales: number;
@@ -294,7 +328,7 @@ export declare function createHost(engine: Engine): (message: unknown) => import
                     stockExpense: number;
                     grossMargin: number;
                 } | null;
-            }[];
+            })[];
             amenities: {
                 id: number;
                 kind: 'bench' | 'bin';
@@ -326,7 +360,7 @@ export declare function createHost(engine: Engine): (message: unknown) => import
     } | {
         ok: true;
         value: {
-            contentVersion: 6;
+            contentVersion: 7;
             families: {
                 id: string;
                 label: string;
@@ -366,6 +400,10 @@ export declare function createHost(engine: Engine): (message: unknown) => import
                             profileId: 'independent.consumables-v1' | 'independent.detailed-stalls-v1';
                             productId: import("../content/consumables.js").ProductId;
                         } | {
+                            kind: 'facility';
+                            service: 'information';
+                            profileId: 'independent.information-kiosk-v1';
+                        } | {
                             kind: 'unimplemented';
                             referenceShape: string;
                         };
@@ -387,6 +425,10 @@ export declare function createHost(engine: Engine): (message: unknown) => import
                             service: 'food' | 'drink';
                             profileId: 'independent.consumables-v1';
                             productId: import("../content/consumables.js").ProductId;
+                        } | {
+                            kind: 'service';
+                            service: 'information';
+                            profileId: 'independent.merchandise-v1';
                         } | {
                             kind: 'unimplemented';
                         };

@@ -13,8 +13,8 @@ export declare class Engine {
     constructor(options: WorldOptions, rules: Rules);
     get revision(): string;
     view(input: unknown): Result<{
-        protocolVersion: 6;
-        contentVersion: 6;
+        protocolVersion: 7;
+        contentVersion: 7;
         coordinates: {
             nativeUnitsPerTile: number;
             nativeHeightStep: number;
@@ -263,13 +263,47 @@ export declare class Engine {
                 label: string;
             };
         }[];
-        facilities: {
+        facilities: ({
             id: number;
             instanceId: number;
             name: string;
-            kind: import("./services.js").FacilityKind;
             element: number;
             open: boolean;
+            kind: 'information';
+            umbrellaColour: number;
+            content: {
+                familyId: string;
+                variantId: string;
+                modeId: string;
+            };
+            presentation: import("../content/registry.js").Presentation;
+            products: {
+                'independent.map': {
+                    sales: number;
+                    income: number;
+                    price: number;
+                    maxPrice: number;
+                    stockCost: number;
+                    stockExpense: number;
+                    grossMargin: number;
+                };
+                'independent.umbrella': {
+                    sales: number;
+                    income: number;
+                    price: number;
+                    maxPrice: number;
+                    stockCost: number;
+                    stockExpense: number;
+                    grossMargin: number;
+                };
+            };
+        } | {
+            id: number;
+            instanceId: number;
+            name: string;
+            element: number;
+            open: boolean;
+            kind: Exclude<import("./services.js").FacilityKind, 'information'>;
             price: number;
             income: number;
             sales: number;
@@ -290,7 +324,7 @@ export declare class Engine {
                 stockExpense: number;
                 grossMargin: number;
             } | null;
-        }[];
+        })[];
         amenities: {
             id: number;
             kind: 'bench' | 'bin';
@@ -313,7 +347,7 @@ export declare class Engine {
     inspect(kind: unknown, id: unknown): Result<Guest | Staff | Element>;
     snapshot(): State;
     catalogue(): {
-        contentVersion: 6;
+        contentVersion: 7;
         families: {
             id: string;
             label: string;
@@ -353,6 +387,10 @@ export declare class Engine {
                         profileId: 'independent.consumables-v1' | 'independent.detailed-stalls-v1';
                         productId: import("../content/consumables.js").ProductId;
                     } | {
+                        kind: 'facility';
+                        service: 'information';
+                        profileId: 'independent.information-kiosk-v1';
+                    } | {
                         kind: 'unimplemented';
                         referenceShape: string;
                     };
@@ -374,6 +412,10 @@ export declare class Engine {
                         service: 'food' | 'drink';
                         profileId: 'independent.consumables-v1';
                         productId: import("../content/consumables.js").ProductId;
+                    } | {
+                        kind: 'service';
+                        service: 'information';
+                        profileId: 'independent.merchandise-v1';
                     } | {
                         kind: 'unimplemented';
                     };
@@ -435,6 +477,7 @@ export declare class Engine {
     private finances;
     private plan;
     private trackTopology;
+    private validateMerchandiseAccounts;
     private indexState;
     private validateTrains;
     private validateCarouselSessions;

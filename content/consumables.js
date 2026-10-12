@@ -47,7 +47,7 @@ export function productRule(id, rules) {
 }
 export function facilityProduct(content, rules) {
     const { construction: c, operation: o } = resolveContent(content).capabilities;
-    if (c.kind !== 'facility')
+    if (c.kind !== 'facility' || c.service === 'information')
         return null;
     if (c.profileId === 'independent-services-v1') {
         ensure(o.kind === 'service' && o.profileId === c.profileId && o.service === c.service, 'INVALID_CONTENT', 'Facility service capabilities disagree.');

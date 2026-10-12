@@ -13,8 +13,8 @@ export type ViewRequest = {
 };
 export declare function validateView(value: unknown, side: number): ViewRequest;
 export declare function project(s: State, rules: Rules, request: ViewRequest, elements: ReadonlyMap<number, Element>, course: (ride: number) => Course, channelCourse: (ride: number) => FlumeCourse): {
-    protocolVersion: 6;
-    contentVersion: 6;
+    protocolVersion: 7;
+    contentVersion: 7;
     coordinates: {
         nativeUnitsPerTile: number;
         nativeHeightStep: number;
@@ -263,13 +263,47 @@ export declare function project(s: State, rules: Rules, request: ViewRequest, el
             label: string;
         };
     }[];
-    facilities: {
+    facilities: ({
         id: number;
         instanceId: number;
         name: string;
-        kind: import("./services.js").FacilityKind;
         element: number;
         open: boolean;
+        kind: 'information';
+        umbrellaColour: number;
+        content: {
+            familyId: string;
+            variantId: string;
+            modeId: string;
+        };
+        presentation: import("../content/registry.js").Presentation;
+        products: {
+            'independent.map': {
+                sales: number;
+                income: number;
+                price: number;
+                maxPrice: number;
+                stockCost: number;
+                stockExpense: number;
+                grossMargin: number;
+            };
+            'independent.umbrella': {
+                sales: number;
+                income: number;
+                price: number;
+                maxPrice: number;
+                stockCost: number;
+                stockExpense: number;
+                grossMargin: number;
+            };
+        };
+    } | {
+        id: number;
+        instanceId: number;
+        name: string;
+        element: number;
+        open: boolean;
+        kind: Exclude<import("./services.js").FacilityKind, 'information'>;
         price: number;
         income: number;
         sales: number;
@@ -290,7 +324,7 @@ export declare function project(s: State, rules: Rules, request: ViewRequest, el
             stockExpense: number;
             grossMargin: number;
         } | null;
-    }[];
+    })[];
     amenities: {
         id: number;
         kind: 'bench' | 'bin';

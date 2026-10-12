@@ -8,6 +8,7 @@ import type { FlumeProfile } from '../content/log-flume.js';
 import type { SceneryRules, SceneryType } from './scenery.js';
 import type { ContentIdentity } from '../content/registry.js';
 import type { CommerceProfile } from '../content/consumables.js';
+import type { MerchandiseProfile, MerchandiseAccounts, MerchandiseId } from '../content/merchandise.js';
 export type Direction = 0 | 1 | 2 | 3;
 export type Attitude = -1 | 0 | 1;
 export type Tile = {
@@ -129,6 +130,7 @@ export type Rules = {
     channelProfiles?: Record<string, ChannelRideProfile>;
     commerceProfiles?: Record<string, CommerceProfile>;
     facilityProfiles?: Record<string, FacilityPlacementProfile>;
+    merchandiseProfiles?: Record<string, MerchandiseProfile>;
 };
 export type WorldOptions = {
     side: number;
@@ -212,14 +214,15 @@ export type FixedRide = RideBase & {
 };
 export type Ride = TrackedRide | ChannelRide | FixedRide;
 export type State = {
-    version: 13;
-    contentVersion: 6;
+    version: 14;
+    contentVersion: 7;
     nextInstance: number;
     amenities: Amenity[];
     litter: Litter[];
     facilities: Facility[];
     retiredShopIncome: number;
     retiredStock: number;
+    retiredMerchandise: MerchandiseAccounts;
     retiredRideIncome: number;
     staff: Staff[];
     rules: string;
@@ -336,7 +339,7 @@ export type Command = {
 } | {
     type: 'place-facility';
     name: string;
-    kind: 'food' | 'drink' | 'restroom';
+    kind: 'food' | 'drink' | 'restroom' | 'information';
     tile: Tile;
     height: number;
     direction: Direction;
@@ -348,6 +351,11 @@ export type Command = {
 } | {
     type: 'set-facility-price';
     facility: number;
+    price: number;
+} | {
+    type: 'set-merchandise-price';
+    facility: number;
+    productId: MerchandiseId;
     price: number;
 } | {
     type: 'remove-facility';

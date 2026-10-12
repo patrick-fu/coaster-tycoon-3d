@@ -4,6 +4,7 @@ import type { Train } from './motion.js';
 import { type CarouselSession } from './carousel.js';
 import type { Boat } from './boat.js';
 import type { ContainerId, ProductId } from '../content/consumables.js';
+import type { GuestMerchandise } from '../content/merchandise.js';
 export type HeldItem = null | {
     readonly kind: 'consumable';
     readonly productId: ProductId;
@@ -53,6 +54,8 @@ export type Ledger = {
 export type Guest = {
     id: number;
     held: HeldItem;
+    merchandise: GuestMerchandise;
+    informationCounter: number | null;
     navigationRide: number | null;
     amenity: number | null;
     restProgress: number;

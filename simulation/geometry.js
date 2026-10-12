@@ -6,8 +6,9 @@ import { validateChannelProfiles } from './flume-profile.js';
 import { defaultScenery, sceneryTypes } from './scenery.js';
 import { validateCommerceProfiles } from '../content/consumables.js';
 import { validateFacilityProfiles } from '../content/facility-profiles.js';
+import { validateMerchandiseProfiles } from '../content/merchandise.js';
 export function validateRules(input) {
-    record(input, [...(Object.hasOwn(input ?? {}, 'scenery') ? ['scenery'] : []), 'housekeeping', 'services', 'guests', 'motion', 'id', 'evidence', 'pathPrice', 'portalPrice', 'terrainPrice', 'refundPerThousand', 'maxSupport', 'maxHeight', 'pieces', ...(Object.hasOwn(input ?? {}, 'rideProfiles') ? ['rideProfiles'] : []), ...(Object.hasOwn(input ?? {}, 'fixedProfiles') ? ['fixedProfiles'] : []), ...(Object.hasOwn(input ?? {}, 'channelProfiles') ? ['channelProfiles'] : []), ...(Object.hasOwn(input ?? {}, 'commerceProfiles') ? ['commerceProfiles'] : []), ...(Object.hasOwn(input ?? {}, 'facilityProfiles') ? ['facilityProfiles'] : [])]);
+    record(input, [...(Object.hasOwn(input ?? {}, 'scenery') ? ['scenery'] : []), 'housekeeping', 'services', 'guests', 'motion', 'id', 'evidence', 'pathPrice', 'portalPrice', 'terrainPrice', 'refundPerThousand', 'maxSupport', 'maxHeight', 'pieces', ...(Object.hasOwn(input ?? {}, 'rideProfiles') ? ['rideProfiles'] : []), ...(Object.hasOwn(input ?? {}, 'fixedProfiles') ? ['fixedProfiles'] : []), ...(Object.hasOwn(input ?? {}, 'channelProfiles') ? ['channelProfiles'] : []), ...(Object.hasOwn(input ?? {}, 'commerceProfiles') ? ['commerceProfiles'] : []), ...(Object.hasOwn(input ?? {}, 'facilityProfiles') ? ['facilityProfiles'] : []), ...(Object.hasOwn(input ?? {}, 'merchandiseProfiles') ? ['merchandiseProfiles'] : [])]);
     const scenery = structuredClone(Object.hasOwn(input, 'scenery') ? input.scenery : defaultScenery);
     record(scenery, [...sceneryTypes]);
     for (const type of sceneryTypes) {
@@ -105,8 +106,8 @@ export function validateRules(input) {
         const footprints = Object.fromEntries(['flat', 'left', 'right', 'station'].map(key => [key, value.footprints[key].map(cells => cells.map(c => ({ x: c.x, y: c.y, low: c.low, high: c.high, mask: c.mask })).sort((a, b) => a.x - b.x || a.y - b.y || a.low - b.low || a.high - b.high || a.mask - b.mask))]));
         rideProfiles[id] = { motion: selected.motion, pieces: selected.pieces, vehicle: { kind: 'coupled-flat', originMm: { x: vehicle.originMm.x, y: vehicle.originMm.y, z: vehicle.originMm.z }, wheelbaseMm: vehicle.wheelbaseMm, bogiePivotHeightMm: vehicle.bogiePivotHeightMm, couplerHalfSpanMm: vehicle.couplerHalfSpanMm, couplerHeightMm: vehicle.couplerHeightMm, drawbarLengthMm: vehicle.drawbarLengthMm, railHalfGaugeMm: vehicle.railHalfGaugeMm, stationDeckMm: vehicle.stationDeckMm }, footprints };
     }
-    const commerceProfiles = validateCommerceProfiles(input.commerceProfiles), facilityProfiles = validateFacilityProfiles(input.facilityProfiles, { ...common, commerceProfiles });
-    return { ...common, rideProfiles, fixedProfiles: validateFixedProfiles(input.fixedProfiles, common), channelProfiles: validateChannelProfiles(input.channelProfiles, common), commerceProfiles, facilityProfiles };
+    const commerceProfiles = validateCommerceProfiles(input.commerceProfiles), merchandiseProfiles = validateMerchandiseProfiles(input.merchandiseProfiles), facilityProfiles = validateFacilityProfiles(input.facilityProfiles, { ...common, commerceProfiles, merchandiseProfiles });
+    return { ...common, rideProfiles, fixedProfiles: validateFixedProfiles(input.fixedProfiles, common), channelProfiles: validateChannelProfiles(input.channelProfiles, common), commerceProfiles, facilityProfiles, merchandiseProfiles };
 }
 export function turn(x, y, d) { const vectors = [[1, 0], [0, 1], [-1, 0], [0, -1]]; const [dx, dy] = vectors[d]; return { x: x * dx - y * dy, y: x * dy + y * dx }; }
 export function endpoint(a, p) { const b = turn(p.end.x, p.end.y, a.direction); return { x: a.x + b.x, y: a.y + b.y, z: a.z + p.end.z, direction: ((a.direction + p.end.turn + 4) % 4), pitch: p.end.pitch, bank: p.end.bank }; }

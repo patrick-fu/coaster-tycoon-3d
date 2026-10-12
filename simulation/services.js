@@ -6,6 +6,7 @@ import { flumeProfile } from './flume-profile.js';
 import { boatEditable } from './boat.js';
 import { compileFlumeCourse } from './flume-native.js';
 import { commerceProfileId, facilityProduct, facilityStockCost, productRule } from '../content/consumables.js';
+import { merchandiseProfileId } from '../content/merchandise.js';
 const same = (a, b) => a.x === b.x && a.y === b.y && a.z === b.z;
 const key = (p) => `${p.x},${p.y},${p.z}`;
 export function validateServiceRules(input) {
@@ -18,8 +19,8 @@ export function validateServiceRules(input) {
     ensure(input.needThreshold <= 1000 && input.relief <= 1000 && input.initialBladder <= 1000 && input.defaultPrice <= input.maxPrice && input.interestPer10000 <= 10000, 'INVALID_COMMAND', 'Invalid service range.');
     return Object.fromEntries(keys.map(k => [k, input[k]]));
 }
-export function facilityApproach(e) {
-    const [dx, dy] = [[1, 0], [0, 1], [-1, 0], [0, -1]][e.direction];
+export function facilityApproach(e, counter = 0) {
+    const [dx, dy] = [[1, 0], [0, 1], [-1, 0], [0, -1]][(e.direction + counter) % 4];
     return { x: e.tile.x + dx, y: e.tile.y + dy, z: e.height };
 }
 export function sharedCount(s) { return s.people.guests.length + s.staff.length + s.litter.length + s.trains.reduce((n, t) => n + t.carIds.length, 0) + s.boats.length; }
@@ -27,6 +28,8 @@ export function chooseFacility(g, s, rules, index, route) {
     const motive = (f) => f.kind === 'food' ? g.hunger : f.kind === 'drink' ? g.thirst : g.bladder;
     let choice = null;
     for (const f of s.facilities) {
+        if (f.kind === 'information')
+            continue;
         if (!f.open || g.cash < f.price || (g.wrapper || g.held) && f.kind !== 'restroom' || motive(f) < rules.services.needThreshold)
             continue;
         const e = index.elements.get(f.element);
@@ -43,14 +46,18 @@ export function chooseFacility(g, s, rules, index, route) {
     }
     return choice;
 }
-export function recoverFacility(g, index) {
+export function recoverFacility(g, index, rules) {
     if (g.facility === null)
         return true;
     const f = index.facilities.get(g.facility), e = f ? index.elements.get(f.element) : undefined;
+    if (f?.kind === 'information')
+        return !!rules.merchandiseProfiles?.[merchandiseProfileId] && f.open && g.informationCounter !== null && e?.kind === 'facility' && publicPath(facilityApproach(e, g.informationCounter), index);
     return !!f && f.open && g.cash >= f.price && (f.kind === 'restroom' || !g.held) && e?.kind === 'facility' && publicPath(facilityApproach(e), index);
 }
 export function buy(g, s, rules, index) {
-    const f = index.facilities.get(g.facility), r = rules.services, product = facilityProduct(f.content, rules), stock = facilityStockCost(f, rules), price = f.price;
+    const f = index.facilities.get(g.facility);
+    ensure(f.kind !== 'information', 'INVALID_CONTENT', 'Ordinary service cannot sell information merchandise.');
+    const r = rules.services, product = facilityProduct(f.content, rules), stock = facilityStockCost(f, rules), price = f.price;
     const cash = BigInt(s.cash) + BigInt(price) - BigInt(stock);
     ensure(cash >= BigInt(-Number.MAX_SAFE_INTEGER) && cash <= BigInt(Number.MAX_SAFE_INTEGER) && integer(s.ledger.shopSales + price) && integer(s.ledger.stock + stock) && integer(f.income + price) && integer(f.sales + 1) && integer(g.spent + price), 'CAPACITY', 'Shop accounting capacity exhausted.');
     g.cash -= price;

@@ -1,5 +1,5 @@
 import type { ProductId } from './consumables.js';
-export declare const CONTENT_VERSION: 6;
+export declare const CONTENT_VERSION: 7;
 export type ContentIdentity = {
     familyId: string;
     variantId: string;
@@ -25,6 +25,10 @@ type Construction = {
     profileId: 'independent.consumables-v1' | 'independent.detailed-stalls-v1';
     productId: ProductId;
 } | {
+    kind: 'facility';
+    service: 'information';
+    profileId: 'independent.information-kiosk-v1';
+} | {
     kind: 'unimplemented';
     referenceShape: string;
 };
@@ -47,6 +51,10 @@ type Operation = {
     profileId: 'independent.consumables-v1';
     productId: ProductId;
 } | {
+    kind: 'service';
+    service: 'information';
+    profileId: 'independent.merchandise-v1';
+} | {
     kind: 'unimplemented';
 };
 export type Presentation = {
@@ -65,6 +73,10 @@ export type Presentation = {
     kind: 'detailed-facility';
     service: 'food' | 'drink';
     profileId: 'detailed-consumable-stalls-v1';
+} | {
+    kind: 'detailed-facility';
+    service: 'information';
+    profileId: 'detailed-information-kiosk-v1';
 } | {
     kind: 'procedural-facility';
     service: ServiceKind;
@@ -103,10 +115,12 @@ export declare function flumeRideContent(): ContentIdentity;
 export declare function consumableFacilityContent(product: ProductId): ContentIdentity;
 export declare function detailedFacilityContent(product: ProductId): ContentIdentity;
 export declare function legacyFacilityContent(service: ServiceKind): ContentIdentity;
+export declare function informationFacilityContent(): ContentIdentity;
+export declare function historicalContentAllowed(value: ContentIdentity, kind: 'ride' | ServiceKind | 'information', version: number): boolean;
 export declare function resolveContent(value: unknown): ResolvedContent;
-export declare function executableContent(value: unknown, kind: 'ride' | ServiceKind): ContentIdentity;
+export declare function executableContent(value: unknown, kind: 'ride' | ServiceKind | 'information'): ContentIdentity;
 export declare function catalogue(availableProfiles?: ReadonlySet<string>): {
-    contentVersion: 6;
+    contentVersion: 7;
     families: Family[];
     variants: {
         id: string;
