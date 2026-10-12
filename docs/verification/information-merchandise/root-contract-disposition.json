@@ -1,0 +1,30 @@
+{
+  "utc": "2026-10-12T01:10:53.368553+00:00",
+  "status": "Finite candidate contract accepted for immutable old13 oracle only",
+  "baseCommit": "524cf01cb46ac3fcbeb5cd80c70876c8b1e2b500",
+  "executableSource": "1bdec0dd377f922c9168f454c4b2eaba92a1bbc4",
+  "contractPath": "/Volumes/WD/code/workspaces/coaster-information-merchandise/coaster-tycoon-3d/docs/planning/information-merchandise-slice.md",
+  "contractBytes": 9801,
+  "contractSHA256": "a7597c3abebecee14e3691e305a516cafd32cfc8206ddb5d0c23079164d14883",
+  "independentDesign": "merchandise_contract_sol_max static PASS, source-backed refusal-loop supplement and material PASS consumed",
+  "independentDrift": "merchandise_contract_drift_luna_max static findings plus corrected material PASS consumed",
+  "rootRepairs": [
+    "No value draw does not skip Umbrella demand draw",
+    "Ordinary goal exists only with legal activity",
+    "Map price39 pure filter and no merchandise RNG",
+    "One successful Map fallback versus complete refusal",
+    "Both products plus held item on same guest",
+    "Negative profile/presentation availability",
+    "Explicit no purchase happiness/satisfaction mutation",
+    "Counter-only intent; no static order/cooldown/entity duplication"
+  ],
+  "productionAuthorized": false,
+  "old13OracleExecuted": false,
+  "remaining": [
+    "Owned finite issue/publication",
+    "Immutable old13 full/lifecycle/nondefault/paused/batched authority-view-audit proof",
+    "Root production and remote checks",
+    "AGY UI/art and native/public composition",
+    "Human/original/hardware/full programme gates"
+  ]
+}
