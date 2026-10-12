@@ -1,0 +1,14 @@
+{
+  "pid": 1737095,
+  "startUTC": "2026-10-10T22:31:36.222507+00:00",
+  "scope": "Root independent offline streaming of every retained encoded and decoded payload; no application or replay.",
+  "actualExit": 0,
+  "filesConsumed": 426,
+  "logicalBytes": 2486624114,
+  "encodedBytes": 300968147,
+  "manifestSHA256": "d3001292171a585e655e162992a000f516dcfbd0ea51d54561725fe5c140ef76",
+  "checksSHA256": "2e1dfd0a0d454c6ea2b231ba2841f325b40b6630ca0663e06cc492ac0549c9fb",
+  "originalApplicationExitPreserved": 1,
+  "fullEncodedDecodedBytesVerified": true,
+  "endUTC": "2026-10-10T22:31:41.036289+00:00"
+}

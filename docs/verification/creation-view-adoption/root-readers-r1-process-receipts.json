@@ -1,0 +1,29 @@
+{
+  "pid": 1737063,
+  "startUTC": "2026-10-10T22:31:28.425137+00:00",
+  "scope": "Offline proof readers only; original application exit1 retained.",
+  "readers": [
+    {
+      "script": "consume-baseline-r1.py",
+      "pid": 1737064,
+      "startUTC": "2026-10-10T22:31:28.425920+00:00",
+      "stdout": "/workspace/coaster-creation-input/evidence/consume-baseline-r1.py.stdout.txt",
+      "stderr": "/workspace/coaster-creation-input/evidence/consume-baseline-r1.py.stderr.txt",
+      "actualExit": 0,
+      "endUTC": "2026-10-10T22:31:36.195600+00:00",
+      "postWaitProcessExists": false
+    },
+    {
+      "script": "consume-retained-baseline-r1.py",
+      "pid": 1737095,
+      "startUTC": "2026-10-10T22:31:36.196483+00:00",
+      "stdout": "/workspace/coaster-creation-input/evidence/consume-retained-baseline-r1.py.stdout.txt",
+      "stderr": "/workspace/coaster-creation-input/evidence/consume-retained-baseline-r1.py.stderr.txt",
+      "actualExit": 0,
+      "endUTC": "2026-10-10T22:31:41.041252+00:00",
+      "postWaitProcessExists": false
+    }
+  ],
+  "endUTC": "2026-10-10T22:31:41.041613+00:00",
+  "actualExit": 0
+}

@@ -1,143 +1,137 @@
 # Project progress and recovery
 
-Last updated: 2026-10-10 21:25 UTC.
-Root owns this live record and the [UTC journal](docs/progress/2026-10-10.md).
-[Previous detailed checkpoint](docs/progress/2026-10-10-progress-before-final-public-acceptance.md)
-retains the source/native/public/tool repair sequence. `CONTEXT.md` remains the domain glossary;
-this file is execution context.
+Last updated: 2026-10-12 00:04 UTC. Root owns this record and the
+[UTC journal](docs/progress/2026-10-12.md). Prior execution remains in
+[pre-integration checkpoint](docs/progress/2026-10-12-progress-before-finite79-integration.md),
+[October11 journal](docs/progress/2026-10-11.md) and its linked earlier checkpoints.
+`CONTEXT.md` is the domain glossary; this file is the current execution context.
 
-## Objective and boundaries
+## Outcome and constraints
 
-The unlimited Goal is ACTIVE: independent MIT browser game, Classic controls, polished 3D
-art, RCT2 gameplay breadth and substantive park management. Full79 families/155 variants/
-41 shops/35 products, admissions/finance/research/scenarios, original numerical/art agreement,
-human style/play and representative integrated-GPU/scale acceptance remain OPEN. Finite77 is
-one four-family composition milestone; it is not the full game or first-playable acceptance.
-No new human decision is required for this integration/publication.
+The independent MIT browser park game remains unfinished. Patrick chose Classic,
+original gameplay fidelity, substantial 3D detail and content breadth. Full79 families/
+155 variants/41 shops/35 products, admissions, finance, research, scenarios, weather,
+presets and representative original-scale/integrated-GPU/human play/style remain OPEN.
+Finite77 four-family composition is accepted. Finite79 creation/adoption repair is
+accepted for integration; full Goal ACTIVE. No new human decision is needed now.
 
-English project artifacts; Chinese chat. Root owns production, integration, GitHub, hosting
-and this context. Logical work uses Sol Max, visual work AGY, adversarial review Luna Max.
-All builds/tests/simulation/Blender/Chrome run on Grok through `ssh grok-build`; never on Mac.
-Mac editing/Git/orchestration/proof I/O/hash/small JSON/transferred PNG viewing are allowed.
-Source/masters/proof stay on WD, generated builds on Grok. Clean only exact owned disposable
-copies after retained equality and actual process/file-owner checks; preserve default profile,
-complete typed saves, editable masters and every frozen preview.
+English project artifacts, Chinese chat. Root owns production/docs/GitHub/integration.
+Logic Sol Max, visuals AGY, adversarial Luna Max. All builds/tests/simulation/Blender/
+Chrome/raw/codec/AST run on designated Grok via ssh grok-build, never Mac. Mac editing/
+Git/orchestration/plain IO/hash/small JSON<=256KiB only. Keep workspaces/proof on WD,
+generated builds on Grok. Preserve full originals, default profile, masters and frozen pins.
 
-## Current identity
+## Source, publication and integration
 
-- Worktree `/Volumes/WD/code/workspaces/coaster-consumable-art/coaster-tycoon-3d`, branch
-  `p/patrick/feature/classic-four-family-showcase`, main baseb6f03f9b.
-- Executable source7a0bbac668ece30416cceefb97997c0de17d1376, tree6c942d435e5a093d4a471182d5030ad1ecf594f6,
-  gameaad24598/cameraf562b92d. Git HEADcfe2f2e8a518c7b94c6aa0f64819d114c7ef068a is a documentation-only
-  checkpoint; newer live docs may be dirty. Documentation HEAD is not a new build identity.
-- [Final source repair](docs/verification/classic-showcase/root-replacement-input-source-repair.json)
-  combines exact Sol/Luna r20 review: pending New/File uses existing inert/keyboard exclusion;
-  invalidate staticRevision before replacement/recovery, commit it after current-epoch Scene/
-  palette/desk/inspection completion, keep failed recovery inert. No new queue/framework.
-- [Final Grok build](docs/verification/classic-showcase/root-replacement-input-build-acceptance.json)
-  `/workspace/coaster-classic-showcase-interaction-fix-r1/source-r5/web-dist`, ready8547297526a21a602ee783e7e8d02579b700782d3cd3afe16aaed575b8790669
-  at evidence/build-r5/build-ready.json. Actual build/syntax/copy/transport0;847source/164shipping/
-  74compiled. Onlygame changes versus0b; camera/163shipping/compiled/kernel/factory/art remain exact.
-- Canonical313 checks, complete810792B Node oraclea911,182 legal factory commands and+12288 real
-  operation ticks reuse unchanged code. Detailed CC0 model/source/picking/lifecycle and prior
-  full72-material/paid/history/fault proofs keep their original scopes. Finite75/PR76 remain merged.
+- Active /Volumes/WD/code/workspaces/coaster-creation-input/coaster-tycoon-3d,
+  branch p/patrick/fix/creation-view-adoption. Main base/origin maincb922ccea03841033de32ca5840219b056ea7173
+  freshly fetched actual78e1250. Previous docs HEAD1040cbbe is pushed/read back. Local accepted-docs commit99ceabd is
+  actual8dba020 but UNPUSHED. Whitespace854adc2 flags one new blank EOF; Root repairs
+  and checks before amending/pushing. Production is unchanged.
+- Executable1bdec0dd377f922c9168f454c4b2eaba92a1bbc4/tree8ea8918269e119fde5c8a0b7603214db5541041a,
+  gamec4fd4cff74d6cf3a3b9599c9f82772fb73fea672fdde3157ffbafe00358f2001,
+  Readyd8218203fc294a3316c8751697d5f412c286e3df9c700b5e5906c1c16fc79ee7.
+  Grok source-r1/web-dist is exact883 source/164 shipping/74 compiled. Unchanged313 canonical
+  checks/full810792B factorya911 and prior accepted art/placement/oracles are reused.
+- [PR80](https://github.com/patrick-fu/coaster-tycoon-3d/pull/80), Preserve the new ride until
+  its view is adopted, OPEN/draft/MERGEABLE/head1040cbbe, actualf344a3. No status checks.
+  [Issue79](https://github.com/patrick-fu/coaster-tycoon-3d/issues/79), Preserve the created
+  ride target through pending view adoption, OPEN. Root integration/closure is next.
+- Hosting61020d38a913c4416e016250936d501d299bce95 is actually pushed/Pages built.
+  [Root Classic](https://patrick-fu.github.io/coaster-tycoon-3d/?showcase=classic) and
+  [frozen1b Classic](https://patrick-fu.github.io/coaster-tycoon-3d/previews/classic-1bdec0d/?showcase=classic)
+  are scoped public ACCEPTED. Old7a and1594 previous files remain exact. Source1b runtime
+  is published; mainline merge remains pending. Prior vendor whitespace1 is preserved;
+  narrowed check0 excludes only exact unchanged upstream bytes.
 
-## Accepted native and published public evidence
+## Accepted finite79 proof and review
 
-[Native acceptance](docs/verification/classic-showcase/root-fixed-native-acceptance.json) consumes
-actual215/215 at source7a/ready854, full466 main/136terminal/76self,15736raw/319218667B and240
-Runtime components. Native runner1652874/HTTP1652882/defaultChrome1653052 terminate0; original
-local typed[]37517e5f restores, all15 children/ports close.13 own-pretermination versus two
-late-only children remain explicit. Genuine creation7/dropdown7/stationcost101, strict19,12
-flower156/build30/refund15/tick7403, whole Save/Export/reload and normal borrowed lifecycle pass.
+[Native disposition](docs/verification/creation-view-adoption/root-r6-tail-native-disposition.json)c13b08c8
+accepts original R2 six completed native cases304 recorded checks plus R6 tail269.
+Original native runtime/readers1 remain explicit, including original final assertion unexecuted.
+Actual R6 wrapper228440/runner2284410,105257033B raw/e9c5c46f,real59999.9ms differential
+non-click autosave,contiguous627–631 durable/stop/tail/reload,new document/worker/source,
+67108865B Oversize locked recovery/unlock/zero load and full resource/storage closure qualify.
+Root260/261 reader1 wrong overwritten-download attribution is preserved; exact stage supplement0
+covers the affected predicates. Native six cases/interval/Oversize must not replay.
 
-[Publication](docs/verification/classic-showcase/root-fixed-public-publication.json) is actual
-hosting0f6c585b98fb786d8966c28b6aaab022c3064459, Pages built19:50:47Z/errornull. Root and new
-[classic-7a0bbac pin](https://patrick-fu.github.io/coaster-tycoon-3d/previews/classic-7a0bbac/?showcase=classic)
-ship exact164 files/79298767B per route;1428 earlier preview/.nojekyll bytes remain unchanged.
-Hosting worktree is clean at `p/patrick/publish/classic-7a0bbac`; canonical source main staysb6.
-Initial Git SSH128 is retained; normal ephemeral HTTPS commit/push0 uses existing credentials.
+[Public disposition](docs/verification/creation-view-adoption/root-public-success-disposition-r2.json)2d69d47f
+accepts source1b root/frozen affected/native persistence composition. Original publicr1 FAILED1
+from wrong unique97 assertion is retained. Corrected exact path/role Counter driver04b/contract86e/
+17 pinned inputs/gate5c2 each verify97 sources/page61+worker36 over68 paths,complete hashes and
+real context/worker/document-loader epochs. Both root/pin164 fresh full HTTP bodies match Ready.
+Actual publicr2 wrapper324707/runner324744/Chrome3248790 ends23:01:53Z; root create7/Station156,
+cross-lock no extra execute/Track/Portal/Queue targets7,root346/pin272 recorded checks,actual old/
+current13 File Imports,trusted clicked Save,stage-specific Export Blob/GUID full files and exact
+contiguous native durable reload qualify. Four raw error sets empty; resources dispose once,
+foreign resources survive; same full1857485B shared-origin typed baseline restores per route.
 
-[Final public acceptance](docs/verification/classic-showcase/root-fixed-public-acceptance.json)
-is accepted and fullRaw/fullTool=true. Frozen driverdc7edf9d/contract8ff8dfff/source7a/ready854/
-hosting0f6/gated692 precede fresh1686439 preflight0. Sole actual runner1686979/defaultChrome
-1687054, no local server, ends20:26:06Z child/SSH/wrapper0 with root178/178 and pin101/101.
-Root offline1694286/SSH96951/wrapper96926 consumes every11211+6200raw/385961955B,154 actual
-components,388 parsed/getSource,328HTTP,12loaded bodies,60 full saveRPC,58authority files,
-45chronological preservation stages and22 actual PNG replies. Actual prefit residual1.43508,
-future held/resize/wheel frames, passive10+4 success/inert, normal New/File/editor and created7/
-selected7/true stationcost101, strict19,12 construction/refund and whole Export/reload pass.
-Complete public original1DB/2string keys1857485B/SHA595e4cc3 restores after each route; it is
-separate from local[] and from Node Rulesb123 versus Chrome78b/older57b. Four observed borrowed
-67geometries/48materials/30textures/30bitmaps release exactly once, preserve foreign resources
-and target0→1; this does not claim all72 observed now or global Scene/renderer idempotence.
+Retained public969 originals636319454B/manifest700991B34b5ff78,423 complete payloads,
+523 refs256063005B/185 WD canonicals. Root4d26df reader3371440 compares every original/
+full decoded/reference byte and physical pathset. Root7d75d0 consumes520 main+42 final
+mirrors/all185 canonicals/all20 controls3766B/24 completed local copies. Original Root55e7ce
+reader3400301 accepts92/93 semantics; false root one-import assumption is preserved.
+Actuale2cb1c reader3411690 binds both routes' two real DOM imports/full old/current authority,
+replacing only that predicate without replay. Both raw121688134B7b3e7237/root and93234796B3f42c444/pin
+are completely consumed. Final actual collector waits0; known494 remote+13 local owners absent,
+ports8777/9237 closed/default profile324879 absent. Finite reader/observer actual waits close
+new processes; no recursive collector framework is required.
 
-Main1699609/SSH/tar/hash actual0 retains1102 files/749950244 logical/426961996 encoded bytes,
-manifestc381d0ec/checks0b5c6892. Root independently streams all WD encoded bytes and Grok1704116
-all encoded/decoded bytes; original raw/result/ready/gate match. One finite closure1703565
-actual0 retains92files/146502B, manifest38b36422/checks67ba1fbb. Root compares all92 WD/Grok
-original/retained bytes and actual tool bodies;166 knownremote/17priorMac absent/portsclosed.
-Final outside50 files/indexce8b35f4/report31c03e23 and actual closure/mirror/self waits0 are
-consumed. Fresh Root SSH24163 actual0 confirms final producer/mirror/Root readers absent.
-All16 runtime children and runner close;14 have earlier own ancestry,1687084/1689322 appear
-only at settlement. Last receipt20352/20357 actual0 has no recursive self-checker claim.
+[Whole disposition](docs/verification/creation-view-adoption/cumulative-closure-disposition.json)e72f1373
+consumes twice cumulative Design Sol Max and twice cumulative Drift Luna Max, all fresh,
+independent,read-only scoped PASS. Root checks actual source/proof, no confirmed P0/P1/
+actionable P2 or disagreement. One stale PROGRESS public-claims sentence is repaired;
+no source/expectation/proof change. Targeted earlier reviews receive no whole-round credit.
+Persistent unavailable worker/view/Scene combinations and full programme remain unqualified.
+Commit/push/readback/PR80 readiness/mainline merge/issue79 closure are next.
 
-[README frame](docs/verification/classic-showcase/root-fixed-public-frame.json) is actual source7a
-Overviewca4687db/1499448B. Root views all four1920/1024 Overview/Close frames, which show the
-four-family layout and detailed service/Carousel/station/scenery. Old source93e549df94 remains
-in committed history/full proof. This technical read is not Patrick style/play acceptance.
+## Kiosk art and active ownership
 
-## Preserved failures and remaining gates
+Workspace /Volumes/WD/code/workspaces/coaster-information-kiosk-polish-r1,isolated non-Git.
+Grok /workspace/coaster-information-kiosk-polish-r1,actual Blender4.3.2 installed0. Root owns
+exporter/integration; AGY owns only isolated candidate source/note during each actual turn.
+Original baseline254 objects11832tri/out of envelope and failed multi-user export1 are retained.
+Source2c/exporter2a shared-data copy resolves failure; glyph SignGlyphs_ bevel mismatch inflated
+27528tri. Independent restored control27528→11400→27528 confirms minimal export exemption7538.
+Both baseline/candidate had38 primitives,so reduced authored objects do not prove GPU savings.
 
-Dated source93 held-residual/stale-New defects are confirmed, repaired and currently qualified
-under normal native/public paths. Old diagnostics/AGYr7+r8 incomplete timeouts, rejected source
-candidates and failed2d native1 remain preserved; no old success is used to erase their failures.
-Root's first public reader1693446 exits1 after mistakenly requiring2 common screenshot frames:
-frozen rendered() requires1, whereas affected held/wheel/resize requires2. Exact source/schema
-inspection corrects only reader cardinality; actual subsequent offline consumption0, no app replay.
-Initial retention inventory probe1/transport89 occurs before any Python producer; corrected
-inventory order enables the first real main producer0. Native metadata transport/hash1/PATH127/
-reader schema1 remain linked history, with exact raw envelope/relocation/reader repairs retained.
+R3 actual0:source2c/exporter7538,GLB8e22a0778928192B,11400tri/38primitives/eight anchors,
+bounds±1.873416/top3.84. Full WD mirrors and two real768 views show hidden INFO/dark bays/
+dominant roof. Root and Luna reject visual acceptance. AGY r2actual5086ce CLI SUCCESS/child207760,
+511.45s/no watchdog,source30902Ba1ac80df/note4328Bfce655fe/four bounded writes/full stream5e2d70c5.
+Optional missing-note read ERROR is retained and actual note write recovers it.
 
-Unavailable worker/view/Scene recovery is source-reviewed, not runtime fault-injected. Overlapping
-ordinary action/tool-switch/replacement transactions remain source-reachable/unobserved. Cross-
-runtime default-rule portability, partial GPU allocation/permanently hung decode, older unexplained
-Node SIGABRT, original agreement, human style/play and representative real GPU/scale remain OPEN.
+R4 actual6d468e:Root25511/SSH25514,wrapper343549/Blender3435560. GLBd9fa1c758980448B,
+12912tri/39primitives/10materials,eight anchors/bounds±1.7472/top3.84/UV pass. Masterbbf574e5
+25901285B/front26bd69e3/rear8e0825c2 exact WD mirror02d721/Rootd5eede. Root and Luna pixel
+re-review confirm visible INFO/trim/cap improvement, but gray roof,unsupported far-side sign
+fins,cramped dark core and hidden umbrella shaft remain. R4 art is unaccepted/non-shipping.
 
-## Whole review and next action
+AGY r3actuala1f7ba:wrapper28970/child289720,481.64s,no watchdog; CLI reports SUCCESS but
+8m print timeout warning and empty response make it INCOMPLETE. Source33783Bda395658 and
+full stdout30276B6787fb38/stderr79B66fac1db are retained. Four bounded source writes tint roof,
+change glyph N and shrink umbrella radius; fascia/core/umbrella placement/note remain unfinished.
+Note stillR4fce655fe; three guessed missing-path errors are preserved. Original writer's local
+process ended; no remote Blender/Chrome/collector remains. Root inspected partial actual diff;
+no visual success is inferred. Next reuse partial source in a new bounded candidate, simplify
+unnecessary material fallback branches, finish remaining actual defects and export/render on Grok.
 
-Two entire Design and two entire Drift verdicts are now consumed and accepted for the
-stated normal-path finite77 scope. Owners: DesignR1/R2 Sol Max and DriftR1/R2 Luna Max,
-named in [the cumulative record](docs/verification/classic-showcase/cumulative-review-disposition.json).
-Each independently consumes final cumulative source/native/art/current public raw/main/tool/
-self and actual final docs. Root checks their evidence and resolves stale status/read-path
-findings; narrow source/driver passes are not counted as whole rounds. No all-defects or
-all-interactions completion claim: all four and Root confirm one material source-reachable
-creation/tool-switch P2 remains unobserved by normal runtime proof.
+## Next and housekeeping
 
-[Preserve the created ride target through pending view adoption](https://github.com/patrick-fu/coaster-tycoon-3d/issues/79)
-is created/assigned, parentprogramme27 and nativeblocked-byfinite77. Root independently reads
-execute31→setTool42/palette43→commandAt60/61/65: receipt7 can normalize toold0 before fresh view.
-The next finite task freezes a causal real-worker/native-input baseline, repairs only UI
-adoption/input, then verifies affected transitions/authority/typed/resources remotely. Documenting
-the risk or closing the composition does not resolve it. Sole browser/proof owner is COMPLETE.
+1. Integrate accepted finite79:English docs commit/push/head readback,PR80 ready/merge/main readback,
+   issue79 resolution. Preserve all original failures/full proof; do not rebuild/replay unchanged code.
+2. Finish isolated kiosk visual candidate through AGY; actual remote GLB/material/bounds/UV/anchor/
+   render and Luna review before shipping. This remains distinct from P4 gameplay or human style gate.
+3. Resume existing corrected P4 contract/oracle planning after79:Map/Umbrella dual transactions,
+   four counter approaches,permanent owned merchandise,per-product retirement,strict old13 migration,
+   immutable nested rollback. Proposal14/7/7 is still unaccepted; Map ordinary-gate exemption,
+   Umbrella-first/Map fallback,original32colors/fixed-vendor unless random,and BigInt income bounds
+   replace withdrawn assumptions. Real map navigation/rain/weather/full programme stay open.
+4. Cleanup only exact completed disposable bytes after durable byte equality/producer exit/empty lsof.
+   Latestab4cff0 removes AGY r2 temp37242B/empty dir; earlier56216B temp and119329792B archive
+   cleanup retained. Keep current AGY partial captures until useful work accepted; no broad purge.
 
-1. Commit/push current receipts/context/image, ready/merge [PR78](https://github.com/patrick-fu/coaster-tycoon-3d/pull/78)
-   and close [finite77](https://github.com/patrick-fu/coaster-tycoon-3d/issues/77); actual integration remains pending.
-2. Start finite79 in its own WD task worktree; Root production owner, one remote browser owner,
-   independent Sol/Luna review, no broad camera/art/kernel/matrix replay.
-3. Continue [programme27](https://github.com/patrick-fu/coaster-tycoon-3d/issues/27) and the full Goal.
-   Next P4 foundation should honestly implement an independent information kiosk's Map/Umbrella
-   dual-product transaction, permanent guest ownership separate from consumables, four counter
-   approaches and per-product accounting/retirement with explicit old13 migration. Coffee/cup
-   is optional parallel C03 work, not a prerequisite or substitute. Current authored kiosk is
-   laboratory-only and exceeds existing detailed-stall bounds; its placement/loader/model and
-   actual human qualification remain separate required integration work. Broad40/41/42 stayOPEN.
-
-## Cleanup
-
-Only prior guarded17469B duplicates and3emptydirs were removed, after retained equality,
-absent producers and empty lsof. No new cache cleanup is claimed from process exit or OS
-free-space change. Source/masters/profile/frozen previews/all proof remain. Current outputs
-are WD/Grok, never Mac builds/tests. Perform further exact owned duplicate cleanup only after
-these final proof consumers release their inputs; update this record/journal immediately.
+Grok remains reachable,hostgrok-bot-vm-405605737/boota5c4f692-8733-4bea-a09f-cd449a2e6054.
+If unreachable:authorized local Grok Bot/com.anysphere.sand existing window -> Bot details ->
+Computer -> Open computer -> visible paused play/resume or one Retry; verify SSH/ownership.
+No messages/remote-desktop typing and no Mac runtime fallback. Controller title stays accurate.

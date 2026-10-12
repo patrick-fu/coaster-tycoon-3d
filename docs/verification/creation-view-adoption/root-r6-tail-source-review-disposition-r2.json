@@ -1,0 +1,70 @@
+{
+  "utc": "2026-10-11T19:27:17.698718+00:00",
+  "scope": "Root accepts independent material source re-review and metadata binding correction for one new bounded Grok static preparation only.",
+  "verdict": "PASS_FOR_STATIC_ONLY",
+  "driverSHA256": "7ca7fd8c9c9cee4f0d8c94b72089287fa6c93f3663eec5a019885f944e12261f",
+  "templateSHA256": "9bfbce45c7f450eb19f6acdbd77c5c3e08f8f77e231150f554bce1bdf023f65c",
+  "originalSourceReviewDispositionSHA256": "339331110fa26690672132048b4ec1e26d74b05b8debd9a9b0f700ac31a29570",
+  "sourceMaterialRound": [
+    {
+      "agent": "/root/r6_tail_source_sol_max",
+      "P1": "Closed",
+      "P2": "Old copied driver pin; HOLD until corrected"
+    },
+    {
+      "agent": "/root/r6_tail_source_luna_max",
+      "P1": "PASS",
+      "P2": "Static preparation pin caveat"
+    }
+  ],
+  "metadataFinalRound": [
+    {
+      "agent": "/root/r6_tail_source_sol_max",
+      "verdict": "PASS",
+      "evidence": "Seven pins exact; actual cmp exit0, unchanged driver and exact one-key template delta"
+    },
+    {
+      "agent": "/root/r6_tail_source_luna_max",
+      "verdict": "PASS",
+      "evidence": "Seven pins exact; unchanged driver and exact metadata delta"
+    }
+  ],
+  "RootChecks": {
+    "indices": [
+      {
+        "path": "/Volumes/WD/code/workspaces/coaster-creation-input/browser/fixed-preparation-r6-tail/authored-files.json",
+        "bytes": 1075,
+        "sha256": "e840bbbd45d72fe6063bf58606041e063dfd5317e628230e4ee6c6846ca0d066",
+        "exactFiles": 5
+      },
+      {
+        "path": "/Volumes/WD/code/workspaces/coaster-creation-input/browser/fixed-preparation-r6-tail/authored-files-r2.json",
+        "bytes": 1430,
+        "sha256": "029b8b55631799e16b329800b6686ded531b3d189feb523dd20ffe3d63cda815",
+        "exactFiles": 6
+      },
+      {
+        "path": "/Volumes/WD/code/workspaces/coaster-creation-input/browser/fixed-preparation-r6-tail/authored-files-r3.json",
+        "bytes": 1750,
+        "sha256": "f1eea4bbe34f3e4ed918634a6dc557cb37d0a7a8b780a1b603bd9780c61f0869",
+        "exactFiles": 7
+      }
+    ],
+    "r3DriverExactlyR2": true,
+    "templateOnlyChangedDriverInputPin": true,
+    "productionGameUnchanged": true
+  },
+  "acceptedRepair": "Changed marker before native import; one browser continuation awaits actual full typed cursor then captures every non-click save from marker. Exactly one selected request plus full trusted reply/original delivery and actual changed cursor must be observed within request14s; late/extra/pending evidence persists before failure. Final durable/history/stopped-tail/reload unchanged.",
+  "preparationOwner": "/root/r6_tail_preparation_sol_max",
+  "preparationBoundary": "Only new isolated orchestration/static/frozen proof on grok-build and exact WD mirror. Preserve original unexecuted import-broken draft and failed handshake. No authored/production/docs/GitHub changes or HTTP/Chrome/runtime. Derive final generated input pins and fresh all old/new owners.",
+  "runtimeLaunchAuthorized": false,
+  "originalR2Passed": false,
+  "originalR2FinalRouteAssertionExecuted": false,
+  "wholeFinite79ClosureCredit": false,
+  "unexecuted": [
+    "Grok R6 syntax/AST/Node static",
+    "Full new static/frozen fixture/source/summary/inventory packet",
+    "R6 actual differential autosave/reload/Oversize/final-error/resource/typed/process run",
+    "Public qualification and required cumulative reviews"
+  ]
+}

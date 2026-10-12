@@ -1,0 +1,167 @@
+{
+  "utc": "2026-10-11T18:33:35.337938+00:00",
+  "status": "Proposed isolated tail contract; no code, static run or native authorization",
+  "workdir": "/Volumes/WD/code/workspaces/coaster-creation-input/coaster-tycoon-3d",
+  "sourceCommit": "1bdec0dd377f922c9168f454c4b2eaba92a1bbc4",
+  "readySHA256": "d8218203fc294a3316c8751697d5f412c286e3df9c700b5e5906c1c16fc79ee7",
+  "reuseDisposition": {
+    "path": "/Volumes/WD/code/workspaces/coaster-creation-input/coaster-tycoon-3d/docs/verification/creation-view-adoption/root-fixed-native-consumption-disposition-r3.json",
+    "bytes": 10352,
+    "sha256": "f8ab0f9c7782ee6ad467077e4aed706735235d3456813827f294dee99d7805c2"
+  },
+  "r5Driver": {
+    "path": "/Volumes/WD/code/workspaces/coaster-creation-input/browser/fixed-preparation-r5/frozen-r1/inputs/run-fixed.py",
+    "bytes": 77095,
+    "sha256": "09f30964d3b98fc096bab6c7f8235ea19fb7d594c948c8a64e9c67a5c9e646c5"
+  },
+  "preparationPrefix": "fixed-preparation-r6-tail",
+  "runtimePrefix": "fixed-runtime-r3-tail",
+  "originalSevenExpectations": [
+    "track",
+    "queue",
+    "escape",
+    "scene-update-once",
+    "quote-rejection",
+    "ambiguous-execute-timeout",
+    "oversize-import"
+  ],
+  "reuseSixCases": [
+    {
+      "label": "ambiguous-execute-timeout",
+      "pin": {
+        "originalPath": "/workspace/coaster-creation-input/browser/fixed-runtime-r2/local/case-ambiguous-execute-timeout-full.json",
+        "bytes": 5781695,
+        "sha256": "c00a3f978d82b40ae8b86861bfd786499354b94281a15e6bc8dfb1d1de21e9ad"
+      },
+      "records": 1763,
+      "mode": "hold-execute-timeout"
+    },
+    {
+      "label": "escape",
+      "pin": {
+        "originalPath": "/workspace/coaster-creation-input/browser/fixed-runtime-r2/local/case-escape-full.json",
+        "bytes": 7522987,
+        "sha256": "e5a1d265481a6ba9b2fd3dfd9b50dba7b3ad8149f545bc79a748f5f142ab78c7"
+      },
+      "records": 1089,
+      "mode": "hold"
+    },
+    {
+      "label": "queue",
+      "pin": {
+        "originalPath": "/workspace/coaster-creation-input/browser/fixed-runtime-r2/local/case-queue-full.json",
+        "bytes": 6453843,
+        "sha256": "1b74e91f9fb31ec4fdfb792df646d0f04d79aedfa1653f680cbb513fc30a6266"
+      },
+      "records": 1019,
+      "mode": "hold"
+    },
+    {
+      "label": "quote-rejection",
+      "pin": {
+        "originalPath": "/workspace/coaster-creation-input/browser/fixed-runtime-r2/local/case-quote-rejection-full.json",
+        "bytes": 2786195,
+        "sha256": "09d2584ed1d983eebc4923a759f036b31482a554e3ed3fc04ed58c5d8e1b1f28"
+      },
+      "records": 238,
+      "mode": "quote-rejection"
+    },
+    {
+      "label": "scene-update-once",
+      "pin": {
+        "originalPath": "/workspace/coaster-creation-input/browser/fixed-runtime-r2/local/case-scene-update-once-full.json",
+        "bytes": 45639931,
+        "sha256": "9ff7a88deb98f7bd340876549fe2b1d4fbdc3124532ee2b54f540233b6c1f145"
+      },
+      "records": 1463,
+      "mode": "scene-update-once"
+    },
+    {
+      "label": "track",
+      "pin": {
+        "originalPath": "/workspace/coaster-creation-input/browser/fixed-runtime-r2/local/case-track-full.json",
+        "bytes": 10486020,
+        "sha256": "2e91c66e49eb703213c5c031b2481e49372e223c4b643ec7c46df36e586d928c"
+      },
+      "records": 1586,
+      "mode": "hold"
+    }
+  ],
+  "newInput": {
+    "originalPath": "/workspace/coaster-creation-input/browser/fixed-runtime-r2/local/authority-actual-durable-before-fault-reload.json",
+    "bytes": 829577,
+    "sha256": "59948f8a3b17e9cd3acd0827cec7354d06dff0263edd473a6c585d0947e9ad47",
+    "topLevelKeys": [
+      "version",
+      "contentVersion",
+      "nextInstance",
+      "amenities",
+      "litter",
+      "facilities",
+      "retiredShopIncome",
+      "retiredStock",
+      "retiredRideIncome",
+      "staff",
+      "rules",
+      "side",
+      "tick",
+      "revision",
+      "topologyRevision",
+      "rng",
+      "paused",
+      "initialCash",
+      "cash",
+      "loan",
+      "maxLoan",
+      "spent",
+      "refunded",
+      "nextElement",
+      "nextEntity",
+      "people",
+      "ledger",
+      "trains",
+      "carouselSessions",
+      "boats",
+      "terrain",
+      "water",
+      "owned",
+      "rides",
+      "elements"
+    ],
+    "paused": true,
+    "clock": null,
+    "differsFromOperated": true,
+    "name": "genuine-durable-r2.save.json",
+    "completeOriginalBytesRequired": true
+  },
+  "unchanged": [
+    "Production game/camera/worker/kernel/factory/art",
+    "Creation-delay observer and existing storage/construction/ownership helpers",
+    "Real60s autosave and original20s application timer",
+    "Ordinary original-event14s bound and separately intentional timeout",
+    "Default Chrome profile and full typed restoration",
+    "Original failed r1/r2 and all raw/authority/control evidence"
+  ],
+  "tail": [
+    "Protect complete original typed inventory; seed only genuine operated current13 using existing fixture setup. Actual native startup Export must equal operated; capture full actual HTTP/startup executed source and network provenance.",
+    "Wait for an actual case-null non-click autonomous baseline save with full trusted request/reply/delivery, preserving the unchanged60s interval. Read cursor operated, then native File-import the new original durable input through existing helper. Actual native Export must equal durable; typed cursor must still equal operated and differ from durable. This gives a full interval margin without timer alteration.",
+    "Observe next actual non-click save under a bounded90s wait; neither Save nor Export click may be associated. Preserve full request/reply/trusted original delivery; actual typed cursor must change from operated to the complete successful reply/durable59948 bytes. DB abort or same-seeded durable cannot pass. Poll actual transaction completion using existing typed snapshot/cursor only.",
+    "Record old timeOrigin before the final durable chain. Observe and dispose owned resources through existing ownership helper, preserve complete case-null history, then exact actual typed durable inventory/cursor and stopped tail in the existing order. No source/network/epoch await is inserted in the final durable-to-reload window.",
+    "Synchronously scripts.clear(); actual_responses.clear() immediately before real Page.reload(ignoreCache=true). Preserve sessions/raw/downloads/old complete manifests/history. Wait complete/unlocked, observer restored===false and changed timeOrigin. Full raw must bind the new document/main-frame loader/default context and corresponding page+worker scriptParsed/getSource. Never clear network on executionContextsCleared or filter source errors.",
+    "Actual new native reload Export equals the final cursor. Perform unchanged strict parsed/worker source and HTML/GLB body checks. Execute the original Oversize DOM-file path: locked feedback -> full trusted recovery -> unlock, no load; exact native Export and complete case file.",
+    "Execute original final no-unplanned-runtime/HTTP assertion and full typed/resource/target/database/native child/port/profile/tool cleanup. Scope new cases as tail only; original six cases remain separately reused from failed r2."
+  ],
+  "reviewQuestions": [
+    "Does this prove a real autonomous DB write under abort counterexamples?",
+    "Can old document/context/body captures satisfy any reload gate?",
+    "Does six-case reuse preserve all seven expectations, source identity and the actual intentional-fault reload authority?",
+    "Which requested condition is unnecessary or weakens the original source-bound expectation?"
+  ],
+  "executionPreconditions": [
+    "Independent clean-context Design and Drift contract acceptance",
+    "Root authored driver/contract diff plus frozen new old13/durable/input pin maps",
+    "Grok-only generation/static/full input source883/shipping164/compiled74 validation and retained actual waits",
+    "Fresh all known old/new owners absent, ports closed and default profile inactive",
+    "Separate exactly-one runtime gate from Root after preparation acceptance"
+  ]
+}

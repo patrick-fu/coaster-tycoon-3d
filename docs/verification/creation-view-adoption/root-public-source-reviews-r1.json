@@ -1,0 +1,29 @@
+{
+  "utc": "2026-10-11T21:42:32.760018+00:00",
+  "status": "MATERIAL_SOURCE_HOLDS_ACCEPTED_FOR_REPAIR",
+  "sourceSHA256": "7b15f03cd17bcbcad6baac2eb3e495bae8bad47e8cc7db7274b4c7dd84df5291",
+  "typedHelperSHA256": "3d765c8e052e855036cea597a61d2d76b0ca83fa0344c1746f0637f64ac720a0",
+  "observerSHA256": "ed487ddf592953f6648c25b54d176f1c011f0703c2a28105baa1147b3ea2e056",
+  "reviews": {
+    "DesignSolMax": "COMPLETE_HOLD: confirmed P1 reply.nativeSaveClickOrdinal absent; plausible GUID/path ownership gap; terminal old/profile/child-wait proof needs outer supplementation.",
+    "DriftLunaMax": "COMPLETE_HOLD: exact Blob/GUID completion is not joined to physical stage file by suggestedFilename; may read previous equal-content file."
+  },
+  "rootDisposition": [
+    {
+      "finding": "Absent nativeSaveClickOrdinal on trusted reply",
+      "decision": "Accept confirmed P1. Keep unchanged observer; validate unique request nativeSaveClickOrdinal against trusted capture, then exact received requestOrdinal/id/full request/exportClickOrdinal and original delivery."
+    },
+    {
+      "finding": "Suggested filename does not prove current GUID file",
+      "decision": "Accept concrete attribution gap without claiming real Chrome155 duplicate naming. Use public-only allowAndName and read the exact completed GUID filename, retaining stage copy and exact URL/click/length/full bytes joins. Verify actual behavior in public runtime; no earlier R6 disk claims are changed."
+    },
+    {
+      "finding": "Old/profile/actual descendant wait terminal proof",
+      "decision": "Accept missing proof boundary. Retain actual successful waitpid returns/exit outcomes and fresh terminal old/new union and profile owner; still independently freshen all actual runtime/wrapper owners after original waits."
+    }
+  ],
+  "runtimeAuthorized": false,
+  "publicationAuthorized": false,
+  "wholeFinite79Credit": false,
+  "reReviewRequiredAfterRepair": true
+}

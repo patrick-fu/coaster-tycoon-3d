@@ -1,0 +1,27 @@
+{
+  "utc": "2026-10-11T18:52:18.202886+00:00",
+  "accepted": true,
+  "scope": "Revised R6 contract and bounded cross-run composition only; authoring/static preparation permitted, no HTTP/Chrome/App/runtime permission",
+  "proposal": {
+    "path": "/Volumes/WD/code/workspaces/coaster-creation-input/coaster-tycoon-3d/docs/verification/creation-view-adoption/root-r6-tail-contract-proposal.json",
+    "bytes": 12368,
+    "sha256": "21cc5296fa43f5331589bb6d6b3688e99a6032d2fb3145faeb2276d1124a3c77"
+  },
+  "independentDesign": "r6_tail_design_sol_max final PASS; new baseline request marker/performance and unchanged timer interval; explicit scoped original fault/durable/native reload chain plus separate new capture/Oversize valid",
+  "independentDrift": "r6_tail_drift_luna_max final PASS; prior HOLD resolved by explicit evidence-backed composition and enforced epoch joins; original final assertion remains unexecuted",
+  "resolvedFindings": [
+    "Remove full interval margin claim; retained requestPerformance and unchanged operated-after-import gate",
+    "Pin original fault/durable/native Export59948 chain and separate fresh-tail provenance/oversize/final assertion",
+    "Require actual enforced loader/default-context/new-worker-target/network joins before manifest acceptance"
+  ],
+  "requiredNext": [
+    "Root authors isolated R6 driver/contract preserving helpers and exact original durable input",
+    "Grok-only static/input/full source byte preparation under exact scope and actual wait receipts",
+    "Independent material implementation/final preparation review",
+    "Fresh all known owners/profile/ports and separate one-runtime gate"
+  ],
+  "productionChanged": false,
+  "newRuntimeAuthorized": false,
+  "originalR2Pass": false,
+  "wholeFinite79ReviewCredit": false
+}

@@ -1,0 +1,115 @@
+{
+  "utc": "2026-10-11T01:15:28.286828+00:00",
+  "verdict": "PASS_AUTHORED_ONLY",
+  "authoredRoot": "/Volumes/WD/code/workspaces/coaster-creation-input/browser/fixed-preparation-r5",
+  "authoredIndexSHA256": "50f237fd9e5038ce0cb9473c3c5b5db6d08b22bb5cf53607d97ae17df3b80bc3",
+  "fileCount": 9,
+  "bytes": 93684,
+  "rootAllBytesExact": true,
+  "rootOnlyOneCheckLineMoved": true,
+  "rootBodyOutsideQuoteReaderExactR2R4R5": true,
+  "authoredFiles": [
+    {
+      "path": "/Volumes/WD/code/workspaces/coaster-creation-input/browser/fixed-preparation-r5/runtime-body.pyfrag",
+      "bytes": 50973,
+      "expectedSHA256": "278379bef9a89ec7d1885a5926a2805af3d511316cf4048fc18608037c353fe0",
+      "actualSHA256": "278379bef9a89ec7d1885a5926a2805af3d511316cf4048fc18608037c353fe0",
+      "match": true
+    },
+    {
+      "path": "/Volumes/WD/code/workspaces/coaster-creation-input/browser/fixed-preparation-r5/make-driver.py",
+      "bytes": 7142,
+      "expectedSHA256": "f1ba7e7b3988afe0123c379511fb78455bd9c46b38650e5d61d3be6794f0e35a",
+      "actualSHA256": "f1ba7e7b3988afe0123c379511fb78455bd9c46b38650e5d61d3be6794f0e35a",
+      "match": true
+    },
+    {
+      "path": "/Volumes/WD/code/workspaces/coaster-creation-input/browser/fixed-preparation-r5/prepare.py",
+      "bytes": 19939,
+      "expectedSHA256": "882103a92db90096a78e0e83935103b9bb948b25d8d7e0bd95ac2d6a0a7216f0",
+      "actualSHA256": "882103a92db90096a78e0e83935103b9bb948b25d8d7e0bd95ac2d6a0a7216f0",
+      "match": true
+    },
+    {
+      "path": "/Volumes/WD/code/workspaces/coaster-creation-input/browser/fixed-preparation-r5/reader-r4-to-r5.diff",
+      "bytes": 3246,
+      "expectedSHA256": "cefadc71319be328f17ffd070e203c1142994592a40eaca223458bff8f19ddba",
+      "actualSHA256": "cefadc71319be328f17ffd070e203c1142994592a40eaca223458bff8f19ddba",
+      "match": true
+    },
+    {
+      "path": "/Volumes/WD/code/workspaces/coaster-creation-input/browser/fixed-preparation-r5/maker-r4-to-r5.diff",
+      "bytes": 3489,
+      "expectedSHA256": "e46db6e28b7f6cc7c4853b2375fa768ee3cafdaf1d19d6822f38a377b3c550ce",
+      "actualSHA256": "e46db6e28b7f6cc7c4853b2375fa768ee3cafdaf1d19d6822f38a377b3c550ce",
+      "match": true
+    },
+    {
+      "path": "/Volumes/WD/code/workspaces/coaster-creation-input/browser/fixed-preparation-r5/preparer-r4-to-r5.diff",
+      "bytes": 4942,
+      "expectedSHA256": "1d1a69c00fb50e77ee03540c166d7847f812fea81e0ff11555fe2652f55733ca",
+      "actualSHA256": "1d1a69c00fb50e77ee03540c166d7847f812fea81e0ff11555fe2652f55733ca",
+      "match": true
+    },
+    {
+      "path": "/Volumes/WD/code/workspaces/coaster-creation-input/browser/fixed-preparation-r5/PROPOSAL.md",
+      "bytes": 1358,
+      "expectedSHA256": "b60fc2552c2b12bc57f302d0f23cc68f896ba28907e44c6ef0115a7a2b550acd",
+      "actualSHA256": "b60fc2552c2b12bc57f302d0f23cc68f896ba28907e44c6ef0115a7a2b550acd",
+      "match": true
+    },
+    {
+      "path": "/Volumes/WD/code/workspaces/coaster-creation-input/browser/fixed-preparation-r5/CONTRACT-DRAFT.md",
+      "bytes": 1643,
+      "expectedSHA256": "d97c074726c2468216a73056319047b9651b60d2b2a82d757b3b1b6cd1cfe259",
+      "actualSHA256": "d97c074726c2468216a73056319047b9651b60d2b2a82d757b3b1b6cd1cfe259",
+      "match": true
+    },
+    {
+      "path": "/Volumes/WD/code/workspaces/coaster-creation-input/browser/fixed-preparation-r5/UNEXECUTED.md",
+      "bytes": 952,
+      "expectedSHA256": "0bbbad9620e3f7084d44c7e15eb2513ee9c7af38220fe056b3ccb26baba1a5ce",
+      "actualSHA256": "0bbbad9620e3f7084d44c7e15eb2513ee9c7af38220fe056b3ccb26baba1a5ce",
+      "match": true
+    }
+  ],
+  "reviews": {
+    "DesignSol": "Narrow PASS: quantity guards safely short-circuit pending; every returned snapshot qualification file is written before complete/9s/all-qualified/target checks; namespace/exact9eb guard consistent",
+    "DriftLuna": "Narrow PASS: pending/9.2s and empty cohorts retain qualification before failure, no empty-cohort pass or weakened14s/trust/unique-delivery/target predicate",
+    "wholeFinite79ClosureRoundsCounted": 0
+  },
+  "rootDisposition": "Accept only the authored reader correction and minimum namespace metadata. Same atomic allmatching snapshot retains original trusted native receive and exact original-handler delivery. Every pair must be uniquely and correctly linked and delivered within14s before target7/nonUNKNOWN_RIDE checks. Derived20s fields are not observed timer creation. Nine seconds qualifies a returned sample while the unchanged CDP transport may take60s. Full pending/negative/late/duplicate/missing/error evidence remains visible. R3/R4 HOLD and actual nativeFAILED1 remain immutable.",
+  "sourceCommitUnchanged": "1bdec0dd377f922c9168f454c4b2eaba92a1bbc4",
+  "gameSHA256Unchanged": "c4fd4cff74d6cf3a3b9599c9f82772fb73fea672fdde3157ffbafe00358f2001",
+  "readySHA256Unchanged": "d8218203fc294a3316c8751697d5f412c286e3df9c700b5e5906c1c16fc79ee7",
+  "observerSHA256Unchanged": "ed487ddf592953f6648c25b54d176f1c011f0703c2a28105baa1147b3ea2e056",
+  "futureRuntimePrefix": "fixed-runtime-r2",
+  "remoteGenerationAuthorized": false,
+  "runtimeLaunchAuthorized": false,
+  "generatedInputsExist": false,
+  "unexecuted": [
+    "Original failed native fullraw/authority/typed/resource/owned-tree consumption",
+    "R5 actual remote generation/AST/Node/source-pin/static/terminal outcomes",
+    "Fresh R5 generated driver/contract-bound runtime gate",
+    "Affected native recovery/ambiguity/import cases",
+    "Affected public integration",
+    "Two entire Design and two entire Drift finite79 closure rounds",
+    "Full human/original/GPU/scale and programme acceptance"
+  ],
+  "freshAccess": {
+    "utc": "2026-10-11T01:06:35.033429+00:00",
+    "observerPID": 33552,
+    "statusPID": 33555,
+    "actualWaitExit": 0,
+    "selfOnline": true,
+    "designatedTargetOnline": false,
+    "cachedTargetLastSeen": "2026-10-11T00:40:00.1Z",
+    "statusSHA256": "ae9fc3301f4c0dc8fc7f8c8a4e799502079e4fedb9ab1c1c561ba62ab1ccab29",
+    "evidencePath": "/Volumes/WD/code/workspaces/coaster-creation-input/evidence/root-grok-disconnect-r3/result.json",
+    "scope": "Current Offline status; cachedLastSeen does not prove a producer or SSH access"
+  },
+  "next": "After real designated Grok access change, original sole browser owner mirrors the same immutable failed proof through a new transport prefix; Root consumes it, then authorizes exact reviewed R5 for actual remote generation/static/terminal. New separate source/driver/contract gate precedes one affected App run. No Mac execution or substitute host.",
+  "goalStatus": "ACTIVE",
+  "wholeFinite79Pass": false,
+  "originalNativeRunRemainsFAILED1": true
+}

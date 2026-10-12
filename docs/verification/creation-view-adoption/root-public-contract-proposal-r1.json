@@ -1,0 +1,77 @@
+{
+  "utc": "2026-10-11T21:02:01.965535+00:00",
+  "status": "PROPOSED_NOT_RUNTIME_AUTHORIZATION",
+  "owner": "Root",
+  "outcome": "Qualify only the affected source1b public root and a new fixed preview before finite79 closure.",
+  "sourceCommit": "1bdec0dd377f922c9168f454c4b2eaba92a1bbc4",
+  "sourceTree": "8ea8918269e119fde5c8a0b7603214db5541041a",
+  "readySHA256": "d8218203fc294a3316c8751697d5f412c286e3df9c700b5e5906c1c16fc79ee7",
+  "nativeCompositionDispositionSHA256": "c13b08c867374425dd1b119614927757be3155f5edb3fa84c6f24cfd3ec38575",
+  "candidateGameSHA256": "c4fd4cff74d6cf3a3b9599c9f82772fb73fea672fdde3157ffbafe00358f2001",
+  "startingPublic": {
+    "sourceCommit": "7a0bbac668ece30416cceefb97997c0de17d1376",
+    "hostingCommit": "0f6c585b98fb786d8966c28b6aaab022c3064459",
+    "rootURL": "https://patrick-fu.github.io/coaster-tycoon-3d/?showcase=classic",
+    "oldFrozenURL": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/classic-7a0bbac/?showcase=classic",
+    "rootAcceptedRecordedChecks": 178,
+    "oldPinAcceptedRecordedChecks": 101
+  },
+  "plannedRoutes": {
+    "root": "https://patrick-fu.github.io/coaster-tycoon-3d/?showcase=classic",
+    "pin": "https://patrick-fu.github.io/coaster-tycoon-3d/previews/classic-1bdec0d/?showcase=classic"
+  },
+  "publication": {
+    "runtimeFilesEach": 164,
+    "unchangedRuntimeFiles": 163,
+    "onlyRuntimeDelta": "game.js",
+    "exactReadyDerivedRuntimeBodies": true,
+    "preserveEveryExistingPreviewAndNojekyllByte": true,
+    "truthfulBuildAndPreviewMetadata": true,
+    "sourcePR": "https://github.com/patrick-fu/coaster-tycoon-3d/pull/80",
+    "sourceIssue": "https://github.com/patrick-fu/coaster-tycoon-3d/issues/79",
+    "newHostingCommitAndActualPagesBuiltRequired": true,
+    "publicRuntimeGateBindsSourceDriverContractInputsHostingAndTwoRoutes": true
+  },
+  "eachRoute": [
+    "Grok-only actual default Chrome profile; one sole browser owner and exclusive new runtime prefix. No local HTTP server or Mac runtime. Fresh known old/native/reader ownership, profile lock and ports must be inactive before launch.",
+    "Retain all164 actual HTTP bodies at that exact URL with status, complete bytes and expected Ready hash. Startup and actual reload must each bind main-frame loader/default context/timeOrigin and a new worker target to full original CDP; retain97 executed source bodies and HTML/burgerGLB/drinkGLB bodies per phase, failing stale qualifying events.",
+    "Protect fresh full public-origin typed inventory before modification. Preserve database/store/schema/key/native type/value/existence and all foreign originals. Prior public1857485B/1DB/2strings is historical evidence, never a hardcoded current snapshot; current local[] cannot substitute.",
+    "Only seed the accepted genuine operated current13 through existing owned fixture setup. Actual native Export must equal its complete bytes. Native File Import genuine old Chrome13 and then operated current13; bind each complete trusted Export click/RPC/Blob/completed GUID to that stage. Never use private game.request(save), synthetic replies or park/camera setters.",
+    "After the route-specific public actions, native Save click selects a new real save request after a stage marker. Require exact trusted save reply/original delivery and a NEW actual-feedback record after that reply with text Your park has been saved in this browser. The current saveLocal source emits this feedback only after tx.oncomplete; quiet autosave emits no success feedback. Require a full typed current13 cursor equal to this complete successful reply. Preserve every request/reply/feedback from the stage, including real autosaves. Fail missing/error/pending/late evidence.",
+    "Capture current document epoch before final durable chain. Preserve complete history. Actual full inventory -> current13 cursor -> observer stop -> full stopped tail -> Page.reload are contiguous original CDP calls. Clear only per-phase source/network capture collections. New document must be complete/unlocked, new observer restored=false and timeOrigin changed. Reload Export equals the complete actual final durable cursor, with actual source/network epoch joins.",
+    "Retain and consume full original raw, all whole authorities and the full typed restoration, two native resource reports, four error sets, actual child waits and full new/old owner/profile/port terminal. Normal resource disposal must release each observed resource once, close bitmaps and preserve foreign ownership. No whole-game, human or representative GPU claim."
+  ],
+  "rootAffectedPath": {
+    "reuse": "R5 accepted Track case and strict19,12 geometry/witness; original paused operated fixture assigns real create receipt7. Capture original receipt and require the dropdown/current packet to agree, never manufacture an ID.",
+    "sequence": [
+      "Native File Import operated, Track/New ride/Overview, original terrain height, current complete Export; derive the real current projection for strict tile19,12 from the read-only witness.",
+      "Hold only original create-view response using unchanged reviewed observer. Real create quote/execute receives7. While old packet is present and body.inert=true, send actual toolbar/Save/Export/New/Library/Space/Q attempts and same-coordinate pointerdown. Record no input-caused quote/execute/load/new-park/save and no state change. Do not classify unrelated autonomous save as clicked input.",
+      "Release original responses before14s with actual trusted delivery records; current packet adopts receipt7 and unlocks. Send the original cross-lock mouseup. Whole Export must show exactly one new ride and no unintended old-ride edits; no second execute may precede the explicit station build.",
+      "Native Track/Station hover quotes reference ride7. Click actual Build Track; complete receipt, applied view and whole authority show only the expected new station/cost/allocator/revision changes. Native Entrance/Portal and Queue hover quotes reference ride7 and the actual new station, with no unintended execute or old-ride mutation. Portal/Queue are target-reference checks here; broad construction behavior remains reused.",
+      "One native64MiB+1 Oversize path gives locked error -> trusted full includeStatic recovery -> original handler -> unlock, zero load. Its full recovered Export equals the prior complete park authority."
+    ],
+    "ordinaryOriginalRequestDeliveryLimitMs": 14000,
+    "gameRequestTimeoutMs": 20000,
+    "nativeSaveAndPublicReloadRequired": true
+  },
+  "pinAffectedPath": {
+    "sequence": [
+      "Exact164 HTTP/startup source and network bodies.",
+      "Actual native old/current13 File Import and full trusted Export.",
+      "Native Save/complete durable cursor/actual reload/new source and worker epochs/full Export.",
+      "Complete original typed/resource/process restoration and terminal."
+    ],
+    "repeatHeldCreateOrOversize": false
+  },
+  "reusedScopes": [
+    "Original R2 six completed cases/304 recorded checks under f8ab0f9c and accepted R6 compositionc13b; original FAILED1 remains and its unexecuted original final assertion remains unexecuted.",
+    "R6 real differential two autosaves at60s with full atomic cursor/request windows and actual original durable59948; no new two-interval public wait is needed because saveLocal and original60s callback are unchanged. Autosave stays enabled during the public run and is separately attributed.",
+    "Unchanged313 canonical checks,74 compiled files, worker/kernel/art and prior unaffected camera/editor/normal four-family numerical proof."
+  ],
+  "remainingClosure": [
+    "Root must independently consume actual public proof.",
+    "Then twice cumulative whole Design and twice cumulative whole Drift over finite79 before PR readiness, merge and issue closure.",
+    "Full catalogue/management/original numerical and art fidelity/human style and play/representative integrated-GPU and scale remain open."
+  ],
+  "reviewBoundary": "Contract review only; no execution, publication, source write or whole finite79 review credit. Material counterexample must be resolved before dependent authoring/public writes."
+}

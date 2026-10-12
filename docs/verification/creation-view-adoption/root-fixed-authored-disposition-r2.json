@@ -1,0 +1,189 @@
+{
+  "utc": "2026-10-10T23:34:37.749667+00:00",
+  "rootMetadataReaderPID": 6689,
+  "scope": "Authored r2 material disposition only; no final generated/static/browser acceptance",
+  "verdict": "AUTHORED_PASS_REMOTE_STATIC_PENDING",
+  "runtimeAuthorized": false,
+  "sourceCommit": "1bdec0dd377f922c9168f454c4b2eaba92a1bbc4",
+  "sourceTree": "8ea8918269e119fde5c8a0b7603214db5541041a",
+  "readySHA256": "d8218203fc294a3316c8751697d5f412c286e3df9c700b5e5906c1c16fc79ee7",
+  "productionGameSHA256": "c4fd4cff74d6cf3a3b9599c9f82772fb73fea672fdde3157ffbafe00358f2001",
+  "authorPrefix": "/Volumes/WD/code/workspaces/coaster-creation-input/browser/fixed-preparation-r2",
+  "pinListSHA256": "938a9ea4bf216a8c7e2c10322dcbeb69083928d391c25b9997c8eb6db209d7c6",
+  "listedFileCount": 9,
+  "listedBytes": 135349,
+  "allListedPayloadBytesConsumedAndExact": true,
+  "files": [
+    {
+      "path": "runtime-body.pyfrag",
+      "bytes": 47154,
+      "sha256": "870d82cccd9e09f417e7346ea74086c8c76d4b6d8efd29533169354e8e2c2693",
+      "matchesListedPin": true
+    },
+    {
+      "path": "inputs/creation-view-delay.js",
+      "bytes": 20995,
+      "sha256": "ed487ddf592953f6648c25b54d176f1c011f0703c2a28105baa1147b3ea2e056",
+      "matchesListedPin": true
+    },
+    {
+      "path": "make-driver.py",
+      "bytes": 6504,
+      "sha256": "13147e64d77168da429c17f302276d8c6525a9a0b08cebef3067ceebac628164",
+      "matchesListedPin": true
+    },
+    {
+      "path": "prepare.py",
+      "bytes": 16481,
+      "sha256": "1b736787c63daac4604ea61a44e5e326ef4ebe6d14df68bde63d156f222fc2a7",
+      "matchesListedPin": true
+    },
+    {
+      "path": "PROPOSAL.md",
+      "bytes": 10183,
+      "sha256": "41c99f7fef6c2116118fe033476d05c7c102c89c6cd2bf93a7ff0ff37771e00f",
+      "matchesListedPin": true
+    },
+    {
+      "path": "CONTRACT-DRAFT.md",
+      "bytes": 4745,
+      "sha256": "0dc4d9511e49089c7e659350462f0a59e724dc4146a07193b68d45170d9f825c",
+      "matchesListedPin": true
+    },
+    {
+      "path": "PREPARATION-PENDING.md",
+      "bytes": 3286,
+      "sha256": "24e0c855eead5495c79896b09c87d477bf5753b002f96cb2794d7f812eabaee0",
+      "matchesListedPin": true
+    },
+    {
+      "path": "runtime-body-r1-to-r2.diff",
+      "bytes": 16125,
+      "sha256": "abee53b6197f20243de7557f4b9dbaef2f4f94acab0c7be99f656ade829e6a05",
+      "matchesListedPin": true
+    },
+    {
+      "path": "observer-authored-r1-to-r2.diff",
+      "bytes": 9876,
+      "sha256": "0ddbb81a347183b79ddff28e491ddc8654e07fc2c71e933f6dc0a1a3a9842330",
+      "matchesListedPin": true
+    }
+  ],
+  "independentReviewers": [
+    {
+      "agent": "/root/creation_fixed_design_sol_max",
+      "model": "gpt-6.1-sol",
+      "effort": "max",
+      "outcome": "Authored delta PASS; two complete-recovery/history findings and stale durable annotation closed; final static/generation not accepted"
+    },
+    {
+      "agent": "/root/creation_fixed_drift_luna_max",
+      "model": "gpt-6-luna",
+      "effort": "max",
+      "outcome": "Authored delta PASS; actual locked quote binding and timeout native Export/save/download denial findings closed; not launch authorization"
+    }
+  ],
+  "rootDisposition": [
+    {
+      "finding": "Preview refusal could replace real locked create refusal",
+      "closedBy": "runtime-body.pyfrag:220-234 exact native pointerup/request/reply/locked feedback/full recovery/unlock sequence"
+    },
+    {
+      "finding": "Intentional timeout Export attempt lacked denial assertions",
+      "closedBy": "runtime-body.pyfrag:247-251 small projection excludes native capture/save/commands/Blob/download"
+    },
+    {
+      "finding": "No-receipt forced recovery views lost complete packets",
+      "closedBy": "inputs/creation-view-delay.js:65-68 separately preserves quote and oversize forced recovery"
+    },
+    {
+      "finding": "Reload discarded complete case=null history",
+      "closedBy": "runtime-body.pyfrag:259-266 complete pre-reload history plus stopped tail; observer historyAfter/stop boundary"
+    },
+    {
+      "finding": "Stale operated-only reload annotation",
+      "closedBy": "runtime-body.pyfrag:256 actual full durable13 last-save recovery; genuine autosave unchanged"
+    }
+  ],
+  "unchangedBoundaries": {
+    "ordinaryRequestToOriginalDeliveryLimitMs": 14000,
+    "applicationTimeoutMs": 20000,
+    "intentionalExecuteTimeoutSeparatelyLabeled": true,
+    "terrainBackingStride": 256,
+    "actualGround19_12": 32,
+    "positiveFixturesUnchanged": true,
+    "noPrivateStateSetter": true,
+    "noMacBuildOrTest": true,
+    "originalBaselineStillFailed1TrackOnly": true,
+    "r1PreparationImmutableAndUnrun": true
+  },
+  "initialTransportFailure": {
+    "actual-mkdir-ssh-exit.txt": {
+      "bytes": 4,
+      "sha256": "ce8bafb38615aeb5d44ebbabe78ec14ac35a5de87bdc5ad5ea82a72656024ce4",
+      "actualExit": 255
+    },
+    "actual-wrapper-exit.txt": {
+      "bytes": 4,
+      "sha256": "ce8bafb38615aeb5d44ebbabe78ec14ac35a5de87bdc5ad5ea82a72656024ce4",
+      "actualExit": 255
+    },
+    "mkdir.stderr.log": {
+      "bytes": 65,
+      "sha256": "bf51d76dcfef3fb5bcad08cee6e2dbf7a654109f63a520c52a0517c8428a7b3d"
+    },
+    "known-local-terminal.tsv": {
+      "bytes": 35,
+      "sha256": "2483571ea5bdbe38c89fc012e70f04d1cfb32f8fb7787d55c6ba30f98a502226"
+    },
+    "input-wrapper.sh": {
+      "bytes": 2712,
+      "sha256": "184371fe8dc15d4a891c3d35b9f8bd64b23ea7030d5741b713afd0ff53499b23"
+    }
+  },
+  "knownLocalOwnersNow": [
+    {
+      "pid": 99309,
+      "psExit": 1,
+      "present": false
+    },
+    {
+      "pid": 99313,
+      "psExit": 1,
+      "present": false
+    },
+    {
+      "pid": 2824,
+      "psExit": 1,
+      "present": false
+    },
+    {
+      "pid": 2826,
+      "psExit": 1,
+      "present": false
+    },
+    {
+      "pid": 2828,
+      "psExit": 1,
+      "present": false
+    },
+    {
+      "pid": 2841,
+      "psExit": 1,
+      "present": false
+    }
+  ],
+  "finalDriverExists": false,
+  "finalContractExists": false,
+  "remoteStaticVerified": false,
+  "fixedRuntimeLaunched": false,
+  "publicChanged": false,
+  "recoveryWrapper": {
+    "path": "run-static.sh",
+    "sha256": "0c0caf71a3012168b0d1f2c869deec3b68b69f394547f090f0bf3f24a59e38ef",
+    "scope": "Only adds static-r1/static-r2 transport labels; Root reads wrapper, does not execute",
+    "recipe": "After target access is actually restored: /bin/sh run-static.sh static-r2 in the absolute authored prefix. Preserve original255. Then sole mirror/finite waits, generated packet consumption and separate exact runtime gate."
+  },
+  "remaining": "Target100.106.65.13 must return online. Verify actual source/artifact/known owners/profile/ports after access recovery; do not infer current remote process state from old receipts. Actual final generation/static/mirror then native/public and both twice-cumulative lenses precede finite79/PR80 closure.",
+  "rootAdministrativeCorrections": "Earlier Root reader expected seven rows after two docs were added, although all nine hashes matched. Convenience reads used incorrect source cwd/guessed camera path; no mutation/product run occurred. Corrected inventory-based reads and current all-listed byte consumption supply this disposition."
+}

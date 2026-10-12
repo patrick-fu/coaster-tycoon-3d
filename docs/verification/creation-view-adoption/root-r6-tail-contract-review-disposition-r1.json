@@ -1,0 +1,18 @@
+{
+  "utc": "2026-10-11T18:46:03.680965+00:00",
+  "status": "Material review pending; no dependent driver write",
+  "originalProposal": {
+    "path": "/Volumes/WD/code/workspaces/coaster-creation-input/coaster-tycoon-3d/docs/verification/creation-view-adoption/root-r6-tail-contract-proposal-r1.json",
+    "bytes": 8085,
+    "sha256": "bb8e36eec0521fb0fcf14a4befe9f538f1d996bc3f523dc2d5c1b996df05d2f5"
+  },
+  "revisedProposal": {
+    "path": "/Volumes/WD/code/workspaces/coaster-creation-input/coaster-tycoon-3d/docs/verification/creation-view-adoption/root-r6-tail-contract-proposal.json",
+    "bytes": 12368,
+    "sha256": "21cc5296fa43f5331589bb6d6b3688e99a6032d2fb3145faeb2276d1124a3c77"
+  },
+  "independentDesign": "r6_tail_design_sol_max PASS preparation; baseline interval margin wording overstated, retain actual requestPerformance/new stage marker",
+  "independentDrift": "r6_tail_drift_luna_max HOLD pending explicit cross-run chain or minimal fault rerun and enforced epoch assertions",
+  "rootDisposition": "Choose the explicit cross-run option: original actual fault/durable/reload Export is fully observed under the same complete paused13 bytes, original source/ready unchanged. Fresh tail qualifies missing capture mechanism and Oversize. Preserve separate observed/unexecuted assertions; enforce loader/context/worker/network joins in code. No fault replay is warranted by this collector-only change.",
+  "cleanup": "Exact duplicate cleanup attemptb4e3c2 failed before hashing/unlink because numeric PIDs were reused. Follow-up38975/tool4d6a39 proves both archives remain, removedBytes0; unrelated current system/Node/REA processes are not killed."
+}

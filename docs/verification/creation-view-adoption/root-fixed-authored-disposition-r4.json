@@ -1,0 +1,22 @@
+{
+  "utc": "2026-10-11T00:59:15.422484+00:00",
+  "verdict": "HOLD_AUTHORED_EVIDENCE_ORDER_ONLY",
+  "authoredRoot": "/Volumes/WD/code/workspaces/coaster-creation-input/browser/fixed-preparation-r4",
+  "indexSHA256": "5ce704214229813d4abc2fee6dbf57ff1feb89d1dee8dabb217976e8705a0bdc",
+  "fileCount": 9,
+  "bytes": 106404,
+  "rootAllBytesExact": true,
+  "bodyOutsideQuoteReaderExactR2R3R4": true,
+  "reviews": {
+    "DriftLuna": "PASS: actual21s counterexample rejected by all-pair native receive/completed-handler<14s qualification",
+    "DesignSol": "HOLD: complete/9s assertion precedes per-pair qualification file, so pending or9.2s late complete returns lack the promised qualification body"
+  },
+  "rootDisposition": "Accept the narrow evidence-order finding. Full snapshots and failure cleanup remain retained and fail closed, so this is not a product defect or pass-criteria gap. Move only the complete/sample eligibility assertion below the qualification-file write and above the all-qualified assertion. Quantity guards already short-circuit pending pairs. Preserve R4 immutable; no other quote/target/time/case/source/observer/fixture changes are warranted.",
+  "source21sCounterexampleClosed": true,
+  "qualificationFileBeforeAnyReaderAssertionCurrentlySatisfied": false,
+  "nineSecondIsHardTransportCancellation": false,
+  "generatedOrStaticOrRuntimeExecuted": false,
+  "originalFailedFullRawConsumed": false,
+  "launchAuthorized": false,
+  "next": "Same owner authors minimum isolated R5 one-line check-order repair and required namespace metadata. Only affected material verification follows. Original failed fullproof, designated host access, remote generated/static/terminal and a new exact Root runtime gate remain prerequisites."
+}

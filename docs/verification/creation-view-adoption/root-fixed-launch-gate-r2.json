@@ -1,0 +1,58 @@
+{
+  "utc": "2026-10-11T00:16:59.658236+00:00",
+  "authorized": true,
+  "scope": "Only finite79 source-bound fixed-runtime-r1 after complete final preparation/root/independent consumption; no public or full-game completion permission is inferred",
+  "allowedRuntimePrefix": "fixed-runtime-r1",
+  "owner": "/root/detailed_stalls_browser_sol_max",
+  "sourceCommit": "1bdec0dd377f922c9168f454c4b2eaba92a1bbc4",
+  "sourceTree": "8ea8918269e119fde5c8a0b7603214db5541041a",
+  "candidateGameSHA256": "c4fd4cff74d6cf3a3b9599c9f82772fb73fea672fdde3157ffbafe00358f2001",
+  "readySHA256": "d8218203fc294a3316c8751697d5f412c286e3df9c700b5e5906c1c16fc79ee7",
+  "driverSHA256": "9eb367a7c42547c157e615a5e6658753bcd2a9305a98064d917ae021c1cc30cb",
+  "contractSHA256": "bb4fba0aa43909293d1246103ebda83786b1c9d7813acee43dc6e243027efc21",
+  "observerSHA256": "ed487ddf592953f6648c25b54d176f1c011f0703c2a28105baa1147b3ea2e056",
+  "inputPins": {
+    "accepted-contract-5a3a.json": "5a3adbe8a9ff10d04afee335fc3684235405477bcfb723477e4a536b800ac232",
+    "accepted-run-fixed.py": "5da7cc73904a62c981c6d310c4df7df5851ff7f87f038213472f18135b9585c4",
+    "baseline-build-ready.json": "8547297526a21a602ee783e7e8d02579b700782d3cd3afe16aaed575b8790669",
+    "build-ready.json": "d8218203fc294a3316c8751697d5f412c286e3df9c700b5e5906c1c16fc79ee7",
+    "creation-view-delay.js": "ed487ddf592953f6648c25b54d176f1c011f0703c2a28105baa1147b3ea2e056",
+    "genuine-old-d232.save.json": "6aaeb37230da32aba4a8041f11dab0ea6f683e797ebb24e5e79f35965e6e1809",
+    "genuine-operated-r1.save.json": "afd73e9ee79516cab02365bbe7219954009c59f1d03631e21618ae59578f2602",
+    "oversize-negative-file.bin": "91990977345985aaf03af1358f4f989d7eaf985b58529efb72f613c588f6599a",
+    "public-ownership.js": "7573f23308617823fffe6abb0ee5ad030b2ef2e7f217664651bec956f29d8292",
+    "read-only-construction-witness.js": "2bda287f9054a5dad3c33f0ce31d6a1f20814dde56cf4fff5b5385646441360a",
+    "read-only-player.js": "3a4caa6d7e7c9093821507e75d300b640e0390c419a0400ef90a650aa08bb530",
+    "run-fixed.py": "9eb367a7c42547c157e615a5e6658753bcd2a9305a98064d917ae021c1cc30cb",
+    "typed-storage.js": "ea075d3dd07e7715e05cd768baaf678123ac7acd33ba819f018a326b46e37c56"
+  },
+  "preparationManifestSHA256": "0e316fb646a7cec97310742ba8c5cf8243a3db48caf34bfff6ed1b94603efbd7",
+  "cases": [
+    "track",
+    "queue",
+    "escape",
+    "scene-update-once",
+    "quote-rejection",
+    "ambiguous-execute-timeout",
+    "oversize-import"
+  ],
+  "ordinaryOriginalRequestToDeliveryLimitMs": 14000,
+  "nativeApplicationRequestTimeoutUnmodifiedMs": 20000,
+  "preserveInitialBaselineFailed1": true,
+  "noFakeResponseStateOrUnlock": true,
+  "noMacBuildTestOrBrowser": true,
+  "freshPreflightRequired": true,
+  "additionalKnownReadersMustBeAbsent": [
+    1758480,
+    1758502
+  ],
+  "retentionRequired": "Complete raw/trusted held events/native quotes+executes/all real Export authority/full typed original restoration/borrowed resources/known process+port/profile/tool terminal proof; preserve failure and unavailable scopes.",
+  "unexecutedScopeStillOpen": [
+    "all fixed native cases",
+    "affected public integration",
+    "twice cumulative Design/Drift finite79 closure",
+    "representative GPU",
+    "human/original/full programme acceptance"
+  ],
+  "preparationDisposition": "/Volumes/WD/code/workspaces/coaster-creation-input/coaster-tycoon-3d/docs/verification/creation-view-adoption/root-fixed-preparation-disposition-r2.json"
+}

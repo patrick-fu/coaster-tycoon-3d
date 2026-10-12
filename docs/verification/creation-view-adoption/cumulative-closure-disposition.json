@@ -1,0 +1,68 @@
+{
+  "utc": "2026-10-12T00:01:51.933402+00:00",
+  "status": "Finite79 accepted for mainline integration",
+  "sourceCommit": "1bdec0dd377f922c9168f454c4b2eaba92a1bbc4",
+  "sourceTree": "8ea8918269e119fde5c8a0b7603214db5541041a",
+  "baseCommit": "cb922ccea03841033de32ca5840219b056ea7173",
+  "gameSHA256": "c4fd4cff74d6cf3a3b9599c9f82772fb73fea672fdde3157ffbafe00358f2001",
+  "wholeReviews": {
+    "design-round1": {
+      "path": "/Volumes/WD/code/workspaces/coaster-creation-input/coaster-tycoon-3d/docs/verification/creation-view-adoption/whole-finite79-design-round1.md",
+      "bytes": 2142,
+      "sha256": "a30ef5a0d69167a06b2ca1bc1dcae27d5d826d807c9cbd8d7a71aaf201af19cd"
+    },
+    "drift-round1": {
+      "path": "/Volumes/WD/code/workspaces/coaster-creation-input/coaster-tycoon-3d/docs/verification/creation-view-adoption/whole-finite79-drift-round1.md",
+      "bytes": 1960,
+      "sha256": "af655f81d010e3bfdb6d2012875c10b914e895ef46010a2a31715673b62e3235"
+    },
+    "design-round2": {
+      "path": "/Volumes/WD/code/workspaces/coaster-creation-input/coaster-tycoon-3d/docs/verification/creation-view-adoption/whole-finite79-design-round2.md",
+      "bytes": 2000,
+      "sha256": "890e2d56f6914db3f6a19ffe5d0bc39d7aa1995ea3c902a4db8c5ba3ccb01c2a"
+    },
+    "drift-round2": {
+      "path": "/Volumes/WD/code/workspaces/coaster-creation-input/coaster-tycoon-3d/docs/verification/creation-view-adoption/whole-finite79-drift-round2.md",
+      "bytes": 1714,
+      "sha256": "0a1d72a976c401bc6081c644ff102bde45968bb47548a5beae0b05bf41fb827d"
+    }
+  },
+  "requiredWholeDesignRoundsConsumed": 2,
+  "requiredWholeDriftRoundsConsumed": 2,
+  "independentContexts": true,
+  "rootDisposition": {
+    "confirmedP0P1": [],
+    "actionableP2": [],
+    "documentationFinding": "Second Design found stale PROGRESS public-claims sentence; Root corrected it. Executable/expectation/proof unchanged.",
+    "reviewDisagreement": null,
+    "sourceChangesAfterAcceptance": false,
+    "nativeAndPublicScopeAccepted": true
+  },
+  "nativeDisposition": {
+    "path": "/Volumes/WD/code/workspaces/coaster-creation-input/coaster-tycoon-3d/docs/verification/creation-view-adoption/root-r6-tail-native-disposition.json",
+    "bytes": 11090,
+    "sha256": "c13b08c867374425dd1b119614927757be3155f5edb3fa84c6f24cfd3ec38575"
+  },
+  "publicDisposition": {
+    "path": "/Volumes/WD/code/workspaces/coaster-creation-input/coaster-tycoon-3d/docs/verification/creation-view-adoption/root-public-success-disposition-r2.json",
+    "bytes": 5536,
+    "sha256": "2d69d47f6c78970707ea231dbec8a374670d33c38dd4ece7058f38d04d449b2e"
+  },
+  "originalFailuresPreserved": true,
+  "sourceBuildChecksReused": 313,
+  "scope": "Minimal create quote/execute/view input exclusion, permanent receipt target through adoption, actual Track/Station/Portal/Queue references, genuine old/current save/import/export/reload and scoped native failure recovery composition. No worker/schema/content changes.",
+  "remainingBeforeFiniteTicketClosure": [
+    "Commit/push accepted documentation",
+    "Read back exact branch and PR head",
+    "PR80 readiness and mainline merge",
+    "Read back main and close issue79"
+  ],
+  "unqualifiedFullProgramme": [
+    "Original catalogue/management/scenarios and P4 merchandise",
+    "Original numerical/art and park-scale agreement",
+    "Persistent unavailable worker/view/Scene combinations beyond executed finite cases",
+    "Mandatory human play/style and representative integrated-GPU qualification"
+  ],
+  "fullGoalStatus": "ACTIVE",
+  "wholeFirstPlayableCompletionClaim": false
+}

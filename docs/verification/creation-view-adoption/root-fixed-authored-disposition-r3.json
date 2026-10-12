@@ -1,0 +1,34 @@
+{
+  "utc": "2026-10-11T00:46:00.215151+00:00",
+  "verdict": "HOLD_AUTHORED_ONLY",
+  "authoredRoot": "/Volumes/WD/code/workspaces/coaster-creation-input/browser/fixed-preparation-r3",
+  "indexSHA256": "8eb766a93ff1d5521eb36b8b921ec09b0a4061071a0c008df717e87a139c2671",
+  "fileCount": 9,
+  "bytes": 115197,
+  "rootAllBytesExact": true,
+  "generatedOrStaticOrRuntimeExecuted": false,
+  "sourceCommitUnchanged": "1bdec0dd377f922c9168f454c4b2eaba92a1bbc4",
+  "reviews": {
+    "DesignSol": "Independent PASS for atomic pairs, unchanged normalizer, prior inventory and owner bindings",
+    "DriftLuna": "Independent HOLD: complete reply lacks original per-request20s qualification",
+    "wholeFinite79ClosureRound": false
+  },
+  "rootDisposition": {
+    "acceptedAtomicReader": "One complete nonempty atomic fullmatching snapshot, explicit null and exact ordinal/id replies; no pending or negative filtering",
+    "acceptedMaterialFinding": "Nine-second eligibility starts after Input.dispatchMouseEvent returns. A quote already15s old can reply6s later; the snapshot is within9s but exceeds its request20s. Complete replies are not checked against the recorded native deadline. game.js28 clears pending at20s,29 ignores unknown late replies,96 preview error only writes position, so a feedback-based timeout observer need not catch this path.",
+    "actualSourceReferences": [
+      "/Volumes/WD/code/workspaces/coaster-creation-input/coaster-tycoon-3d/ui/game.js:28",
+      "/Volumes/WD/code/workspaces/coaster-creation-input/coaster-tycoon-3d/ui/game.js:29",
+      "/Volumes/WD/code/workspaces/coaster-creation-input/coaster-tycoon-3d/ui/game.js:96",
+      "/Volumes/WD/code/workspaces/coaster-creation-input/browser/fixed-preparation-r3/runtime-body.pyfrag:122"
+    ],
+    "minimumRequiredRepair": "Retain every pair and original receive/delivery records; qualify each complete reply and its unique actual original-handler delivery against that request original20s deadline before target/reply acceptance. Keep actual late/negative/pending evidence and fail explicitly. Do not change game timers, source, fixtures or observer.",
+    "readerBoundClarification": "The9s bound qualifies a returned sample; unchanged CDP call may take up to60s and then fail. Do not describe9s as a hard transport cancellation limit.",
+    "withdrawnRootFalsePositive": "R2 writer132/133 writes terminalOwnedProcessState, matching r3 preparer81. Auxiliary extractor.get(terminalKnownOwnedProcessState) may produce null and is not the writer schema. No field-key repair is warranted."
+  },
+  "preserveR3Frozen": true,
+  "originalFailedRuntimePass": false,
+  "originalFullRawConsumed": false,
+  "next": "Same-owner minimum source-only revision in a new isolated namespace, then Root/independent material verification. Full original failed proof, restored designated host, remote generation/static/terminal and a separate exact runtime gate still precede any App.",
+  "launchAuthorized": false
+}

@@ -1,0 +1,22 @@
+{
+  "utc": "2026-10-11T21:52:48.979401+00:00",
+  "oldSourceSHA256": "c1713c0148f41caa88f1563f97e0ce786711ff94705421f6d4fa116876ebc3ff",
+  "oldVerdicts": {
+    "DesignSolMax": "HOLD: confirmed source Noneand Python syntax blocker. Other three repairs materially implemented.",
+    "DriftLunaMax": "PASS for the three mechanisms; missed the concrete syntax separator blocker. Not accepted as runnable-source proof."
+  },
+  "actualRemoteSyntax": {
+    "readerPID": 288563,
+    "rootPID": 96057,
+    "sshPID": 96064,
+    "tool": "a1fdab",
+    "actualExit": 1,
+    "line": 518,
+    "scope": "Python AST fails before driver or Node/browser/runtime launch."
+  },
+  "rootDecision": "Direct actual parser evidence resolves the disagreement. Overall old source remains HOLD despite mechanism-only PASS. Add one separating space, retain the failed c171 source and actual1; perform actual remote current Python/assembled JS/contract checks before material re-review. No further blind source assembly/review loop.",
+  "newSourceBytes": 77279,
+  "newSourceSHA256": "ac9c08e44e846e508939506618084c0cf876a21c46b23f22e3ac96ef781da6b2",
+  "runtimeAuthorized": false,
+  "wholeFinite79Credit": false
+}

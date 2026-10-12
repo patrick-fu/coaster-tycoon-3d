@@ -1,0 +1,111 @@
+{
+  "utc": "2026-10-11T19:52:57.488502+00:00",
+  "accepted": true,
+  "scope": "Complete Root-consumed R6 static/frozen preparation only. The separate one-run native gate remains required; no runtime or cumulative finite79 closure credit.",
+  "sourceCommit": "1bdec0dd377f922c9168f454c4b2eaba92a1bbc4",
+  "readySHA256": "d8218203fc294a3316c8751697d5f412c286e3df9c700b5e5906c1c16fc79ee7",
+  "driverSHA256": "7ca7fd8c9c9cee4f0d8c94b72089287fa6c93f3663eec5a019885f944e12261f",
+  "contractSHA256": "fdb02123d1b9544ee8d155496bfda196003e90cd49e5561c2f4d5a057fae9c78",
+  "packetManifestSHA256": "7c9fef2ac2569635df28a419801c061493e690d99900744abbf1e63a2548d1bb",
+  "frozenIndex": "../browser/fixed-preparation-r6-tail/frozen-r2/packet-files-r2.json",
+  "frozenPayloadCount": 108,
+  "frozenPayloadBytes": 73321000,
+  "tailControls": {
+    "count": 9,
+    "bytes": 369
+  },
+  "finalLocal": {
+    "path": "../browser/fixed-preparation-r6-tail/final-local-r2/result.json",
+    "bytes": 14428,
+    "sha256": "b73dc9987f9b64b006c2347f18c6a2c21c39a9169d02b39eed5ad3f63a48c97c",
+    "additionalControlPins": 37
+  },
+  "RootLocalByteConsumption": {
+    "path": "../evidence/root-r6-static-consumption-r1/local-byte-consumption.json",
+    "toolChunk": "c2866a",
+    "actualExit": 0
+  },
+  "RootRemoteConsumption": {
+    "path": "../evidence/root-r6-static-consumption-r1/remote-check-r2/stdout.json",
+    "bytes": 25507,
+    "sha256": "1ce3812db54285f22cf2225b95ed98917f7de79ecead3e3ba1f0079a97b39512",
+    "actualWaitChunk": "ac34f1",
+    "actualToolExit": 0,
+    "actualSSHExit": 0,
+    "pid": 223917,
+    "checksPassed": 154,
+    "fullCurrentSourceCount": 883,
+    "fullCurrentShippingCount": 164,
+    "fullCurrentCompiledCount": 74,
+    "freshPriorRemoteOwnerCount": 369,
+    "sourceReadyInputFixtureSummaryInventoryExact": true,
+    "completeDynamicExpressionSyntax": {
+      "pid": 223920,
+      "actualExit": 0,
+      "command": [
+        "node",
+        "-e",
+        "const fs=require('fs'),vm=require('vm'),rows=JSON.parse(fs.readFileSync(0,'utf8'));for(const row of rows)new vm.Script(row.source,{filename:'complete-autosave-'+row.marker});process.stdout.write(JSON.stringify({actualExit:0,expressionCount:rows.length,nodeVersion:process.version,executed:false})+'\\n');"
+      ],
+      "stdout": {
+        "bytes": 79,
+        "sha256": "f10a4032b9c15ca37151f24ed7e75c42d7e888ad1f40d3148157e7fa5fb43a01"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "result": {
+        "actualExit": 0,
+        "expressionCount": 2,
+        "nodeVersion": "v20.19.2",
+        "executed": false
+      },
+      "childAbsentAfterWait": true
+    },
+    "freshLocalOwners": [
+      {
+        "pid": 61244,
+        "actualPSExit": 1,
+        "absent": true
+      },
+      {
+        "pid": 61905,
+        "actualPSExit": 1,
+        "absent": true
+      },
+      {
+        "pid": 61907,
+        "actualPSExit": 1,
+        "absent": true
+      },
+      {
+        "pid": 62584,
+        "actualPSExit": 1,
+        "absent": true
+      },
+      {
+        "pid": 62586,
+        "actualPSExit": 1,
+        "absent": true
+      }
+    ]
+  },
+  "preservedFailures": [
+    {
+      "path": "../evidence/root-r6-static-consumption-r1/remote-check-r1",
+      "actualSSHExit": 1,
+      "cause": "Root assumed absent rather than recorded false child-presence control; exact source-backed diagnosis preserved.",
+      "passingChecks": 111
+    },
+    "Original static handshake255",
+    "Original FAILED1 native runs",
+    "Old unexecuted import-broken preparer"
+  ],
+  "sourceReviewsDispositionSHA256": "da671a153d702ee5adfe4a3b8384a63095a6596de6a8ecdc2fe4ea7f195b596f",
+  "originalR2Passed": false,
+  "originalFinalRouteAssertionExecuted": false,
+  "runtimeLaunchAuthorized": false,
+  "wholeFinite79ClosureCredit": false,
+  "next": "Freeze source/driver/contract/input-bound one-run gate for fixed-runtime-r3-tail, fresh profile/ports/old/new owner preflight and actual native tail. Original six cases are reused only under the accepted explicit composition."
+}

@@ -1,0 +1,46 @@
+{
+  "utc": "2026-10-10T22:33:42.113124+00:00",
+  "scope": "Finite79 causal baseline only, not a product pass or full-game completion.",
+  "originalSourceCommit": "7a0bbac668ece30416cceefb97997c0de17d1376",
+  "originalRunnerExit": 1,
+  "trackQualified": true,
+  "trackObserved": "Real created ID7; native quote188/221 still targets0 before/after original trusted view adoption. RIDE_ACTIVE refuses the quote; no successful wrong build is claimed.",
+  "queueQualified": false,
+  "queueDeliveryMs": [
+    18841.8,
+    18840.9
+  ],
+  "escapeQualified": false,
+  "escapeDeliveryMs": [
+    20434.6,
+    20434.5
+  ],
+  "escapeActualApplicationTimeout": true,
+  "observationCompleted": false,
+  "proofRoot": "/Volumes/WD/code/workspaces/coaster-creation-input/browser",
+  "retentionManifestSHA256": "d3001292171a585e655e162992a000f516dcfbd0ea51d54561725fe5c140ef76",
+  "retentionChecksSHA256": "2e1dfd0a0d454c6ea2b231ba2841f325b40b6630ca0663e06cc492ac0549c9fb",
+  "fullRootRawConsumed": true,
+  "full426EncodedDecodedConsumed": true,
+  "toolTransport": {
+    "pid": 74642,
+    "startUTC": "2026-10-10T22:31:20.074750+00:00",
+    "scope": "Upload and monitor offline proof readers only; no Mac tests or application replay.",
+    "uploadExit": 0,
+    "uploadStderr": "",
+    "sshPID": 74675,
+    "actualSSHExit": 0,
+    "endUTC": "2026-10-10T22:31:41.039011+00:00",
+    "postWaitSSHExists": false
+  },
+  "terminalRemoteReceiptSHA256": "dbaed34015879d0c121bc5bdbdbabbc0bf18f9aab0324922c5d260366216c534",
+  "terminalMacReceiptSHA256": "5891879b72c9b4edadc25b220ee9ae288a74f4c08b7534ca41fa29a08ac3c31b",
+  "observerDisposition": "Measured cumulative snapshot cost supports thinning ordinary nonheld view metadata and bounded current-case checkpoints. It does not uniquely explain every Queue/Escape delay. Full critical original events and authority remain required.",
+  "courseReviews": {
+    "designSolR2": "Supports the narrow route; independent full raw read was tool-only session75932/chunk15e16d/PID1732030/SSH0, with no separate persisted consumer/result. Root own persisted full consumer above supplies durable acceptance.",
+    "driftLunaR2": "Supports narrow route; small decisive/source read, not a full-raw acceptance."
+  },
+  "knownChildrenBoundary": "All recorded runtime children closed.13 earlier ancestry records;1726274/1729020 first appear at settlement. This does not claim discovery of every possible unrelated process.",
+  "candidateBeforeIntegration": "c4fd4cff74d6cf3a3b9599c9f82772fb73fea672fdde3157ffbafe00358f2001 source-reviewed only.",
+  "nextAction": "Root integrates exact reviewed UI candidate, then fresh affected remote syntax/web/native/public checks with fixed-driver gate."
+}

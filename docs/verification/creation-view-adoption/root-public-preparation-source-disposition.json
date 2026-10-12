@@ -1,0 +1,59 @@
+{
+  "utc": "2026-10-11T22:04:15.223273+00:00",
+  "owner": "Root",
+  "rootPID": 99731,
+  "status": "ACCEPTED_PUBLIC_PREPARATION_SOURCE_AND_SCOPED_STATIC_ONLY",
+  "sourceSHA256": "ac9c08e44e846e508939506618084c0cf876a21c46b23f22e3ac96ef781da6b2",
+  "typedHelperSHA256": "3d765c8e052e855036cea597a61d2d76b0ca83fa0344c1746f0637f64ac720a0",
+  "observerSHA256": "ed487ddf592953f6648c25b54d176f1c011f0703c2a28105baa1147b3ea2e056",
+  "sourceReviews": {
+    "DesignSolMax": "COMPLETE_PASS for exact one-space syntax repair, retained actual Python/assembled JS proof and three prior material repairs.",
+    "DriftLunaMax": "COMPLETE_SCOPED_PASS after correcting the earlier missed separator by actual parser evidence; same GUID/Save/terminal mechanisms retained."
+  },
+  "actualSyntax": {
+    "proof": "../evidence/root-public-runner-syntax-r3",
+    "rootPID": 97906,
+    "sshPID": 97908,
+    "readerPID": 292137,
+    "nodePID": 292151,
+    "tool": "75e189",
+    "actualExit": 0,
+    "python": "AST/compile PASS",
+    "directContractKeys": 23,
+    "assembledJSExpressions": 86,
+    "genericForwardedParameterExplicit": true,
+    "stdoutSHA256": "b5d0748cfb367750c7979afa14a282094f634e41760b45e1c389c8800a59f663",
+    "readerSHA256": "75479f596cb9aab5ba1861dcfcbc6b1b81ae4b1a6cc1377c9e42dcc42245cfaa"
+  },
+  "typedActualAndRootConsumption": {
+    "proof": "../evidence/root-public-typed-guard-consumption-r1",
+    "rootPID": 98474,
+    "sshPID": 98476,
+    "readerPID": 294255,
+    "tool": "d61576",
+    "actualExit": 0,
+    "originalResultSHA256": "2f4762e0ac52993d089cdcbc4361555812b7dc62444a0558b207e2f987bfabcc",
+    "all52RecordedTestsPass": true,
+    "retainedFilesCompared": 34,
+    "prefixtureRejectControls": 32,
+    "scope": "Node VM/IDB stubs only; not native IndexedDB or current public baseline."
+  },
+  "preservedFailures": [
+    "Initial c449 syntax scope has seven unassembled expressions; not current acceptance.",
+    "Original7b15 source HOLD for absent Save reply field and suggested-filename/GUID ownership gap.",
+    "Originalc171 actual remote Python syntax1 at line518; Luna mechanism-only PASS did not override it.",
+    "AGY kiosk turn ERROR with useful independent partial source; no CLI success or art integration claim."
+  ],
+  "rootDecision": "Accept exact authored public source and scoped actual syntax/typed proof after both independent material re-reviews. Freeze complete inputs/fresh owner union, prepare exact source1b root/new pin publication preserving old previews; actual hosting/Pages built/source/contract/input gate and browser baseline/runtime/full proof are still required.",
+  "runtimeAuthorized": false,
+  "publicationPerformed": false,
+  "wholeFinite79Credit": false,
+  "remaining": [
+    "Final frozen input/static byte verification",
+    "Exact publication and actual Pages built gate",
+    "Actual root/pin default-profile native public runtime and typed/resource/process restoration",
+    "Root full public proof consumption",
+    "Twice whole Design and twice whole Drift for finite79",
+    "Full first-playable/art/human/GPU/original-scale/catalogue"
+  ]
+}
