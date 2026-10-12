@@ -104,7 +104,7 @@ for(const [product,price,stock,container] of [[burger,15,5,'emptyBurgerBox'],[dr
 });
 
 test('protocol6 catalogue quote execute and load preserve detailed capability and reject protocol5 before mutation',()=>{
- const e=make(),host=createHost(e),command=counter(),send=(id,type,payload,protocolVersion=6)=>host({id,protocolVersion,request:{type,payload}}).value.result;
+ const e=make(),host=createHost(e),command=counter(),send=(id,type,payload,protocolVersion=7)=>host({id,protocolVersion,request:{type,payload}}).value.result;
  assert.equal(send(0,'catalogue',null).value.variants.find(v=>v.id===command.content.variantId).choices[0].runtimeAvailable,true);const q=send(1,'quote',command);assert(q.ok);assert(send(2,'execute',{command,revision:q.value.revision}).ok);const before=e.exportSave();assert.equal(send(3,'execute',{command:{type:'set-loan',amount:100},revision:e.revision},5).error.code,'INVALID_COMMAND');assert.equal(e.exportSave(),before);assert(send(4,'load',before).ok);assert.equal(e.exportSave(),before);
 });
 

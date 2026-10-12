@@ -1,0 +1,29 @@
+{
+  "utc": "2026-10-12T07:48:52.339504+00:00",
+  "status": "PASS",
+  "files": [
+    {
+      "name": "information-front-detail.png",
+      "bytes": 202084,
+      "sha256": "84b52a91fd3c34bc2698f105d436426c4111513965f8e4706909188b9d210062"
+    },
+    {
+      "name": "information-rear-detail.png",
+      "bytes": 216210,
+      "sha256": "19c57b3e978475855debf75b90784e27d301c2a9626cbe7d71f2cabc06ce63ee"
+    },
+    {
+      "name": "information-accounts.png",
+      "bytes": 46560,
+      "sha256": "9880b15184b9e539f6f00398bb0897961bc8cdfce6c3e3814ad80ff967627fdf"
+    },
+    {
+      "name": "guest-three-items.png",
+      "bytes": 118551,
+      "sha256": "4caddadf6964ee565d06e5007bd99019e93fbc1a29c41ce32994c24b72c7b26f"
+    }
+  ],
+  "source": "evidence/current-native-retained-r3/browser-current-ui-r3/evidence",
+  "actualCaptures": true,
+  "scope": "Plain IO exact copies of retained game pixels and small semantic report; no new rendering."
+}

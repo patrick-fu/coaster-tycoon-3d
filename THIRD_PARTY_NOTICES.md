@@ -51,6 +51,12 @@ delivery images to 512 pixels. Exact bundle/member permissions, transformations
 and resource hashes are in `ui/models/detailed-stalls/material-provenance.json`
 and `source-manifest.json`. Original game media are observation references only.
 
+The independent timber information kiosk uses the same recorded CC0 material
+corpus. Its geometry, signs, map stacks and umbrella display are project art
+under MIT. Exact source, export and editable-master hashes are recorded in
+`ui/models/information/source-manifest.json`; reproducible authoring lives in
+`scripts/art/information-kiosk.py` and `export-information-kiosk.py`.
+
 ## Reference catalogue metadata
 
 `src/content/rct2-reference.ts` contains reference identifiers, English object

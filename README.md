@@ -9,7 +9,7 @@ game resources are independent; see the [source strategy decision](docs/adr/0001
 
 Try the [current Classic showcase](https://patrick-fu.github.io/coaster-tycoon-3d/?showcase=classic)
 in desktop Chrome or Edge, or use its
-[fixed preview](https://patrick-fu.github.io/coaster-tycoon-3d/previews/classic-7a0bbac/?showcase=classic).
+[fixed preview](https://patrick-fu.github.io/coaster-tycoon-3d/previews/classic-1bdec0d/?showcase=classic).
 Copper Meadows combines a ground-level wooden coaster, steel lift/drop circuit,
 a four-seat Log Flume and sixteen-seat Carousel with detailed Burger/Soft-drink
 stalls, restrooms, connected paths and gardens. A separate showcase save slot
@@ -17,8 +17,9 @@ preserves your park at the [regular preview](https://patrick-fu.github.io/coaste
 
 Affected native and public checks, complete original traces, storage recovery and
 resource/tool closure pass. Final cumulative review is recorded in [PROGRESS.md](PROGRESS.md).
-A creation/tool-switch overlap remains an identified risk for the next repair;
-normal-path checks do not cover it. Earlier source93 defects and all failed attempts
+The creation/tool-switch overlap is repaired and accepted in
+[the finite creation-view delivery](docs/verification/creation-view-adoption/whole-finite79-design-round2.md).
+Earlier source93 defects and all failed attempts
 remain in [the verification history](docs/verification/classic-showcase/README.md).
 The preview still requires human style/play, original-game and representative
 hardware/scale qualification.
@@ -99,6 +100,16 @@ migration. [Resource provenance](ui/models/detailed-stalls/README.md) retains
 editable source and exact model identity. Integrated browser/public checks and
 two whole Design/Drift rounds passed for the [d232 frozen preview](https://patrick-fu.github.io/coaster-tycoon-3d/previews/detailed-stalls-d2320d5/?showcase=classic),
 merged in PR76. The four-family composition passes its actual affected public run; its complete public retention/tool verification passes, with final cumulative acceptance pending.
+
+The current information-merchandise candidate adds an authored four-counter
+information kiosk with independent Map/Umbrella prices and realized sales,
+revenue, stock expense and margin. Guests retain both products alongside an
+unfinished food/drink item across saves, closure, demolition and vendor-slot
+reuse. Its save14/content7/protocol7 strictly validates historical saves before
+migration. [Actual checks and game views](docs/verification/information-merchandise/README.md)
+record402 canonical cases by composition, genuine autonomous purchases, current
+native actions,27 browser checks and scoped pixel review. Public delivery is
+pending; original numerical/art, human style and representative GPU remain open.
 
 The [earlier art checkpoint](https://patrick-fu.github.io/coaster-tycoon-3d/previews/classic-a7d6451/?showcase=classic)
 has procedural materials and composed models, three steel-coaster

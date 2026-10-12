@@ -1,9 +1,16 @@
 # Four-counter information kiosk with two permanent products
 
-Status: finite candidate contract accepted by Root after independent static
-Design/Drift, material re-review and the targeted refusal-loop correction.
-Old13 oracle is the next production gate; no implementation or runtime pass.
-Base main524cf01/executable1bdec0d is unchanged, using save13/content6/protocol6.
+Status: implemented candidate save14/content7/protocol7 in
+`p/patrick/feature/information-merchandise`, based on main524cf01. Root has accepted
+the genuine old13 oracle, 402 canonical cases across37 files by composition,
+autonomous lifecycle/retirement/continuation and scoped native receiving/FIFO
+checks. First cumulative Design/Drift reviews and the guarded four-counter path
+repair re-review are complete. Current AGY inspector/native actions/pixels,
+second cumulative reviews, implementation PR and public delivery remain pending.
+Current public executable1bdec0d still uses save13/content6/protocol6. See
+[PROGRESS](../../PROGRESS.md), [core disposition](../verification/information-merchandise/core-and-lifecycle-disposition.md)
+and [native phase disposition](../verification/information-merchandise/native-phase-audit.md)
+for exact accepted scopes and preserved failures.
 
 ## Player outcome and scope
 

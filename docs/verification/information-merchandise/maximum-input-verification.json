@@ -1,0 +1,46 @@
+{
+  "utc": "2026-10-12T07:49:21.353134+00:00",
+  "status": "PASS",
+  "functionalChecks": 13,
+  "witnessBytes": 815992,
+  "witnessSHA256": "3c0bf47f8654671512dc993fccc5957ffa4c93d68e39b4e01a4d4f1253ffeebf",
+  "maximumInputBytes": 67108864,
+  "maximumInputSHA256": "2fb96dee4d90b8425bde9cbd08d5fa0b8f740a987b53ae9a9fb169c30623a488",
+  "workerReceiptSHA256": "2fb96dee4d90b8425bde9cbd08d5fa0b8f740a987b53ae9a9fb169c30623a488",
+  "oneExportSHA256": "3c0bf47f8654671512dc993fccc5957ffa4c93d68e39b4e01a4d4f1253ffeebf",
+  "oneImportIDBWrite": true,
+  "oneIDBTransactionCompleted": true,
+  "sourcePinsSHA256": "f181481555e32d8a2a744694b39f30f59d4a7738a1b21f83d29551c7a00446e3",
+  "sourceCount": 194,
+  "coreFiles": 80,
+  "allPinnedSourceAndServedShippingUnchanged": true,
+  "profileSHA256": "a3c82370bd92385b83051dfa5b981ba8b9dfec51d326938292fa369456373e46",
+  "profileDatabases": [
+    {
+      "name": "coaster-tycoon-3d",
+      "version": 1,
+      "stores": [
+        {
+          "name": "parks",
+          "keys": [],
+          "valueCount": 0
+        }
+      ]
+    }
+  ],
+  "localStorageKeys": [],
+  "sessionStorageKeys": [],
+  "closedPIDs": [
+    613943,
+    613955,
+    613957
+  ],
+  "ports": {
+    "4181": {
+      "connectExit": 111
+    },
+    "9227": {
+      "connectExit": 111
+    }
+  }
+}

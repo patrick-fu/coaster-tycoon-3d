@@ -8,6 +8,7 @@ import {initialWorld} from '../dist/content/steel-coaster.js';
 import {withDetailedStallsProfile} from '../dist/content/facility-profiles.js';
 import {detailedFacilityContent} from '../dist/content/registry.js';
 import {apply} from './fixtures.mjs';
+import {beforeMerchandiseState,beforeMerchandiseView} from './merchandise-fixtures.mjs';
 
 const pins=[['v12-stalls-continuation.json.gz','a71477b2ee9cfaa21ed8e6fe1246912de189eae83a94ef9252229fd968884070'],['v12-held-product-retirement-reuse.json.gz','3efc6638b8938dfc4a2069ae5284ebdb05ff80ff97aaa6219423c9c4ef171fff']];
 const cases=pins.flatMap(([name,sha])=>{
@@ -17,11 +18,11 @@ const cases=pins.flatMap(([name,sha])=>{
 assert.equal(cases.length,5);
 const wire=value=>JSON.parse(JSON.stringify(value,(_key,item)=>ArrayBuffer.isView(item)?{$typedArray:item.constructor.name,values:Array.from(item)}:item));
 function v12Authority(text){
- const s=JSON.parse(text);assert.equal(s.version,13);assert.equal(s.contentVersion,6);s.version=12;s.contentVersion=5;
+ const s=beforeMerchandiseState(JSON.parse(text));assert.equal(s.version,13);assert.equal(s.contentVersion,6);s.version=12;s.contentVersion=5;
  const r=JSON.parse(s.rules);assert(Object.hasOwn(r,'facilityProfiles'));delete r.facilityProfiles;s.rules=JSON.stringify(r);return JSON.stringify(s);
 }
 function v12View(view){
- const s=wire(view);assert.equal(s.protocolVersion,6);assert.equal(s.contentVersion,6);s.protocolVersion=5;s.contentVersion=5;
+ const s=wire(beforeMerchandiseView(view));assert.equal(s.protocolVersion,6);assert.equal(s.contentVersion,6);s.protocolVersion=5;s.contentVersion=5;
  const token=s.commandRevision.split(':');assert.equal(token.length,3);assert.match(token[0],/^[a-f0-9]{32}$/);assert.match(token[1],/^\d+$/);assert.equal(Number(token[2]),s.worldRevision);
  s.commandRevision='<SESSION>:<RESTORE_GENERATION>:'+token[2];return s;
 }

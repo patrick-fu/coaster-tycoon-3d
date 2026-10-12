@@ -105,7 +105,7 @@ function ensureStylesheet() {
   }
 }
 
-export function createContentBrowser({ loadCatalogue, onChoose } = {}) {
+export function createContentBrowser({ loadCatalogue, onChoose, isChoiceVisible = () => true } = {}) {
   ensureStylesheet();
 
   let isOpen = false;
@@ -143,14 +143,14 @@ export function createContentBrowser({ loadCatalogue, onChoose } = {}) {
 
 
   function isChoiceImplemented(choice) {
-    if (!choice || !choice.capabilities || choice.runtimeAvailable !== true) return false;
+    if (!choice || !choice.capabilities || choice.runtimeAvailable !== true || !isChoiceVisible(choice)) return false;
     const { construction, operation, presentation } = choice.capabilities;
     if (!choice.modeIds?.length || !construction || !operation || !presentation) return false;
     return construction.kind === 'tracked' && operation.kind === 'circuit' && ['procedural-coaster','detailed-wooden-coaster'].includes(presentation.kind) ||
       construction.kind === 'fixed' && operation.kind === 'rotation' && presentation.kind === 'detailed-carousel' ||
       construction.kind === 'channel' && operation.kind === 'channel-circuit' && presentation.kind === 'detailed-log-flume' ||
       construction.kind === 'facility' && operation.kind === 'service' && ['procedural-facility','detailed-facility'].includes(presentation.kind) &&
-      ['food','drink','restroom'].includes(construction.service) && operation.service === construction.service && presentation.service === construction.service;
+      ['food','drink','restroom','information'].includes(construction.service) && operation.service === construction.service && presentation.service === construction.service;
   }
 
   function getVariantsForFamily(familyId) {
@@ -184,6 +184,8 @@ export function createContentBrowser({ loadCatalogue, onChoose } = {}) {
   }
 
   function familyMatchesStatus(family) {
+    const variants = getVariantsForFamily(family.id);
+    if (variants.length && !variants.some(v => isChoiceVisible(getChoiceForFamilyAndVariant(family.id, v.id)))) return false;
     if (statusFilter === 'available') {
       return isFamilyAvailable(family.id);
     }
@@ -1017,7 +1019,7 @@ export function createContentBrowser({ loadCatalogue, onChoose } = {}) {
     const pKind = document.createElement('div');
     pKind.className = 'content-library-capability-kind';
     const pDot = document.createElement('span');
-    const pIsOk = currentChoice?.runtimeAvailable === true && presentation && presentation.kind && presentation.kind !== 'unimplemented';
+    const pIsOk = currentChoice?.runtimeAvailable === true && presentation && presentation.kind && presentation.kind !== 'unimplemented' && isChoiceVisible(currentChoice);
     pDot.className = 'content-library-dot ' + (pIsOk ? 'content-library-dot-active' : 'content-library-dot-pending');
     pKind.appendChild(pDot);
     const pText = document.createElement('span');
@@ -1151,9 +1153,7 @@ export function createContentBrowser({ loadCatalogue, onChoose } = {}) {
     const filteredFamilies = getFilteredFamilies();
     renderListPane(filteredFamilies);
 
-    const selectedFamily = (catalogue && Array.isArray(catalogue.families))
-      ? catalogue.families.find(f => f.id === selectedFamilyId)
-      : null;
+    const selectedFamily = filteredFamilies.find(f => f.id === selectedFamilyId) ?? null;
     renderInspectorPane(selectedFamily);
 
     renderStatusBar(filteredFamilies);
@@ -1204,6 +1204,8 @@ export function createContentBrowser({ loadCatalogue, onChoose } = {}) {
     if (isOpen) {
       if (windowEl) {
         windowEl.style.display = 'flex';
+        ensureValidSelection();
+        render();
         focusFirstElement();
       }
       return;
@@ -1219,6 +1221,7 @@ export function createContentBrowser({ loadCatalogue, onChoose } = {}) {
     if (!catalogue && !isLoading) {
       fetchCatalogue();
     } else {
+      ensureValidSelection();
       render();
     }
 
@@ -1267,6 +1270,7 @@ export function createContentBrowser({ loadCatalogue, onChoose } = {}) {
   return {
     open,
     close,
+    refreshAvailability: () => { if (isOpen && catalogue) { ensureValidSelection(); render(); } },
     destroy
   };
 }

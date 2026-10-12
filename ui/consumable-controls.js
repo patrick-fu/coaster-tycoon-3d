@@ -73,7 +73,7 @@ export function bindFacilityControls({
 
   function getValidCurrent() {
     const current = getPacket()?.facilities?.find(f => f.id === facilityId);
-    if (!current || (expectedInstanceId !== undefined && current.instanceId !== expectedInstanceId)) {
+    if (!current || current.kind !== inspectedFacility.kind || (expectedInstanceId !== undefined && current.instanceId !== expectedInstanceId)) {
       feedback('This facility is no longer available.', true);
       select(null);
       return null;
@@ -94,43 +94,46 @@ export function bindFacilityControls({
     };
   }
 
-  const applyBtn = $('facility-price-apply');
-  if (applyBtn) {
-    applyBtn.onclick = async () => {
-      const current = getValidCurrent();
-      if (!current) return;
-      const inputEl = $('facility-price');
-      if (!inputEl) return;
-      if (!inputEl.reportValidity()) return;
-      const rawStr = inputEl.value.trim();
-      if (!rawStr) {
-        feedback('Enter a price.', true);
-        return;
-      }
-      const rawDollars = Number(rawStr);
-      if (!Number.isFinite(rawDollars)) {
-        feedback('Enter a valid price.', true);
-        return;
-      }
-      // Precision is tenths ($0.10 step); reject out-of-range or step-invalid inputs without silent clamping
-      const rawUnits = Math.round(rawDollars * 10);
-      if (Math.abs(rawDollars - rawUnits / 10) > 1e-4) {
-        feedback('Price must be a multiple of $0.10.', true);
-        return;
-      }
-      const bounds = current.priceBounds;
-      if (bounds) {
-        if (rawUnits < bounds.min || rawUnits > bounds.max) {
-          feedback(`Price must be between ${toMoney(bounds.min)} and ${toMoney(bounds.max)}.`, true);
+  for (const productId of inspectedFacility.kind === 'information' ? ['independent.map', 'independent.umbrella'] : [null]) {
+    const inputId = productId ? 'information-' + productId.slice('independent.'.length) + '-price' : 'facility-price';
+    const applyBtn = $(inputId + '-apply');
+    if (applyBtn) {
+      applyBtn.onclick = async () => {
+        const current = getValidCurrent();
+        if (!current) return;
+        const inputEl = $(inputId);
+        if (!inputEl) return;
+        if (!inputEl.reportValidity()) return;
+        const rawStr = inputEl.value.trim();
+        if (!rawStr) {
+          feedback('Enter a price.', true);
           return;
         }
-      }
-      await execute({
-        type: 'set-facility-price',
-        facility: facilityId,
-        price: rawUnits
-      });
-    };
+        const rawDollars = Number(rawStr);
+        if (!Number.isFinite(rawDollars)) {
+          feedback('Enter a valid price.', true);
+          return;
+        }
+        // Precision is tenths ($0.10 step); reject out-of-range or step-invalid inputs without silent clamping
+        const rawUnits = Math.round(rawDollars * 10);
+        if (Math.abs(rawDollars - rawUnits / 10) > 1e-4) {
+          feedback('Price must be a multiple of $0.10.', true);
+          return;
+        }
+        const bounds = productId ? {min:0,max:current.products[productId].maxPrice} : current.priceBounds;
+        if (bounds) {
+          if (rawUnits < bounds.min || rawUnits > bounds.max) {
+            feedback(`Price must be between ${toMoney(bounds.min)} and ${toMoney(bounds.max)}.`, true);
+            return;
+          }
+        }
+        await execute(productId ? {
+          type: 'set-merchandise-price', facility: facilityId, productId, price: rawUnits
+        } : {
+          type: 'set-facility-price', facility: facilityId, price: rawUnits
+        });
+      };
+    }
   }
 
   const removeBtn = $('facility-remove');

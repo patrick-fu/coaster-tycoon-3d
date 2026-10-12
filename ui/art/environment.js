@@ -1135,6 +1135,9 @@ export function buildPath(ctx, parent, element, scenery) {
       p.tile.y === ny &&
       p.height === element.height &&
       (() => {
+        const information=p.kind==='facility'&&ctx.packet?.facilities?.some(f=>
+          f.id===p.facility&&f.element===p.id&&f.kind==='information');
+        if(information)return !isQueue;
         const [fx, fy] = [[1, 0], [0, 1], [-1, 0], [0, -1]][p.direction];
         const sign = p.kind === 'portal' ? -1 : 1;
         return p.tile.x + fx * sign === element.tile.x && p.tile.y + fy * sign === element.tile.y;
