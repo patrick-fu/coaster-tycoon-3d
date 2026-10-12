@@ -26,27 +26,31 @@ export function rideFootprint(origin, piece, profile, pieceId) {
     return profile.footprints[pieceId][origin.direction].map(c => ({ x: (origin.x + c.x) / 32, y: (origin.y + c.y) / 32, low: origin.z + c.low, high: origin.z + c.high, mask: c.mask }));
 }
 export function legacyRuleJSON(rules) {
-    const { rideProfiles, fixedProfiles, channelProfiles, commerceProfiles, facilityProfiles, merchandiseProfiles, ...common } = rules;
+    const { rideProfiles, fixedProfiles, channelProfiles, commerceProfiles, facilityProfiles, merchandiseProfiles, restroomProfiles, ...common } = rules;
     return JSON.stringify(common);
 }
 export function v9RuleJSON(rules) {
-    const { fixedProfiles, channelProfiles, commerceProfiles, facilityProfiles, merchandiseProfiles, ...previous } = rules;
+    const { fixedProfiles, channelProfiles, commerceProfiles, facilityProfiles, merchandiseProfiles, restroomProfiles, ...previous } = rules;
     return JSON.stringify(previous);
 }
 export function v10RuleJSON(rules) {
-    const { channelProfiles, commerceProfiles, facilityProfiles, merchandiseProfiles, ...previous } = rules;
+    const { channelProfiles, commerceProfiles, facilityProfiles, merchandiseProfiles, restroomProfiles, ...previous } = rules;
     return JSON.stringify(previous);
 }
 export function v11RuleJSON(rules) {
-    const { commerceProfiles, facilityProfiles, merchandiseProfiles, ...previous } = rules;
+    const { commerceProfiles, facilityProfiles, merchandiseProfiles, restroomProfiles, ...previous } = rules;
     return JSON.stringify(previous);
 }
 export function v12RuleJSON(rules) {
-    const { facilityProfiles, merchandiseProfiles, ...previous } = rules;
+    const { facilityProfiles, merchandiseProfiles, restroomProfiles, ...previous } = rules;
     return JSON.stringify(previous);
 }
 export function v13RuleJSON(rules) {
-    const { merchandiseProfiles, ...previous } = rules;
+    const { merchandiseProfiles, restroomProfiles, ...previous } = rules;
     // Historical13 has only the delivered stall placement profile.
     return JSON.stringify({ ...previous, facilityProfiles: Object.fromEntries(Object.entries(rules.facilityProfiles ?? {}).filter(([id]) => id === 'independent.detailed-stalls-v1')) });
+}
+export function v14RuleJSON(rules) {
+    const { restroomProfiles, ...previous } = rules;
+    return JSON.stringify({ ...previous, facilityProfiles: Object.fromEntries(Object.entries(rules.facilityProfiles ?? {}).filter(([id]) => id === 'independent.detailed-stalls-v1' || id === 'independent.information-kiosk-v1')) });
 }

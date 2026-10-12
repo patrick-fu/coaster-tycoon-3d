@@ -1,6 +1,6 @@
 import { ensure, record } from '../simulation/validation.js';
 import { referenceFamilies, referenceVariants } from './rct2-reference.js';
-export const CONTENT_VERSION = 7;
+export const CONTENT_VERSION = 8;
 const rideIdentity = { familyId: 'independent.circuit-coaster', variantId: 'independent.steel-train', modeId: 'independent.continuous-circuit' };
 const families = new Map(), variants = new Map(), modes = new Map();
 families.set(rideIdentity.familyId, { id: rideIdentity.familyId, label: 'Independent circuit coaster', category: 'rollerCoaster', reference: null });
@@ -34,6 +34,9 @@ for (const [service, variantId, productId, label] of [['food', 'independent.deta
 const informationIdentity = { familyId: 'independent.information-facility', variantId: 'independent.timber-information-kiosk', modeId: 'independent.retail' };
 families.set(informationIdentity.familyId, { id: informationIdentity.familyId, label: 'Independent Information kiosk', category: 'commercial', reference: null });
 variants.set(informationIdentity.variantId, { id: informationIdentity.variantId, label: 'Four-counter timber Information kiosk', reference: null, choices: [{ familyId: informationIdentity.familyId, modeIds: [informationIdentity.modeId], capabilities: { construction: { kind: 'facility', service: 'information', profileId: 'independent.information-kiosk-v1' }, operation: { kind: 'service', service: 'information', profileId: 'independent.merchandise-v1' }, presentation: { kind: 'detailed-facility', service: 'information', profileId: 'detailed-information-kiosk-v1' } } }] });
+const restroomIdentity = { familyId: 'independent.restroom-facility', variantId: 'independent.gradual-restroom', modeId: 'independent.gradual-restroom-service' };
+modes.set(restroomIdentity.modeId, { id: restroomIdentity.modeId, label: 'Independent gradual restroom service', evidence: 'project-candidate' });
+variants.set(restroomIdentity.variantId, { id: restroomIdentity.variantId, label: 'Detailed Victorian restroom', reference: null, choices: [{ familyId: restroomIdentity.familyId, modeIds: [restroomIdentity.modeId], capabilities: { construction: { kind: 'facility', service: 'restroom', profileId: 'independent.gradual-restroom-v1' }, operation: { kind: 'service', service: 'restroom', profileId: 'independent.gradual-restroom-service-v1' }, presentation: { kind: 'detailed-facility', service: 'restroom', profileId: 'detailed-gradual-restroom-v1' } } }] });
 for (const f of referenceFamilies)
     families.set(f.id, { id: f.id, label: f.label, category: f.category, reference: { originalSlot: f.originalSlot, sourceUrl: f.sourceUrl } });
 for (const v of referenceVariants) {
@@ -52,9 +55,10 @@ export function flumeRideContent() { return { ...flumeIdentity }; }
 export function consumableFacilityContent(product) { return { familyId: 'independent.' + (product === 'independent.burger' ? 'food' : 'drink') + '-facility', variantId: product === 'independent.burger' ? 'independent.burger-stand' : 'independent.soft-drink-stand', modeId: 'independent.retail' }; }
 export function detailedFacilityContent(product) { return { ...consumableFacilityContent(product), variantId: product === 'independent.burger' ? 'independent.detailed-burger-stand' : 'independent.detailed-soft-drink-stand' }; }
 export function legacyFacilityContent(service) { return { familyId: `independent.${service}-facility`, variantId: `independent.${service === 'restroom' ? 'restroom' : service + '-stand'}`, modeId: service === 'restroom' ? 'independent.restroom-service' : 'independent.retail' }; }
+export function gradualRestroomContent() { return { ...restroomIdentity }; }
 export function informationFacilityContent() { return { ...informationIdentity }; }
 export function historicalContentAllowed(value, kind, version) {
-    const allowed = kind === 'ride' ? [rideIdentity, ...(version >= 9 ? [woodenIdentity] : []), ...(version >= 10 ? [carouselIdentity] : []), ...(version >= 11 ? [flumeIdentity] : [])] : kind === 'information' ? [] : [legacyFacilityContent(kind)];
+    const allowed = kind === 'ride' ? [rideIdentity, ...(version >= 9 ? [woodenIdentity] : []), ...(version >= 10 ? [carouselIdentity] : []), ...(version >= 11 ? [flumeIdentity] : [])] : kind === 'information' ? (version >= 14 ? [informationIdentity] : []) : [legacyFacilityContent(kind)];
     if ((kind === 'food' || kind === 'drink') && version >= 12) {
         const product = kind === 'food' ? 'independent.burger' : 'independent.soft-drink';
         allowed.push(consumableFacilityContent(product));
@@ -79,5 +83,5 @@ export function executableContent(value, kind) {
     return resolved.content;
 }
 export function catalogue(availableProfiles = new Set()) {
-    return structuredClone({ contentVersion: CONTENT_VERSION, families: [...families.values()], variants: [...variants.values()].map(v => ({ ...v, choices: v.choices.map(c => ({ ...c, runtimeAvailable: c.capabilities.construction.kind !== 'unimplemented' && c.capabilities.operation.kind !== 'unimplemented' && c.capabilities.presentation.kind !== 'unimplemented' && (c.capabilities.construction.profileId === 'independent-circuit-v1' || c.capabilities.construction.profileId === 'independent-services-v1' || availableProfiles.has(c.capabilities.construction.profileId)) && (c.capabilities.operation.kind !== 'service' || c.capabilities.operation.service !== 'information' || availableProfiles.has(c.capabilities.operation.profileId)) })) })), modes: [...modes.values()] });
+    return structuredClone({ contentVersion: CONTENT_VERSION, families: [...families.values()], variants: [...variants.values()].map(v => ({ ...v, choices: v.choices.map(c => ({ ...c, runtimeAvailable: c.capabilities.construction.kind !== 'unimplemented' && c.capabilities.operation.kind !== 'unimplemented' && c.capabilities.presentation.kind !== 'unimplemented' && (c.capabilities.construction.profileId === 'independent-circuit-v1' || c.capabilities.construction.profileId === 'independent-services-v1' || availableProfiles.has(c.capabilities.construction.profileId)) && (c.capabilities.operation.kind !== 'service' || (c.capabilities.operation.service !== 'information' && c.capabilities.operation.profileId !== 'independent.gradual-restroom-service-v1') || availableProfiles.has(c.capabilities.operation.profileId)) })) })), modes: [...modes.values()] });
 }

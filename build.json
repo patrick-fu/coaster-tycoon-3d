@@ -1,14 +1,16 @@
 {
-  "sourceCommit": "47af1efb1539de5865f60441fd83f25615178fbe",
-  "sourceTree": "60fad78219b2ef10abdbb9a379f87c3e92b315c4",
-  "sourcePullRequest": "https://github.com/patrick-fu/coaster-tycoon-3d/pull/82",
-  "sourceIssue": "https://github.com/patrick-fu/coaster-tycoon-3d/issues/81",
-  "saveVersion": 14,
-  "contentVersion": 7,
-  "protocolVersion": 7,
-  "verification": "https://github.com/patrick-fu/coaster-tycoon-3d/blob/47af1efb1539de5865f60441fd83f25615178fbe/docs/verification/information-merchandise/README.md",
-  "buildReadySHA256": "c7b3aa4196adf835b742cc9912194032e2e5e50197a2c941a8ab1156a657a217",
-  "executedSourcePinsSHA256": "f181481555e32d8a2a744694b39f30f59d4a7738a1b21f83d29551c7a00446e3",
-  "scope": "Playable Classic four-family park with an independently authored information kiosk and permanent Map/Umbrella sales. Scoped core/native/canonical/pixel/max-input checks and both cumulative review rounds pass with explicit maximum-input stalls; actual public-route qualification is pending. Full catalogue, original numerical/art agreement, human play/style and representative GPU/scale remain open.",
-  "buildHost": "Grok Bot"
+  "sourceCommit": "665ff288d0fe44e0613035edc03fe6d6c90d480c",
+  "sourceTree": "832ac458bac0be95d0956dad72a0075f2c6f77a7",
+  "sourceIssue": "https://github.com/patrick-fu/coaster-tycoon-3d/issues/83",
+  "saveVersion": 15,
+  "contentVersion": 8,
+  "protocolVersion": 8,
+  "verification": "https://github.com/patrick-fu/coaster-tycoon-3d/blob/665ff288d0fe44e0613035edc03fe6d6c90d480c/docs/validation/gradual-restroom.md",
+  "buildReadySHA256": "67211aa1da50c68800fd9825b69ac4397e5ab1542d510cbe31ee5196c8d9434b",
+  "executedSourcePinsSHA256": "e9eddef337c02810a48f608c407bf7e04af3e22c05f30ec4c06e7ba7fd7ffef4",
+  "compiledInventorySHA256": "4bbcf5f8003c448f7d7db7d5fb42072b1802a0f438e9df1a0261fe84c6b5cf21",
+  "runtimeInventorySHA256": "014a6ae23ba4cba50f56c637c8881a4cd64719cdd1f0e29a65f9a627478f7906",
+  "scope": "Exact repaired Grok-built frozen182 runtime, only people.js changed from pre-fix; affected45 passing cases and independent material reviews. Source code/assets match commit; four progress/validation files updated since snapshot. Actual public/browser qualification pending; original/human/GPU/scale remain open.",
+  "buildHost": "Grok Bot",
+  "sourcePullRequest": "https://github.com/patrick-fu/coaster-tycoon-3d/pull/84"
 }

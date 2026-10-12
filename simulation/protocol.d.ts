@@ -1,1 +1,1 @@
-export declare const WORKER_PROTOCOL_VERSION: 7;
+export declare const WORKER_PROTOCOL_VERSION: 8;

@@ -84,6 +84,11 @@ export declare function chooseFacility(g: Guest, s: State, rules: Rules, index: 
     goal: PathPoint;
 } | null;
 export declare function recoverFacility(g: Guest, index: ServiceIndex, rules: Rules): boolean;
+export declare function insideRestroom(g: Guest): boolean;
+export declare function restroomExit(f: Facility, s: State, index: ServiceIndex, route: Routing): PathPoint | null;
+export declare function admitRestroom(g: Guest, s: State, rules: Rules, index: ServiceIndex): boolean;
+export declare function releaseRestroom(g: Guest, point: PathPoint): void;
+export declare function stepRestroom(g: Guest, s: State, rules: Rules, index: ServiceIndex, route: Routing): void;
 export declare function buy(g: Guest, s: State, rules: Rules, index: ServiceIndex): void;
 export declare function consume(g: Guest, s: State, rules: Rules): void;
 export declare function accessible(staff: Staff, goal: PathPoint, index: PeopleIndex, route: Routing): boolean;

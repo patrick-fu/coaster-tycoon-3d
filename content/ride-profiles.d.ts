@@ -9,3 +9,4 @@ export declare function v10RuleJSON(rules: Rules): string;
 export declare function v11RuleJSON(rules: Rules): string;
 export declare function v12RuleJSON(rules: Rules): string;
 export declare function v13RuleJSON(rules: Rules): string;
+export declare function v14RuleJSON(rules: Rules): string;

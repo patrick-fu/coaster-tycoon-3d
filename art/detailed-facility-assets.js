@@ -1,7 +1,8 @@
 import * as THREE from 'three';
 import { GLTFLoader } from '../vendor/addons/loaders/GLTFLoader.js';
 
-export function createDetailedFacilityAssets(renderer, {reflectionTexture = null, information = false} = {}) {
+export function createDetailedFacilityAssets(renderer, {reflectionTexture = null, information = false, restroom = false} = {}) {
+  if(information&&restroom)throw new Error('Choose one detailed facility asset family.');
   const geometries = new Set();
   const materials = new Set();
   const textures = new Set();
@@ -82,7 +83,8 @@ export function createDetailedFacilityAssets(renderer, {reflectionTexture = null
     PropMap: [.30, .88, 1.40],
     PropUmbrella: [-1.64, .22, 1.64]
   };
-  const REQUIRED_ANCHORS = information ? Object.keys(INFORMATION_ANCHORS) : [
+  const RESTROOM_ANCHORS = {GroundRoot:[0,0,0],Entrance_Front:[0,0,.49],Service_Interior:[0,.08,0],Sign_Front:[0,.57,.465]};
+  const REQUIRED_ANCHORS = restroom ? Object.keys(RESTROOM_ANCHORS) : information ? Object.keys(INFORMATION_ANCHORS) : [
     'OpenShutter',
     'ClosedShutter',
     'GroundRoot',
@@ -219,7 +221,7 @@ export function createDetailedFacilityAssets(renderer, {reflectionTexture = null
   }
 
   async function loadModel(kind) {
-    const url = new URL(information ? '../models/information/information-kiosk.glb' : `../models/detailed-stalls/${kind}.glb`, import.meta.url).href;
+    const url = new URL(restroom ? '../models/restroom/restroom.glb' : information ? '../models/information/information-kiosk.glb' : `../models/detailed-stalls/${kind}.glb`, import.meta.url).href;
     const response = await fetch(url, { signal: abort.signal });
     if (!response.ok) {
       throw new Error(`Detailed facility ${kind} model returned HTTP ${response.status}.`);
@@ -247,9 +249,9 @@ export function createDetailedFacilityAssets(renderer, {reflectionTexture = null
 
     const groundRoot = gltf.scene.getObjectByName('GroundRoot');
     checkUnitTransform(groundRoot, kind, 'GroundRoot');
-    if (information) {
+    if (information||restroom) {
       gltf.scene.updateMatrixWorld(true);
-      for (const [name, expected] of Object.entries(INFORMATION_ANCHORS)) {
+      for (const [name, expected] of Object.entries(restroom?RESTROOM_ANCHORS:INFORMATION_ANCHORS)) {
         const anchor = gltf.scene.getObjectByName(name), point = anchor.getWorldPosition(new THREE.Vector3());
         if (point.toArray().some((value, i) => !Number.isFinite(value) || Math.abs(value - expected[i]) > 1e-4)) {
           throw new Error(`Information kiosk anchor '${name}' does not match its authored counter frame.`);
@@ -311,7 +313,8 @@ export function createDetailedFacilityAssets(renderer, {reflectionTexture = null
     let minX = Infinity, maxX = -Infinity;
     let minY = Infinity, maxY = -Infinity;
     let minZ = Infinity, maxZ = -Infinity;
-    let totalVertices = 0;
+    let totalVertices = 0, restroomTriangles=0;
+    const restroomMaterials=new Set();
     const v = new THREE.Vector3();
 
     gltf.scene.traverse(object => {
@@ -332,6 +335,21 @@ export function createDetailedFacilityAssets(renderer, {reflectionTexture = null
       const pos = object.geometry?.attributes?.position;
       if (!pos || typeof pos.count !== 'number' || pos.count === 0) {
         throw new Error(`Detailed facility ${kind} contains malformed geometry.`);
+      }
+
+      if(restroom){
+        const normal=object.geometry.attributes.normal,uv=object.geometry.attributes.uv,indices=object.geometry.index;
+        if(!normal||!uv||normal.count!==pos.count||uv.count!==pos.count)throw new Error('Restroom geometry needs complete normals and UVs.');
+        for(let i=0;i<pos.count;i++)if(!Number.isFinite(normal.getX(i))||!Number.isFinite(normal.getY(i))||!Number.isFinite(normal.getZ(i))||!Number.isFinite(uv.getX(i))||!Number.isFinite(uv.getY(i)))throw new Error('Restroom geometry has non-finite normals or UVs.');
+        const count=indices?.count??pos.count;if(count%3!==0)throw new Error('Restroom geometry has incomplete triangles.');
+        const a=new THREE.Vector3(),b=new THREE.Vector3(),c=new THREE.Vector3();
+        for(let i=0;i<count;i+=3){
+          const ids=[0,1,2].map(j=>indices?indices.getX(i+j):i+j);
+          if(ids.some(id=>!Number.isInteger(id)||id<0||id>=pos.count))throw new Error('Restroom triangle index is invalid.');
+          a.fromBufferAttribute(pos,ids[0]);b.fromBufferAttribute(pos,ids[1]);c.fromBufferAttribute(pos,ids[2]);
+          const area=b.sub(a).cross(c.sub(a)).length();if(!Number.isFinite(area)||area<=2e-12)throw new Error('Restroom geometry has a degenerate triangle.');
+        }
+        restroomTriangles+=count/3;restroomMaterials.add(object.material);
       }
 
       for (let i = 0; i < pos.count; i++) {
@@ -369,17 +387,19 @@ export function createDetailedFacilityAssets(renderer, {reflectionTexture = null
       throw new Error(`Detailed facility ${kind} computed non-finite bounding envelope.`);
     }
 
+    if(restroom&&(restroomTriangles>8000||restroomMaterials.size>8))throw new Error('Restroom model exceeds its geometry or material budget.');
+    const horizontal=restroom ? .49 : 1.95, vertical=restroom ? .90 : 3.85;
     const TOLERANCE = 1e-6;
     if (
-      minX < -1.95 - TOLERANCE ||
-      maxX > 1.95 + TOLERANCE ||
-      minZ < -1.95 - TOLERANCE ||
-      maxZ > 1.95 + TOLERANCE ||
+      minX < -horizontal - TOLERANCE ||
+      maxX > horizontal + TOLERANCE ||
+      minZ < -horizontal - TOLERANCE ||
+      maxZ > horizontal + TOLERANCE ||
       minY < -TOLERANCE ||
-      maxY > 3.85 + TOLERANCE
+      maxY > vertical + TOLERANCE
     ) {
       throw new Error(
-        `Detailed facility ${kind} geometry exceeds bounds [±1.95m X/Z, Y in [0, 3.85]]: ` +
+        `Detailed facility ${kind} geometry exceeds authored bounds [±${horizontal} X/Z, Y in [0, ${vertical}]]: ` +
         `min=(${minX.toFixed(6)}, ${minY.toFixed(6)}, ${minZ.toFixed(6)}), ` +
         `max=(${maxX.toFixed(6)}, ${maxY.toFixed(6)}, ${maxZ.toFixed(6)}).`
       );
@@ -388,7 +408,7 @@ export function createDetailedFacilityAssets(renderer, {reflectionTexture = null
     templates.set(kind, gltf.scene);
   }
 
-  assets.readyPromise = Promise.allSettled((information ? ['information-kiosk'] : ['burger', 'soft-drink']).map(loadModel)).then(results => {
+  assets.readyPromise = Promise.allSettled((restroom ? ['restroom'] : information ? ['information-kiosk'] : ['burger', 'soft-drink']).map(loadModel)).then(results => {
     objectURLs.clear();
     const failure = results.find(result => result.status === 'rejected');
     if (disposed || failure) {
@@ -415,7 +435,7 @@ export function createDetailedFacilityAssets(renderer, {reflectionTexture = null
     }
 
     const kind = facility.kind;
-    if (information ? kind !== 'information' : kind !== 'food' && kind !== 'drink') {
+    if (restroom ? kind !== 'restroom' : information ? kind !== 'information' : kind !== 'food' && kind !== 'drink') {
       throw new Error(`Detailed facility requires kind to be 'food' or 'drink', got '${kind}'.`);
     }
 
@@ -428,7 +448,7 @@ export function createDetailedFacilityAssets(renderer, {reflectionTexture = null
       throw new Error(`Detailed facility requires presentation.kind to be 'detailed-facility', got '${presentation.kind}'.`);
     }
 
-    if (presentation.profileId !== (information ? 'detailed-information-kiosk-v1' : 'detailed-consumable-stalls-v1')) {
+    if (presentation.profileId !== (restroom ? 'detailed-gradual-restroom-v1' : information ? 'detailed-information-kiosk-v1' : 'detailed-consumable-stalls-v1')) {
       throw new Error(`Detailed facility requires presentation.profileId to be 'detailed-consumable-stalls-v1', got '${presentation.profileId}'.`);
     }
 
@@ -437,7 +457,11 @@ export function createDetailedFacilityAssets(renderer, {reflectionTexture = null
     }
 
     let templateKey;
-    if (information) {
+    if (restroom) {
+      const visit=facility.restroom;
+      if(facility.product!==null||!visit||!Number.isSafeInteger(visit.using)||visit.using<0||!Number.isSafeInteger(visit.exiting)||visit.exiting<0||!Array.isArray(visit.guestIds)||visit.guestIds.length!==visit.using+visit.exiting)throw new Error('Restroom requires its actual projected service ownership.');
+      templateKey='restroom';
+    } else if (information) {
       const products = facility.products;
       if (!products || Object.keys(products).length !== 2 || !['independent.map', 'independent.umbrella'].every(id => products[id] && Number.isSafeInteger(products[id].price))) {
         throw new Error('Information kiosk requires both projected merchandise products.');
@@ -468,6 +492,8 @@ export function createDetailedFacilityAssets(renderer, {reflectionTexture = null
     }
 
     const model = template.clone(true);
+    // The authoring unit tile maps uniformly to the receiving four-metre tile.
+    if(restroom)model.scale.setScalar(4);
 
     model.traverse(object => {
       if (object.isMesh) {

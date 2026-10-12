@@ -1,12 +1,13 @@
 import { LIMITS } from './types.js';
 import { amenityAvailable, chooseAmenity, dropLitter, releaseAmenity, rest, useAmenity } from './housekeeping.js';
-import { buy, chooseFacility, consume, recoverFacility, sharedCount } from './services.js';
+import { buy, chooseFacility, consume, recoverFacility, sharedCount, insideRestroom, admitRestroom, stepRestroom } from './services.js';
 import { carouselEditable } from './carousel.js';
 import { flumeProfile } from './flume-profile.js';
 import { portalApproach, stationGroups } from './operation.js';
 import { integer } from './validation.js';
 import { buyInformation, chooseInformation } from './merchandise.js';
 import { random } from './random.js';
+import { gradualRestroomProfile } from '../content/gradual-restroom.js';
 const key = (p) => `${p.x},${p.y},${p.z}`;
 const equal = (a, b) => a.x === b.x && a.y === b.y && a.z === b.z;
 const clamp = (n) => Math.max(0, Math.min(1000, n));
@@ -144,6 +145,8 @@ export function recoverPeople(state, rules, index, route) {
     for (const guest of state.people.guests) {
         if (guest.phase === 'riding')
             continue;
+        if (insideRestroom(guest))
+            continue;
         if (guest.navigationRide !== null && (!state.people.entry || guest.goal === null || !equal(guest.goal, state.people.entry))) {
             recover(guest, state, index, route, guest.thought);
             continue;
@@ -259,7 +262,8 @@ export function stepPeople(state, rules, index, route) {
         if (due(state.tick, guest.id, rules.guests.needTicks)) {
             guest.hunger = clamp(guest.hunger + rules.guests.needGrowth);
             guest.thirst = clamp(guest.thirst + rules.guests.needGrowth);
-            guest.bladder = clamp(guest.bladder + rules.guests.needGrowth);
+            if (guest.phase !== 'using-restroom')
+                guest.bladder = clamp(guest.bladder + rules.guests.needGrowth);
             guest.energy = clamp(guest.energy - rules.guests.needGrowth);
             guest.nausea = clamp(guest.nausea - 1);
             if (guest.hunger === 1000 || guest.thirst === 1000 || guest.bladder === 1000)
@@ -268,6 +272,10 @@ export function stepPeople(state, rules, index, route) {
         consume(guest, state, rules);
         if (guest.phase === 'riding')
             continue;
+        if (insideRestroom(guest)) {
+            stepRestroom(guest, state, rules, index, route);
+            continue;
+        }
         if (!amenityAvailable(guest, rules, index)) {
             recover(guest, state, index, route, 'path-lost');
             continue;
@@ -350,8 +358,15 @@ export function stepPeople(state, rules, index, route) {
             continue;
         }
         if (guest.facility !== null && guest.goal === null && guest.next === null) {
-            guest.phase = 'buying';
-            guest.serviceProgress = 0;
+            const facility = index.facilities.get(guest.facility);
+            if (facility.kind === 'restroom' && gradualRestroomProfile(facility.content, rules)) {
+                if (!admitRestroom(guest, state, rules, index))
+                    recover(guest, state, index, route, 'path-lost');
+            }
+            else {
+                guest.phase = 'buying';
+                guest.serviceProgress = 0;
+            }
             continue;
         }
         if (entry && equal(guest.point, entry) && guest.walkProgress === 0)

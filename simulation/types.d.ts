@@ -8,6 +8,7 @@ import type { FlumeProfile } from '../content/log-flume.js';
 import type { SceneryRules, SceneryType } from './scenery.js';
 import type { ContentIdentity } from '../content/registry.js';
 import type { CommerceProfile } from '../content/consumables.js';
+import type { RestroomProfile } from '../content/gradual-restroom.js';
 import type { MerchandiseProfile, MerchandiseAccounts, MerchandiseId } from '../content/merchandise.js';
 export type Direction = 0 | 1 | 2 | 3;
 export type Attitude = -1 | 0 | 1;
@@ -131,6 +132,7 @@ export type Rules = {
     commerceProfiles?: Record<string, CommerceProfile>;
     facilityProfiles?: Record<string, FacilityPlacementProfile>;
     merchandiseProfiles?: Record<string, MerchandiseProfile>;
+    restroomProfiles?: Record<string, RestroomProfile>;
 };
 export type WorldOptions = {
     side: number;
@@ -214,8 +216,8 @@ export type FixedRide = RideBase & {
 };
 export type Ride = TrackedRide | ChannelRide | FixedRide;
 export type State = {
-    version: 14;
-    contentVersion: 7;
+    version: 15;
+    contentVersion: 8;
     nextInstance: number;
     amenities: Amenity[];
     litter: Litter[];

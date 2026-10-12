@@ -1,7 +1,7 @@
 import { Engine } from './engine.js';
 export declare function createHost(engine: Engine): (message: unknown) => import("./types.js").Result<{
     id: number;
-    protocolVersion: 7;
+    protocolVersion: 8;
     result: {
         ok: true;
         value: void;
@@ -17,8 +17,8 @@ export declare function createHost(engine: Engine): (message: unknown) => import
     } | {
         ok: true;
         value: {
-            protocolVersion: 7;
-            contentVersion: 7;
+            protocolVersion: 8;
+            contentVersion: 8;
             coordinates: {
                 nativeUnitsPerTile: number;
                 nativeHeightStep: number;
@@ -328,6 +328,11 @@ export declare function createHost(engine: Engine): (message: unknown) => import
                     stockExpense: number;
                     grossMargin: number;
                 } | null;
+                restroom?: {
+                    using: number;
+                    exiting: number;
+                    guestIds: number[];
+                } | undefined;
             })[];
             amenities: {
                 id: number;
@@ -360,7 +365,7 @@ export declare function createHost(engine: Engine): (message: unknown) => import
     } | {
         ok: true;
         value: {
-            contentVersion: 7;
+            contentVersion: 8;
             families: {
                 id: string;
                 label: string;
@@ -401,6 +406,10 @@ export declare function createHost(engine: Engine): (message: unknown) => import
                             productId: import("../content/consumables.js").ProductId;
                         } | {
                             kind: 'facility';
+                            service: 'restroom';
+                            profileId: 'independent.gradual-restroom-v1';
+                        } | {
+                            kind: 'facility';
                             service: 'information';
                             profileId: 'independent.information-kiosk-v1';
                         } | {
@@ -425,6 +434,10 @@ export declare function createHost(engine: Engine): (message: unknown) => import
                             service: 'food' | 'drink';
                             profileId: 'independent.consumables-v1';
                             productId: import("../content/consumables.js").ProductId;
+                        } | {
+                            kind: 'service';
+                            service: 'restroom';
+                            profileId: 'independent.gradual-restroom-service-v1';
                         } | {
                             kind: 'service';
                             service: 'information';

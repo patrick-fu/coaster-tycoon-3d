@@ -4,11 +4,11 @@ import { endpoint, same, validateRules } from './geometry.js';
 import { eligibility, portalApproach, validatePortal } from './operation.js';
 import { compileCourse, createTrain, stepTrain } from './motion.js';
 import { boardBoat, boardCarousel, boardGuests, detachRideGuests, recoverPeople, stepPeople, unloadBoat, unloadGuests } from './people.js';
-import { facilityApproach, recoverStaff, sharedCount, stepFinance, stepStaff } from './services.js';
+import { facilityApproach, recoverStaff, sharedCount, stepFinance, stepStaff, insideRestroom, restroomExit, releaseRestroom } from './services.js';
 import { amenityPoint, carriesWaste, recoverCleanup, stepHandymen } from './housekeeping.js';
 import { encodePatrol, inPatrol } from './patrol.js';
 import { project, validateView } from './view.js';
-import { legacyRuleJSON, v9RuleJSON, v10RuleJSON, v11RuleJSON, v12RuleJSON, v13RuleJSON, resolveRideRules, rideFootprint, woodenProfile } from '../content/ride-profiles.js';
+import { legacyRuleJSON, v9RuleJSON, v10RuleJSON, v11RuleJSON, v12RuleJSON, v13RuleJSON, v14RuleJSON, resolveRideRules, rideFootprint, woodenProfile } from '../content/ride-profiles.js';
 import { carouselCycleTicks, carouselEditable, fixedBodyCells, fixedProfile, newCarouselSession } from './carousel.js';
 import { qualifyWoodenCourse } from './wooden-motion.js';
 import { woodenInterface, woodenPortalCells } from './wooden-placement.js';
@@ -22,6 +22,7 @@ import { CONTENT_VERSION, catalogue, executableContent, legacyRideContent, legac
 import { commerceProfileId, containerIds, facilityProduct, facilityStockCost, productRule } from '../content/consumables.js';
 import { resolveFacilityPlacement } from '../content/facility-profiles.js';
 import { emptyMerchandiseAccounts, informationProducts, isMerchandiseId, merchandiseIds, merchandiseProfileId, merchandiseProfile } from '../content/merchandise.js';
+import { gradualRestroomProfile } from '../content/gradual-restroom.js';
 const at = (t) => t.y * 256 + t.x;
 const pathKey = (x, y, z) => `${x},${y},${z}`;
 function validTile(v) { record(v, ['x', 'y']); ensure(integer(v.x, 0, 255) && integer(v.y, 0, 255), 'INVALID_COMMAND', 'Invalid tile coordinates.'); }
@@ -201,14 +202,14 @@ export class Engine {
                 owned[at(l.tile)] = l.owned;
             }
         }
-        this.state = { version: 14, contentVersion: CONTENT_VERSION, nextInstance: 1, amenities: [], litter: [], facilities: [], retiredShopIncome: 0, retiredStock: 0, retiredMerchandise: emptyMerchandiseAccounts(), retiredRideIncome: 0, staff: [], rules: JSON.stringify(this.rules), side: options.side, tick: 0, revision: 0, topologyRevision: 0, rng: options.seed, paused: false, initialCash: options.cash, cash: options.cash, loan: 0, maxLoan: options.maxLoan, spent: 0, refunded: 0, nextElement: 1, nextEntity: 1, people: { entry: null, open: false, guests: [], departedSpent: 0 }, ledger: { rideSales: 0, shopSales: 0, stock: 0, wages: 0, upkeep: 0, interest: 0 }, trains: [], carouselSessions: [], boats: [], terrain, water, owned, rides: [], elements: [] };
+        this.state = { version: 15, contentVersion: CONTENT_VERSION, nextInstance: 1, amenities: [], litter: [], facilities: [], retiredShopIncome: 0, retiredStock: 0, retiredMerchandise: emptyMerchandiseAccounts(), retiredRideIncome: 0, staff: [], rules: JSON.stringify(this.rules), side: options.side, tick: 0, revision: 0, topologyRevision: 0, rng: options.seed, paused: false, initialCash: options.cash, cash: options.cash, loan: 0, maxLoan: options.maxLoan, spent: 0, refunded: 0, nextElement: 1, nextEntity: 1, people: { entry: null, open: false, guests: [], departedSpent: 0 }, ledger: { rideSales: 0, shopSales: 0, stock: 0, wages: 0, upkeep: 0, interest: 0 }, trains: [], carouselSessions: [], boats: [], terrain, water, owned, rides: [], elements: [] };
         this.index = this.indexState(this.state);
     }
     get revision() { return `${this.session}:${this.generation}:${this.state.revision}`; }
     view(input) { return result(() => ({ ...project(this.state, this.rules, validateView(input, this.state.side), this.index.elements, id => this.course(this.ride(id)), id => this.channelCourse(this.ride(id))), commandRevision: this.revision })); }
     inspect(kind, id) { return result(() => { ensure(integer(id, 0), 'INVALID_COMMAND', 'Invalid selection identifier.'); const selected = kind === 'guest' ? this.index.guests.get(id) : kind === 'staff' ? this.index.staff.get(id) : kind === 'element' ? this.index.elements.get(id) : undefined; ensure(selected, 'UNKNOWN_ELEMENT', 'Selection is unavailable.'); return structuredClone(selected); }); }
     snapshot() { return structuredClone(this.state); }
-    catalogue() { return catalogue(new Set([...Object.keys(this.rules.rideProfiles ?? {}), ...Object.keys(this.rules.fixedProfiles ?? {}), ...Object.keys(this.rules.channelProfiles ?? {}), ...Object.keys(this.rules.commerceProfiles ?? {}), ...Object.keys(this.rules.facilityProfiles ?? {}), ...Object.keys(this.rules.merchandiseProfiles ?? {})])); }
+    catalogue() { return catalogue(new Set([...Object.keys(this.rules.rideProfiles ?? {}), ...Object.keys(this.rules.fixedProfiles ?? {}), ...Object.keys(this.rules.channelProfiles ?? {}), ...Object.keys(this.rules.commerceProfiles ?? {}), ...Object.keys(this.rules.facilityProfiles ?? {}), ...Object.keys(this.rules.merchandiseProfiles ?? {}), ...Object.keys(this.rules.restroomProfiles ?? {})])); }
     exportSave() { return JSON.stringify(this.state); }
     restoreSave(input) {
         return result(() => {
@@ -234,7 +235,7 @@ export class Engine {
                     }
                     ensure(previous !== null && typeof previous === 'object' && !Array.isArray(previous), 'INVALID_SAVE', 'Invalid legacy rule profile.');
                     ensure(!Object.hasOwn(previous, 'scenery') && !Object.hasOwn(previous, 'rideProfiles') && !Object.hasOwn(previous, 'fixedProfiles') && !Object.hasOwn(previous, 'channelProfiles'), 'INVALID_SAVE', 'Invalid legacy rule profile.');
-                    ensure(!Object.hasOwn(previous, 'commerceProfiles') && !Object.hasOwn(previous, 'facilityProfiles') && !Object.hasOwn(previous, 'merchandiseProfiles'), 'INVALID_SAVE', 'Legacy rules cannot contain later commerce or facility placement.');
+                    ensure(!Object.hasOwn(previous, 'commerceProfiles') && !Object.hasOwn(previous, 'facilityProfiles') && !Object.hasOwn(previous, 'merchandiseProfiles') && !Object.hasOwn(previous, 'restroomProfiles'), 'INVALID_SAVE', 'Legacy rules cannot contain later commerce or facility placement.');
                     legacy.rules = legacyRuleJSON(validateRules(previous));
                     legacy.version = 7;
                 }
@@ -273,7 +274,11 @@ export class Engine {
                         guest.merchandise = { map: false, umbrellaColour: null };
                         guest.informationCounter = null;
                     }
-                    Object.assign(candidate, { version: 14, contentVersion: CONTENT_VERSION, rules: JSON.stringify(this.rules), retiredMerchandise: emptyMerchandiseAccounts() });
+                    Object.assign(candidate, { version: 14, contentVersion: 7, rules: v14RuleJSON(this.rules), retiredMerchandise: emptyMerchandiseAccounts() });
+                }
+                if (legacy?.version === 14) {
+                    this.indexState(candidate, 14);
+                    Object.assign(candidate, { version: 15, contentVersion: CONTENT_VERSION, rules: JSON.stringify(this.rules) });
                 }
                 index = this.indexState(candidate);
             }
@@ -812,7 +817,7 @@ export class Engine {
                 while (this.index.rides.has(id) || this.index.facilities.has(id))
                     id++;
                 const e = { id: this.state.nextElement, kind: 'facility', facility: id, tile: c.tile, height: c.height, direction: c.direction };
-                const f = c.kind === 'information' ? { id, instanceId: this.state.nextInstance, content, name: c.name, kind: c.kind, element: e.id, open: false, products: informationProducts(this.rules), umbrellaColour: 11 } : { id, instanceId: this.state.nextInstance, content, name: c.name, kind: c.kind, element: e.id, open: false, price: product?.rule.defaultPrice ?? this.rules.services.defaultPrice, income: 0, sales: 0 };
+                const f = c.kind === 'information' ? { id, instanceId: this.state.nextInstance, content, name: c.name, kind: c.kind, element: e.id, open: false, products: informationProducts(this.rules), umbrellaColour: 11 } : { id, instanceId: this.state.nextInstance, content, name: c.name, kind: c.kind, element: e.id, open: false, price: gradualRestroomProfile(content, this.rules)?.defaultPrice ?? product?.rule.defaultPrice ?? this.rules.services.defaultPrice, income: 0, sales: 0 };
                 const overlay = { ...this.index, facilities: new Map(this.index.facilities).set(id, f) }, cells = this.cells(e, overlay);
                 this.clear(cells, this.state, overlay, null, e);
                 return { cost: this.rules.services.buildPrice, category: 'construction', cells, id, commit: () => { this.add(e, cells); this.state.facilities.push(f); this.index.facilities.set(id, f); this.state.nextInstance++; } };
@@ -846,10 +851,14 @@ export class Engine {
                     const retired = { 'independent.map': merge('independent.map'), 'independent.umbrella': merge('independent.umbrella') };
                     return { cost: -Math.floor(this.rules.services.buildPrice * this.rules.refundPerThousand / 1000), category: 'refund', cells: [], commit: () => { this.remove(e); this.state.facilities = this.state.facilities.filter(t => t.id !== f.id); this.index.facilities.delete(f.id); this.state.retiredMerchandise = retired; } };
                 }
+                const admitted = this.state.people.guests.filter(g => g.facility === f.id && insideRestroom(g));
+                const out = admitted.length ? restroomExit(f, this.state, this.index, this.navigation(this.state, this.index)) : null;
+                ensure(!admitted.length || out !== null, 'OPERATING_REQUIREMENTS', 'Restore a lawful restroom exit before occupied demolition.');
                 const actualStock = BigInt(f.sales) * BigInt(facilityStockCost(f, this.rules));
                 ensure(actualStock + BigInt(this.state.retiredStock) <= BigInt(Number.MAX_SAFE_INTEGER) && integer(this.state.retiredShopIncome + f.income), 'CAPACITY', 'Retired shop ledger capacity exhausted.');
                 const stock = Number(actualStock);
-                return { cost: -Math.floor(this.rules.services.buildPrice * this.rules.refundPerThousand / 1000), category: 'refund', cells: [], commit: () => { this.remove(e); this.state.facilities = this.state.facilities.filter(t => t.id !== f.id); this.index.facilities.delete(f.id); this.state.retiredShopIncome += f.income; this.state.retiredStock += stock; } };
+                return { cost: -Math.floor(this.rules.services.buildPrice * this.rules.refundPerThousand / 1000), category: 'refund', cells: [], commit: () => { for (const guest of admitted)
+                        releaseRestroom(guest, out); this.remove(e); this.state.facilities = this.state.facilities.filter(t => t.id !== f.id); this.index.facilities.delete(f.id); this.state.retiredShopIncome += f.income; this.state.retiredStock += stock; } };
             }
             case 'hire-staff': {
                 ensure(this.state.staff.length < LIMITS.staff && sharedCount(this.state) < LIMITS.sharedEntities && integer(this.state.nextEntity + 1), 'CAPACITY', 'Staff or shared entity slots exhausted.');
@@ -933,12 +942,12 @@ export class Engine {
         }
     }
     indexState(s, legacy) {
-        const identified = legacy !== 7, fixed = legacy === undefined || legacy >= 10, channel = legacy === undefined || legacy >= 11, preCommerce = legacy !== undefined && legacy <= 11;
-        record(s, ['amenities', 'litter', 'facilities', 'retiredShopIncome', 'retiredStock', 'staff', 'version', 'rules', 'side', 'tick', 'revision', 'topologyRevision', 'rng', 'paused', 'initialCash', 'cash', 'loan', 'maxLoan', 'spent', 'refunded', 'nextElement', 'nextEntity', 'people', 'ledger', 'trains', 'terrain', 'water', 'owned', 'rides', 'elements', ...(identified ? ['contentVersion', 'nextInstance'] : []), ...(fixed ? ['carouselSessions', 'retiredRideIncome'] : []), ...(channel ? ['boats'] : []), ...(legacy === undefined ? ['retiredMerchandise'] : [])]);
-        ensure(s.version === (legacy ?? 14), 'INVALID_SAVE', 'Unsupported save version.');
-        ensure(s.rules === (legacy === 13 ? v13RuleJSON(this.rules) : legacy === 12 ? v12RuleJSON(this.rules) : legacy === 11 ? v11RuleJSON(this.rules) : legacy === 10 ? v10RuleJSON(this.rules) : legacy === 9 ? v9RuleJSON(this.rules) : legacy ? legacyRuleJSON(this.rules) : JSON.stringify(this.rules)), 'WRONG_RULES', 'Save rule profile differs from the engine.');
+        const identified = legacy !== 7, fixed = legacy === undefined || legacy >= 10, channel = legacy === undefined || legacy >= 11, preCommerce = legacy !== undefined && legacy <= 11, merchandise = legacy === undefined || legacy >= 14;
+        record(s, ['amenities', 'litter', 'facilities', 'retiredShopIncome', 'retiredStock', 'staff', 'version', 'rules', 'side', 'tick', 'revision', 'topologyRevision', 'rng', 'paused', 'initialCash', 'cash', 'loan', 'maxLoan', 'spent', 'refunded', 'nextElement', 'nextEntity', 'people', 'ledger', 'trains', 'terrain', 'water', 'owned', 'rides', 'elements', ...(identified ? ['contentVersion', 'nextInstance'] : []), ...(fixed ? ['carouselSessions', 'retiredRideIncome'] : []), ...(channel ? ['boats'] : []), ...(merchandise ? ['retiredMerchandise'] : [])]);
+        ensure(s.version === (legacy ?? 15), 'INVALID_SAVE', 'Unsupported save version.');
+        ensure(s.rules === (legacy === 14 ? v14RuleJSON(this.rules) : legacy === 13 ? v13RuleJSON(this.rules) : legacy === 12 ? v12RuleJSON(this.rules) : legacy === 11 ? v11RuleJSON(this.rules) : legacy === 10 ? v10RuleJSON(this.rules) : legacy === 9 ? v9RuleJSON(this.rules) : legacy ? legacyRuleJSON(this.rules) : JSON.stringify(this.rules)), 'WRONG_RULES', 'Save rule profile differs from the engine.');
         if (identified)
-            ensure(s.contentVersion === (legacy === 8 ? 1 : legacy === 9 ? 2 : legacy === 10 ? 3 : legacy === 11 ? 4 : legacy === 12 ? 5 : legacy === 13 ? 6 : CONTENT_VERSION) && integer(s.nextInstance, 1), 'INVALID_SAVE', 'Unsupported content version or invalid instance counter.');
+            ensure(s.contentVersion === (legacy === 8 ? 1 : legacy === 9 ? 2 : legacy === 10 ? 3 : legacy === 11 ? 4 : legacy === 12 ? 5 : legacy === 13 ? 6 : legacy === 14 ? 7 : CONTENT_VERSION) && integer(s.nextInstance, 1), 'INVALID_SAVE', 'Unsupported content version or invalid instance counter.');
         ensure(integer(s.side, LIMITS.mapMin, LIMITS.mapMax) && integer(s.rng, 0, 0xffffffff) && typeof s.paused === 'boolean', 'INVALID_SAVE', 'Invalid world metadata.');
         for (const n of [s.tick, s.revision, s.topologyRevision, s.initialCash, s.loan, s.maxLoan, s.spent, s.refunded, s.retiredShopIncome, s.retiredStock])
             ensure(integer(n), 'INVALID_SAVE', 'Invalid clock or money field.');
@@ -975,11 +984,11 @@ export class Engine {
             ensure(r.anchor.pitch === 0 && r.anchor.bank === 0 && r.anchor.z <= this.rules.maxHeight, 'INVALID_SAVE', 'Invalid ride anchor.');
             index.rides.set(r.id, r);
         }
-        if (legacy === undefined)
+        if (merchandise)
             this.validateMerchandiseAccounts(s.retiredMerchandise, false);
         for (const f of s.facilities) {
             ensure(f !== null && typeof f === 'object', 'INVALID_SAVE', 'Invalid facility record.');
-            if (f.kind === 'information' && legacy === undefined) {
+            if (f.kind === 'information' && merchandise) {
                 record(f, ['id', 'instanceId', 'content', 'name', 'kind', 'element', 'open', 'products', 'umbrellaColour']);
                 identity(f, f.kind);
                 this.validateMerchandiseAccounts(f.products, true);
@@ -1179,7 +1188,7 @@ export class Engine {
                 ensure(ride.status === 'closed' || index.boats.has(ride.id), 'INVALID_SAVE', 'Operating channel has no boat.');
     }
     validatePeople(s, index, legacy) {
-        const preCommerce = legacy !== undefined && legacy <= 11;
+        const preCommerce = legacy !== undefined && legacy <= 11, merchandise = legacy === undefined || legacy >= 14;
         record(s.people, ['entry', 'open', 'guests', 'departedSpent']);
         ensure(typeof s.people.open === 'boolean' && integer(s.people.departedSpent) && Array.isArray(s.people.guests) && s.people.guests.length <= LIMITS.sharedEntities, 'INVALID_SAVE', 'Invalid park guest state.');
         if (s.people.entry !== null) {
@@ -1187,11 +1196,13 @@ export class Engine {
             this.owned(s.people.entry, s);
         }
         ensure(!s.people.open || s.people.entry !== null && index.paths.get(pathKey(s.people.entry.x, s.people.entry.y, s.people.entry.z))?.queueFor === null, 'INVALID_SAVE', 'Open park has no public entrance.');
-        const ids = new Set([...s.trains.flatMap(t => t.carIds), ...Array.from(index.boats.values(), b => b.id)]);
+        const ids = new Set([...s.trains.flatMap(t => t.carIds), ...Array.from(index.boats.values(), b => b.id)]), admittedCounts = new Map();
         let payments = BigInt(s.people.departedSpent);
         for (const g of s.people.guests) {
-            record(g, ['navigationRide', 'amenity', 'restProgress', 'wrapper', 'wrapperTick', 'facility', 'serviceProgress', 'bladder', 'id', 'point', 'phase', 'goal', 'next', 'walkProgress', 'destination', 'entrance', 'exit', 'queueRide', 'seat', 'initialCash', 'cash', 'spent', 'fareLimit', 'forceTolerance', 'hunger', 'thirst', 'nausea', 'happiness', 'energy', 'queuedAt', 'lastRide', 'lastRideTick', 'ridesTaken', 'thought', ...(!preCommerce ? ['held'] : []), ...(legacy === undefined ? ['merchandise', 'informationCounter'] : [])]);
-            if (legacy === undefined) {
+            record(g, ['navigationRide', 'amenity', 'restProgress', 'wrapper', 'wrapperTick', 'facility', 'serviceProgress', 'bladder', 'id', 'point', 'phase', 'goal', 'next', 'walkProgress', 'destination', 'entrance', 'exit', 'queueRide', 'seat', 'initialCash', 'cash', 'spent', 'fareLimit', 'forceTolerance', 'hunger', 'thirst', 'nausea', 'happiness', 'energy', 'queuedAt', 'lastRide', 'lastRideTick', 'ridesTaken', 'thought', ...(!preCommerce ? ['held'] : []), ...(merchandise ? ['merchandise', 'informationCounter'] : [])]);
+            const admitted = insideRestroom(g);
+            ensure(!admitted || legacy === undefined, 'INVALID_SAVE', 'Historical parks cannot introduce an admitted restroom phase.');
+            if (merchandise) {
                 record(g.merchandise, ['map', 'umbrellaColour']);
                 ensure(typeof g.merchandise.map === 'boolean' && (g.merchandise.umbrellaColour === null || integer(g.merchandise.umbrellaColour, 0, 31)) && (g.informationCounter === null || integer(g.informationCounter, 0, 3)), 'INVALID_SAVE', 'Invalid permanent merchandise or counter intent.');
                 ensure(!(g.merchandise.map || g.merchandise.umbrellaColour !== null) || this.rules.merchandiseProfiles?.[merchandiseProfileId], 'INVALID_SAVE', 'Owned merchandise requires its receiving profile.');
@@ -1235,22 +1246,33 @@ export class Engine {
                 ensure(g.phase !== 'resting', 'INVALID_SAVE', 'Resting guest has no bench.');
             ensure(integer(g.serviceProgress, 0, this.rules.services.serviceTicks - 1) && ((g.phase === 'buying') || g.serviceProgress === 0) && (g.facility === null || integer(g.facility, 0, 254) && index.facilities.has(g.facility)), 'INVALID_SAVE', 'Invalid guest facility service.');
             ensure(g.phase !== 'buying' || g.facility !== null && g.goal === null && g.next === null, 'INVALID_SAVE', 'Buying guest has no service destination.');
-            ensure(g.facility === null || g.destination === null && g.queueRide === null && g.seat === null && (g.phase === 'walking' || g.phase === 'buying'), 'INVALID_SAVE', 'Conflicting guest destination.');
+            ensure(g.facility === null || g.destination === null && g.queueRide === null && g.seat === null && (g.phase === 'walking' || g.phase === 'buying' || admitted), 'INVALID_SAVE', 'Conflicting guest destination.');
             if (g.facility !== null) {
                 const f = index.facilities.get(g.facility), e = index.elements.get(f.element);
-                ensure(e?.kind === 'facility' && f.open, 'INVALID_SAVE', 'Guest targets an unavailable service.');
-                if (f.kind === 'information')
-                    ensure(legacy === undefined && g.informationCounter !== null, 'INVALID_SAVE', 'Information visit has no chosen counter.');
-                else
-                    ensure((preCommerce || f.kind === 'restroom' || !g.held) && (preCommerce || !g.wrapper || !facilityProduct(f.content, this.rules)) && g.cash >= f.price, 'INVALID_SAVE', 'Guest targets an unavailable service.');
-                const counter = facilityApproach(e, f.kind === 'information' ? g.informationCounter : 0);
-                ensure(index.paths.get(pathKey(counter.x, counter.y, counter.z))?.queueFor === null, 'INVALID_SAVE', 'Service counter has no public path.');
-                if (g.phase === 'walking')
-                    ensure(g.goal !== null && g.goal.x === counter.x && g.goal.y === counter.y && g.goal.z === counter.z, 'INVALID_SAVE', 'Walking service guest has no chosen counter goal.');
-                if (g.phase === 'buying')
-                    ensure(g.point.x === counter.x && g.point.y === counter.y && g.point.z === counter.z, 'INVALID_SAVE', 'Buying guest is away from the chosen counter.');
+                ensure(e?.kind === 'facility', 'INVALID_SAVE', 'Guest service has no constructed facility.');
+                const gradual = f.kind === 'restroom' ? gradualRestroomProfile(f.content, this.rules) : null;
+                if (admitted) {
+                    ensure(gradual && g.point.x === e.tile.x && g.point.y === e.tile.y && g.point.z === e.height && g.goal === null && g.next === null && g.walkProgress === 0, 'INVALID_SAVE', 'Admitted restroom ownership or inside position is invalid.');
+                    const count = (admittedCounts.get(f.id) ?? 0) + 1;
+                    ensure(f.kind === 'restroom' && count <= f.sales, 'INVALID_SAVE', 'Admitted restroom guests exceed booked admissions.');
+                    admittedCounts.set(f.id, count);
+                }
+                else {
+                    ensure(f.open && (!gradual || g.phase === 'walking'), 'INVALID_SAVE', 'Guest targets an unavailable service or invalid purchase phase.');
+                    if (f.kind === 'information')
+                        ensure(merchandise && g.informationCounter !== null, 'INVALID_SAVE', 'Information visit has no chosen counter.');
+                    else
+                        ensure((preCommerce || f.kind === 'restroom' || !g.held) && (preCommerce || !g.wrapper || !facilityProduct(f.content, this.rules)) && g.cash >= f.price, 'INVALID_SAVE', 'Guest targets an unavailable service.');
+                    const counter = facilityApproach(e, f.kind === 'information' ? g.informationCounter : 0);
+                    ensure(index.paths.get(pathKey(counter.x, counter.y, counter.z))?.queueFor === null, 'INVALID_SAVE', 'Service counter has no public path.');
+                    if (g.phase === 'walking')
+                        ensure(g.goal !== null && g.goal.x === counter.x && g.goal.y === counter.y && g.goal.z === counter.z, 'INVALID_SAVE', 'Walking service guest has no chosen counter goal.');
+                    if (g.phase === 'buying')
+                        ensure(g.point.x === counter.x && g.point.y === counter.y && g.point.z === counter.z, 'INVALID_SAVE', 'Buying guest is away from the chosen counter.');
+                }
             }
-            ensure(['walking', 'queued', 'riding', 'stranded', 'leaving', 'buying', 'resting'].includes(g.phase) && ['none', 'not-enough-cash', 'too-intense', 'path-lost', 'ride-closed', 'queue-too-long', 'price-changed', 'payment-blocked', 'leaving'].includes(g.thought), 'INVALID_SAVE', 'Invalid guest phase or thought.');
+            ensure(!admitted || g.facility !== null, 'INVALID_SAVE', 'Admitted restroom guest has no owner.');
+            ensure(['walking', 'queued', 'riding', 'stranded', 'leaving', 'buying', 'resting', 'using-restroom', 'restroom-exit'].includes(g.phase) && ['none', 'not-enough-cash', 'too-intense', 'path-lost', 'ride-closed', 'queue-too-long', 'price-changed', 'payment-blocked', 'leaving'].includes(g.thought), 'INVALID_SAVE', 'Invalid guest phase or thought.');
             for (const value of [g.initialCash, g.cash, g.spent, g.fareLimit, g.forceTolerance])
                 ensure(integer(value, 0, 1000000), 'INVALID_SAVE', 'Invalid guest cash or preference.');
             ensure(g.initialCash - g.spent === g.cash, 'INVALID_SAVE', 'Guest pocket cash does not reconcile.');
@@ -1278,9 +1300,9 @@ export class Engine {
             }
             if (g.next !== null)
                 ensure(g.goal !== null && g.point.z === g.next.z && Math.abs(g.point.x - g.next.x) + Math.abs(g.point.y - g.next.y) === 1, 'INVALID_SAVE', 'Next path is not adjacent.');
-            if (g.phase === 'riding' || g.phase === 'stranded')
+            if (g.phase === 'riding' || g.phase === 'stranded' || admitted)
                 ensure(g.goal === null && g.next === null, 'INVALID_SAVE', 'Inactive pedestrian retains a walking leg.');
-            if (g.phase !== 'riding' && g.phase !== 'stranded') {
+            if (g.phase !== 'riding' && g.phase !== 'stranded' && !admitted) {
                 const path = index.paths.get(pathKey(g.point.x, g.point.y, g.point.z));
                 ensure(path, 'INVALID_SAVE', 'Guest has no path.');
                 if (path.queueFor !== null)
@@ -1411,7 +1433,7 @@ export class Engine {
         let income = BigInt(s.retiredShopIncome), stock = BigInt(s.retiredStock);
         const merchandise = this.rules.merchandiseProfiles?.[merchandiseProfileId];
         const merchandiseSales = { 'independent.map': 0n, 'independent.umbrella': 0n };
-        if (s.version === 14)
+        if (s.version >= 14)
             for (const id of merchandiseIds) {
                 const a = s.retiredMerchandise[id];
                 income += BigInt(a.income);
@@ -1432,7 +1454,7 @@ export class Engine {
             }
         ensure(income === BigInt(s.ledger.shopSales), 'INVALID_SAVE', 'Shop revenue does not reconcile.');
         ensure(stock === BigInt(s.ledger.stock), 'INVALID_SAVE', 'Shop stock does not reconcile.');
-        if (s.version === 14) {
+        if (s.version >= 14) {
             ensure(BigInt(s.people.guests.filter(g => g.merchandise.map).length) <= merchandiseSales['independent.map'] && BigInt(s.people.guests.filter(g => g.merchandise.umbrellaColour !== null).length) <= merchandiseSales['independent.umbrella'], 'INVALID_SAVE', 'Guest merchandise exceeds recorded purchases.');
         }
     }

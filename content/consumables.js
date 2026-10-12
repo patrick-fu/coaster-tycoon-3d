@@ -1,4 +1,5 @@
 import { resolveContent } from './registry.js';
+import { gradualRestroomProfile, restroomPlacementId, restroomProfileId } from './gradual-restroom.js';
 import { ensure, integer, record } from '../simulation/validation.js';
 export const commerceProfileId = 'independent.consumables-v1';
 export const productIds = ['independent.burger', 'independent.soft-drink'];
@@ -49,6 +50,11 @@ export function facilityProduct(content, rules) {
     const { construction: c, operation: o } = resolveContent(content).capabilities;
     if (c.kind !== 'facility' || c.service === 'information')
         return null;
+    if (c.profileId === restroomPlacementId) {
+        ensure(c.service === 'restroom' && o.kind === 'service' && o.service === 'restroom' && o.profileId === restroomProfileId, 'INVALID_CONTENT', 'Restroom service capabilities disagree.');
+        gradualRestroomProfile(content, rules);
+        return null;
+    }
     if (c.profileId === 'independent-services-v1') {
         ensure(o.kind === 'service' && o.profileId === c.profileId && o.service === c.service, 'INVALID_CONTENT', 'Facility service capabilities disagree.');
         return null;

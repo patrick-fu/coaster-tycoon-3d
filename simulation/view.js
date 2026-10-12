@@ -11,6 +11,8 @@ import { flumeGroundCells } from './flume-native.js';
 import { boatFrame, boatSeatFrames } from './boat.js';
 import { facilityProduct, facilityProductView, productDescriptors } from '../content/consumables.js';
 import { informationProductViews } from '../content/merchandise.js';
+import { insideRestroom } from './services.js';
+import { gradualRestroomProfile } from '../content/gradual-restroom.js';
 export function validateView(value, side) {
     record(value, ['bounds', 'includeStatic']);
     record(value.bounds, ['x0', 'y0', 'x1', 'y1']);
@@ -20,10 +22,18 @@ export function validateView(value, side) {
 }
 export function project(s, rules, request, elements, course, channelCourse) {
     const b = request.bounds, visible = (x, y) => x >= b.x0 && x <= b.x1 && y >= b.y0 && y <= b.y1, metres = rules.motion.tileMetres;
-    const phases = ['walking', 'queued', 'riding', 'stranded', 'leaving', 'buying', 'resting'];
+    const phases = ['walking', 'queued', 'riding', 'stranded', 'leaving', 'buying', 'resting', 'using-restroom', 'restroom-exit'];
+    const visits = new Map();
+    for (const g of s.people.guests)
+        if (insideRestroom(g)) {
+            const visit = visits.get(g.facility) ?? { using: 0, exiting: 0, guestIds: [] };
+            visit[g.phase === 'using-restroom' ? 'using' : 'exiting']++;
+            visit.guestIds.push(g.id);
+            visits.set(g.facility, visit);
+        }
     const people = [];
     for (const g of s.people.guests) {
-        if (g.phase === 'riding')
+        if (g.phase === 'riding' || insideRestroom(g))
             continue;
         const mix = g.next ? g.walkProgress / rules.guests.walkTicks : 0, x = g.point.x + (g.next ? g.next.x - g.point.x : 0) * mix, y = g.point.y + (g.next ? g.next.y - g.point.y : 0) * mix;
         if (visible(x, y))
@@ -84,5 +94,5 @@ export function project(s, rules, request, elements, course, channelCourse) {
         const bodies = found.filter(e => e.kind === 'fixed-body'), remaining = found.filter(e => e.kind !== 'fixed-body');
         scenery = { elements: structuredClone([...bodies, ...remaining.slice(0, 8192 - bodies.length)]), surfaces, truncated: found.length > 8192 };
     }
-    return { protocolVersion: WORKER_PROTOCOL_VERSION, contentVersion: s.contentVersion, coordinates: { nativeUnitsPerTile: 32, nativeHeightStep: 8, nativeLandStep: 16, metresPerTile: rules.motion.tileMetres, evidence: 'project-candidate' }, revision: `${s.revision}:${s.tick}`, worldRevision: s.revision, topologyRevision: s.topologyRevision, tick: s.tick, paused: s.paused, parkOpen: s.people.open, cash: s.cash, loan: s.loan, maxLoan: s.maxLoan, side: s.side, entry: s.people.entry ? { ...s.people.entry } : null, ledger: { ...s.ledger }, counts: { guests: s.people.guests.length, staff: s.staff.length, litter: s.litter.length, cars: s.trains.reduce((n, t) => n + t.carIds.length, 0), boats: s.boats.length }, people: new Float64Array(people), cars, carouselSessions, boats, rides, staff: s.staff.map(t => ({ id: t.id, role: t.role, work: t.job?.kind ?? t.cleanup?.kind ?? null, completed: t.completed })), products: productDescriptors(rules), facilities: s.facilities.map(f => f.kind === 'information' ? { ...f, content: { ...f.content }, presentation: resolveContent(f.content).capabilities.presentation, products: informationProductViews(f.products, rules) } : { ...f, content: { ...f.content }, presentation: resolveContent(f.content).capabilities.presentation, priceBounds: { min: 0, max: facilityProduct(f.content, rules)?.rule.maxPrice ?? rules.services.maxPrice }, product: facilityProductView(f, rules) }), amenities: s.amenities.map(a => ({ ...a })), litter: new Float64Array(s.litter.filter(l => visible(l.point.x, l.point.y)).flatMap(l => [l.id, l.point.x * metres, l.point.y * metres, l.point.z / 32 * metres])), litterTypes: s.litter.filter(l => l.containerId !== undefined && visible(l.point.x, l.point.y)).map(l => ({ id: l.id, containerId: l.containerId })), scenery };
+    return { protocolVersion: WORKER_PROTOCOL_VERSION, contentVersion: s.contentVersion, coordinates: { nativeUnitsPerTile: 32, nativeHeightStep: 8, nativeLandStep: 16, metresPerTile: rules.motion.tileMetres, evidence: 'project-candidate' }, revision: `${s.revision}:${s.tick}`, worldRevision: s.revision, topologyRevision: s.topologyRevision, tick: s.tick, paused: s.paused, parkOpen: s.people.open, cash: s.cash, loan: s.loan, maxLoan: s.maxLoan, side: s.side, entry: s.people.entry ? { ...s.people.entry } : null, ledger: { ...s.ledger }, counts: { guests: s.people.guests.length, staff: s.staff.length, litter: s.litter.length, cars: s.trains.reduce((n, t) => n + t.carIds.length, 0), boats: s.boats.length }, people: new Float64Array(people), cars, carouselSessions, boats, rides, staff: s.staff.map(t => ({ id: t.id, role: t.role, work: t.job?.kind ?? t.cleanup?.kind ?? null, completed: t.completed })), products: productDescriptors(rules), facilities: s.facilities.map(f => f.kind === 'information' ? { ...f, content: { ...f.content }, presentation: resolveContent(f.content).capabilities.presentation, products: informationProductViews(f.products, rules) } : { ...f, content: { ...f.content }, presentation: resolveContent(f.content).capabilities.presentation, priceBounds: { min: 0, max: facilityProduct(f.content, rules)?.rule.maxPrice ?? rules.services.maxPrice }, product: facilityProductView(f, rules), ...(gradualRestroomProfile(f.content, rules) ? { restroom: visits.get(f.id) ?? { using: 0, exiting: 0, guestIds: [] } } : {}) }), amenities: s.amenities.map(a => ({ ...a })), litter: new Float64Array(s.litter.filter(l => visible(l.point.x, l.point.y)).flatMap(l => [l.id, l.point.x * metres, l.point.y * metres, l.point.z / 32 * metres])), litterTypes: s.litter.filter(l => l.containerId !== undefined && visible(l.point.x, l.point.y)).map(l => ({ id: l.id, containerId: l.containerId })), scenery };
 }

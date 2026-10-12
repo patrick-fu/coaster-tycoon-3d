@@ -13,8 +13,8 @@ export declare class Engine {
     constructor(options: WorldOptions, rules: Rules);
     get revision(): string;
     view(input: unknown): Result<{
-        protocolVersion: 7;
-        contentVersion: 7;
+        protocolVersion: 8;
+        contentVersion: 8;
         coordinates: {
             nativeUnitsPerTile: number;
             nativeHeightStep: number;
@@ -324,6 +324,11 @@ export declare class Engine {
                 stockExpense: number;
                 grossMargin: number;
             } | null;
+            restroom?: {
+                using: number;
+                exiting: number;
+                guestIds: number[];
+            } | undefined;
         })[];
         amenities: {
             id: number;
@@ -347,7 +352,7 @@ export declare class Engine {
     inspect(kind: unknown, id: unknown): Result<Guest | Staff | Element>;
     snapshot(): State;
     catalogue(): {
-        contentVersion: 7;
+        contentVersion: 8;
         families: {
             id: string;
             label: string;
@@ -388,6 +393,10 @@ export declare class Engine {
                         productId: import("../content/consumables.js").ProductId;
                     } | {
                         kind: 'facility';
+                        service: 'restroom';
+                        profileId: 'independent.gradual-restroom-v1';
+                    } | {
+                        kind: 'facility';
                         service: 'information';
                         profileId: 'independent.information-kiosk-v1';
                     } | {
@@ -412,6 +421,10 @@ export declare class Engine {
                         service: 'food' | 'drink';
                         profileId: 'independent.consumables-v1';
                         productId: import("../content/consumables.js").ProductId;
+                    } | {
+                        kind: 'service';
+                        service: 'restroom';
+                        profileId: 'independent.gradual-restroom-service-v1';
                     } | {
                         kind: 'service';
                         service: 'information';

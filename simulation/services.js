@@ -7,6 +7,7 @@ import { boatEditable } from './boat.js';
 import { compileFlumeCourse } from './flume-native.js';
 import { commerceProfileId, facilityProduct, facilityStockCost, productRule } from '../content/consumables.js';
 import { merchandiseProfileId } from '../content/merchandise.js';
+import { gradualRestroomProfile } from '../content/gradual-restroom.js';
 const same = (a, b) => a.x === b.x && a.y === b.y && a.z === b.z;
 const key = (p) => `${p.x},${p.y},${p.z}`;
 export function validateServiceRules(input) {
@@ -50,9 +51,69 @@ export function recoverFacility(g, index, rules) {
     if (g.facility === null)
         return true;
     const f = index.facilities.get(g.facility), e = f ? index.elements.get(f.element) : undefined;
+    if (insideRestroom(g))
+        return f?.kind === 'restroom' && !!gradualRestroomProfile(f.content, rules) && e?.kind === 'facility';
     if (f?.kind === 'information')
         return !!rules.merchandiseProfiles?.[merchandiseProfileId] && f.open && g.informationCounter !== null && e?.kind === 'facility' && publicPath(facilityApproach(e, g.informationCounter), index);
     return !!f && f.open && g.cash >= f.price && (f.kind === 'restroom' || !g.held) && e?.kind === 'facility' && publicPath(facilityApproach(e), index);
+}
+export function insideRestroom(g) { return g.phase === 'using-restroom' || g.phase === 'restroom-exit'; }
+export function restroomExit(f, s, index, route) {
+    const e = index.elements.get(f.element), entry = s.people.entry;
+    if (e?.kind !== 'facility' || entry === null || !publicPath(entry, index))
+        return null;
+    const out = facilityApproach(e);
+    return publicPath(out, index) && route.distance(out, entry, null) !== null ? out : null;
+}
+export function admitRestroom(g, s, rules, index) {
+    const f = g.facility === null ? undefined : index.facilities.get(g.facility);
+    if (f?.kind !== 'restroom' || !gradualRestroomProfile(f.content, rules) || !recoverFacility(g, index, rules))
+        return false;
+    const e = index.elements.get(f.element);
+    if (e?.kind !== 'facility' || !same(g.point, facilityApproach(e)))
+        return false;
+    const price = f.price, cash = BigInt(s.cash) + BigInt(price);
+    ensure(cash <= BigInt(Number.MAX_SAFE_INTEGER) && integer(s.ledger.shopSales + price) && integer(f.income + price) && integer(f.sales + 1) && integer(g.spent + price), 'CAPACITY', 'Restroom admission accounting capacity exhausted.');
+    g.cash -= price;
+    g.spent += price;
+    s.cash = Number(cash);
+    s.ledger.shopSales += price;
+    f.income += price;
+    f.sales++;
+    g.phase = 'using-restroom';
+    g.point = { x: e.tile.x, y: e.tile.y, z: e.height };
+    g.goal = null;
+    g.next = null;
+    g.walkProgress = 0;
+    g.navigationRide = null;
+    g.serviceProgress = 0;
+    g.thought = 'none';
+    return true;
+}
+export function releaseRestroom(g, point) {
+    g.point = { ...point };
+    g.phase = 'walking';
+    g.facility = null;
+    g.informationCounter = null;
+    g.serviceProgress = 0;
+    g.goal = null;
+    g.next = null;
+    g.walkProgress = 0;
+    g.navigationRide = null;
+    g.thought = 'none';
+}
+export function stepRestroom(g, s, rules, index, route) {
+    const f = index.facilities.get(g.facility);
+    if (g.phase === 'using-restroom') {
+        const profile = gradualRestroomProfile(f.content, rules);
+        g.bladder = Math.max(0, g.bladder - profile.reliefPerTick);
+        if (g.bladder === 0)
+            g.phase = 'restroom-exit';
+        return;
+    }
+    const out = restroomExit(f, s, index, route);
+    if (out)
+        releaseRestroom(g, out);
 }
 export function buy(g, s, rules, index) {
     const f = index.facilities.get(g.facility);

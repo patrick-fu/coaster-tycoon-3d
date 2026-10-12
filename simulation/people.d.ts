@@ -65,7 +65,7 @@ export type Guest = {
     serviceProgress: number;
     bladder: number;
     point: PathPoint;
-    phase: 'walking' | 'queued' | 'riding' | 'stranded' | 'leaving' | 'buying' | 'resting';
+    phase: 'walking' | 'queued' | 'riding' | 'stranded' | 'leaving' | 'buying' | 'resting' | 'using-restroom' | 'restroom-exit';
     goal: PathPoint | null;
     next: PathPoint | null;
     walkProgress: number;
