@@ -1,0 +1,35 @@
+{
+  "utc": "2026-10-12T07:53:20.406141+00:00",
+  "status": "PASS",
+  "allFullPathsBytesAndHashesEqual": true,
+  "fileCount": 484,
+  "totalBytes": 407664363,
+  "inventorySHA256": "2f2231a6fd0e8a51b66e4e34159a9014b4f52501dad495e8304dc487105cd7d6",
+  "archiveSHA256": "5a4f8f8032a25b539a69ecf12220902c7ca5126e4eef94e3580874a81edb8cf2",
+  "actualCommandExits": [
+    {
+      "pid": 79830,
+      "actualWaitExit": 0
+    },
+    {
+      "pid": 79886,
+      "actualWaitExit": 0
+    },
+    {
+      "pid": 79938,
+      "actualWaitExit": 0
+    },
+    {
+      "pid": 79973,
+      "actualWaitExit": 0
+    },
+    {
+      "pid": 80003,
+      "actualWaitExit": 0
+    },
+    {
+      "pid": 81527,
+      "actualWaitExit": 0
+    }
+  ]
+}

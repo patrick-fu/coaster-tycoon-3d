@@ -122,3 +122,29 @@ failed attempts remain at
 are verified;57 frozen scientific files are read-only and11 owned process
 groups terminal. [Current receiving checks](../../docs/verification/consumables/README.md)
 retain actual outcomes separately. All v7–v10 fixtures remain byte-identical.
+
+## Actual pre-merchandise v13 continuation
+
+`v13-information-merchandise-continuation.json.gz` contains eleven genuine
+parks from frozen source `1bdec0dd377f922c9168f454c4b2eaba92a1bbc4`, Engine
+SHA256 `f15a5646359ecab5d2b870712b0ad2f5b0adc843d9d8815cf1cac64681e0ba75`.
+Fixture SHA256 is
+`ee72f3f1913c138ff0841a94d75c20f308d5cdddece45205465983262881935e`;
+its 2,014,972 compressed bytes decode to 69,857,305 bytes. The expected
+authority, public views, audits and inspections come from the old executable.
+They cover full paid ride ownership, actual consumable sales, retirement and
+slot reuse, in-flight service and declared nondefault numeric Rules.
+
+Five checkpoints per park at offsets 0/1/17/400/1200 preserve full old state.
+The v14 receiver compares complete old authority and projections under 17-
+and 1200-tick batches, with and without the new receiving merchandise profile.
+New ownership and retired accounts must first be empty; only then are the
+declared new fields removed for the old comparison. Historical v13 Rules
+positively exclude the new merchandise and information-placement profiles.
+Later fields and identities are rejected before migration.
+
+The immutable oracle, original failed attempts and full WD mirror remain at
+`/Volumes/WD/code/workspaces/coaster-information-merchandise/oracle/old13-r1`.
+[Root baseline disposition](../../docs/verification/information-merchandise/root-old13-disposition.json)
+records independent full consumption. This is matching-runtime project
+regression evidence; it does not calibrate original-game numbers or graphics.

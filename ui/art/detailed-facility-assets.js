@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import { GLTFLoader } from '../vendor/addons/loaders/GLTFLoader.js';
 
-export function createDetailedFacilityAssets(renderer, {reflectionTexture = null} = {}) {
+export function createDetailedFacilityAssets(renderer, {reflectionTexture = null, information = false} = {}) {
   const geometries = new Set();
   const materials = new Set();
   const textures = new Set();
@@ -72,7 +72,17 @@ export function createDetailedFacilityAssets(renderer, {reflectionTexture = null
     depths.clear();
   };
 
-  const REQUIRED_ANCHORS = [
+  const INFORMATION_ANCHORS = {
+    GroundRoot: [0, 0, 0],
+    Counter_Front: [0, .88, 1.52],
+    Counter_Back: [0, .88, -1.52],
+    Counter_Left: [-1.52, .88, 0],
+    Counter_Right: [1.52, .88, 0],
+    Sign_Front: [0, 2.33, 1.73],
+    PropMap: [.30, .88, 1.40],
+    PropUmbrella: [-1.64, .22, 1.64]
+  };
+  const REQUIRED_ANCHORS = information ? Object.keys(INFORMATION_ANCHORS) : [
     'OpenShutter',
     'ClosedShutter',
     'GroundRoot',
@@ -209,7 +219,7 @@ export function createDetailedFacilityAssets(renderer, {reflectionTexture = null
   }
 
   async function loadModel(kind) {
-    const url = new URL(`../models/detailed-stalls/${kind}.glb`, import.meta.url).href;
+    const url = new URL(information ? '../models/information/information-kiosk.glb' : `../models/detailed-stalls/${kind}.glb`, import.meta.url).href;
     const response = await fetch(url, { signal: abort.signal });
     if (!response.ok) {
       throw new Error(`Detailed facility ${kind} model returned HTTP ${response.status}.`);
@@ -237,6 +247,15 @@ export function createDetailedFacilityAssets(renderer, {reflectionTexture = null
 
     const groundRoot = gltf.scene.getObjectByName('GroundRoot');
     checkUnitTransform(groundRoot, kind, 'GroundRoot');
+    if (information) {
+      gltf.scene.updateMatrixWorld(true);
+      for (const [name, expected] of Object.entries(INFORMATION_ANCHORS)) {
+        const anchor = gltf.scene.getObjectByName(name), point = anchor.getWorldPosition(new THREE.Vector3());
+        if (point.toArray().some((value, i) => !Number.isFinite(value) || Math.abs(value - expected[i]) > 1e-4)) {
+          throw new Error(`Information kiosk anchor '${name}' does not match its authored counter frame.`);
+        }
+      }
+    }
 
     const maxAnisotropy = renderer?.capabilities?.getMaxAnisotropy ? renderer.capabilities.getMaxAnisotropy() : 1;
 
@@ -369,7 +388,7 @@ export function createDetailedFacilityAssets(renderer, {reflectionTexture = null
     templates.set(kind, gltf.scene);
   }
 
-  assets.readyPromise = Promise.allSettled(['burger', 'soft-drink'].map(loadModel)).then(results => {
+  assets.readyPromise = Promise.allSettled((information ? ['information-kiosk'] : ['burger', 'soft-drink']).map(loadModel)).then(results => {
     objectURLs.clear();
     const failure = results.find(result => result.status === 'rejected');
     if (disposed || failure) {
@@ -396,7 +415,7 @@ export function createDetailedFacilityAssets(renderer, {reflectionTexture = null
     }
 
     const kind = facility.kind;
-    if (kind !== 'food' && kind !== 'drink') {
+    if (information ? kind !== 'information' : kind !== 'food' && kind !== 'drink') {
       throw new Error(`Detailed facility requires kind to be 'food' or 'drink', got '${kind}'.`);
     }
 
@@ -409,7 +428,7 @@ export function createDetailedFacilityAssets(renderer, {reflectionTexture = null
       throw new Error(`Detailed facility requires presentation.kind to be 'detailed-facility', got '${presentation.kind}'.`);
     }
 
-    if (presentation.profileId !== 'detailed-consumable-stalls-v1') {
+    if (presentation.profileId !== (information ? 'detailed-information-kiosk-v1' : 'detailed-consumable-stalls-v1')) {
       throw new Error(`Detailed facility requires presentation.profileId to be 'detailed-consumable-stalls-v1', got '${presentation.profileId}'.`);
     }
 
@@ -417,22 +436,30 @@ export function createDetailedFacilityAssets(renderer, {reflectionTexture = null
       throw new Error(`Detailed facility requires presentation.service '${presentation.service}' to match kind '${kind}'.`);
     }
 
-    const product = facility.product;
-    if (!product || typeof product !== 'object') {
-      throw new Error('Detailed facility requires product object.');
-    }
-
     let templateKey;
-    if (kind === 'food') {
-      if (product.id !== 'independent.burger') {
-        throw new Error(`Detailed facility food requires product.id 'independent.burger', got '${product.id}'.`);
+    if (information) {
+      const products = facility.products;
+      if (!products || Object.keys(products).length !== 2 || !['independent.map', 'independent.umbrella'].every(id => products[id] && Number.isSafeInteger(products[id].price))) {
+        throw new Error('Information kiosk requires both projected merchandise products.');
       }
-      templateKey = 'burger';
+      templateKey = 'information-kiosk';
     } else {
-      if (product.id !== 'independent.soft-drink') {
-        throw new Error(`Detailed facility drink requires product.id 'independent.soft-drink', got '${product.id}'.`);
+      const product = facility.product;
+      if (!product || typeof product !== 'object') {
+        throw new Error('Detailed facility requires product object.');
       }
-      templateKey = 'soft-drink';
+
+      if (kind === 'food') {
+        if (product.id !== 'independent.burger') {
+          throw new Error(`Detailed facility food requires product.id 'independent.burger', got '${product.id}'.`);
+        }
+        templateKey = 'burger';
+      } else {
+        if (product.id !== 'independent.soft-drink') {
+          throw new Error(`Detailed facility drink requires product.id 'independent.soft-drink', got '${product.id}'.`);
+        }
+        templateKey = 'soft-drink';
+      }
     }
 
     const template = templates.get(templateKey);

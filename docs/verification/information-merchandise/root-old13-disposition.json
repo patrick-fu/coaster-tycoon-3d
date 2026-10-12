@@ -1,0 +1,188 @@
+{
+  "utc": "2026-10-12T01:59:46.670187+00:00",
+  "rootActualSemanticReaderWait": "34ac64 actual0",
+  "rootWrapperPID": 63815,
+  "rootSSHPID": 63817,
+  "readerPID": 418700,
+  "fullWDMirrorFiles": 364,
+  "fullWDMirrorBytes": 7110877,
+  "allFullBytesModesAndPhysicalPathSetMatch": true,
+  "fullRemoteConsumption": {
+    "utc": "2026-10-12T01:57:40.371840+00:00",
+    "readerPID": 418700,
+    "actualExit": 0,
+    "manifestSHA256": "80c10f65a4d336a9e59a9ef8713d41c56e4e3317b3efd2497ab3c129f81b1191",
+    "scientificFullFiles": 334,
+    "compressedRecords": 316,
+    "encodedBytes": 4137744,
+    "decodedBytes": 140248406,
+    "fullFixtureDecodedBytes": 69857305,
+    "fixtureSHA256": "ee72f3f1913c138ff0841a94d75c20f308d5cdddece45205465983262881935e",
+    "cases": [
+      {
+        "id": "shipping-classic-full",
+        "inputSHA256": "0b86b1a73b72819b174fb75f2b161bdef45bdc64d402685d8c524a64bd9d13e8",
+        "rulesSHA256": "b123fee6c14e7b2df2b32b694639258a721f43a9552046d636f651c0af2d3fcb",
+        "inputPaidOwners": 15,
+        "checkpointOffsets": [
+          0,
+          1,
+          17,
+          400,
+          1200
+        ]
+      },
+      {
+        "id": "shipping-full-paid-mixed",
+        "inputSHA256": "9a1ff2707d450f561f0cd67db1ba6a5f4e20bb6bc81c6f393d289da9d22e0645",
+        "rulesSHA256": "b123fee6c14e7b2df2b32b694639258a721f43a9552046d636f651c0af2d3fcb",
+        "inputPaidOwners": 45,
+        "checkpointOffsets": [
+          0,
+          1,
+          17,
+          400,
+          1200
+        ]
+      },
+      {
+        "id": "shipping-boat-lifecycle-partial",
+        "inputSHA256": "b166d38bc8be0ea1e34f9c1cc2a6e804b16ee94ecf30dfa66102fca301efd3fc",
+        "rulesSHA256": "b123fee6c14e7b2df2b32b694639258a721f43a9552046d636f651c0af2d3fcb",
+        "inputPaidOwners": 1,
+        "checkpointOffsets": [
+          0,
+          1,
+          17,
+          400,
+          1200
+        ]
+      },
+      {
+        "id": "current-detailed-mid-buy",
+        "inputSHA256": "8c5a83a5b308e6f1a390289013c14d8b2ff8064aa5a434e3847bd7cec78bd5e6",
+        "rulesSHA256": "15c2c62170e90a02e46a5dfa323ea6988e87067f0acdd306a1fbdc2217723af0",
+        "inputPaidOwners": 0,
+        "checkpointOffsets": [
+          0,
+          1,
+          17,
+          400,
+          1200
+        ]
+      },
+      {
+        "id": "current-detailed-both-mid-use",
+        "inputSHA256": "91003bfe64538dd3c30d0b9f25cb81fce2decac14026198eee9c17e21441f44e",
+        "rulesSHA256": "15c2c62170e90a02e46a5dfa323ea6988e87067f0acdd306a1fbdc2217723af0",
+        "inputPaidOwners": 0,
+        "checkpointOffsets": [
+          0,
+          1,
+          17,
+          400,
+          1200
+        ]
+      },
+      {
+        "id": "current-detailed-held-retirement-reuse",
+        "inputSHA256": "cd9dd0b8746c96e0e09cb123835af5cf3369398322d1e5686ec36597ebcd807e",
+        "rulesSHA256": "15c2c62170e90a02e46a5dfa323ea6988e87067f0acdd306a1fbdc2217723af0",
+        "inputPaidOwners": 0,
+        "checkpointOffsets": [
+          0,
+          1,
+          17,
+          400,
+          1200
+        ]
+      },
+      {
+        "id": "current-detailed-container-partial",
+        "inputSHA256": "c69014cc268c0bcc3b8d208c25abec0d8a05589b176a08df20944e2baab7a2bb",
+        "rulesSHA256": "15c2c62170e90a02e46a5dfa323ea6988e87067f0acdd306a1fbdc2217723af0",
+        "inputPaidOwners": 0,
+        "checkpointOffsets": [
+          0,
+          1,
+          17,
+          400,
+          1200
+        ]
+      },
+      {
+        "id": "current-detailed-typed-disposed",
+        "inputSHA256": "11bbf83de7a6645461bc46a7d2ec0ad33c7470368ab69070516ecf1d5244aa08",
+        "rulesSHA256": "15c2c62170e90a02e46a5dfa323ea6988e87067f0acdd306a1fbdc2217723af0",
+        "inputPaidOwners": 0,
+        "checkpointOffsets": [
+          0,
+          1,
+          17,
+          400,
+          1200
+        ]
+      },
+      {
+        "id": "nondefault-consumable-both-mid-use",
+        "inputSHA256": "e656ce1a58df7ad789dea959f40407fc9720d058765dc505c5528c4eeedd92b9",
+        "rulesSHA256": "e39094211599cd7418c03a1a5d1bc1d20e5ec4a39c65e74705d3ef387047e579",
+        "inputPaidOwners": 0,
+        "checkpointOffsets": [
+          0,
+          1,
+          17,
+          400,
+          1200
+        ]
+      },
+      {
+        "id": "nondefault-consumable-held-retirement-reuse",
+        "inputSHA256": "10deb073ca6f5b6953574ce700095a5532bbf35a364e62dc6e9ddcfaccb18cab",
+        "rulesSHA256": "e39094211599cd7418c03a1a5d1bc1d20e5ec4a39c65e74705d3ef387047e579",
+        "inputPaidOwners": 0,
+        "checkpointOffsets": [
+          0,
+          1,
+          17,
+          400,
+          1200
+        ]
+      },
+      {
+        "id": "generic-wrapper-retirement-reuse",
+        "inputSHA256": "f3e7c906381ec2d9365fd863f556460748ab28920db8bc7b16afa9bf7babb293",
+        "rulesSHA256": "4f9aa07ee197a67dedca81d940f7d7f21afccb1183f94987dbcc1ce5b261bcd2",
+        "inputPaidOwners": 0,
+        "checkpointOffsets": [
+          0,
+          1,
+          17,
+          400,
+          1200
+        ]
+      }
+    ],
+    "checkpointsFullyConsumed": 55,
+    "fullAuthorityViewAuditInspectionMembersConsumed": 275,
+    "independentBatchComparisons": 110,
+    "pauseComparisons": 22,
+    "genuineTraceCaptures": 11,
+    "sourceCommit": "1bdec0dd377f922c9168f454c4b2eaba92a1bbc4",
+    "originalFailures": "Bootstrap guessed Node path/missing wait and inventory-r1 unavailable lsof retained; no empty-FD claim.",
+    "scope": "Root read-only full decode/hash and independent semantic conservation/identity/trace/fixture consumption. No compile, simulation, browser or scientific replay; no production acceptance beyond old13 baseline."
+  },
+  "rootDisposition": "Accept immutable genuine old13 baseline for production14 implementation; no candidate14, game or whole Goal acceptance.",
+  "originalFailuresRetained": [
+    "guessed /usr/local/bin/node absent and bootstrap wait unavailable",
+    "inventory-r1 failed because lsof unavailable",
+    "Root Mac metadata sourceGroups shape read066a4c failed before mutation; observed list correction526ead succeeds"
+  ],
+  "remaining": [
+    "candidate14 continuation/smuggling/rollback/worker/game qualification",
+    "AGY renderer and full game integration",
+    "all cumulative delivery reviews",
+    "original/human/GPU/full catalogue programme"
+  ],
+  "scope": "No scientific replay; no file deletion. Known producer actual waits/proc absence only; lsof remains unavailable."
+}

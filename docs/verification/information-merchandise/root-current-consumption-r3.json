@@ -1,0 +1,236 @@
+{
+  "utc": "2026-10-12T07:36:08.077276+00:00",
+  "status": "PASS",
+  "readerPID": 609958,
+  "sourcePins": 194,
+  "compiledFilesByteIdentical": 80,
+  "engineSHA256": "7f7928fa1d0e4bf06a48164600d0beb8f1083e16247bbea8290a314369d63495",
+  "wholeSavedAuthoritiesConsumed": 6,
+  "nativeCompletedObservations": 11,
+  "canonicalBrowserChecks": 27,
+  "allNativeRequestsCorrelated": 40,
+  "nativeCommands": [
+    {
+      "type": "set-facility-open",
+      "facility": 7,
+      "open": false
+    },
+    {
+      "type": "set-facility-open",
+      "facility": 7,
+      "open": true
+    },
+    {
+      "type": "set-merchandise-price",
+      "facility": 7,
+      "productId": "independent.map",
+      "price": 1000
+    },
+    {
+      "type": "set-merchandise-price",
+      "facility": 7,
+      "productId": "independent.map",
+      "price": 6
+    },
+    {
+      "type": "remove-facility",
+      "facility": 7
+    }
+  ],
+  "genuineRulesByteEqual": true,
+  "pausedGuestOwnershipHeldAndLedgerPreserved": true,
+  "lawfulClosureRecoveredGuestIds": [
+    10,
+    11,
+    14,
+    15
+  ],
+  "originalNativeExportActualEqualityCheck": true,
+  "originalExportEquivalentBytesSHA256": "a68343ece7cfcb3d9c18d45a2d0f3726a617b2249b9fe297b93cddc9951732de",
+  "originalDownloadPathOverwritten": true,
+  "retainedLaterCanonicalDownloadSHA256": "7163dc8d6e339dadebb615bdf1fe34c521a1bb7a50ffa0995fb58791e655be30",
+  "exactRetirementAndRefund": 100,
+  "canonicalErrors": [],
+  "nativeOriginalDriverExit": 1,
+  "broaderDriverExit": 0,
+  "bothProfileRestorations": "PASS",
+  "knownOwnersClosed": true,
+  "files": [
+    {
+      "path": "browser-current-ui-r3/evidence/after-native-demolition.save.json",
+      "bytes": 815524,
+      "sha256": "63f76ca89ab6ef9a27fa2228826bb5572e55a0d91c1065a1ec23e85e42193906"
+    },
+    {
+      "path": "browser-current-ui-r3/evidence/before-native-demolition.save.json",
+      "bytes": 815994,
+      "sha256": "a68343ece7cfcb3d9c18d45a2d0f3726a617b2249b9fe297b93cddc9951732de"
+    },
+    {
+      "path": "browser-current-ui-r3/evidence/before-native-export.save.json",
+      "bytes": 815994,
+      "sha256": "a68343ece7cfcb3d9c18d45a2d0f3726a617b2249b9fe297b93cddc9951732de"
+    },
+    {
+      "path": "browser-current-ui-r3/evidence/cdp.ndjson",
+      "bytes": 27125447,
+      "sha256": "4dace4612e3046a9892db7503ce4cd3183bce2d26354d96beba26b55e4c287c2"
+    },
+    {
+      "path": "browser-current-ui-r3/evidence/chrome.stderr",
+      "bytes": 6557,
+      "sha256": "8a969822378fb5442c4b144c317b1f2407281ebc0b196367a050023a8bf81fb4"
+    },
+    {
+      "path": "browser-current-ui-r3/evidence/chrome.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "browser-current-ui-r3/evidence/downloads/coaster-park.json",
+      "bytes": 799893,
+      "sha256": "7163dc8d6e339dadebb615bdf1fe34c521a1bb7a50ffa0995fb58791e655be30"
+    },
+    {
+      "path": "browser-current-ui-r3/evidence/failure.json",
+      "bytes": 2755,
+      "sha256": "0e143b6d10e2a46655fcf734200ee6a88817a785e3a8b312cfa702851aa297b8"
+    },
+    {
+      "path": "browser-current-ui-r3/evidence/genuine-three-items.save.json",
+      "bytes": 815992,
+      "sha256": "3c0bf47f8654671512dc993fccc5957ffa4c93d68e39b4e01a4d4f1253ffeebf"
+    },
+    {
+      "path": "browser-current-ui-r3/evidence/guest-three-items.png",
+      "bytes": 118551,
+      "sha256": "4caddadf6964ee565d06e5007bd99019e93fbc1a29c41ce32994c24b72c7b26f"
+    },
+    {
+      "path": "browser-current-ui-r3/evidence/http.log",
+      "bytes": 21607,
+      "sha256": "58394ce97c71161eaea2dfc775ab7d70b4bcdec21ced8c673ebc462189ae7884"
+    },
+    {
+      "path": "browser-current-ui-r3/evidence/information-accounts.png",
+      "bytes": 46560,
+      "sha256": "9880b15184b9e539f6f00398bb0897961bc8cdfce6c3e3814ad80ff967627fdf"
+    },
+    {
+      "path": "browser-current-ui-r3/evidence/information-front-detail.png",
+      "bytes": 202084,
+      "sha256": "84b52a91fd3c34bc2698f105d436426c4111513965f8e4706909188b9d210062"
+    },
+    {
+      "path": "browser-current-ui-r3/evidence/information-front-game.png",
+      "bytes": 2515076,
+      "sha256": "22b8fa7e0c89f8a8723b8c8f4843bdb74130d4a1d0f1be516dfdb156dcd66aa8"
+    },
+    {
+      "path": "browser-current-ui-r3/evidence/information-rear-detail.png",
+      "bytes": 216210,
+      "sha256": "19c57b3e978475855debf75b90784e27d301c2a9626cbe7d71f2cabc06ce63ee"
+    },
+    {
+      "path": "browser-current-ui-r3/evidence/launch.json",
+      "bytes": 716,
+      "sha256": "339446636546b30d36556f8bf2e0dc13864d1dcf5fb8db63e62945c02416d551"
+    },
+    {
+      "path": "browser-current-ui-r3/evidence/native-loaded.save.json",
+      "bytes": 815992,
+      "sha256": "3c0bf47f8654671512dc993fccc5957ffa4c93d68e39b4e01a4d4f1253ffeebf"
+    },
+    {
+      "path": "browser-current-ui-r3/evidence/native-max-price.save.json",
+      "bytes": 815997,
+      "sha256": "51318c873e6942fecc8db1755e330aa69eb6a973bd5cf3ef1dd3b96143f93df8"
+    },
+    {
+      "path": "browser-current-ui-r3/evidence/native-observations.json",
+      "bytes": 16000942,
+      "sha256": "d479c44176990206d325433e5ef46ae2db50ae6627f5c5203632b96b27e79c97"
+    },
+    {
+      "path": "browser-current-ui-r3/evidence/original-classic-slot.json",
+      "bytes": 5,
+      "sha256": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed"
+    },
+    {
+      "path": "browser-current-ui-r3/evidence/original-slot.json",
+      "bytes": 5,
+      "sha256": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed"
+    },
+    {
+      "path": "browser-current-ui-r3/evidence/profile-restoration.json",
+      "bytes": 132,
+      "sha256": "35cfe45e1966000218c99d7c472fc027ca40f91b444ad878c277e2ed4cb68b79"
+    },
+    {
+      "path": "browser-current-ui-r3/evidence/terminal.json",
+      "bytes": 202,
+      "sha256": "83ee7f94ce2ad969ab11e6d2ce7b0b02412f695f5eb29b69ef4efb8955cb6858"
+    },
+    {
+      "path": "browser-broader-r2/evidence/broader-browser-check.json",
+      "bytes": 2067,
+      "sha256": "21f9cc4556469d933cfb48c13f228293c71deb2c6a46ae920528112dcc42b06d"
+    },
+    {
+      "path": "browser-broader-r2/evidence/cdp.ndjson",
+      "bytes": 1871557,
+      "sha256": "da5fb7d7fe87abe221f3c38c7fd57da489a601583f665e0064852b595c1684dd"
+    },
+    {
+      "path": "browser-broader-r2/evidence/chrome.stderr",
+      "bytes": 5949,
+      "sha256": "849ee0a5c63667e2066ad8de0591b7ca263e915462f1ee099cc8b591bccb95e5"
+    },
+    {
+      "path": "browser-broader-r2/evidence/chrome.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "browser-broader-r2/evidence/downloads/coaster-park.json",
+      "bytes": 799893,
+      "sha256": "7163dc8d6e339dadebb615bdf1fe34c521a1bb7a50ffa0995fb58791e655be30"
+    },
+    {
+      "path": "browser-broader-r2/evidence/http.log",
+      "bytes": 21511,
+      "sha256": "0b213cca8832a6d86551755a9cf158f6cbbb53a188f1c04a6604eeec67c023e0"
+    },
+    {
+      "path": "browser-broader-r2/evidence/launch.json",
+      "bytes": 716,
+      "sha256": "72f33bf2c5f13fb3777e93cb0047d3fa5caaae73099d9b6e7fc7415f737051b3"
+    },
+    {
+      "path": "browser-broader-r2/evidence/original-classic-slot.json",
+      "bytes": 5,
+      "sha256": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed"
+    },
+    {
+      "path": "browser-broader-r2/evidence/original-slot.json",
+      "bytes": 5,
+      "sha256": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed"
+    },
+    {
+      "path": "browser-broader-r2/evidence/profile-restoration.json",
+      "bytes": 132,
+      "sha256": "e2ac7d0f5a38b5861bb2c5f244cc06d857466853878b7d97c778f938519c9ae0"
+    },
+    {
+      "path": "browser-broader-r2/evidence/result.json",
+      "bytes": 2781,
+      "sha256": "a631dc2142277368d836dd24bb7cc4786d76f257977fbe39c852519de68d2b25"
+    },
+    {
+      "path": "browser-broader-r2/evidence/terminal.json",
+      "bytes": 202,
+      "sha256": "9690958c41301808abfa407cc78a86e55d3d5229f550b91c56b97197d7a00551"
+    }
+  ],
+  "scope": "Full current source/dist/save/observation semantic consumption on Grok; preserves original native failure and limits to11 native positives plus27 complete canonical checks; public/original/human/GPU remain separate."
+}

@@ -1,0 +1,42 @@
+{
+  "nativeChangeToSuccessMs": 6567.89999999851,
+  "markerToSuccessMs": 6578.5,
+  "mainParsesMs": [
+    36.100000001490116
+  ],
+  "workerParsesMs": [
+    45.80000000447035
+  ],
+  "mainPostMessageCallMs": 125.39999999850988,
+  "loadSendToMainReplyMs": 2953.0999999940395,
+  "workerReceiveToReplyMs": 2561.6999999955297,
+  "baselinePulse": {
+    "count": 71,
+    "maximumMs": 291.09999999403954,
+    "medianMs": 10,
+    "over50Ms": 1,
+    "over100Ms": 1
+  },
+  "baselineFrames": {
+    "count": 1,
+    "maximumMs": 2444.1999999955297,
+    "medianMs": 2444.1999999955297,
+    "over50Ms": 1,
+    "over100Ms": 1
+  },
+  "importPulse": {
+    "count": 98,
+    "maximumMs": 2859.60000000149,
+    "medianMs": 10,
+    "over50Ms": 5,
+    "over100Ms": 5
+  },
+  "importFrames": {
+    "count": 5,
+    "maximumMs": 2746.2000000029802,
+    "medianMs": 2193.7000000029802,
+    "over50Ms": 4,
+    "over100Ms": 4
+  },
+  "scope": "One observed run on the recorded Grok VM and SwiftShader. Gaps include the actual main-thread UI work and VM scheduling. No universal hardware or performance threshold is asserted."
+}
