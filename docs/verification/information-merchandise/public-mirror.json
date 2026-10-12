@@ -1,0 +1,34 @@
+{
+  "utc": "2026-10-12T09:30:49.044906+00:00",
+  "status": "PASS",
+  "wrapperPID": 16087,
+  "fileCount": 1562,
+  "totalBytes": 1755382737,
+  "allFullPathsBytesAndHashesEqual": true,
+  "inventorySHA256": "28a10be2a527a2343f8c92e5cc6876e96eb0155f24e398a7863ef68c2c30562c",
+  "archiveSHA256": "d424df7e1c7ff4875d10e5af05dfaee0e8a1a1ca4a4b841e3ad537a45bdc1809",
+  "wdRowsSHA256": "6a7abd68254a1397e35e419932af5a562a0e573cdd574efdc2f17075571ff48d",
+  "comparisonPID": 678956,
+  "actualCommandExits": [
+    {
+      "PID": 16094,
+      "actualWaitExit": 0
+    },
+    {
+      "PID": 16146,
+      "actualWaitExit": 0
+    },
+    {
+      "PID": 16289,
+      "actualWaitExit": 0
+    },
+    {
+      "PID": 16332,
+      "actualWaitExit": 0
+    }
+  ],
+  "originalWrapperFailedClosedBeforeLargeParse": true,
+  "largeInventoryParsedOnMac": false,
+  "archiveReusedWithoutRetransfer": true,
+  "retainedPath": "/Volumes/WD/code/workspaces/coaster-information-merchandise/runtime/information-public-r1/retained"
+}

@@ -1,0 +1,194 @@
+{
+  "utc": "2026-10-12T09:00:21.102045+00:00",
+  "status": "PASS",
+  "hostingCommit": "a2c4710c7140b511199bff7dbe594dbda888ac18",
+  "pagesBuild": 1278317619,
+  "sourceCommit": "47af1efb1539de5865f60441fd83f25615178fbe",
+  "sourcePinsSHA256": "f181481555e32d8a2a744694b39f30f59d4a7738a1b21f83d29551c7a00446e3",
+  "sourceCount": 194,
+  "coreFiles": 80,
+  "releaseReadySHA256": "c7b3aa4196adf835b742cc9912194032e2e5e50197a2c941a8ab1156a657a217",
+  "allSourceAndCoreStillUnchanged": true,
+  "httpRequests": 354,
+  "httpBodyBytes": 176737276,
+  "routes": {
+    "root": {
+      "fullExactFiles": [
+        "after-native-import.save.json",
+        "after-import-idb.save.json",
+        "native-export/coaster-park.json",
+        "immediate-reload.save.json"
+      ],
+      "witnessSHA256": "3c0bf47f8654671512dc993fccc5957ffa4c93d68e39b4e01a4d4f1253ffeebf",
+      "actualNativeLoadID": 156,
+      "workerNativeLoadReplyOK": true,
+      "nativeChange": {
+        "at": 15085.70000000298,
+        "trusted": true,
+        "files": [
+          {
+            "name": "witness.save.json",
+            "size": 815992
+          }
+        ]
+      },
+      "actualPostImportIDBPuts": 2,
+      "allPostImportWritesExact": true,
+      "allTransactionsComplete": true,
+      "loadedBodyRecords": 161,
+      "loadedUniquePaths": 118,
+      "uncaughtErrors": 0
+    },
+    "frozen": {
+      "fullExactFiles": [
+        "after-native-import.save.json",
+        "after-import-idb.save.json",
+        "native-export/coaster-park.json",
+        "immediate-reload.save.json"
+      ],
+      "witnessSHA256": "3c0bf47f8654671512dc993fccc5957ffa4c93d68e39b4e01a4d4f1253ffeebf",
+      "actualNativeLoadID": 116,
+      "workerNativeLoadReplyOK": true,
+      "nativeChange": {
+        "at": 21126.90000000596,
+        "trusted": true,
+        "files": [
+          {
+            "name": "witness.save.json",
+            "size": 815992
+          }
+        ]
+      },
+      "actualPostImportIDBPuts": 2,
+      "allPostImportWritesExact": true,
+      "allTransactionsComplete": true,
+      "loadedBodyRecords": 161,
+      "loadedUniquePaths": 119,
+      "uncaughtErrors": 0
+    }
+  },
+  "nativeFreshConstruction": {
+    "evidenceRoot": "/workspace/coaster-information-merchandise/information-public-r1/attempts/browser-r4/evidence/root",
+    "tile": {
+      "x": 22,
+      "y": 12
+    },
+    "height": 32,
+    "elementID": 156,
+    "facilityID": 7,
+    "opened": true,
+    "mapPrice": 17,
+    "umbrellaPrice": 47,
+    "workerExecuteCommands": [
+      {
+        "type": "set-paused",
+        "paused": true
+      },
+      {
+        "type": "place-facility",
+        "name": "Four-counter timber Information kiosk",
+        "kind": "information",
+        "tile": {
+          "x": 22,
+          "y": 12
+        },
+        "height": 32,
+        "direction": 0,
+        "content": {
+          "familyId": "independent.information-facility",
+          "variantId": "independent.timber-information-kiosk",
+          "modeId": "independent.retail"
+        }
+      },
+      {
+        "type": "set-facility-open",
+        "facility": 7,
+        "open": true
+      },
+      {
+        "type": "set-merchandise-price",
+        "facility": 7,
+        "productId": "independent.map",
+        "price": 17
+      },
+      {
+        "type": "set-merchandise-price",
+        "facility": 7,
+        "productId": "independent.umbrella",
+        "price": 47
+      }
+    ]
+  },
+  "originalResponseCapture": {
+    "records": 640,
+    "unmodifiedContinueRequestCalls": 641,
+    "bytesAllExact": true,
+    "diagnosticStatus": "PASS",
+    "blankNetworkBlobBodiesRemainSeparatelyUnverified": true
+  },
+  "profileSHA256": "34d343dc83e422e4d8f862e6daa173f6dc040087e71a6cac2225f2355c0315b5",
+  "profileAllBeforeAfterBytesEqual": true,
+  "profileDatabases": [
+    {
+      "name": "coaster-tycoon-3d",
+      "version": 1,
+      "stores": [
+        {
+          "name": "parks",
+          "keyPath": null,
+          "autoIncrement": false,
+          "indices": [],
+          "keys": [
+            {
+              "type": "scalar",
+              "value": "current"
+            },
+            {
+              "type": "scalar",
+              "value": "showcase-classic"
+            }
+          ],
+          "valueCount": 2
+        }
+      ]
+    }
+  ],
+  "localStorageKeys": [],
+  "sessionStorageKeys": [],
+  "allKnownProducerOwnersAbsent": [
+    635702,
+    635815,
+    635829,
+    635830,
+    638269,
+    638284,
+    638285,
+    640436,
+    640444,
+    640445,
+    643145,
+    643153,
+    643154,
+    652762,
+    652772,
+    658666,
+    658669,
+    658670
+  ],
+  "ports": {
+    "9227": {
+      "connectExit": 111
+    },
+    "4181": {
+      "connectExit": 111
+    }
+  },
+  "failedAttemptsRetained": [
+    "browser-r1: observer accessed tile on track union member",
+    "wrapper-r2: reused source directory mkdir",
+    "browser-r2: observer used side instead of fixed 256 surface stride",
+    "browser-r3: observer expected facility selection before native UI element-to-facility mapping",
+    "browser-r4: completed native positives; later Network body of Blob-consumed PNG was empty"
+  ],
+  "scope": "Final clean missing-path supplement, composed with separately retained same-source/hosting public fresh native positives. Complete source/body/native/state/profile evidence. Previous core/27 canonical composition reused unchanged; no original fidelity, human style or representative integrated GPU claim."
+}

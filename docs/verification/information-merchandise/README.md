@@ -1,7 +1,11 @@
 # Information kiosk and permanent merchandise
 
 Implemented finite candidate: save14/content7/protocol7, independent MIT code and
-R7 authored model. Public delivery is pending. The full first-playable Goal,
+R7 authored model. [Public functionality and source qualification](public-publication.md)
+pass at both the current and immutable information routes; full WD retention
+is verified. Both cumulative Design/Drift rounds and final material supplements
+are complete and scoped PASS.
+The full first-playable Goal,
 original numerical/art fidelity, complete catalogue, human style and representative
 integrated GPU/scale remain open.
 
@@ -34,8 +38,8 @@ unchanged Worker input, exact state and a retained native Export. Its measured
 responsiveness and representative hardware remain unqualified.
 
 [Cumulative reviews](cumulative-review-disposition.md) separates whole Design/Drift
-rounds from earlier phase reviews. Final supplements and public qualification
-remain pending. All builds, tests, simulation, Chrome and large scientific
+rounds from earlier phase reviews. Second-round final public/retention supplements are complete and scoped PASS;
+first-round final material supplements are also complete and scoped PASS. All builds, tests, simulation, Chrome and large scientific
 reading run on Grok Bot. Full raw evidence and editable masters remain on WD;
 the images below are copies of actual retained game captures.
 

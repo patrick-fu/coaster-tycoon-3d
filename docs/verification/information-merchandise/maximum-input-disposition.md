@@ -23,6 +23,9 @@ main-thread pulse gap is2859.6ms and completed RAF interval2746.2ms.
 These substantial temporary gaps do not qualify smooth responsiveness or
 representative hardware. The original baseline summary contains a frame crossing
 into import; its separate contained-baseline analysis preserves that limitation.
+The linked raw summary's baselineFrames field includes that crossing sample and
+must not be read as a pure pre-import baseline; no contained baseline RAF sample
+was observed. The original JSON is preserved byte-exactly.
 The final RAF interval is censored by observer stop. Minimal observers do not
 establish the cause of the gaps, so no causal production repair is inferred.
 
@@ -44,3 +47,11 @@ remain there. The linked small [retention verification](maximum-input-verificati
 [timing summary](maximum-input-timing.json) and [mirror receipt](maximum-input-mirror.json)
 are byte-exact copies of actual retained artifacts. Root accepts functional receiving
 and dedicated original-file retention with the measured performance limits explicit.
+
+The completed transport archive was removed on both hosts after full 484-file
+path/byte/hash equality, known producer closure and an empty local `lsof` result.
+Actual remote SSH0/local delete0 free 171,239,997 B each; the complete input,
+output, download, timing, failure and source evidence remains retained. The
+archive inventory, SHA and transfer receipts survive. See the task-owned
+`runtime/information-max-input-r1/cleanup-result.json`; this is duplicate cleanup,
+not deletion of scientific evidence or a remote full-FD assertion.

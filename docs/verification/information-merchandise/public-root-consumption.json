@@ -1,0 +1,142 @@
+{
+  "utc": "2026-10-12T09:24:40.709339+00:00",
+  "status": "PASS",
+  "readerPID": 675493,
+  "sourceCommit": "47af1efb1539de5865f60441fd83f25615178fbe",
+  "hostingCommit": "a2c4710c7140b511199bff7dbe594dbda888ac18",
+  "releaseReadySHA256": "c7b3aa4196adf835b742cc9912194032e2e5e50197a2c941a8ab1156a657a217",
+  "witnessSHA256": "3c0bf47f8654671512dc993fccc5957ffa4c93d68e39b4e01a4d4f1253ffeebf",
+  "ledger": {
+    "rideSales": 240,
+    "shopSales": 542,
+    "stock": 149,
+    "wages": 700,
+    "upkeep": 1050,
+    "interest": 0
+  },
+  "routes": {
+    "root": {
+      "fullAuthorityFiles": [
+        "after-native-import.save.json",
+        "after-import-idb.save.json",
+        "native-export/coaster-park.json",
+        "immediate-reload.save.json"
+      ],
+      "allBytesExact": true,
+      "nativeLoadID": 156,
+      "wholePostImportPuts": 2,
+      "actualGuestRows": {
+        "Cash": "$18.50",
+        "Spent": "$6.30",
+        "Completed rides": "3",
+        "Owned items": "Park map \u00b7 Umbrella",
+        "Carrying": "Soft drink",
+        "Status": "Drinking (70% left)"
+      },
+      "actualProductRows": [
+        {
+          "label": "Map",
+          "values": [
+            "28",
+            "$16.80",
+            "$2.80",
+            "$14.00"
+          ]
+        },
+        {
+          "label": "Umbrella",
+          "values": [
+            "2",
+            "$5.00",
+            "$4.00",
+            "$1.00"
+          ]
+        }
+      ],
+      "ownedModel": {
+        "ready": true,
+        "error": null,
+        "disposed": false,
+        "geometries": 39,
+        "materials": 30,
+        "textures": 15,
+        "bitmaps": 15
+      },
+      "criticalExecutedPaths": [
+        "index.html",
+        "game.js",
+        "information-controls.js",
+        "content/registry.js",
+        "simulation/browser-worker.js",
+        "simulation/protocol.js",
+        "simulation/engine.js",
+        "models/information/information-kiosk.glb"
+      ]
+    },
+    "frozen": {
+      "fullAuthorityFiles": [
+        "after-native-import.save.json",
+        "after-import-idb.save.json",
+        "native-export/coaster-park.json",
+        "immediate-reload.save.json"
+      ],
+      "allBytesExact": true,
+      "nativeLoadID": 116,
+      "wholePostImportPuts": 2,
+      "actualGuestRows": {
+        "Cash": "$18.50",
+        "Spent": "$6.30",
+        "Completed rides": "3",
+        "Owned items": "Park map \u00b7 Umbrella",
+        "Carrying": "Soft drink",
+        "Status": "Drinking (70% left)"
+      },
+      "actualProductRows": [
+        {
+          "label": "Map",
+          "values": [
+            "28",
+            "$16.80",
+            "$2.80",
+            "$14.00"
+          ]
+        },
+        {
+          "label": "Umbrella",
+          "values": [
+            "2",
+            "$5.00",
+            "$4.00",
+            "$1.00"
+          ]
+        }
+      ],
+      "ownedModel": {
+        "ready": true,
+        "error": null,
+        "disposed": false,
+        "geometries": 39,
+        "materials": 30,
+        "textures": 15,
+        "bitmaps": 15
+      },
+      "criticalExecutedPaths": [
+        "index.html",
+        "game.js",
+        "information-controls.js",
+        "content/registry.js",
+        "simulation/browser-worker.js",
+        "simulation/protocol.js",
+        "simulation/engine.js",
+        "models/information/information-kiosk.glb"
+      ]
+    }
+  },
+  "completeOriginRestoredSHA256": "34d343dc83e422e4d8f862e6daa173f6dc040087e71a6cac2225f2355c0315b5",
+  "knownOwnersClosed": 18,
+  "nativeSupplementObservations": 357,
+  "httpRequests": 354,
+  "httpBodyBytes": 176737276,
+  "actualCriticalLoadedBodies": "Independently reviewed from raw response/CDP by cumulative Sol and Luna; Root verifies all critical path membership and source-bound authority/actual UI/state correlation.",
+  "scope": "Root reads retained original public authority/UI/Worker/persistence/closure; no scientific replay, suite rerun or local runtime. Whole earlier browser-r4 stays failed; its fresh native groups accepted by independent full reviewers. Full WD mirror is a separate pending gate."
+}

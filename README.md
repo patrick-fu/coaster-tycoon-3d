@@ -9,7 +9,7 @@ game resources are independent; see the [source strategy decision](docs/adr/0001
 
 Try the [current Classic showcase](https://patrick-fu.github.io/coaster-tycoon-3d/?showcase=classic)
 in desktop Chrome or Edge, or use its
-[fixed preview](https://patrick-fu.github.io/coaster-tycoon-3d/previews/classic-1bdec0d/?showcase=classic).
+[fixed preview](https://patrick-fu.github.io/coaster-tycoon-3d/previews/information-47af1ef/?showcase=classic).
 Copper Meadows combines a ground-level wooden coaster, steel lift/drop circuit,
 a four-seat Log Flume and sixteen-seat Carousel with detailed Burger/Soft-drink
 stalls, restrooms, connected paths and gardens. A separate showcase save slot
@@ -108,8 +108,12 @@ unfinished food/drink item across saves, closure, demolition and vendor-slot
 reuse. Its save14/content7/protocol7 strictly validates historical saves before
 migration. [Actual checks and game views](docs/verification/information-merchandise/README.md)
 record402 canonical cases by composition, genuine autonomous purchases, current
-native actions,27 browser checks and scoped pixel review. Public delivery is
-pending; original numerical/art, human style and representative GPU remain open.
+native actions,27 browser checks and scoped pixel review. The current and
+fixed preview now publish this candidate: [actual public qualification](docs/verification/information-merchandise/public-publication.md)
+records354 exact HTTP requests, both native import/export/persistence/reload
+paths and complete protected-profile/evidence retention. Build it from the
+Classic Library and price both products independently. Original numerical/art,
+human style and representative GPU remain open.
 
 The [earlier art checkpoint](https://patrick-fu.github.io/coaster-tycoon-3d/previews/classic-a7d6451/?showcase=classic)
 has procedural materials and composed models, three steel-coaster
