@@ -1,209 +1,155 @@
 # Project progress and recovery
 
-Last updated: 2026-10-12 19:00:08 UTC. Root owns this record and the
-[UTC journal](docs/progress/2026-10-12.md). Prior process identities, failures,
-accepted checks and decisions remain in the
-[pre-need-growth checkpoint](docs/progress/2026-10-12-before-restroom-need-growth.md),
-[pre-native checkpoint](docs/progress/2026-10-12-before-native-restroom-ui.md) and
-[pre-runtime checkpoint](docs/progress/2026-10-12-before-restroom-runtime-integration.md).
-`CONTEXT.md` remains the domain glossary.
+Last updated: 2026-10-12 21:16:19 UTC. Root owns this record and the
+[UTC journal](docs/progress/2026-10-12.md). Detailed original attempts, ownership,
+failures and exact pins remain in the [pre-retention checkpoint](docs/progress/2026-10-12-before-public-retention-acceptance.md),
+[pre-public checkpoint](docs/progress/2026-10-12-before-public-native-acceptance.md),
+[pre-growth checkpoint](docs/progress/2026-10-12-before-restroom-need-growth.md),
+and earlier linked checkpoints. CONTEXT.md remains the domain glossary.
 
 ## Mandate and ownership
 
-Full first-playable Goal ACTIVE/unlimited. Independent MIT browser game, Classic
-presentation and RCT2 gameplay fidelity. Finite83 is uncommitted and unpublished;
-its completion will not complete the Goal. All catalogue families, management/
-admissions/scenarios, original numerical/art agreement, original scale,
-representative integrated GPU and human play/style acceptance remain OPEN.
-No human decision is currently needed. Controller title remains
-`🗂️ 3D 过山车大亨 · 主线与原作还原`.
+Full first-playable Goal ACTIVE/unlimited; finite83 acceptance does not complete it.
+Independent MIT browser game, Classic presentation, original2002 RCT2 gameplay
+reference. English artifacts; Chinese chat. Root owns production/docs/tests/GitHub
+and final acceptance. Logic GPT6.1SolMax; visual/frontend AGY Gemini3.8FlashHigh;
+adversarial LunaMax. All builds/tests/Engine/Blender/Chrome/scientific JSON/AST
+run ONLY on Grok. Mac editing/Git/plainIO/streamhash/bounded metadata<=262144B.
+WD holds checkouts, full raw evidence and editable masters. No human acceptance
+inferred. Controller title remains 🗂️ 3D 过山车大亨 · 主线与原作还原.
 
-English project artifacts; Chinese chat. Root owns production/docs/tests/GitHub/
-integration. Logic Sol6.1Max; visual/frontend AGY Gemini3.8FlashHigh; adversarial
-LunaMax. Builds/tests/simulation/Blender/Chrome/scientific JSON/AST execute ONLY
-on Grok. Mac edits/Git/plainIO/streamhash and metadata <=262144B only. WD holds
-checkouts, evidence and masters.
+## Current finite delivery and integration
 
-Worktree: /Volumes/WD/code/workspaces/coaster-gradual-restroom/coaster-tycoon-3d
-Branch: p/patrick/feature/gradual-restroom
-Base/main:754f90a29741ed3da0f63342fb1da2a5d05f5fe5; worktree0042360.
-[Finite83](https://github.com/patrick-fu/coaster-tycoon-3d/issues/83) delivers a
-detailed gradual restroom. Candidate fee0/relief4 are uncalibrated; no invented
-capacity/queue, dry32 placement, normalized authored asset and uniform tile scale.
+Active worktree /Volumes/WD/code/workspaces/coaster-gradual-restroom/coaster-tycoon-3d,
+branch p/patrick/feature/gradual-restroom. Main754f90a29741ed3da0f63342fb1da2a5d05f5fe5.
+Production source665ff288d0fe44e0613035edc03fe6d6c90d480c/tree832ac458bac0be95d0956dad72a0075f2c6f77a7;
+no production/resource/test/script/UI changes since665. Current dirty changes
+are progress/planning/validation docs only. [PR84](https://github.com/patrick-fu/coaster-tycoon-3d/pull/84)
+is still draft/open; [finite83](https://github.com/patrick-fu/coaster-tycoon-3d/issues/83)
+is OPEN until docs/integration resolve. Root finite scoped acceptance is complete:
+actual public qualification, complete retention and both independent cumulative
+rounds plus material/public supplements are consumed. No remaining finite material
+finding. Next commit/push docs, refresh PR, ready/merge, resolve finite/map context.
 
-## Current blocker: independently reproduced service nontermination
+Publication worktree /Volumes/WD/code/workspaces/coaster-content-library-publication/coaster-tycoon-3d
+is clean on p/patrick/publish/restroom-665ff28 at hostingf7c004aa329b7d9ad3d4833772093ce5f7ffb5da,
+treed1a8603bbad748ed407dd407ea165e1f8c5e5f23. Pages built exactf7 at19:05:12Z.
+[Classic public](https://patrick-fu.github.io/coaster-tycoon-3d/?showcase=classic)
+and [frozen665](https://patrick-fu.github.io/coaster-tycoon-3d/previews/restroom-665ff28/?showcase=classic)
+use exact182 runtime014a6ae23ba4cba50f56c637c8881a4cd64719cdd1f0e29a65f9a627478f7906,
+82 compiler4bbcf5f8003c448f7d7db7d5fb42072b1802a0f438e9df1a0261fe84c6b5cf21.
+Ready67211aa1da50c68800fd9825b69ac4397e5ab1542d510cbe31ee5196c8d9434b;
+build.json e81b0a4e/preview-manifest f5bfdf37. Earlier previews unchanged.
+Authored-excluding-vendor diffcheck0; full diffcheck2 for unchanged immutable
+three.core.js whitespace remains explicit, never a globalPASS claim.
 
-R2 Drift LunaMax TERMINAL with one P2: legal needTicks1/needGrowth4 or5 can
-outpace relief4, preventing an admitted guest from completing service.
-Root delegates isolated diagnosis to `restroom_need_growth_diagnosis_sol_max`,
-clean-context GPT6.1SolMax; writes ONLY
-/workspace/coaster-gradual-restroom/diagnostics/need-growth-r1 on Grok.
-The diagnosis is now TERMINAL actual0: wrapper192183/Node192184, SSH session79164.
-Autonomous guest1 admits and pays17 at tick2, then remains using-restroom through
-262146 with bladder48 (growth4) or996 (growth5). Growth0 and default cadence512
-controls complete/release at12/13. Waiting-exit growth1 control grows to20 while
-blocked and releases with21 after entry restoration.38 whole checkpoints restore
-unchanged; exact82-file compiler2b50856b and src/dist/test remain unchanged,
-known owners absent. Root raw report and actual terminal consumed over strict SSH
-93876/93880 actual0 at18:23:39Z; full scientific WD retention remains pending.
+## Actual public proof and original failures
 
-The reported recurrence is b'=max(0,min(1000,b+growth)-relief); admission is real,
-not injected history. Root accepts the independently reproduced P2 and its recurrence; a discriminating
-regression red precedes a minimal
-using-restroom-only bladder growth suppression. Hunger/thirst/energy and
-restroom-exit growth must retain their existing behavior. Root production repair is WRITTEN: only the active-use bladder-growth guard.
-Grok build actual0, followed by affected-green198172/198173 actual0 at
-18:30:17.481Z:45/45 room/people/recovery/services checks pass, including both
-rapid-growth rates, blocked-exit growth, whole restores and once-only accounts.
-Transport95366/95370 actual0. Exactly one compiled path simulation/people.js
-changes among82; original2b50856b core/stage retained. Repaired compiler82 SHA4bbcf5f8003c448f7d7db7d5fb42072b1802a0f438e9df1a0261fe84c6b5cf21
-consumed by Root95691/95693 actual0. Build198135/198136 actual0.
-Independent material Design supplement SolMax TERMINAL scopedPASS: only source
-people.ts/compilerpeople.js changed, actual red/45green and38 full diagnosis
-checkpoints independently consumed; original inspection-shape draft failure and
-two path lookup failures retained. Root consumes it. Drift supplement LunaMax
-TERMINAL scopedPASS: closes the reproduced P2 using actual red/green and legacy
-service checks, preserves browser/public/failure boundaries. Root consumes it;
-no cross-reviewer findings supplied before independent judgment.
-Actual repaired browser/public boundary remains pending. Regression red197074/197075 actual1 at
-18:27:17.836Z:0pass/1fail/9skip at expected completed phase (using vs exit),
-not setup/import. Isolated original compiler82 pins exactly2b50856b. Same fixed
-expectation is retained for the minimal repair/green; no need to replay diagnosis.
-New two-rate regression and isolated Grok red preparer are retained. It protects completion, other-needs growth,
-blocked-exit growth, strict restore/split continuation and single booked fee.
-The contract/glossary now distinguish completed relief from waiting for exit.
-Both independent material supplements close this P2 within tested kernel scope;
-actual repaired browser/public response binding remains required before closure.
+Remote /workspace/coaster-gradual-restroom/restroom-public-r1. Original private
+driver59cdf3f0/config5a7aba032c2ed3a264be044a36680b7c673b961e99be099c80366bfd2dc7a670,
+original14 fixture3c0bf47f, genuine pre-fix paid15 f9359a5d unchanged.
+Native recorder219824/driver219825 actual0 at19:32:32.004012Z; Chrome219884
+natural0/no force/absent/debugport9227closed. Result47PASS:23 per root/frozen
+plus public-origin storage restoration. Real Library/placement/pick/price,
+genuine14 Worker migration/protocol8, paid15 import/close/reprice/export/save/
+reload/account ownership and exact shipping source pass. Public Chrome Engine
+builds separate genuine growth4/5 histories:20 full states, completes12/13 use
+steps, blocked exit retains ownership, restored lawful exit releases once.
+Native shipping Worker receiving is separately bound, never a fabricated history.
 
-## Reviews and accepted evidence
+Raw CDP13017lines239751867B/SHA59df481ae97fe600b17d409b42289fd4a77a94bd660e13e52a815099a332f398:
+618 body replies (458Fetch/160Network),616 source rows(root309/frozen307) plus
+two exact root manifest duplicates;663 unmodified continuations. Four actual
+Worker sessions each40 bodies include protocol/engine/people; peopleSHAd4f26f11.
+No uncaught runtime exceptions. Public-origin IndexedDB schema/keys/values and
+local/session storage1857531B/SHA34d343dc exact before/after; wholeChrome profile,
+cookies/cache/permissions are not assessed. Root229325/Node229326 actual0 at
+19:55:01.833257Z consumes full authorities/bodies/strict growth/compiler/origin.
 
-Complete cumulative R1 Design SolMax + Drift LunaMax both terminal scoped PASS;
-no confirmed P0-P3. Root consumed both findings and full evidence boundaries.
-Complete R2 Design `restroom_cumulative_design_r2_sol_max` independently reports no
-confirmed P0-P3 on frozen input at18:23:06Z; final report TERMINAL scopedPASS; its raw readonly consumers have preserved tool-assumption failures
-and do not replay suites or change scientific receipts. Five failed read-only
-consumer drafts remain separate: sort1, shape2, wrong-code1 and old-reference1.
-Root consumes the terminal coverage and limits; subsequent repair is unreviewed. R2 Drift terminal P2
-above; Design has not received its finding before independent judgment.
-Material repair requires independent supplements. Public qualification and its
-cumulative supplements remain required. See
-[review record](docs/validation/gradual-restroom-cumulative-review.md).
+Original wholeHTTP211892/211893 actual1 (367/368 exact; frozenflume-portal TLS
+EOF before body). Single sequential6077/6079 actual0/HTTP200/9988B/9f716395;
+combined368 unique exact, originalFAILpreserved. Original native212899/212900
+actual1: list-index helper error preceded by actualWorkerFetch.enable-32601;
+Chrome212917 natural0/originrestored. Fixed private WorkerNetwork capture gives
+separate47PASS; original helper/inputs/raw/failure remain untouched. R6 neverran.
+Original canonical409pass/1old-v6 projectionfailure, Chromecollector1 and84empty
+nativePNG bodies remain failed/unqualified; scoped successful supplements stay
+separate. No original byte reconstruction, suite/browser/history replay.
 
-Kernel: content8/state15/Worker8; fee once before relief, using/exiting ownership,
-closed/reprice/save continuity, atomic safe demolition/reuse and derived occupancy.
-Legacy instant16 behavior remains. Canonical actual1 is410/409pass/1 old-v6
-projection failure, preserved. Corrected affected scenery/restroom supplement
-98753/98758 actual0 is15/15; distinct owned-food/map/umbrella regression
-157454/157455 actual0 is1pass/39skip. Loader14/14 and frontend build actual0.
-Genuine Node14 compatibility:30CP/3recipes/10partitions/6negatives; complete WD
-370-file mirror accepted. Chrome14 compatibility:36CP/36reimports/5recipes/
-36recipeCP/6partitions; original collector1 preserved, independent consumers
-actual0; complete352-file WD mirror accepted. No unchanged whole suite replay.
+## Cumulative reviews and source boundaries
 
-Art r4: real GLB8419960B/9b08addd,3826tri/8materials/15 embedded CC0 maps;
-editable masters/source retained on WD. Root+Luna eight actual Blender views and
-three actual native close views accepted within candidate scope. Original r1
-geometry/r2 denoiser/r3 occlusion failures retained. Human/original/GPU/scale and
-overview type wayfinding remain unqualified. Actual unchanged front PNG is linked
-in [validation](docs/validation/gradual-restroom.md).
+[Complete review](docs/validation/gradual-restroom-cumulative-review.md): two whole
+Design+Drift rounds, plus material active-use repair and all four public supplements
+are accepted. R1 Design252053/252054 actual2 firstfive raw sectionsPASS; unchanged
+receiving-only supplement255046 actual0/session99488 completes20strict growth and
+82compilerpins.12 extra native Node constructors remain failed:10left/right Flume
+floating samples max7.1e-15. Native Node strict count0; actual shipping Worker
+receiving qualified. Saved Rules/authority/validator unchanged; existing default
+cross-runtime Rules portability remains OPEN. Supplement4846B/79192d52 and
+verbatim9253B stdout533c84f9 retained in runtime/restroom-public-r1/review-inputs
+and review-receipts-r3. Final R1 Design scopedPASS/no P0-P3 consumed.
 
-Original native driver146045/146046 actual1 after33 completed passing checks,
-27 canonical. Chrome146050 natural0/profile restored/stage exact/ports closed.
-599 available response bodies/41 required responses exact;84 Fetch PNG bodies
-empty and unqualified. Original compound FAIL remains. Scoped Root consumer
-159765/159766 actual0 does not rewrite it. Whole241-file WD original mirror
-accepted. Close-only156884/156885/Chrome156893 actual0,3 real PNG and complete
-15-file mirror accepted. No Chrome/profile owner remains.
+R1Drift252091/252092 actual0 at20:56:53.924591Z full616body/source/618RPC/Workers,
+plus separate whole public authority read; finalscopedPASS. R2Design fullconsumer
+195e130b actual0 at20:41:40Z + unchanged remaining88aca390252079/252080 actual0
+at20:56:52.626353Z:997source/182runtime/archive/4postbuilddocs/oldrawfailures;
+205production files exact; finalscopedPASS. Original exposedR2Drift public report
+is excluded from independent acceptance. Fresh restroom_final_drift_r2_luna_max
+existing strictSSH/node actual0 at20:35:51.686Z yields fullscopedPASS; portable
+5559B1a0193cb receipt and separate1285B3a0e2ceb configtranscriptionerratum remain
+under ../reviewer-receipts. Root independently pins unchanged10630B consumer
+6e3adbd0 through sealed inventory; reviewer consumer-ownhash gap remains explicit.
+No new reviewer uses sibling verdicts as judgment. All owners finished readonly.
 
-Complete current core/Root evidence96files924860B on WD
-../runtime/current-evidence-retention-r1/retained; normalized full path/byte/hash
-comparison actual0. Initial order-sensitive mirror reader1 preserved separately.
-No byte reconstruction or scientific replay.
+## Retention, cleanup and Grok recovery
 
-## Pre-fix release preparation and failed public assembly
+Complete public mirror ../runtime/public-evidence-retention-r2/retained accepted
+actual0 at21:08:24.510842Z:1228files673715305B exact pathset/size/SHA, each copied
+file freshly rehashed. Grok seal238789/238790/tar238801 actual0 at20:22:46.618105Z,
+archive300808825B/befdcf3cad9ea08b0100fbe502917b9e6e1e7b2fbece73f623a8daa20a6dd91f,
+inventory247224B/3afa547b+3bounded chunks exact. SFTP36096/36098 actual0 at
+21:05:35.720129Z after preserved failed/partial r3-r5 transports. Original sealer
+and3newreaders'16launch/terminal/stdout/stderr files38178/38181 actual0 at
+21:11:47.205879Z retained ../runtime/restroom-public-r1/original-review-receipts-r4;
+original R1Design2 retained. Root/independent earlier complete diagnostic,
+Node/Chrome/native/pixel/release/art mirrors and editable masters remain on WD.
+No complete-original, human/GPU/scale claim follows from byte retention.
 
-Frozen source995files188420766B/d7a9c156/c61ddb9e prepared175150/175151 actual0.
-Grok fresh build177172/177173 actual0. First freezer179664/179665 actual1 due
-required documentation additions; original retained. Distinct freeze-r2
-182683/182684/tar182695 actual0:82 compiled2b50856b,182runtime files96805733B/
-9b403f49; exactly3 metadata additions and notices update,178 common bytes exact.
-Archive90356060B/a5b03f59. This is the PRE-FIX candidate, not final repaired source.
-Full SCP86743/86745 actual0 at17:57:21.114Z. Root full opaque archive/tree
-comparison actual0 at18:24:00Z: all182 paths/96805733B exact, metadata31266B/
-a1e4e7bb and archive90356060B/a5b03f59. WD ../release-inputs-r1/retained-runtime-r2
-is accepted as a pre-fix mirror only; original freezer failures remain retained.
+Original r1 seal233583/233584 launch/SSH255 and later absentreceipt remain an
+unknown remote outcome, never reconstructed. InputSCP32789/327940 reported0
+but paths absent; causeunknown. Qualified directSSH34126/341280 confirms same
+boot/mountnamespace as console; divergentnamespace hypothesis refuted. Direct
+pinned SSH receiving252052 establishes unchanged input before actual3reader
+runs. These environment/private-reader failures do not rewrite product evidence.
 
-Root wrote private ../runtime/restroom-public-r1/main-body.py; no runtime launch.
-Assembly tool2b2dd8 actual1 at literal prefix spacing assertion, before driver/
-config/fixture writes; failed empty directory/receipt retained in attempts/assembly-r1.
-Distinct r2 assembly5a514b writes complete falseGO helpers/opaque original14 and
-pre-fix genuine paid15 fixture pins. GO/source/boot/defaultprofile guard now precedes
-proof creation. Worker Response-stage capture enabled, source body scope excludes
-textures (separate full HTTP qualification), open/reload asset waits added. Prior
-body retained unchanged. Grok syntax/full input pins/falseGO preflight97592/97596 actual0 at18:37:57Z;
-preceding helper revision syntax-qualified. Distinct private actual public Chrome
-Engine growth4/5 command recipe is WRITTEN/unexecuted, explicit real constructor
-Rules/cash100; no injected saved history, separate from native shipping Worker.
-Original falseGO inputs retained. Public preparation reviewer
-`restroom_public_prep_sol_max` GPT6.1SolMax clean-context/read-only is RUNNING:
-actual DOM/Worker APIs, real Chrome growth command history, default-profile/source
-provenance and closure counterexamples; not a cumulative round or runtime verdict.
-Preparer confirms nonexistent private stats selector; Root verifies actual
-stat() DOM and repairs only helper to .restroom-inspector .restroom-stats .stat
-strong, preserving preceding helper in attempts/before-stats-selector-r3. No
-production change. Prep reviewer TERMINAL: stats fixed, three confirmed qualification gaps remain:
-PASS before natural Chrome close, old14 receiving not observed for each route,
-and page/Worker merged source evidence omits repaired people.js. Root accepts
-all three after actual code review; only private helper repair, no production
-change or runtime yet. Independent helper supplement on2b2a3131 confirms all three proof fixes, but
-finds transient restore-feedback wait cannot coincide with ready. Root reads
-full restoreLocal flow and changes only wait to actual final ready text;
-pre-r5 helper preserved. Canonical helper0b2e260f is written, last-predicate independent Sol supplement
-TERMINAL scoped prepPASS on exact0b2e260f, all confirmed prep counterexamples
-statically closed. Root consumes scope; runtime/profile/source responses still
-unqualified. Input SCP3367/3369 actual0 at18:58:23Z; final Grok syntax/fullpins
-preflight3575/3577 actual0 at18:59:06Z: Python AST and Node check0, all input
-pins exact; prior remote inputs retained. Still falseGO, actual public runtime
-unexecuted. All prep counterexamples now statically resolved.
-No public/runtime launch;
-publication unexecuted. Fresh repaired input snapshot00d262 at18:35:14Z:997files188453135B,48overlay,
-archive10932498B/18692b4b, metadata188277B/e9eddef3. Later progress text is separate.
-Input SCP97587/97589 actual0 at18:38:09Z. Distinct repaired source/build/freeze
-helper c7b6c3 transported98013/98015 actual0. Root SSH98399/98401 actual0; prep202582/2025830, build202593/2025940,
-freeze202662/202663/tar2026700 at18:41:41Z. All997 source pins e9eddef3 exact,
-compiler82 exact4bbcf5f8, frozen182files96805787B/014a6ae2, archive90355652B/
-56459050. Only people.js changes from pre-fix182;181 unchanged and old179 stage
-untouched. Final source commit/public/browser/mirror acceptance still pending. No local runtime.
+Strict grok-build ->100.106.65.13/box, host405605737,
+boot a1784a89-8189-48f9-8ba6-faeada799c4e. Originalsshd43664/Tailscale87203/87206
+preserved. If unreachable use local Grok Bot com.anysphere.sand details ->Computer
+->Opencomputer, acquire control/resume visible pause, confirm actual terminaldate,
+then strictSSH/boot/known-owner checks. AXfocus or unchanged screenshot alone
+is not wake proof. Current cloud/SSH mnt:[4026532308] exact. Originalsshd config
+path absent but daemon running; no credential/enrollment/reboot/security change.
+No active task SSHmaster, oldclosedemptycontrol directory removed. Original
+Tailscale sleep/timejump logs and failed transports retained. Chrome155/default
+/home/box/.config/google-chrome only; core-r1/source/node_modules stillneeded.
+No broad FDabsence claim; remote lsof unavailable. No Macfallback.
 
-## Grok recovery and cleanup
+Earlier exactclosed archive duplicates180711712B removed19:10:24Z, allmirrors/
+receipts+remote archives retained. Exact closed public archive duplicates609452665B removed21:16:19.756301Z
+after original prefix hashes/knownowner absence/full1228mirror verification;
+cleanupmetadata ../runtime/public-evidence-retention-r2/cleanup-public-archives-r1.json.
+All failed transports/metadata/fullrawmirror/remoteimmutablearchive remain. No raw
+science/failures/master/profile/source/dependency/oldpreview removal.
 
-Strict SSH alias grok-build ->100.106.65.13/box; host405605737, boot
- a1784a89-8189-48f9-8ba6-faeada799c4e. Original restrictedsshd43664 and original
-host key/state/config preserved; tailscale wrapper87203/daemon87206. Intermittent
-SSH/DERP/controlmap failures remain. Latest diagnosis/transport are reachable.
-Patrick reiterates: if unreachable, open local Grok Bot com.anysphere.sand and
-its existing cloud computer control page to recover. Fresh UI then actual strict
-SSH/boot/known-owner verification required; keyboard submission is not execution.
-No new credentials/keys/enrollment, reboot or Mac build fallback.
+## Next action and full programme
 
-Node20.19.2/Python3.13.5/Blender4.3.2; system Pillow, separate browser venv
-websockets. Chrome155/defaultprofile /home/box/.config/google-chrome only.
-core-r1/source/node_modules is still needed; no deletion. No new cleanup this
-checkpoint. Prior exact closed duplicates removed; all failures/masters/default
-profile/old previews retained. No broad FD-absence claim; lsof unavailable.
-
-## Public version and next action
-
-Accepted public source47af1efb1539de5865f60441fd83f25615178fbe/state14/content7/
-Worker7 remains [Classic](https://patrick-fu.github.io/coaster-tycoon-3d/?showcase=classic)
-and [immutable47](https://patrick-fu.github.io/coaster-tycoon-3d/previews/information-47af1ef/?showcase=classic).
-PR82 merged754f90a, finite81 CLOSED. gh-pages last verifieda2c4710c.
-Finite83, broad42/native40/41/map27 and full first-playable Goal remain OPEN.
-
-1. Root consume and retain real need-growth diagnosis, write/run meaningful red
-   on Grok, minimally repair and run affected checks/native boundaries.
-2. Consume independent R2 Design and re-review material repair across both lenses.
-3. Qualify a fresh repaired release source/runtime, actual public root and frozen
-   route, full retention, public cumulative supplements; then close finite83.
-4. Continue the agreed catalogue/management/scenario/fidelity roadmap. Keep human
-   style and representative hardware gates explicit; do not infer acceptance.
+1. Commit/push accepted docs, ready/merge PR84, resolve finite83 and mapcontext.
+2. Remove only exact closed partial/archive duplicates after fullretention.
+3. Pick the next finite independent logic outcome under broad commerce/staff42;
+   read actual programme/catalogue/guest contracts before design or delegation.
+4. Continue41building/35product/4staff, admissions/calendar14categoryledger,
+   research/scenarios and individual ride/scenery coverage. Broad42/40/41/27/full
+   Goal stayOPEN. Patrick style/play, exact original access/numeric/physics/art,
+   default cross-runtime Rules portability, representativeGPU and scale remain
+   explicit gates. Issue39 still requires actual sample-style feedback before
+   bulk visual production; independent logic can continue.

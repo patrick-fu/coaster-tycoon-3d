@@ -1,9 +1,12 @@
 # Detailed gradual restroom candidate
 
-Implemented candidate awaiting cumulative review and publication; original
-fidelity remains unqualified. Base is merged
-754f90a29741ed3da0f63342fb1da2a5d05f5fe5, with qualified information47 production
-unchanged. Finite81 is CLOSED; genuine old14 baseline is frozen and Root-qualified. Root is sole production/docs/Git owner.
+Implemented candidate source665ff288 is published by hostingf7c004a on the public
+root and frozen restroom-665ff28 route. Actual repaired public execution and Root
+scientific consumption pass; complete evidence retention and final independent
+cumulative supplements now pass scoped Root acceptance; mainline/tracker
+integration follows. Original fidelity remains unqualified.
+Base is merged754f90a29741ed3da0f63342fb1da2a5d05f5fe5. Finite81 is CLOSED;
+genuine old14 baseline is frozen and Root-qualified. Root is sole production/docs/Git owner.
 
 ## Behavior and authority
 
@@ -69,8 +72,10 @@ The current scoped execution and preserved failures are recorded in
 [PROGRESS.md](../../PROGRESS.md). Kernel, genuine old14 migration, real loader
 boundaries and native operations have actual passing evidence. Original native
 and Chrome compound report failures remain preserved separately from their
-read-only reconciliation. Final cumulative reviews and public qualification
-remain required; the following list is the behavioral acceptance contract.
+read-only reconciliation. Both actual public routes and their47 native checkpoints
+pass, with Root full authority/source consumption0. Final cumulative supplements
+and complete WD retention remain required; the following list is the behavioral
+acceptance contract.
 
 Autonomous paid/free admission before relief; failed cash/closure/height/queue
 frontage; progressive pressure checkpoints then exit; >=5concurrent admitted
