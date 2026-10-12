@@ -1,6 +1,6 @@
 import {LIMITS,type Element,type Path,type Portal,type Ride,type Rules,type Tile,type State} from './types.js';
 import {amenityAvailable,chooseAmenity,dropLitter,releaseAmenity,rest,useAmenity} from './housekeeping.js';
-import {buy,chooseFacility,consume,recoverFacility,sharedCount,type ServiceIndex} from './services.js';
+import {buy,chooseFacility,consume,recoverFacility,sharedCount,insideRestroom,admitRestroom,stepRestroom,type ServiceIndex} from './services.js';
 import type {Train} from './motion.js';
 import {carouselEditable,type CarouselSession} from './carousel.js';
 import type {Boat} from './boat.js';
@@ -11,13 +11,14 @@ import type {ContainerId,ProductId} from '../content/consumables.js';
 import type {GuestMerchandise} from '../content/merchandise.js';
 import {buyInformation,chooseInformation} from './merchandise.js';
 import {random} from './random.js';
+import {gradualRestroomProfile} from '../content/gradual-restroom.js';
 
 export type HeldItem=null|{readonly kind:'consumable',readonly productId:ProductId,readonly remaining:number}|{readonly kind:'container',readonly containerId:ContainerId,readonly sinceTick:number};
 
 export type PathPoint={readonly x:number,readonly y:number,readonly z:number};
 export type GuestRules={spawnTicks:number,walkTicks:number,decisionTicks:number,needTicks:number,queueSlotsPerTile:number,patienceTicks:number,rideCooldownTicks:number,defaultRidePrice:number,maxRidePrice:number,cashMin:number,cashMax:number,fareMin:number,fareMax:number,forceMin:number,forceMax:number,initialHunger:number,initialThirst:number,initialHappiness:number,initialEnergy:number,needGrowth:number,rideHappiness:number,rideNausea:number};
 export type Ledger={rideSales:number,shopSales:number,stock:number,wages:number,upkeep:number,interest:number};
-export type Guest={id:number,held:HeldItem,merchandise:GuestMerchandise,informationCounter:number|null,navigationRide:number|null,amenity:number|null,restProgress:number,wrapper:boolean,wrapperTick:number,facility:number|null,serviceProgress:number,bladder:number,point:PathPoint,phase:'walking'|'queued'|'riding'|'stranded'|'leaving'|'buying'|'resting',goal:PathPoint|null,next:PathPoint|null,walkProgress:number,destination:number|null,entrance:number|null,exit:number|null,queueRide:number|null,seat:{ride:number,slot:number}|null,initialCash:number,cash:number,spent:number,fareLimit:number,forceTolerance:number,hunger:number,thirst:number,nausea:number,happiness:number,energy:number,queuedAt:number,lastRide:number|null,lastRideTick:number,ridesTaken:number,thought:'none'|'not-enough-cash'|'too-intense'|'path-lost'|'ride-closed'|'queue-too-long'|'price-changed'|'payment-blocked'|'leaving'};
+export type Guest={id:number,held:HeldItem,merchandise:GuestMerchandise,informationCounter:number|null,navigationRide:number|null,amenity:number|null,restProgress:number,wrapper:boolean,wrapperTick:number,facility:number|null,serviceProgress:number,bladder:number,point:PathPoint,phase:'walking'|'queued'|'riding'|'stranded'|'leaving'|'buying'|'resting'|'using-restroom'|'restroom-exit',goal:PathPoint|null,next:PathPoint|null,walkProgress:number,destination:number|null,entrance:number|null,exit:number|null,queueRide:number|null,seat:{ride:number,slot:number}|null,initialCash:number,cash:number,spent:number,fareLimit:number,forceTolerance:number,hunger:number,thirst:number,nausea:number,happiness:number,energy:number,queuedAt:number,lastRide:number|null,lastRideTick:number,ridesTaken:number,thought:'none'|'not-enough-cash'|'too-intense'|'path-lost'|'ride-closed'|'queue-too-long'|'price-changed'|'payment-blocked'|'leaving'};
 export type PeopleState={entry:PathPoint|null,open:boolean,guests:Guest[],departedSpent:number};
 type Access={entrance:Portal,exit:Portal,front:PathPoint,out:PathPoint,body:PathPoint[]};
 export type PeopleIndex={elements:Map<number,Element>,paths:Map<string,Path>,rides:Map<number,Ride>,trains:Map<number,Train>,carouselSessions:Map<number,CarouselSession>,boats:Map<number,Boat>,guests:Map<number,Guest>,accessCache:Map<number,{stamp:string,value:Access|null}>};
@@ -97,6 +98,7 @@ export function recoverPeople(state:State,rules:Rules,index:ServiceIndex,route:R
   if(state.people.open&&(!state.people.entry||index.paths.get(key(state.people.entry))?.queueFor!==null))state.people.open=false;
   for(const guest of state.people.guests){
     if(guest.phase==='riding')continue;
+    if(insideRestroom(guest))continue;
     if(guest.navigationRide!==null&&(!state.people.entry||guest.goal===null||!equal(guest.goal,state.people.entry))){recover(guest,state,index,route,guest.thought);continue;}
     if(!amenityAvailable(guest,rules,index)){recover(guest,state,index,route,'path-lost');continue;}
     if(!recoverFacility(guest,index,rules)){recover(guest,state,index,route,'price-changed');continue;}
@@ -144,9 +146,10 @@ export function stepPeople(state:State,rules:Rules,index:ServiceIndex,route:Rout
   }
   const departing:number[]=[];
   for(const guest of state.people.guests){
-    if(due(state.tick,guest.id,rules.guests.needTicks)){guest.hunger=clamp(guest.hunger+rules.guests.needGrowth);guest.thirst=clamp(guest.thirst+rules.guests.needGrowth);guest.bladder=clamp(guest.bladder+rules.guests.needGrowth);guest.energy=clamp(guest.energy-rules.guests.needGrowth);guest.nausea=clamp(guest.nausea-1);if(guest.hunger===1000||guest.thirst===1000||guest.bladder===1000)guest.happiness=clamp(guest.happiness-rules.guests.needGrowth);}
+    if(due(state.tick,guest.id,rules.guests.needTicks)){guest.hunger=clamp(guest.hunger+rules.guests.needGrowth);guest.thirst=clamp(guest.thirst+rules.guests.needGrowth);if(guest.phase!=='using-restroom')guest.bladder=clamp(guest.bladder+rules.guests.needGrowth);guest.energy=clamp(guest.energy-rules.guests.needGrowth);guest.nausea=clamp(guest.nausea-1);if(guest.hunger===1000||guest.thirst===1000||guest.bladder===1000)guest.happiness=clamp(guest.happiness-rules.guests.needGrowth);}
     consume(guest,state,rules);
     if(guest.phase==='riding')continue;
+    if(insideRestroom(guest)){stepRestroom(guest,state,rules,index,route);continue;}
     if(!amenityAvailable(guest,rules,index)){recover(guest,state,index,route,'path-lost');continue;}
     dropLitter(guest,state,rules,index);
     if(guest.phase==='resting'){rest(guest,rules,index);continue;}
@@ -178,7 +181,13 @@ export function stepPeople(state:State,rules:Rules,index:ServiceIndex,route:Rout
     }
     if(!move(guest,rules.guests,index,route)){recover(guest,state,index,route,'path-lost');continue;}
     if(guest.amenity!==null&&guest.goal===null&&guest.next===null){useAmenity(guest,rules,index);continue;}
-    if(guest.facility!==null&&guest.goal===null&&guest.next===null){guest.phase='buying';guest.serviceProgress=0;continue;}
+    if(guest.facility!==null&&guest.goal===null&&guest.next===null){
+      const facility=index.facilities.get(guest.facility)!;
+      if(facility.kind==='restroom'&&gradualRestroomProfile(facility.content,rules)){
+        if(!admitRestroom(guest,state,rules,index))recover(guest,state,index,route,'path-lost');
+      }else{guest.phase='buying';guest.serviceProgress=0;}
+      continue;
+    }
     if(entry&&equal(guest.point,entry)&&guest.walkProgress===0)guest.navigationRide=null;
     if(guest.phase==='leaving'&&entry&&equal(guest.point,entry)&&guest.walkProgress===0&&integer(state.people.departedSpent+guest.spent)){departing.push(guest.id);state.people.departedSpent+=guest.spent;continue;}
     if(guest.destination===null&&guest.goal===null&&guest.next===null&&due(state.tick,guest.id,rules.guests.decisionTicks))choose(guest,state,rules,index,route);

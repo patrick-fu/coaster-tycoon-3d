@@ -11,6 +11,7 @@ import {boatEditable} from './boat.js';
 import {compileFlumeCourse} from './flume-native.js';
 import {commerceProfileId,facilityProduct,facilityStockCost,productRule} from '../content/consumables.js';
 import {merchandiseProfileId,type InformationProducts} from '../content/merchandise.js';
+import {gradualRestroomProfile} from '../content/gradual-restroom.js';
 
 export type FacilityKind='food'|'drink'|'restroom'|'information';
 type FacilityBase={id:number,instanceId:number,content:ContentIdentity,name:string,element:number,open:boolean};
@@ -49,8 +50,43 @@ export function chooseFacility(g:Guest,s:State,rules:Rules,index:ServiceIndex,ro
 export function recoverFacility(g:Guest,index:ServiceIndex,rules:Rules):boolean{
   if(g.facility===null)return true;
   const f=index.facilities.get(g.facility),e=f?index.elements.get(f.element):undefined;
+  if(insideRestroom(g))return f?.kind==='restroom'&&!!gradualRestroomProfile(f.content,rules)&&e?.kind==='facility';
   if(f?.kind==='information')return !!rules.merchandiseProfiles?.[merchandiseProfileId]&&f.open&&g.informationCounter!==null&&e?.kind==='facility'&&publicPath(facilityApproach(e,g.informationCounter),index);
   return !!f&&f.open&&g.cash>=f.price&&(f.kind==='restroom'||!g.held)&&e?.kind==='facility'&&publicPath(facilityApproach(e),index);
+}
+export function insideRestroom(g:Guest):boolean{return g.phase==='using-restroom'||g.phase==='restroom-exit';}
+
+export function restroomExit(f:Facility,s:State,index:ServiceIndex,route:Routing):PathPoint|null{
+ const e=index.elements.get(f.element),entry=s.people.entry;
+ if(e?.kind!=='facility'||entry===null||!publicPath(entry,index))return null;
+ const out=facilityApproach(e);
+ return publicPath(out,index)&&route.distance(out,entry,null)!==null?out:null;
+}
+
+export function admitRestroom(g:Guest,s:State,rules:Rules,index:ServiceIndex):boolean{
+ const f=g.facility===null?undefined:index.facilities.get(g.facility);
+ if(f?.kind!=='restroom'||!gradualRestroomProfile(f.content,rules)||!recoverFacility(g,index,rules))return false;
+ const e=index.elements.get(f.element);if(e?.kind!=='facility'||!same(g.point,facilityApproach(e)))return false;
+ const price=f.price,cash=BigInt(s.cash)+BigInt(price);
+ ensure(cash<=BigInt(Number.MAX_SAFE_INTEGER)&&integer(s.ledger.shopSales+price)&&integer(f.income+price)&&integer(f.sales+1)&&integer(g.spent+price),'CAPACITY','Restroom admission accounting capacity exhausted.');
+ g.cash-=price;g.spent+=price;s.cash=Number(cash);s.ledger.shopSales+=price;f.income+=price;f.sales++;
+ g.phase='using-restroom';g.point={x:e.tile.x,y:e.tile.y,z:e.height};g.goal=null;g.next=null;g.walkProgress=0;g.navigationRide=null;g.serviceProgress=0;g.thought='none';
+ return true;
+}
+
+export function releaseRestroom(g:Guest,point:PathPoint){
+ g.point={...point};g.phase='walking';g.facility=null;g.informationCounter=null;g.serviceProgress=0;g.goal=null;g.next=null;g.walkProgress=0;g.navigationRide=null;g.thought='none';
+}
+
+export function stepRestroom(g:Guest,s:State,rules:Rules,index:ServiceIndex,route:Routing){
+ const f=index.facilities.get(g.facility!)!;
+ if(g.phase==='using-restroom'){
+  const profile=gradualRestroomProfile(f.content,rules)!;
+  g.bladder=Math.max(0,g.bladder-profile.reliefPerTick);
+  if(g.bladder===0)g.phase='restroom-exit';
+  return;
+ }
+ const out=restroomExit(f,s,index,route);if(out)releaseRestroom(g,out);
 }
 export function buy(g:Guest,s:State,rules:Rules,index:ServiceIndex){
   const f=index.facilities.get(g.facility!)!;ensure(f.kind!=='information','INVALID_CONTENT','Ordinary service cannot sell information merchandise.');const r=rules.services,product=facilityProduct(f.content,rules),stock=facilityStockCost(f,rules),price=f.price;

@@ -109,3 +109,9 @@ The saved numerical construction envelope for a selected facility capability.
 It determines occupied space and receiving availability, while product operation
 and the authored visual bound remain separate.
 _Avoid_: Building appearance, product rule, visual bound
+
+**Service visit**:
+A guest's admitted use of a park facility, from entry through completing the
+service and leaving. A temporarily unusable doorway does not end the visit.
+Completion ends active relief; needs may rise again while the guest waits to leave.
+_Avoid_: Counter approach, ride session, instantaneous purchase

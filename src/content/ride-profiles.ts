@@ -27,27 +27,32 @@ export function rideFootprint(origin:Connector,piece:PieceRule,profile:RideProfi
 }
 
 export function legacyRuleJSON(rules:Rules):string{
- const {rideProfiles,fixedProfiles,channelProfiles,commerceProfiles,facilityProfiles,merchandiseProfiles,...common}=rules;return JSON.stringify(common);
+ const {rideProfiles,fixedProfiles,channelProfiles,commerceProfiles,facilityProfiles,merchandiseProfiles,restroomProfiles,...common}=rules;return JSON.stringify(common);
 }
 
 export function v9RuleJSON(rules:Rules):string{
- const {fixedProfiles,channelProfiles,commerceProfiles,facilityProfiles,merchandiseProfiles,...previous}=rules;return JSON.stringify(previous);
+ const {fixedProfiles,channelProfiles,commerceProfiles,facilityProfiles,merchandiseProfiles,restroomProfiles,...previous}=rules;return JSON.stringify(previous);
 }
 
 export function v10RuleJSON(rules:Rules):string{
- const {channelProfiles,commerceProfiles,facilityProfiles,merchandiseProfiles,...previous}=rules;return JSON.stringify(previous);
+ const {channelProfiles,commerceProfiles,facilityProfiles,merchandiseProfiles,restroomProfiles,...previous}=rules;return JSON.stringify(previous);
 }
 
 export function v11RuleJSON(rules:Rules):string{
- const {commerceProfiles,facilityProfiles,merchandiseProfiles,...previous}=rules;return JSON.stringify(previous);
+ const {commerceProfiles,facilityProfiles,merchandiseProfiles,restroomProfiles,...previous}=rules;return JSON.stringify(previous);
 }
 
 export function v12RuleJSON(rules:Rules):string{
- const {facilityProfiles,merchandiseProfiles,...previous}=rules;return JSON.stringify(previous);
+ const {facilityProfiles,merchandiseProfiles,restroomProfiles,...previous}=rules;return JSON.stringify(previous);
 }
 
 export function v13RuleJSON(rules:Rules):string{
- const {merchandiseProfiles,...previous}=rules;
+ const {merchandiseProfiles,restroomProfiles,...previous}=rules;
  // Historical13 has only the delivered stall placement profile.
  return JSON.stringify({...previous,facilityProfiles:Object.fromEntries(Object.entries(rules.facilityProfiles??{}).filter(([id])=>id==='independent.detailed-stalls-v1'))});
+}
+
+export function v14RuleJSON(rules:Rules):string{
+ const {restroomProfiles,...previous}=rules;
+ return JSON.stringify({...previous,facilityProfiles:Object.fromEntries(Object.entries(rules.facilityProfiles??{}).filter(([id])=>id==='independent.detailed-stalls-v1'||id==='independent.information-kiosk-v1'))});
 }

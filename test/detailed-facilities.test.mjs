@@ -7,6 +7,7 @@ import {withDetailedStallsProfile,detailedStallsProfileId} from '../dist/content
 import {detailedFacilityContent,consumableFacilityContent,legacyFacilityContent,resolveContent} from '../dist/content/registry.js';
 import {legacyRuleJSON,v9RuleJSON,v10RuleJSON,v11RuleJSON,v12RuleJSON} from '../dist/content/ride-profiles.js';
 import {createHost} from '../dist/simulation/host.js';
+import {WORKER_PROTOCOL_VERSION} from '../dist/simulation/protocol.js';
 import {rules,options,apply} from './fixtures.mjs';
 
 const burger='independent.burger',drink='independent.soft-drink',tile={x:10,y:9};
@@ -103,8 +104,8 @@ for(const [product,price,stock,container] of [[burger,15,5,'emptyBurgerBox'],[dr
  apply(e,{type:'set-paused',paused:true});const paused=e.exportSave();assert.deepEqual(e.advance(1200),{ok:true,value:0});assert.equal(e.exportSave(),paused);const copy=make(p);assert(copy.restoreSave(paused).ok);apply(e,{type:'set-paused',paused:false});apply(copy,{type:'set-paused',paused:false});step(e,1200);step(copy,17);step(copy,1183);assert.equal(copy.exportSave(),e.exportSave());assert.equal(guest(e).held.productId,product);until(e,()=>guest(e).held?.kind==='container');assert.equal(guest(e).held.containerId,container);assert(e.restoreSave(e.exportSave()).ok);until(e,()=>guest(e).held===null,512);assert.equal(e.snapshot().litter[0].containerId,container);assert.equal(e.snapshot().ledger.stock,stock);assert.equal(e.snapshot().ledger.shopSales,price);assert(e.restoreSave(e.exportSave()).ok);
 });
 
-test('protocol6 catalogue quote execute and load preserve detailed capability and reject protocol5 before mutation',()=>{
- const e=make(),host=createHost(e),command=counter(),send=(id,type,payload,protocolVersion=7)=>host({id,protocolVersion,request:{type,payload}}).value.result;
+test('current Worker catalogue quote execute and load preserve detailed capability and reject protocol5 before mutation',()=>{
+ const e=make(),host=createHost(e),command=counter(),send=(id,type,payload,protocolVersion=WORKER_PROTOCOL_VERSION)=>host({id,protocolVersion,request:{type,payload}}).value.result;
  assert.equal(send(0,'catalogue',null).value.variants.find(v=>v.id===command.content.variantId).choices[0].runtimeAvailable,true);const q=send(1,'quote',command);assert(q.ok);assert(send(2,'execute',{command,revision:q.value.revision}).ok);const before=e.exportSave();assert.equal(send(3,'execute',{command:{type:'set-loan',amount:100},revision:e.revision},5).error.code,'INVALID_COMMAND');assert.equal(e.exportSave(),before);assert(send(4,'load',before).ok);assert.equal(e.exportSave(),before);
 });
 
