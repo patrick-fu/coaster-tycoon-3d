@@ -4,7 +4,8 @@ import {Engine} from '../dist/simulation/index.js';
 import {withInformationProfile} from '../dist/content/facility-profiles.js';
 import {withMerchandiseProfile,merchandiseProfileId} from '../dist/content/merchandise.js';
 import {withConsumablesProfile,commerceProfileId} from '../dist/content/consumables.js';
-import {consumableFacilityContent,informationFacilityContent} from '../dist/content/registry.js';
+import {withGradualRestroomProfile} from '../dist/content/gradual-restroom.js';
+import {consumableFacilityContent,informationFacilityContent,gradualRestroomContent} from '../dist/content/registry.js';
 import {rules,options,apply,operatingPark} from './fixtures.mjs';
 
 const map='independent.map',umbrella='independent.umbrella',dirs=[[1,0],[0,1],[-1,0],[0,-1]];
@@ -66,6 +67,38 @@ test('one autonomous guest buys both products after three actual rides and retai
  assert(copy.restoreSave(e.exportSave()).ok);apply(e,{type:'set-paused',paused:false});apply(copy,{type:'set-paused',paused:false});tick(e,1200);for(const n of [1,17,400,782])tick(copy,n);
  assert.equal(copy.exportSave(),e.exportSave());assert.deepEqual({held:guest(c).held,merchandise:guest(c).merchandise},items);
  assert.equal(product(c,map).sales,0);assert.equal(product(c,umbrella).sales,0);assert(e.restoreSave(e.exportSave()).ok);
+});
+
+test('an autonomous owner retains bought food map and umbrella through a paid partial restroom visit and safe demolition',()=>{
+ const p=withGradualRestroomProfile(withConsumablesProfile(profile(p=>{
+  Object.assign(p.guests,{initialHunger:900,initialHappiness:1000,rideCooldownTicks:1,rideNausea:0});
+  p.services.initialBladder=600;
+ })));
+ p.commerceProfiles[commerceProfileId].consumeTicks=512;
+ const c=rideCounter({p,food:true}),{e}=c;
+ until(c,g=>g.held?.kind==='consumable');until(c,g=>g.merchandise.map);
+ for(let count=1;count<=3;count++)until(c,g=>g.ridesTaken>=count,2048);
+ until(c,g=>g.merchandise.umbrellaColour!==null);
+ const owned=guest(c);assert.equal(owned.merchandise.map,true);assert.equal(owned.merchandise.umbrellaColour,11);
+ assert.equal(owned.held.productId,'independent.burger');assert(owned.held.remaining>0);
+ for(const facility of e.snapshot().facilities)apply(e,{type:'set-facility-open',facility:facility.id,open:false});
+ apply(e,{type:'set-terrain',tile:{x:11,y:6},height:32,water:0});
+ const facility=apply(e,{type:'place-facility',name:'Owned-item restroom',kind:'restroom',tile:{x:11,y:6},height:32,direction:1,content:gradualRestroomContent()}).id;
+ apply(e,{type:'set-facility-price',facility,price:17});apply(e,{type:'set-facility-open',facility,open:true});
+ until(c,g=>g.phase==='using-restroom',256);const admitted=guest(c);
+ assert.equal(admitted.cash,owned.cash-17);assert.equal(admitted.spent,owned.spent+17);
+ assert.deepEqual(admitted.merchandise,owned.merchandise);assert.equal(admitted.held.productId,'independent.burger');assert(admitted.held.remaining>0);
+ assert.equal(e.snapshot().facilities.find(f=>f.id===facility).income,17);assert.equal(e.snapshot().facilities.find(f=>f.id===facility).sales,1);
+ apply(e,{type:'set-facility-open',facility,open:false});apply(e,{type:'set-facility-price',facility,price:1000});
+ apply(e,{type:'set-paused',paused:true});const saved=e.exportSave(),copy=new Engine(options,p);
+ assert(copy.restoreSave(saved).ok);assert.equal(copy.exportSave(),saved);assert.deepEqual(copy.advance(100),{ok:true,value:0});assert.equal(copy.exportSave(),saved);
+ const before=copy.snapshot(),items={held:admitted.held,merchandise:admitted.merchandise};
+ apply(copy,{type:'remove-facility',facility});const released=copy.inspect('guest',c.gid).value,after=copy.snapshot();
+ assert.equal(released.phase,'walking');assert.equal(released.facility,null);assert.deepEqual(released.point,{x:11,y:7,z:32});
+ assert.equal(released.bladder,admitted.bladder);assert.equal(released.cash,admitted.cash);assert.equal(released.spent,admitted.spent);
+ assert.deepEqual({held:released.held,merchandise:released.merchandise},items);
+ assert.equal(after.cash,before.cash+100);assert.deepEqual(after.ledger,before.ledger);assert.equal(after.retiredShopIncome,before.retiredShopIncome+17);
+ assert(copy.restoreSave(copy.exportSave()).ok);
 });
 
 for(let direction=0;direction<4;direction++)for(let side=0;side<4;side++)test('rotated kiosk '+direction+' serves public side '+side+' using its saved local counter',()=>{

@@ -57,6 +57,14 @@ under MIT. Exact source, export and editable-master hashes are recorded in
 `ui/models/information/source-manifest.json`; reproducible authoring lives in
 `scripts/art/information-kiosk.py` and `export-information-kiosk.py`.
 
+The independent timber restroom is MIT project geometry, with the recorded CC0
+Wood096, WoodFloor043, RoofingTiles013A, Concrete034 and Metal049A surface maps.
+Its material permissions and original source hashes are recorded in
+`ui/models/flume/material-provenance.json`; exact exported/model/master hashes
+are in `ui/models/restroom/source-manifest.json`. Authoring and export recipes
+live in `scripts/art/restroom.py` and `export-restroom.py`. Delivery textures
+are resized to 512 pixels; original provider maps remain unchanged.
+
 ## Reference catalogue metadata
 
 `src/content/rct2-reference.ts` contains reference identifiers, English object

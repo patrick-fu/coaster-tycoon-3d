@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import {beforeRestroomState,beforeRestroomView} from './restroom-fixtures.mjs';
 
 export function beforeMerchandiseGuest(guest) {
  const old=structuredClone(guest);
@@ -8,7 +9,7 @@ export function beforeMerchandiseGuest(guest) {
 }
 
 export function beforeMerchandiseState(state) {
- const old=structuredClone(state);
+ const old=beforeRestroomState(state);
  assert.equal(old.version,14);assert.equal(old.contentVersion,7);
  assert.deepEqual(old.retiredMerchandise,{'independent.map':{sales:0,income:0},'independent.umbrella':{sales:0,income:0}});
  delete old.retiredMerchandise;
@@ -23,7 +24,7 @@ export function beforeMerchandiseState(state) {
 }
 
 export function beforeMerchandiseView(view) {
- const old=structuredClone(view);assert.equal(old.protocolVersion,7);assert.equal(old.contentVersion,7);
+ const old=beforeRestroomView(view);assert.equal(old.protocolVersion,7);assert.equal(old.contentVersion,7);
  for(const f of old.facilities)assert.notEqual(f.kind,'information');
  old.protocolVersion=6;old.contentVersion=6;return old;
 }
