@@ -1,0 +1,32 @@
+{
+  "utc": "2026-10-11T21:20:51.129667+00:00",
+  "owner": "Root",
+  "status": "SCOPED_CONTRACT_ACCEPTED_FOR_ISOLATED_AUTHORING",
+  "proposalSHA256": "df21ae4e4416b587216fe3a518b2b12fd8003a7e3ee5bed76250e7bc85be7bd8",
+  "previousProposalSHA256": "589a640aa7f46d29da6edfc28a4eb8f1688a84e61a8342d7cea4ca7b3723712f",
+  "materialDispositionSHA256": "167385713aa5713250cf51e815376853f78c74aad698e36a3cf850d0fd7df8bb",
+  "reviews": {
+    "DesignSolMax": {
+      "agent": "/root/public_contract_design_sol_max",
+      "status": "COMPLETE_PASS_CONTRACT_ONLY",
+      "finding": "The isolated fail-closed typed envelope, exact first shared-origin baseline, non-holding trusted Save feedback/cursor and exact Blob/GUID attribution close the material HOLDs. Correct R5 recipe/R2 actual Track/c13b lineage and source1b Oversize reuse remain bounded. PROGRESS must remove its stale public Oversize."
+    },
+    "DriftLunaMax": {
+      "agent": "/root/public_contract_drift_luna_max",
+      "status": "COMPLETE_PASS_CONTRACT_ONLY",
+      "finding": "Verified exact R5 driver/source1b launch lineage to R2 Track and its scoped c13b acceptance. Same first-origin baseline restoration, typed fail-before-mutation and clicked Save/Blob attribution are explicit. No remaining contract blocker."
+    }
+  },
+  "rootDecision": "Accept both independently formed revised verdicts after checking their referenced source and evidence boundaries. Author one isolated public typed helper and minimal runner; preserve every old frozen helper, failed run and original raw. New implementation and actual checks still require independent source/static review and an exact public runtime gate.",
+  "allowedNext": "Root isolated helper/runner authoring and exact deployment preparation. No runtime launch or publication is claimed by these contract reviews.",
+  "notEstablished": [
+    "New helper/runner behavior",
+    "Fresh current public-origin baseline",
+    "Source1b publication or public runtime",
+    "Whole finite79 Design/Drift closure",
+    "Full first-playable/human/GPU acceptance"
+  ],
+  "wholeFinite79Credit": false,
+  "originalR2FailedRemains": true,
+  "originalR2FinalAssertionUnexecutedRemains": true
+}

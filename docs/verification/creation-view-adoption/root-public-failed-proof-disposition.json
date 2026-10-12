@@ -1,0 +1,51 @@
+{
+  "utc": "2026-10-11T22:51:12.679662+00:00",
+  "rootPID": 12673,
+  "status": "ACCEPTED_COMPLETE_ORIGINAL_FAILED_PUBLIC_PROOF_ONLY",
+  "originalPublicExit": 1,
+  "originalGateExhausted": true,
+  "manifestSHA256": "2bef9dae77c55c61806306b5095e6a74e0b96aa8880c4df37a3c9148d1e0b87c",
+  "actualRootRemoteTool": "da5539",
+  "rootPIDOfActualReader": 12075,
+  "sshPID": 12077,
+  "readerPID": 319615,
+  "actualWaitExit": 0,
+  "fullOriginalsCompared": 790,
+  "originalBytes": 241451669,
+  "payloadsFullyDecoded": 364,
+  "canonicalRefsCompared": 421,
+  "completeOriginalPathSetExact": true,
+  "fullOriginalDecodedReferenceBytesExact": true,
+  "rootWDTool": "9b751a",
+  "WDMainMirrors": 454,
+  "WDFinalMirrors": 42,
+  "WDExistingCanonicals": 182,
+  "all20FinalTailControlsExact": true,
+  "originalRootRestoredFullTypedBytesExact": true,
+  "actualStartupSources": 97,
+  "actualStartupUniquePaths": 68,
+  "allFullSourceHashesAndEpochsExact": true,
+  "freshKnownOwnersAbsent": 473,
+  "ports": {
+    "8777": false,
+    "9237": false
+  },
+  "profile": {
+    "isSymlink": true,
+    "entryExists": false,
+    "pid": 307171,
+    "ownerExists": false
+  },
+  "preservedControlFailures": [
+    "Delegate late writer10715 exit1 from path/process variable shadowing; exact corrected20 control metadata/byte verification0, no transfer/decoder/runtime replay.",
+    "Root989f72 exit1 from nonexistent actualExit key; exact actualControlVerificationExit and actualCollectorWaitExit schema inspected, corrected full WD consumption9b751a0."
+  ],
+  "unexecuted": [
+    "Root affected create/cross-lock/Station/Portal/Queue",
+    "Root committed Save/reload",
+    "Pin native Import/Export/Save/reload"
+  ],
+  "rootDecision": "Consume complete failed proof without relabeling original1. Impossible unique97 validator is independently diagnosed and repaired in04b55984. Authorize only final fresh r2 input/owner freeze; new exact runtime gate and full public paths/whole reviews remain necessary.",
+  "publicAccepted": false,
+  "wholeFinite79Credit": false
+}

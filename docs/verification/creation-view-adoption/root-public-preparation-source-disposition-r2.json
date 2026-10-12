@@ -1,0 +1,65 @@
+{
+  "utc": "2026-10-11T22:49:53.140681+00:00",
+  "rootPID": 12317,
+  "owner": "Root",
+  "status": "ACCEPTED_SCOPED_REPAIRED_PUBLIC_SOURCE_AND_STATIC_ONLY",
+  "driverSHA256": "04b55984267ea9ce6d5771977eb685f5265ba2db9c75bdc07a0338fa481969aa",
+  "driverBytes": 77892,
+  "expectedEntriesSHA256": "43b0e5a71933417420adeb783b4980edee72cc6d4657481d403837f68cfcf3d0",
+  "sourceAttributionDispositionSHA256": "09f6a901cab6be4e6850b9a5660f25d8a0524fa7a76ab7cca6ec12fef155d8c0",
+  "actualStaticTool": "86acc3",
+  "actualReaderPID": 314914,
+  "actualNodePID": 314919,
+  "actualRootPID": 9561,
+  "actualSSHPID": 9563,
+  "actualWaitExit": 0,
+  "syntaxStdoutSHA256": "23c8277a4efbd73bc855b5e697fd93d00891a15791121495510fdb2e482963c2",
+  "syntaxReaderSHA256": "1dee2b72a9fd193e9e3541e2093d6f570ad9eec4b4460d2fe0a7ea5ef3973143",
+  "assembledJSExpressions": 86,
+  "actualSourcePredicateControls": [
+    {
+      "case": "Actual97 legitimate page-worker entries with68 paths",
+      "expected": true,
+      "actual": true
+    },
+    {
+      "case": "missing",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "case": "extra",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "case": "duplicate-and-missing",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "case": "wrong-source-role",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "case": "wrong-full-source-bytes",
+      "expected": false,
+      "actual": false
+    }
+  ],
+  "genericForwardedParameterExplicit": true,
+  "reviews": {
+    "DesignSolMax": "PASS scoped actual diff/predicate/pin reachability; expected input must be included in final inputPins before Chrome launch.",
+    "DriftLunaMax": "PASS source/static scope, HOLD frozen/runtime authorization until final complete input/gate pins and failed collector closure. Root interprets this as pending prerequisites, not a new source defect."
+  },
+  "rootDecision": "Accept exact04b55984 after real predicate controls and both independent material source reviews. No production code changes. Final source oracle pin is the consumed inputPins entry43b0, not the standalone unused draft metadata. Keep fresh164 HTTP loop; originalpublic1/exhaustedgate and all unexecuted paths remain.",
+  "requiredBeforeRuntime": [
+    "Consume complete original failed proof and actual retention terminal",
+    "Freeze complete inputs and fresh old/new owner union",
+    "Verify exact frozen bytes/source883/shipping164 on Grok",
+    "Bind exact hosting61020d38/actual Pages built/deployment91c gate/newr2 contract/source/oracle in fresh one-use Root gate"
+  ],
+  "runtimeAuthorized": false,
+  "wholeFinite79Credit": false
+}

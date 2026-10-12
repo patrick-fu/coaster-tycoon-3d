@@ -1,0 +1,113 @@
+{
+  "utc": "2026-10-11T23:34:58.546703+00:00",
+  "status": "Scoped public affected creation and native persistence accepted",
+  "sourceCommit": "1bdec0dd377f922c9168f454c4b2eaba92a1bbc4",
+  "sourceTree": "8ea8918269e119fde5c8a0b7603214db5541041a",
+  "readySHA256": "d8218203fc294a3316c8751697d5f412c286e3df9c700b5e5906c1c16fc79ee7",
+  "hostingCommit": "61020d38a913c4416e016250936d501d299bce95",
+  "routes": [
+    "https://patrick-fu.github.io/coaster-tycoon-3d/?showcase=classic",
+    "https://patrick-fu.github.io/coaster-tycoon-3d/previews/classic-1bdec0d/?showcase=classic"
+  ],
+  "originalPublicR1ExitPreserved": 1,
+  "originalPublicR2Exit": 0,
+  "originalPublicR2RunnerPID": 324744,
+  "originalPublicR2WrapperPID": 324707,
+  "originalPublicR2TerminalTool": "7928a7 actual0",
+  "rootIndependentByteReader": "4d26df actual0 reader337144 Root21309 SSH21312",
+  "rootIndependentWDConsumer": "7d75d0 actual0 reader21792",
+  "rootIndependentSemanticOriginalExitPreserved": 1,
+  "rootIndependentSemanticOriginal": "55e7ce actual1 reader340030 Root22848 SSH22851;92 of93 predicates accepted",
+  "rootIndependentTargetedSupplement": "e2cb1c actual0 reader341169 Root23426 SSH23428",
+  "rootReaderFailureDisposition": "Root reader omitted arrange(label) calling file_import(before-track). Actual frozen driver and raw root both contain original old import followed by real operated reset; pin has old then current-operated switch.",
+  "rootComposedNativeSemanticAccepted": true,
+  "retention": {
+    "originalFiles": 969,
+    "originalBytes": 636319454,
+    "uniqueCompletePayloads": 423,
+    "canonicalReferences": 523,
+    "canonicalReferenceBytes": 256063005,
+    "durableWDCanonicals": 185,
+    "mainWDMirrors": 520,
+    "finalWDMirrors": 42,
+    "completedTailControls": 20,
+    "manifestSHA256": "34b5ff78881db9e9ddd432fc3803bcb732c09307fd106330c7f04a22bfd6376f"
+  },
+  "raw": {
+    "root": {
+      "bytes": 121688134,
+      "lines": 6976,
+      "sha256": "7b3e7237f5310faed5859e49b32f7f897f4297b2b18cca46269f4468444d06b3"
+    },
+    "pin": {
+      "bytes": 93234796,
+      "lines": 4148,
+      "sha256": "3f42c444ed25d942a517ef37338323e331a0613d225928103c4e0c29fb7d8eaa"
+    }
+  },
+  "actualNative": {
+    "rootAffectedCreatedRide": 7,
+    "rootAffectedStation": 156,
+    "rootRecordedChecks": 346,
+    "pinRecordedChecks": 272,
+    "eachRouteNativeFileImports": [
+      "genuine-old-d232.save.json",
+      "genuine-operated-r1.save.json"
+    ],
+    "rootNativeExportStages": 8,
+    "pinNativeExportStages": 4,
+    "sourceEpochCount": 4,
+    "actualScriptEntriesEach": 97,
+    "actualUniqueSourcePathsEach": 68,
+    "typedOriginalBytesEach": 1857485,
+    "sameCompleteSharedOriginBaseline": true,
+    "stageSpecificGUIDDownloads": true,
+    "contiguousFullInventoryCursorStopTailReload": true,
+    "allFourRawErrorSetsEmpty": true,
+    "resourcesDisposedExactlyOnceAndForeignResourcesPreserved": true
+  },
+  "evidencePins": {
+    "inspect.stdout.json": {
+      "path": "/Volumes/WD/code/workspaces/coaster-creation-input/evidence/root-public-success-consumption-r2/inspect.stdout.json",
+      "bytes": 97092,
+      "sha256": "d9dee35e894e1f9957b6a500d849418158f889ad1956e438550ad30ac02b3902"
+    },
+    "inspect-wait.json": {
+      "path": "/Volumes/WD/code/workspaces/coaster-creation-input/evidence/root-public-success-consumption-r2/inspect-wait.json",
+      "bytes": 352,
+      "sha256": "2f90c0de1269b8e4fb2b06bf7260f76a2c6a0f1aa1550fe43af3e8a2aec73219"
+    },
+    "local-byte-consumption.json": {
+      "path": "/Volumes/WD/code/workspaces/coaster-creation-input/evidence/root-public-success-consumption-r2/local-byte-consumption.json",
+      "bytes": 1634,
+      "sha256": "b5dde163a7a975c787d7f81b0570255e3047f0e5cdc42beae72489a3f014d4b6"
+    },
+    "semantic.stdout.json": {
+      "path": "/Volumes/WD/code/workspaces/coaster-creation-input/evidence/root-public-success-consumption-r2/semantic.stdout.json",
+      "bytes": 43929,
+      "sha256": "d349f237700fbeaf0fb9e73e1bf3111ea477f4cb1a5d23411d7b2d451e52a958"
+    },
+    "semantic-wait.json": {
+      "path": "/Volumes/WD/code/workspaces/coaster-creation-input/evidence/root-public-success-consumption-r2/semantic-wait.json",
+      "bytes": 479,
+      "sha256": "69d360ffb8b5d97215c01f06f24cd21aa2aa4be4c4bc68e5c6bfccc131957d62"
+    },
+    "import.stdout.json": {
+      "path": "/Volumes/WD/code/workspaces/coaster-creation-input/evidence/root-public-success-consumption-r2/import.stdout.json",
+      "bytes": 5342,
+      "sha256": "27304f3fd27b843f4bec96610cc6f38708f0d7006a9fb7fae602e976d44f4734"
+    },
+    "import-wait.json": {
+      "path": "/Volumes/WD/code/workspaces/coaster-creation-input/evidence/root-public-success-consumption-r2/import-wait.json",
+      "bytes": 376,
+      "sha256": "b5a7e4ca88c442b2c142da53e21cf17abd69fc9c420a0935033d648d825ec8de"
+    }
+  },
+  "wholeFinite79ClosureCredit": false,
+  "remaining": [
+    "Twice cumulative whole Design and twice cumulative whole Drift review",
+    "PR80 mainline integration and issue79 closure",
+    "Full first-playable catalogue/management/art/original-scale/human/GPU qualification"
+  ],
+  "scope": "Accept source1b public root/frozen affected Track/cross-lock/Station/Portal/Queue and genuine old/current13 native Import/Export/Save/reload, complete storage/source/epoch/resources/terminal composition. Original failed public1 and Root reader1 remain explicit; targeted supplement replaces only false root one-import assumption. No replay, full original-fidelity or first-playable completion claim."
+}

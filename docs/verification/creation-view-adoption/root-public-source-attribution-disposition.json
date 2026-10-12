@@ -1,0 +1,65 @@
+{
+  "utc": "2026-10-11T22:35:24.091030+00:00",
+  "owner": "Root",
+  "rootPID": 8540,
+  "status": "ACCEPTED_SCOPED_SOURCE_ATTRIBUTION_REPAIR_PROPOSAL_ONLY",
+  "originalDriverSHA256": "ac9c08e44e846e508939506618084c0cf876a21c46b23f22e3ac96ef781da6b2",
+  "originalPublicExit": 1,
+  "originalPublicGateExhausted": true,
+  "actualComparisonTool": "979338",
+  "actualReaderPID": 310282,
+  "actualRootPID": 7042,
+  "actualSSHPID": 7044,
+  "actualWaitExit": 0,
+  "comparisonSHA256": "ced67896b093bb6936b2f78c0e6e8004ffb764286286c4298afadcccbf036296",
+  "expectedEntriesSHA256": "43b0e5a71933417420adeb783b4980edee72cc6d4657481d403837f68cfcf3d0",
+  "originalSourcePins": {
+    "native-startup": {
+      "path": "/workspace/coaster-creation-input/browser/fixed-runtime-r3-tail/local/executed-source-startup.json",
+      "bytes": 109649,
+      "sha256": "bdf872f7a689d838127d2f2ad43838f924ee694d775d90c9b3a6ad9f19e1c5af"
+    },
+    "native-reload": {
+      "path": "/workspace/coaster-creation-input/browser/fixed-runtime-r3-tail/local/executed-source-actual-reload.json",
+      "bytes": 110364,
+      "sha256": "5b5c395bb80ee88b2d5c7a286fba458421e35a30c4fed1784f41826a7ea67b1b"
+    },
+    "failed-public-startup": {
+      "path": "/workspace/coaster-creation-input/browser/public-runtime-r1/root/executed-source-startup.json",
+      "bytes": 115883,
+      "sha256": "b41fddd83886c7a97310fe2ac87a4a5d4911bad64425926748af984c0853f080"
+    }
+  },
+  "counts": {
+    "native-startup": {
+      "entries": 97,
+      "uniquePaths": 68,
+      "page": 61,
+      "worker": 36,
+      "allFullHashesAndEpochsExact": true
+    },
+    "native-reload": {
+      "entries": 97,
+      "uniquePaths": 68,
+      "page": 61,
+      "worker": 36,
+      "allFullHashesAndEpochsExact": true
+    },
+    "failed-public-startup": {
+      "entries": 97,
+      "uniquePaths": 68,
+      "page": 61,
+      "worker": 36,
+      "allFullHashesAndEpochsExact": true
+    }
+  },
+  "independentReviews": {
+    "DesignSolMax": "PASS scoped exact expected path/target-role multiplicity with full97 source/byte/epoch/critical worker constraints; keep existing fresh164 HTTP loop.",
+    "DriftLunaMax": "PASS scoped oracle/provenance/boundaries; frozen old source still fails and pin/native affected paths remain unexecuted."
+  },
+  "rootDecision": "Actual native startup/reload and failed public startup exact97 entries comprise68 paths with29 shared page/worker modules. Repair the impossible unique97 predicate using the byte-pinned accepted same-source native role multiplicity, preserving all source hashes/epochs and worker checks. Fresh preparation/runtime/gate only; unchanged14 helper/proof inputs and shipping/source build proof reused. Run original fresh164 HTTP loop, no new reuse mechanism.",
+  "requiredBeforeRuntime": "Actual repaired source syntax/Counter controls and independent material source re-review; prior original proof retained and collector ended, fresh owner/profile/ports/hosting gate.",
+  "productCodeChanged": false,
+  "publicRuntimeAccepted": false,
+  "wholeFinite79Credit": false
+}

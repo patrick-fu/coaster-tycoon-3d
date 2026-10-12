@@ -1,0 +1,48 @@
+{
+  "utc": "2026-10-11T22:18:50.841446+00:00",
+  "rootPID": 3994,
+  "status": "ACCEPTED_FROZEN_PUBLIC_INPUT_BYTES_AND_PREREQUISITES_ONLY",
+  "driverSHA256": "ac9c08e44e846e508939506618084c0cf876a21c46b23f22e3ac96ef781da6b2",
+  "contractSHA256": "4c230fe6b13d7185ba2925458c08332256ef6ee7e03ab5e23204321d738368bd",
+  "inputPins": {
+    "build-ready.json": "d8218203fc294a3316c8751697d5f412c286e3df9c700b5e5906c1c16fc79ee7",
+    "creation-view-delay.js": "ed487ddf592953f6648c25b54d176f1c011f0703c2a28105baa1147b3ea2e056",
+    "genuine-old-d232.save.json": "6aaeb37230da32aba4a8041f11dab0ea6f683e797ebb24e5e79f35965e6e1809",
+    "genuine-operated-r1.save.json": "afd73e9ee79516cab02365bbe7219954009c59f1d03631e21618ae59578f2602",
+    "public-ownership.js": "7573f23308617823fffe6abb0ee5ad030b2ef2e7f217664651bec956f29d8292",
+    "read-only-construction-witness.js": "2bda287f9054a5dad3c33f0ce31d6a1f20814dde56cf4fff5b5385646441360a",
+    "read-only-player.js": "3a4caa6d7e7c9093821507e75d300b640e0390c419a0400ef90a650aa08bb530",
+    "root-public-contract-proposal.json": "df21ae4e4416b587216fe3a518b2b12fd8003a7e3ee5bed76250e7bc85be7bd8",
+    "root-public-contract-reviews-r2.json": "b1124e3eba44429431ff8f4dac29913cfd7f798cd49852882830f0edae872de0",
+    "root-public-preparation-source-disposition.json": "e0846b95ede4a64f7d997e54f2be3404ce3cc7bac996c12093e36aee3c804368",
+    "root-r6-tail-native-disposition.json": "c13b08c867374425dd1b119614927757be3155f5edb3fa84c6f24cfd3ec38575",
+    "run-public.py": "ac9c08e44e846e508939506618084c0cf876a21c46b23f22e3ac96ef781da6b2",
+    "typed-storage.js": "3d765c8e052e855036cea597a61d2d76b0ca83fa0344c1746f0637f64ac720a0",
+    "verify-typed-storage.mjs": "3d5a20bdb13ef66bae59af7c03dd0ca7afa3dc810cc81c772656be9b7a533c99"
+  },
+  "actualProof": "../evidence/root-public-freeze-r1",
+  "actualTool": "3587cd",
+  "readerPID": 302052,
+  "rootPIDOfActualRun": 2690,
+  "sshPID": 2693,
+  "actualWaitExit": 0,
+  "sourceFiles": 883,
+  "shippingFiles": 164,
+  "schemaKeys": 23,
+  "knownOwnersAbsent": 428,
+  "ports": {
+    "8777": false,
+    "9237": false
+  },
+  "profile": {
+    "path": "/home/box/.config/google-chrome/SingletonLock",
+    "isSymlink": true,
+    "entryExists": false,
+    "pid": 228619,
+    "ownerExists": false
+  },
+  "scope": "Exact frozen preparation only. This does not authorize runtime before actual hosting/Pages deployment and exact Root runtime gate.",
+  "runtimeAuthorized": false,
+  "publicRuntimeExecuted": false,
+  "wholeFinite79Credit": false
+}

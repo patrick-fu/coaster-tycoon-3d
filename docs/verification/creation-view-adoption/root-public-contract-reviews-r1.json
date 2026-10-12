@@ -1,0 +1,48 @@
+{
+  "utc": "2026-10-11T21:13:48.383314+00:00",
+  "originalProposalSHA256": "589a640aa7f46d29da6edfc28a4eb8f1688a84e61a8342d7cea4ca7b3723712f",
+  "originalVerdicts": {
+    "DesignSolMax": "HOLD: full fresh typed native values can lose shared identity and empty database names are omitted.",
+    "DriftLunaMax": "HOLD: R5 runtime attribution is incorrect and same-origin baseline restoration must be explicit."
+  },
+  "rootDisposition": [
+    {
+      "finding": "Shared original object identity and masked sparse array keys",
+      "decision": "Accept; original typed encoder is not lossless for these structures. Add fail-closed rejection in a new public-specific helper before any fixture. No graph serializer.",
+      "previousEvidenceBoundary": "Actual local[] and prior public string records are unaffected; do not retroactively change their frozen helpers."
+    },
+    {
+      "finding": "Empty database name filtering",
+      "decision": "Accept; enumerate all known string names including empty, fail unknown names before mutation."
+    },
+    {
+      "finding": "autoIncrement generator loss",
+      "decision": "Existing helper already rejects autoIncrement at snapshot line25; preserve this guard, no new implementation needed."
+    },
+    {
+      "finding": "R5 accepted Track label",
+      "decision": "Accept; R5 authored/prepared recipe was actually executed under R2; completed R2 Track is accepted only in c13b scoped composition, not as an R5 runtime."
+    },
+    {
+      "finding": "Same-origin route baseline",
+      "decision": "Accept the clarification; restore first full pre-run baseline before pin and compare its fresh original inventory to that exact baseline; restore again at terminal."
+    },
+    {
+      "finding": "Manual Save feedback capture and request attribution",
+      "decision": "Accept implementation constraints; use non-holding arm plus actual trusted Save click-bound request, original delivery, new commit feedback and full cursor. Preserve unrelated autosaves."
+    },
+    {
+      "finding": "Blob URL origin/path mismatch",
+      "decision": "Accept; bind original full exact Blob URL and GUID, not route-base prefix."
+    },
+    {
+      "finding": "Additional public Oversize replay",
+      "decision": "Prune; exact R6 source1b path is already actually qualified. Reviewer wording that the size/error block was unchanged7a\u21921b is inaccurate: early input lock moved before size check. Reuse is justified by same newsource1b R6 evidence and public exact-body/adoption/import integration, not by an unchanged older block."
+    }
+  ],
+  "revisedProposalSHA256": "df21ae4e4416b587216fe3a518b2b12fd8003a7e3ee5bed76250e7bc85be7bd8",
+  "status": "MATERIAL_RE_REVIEW_PENDING",
+  "runtimeAuthorized": false,
+  "publicationAuthorized": false,
+  "wholeFinite79Credit": false
+}
