@@ -485,43 +485,95 @@ export function buildFlumeChannel(ctx, parent, track, frames, materials, passage
     c.fillStyle = '#124855';
     c.fillRect(0, 0, w, h);
 
-    // Restrained teal depth: ambient trough shading
-    for (let i = 0; i < 2; i++) {
-      const ym = i * 64 + 32;
-      c.fillStyle = 'rgba(8, 28, 36, 0.24)';
-      c.beginPath();
-      for (let x = 0; x <= w; x += 4) c[x === 0 ? 'moveTo' : 'lineTo'](x, ym - 16 + 4.5 * Math.sin((x / w) * Math.PI * 2));
-      for (let x = w; x >= 0; x -= 4) c.lineTo(x, ym + 18 + 4.5 * Math.sin((x / w) * Math.PI * 2));
-      c.closePath();
-      c.fill();
-    }
+    const pi2 = Math.PI * 2;
 
-    // Broad irregular subtle caustic bands and sparse low-contrast foam
-    for (const b of [{ y: 30, p: 0.2, fx: 22 }, { y: 94, p: 2.4, fx: 76 }]) {
-      const wave = x => b.y + 6.0 * Math.sin((x / w) * Math.PI * 2 + b.p) + 2.2 * Math.sin((x / w) * Math.PI * 4 + b.p * 1.5);
-      const halfW = x => 3.6 + 2.2 * Math.cos((x / w) * Math.PI * 2 + b.p + 0.7) + 1.2 * Math.sin((x / w) * Math.PI * 4 + b.p);
+    // 2. Small wrapped varied-angle wavelets (non-horizontal crests, boundary-crossing coverage)
+    const wavelets = [
+      { qx: 0.01, qy: 0.28, len: 9, curve: 1.1, tx: 0.95, ty: 0.31 },
+      { qx: 0.99, qy: 0.65, len: 10, curve: -1.2, tx: 0.91, ty: -0.41 },
+      { qx: 0.44, qy: 0.01, len: 9, curve: 1.0, tx: 0.85, ty: 0.53 },
+      { qx: 0.58, qy: 0.99, len: 9, curve: -1.1, tx: 0.81, ty: -0.59 },
+      { qx: 0.02, qy: 0.02, len: 8, curve: 1.0, tx: 0.98, ty: 0.21 },
+      { qx: 0.98, qy: 0.98, len: 8, curve: -1.0, tx: 0.96, ty: -0.28 },
+      { qx: 0.98, qy: 0.02, len: 8, curve: 0.9, tx: 0.90, ty: 0.44 },
+      { qx: 0.02, qy: 0.98, len: 8, curve: -0.9, tx: 0.87, ty: -0.50 },
+      { qx: 0.22, qy: 0.15, len: 9, curve: 1.2, tx: 0.94, ty: 0.34 },
+      { qx: 0.72, qy: 0.16, len: 8, curve: -1.0, tx: 0.74, ty: -0.67 },
+      { qx: 0.38, qy: 0.34, len: 10, curve: 1.3, tx: 0.79, ty: 0.62 },
+      { qx: 0.84, qy: 0.36, len: 8, curve: -1.1, tx: 0.98, ty: -0.17 },
+      { qx: 0.16, qy: 0.50, len: 9, curve: 1.1, tx: 0.97, ty: 0.26 },
+      { qx: 0.64, qy: 0.48, len: 11, curve: -1.3, tx: 0.88, ty: -0.47 },
+      { qx: 0.34, qy: 0.68, len: 8, curve: 1.0, tx: 0.83, ty: 0.56 },
+      { qx: 0.82, qy: 0.74, len: 10, curve: -1.2, tx: 0.94, ty: -0.34 },
+      { qx: 0.20, qy: 0.85, len: 9, curve: 1.1, tx: 0.93, ty: 0.37 },
+      { qx: 0.68, qy: 0.84, len: 8, curve: -0.9, tx: 0.83, ty: -0.56 }
+    ];
 
-      for (const [col, scale] of [['rgba(48, 156, 172, 0.16)', 1.5], ['rgba(96, 206, 218, 0.22)', 0.7]]) {
-        c.fillStyle = col;
-        c.beginPath();
-        for (let x = 0; x <= w; x += 4) c[x === 0 ? 'moveTo' : 'lineTo'](x, wave(x) - halfW(x) * scale);
-        for (let x = w; x >= 0; x -= 4) c.lineTo(x, wave(x) + halfW(x) * scale);
-        c.closePath();
-        c.fill();
+    c.lineCap = 'round';
+
+    // Soft crest halos
+    c.strokeStyle = 'rgba(56, 172, 188, 0.18)';
+    c.lineWidth = 1.8;
+    c.beginPath();
+    for (const wavelet of wavelets) {
+      const hl = wavelet.len * 0.5;
+      const dx = hl * wavelet.tx;
+      const dy = hl * wavelet.ty;
+      const cx0 = -wavelet.curve * wavelet.ty;
+      const cy0 = wavelet.curve * wavelet.tx;
+      for (let ox = -1; ox <= 1; ox++) {
+        for (let oy = -1; oy <= 1; oy++) {
+          const cx = (wavelet.qx + ox) * w;
+          const cy = (wavelet.qy + oy) * h;
+          if (cx < -12 || cx > w + 12 || cy < -12 || cy > h + 12) continue;
+          c.moveTo(cx - dx, cy - dy);
+          c.quadraticCurveTo(cx + cx0, cy + cy0, cx + dx, cy + dy);
+        }
       }
-
-      // Sparse low-contrast foam accent along swell crest
-      c.strokeStyle = 'rgba(215, 244, 248, 0.24)';
-      c.lineWidth = 1.6;
-      c.lineCap = 'round';
-      c.beginPath();
-      for (let x = b.fx; x <= b.fx + 24; x += 2) c[x === b.fx ? 'moveTo' : 'lineTo'](x, wave(x) - halfW(x) * 0.35);
-      c.stroke();
-      c.fillStyle = 'rgba(225, 248, 252, 0.20)';
-      c.beginPath();
-      c.arc(b.fx + 27, wave(b.fx + 27) - 1, 1.1, 0, Math.PI * 2);
-      c.fill();
     }
+    c.stroke();
+
+    // Subtle crisp highlights
+    c.strokeStyle = 'rgba(215, 245, 250, 0.24)';
+    c.lineWidth = 0.9;
+    c.beginPath();
+    for (const wavelet of wavelets) {
+      const hl = wavelet.len * 0.5;
+      const dx = hl * wavelet.tx;
+      const dy = hl * wavelet.ty;
+      const cx0 = -wavelet.curve * wavelet.ty;
+      const cy0 = wavelet.curve * wavelet.tx;
+      for (let ox = -1; ox <= 1; ox++) {
+        for (let oy = -1; oy <= 1; oy++) {
+          const cx = (wavelet.qx + ox) * w;
+          const cy = (wavelet.qy + oy) * h;
+          if (cx < -12 || cx > w + 12 || cy < -12 || cy > h + 12) continue;
+          c.moveTo(cx - dx, cy - dy);
+          c.quadraticCurveTo(cx + cx0, cy + cy0, cx + dx, cy + dy);
+        }
+      }
+    }
+    c.stroke();
+
+    // Delicate glint points
+    c.fillStyle = 'rgba(235, 250, 253, 0.28)';
+    c.beginPath();
+    for (const wavelet of wavelets) {
+      const gx0 = -wavelet.curve * 0.5 * wavelet.ty;
+      const gy0 = wavelet.curve * 0.5 * wavelet.tx;
+      for (let ox = -1; ox <= 1; ox++) {
+        for (let oy = -1; oy <= 1; oy++) {
+          const cx = (wavelet.qx + ox) * w;
+          const cy = (wavelet.qy + oy) * h;
+          if (cx < -12 || cx > w + 12 || cy < -12 || cy > h + 12) continue;
+          const gx = cx + gx0;
+          const gy = cy + gy0;
+          c.moveTo(gx + 0.85, gy);
+          c.arc(gx, gy, 0.85, 0, pi2);
+        }
+      }
+    }
+    c.fill();
   });
 
   const matWater = ctx.material('flume:water:standard', {
