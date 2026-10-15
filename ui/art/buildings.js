@@ -510,7 +510,7 @@ function buildRestroom(ctx, group, e, facility, textures) {
   const matCornice = getMaterial(ctx, 'mat_rest_cornice', { color: '#e5e0d3', roughness: 0.65 });
   const matTrim = getMaterial(ctx, 'mat_rest_trim', { color: '#374151', roughness: 0.6 });
   const matDoor = getMaterial(ctx, 'mat_rest_door', { color: '#78350f', roughness: 0.7 });
-  const matInterior = getMaterial(ctx, 'mat_rest_interior', { color: isOpen ? '#fef3c7' : '#111827', roughness: 0.9 });
+  const matInterior = getMaterial(ctx, 'mat_rest_interior', { color: isOpen ? '#1e293b' : '#111827', roughness: 0.9 });
   const matShrub = getMaterial(ctx, 'mat_rest_shrub', { color: '#166534', roughness: 0.85 });
   const matShrubLight = getMaterial(ctx, 'mat_rest_shrub_light', { color: '#22c55e', roughness: 0.8 });
   const matSoil = getMaterial(ctx, 'mat_rest_soil', { color: '#3f2e1e', roughness: 0.9 });
@@ -520,7 +520,13 @@ function buildRestroom(ctx, group, e, facility, textures) {
 
   // 2. Main Pavilion Walls
   // Lower Brick Wainscoting (y: 0.16 to 0.9)
-  unitBox(ctx, group, matBrick, 0, 0.53, 0, 3.2, 0.74, 3.1);
+  // Leave the lower entrance bays open as well as the upper wall openings.
+  unitBox(ctx, group, matBrick, -1.45, 0.53, 0, 0.28, 0.74, 3.1);
+  unitBox(ctx, group, matBrick, -0.1, 0.53, -1.42, 2.6, 0.74, 0.28);
+  unitBox(ctx, group, matBrick, -0.1, 0.53, 1.42, 2.6, 0.74, 0.28);
+  unitBox(ctx, group, matBrick, 1.35, 0.53, 0, 0.28, 0.74, 0.55);
+  unitBox(ctx, group, matBrick, 1.35, 0.53, -1.45, 0.32, 0.74, 0.32);
+  unitBox(ctx, group, matBrick, 1.35, 0.53, 1.45, 0.32, 0.74, 0.32);
 
   // Upper Cream Stucco Walls (y: 0.9 to 2.5)
   // Back Wall (-X)
@@ -543,6 +549,15 @@ function buildRestroom(ctx, group, e, facility, textures) {
 
   // Classical Stone Eaves Cornice Molding
   unitBox(ctx, group, matCornice, 0, 2.55, 0, 3.45, 0.15, 3.35);
+  // Supported eaves brackets beneath front cornice (3 meshes)
+  unitBox(ctx, group, matCornice, 1.44, 2.42, -1.45, 0.16, 0.11, 0.14);
+  unitBox(ctx, group, matCornice, 1.44, 2.42, 0, 0.16, 0.11, 0.14);
+  unitBox(ctx, group, matCornice, 1.44, 2.42, 1.45, 0.16, 0.11, 0.14);
+
+  // Restrained wall/plinth joins at front pier bases (3 meshes)
+  unitBox(ctx, group, matCornice, 1.36, 0.19, -1.45, 0.34, 0.06, 0.34);
+  unitBox(ctx, group, matCornice, 1.36, 0.19, 0, 0.30, 0.06, 0.57);
+  unitBox(ctx, group, matCornice, 1.36, 0.19, 1.45, 0.34, 0.06, 0.34);
 
   // 3. Dual Entrance Bays (+X Frontage)
   // Bay 1: Left Entrance (z = -0.7)
@@ -550,25 +565,33 @@ function buildRestroom(ctx, group, e, facility, textures) {
   const doorZ = [-0.7, 0.7];
   for (const dz of doorZ) {
     // Stone door frame posts & architrave
-    unitBox(ctx, group, matCornice, 1.42, 1.5, dz - 0.42, 0.14, 1.4, 0.12);
-    unitBox(ctx, group, matCornice, 1.42, 1.5, dz + 0.42, 0.14, 1.4, 0.12);
+    unitBox(ctx, group, matCornice, 1.42, 1.18, dz - 0.42, 0.14, 2.04, 0.12);
+    unitBox(ctx, group, matCornice, 1.42, 1.18, dz + 0.42, 0.14, 2.04, 0.12);
     unitBox(ctx, group, matCornice, 1.42, 2.22, dz, 0.16, 0.14, 0.94);
+    // Door-frame head depth return into entrance recess (1 mesh per bay = 2 meshes)
+    unitBox(ctx, group, matCornice, 1.28, 2.22, dz, 0.14, 0.12, 0.76);
 
-    // Deep interior hallway
-    unitBox(ctx, group, matInterior, 0.5, 1.3, dz, 1.5, 1.5, 0.7);
+    unitBox(ctx, group, matCornice, 1.44, 1.94, dz, 0.14, 0.06, 0.84);
+    unitBox(ctx, group, matTrim, 1.42, 2.08, dz, 0.1, 0.18, 0.72);
+    // Compact transom vent division mullion (1 mesh per bay = 2 meshes)
+    unitBox(ctx, group, matCornice, 1.44, 2.08, dz, 0.12, 0.18, 0.06);
+    unitBox(ctx, group, matTrim, 1.38, 0.14, dz, 0.22, 0.08, 0.74);
+
+    // Keep the shadowed hallway behind the visible privacy screen.
+    unitBox(ctx, group, matInterior, 0.35, 1.16, dz, 1.1, 2.0, 0.72);
 
     // Recessed Privacy Louver Partition Screen
-    unitBox(ctx, group, matDoor, 0.7, 1.25, dz, 0.08, 1.4, 0.65);
+    unitBox(ctx, group, matDoor, 0.98, 1.08, dz, 0.08, 1.84, 0.56);
 
     if (!isOpen) {
       // Barrier gate / closed panel across entrance
-      unitBox(ctx, group, matTrim, 1.38, 1.1, dz, 0.08, 1.1, 0.8);
+      unitBox(ctx, group, matTrim, 1.38, 1.05, dz, 0.08, 1.76, 0.74);
     }
   }
 
   if (!isOpen) {
     addLabel(ctx, group, 'CLOSED', {
-      x: 1.45, y: 1.6, z: 0,
+      x: 1.58, y: 1.6, z: 0,
       width: 0.8, height: 0.25,
       color: '#ffffff', background: '#991b1b',
       rotation: [0, Math.PI / 2, 0]
@@ -589,8 +612,9 @@ function buildRestroom(ctx, group, e, facility, textures) {
   unitCylinder(ctx, group, matTrim, 0, 4.32, 0, 0.05, 0.2, 0.05);
 
   // 5. Classic Blue Restroom Signboard (+X Frontage)
+  unitBox(ctx, group, matCornice, 1.5, 2.38, 0, 0.06, 0.38, 1.62);
   addLabel(ctx, group, name, {
-    x: 1.52, y: 2.38, z: 0,
+    x: 1.54, y: 2.38, z: 0,
     width: 1.5, height: 0.32,
     color: '#ffffff', background: '#1d4ed8',
     rotation: [0, Math.PI / 2, 0]
@@ -617,8 +641,8 @@ function buildRestroom(ctx, group, e, facility, textures) {
 
 function buildBench(ctx, group, e, amenity, textures) {
   // Materials
-  const matIron = getMaterial(ctx, 'mat_amenity_iron', { color: '#1f2937', metalness: 0.65, roughness: 0.45 });
-  const matWood = getMaterial(ctx, 'mat_amenity_slat', { map: textures.wood, roughness: 0.55 });
+  const matIron = getMaterial(ctx, 'mat_amenity_iron', { color: '#1f2937', metalness: 0.15, roughness: 0.68 });
+  const matWood = getMaterial(ctx, 'mat_amenity_slat', { map: textures.wood, roughness: 0.74 });
 
   // The bench is positioned along the edge of the path tile at z = 1.35
   // Width spans x: [-1.05, 1.05]

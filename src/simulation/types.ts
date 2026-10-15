@@ -9,6 +9,7 @@ import type {SceneryRules,SceneryType} from './scenery.js';
 import type {ContentIdentity} from '../content/registry.js';
 import type {CommerceProfile} from '../content/consumables.js';
 import type {RestroomProfile} from '../content/gradual-restroom.js';
+import type {AtmProfile} from '../content/atm.js';
 import type {MerchandiseProfile,MerchandiseAccounts,MerchandiseId} from '../content/merchandise.js';
 export type Direction=0|1|2|3;
 export type Attitude=-1|0|1;
@@ -22,7 +23,7 @@ export type RideProfile={motion:MotionRules,pieces:Record<string,PieceRule>,vehi
 export type FixedRideProfile={size:number,bodyHeight:number,portalHeight:number,deckMm:number,seats:{x:number,y:number,z:number,yaw:number}[],boardTicks:number,minLoadTicks:number,maxLoadTicks:number,accelTicks:number,cruiseTicks:number,decelTicks:number,angleUnits:number,peakUnitsPerTick:number,unloadTicks:number,buildPrice:number,portalPrice:number,defaultPrice:number,maxPrice:number,upkeep:number,inspectionInterval:number,inspectionTicks:number,repairTicks:number};
 export type ChannelRideProfile={vehicle:FlumeProfile,pieces:Record<string,PieceRule>};
 export type FacilityPlacementProfile={height:32};
-export type Rules={scenery:SceneryRules,housekeeping:HousekeepingRules,services:ServiceRules,guests:GuestRules,motion:MotionRules,id:string,evidence:'project-candidate'|'reference-verified',pathPrice:number,portalPrice:number,terrainPrice:number,refundPerThousand:number,maxSupport:number,maxHeight:number,pieces:Record<string,PieceRule>,rideProfiles?:Record<string,RideProfile>,fixedProfiles?:Record<string,FixedRideProfile>,channelProfiles?:Record<string,ChannelRideProfile>,commerceProfiles?:Record<string,CommerceProfile>,facilityProfiles?:Record<string,FacilityPlacementProfile>,merchandiseProfiles?:Record<string,MerchandiseProfile>,restroomProfiles?:Record<string,RestroomProfile>};
+export type Rules={scenery:SceneryRules,housekeeping:HousekeepingRules,services:ServiceRules,guests:GuestRules,motion:MotionRules,id:string,evidence:'project-candidate'|'reference-verified',pathPrice:number,portalPrice:number,terrainPrice:number,refundPerThousand:number,maxSupport:number,maxHeight:number,pieces:Record<string,PieceRule>,rideProfiles?:Record<string,RideProfile>,fixedProfiles?:Record<string,FixedRideProfile>,channelProfiles?:Record<string,ChannelRideProfile>,commerceProfiles?:Record<string,CommerceProfile>,facilityProfiles?:Record<string,FacilityPlacementProfile>,merchandiseProfiles?:Record<string,MerchandiseProfile>,restroomProfiles?:Record<string,RestroomProfile>,atmProfiles?:Record<string,AtmProfile>};
 export type WorldOptions={side:number,cash:number,maxLoan:number,seed:number,land?:{tile:Tile,height:number,water:number,owned:boolean}[]};
 export type Track={id:number,kind:'track',ride:number,piece:string,origin:Connector};
 export type Path={id:number,kind:'path',tile:Tile,height:number,queueFor:number|null};
@@ -35,7 +36,7 @@ export type TrackedRide=RideBase&{track:number[],cars:number,body?:never};
 export type ChannelRide=RideBase&{track:number[],cars?:never,body?:never};
 export type FixedRide=RideBase&{body:number,track?:never,cars?:never};
 export type Ride=TrackedRide|ChannelRide|FixedRide;
-export type State={version:15,contentVersion:8,nextInstance:number,amenities:Amenity[],litter:Litter[],facilities:Facility[],retiredShopIncome:number,retiredStock:number,retiredMerchandise:MerchandiseAccounts,retiredRideIncome:number,staff:Staff[],rules:string,side:number,tick:number,revision:number,topologyRevision:number,rng:number,paused:boolean,initialCash:number,cash:number,loan:number,maxLoan:number,spent:number,refunded:number,nextElement:number,nextEntity:number,people:PeopleState,ledger:Ledger,trains:Train[],carouselSessions:CarouselSession[],boats:Boat[],terrain:number[],water:number[],owned:boolean[],rides:Ride[],elements:Element[]};
+export type State={version:16,contentVersion:9,nextInstance:number,amenities:Amenity[],litter:Litter[],facilities:Facility[],retiredShopIncome:number,retiredStock:number,retiredMerchandise:MerchandiseAccounts,retiredRideIncome:number,retiredAtmWithdrawals:number,staff:Staff[],rules:string,side:number,tick:number,revision:number,topologyRevision:number,rng:number,paused:boolean,initialCash:number,cash:number,loan:number,maxLoan:number,spent:number,refunded:number,nextElement:number,nextEntity:number,people:PeopleState,ledger:Ledger,trains:Train[],carouselSessions:CarouselSession[],boats:Boat[],terrain:number[],water:number[],owned:boolean[],rides:Ride[],elements:Element[]};
 export type Command=
  | {type:'create-ride',name:string,tile:Tile,height:number,direction:Direction,content?:ContentIdentity}
  | {type:'append-track',ride:number,piece:string}
@@ -57,7 +58,7 @@ export type Command=
  | {type:'set-ride-broken',ride:number,broken:boolean}
  | {type:'place-amenity',kind:'bench'|'bin',path:number}
  | {type:'remove-amenity',id:number}
- | {type:'place-facility',name:string,kind:'food'|'drink'|'restroom'|'information',tile:Tile,height:number,direction:Direction,content?:ContentIdentity}
+ | {type:'place-facility',name:string,kind:'food'|'drink'|'restroom'|'information'|'atm',tile:Tile,height:number,direction:Direction,content?:ContentIdentity}
  | {type:'set-facility-open',facility:number,open:boolean}
  | {type:'set-facility-price',facility:number,price:number}
  | {type:'set-merchandise-price',facility:number,productId:MerchandiseId,price:number}

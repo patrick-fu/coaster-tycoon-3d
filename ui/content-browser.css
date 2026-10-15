@@ -1,5 +1,3 @@
-
-
 :root {
   --content-library-desk-dark: #0e1e16;
   --content-library-desk-deep: #163023;
@@ -37,7 +35,6 @@
   --content-library-font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Trebuchet MS", "Lucida Grande", sans-serif;
 }
 
-
 .content-library-window {
   position: fixed;
   z-index: 9999;
@@ -71,7 +68,6 @@
 .content-library-window *::after {
   box-sizing: border-box;
 }
-
 
 .content-library-header {
   display: flex;
@@ -162,7 +158,6 @@
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 
-
 .content-library-toolbar {
   display: flex;
   align-items: center;
@@ -232,7 +227,6 @@
   color: var(--content-library-danger-red);
 }
 
-
 .content-library-filter-group {
   display: inline-flex;
   align-items: center;
@@ -263,13 +257,16 @@
   background: rgba(255, 255, 255, 0.08);
 }
 
+.content-library-filter-btn:active {
+  transform: translateY(1px);
+}
+
 .content-library-filter-btn.active {
   background: linear-gradient(180deg, #2b5440 0%, #1c3b2b 100%);
   color: var(--content-library-brass-bright);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
   border: 1px solid var(--content-library-brass-deep);
 }
-
 
 .content-library-categories {
   display: grid;
@@ -304,6 +301,10 @@
   background: linear-gradient(180deg, #325a46 0%, #224233 100%);
   border-color: #4f8769;
   color: #ffffff;
+}
+
+.content-library-category-tab:active {
+  transform: translateY(1px);
 }
 
 .content-library-category-tab.active {
@@ -351,7 +352,6 @@
   color: #ffffff;
 }
 
-
 .content-library-body {
   flex: 1;
   display: grid;
@@ -360,7 +360,6 @@
   background: var(--content-library-paper);
   overflow: hidden;
 }
-
 
 .content-library-list-pane {
   display: flex;
@@ -403,7 +402,6 @@
   gap: 5px;
 }
 
-
 .content-library-card {
   display: flex;
   flex-direction: column;
@@ -414,7 +412,7 @@
   border-radius: 4px;
   cursor: pointer;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-  transition: all 0.1s ease;
+  transition: background 0.1s ease, border-color 0.1s ease, box-shadow 0.1s ease;
   text-align: left;
 }
 
@@ -422,7 +420,10 @@
   background: #fffdf6;
   border-color: var(--content-library-brass-main);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transform: translateY(-1px);
+}
+
+.content-library-card:active {
+  background: #f9f2e3;
 }
 
 .content-library-card.selected {
@@ -430,7 +431,6 @@
   border: 1.5px solid var(--content-library-brass-main);
   border-left: 3.5px solid var(--content-library-brass-main);
   box-shadow: 0 1px 4px rgba(168, 118, 43, 0.25);
-  transform: translateY(0);
 }
 
 .content-library-card-header {
@@ -499,7 +499,6 @@
   font-size: 10px;
   color: var(--content-library-ink-muted);
 }
-
 
 .content-library-inspector-pane {
   display: flex;
@@ -573,7 +572,6 @@
   margin: 0;
 }
 
-
 .content-library-variants-group {
   display: flex;
   flex-wrap: wrap;
@@ -604,6 +602,10 @@
   background: #fffdf8;
 }
 
+.content-library-variant-btn:active {
+  background: #f8f1de;
+}
+
 .content-library-variant-btn.selected {
   color: var(--content-library-ink-heading);
   background: linear-gradient(180deg, #fbf7ec 0%, #eddcb8 100%);
@@ -611,7 +613,6 @@
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(168, 118, 43, 0.3);
   font-weight: 700;
 }
-
 
 .content-library-modes-group {
   display: flex;
@@ -641,6 +642,10 @@
   border-color: var(--content-library-brass-main);
 }
 
+.content-library-mode-btn:active {
+  background: #f8f1de;
+}
+
 .content-library-mode-btn.selected {
   color: var(--content-library-ink-heading);
   background: linear-gradient(180deg, #fbf7ec 0%, #eddcb8 100%);
@@ -648,7 +653,6 @@
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.08);
   font-weight: 700;
 }
-
 
 .content-library-capabilities-grid {
   display: grid;
@@ -704,7 +708,6 @@
   margin-top: 2px;
 }
 
-
 .content-library-status-banner {
   padding: 8px 10px;
   border-radius: 5px;
@@ -749,12 +752,11 @@
   color: var(--content-library-ink-body);
 }
 
-
 .content-library-action-bar {
-  position: sticky;
-  bottom: 0;
+  flex-shrink: 0;
+  padding: 8px 14px 10px;
   background: var(--content-library-paper);
-  margin-top: 4px;
+  border-top: 1.5px solid var(--content-library-paper-edge);
 }
 
 .content-library-choose-btn {
@@ -802,7 +804,6 @@
   box-shadow: none;
 }
 
-
 .content-library-status-bar {
   display: flex;
   align-items: center;
@@ -820,7 +821,6 @@
 .content-library-status-bar strong {
   color: var(--content-library-brass-bright);
 }
-
 
 .content-library-state-panel {
   flex: 1;
@@ -870,6 +870,8 @@
   color: #f2faf5;
   border: 1px solid #4a775f;
   cursor: pointer;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  transition: all 0.1s ease;
 }
 
 .content-library-retry-btn:hover {
@@ -877,16 +879,27 @@
   color: #ffffff;
 }
 
+.content-library-retry-btn:active {
+  transform: translateY(1px);
+}
 
-.content-library-window button:focus-visible,
-.content-library-window input:focus-visible,
-.content-library-window .content-library-card:focus-visible,
-.content-library-window .content-library-category-tab:focus-visible {
+.content-library-header button:focus-visible,
+.content-library-toolbar input:focus-visible,
+.content-library-toolbar button:focus-visible,
+.content-library-categories .content-library-category-tab:focus-visible {
   outline: 2px solid var(--content-library-brass-bright);
   outline-offset: 2px;
   box-shadow: 0 0 0 3px rgba(245, 215, 142, 0.45);
 }
 
+.content-library-body button:focus-visible,
+.content-library-body input:focus-visible,
+.content-library-body .content-library-card:focus-visible,
+.content-library-body .content-library-detail-link:focus-visible {
+  outline: 2px solid var(--content-library-brass-deep);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px rgba(168, 118, 43, 0.35);
+}
 
 .content-library-list::-webkit-scrollbar,
 .content-library-inspector::-webkit-scrollbar {
@@ -909,7 +922,6 @@
   background: #96866b;
 }
 
-
 .content-library-sr-only {
   position: absolute;
   width: 1px;
@@ -921,7 +933,6 @@
   white-space: nowrap;
   border: 0;
 }
-
 
 @media (max-width: 760px) {
   .content-library-window {

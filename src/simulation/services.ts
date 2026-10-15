@@ -12,12 +12,14 @@ import {compileFlumeCourse} from './flume-native.js';
 import {commerceProfileId,facilityProduct,facilityStockCost,productRule} from '../content/consumables.js';
 import {merchandiseProfileId,type InformationProducts} from '../content/merchandise.js';
 import {gradualRestroomProfile} from '../content/gradual-restroom.js';
+import {atmProfile} from '../content/atm.js';
 
-export type FacilityKind='food'|'drink'|'restroom'|'information';
+export type FacilityKind='food'|'drink'|'restroom'|'information'|'atm';
 type FacilityBase={id:number,instanceId:number,content:ContentIdentity,name:string,element:number,open:boolean};
-export type OrdinaryFacility=FacilityBase&{kind:Exclude<FacilityKind,'information'>,price:number,income:number,sales:number};
+export type OrdinaryFacility=FacilityBase&{kind:Exclude<FacilityKind,'information'|'atm'>,price:number,income:number,sales:number};
 export type InformationFacility=FacilityBase&{kind:'information',products:InformationProducts,umbrellaColour:number};
-export type Facility=OrdinaryFacility|InformationFacility;
+export type AtmFacility=FacilityBase&{kind:'atm',withdrawals:number};
+export type Facility=OrdinaryFacility|InformationFacility|AtmFacility;
 export type FacilityElement={id:number,kind:'facility',facility:number,tile:Tile,height:number,direction:Direction};
 export type Staff={id:number,role:'mechanic'|'handyman',point:PathPoint,next:PathPoint|null,goal:PathPoint|null,progress:number,patrol:number[],job:{ride:number,kind:'repair'|'inspection'}|null,work:number,completed:number,cleanup:CleanupJob|null};
 export type ServiceRules={buildPrice:number,defaultPrice:number,maxPrice:number,foodStock:number,drinkStock:number,needThreshold:number,relief:number,initialBladder:number,serviceTicks:number,weekTicks:number,upkeepWeeks:number,mechanicMonthlyWage:number,handymanMonthlyWage:number,rideUpkeep:number,facilityUpkeep:number,interestPer10000:number,staffWalkTicks:number,repairTicks:number,inspectionTicks:number,inspectionInterval:number};
@@ -39,7 +41,7 @@ export function chooseFacility(g:Guest,s:State,rules:Rules,index:ServiceIndex,ro
   const motive=(f:Facility)=>f.kind==='food'?g.hunger:f.kind==='drink'?g.thirst:g.bladder;
   let choice:{facility:number,goal:PathPoint,need:number,distance:number}|null=null;
   for(const f of s.facilities){
-    if(f.kind==='information')continue;
+    if(f.kind==='information'||f.kind==='atm')continue;
     if(!f.open||g.cash<f.price||(g.wrapper||g.held)&&f.kind!=='restroom'||motive(f)<rules.services.needThreshold)continue;
     const e=index.elements.get(f.element);if(e?.kind!=='facility')continue;const goal=facilityApproach(e);
     if(!publicPath(goal,index))continue;const distance=route.distance(g.point,goal,null);if(distance===null)continue;
@@ -52,6 +54,7 @@ export function recoverFacility(g:Guest,index:ServiceIndex,rules:Rules):boolean{
   const f=index.facilities.get(g.facility),e=f?index.elements.get(f.element):undefined;
   if(insideRestroom(g))return f?.kind==='restroom'&&!!gradualRestroomProfile(f.content,rules)&&e?.kind==='facility';
   if(f?.kind==='information')return !!rules.merchandiseProfiles?.[merchandiseProfileId]&&f.open&&g.informationCounter!==null&&e?.kind==='facility'&&publicPath(facilityApproach(e,g.informationCounter),index);
+  if(f?.kind==='atm')return !!atmProfile(f.content,rules)&&f.open&&e?.kind==='facility'&&publicPath(facilityApproach(e),index);
   return !!f&&f.open&&g.cash>=f.price&&(f.kind==='restroom'||!g.held)&&e?.kind==='facility'&&publicPath(facilityApproach(e),index);
 }
 export function insideRestroom(g:Guest):boolean{return g.phase==='using-restroom'||g.phase==='restroom-exit';}
@@ -89,7 +92,7 @@ export function stepRestroom(g:Guest,s:State,rules:Rules,index:ServiceIndex,rout
  const out=restroomExit(f,s,index,route);if(out)releaseRestroom(g,out);
 }
 export function buy(g:Guest,s:State,rules:Rules,index:ServiceIndex){
-  const f=index.facilities.get(g.facility!)!;ensure(f.kind!=='information','INVALID_CONTENT','Ordinary service cannot sell information merchandise.');const r=rules.services,product=facilityProduct(f.content,rules),stock=facilityStockCost(f,rules),price=f.price;
+  const f=index.facilities.get(g.facility!)!;ensure(f.kind!=='information'&&f.kind!=='atm','INVALID_CONTENT','Ordinary service cannot perform this facility operation.');const r=rules.services,product=facilityProduct(f.content,rules),stock=facilityStockCost(f,rules),price=f.price;
   const cash=BigInt(s.cash)+BigInt(price)-BigInt(stock);
   ensure(cash>=BigInt(-Number.MAX_SAFE_INTEGER)&&cash<=BigInt(Number.MAX_SAFE_INTEGER)&&integer(s.ledger.shopSales+price)&&integer(s.ledger.stock+stock)&&integer(f.income+price)&&integer(f.sales+1)&&integer(g.spent+price),'CAPACITY','Shop accounting capacity exhausted.');
   g.cash-=price;g.spent+=price;s.cash=Number(cash);s.ledger.shopSales+=price;s.ledger.stock+=stock;f.income+=price;f.sales++;
@@ -121,14 +124,14 @@ export function recoverStaff(s:State,index:ServiceIndex,route:Routing){
     if(staff.role!=='mechanic')continue;
     const ride=staff.job?index.rides.get(staff.job.ride):undefined;
     const station=staff.goal&&staff.job&&[...index.elements.values()].some(e=>e.kind==='portal'&&e.ride===staff.job!.ride&&same(portalApproach(e),staff.goal!));
-    if(staff.goal&&(!station||!ride||staff.job!.kind==='repair'&&!ride.broken||!accessible(staff,staff.goal,index,route)||staff.next&&!publicPath(staff.next,index)))clear(staff);
+    if(staff.goal&&(!station||!ride||staff.job!.kind==='repair'&&!ride.broken||staff.job!.kind==='inspection'&&ride.broken||!accessible(staff,staff.goal,index,route)||staff.next&&!publicPath(staff.next,index)))clear(staff);
   }
 }
 export function stepStaff(s:State,rules:Rules,index:ServiceIndex,route:Routing){
   const claimed=new Set(s.staff.filter(t=>t.job).map(t=>t.job!.ride));
   for(const staff of s.staff){
     if(staff.role!=='mechanic')continue;
-    if(staff.job){const ride=index.rides.get(staff.job.ride);if(!ride||staff.job.kind==='repair'&&!ride.broken){claimed.delete(staff.job.ride);clear(staff);}}
+    if(staff.job){const ride=index.rides.get(staff.job.ride);if(!ride||staff.job.kind==='repair'&&!ride.broken||staff.job.kind==='inspection'&&ride.broken){claimed.delete(staff.job.ride);clear(staff);}}
     if(staff.goal&&!accessible(staff,staff.goal,index,route)){if(staff.job)claimed.delete(staff.job.ride);clear(staff);}
     if(!staff.job){
       let choice:{ride:number,kind:'repair'|'inspection',goal:PathPoint,distance:number}|undefined;
@@ -149,7 +152,7 @@ export function stepStaff(s:State,rules:Rules,index:ServiceIndex,route:Routing){
     const ride=index.rides.get(staff.job.ride)!,channel=flumeProfile(ride.content,rules),profile=fixedProfile(ride.content,rules)??channel?.vehicle;
     if(profile&&staff.job.kind==='inspection'){
       if(ride.broken){claimed.delete(ride.id);clear(staff);continue;}
-      if(channel){const boat=index.boats.get(ride.id);if(ride.body!==undefined||!boat||!boatEditable(boat,compileFlumeCourse(ride,index.elements)))continue;}
+      if(channel){const boat=index.boats.get(ride.id);if(ride.body!==undefined||!boat||!boatEditable(boat,compileFlumeCourse(ride,index.elements,channel.pieces)))continue;}
       else{const session=index.carouselSessions.get(ride.id);if(!session||!carouselEditable(session))continue;}
     }
     staff.work++;const duration=staff.job.kind==='repair'?(profile?.repairTicks??rules.services.repairTicks):(profile?.inspectionTicks??rules.services.inspectionTicks);

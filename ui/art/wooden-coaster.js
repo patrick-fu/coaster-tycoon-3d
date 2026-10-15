@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import { portalMountYaw, woodenTransition } from '../simulation/wooden-placement.js';
+import { getGuestMaterials } from './guest-appearance.js';
 
 /**
  * Coordinate and Basis Helpers
@@ -40,27 +41,6 @@ const SEAT_NODE_NAMES = [
 
 const LAP_BAR_OPEN_ROTATION_X = Math.PI * 0.25;
 
-// Finite deterministic adult guest color palettes keyed by guest ID
-const SHIRT_PALETTE = ['#2b5c8f', '#a13333', '#2d7a4d', '#c27d2b', '#6b4c82', '#9c3a6e', '#2c757a', '#637a28'];
-const PANTS_PALETTE = ['#232b38', '#383d47', '#4b5563', '#1e293b', '#2e3828', '#4a382a', '#1f2937', '#334155'];
-const SKIN_PALETTE = ['#f7d5b2', '#edd0be', '#e0b594', '#d49b74', '#b87b52', '#8c5332', '#63371f', '#452615'];
-const HAIR_PALETTE = ['#1a1818', '#38251a', '#573822', '#8c592b', '#bfa054', '#615f5c', '#212124', '#7a311e'];
-
-function getGuestMaterials(ctx, guestId) {
-  const seed = Math.abs(guestId);
-  const shirtHex = SHIRT_PALETTE[seed % SHIRT_PALETTE.length];
-  const pantsHex = PANTS_PALETTE[(seed * 7) % PANTS_PALETTE.length];
-  const skinHex = SKIN_PALETTE[(seed * 13) % SKIN_PALETTE.length];
-  const hairHex = HAIR_PALETTE[(seed * 31) % HAIR_PALETTE.length];
-
-  return {
-    shirt: ctx.material(`wooden:passenger:shirt:${shirtHex}`, { color: shirtHex, roughness: 0.8 }),
-    pants: ctx.material(`wooden:passenger:pants:${pantsHex}`, { color: pantsHex, roughness: 0.85 }),
-    skin: ctx.material(`wooden:passenger:skin:${skinHex}`, { color: skinHex, roughness: 0.6 }),
-    hair: ctx.material(`wooden:passenger:hair:${hairHex}`, { color: hairHex, roughness: 0.9 }),
-  };
-}
-
 function buildSeatedGuest(ctx, guestId) {
   const mats = getGuestMaterials(ctx, guestId);
   const root = new THREE.Group();
@@ -91,14 +71,22 @@ function buildSeatedGuest(ctx, guestId) {
   ctx.add(root, geoThigh, mats.pants, [0.08, 0.08, 0.12]);
   ctx.add(root, geoShin, mats.pants, [-0.08, 0.00, 0.19]);
   ctx.add(root, geoShin, mats.pants, [0.08, 0.00, 0.19]);
-  ctx.add(root, geoFoot, mats.pants, [-0.08, -0.13, 0.20]);
-  ctx.add(root, geoFoot, mats.pants, [0.08, -0.13, 0.20]);
+  ctx.add(root, geoFoot, mats.boot, [-0.08, -0.13, 0.20]);
+  ctx.add(root, geoFoot, mats.boot, [0.08, -0.13, 0.20]);
 
   // Arms resting on lap bar, span <= 0.38m
   ctx.add(root, geoUpperArm, mats.shirt, [-0.17, 0.26, 0.00]);
   ctx.add(root, geoUpperArm, mats.shirt, [0.17, 0.26, 0.00]);
   ctx.add(root, geoForearm, mats.skin, [-0.14, 0.16, 0.15]);
   ctx.add(root, geoForearm, mats.skin, [0.14, 0.16, 0.15]);
+
+  const guestSelection = { kind: 'guest', id: guestId };
+  root.userData.isPassenger = true;
+  root.userData.guestId = guestId;
+  root.userData.selection = guestSelection;
+  root.traverse(child => {
+    child.userData.selection = guestSelection;
+  });
 
   return root;
 }
@@ -253,7 +241,9 @@ export function createWoodenVehicles(ctx, assets) {
         };
         cars.set(car.id, record);
       }
-      record.wrapper.userData.selection = { kind: 'ride', id: car.ride };
+      const rideSelection = { kind: 'ride', id: car.ride };
+      record.wrapper.userData.selection = rideSelection;
+      record.carClone.userData.selection = rideSelection;
 
       // Authoritative car body pose
       const bodyPos = simToThree(car.position);
@@ -563,16 +553,16 @@ function buildOpenTrack(ctx, parent, element, ride, assets) {
   }
 
   const matRailHead = ctx.material('wooden:track:rail-head', {
-    color: '#b6b5ad',
-    roughness: 0.42,
-    metalness: 0.25,
+    color: '#c5cbd2',
+    roughness: 0.28,
+    metalness: 0.85,
     ...sharedMaps,
   });
 
   const matRailFlangeWeb = ctx.material('wooden:track:rail-flange-web', {
-    color: '#4b5563',
-    roughness: 0.65,
-    metalness: 0.60,
+    color: '#424852',
+    roughness: 0.80,
+    metalness: 0.30,
     ...sharedMaps,
   });
 

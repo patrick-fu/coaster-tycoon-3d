@@ -89,7 +89,8 @@ export function eligibility(ride:Ride,elements:Elements,rules:Rules):Eligibility
     if(stations.length!==1)issues.push('The wooden candidate requires one connected station.');
     if(turns.length!==4||turns.some(turn=>turn!==turns[0]))issues.push('The wooden candidate supports one flat four-turn loop with a single turn direction.');
   }
-  if(flumeProfile(ride.content,rules)&&circuit){try{compileFlumeCourse(ride,elements);}catch(error){if(error instanceof Fault)issues.push(error.message);else throw error;}}
+  const channel=flumeProfile(ride.content,rules);
+  if(channel&&circuit){try{compileFlumeCourse(ride,elements,channel.pieces);}catch(error){if(error instanceof Fault)issues.push(error.message);else throw error;}}
   return{circuit,stations,issues};
 }
 

@@ -98,6 +98,15 @@ export function bindFacilityControls({
     const inputId = productId ? 'information-' + productId.slice('independent.'.length) + '-price' : 'facility-price';
     const applyBtn = $(inputId + '-apply');
     if (applyBtn) {
+      const priceInput = $(inputId);
+      if (priceInput) {
+        priceInput.onkeydown = (e) => {
+          if (e.key === 'Enter' && !e.isComposing && !e.repeat && !e.altKey && !e.ctrlKey && !e.metaKey && !e.shiftKey) {
+            e.preventDefault();
+            applyBtn.click();
+          }
+        };
+      }
       applyBtn.onclick = async () => {
         const current = getValidCurrent();
         if (!current) return;

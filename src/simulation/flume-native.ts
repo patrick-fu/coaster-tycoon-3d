@@ -1,4 +1,4 @@
-import type {Cell,Connector,Element,Track,Vector} from './types.js';
+import type {Cell,Connector,Element,PieceRule,Track,Vector} from './types.js';
 import {endpoint,same,turn} from './geometry.js';
 import {ensure,integer} from './validation.js';
 import {flumeCandidate,flumeLocalFrame,flumePieces,type FlumePieceId} from '../content/log-flume.js';
@@ -14,12 +14,13 @@ export function flumeFrame(track:Track,t:number){
  return{position:{x:(track.origin.x+point.x+16)*125,y:(track.origin.y+point.y+16)*125,z:(track.origin.z+local.point.z)*125},direction:{...direction,z:local.direction.z},up:{...up,z:local.up.z}};
 }
 
-export function compileFlumeCourse(ride:CourseRide,elements:Pick<ReadonlyMap<number,Element>,'get'>):FlumeCourse{
+export function compileFlumeCourse(ride:CourseRide,elements:Pick<ReadonlyMap<number,Element>,'get'>,selected:Readonly<Record<string,PieceRule>>=flumePieces):FlumeCourse{
  const spans:Span[]=[],pieces:FlumePieceId[]=[];let connector=ride.anchor,length=0,stationEnd=0,initialStation=true;
  ensure(ride.track.length>0&&new Set(ride.track).size===ride.track.length,'OPERATING_REQUIREMENTS','A unique channel circuit is required.');
  for(const id of ride.track){
   const track=elements.get(id);ensure(track?.kind==='track'&&track.ride===ride.id&&Object.hasOwn(flumePieces,track.piece),'GEOMETRY','Unknown or foreign channel piece.');
-  const kind=track.piece as FlumePieceId,piece=flumePieces[kind];
+  const kind=track.piece as FlumePieceId,piece=selected[kind];
+  ensure(piece,'GEOMETRY','Channel piece is absent from the receiving profile.');
   ensure(same(track.origin,connector)&&connector.pitch===piece.entry.pitch&&connector.bank===0,'GEOMETRY','Channel connectors must join with matching pitch and zero bank.');
   pieces.push(kind);if(!piece.station)initialStation=false;else ensure(initialStation,'OPERATING_REQUIREMENTS','The candidate has one initial contiguous station.');
   for(let i=1;i<piece.motion.samples.length;i++){
