@@ -1,7 +1,7 @@
 import { Engine } from './engine.js';
 export declare function createHost(engine: Engine): (message: unknown) => import("./types.js").Result<{
     id: number;
-    protocolVersion: 8;
+    protocolVersion: 9;
     result: {
         ok: true;
         value: void;
@@ -17,8 +17,8 @@ export declare function createHost(engine: Engine): (message: unknown) => import
     } | {
         ok: true;
         value: {
-            protocolVersion: 8;
-            contentVersion: 8;
+            protocolVersion: 9;
+            contentVersion: 9;
             coordinates: {
                 nativeUnitsPerTile: number;
                 nativeHeightStep: number;
@@ -273,6 +273,23 @@ export declare function createHost(engine: Engine): (message: unknown) => import
                 name: string;
                 element: number;
                 open: boolean;
+                kind: 'atm';
+                withdrawals: number;
+                content: {
+                    familyId: string;
+                    variantId: string;
+                    modeId: string;
+                };
+                presentation: import("../content/registry.js").Presentation;
+                cashDispensed: number;
+                using: number;
+                guestIds: number[];
+            } | {
+                id: number;
+                instanceId: number;
+                name: string;
+                element: number;
+                open: boolean;
                 kind: 'information';
                 umbrellaColour: number;
                 content: {
@@ -307,7 +324,7 @@ export declare function createHost(engine: Engine): (message: unknown) => import
                 name: string;
                 element: number;
                 open: boolean;
-                kind: Exclude<import("./services.js").FacilityKind, 'information'>;
+                kind: Exclude<import("./services.js").FacilityKind, 'information' | 'atm'>;
                 price: number;
                 income: number;
                 sales: number;
@@ -365,7 +382,7 @@ export declare function createHost(engine: Engine): (message: unknown) => import
     } | {
         ok: true;
         value: {
-            contentVersion: 8;
+            contentVersion: 9;
             families: {
                 id: string;
                 label: string;
@@ -413,6 +430,10 @@ export declare function createHost(engine: Engine): (message: unknown) => import
                             service: 'information';
                             profileId: 'independent.information-kiosk-v1';
                         } | {
+                            kind: 'facility';
+                            service: 'atm';
+                            profileId: 'independent.atm-v1';
+                        } | {
                             kind: 'unimplemented';
                             referenceShape: string;
                         };
@@ -442,6 +463,10 @@ export declare function createHost(engine: Engine): (message: unknown) => import
                             kind: 'service';
                             service: 'information';
                             profileId: 'independent.merchandise-v1';
+                        } | {
+                            kind: 'service';
+                            service: 'atm';
+                            profileId: 'independent.atm-withdrawal-v1';
                         } | {
                             kind: 'unimplemented';
                         };

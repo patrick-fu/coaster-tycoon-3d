@@ -1,5 +1,5 @@
 import type { ProductId } from './consumables.js';
-export declare const CONTENT_VERSION: 8;
+export declare const CONTENT_VERSION: 9;
 export type ContentIdentity = {
     familyId: string;
     variantId: string;
@@ -33,6 +33,10 @@ type Construction = {
     service: 'information';
     profileId: 'independent.information-kiosk-v1';
 } | {
+    kind: 'facility';
+    service: 'atm';
+    profileId: 'independent.atm-v1';
+} | {
     kind: 'unimplemented';
     referenceShape: string;
 };
@@ -62,6 +66,10 @@ type Operation = {
     kind: 'service';
     service: 'information';
     profileId: 'independent.merchandise-v1';
+} | {
+    kind: 'service';
+    service: 'atm';
+    profileId: 'independent.atm-withdrawal-v1';
 } | {
     kind: 'unimplemented';
 };
@@ -93,6 +101,10 @@ export type Presentation = {
     kind: 'procedural-facility';
     service: ServiceKind;
     profileId: 'classic-candidate-v1';
+} | {
+    kind: 'detailed-facility';
+    service: 'atm';
+    profileId: 'detailed-atm-v1';
 } | {
     kind: 'unimplemented';
 };
@@ -128,12 +140,13 @@ export declare function consumableFacilityContent(product: ProductId): ContentId
 export declare function detailedFacilityContent(product: ProductId): ContentIdentity;
 export declare function legacyFacilityContent(service: ServiceKind): ContentIdentity;
 export declare function gradualRestroomContent(): ContentIdentity;
+export declare function atmContent(): ContentIdentity;
 export declare function informationFacilityContent(): ContentIdentity;
-export declare function historicalContentAllowed(value: ContentIdentity, kind: 'ride' | ServiceKind | 'information', version: number): boolean;
+export declare function historicalContentAllowed(value: ContentIdentity, kind: 'ride' | ServiceKind | 'information' | 'atm', version: number): boolean;
 export declare function resolveContent(value: unknown): ResolvedContent;
-export declare function executableContent(value: unknown, kind: 'ride' | ServiceKind | 'information'): ContentIdentity;
+export declare function executableContent(value: unknown, kind: 'ride' | ServiceKind | 'information' | 'atm'): ContentIdentity;
 export declare function catalogue(availableProfiles?: ReadonlySet<string>): {
-    contentVersion: 8;
+    contentVersion: 9;
     families: Family[];
     variants: {
         id: string;

@@ -1,11 +1,12 @@
 import { Engine } from '../simulation/engine.js';
 import { defaultScenery } from '../simulation/scenery.js';
+import { quarterCurveSamples } from './curve-samples.js';
 const samples = (end, slope) => Array.from({ length: 17 }, (_, i) => ({ x: end * i / 16, y: 0, z: slope(i / 16) }));
 const piece = (price, z = 0, pitchIn = 0, pitchOut = 0) => ({ price, station: false, entry: { pitch: pitchIn, bank: 0 }, end: { x: 32, y: 0, z, turn: 0, pitch: pitchOut, bank: 0 }, cells: [{ x: 0, y: 0, low: Math.min(0, z), high: Math.max(16, z + 16), mask: 15 }], motion: { samples: samples(32, t => z * t), chain: false, brake: null } });
 const flat = piece(61);
 function curve(sign) {
     const radius = 64;
-    return { ...flat, price: 160, end: { x: radius, y: sign * radius, z: 0, turn: sign, pitch: 0, bank: 0 }, cells: sign === 1 ? [{ x: 0, y: 0, low: 0, high: 16, mask: 15 }, { x: 32, y: 0, low: 0, high: 16, mask: 15 }, { x: 32, y: 32, low: 0, high: 16, mask: 15 }] : [{ x: 0, y: -32, low: 0, high: 16, mask: 15 }, { x: 32, y: -32, low: 0, high: 16, mask: 15 }, { x: 32, y: -64, low: 0, high: 16, mask: 15 }], motion: { samples: Array.from({ length: 33 }, (_, i) => i === 0 ? { x: 0, y: 0, z: 0 } : i === 32 ? { x: radius, y: sign * radius, z: 0 } : { x: radius * Math.sin(i * Math.PI / 64), y: sign * radius * (1 - Math.cos(i * Math.PI / 64)), z: 0 }), chain: false, brake: null } };
+    return { ...flat, price: 160, end: { x: radius, y: sign * radius, z: 0, turn: sign, pitch: 0, bank: 0 }, cells: sign === 1 ? [{ x: 0, y: 0, low: 0, high: 16, mask: 15 }, { x: 32, y: 0, low: 0, high: 16, mask: 15 }, { x: 32, y: 32, low: 0, high: 16, mask: 15 }] : [{ x: 0, y: -32, low: 0, high: 16, mask: 15 }, { x: 32, y: -32, low: 0, high: 16, mask: 15 }, { x: 32, y: -64, low: 0, high: 16, mask: 15 }], motion: { samples: quarterCurveSamples(32, sign, 64), chain: false, brake: null } };
 }
 export const steelRules = {
     scenery: defaultScenery,

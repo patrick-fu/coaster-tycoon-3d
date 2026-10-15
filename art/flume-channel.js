@@ -482,40 +482,55 @@ export function buildFlumeChannel(ctx, parent, track, frames, materials, passage
 
   // 6. Materials & Final Piece Batches
   const rippleMap = ctx.texture('flume:water:ripples', 128, 128, (c, w, h) => {
-    c.fillStyle = '#2c7686';
+    c.fillStyle = '#124855';
     c.fillRect(0, 0, w, h);
-    for (let y = 0; y < h; y += 16) {
-      for (let x = 0; x < w; x += 16) {
-        const k = Math.sin((x / w) * Math.PI * 4) * Math.cos((y / h) * Math.PI * 4);
-        c.fillStyle = k > 0 ? 'rgba(64, 150, 168, 0.28)' : 'rgba(26, 76, 88, 0.28)';
+
+    // Restrained teal depth: ambient trough shading
+    for (let i = 0; i < 2; i++) {
+      const ym = i * 64 + 32;
+      c.fillStyle = 'rgba(8, 28, 36, 0.24)';
+      c.beginPath();
+      for (let x = 0; x <= w; x += 4) c[x === 0 ? 'moveTo' : 'lineTo'](x, ym - 16 + 4.5 * Math.sin((x / w) * Math.PI * 2));
+      for (let x = w; x >= 0; x -= 4) c.lineTo(x, ym + 18 + 4.5 * Math.sin((x / w) * Math.PI * 2));
+      c.closePath();
+      c.fill();
+    }
+
+    // Broad irregular subtle caustic bands and sparse low-contrast foam
+    for (const b of [{ y: 30, p: 0.2, fx: 22 }, { y: 94, p: 2.4, fx: 76 }]) {
+      const wave = x => b.y + 6.0 * Math.sin((x / w) * Math.PI * 2 + b.p) + 2.2 * Math.sin((x / w) * Math.PI * 4 + b.p * 1.5);
+      const halfW = x => 3.6 + 2.2 * Math.cos((x / w) * Math.PI * 2 + b.p + 0.7) + 1.2 * Math.sin((x / w) * Math.PI * 4 + b.p);
+
+      for (const [col, scale] of [['rgba(48, 156, 172, 0.16)', 1.5], ['rgba(96, 206, 218, 0.22)', 0.7]]) {
+        c.fillStyle = col;
         c.beginPath();
-        c.arc((x + 8) % w, (y + 8) % h, 10, 0, Math.PI * 2);
+        for (let x = 0; x <= w; x += 4) c[x === 0 ? 'moveTo' : 'lineTo'](x, wave(x) - halfW(x) * scale);
+        for (let x = w; x >= 0; x -= 4) c.lineTo(x, wave(x) + halfW(x) * scale);
+        c.closePath();
         c.fill();
       }
-    }
-    c.strokeStyle = 'rgba(218, 246, 252, 0.42)';
-    c.lineWidth = 1.2;
-    c.lineCap = 'round';
-    for (let row = 0; row < 8; row++) {
-      const y = row * 16 + 8;
-      const xOff = (row * 37) % 32;
-      for (let xBase = xOff - 32; xBase < w + 32; xBase += 32) {
-        const len = 14 + (row % 3) * 3;
-        c.beginPath();
-        c.moveTo(xBase, y);
-        c.quadraticCurveTo(xBase + len * 0.5, y - 1.5, xBase + len, y);
-        c.stroke();
-      }
+
+      // Sparse low-contrast foam accent along swell crest
+      c.strokeStyle = 'rgba(215, 244, 248, 0.24)';
+      c.lineWidth = 1.6;
+      c.lineCap = 'round';
+      c.beginPath();
+      for (let x = b.fx; x <= b.fx + 24; x += 2) c[x === b.fx ? 'moveTo' : 'lineTo'](x, wave(x) - halfW(x) * 0.35);
+      c.stroke();
+      c.fillStyle = 'rgba(225, 248, 252, 0.20)';
+      c.beginPath();
+      c.arc(b.fx + 27, wave(b.fx + 27) - 1, 1.1, 0, Math.PI * 2);
+      c.fill();
     }
   });
 
   const matWater = ctx.material('flume:water:standard', {
-    color: '#d6f2f7',
+    color: '#ffffff',
     map: rippleMap,
-    roughness: 0.18,
-    metalness: 0.08,
+    roughness: 0.12,
+    metalness: 0.02,
     transparent: true,
-    opacity: 0.82,
+    opacity: 0.88,
     depthWrite: false,
   });
 
@@ -524,16 +539,31 @@ export function buildFlumeChannel(ctx, parent, track, frames, materials, passage
   mergeBucket(ctx, pieceGroup, materials.boards, buckets.boards);
   mergeBucket(ctx, pieceGroup, materials.roof ?? materials.boards, buckets.roof);
   mergeBucket(ctx, pieceGroup, materials.metal, buckets.metal);
-  mergeBucket(ctx, pieceGroup, matWater, buckets.water);
+  const waterMesh = mergeBucket(ctx, pieceGroup, matWater, buckets.water);
 
   for (const g of disposables) {
     g.dispose();
   }
 
   parent.add(pieceGroup);
+
+  if (waterMesh && ctx) {
+    ctx.flumeWaterMap = rippleMap;
+    if (ctx.packet && Number.isSafeInteger(ctx.packet.tick) && ctx.packet.tick >= 0) {
+      setFlumeWaterTick(ctx, ctx.packet.tick);
+    }
+  }
+
   return parent;
   } catch (error) {
     for (const geometry of disposables) geometry.dispose();
     throw error;
   }
+}
+
+export function setFlumeWaterTick(ctx, tick) {
+  if (!ctx || !ctx.flumeWaterMap) return;
+  if (!Number.isSafeInteger(tick) || tick < 0) return;
+  const r = tick % 160;
+  ctx.flumeWaterMap.offset.y = ((160 - r) % 160) / 160;
 }

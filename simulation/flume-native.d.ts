@@ -1,4 +1,4 @@
-import type { Cell, Connector, Element, Track } from './types.js';
+import type { Cell, Connector, Element, PieceRule, Track } from './types.js';
 import { type FlumePieceId } from '../content/log-flume.js';
 type CourseRide = {
     id: number;
@@ -37,7 +37,7 @@ export declare function flumeFrame(track: Track, t: number): {
         z: number;
     };
 };
-export declare function compileFlumeCourse(ride: CourseRide, elements: Pick<ReadonlyMap<number, Element>, 'get'>): FlumeCourse;
+export declare function compileFlumeCourse(ride: CourseRide, elements: Pick<ReadonlyMap<number, Element>, 'get'>, selected?: Readonly<Record<string, PieceRule>>): FlumeCourse;
 export declare function flumeCourseFrame(course: FlumeCourse, position: number): {
     position: {
         x: number;

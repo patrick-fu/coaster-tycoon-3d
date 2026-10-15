@@ -7,6 +7,7 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="content-browser.css">
+  <link rel="stylesheet" href="atm-controls.css">
   <script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
 </head>
 <body inert>
@@ -116,12 +117,46 @@
     <strong id="tool-label">Park inspector</strong>
     <span id="tool-help">Select a ride, guest or staff member.</span>
   </div>
+  <div id="build-context" class="build-context" hidden>
+    <div class="build-context-item build-target-item">
+      <span class="build-context-label" id="build-action-tag">Target</span>
+      <strong id="build-target" class="build-target-name">—</strong>
+    </div>
+    <div class="build-context-item build-endpoint-item" id="build-endpoint-item">
+      <span class="build-context-label" id="build-endpoint-tag">Endpoint</span>
+      <span id="build-endpoint" class="build-endpoint-val">—</span>
+    </div>
+    <details id="construction-details" class="construction-details" hidden>
+      <summary class="construction-details-summary" aria-label="Full construction target and endpoint">Details</summary>
+      <div class="construction-details-panel" role="group" aria-label="Full construction context">
+        <div class="construction-detail-row">
+          <span class="construction-detail-label">Target</span>
+          <span id="construction-detail-target" class="construction-detail-value">—</span>
+        </div>
+        <div class="construction-detail-row construction-detail-endpoint-row">
+          <span class="construction-detail-label">Endpoint</span>
+          <span id="construction-detail-endpoint" class="construction-detail-value">—</span>
+        </div>
+      </div>
+    </details>
+  </div>
   <div id="palette"></div>
-  <div class="placement-controls">
-    <label for="height">Height <input id="height" type="number" min="0" max="256" step="8" value="32"></label>
-    <label for="direction">Facing <select id="direction"><option value="0">East</option><option value="1">South</option><option value="2">West</option><option value="3">North</option></select></label>
+  <div class="placement-controls" id="placement-controls">
+    <label for="height" id="height-label">Height <input id="height" type="number" min="0" max="256" step="8" value="32"></label>
+    <label for="direction" id="direction-label">Facing <select id="direction"><option value="0">East</option><option value="1">South</option><option value="2">West</option><option value="3">North</option></select></label>
     <span id="position">—</span>
   </div>
+  <div id="quote-status" class="quote-status" role="status" aria-live="polite" hidden>
+    <div class="quote-status-header">
+      <span class="quote-status-indicator" aria-hidden="true"></span>
+      <span class="quote-status-badge" id="quote-status-badge">Quote</span>
+    </div>
+    <div class="quote-status-message" id="quote-status-message"></div>
+  </div>
+  <button id="cancel-build" class="cancel-build-btn" type="button" title="Cancel construction (Esc)" hidden>
+    <svg class="btn-icon" viewBox="0 0 16 16" width="12" height="12" aria-hidden="true" focusable="false"><line x1="3" y1="3" x2="13" y2="13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="13" y1="3" x2="3" y2="13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    <span>Cancel</span>
+  </button>
 </footer>
 <dialog id="finance-dialog">
   <form method="dialog">

@@ -42,9 +42,9 @@ export function flumeInspection(data, boat, { escape, money, stat, row }) {
   return `<div class="lead">${escape(data.name)}</div>` +
     `<div class="stats">${stats}</div>` +
     `<div class="actions">` +
-      `<button type="button" id="ride-open">Open</button>` +
-      `<button type="button" id="ride-test">Test</button>` +
-      `<button type="button" id="ride-close">Close</button>` +
+      `<button type="button" id="ride-open" class="${data.status==='open'?'active':''}" aria-pressed="${data.status==='open'}">Open</button>` +
+      `<button type="button" id="ride-test" class="${data.status==='testing'?'active':''}" aria-pressed="${data.status==='testing'}">Test</button>` +
+      `<button type="button" id="ride-close" class="${data.status==='closed'?'active':''}" aria-pressed="${data.status==='closed'}">Close</button>` +
     `</div>` +
     `<div class="inspection-form">` +
       `<label for="ride-price">Ticket Price</label>` +

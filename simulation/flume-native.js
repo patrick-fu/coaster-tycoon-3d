@@ -7,14 +7,15 @@ export function flumeFrame(track, t) {
     const local = flumeLocalFrame(track.piece, t), point = turn(local.point.x, local.point.y, track.origin.direction), direction = turn(local.direction.x, local.direction.y, track.origin.direction), up = turn(local.up.x, local.up.y, track.origin.direction);
     return { position: { x: (track.origin.x + point.x + 16) * 125, y: (track.origin.y + point.y + 16) * 125, z: (track.origin.z + local.point.z) * 125 }, direction: { ...direction, z: local.direction.z }, up: { ...up, z: local.up.z } };
 }
-export function compileFlumeCourse(ride, elements) {
+export function compileFlumeCourse(ride, elements, selected = flumePieces) {
     const spans = [], pieces = [];
     let connector = ride.anchor, length = 0, stationEnd = 0, initialStation = true;
     ensure(ride.track.length > 0 && new Set(ride.track).size === ride.track.length, 'OPERATING_REQUIREMENTS', 'A unique channel circuit is required.');
     for (const id of ride.track) {
         const track = elements.get(id);
         ensure(track?.kind === 'track' && track.ride === ride.id && Object.hasOwn(flumePieces, track.piece), 'GEOMETRY', 'Unknown or foreign channel piece.');
-        const kind = track.piece, piece = flumePieces[kind];
+        const kind = track.piece, piece = selected[kind];
+        ensure(piece, 'GEOMETRY', 'Channel piece is absent from the receiving profile.');
         ensure(same(track.origin, connector) && connector.pitch === piece.entry.pitch && connector.bank === 0, 'GEOMETRY', 'Channel connectors must join with matching pitch and zero bank.');
         pieces.push(kind);
         if (!piece.station)

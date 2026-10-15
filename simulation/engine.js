@@ -8,7 +8,7 @@ import { facilityApproach, recoverStaff, sharedCount, stepFinance, stepStaff, in
 import { amenityPoint, carriesWaste, recoverCleanup, stepHandymen } from './housekeeping.js';
 import { encodePatrol, inPatrol } from './patrol.js';
 import { project, validateView } from './view.js';
-import { legacyRuleJSON, v9RuleJSON, v10RuleJSON, v11RuleJSON, v12RuleJSON, v13RuleJSON, v14RuleJSON, resolveRideRules, rideFootprint, woodenProfile } from '../content/ride-profiles.js';
+import { legacyRuleJSON, v9RuleJSON, v10RuleJSON, v11RuleJSON, v12RuleJSON, v13RuleJSON, v14RuleJSON, v15RuleJSON, savedCurveRules, resolveRideRules, rideFootprint, woodenProfile } from '../content/ride-profiles.js';
 import { carouselCycleTicks, carouselEditable, fixedBodyCells, fixedProfile, newCarouselSession } from './carousel.js';
 import { qualifyWoodenCourse } from './wooden-motion.js';
 import { woodenInterface, woodenPortalCells } from './wooden-placement.js';
@@ -18,11 +18,12 @@ import { compileFlumeCourse, flumeGroundCells, flumeInterface } from './flume-na
 import { flumePortalCells, flumePortalInterface } from './flume-portal.js';
 import { boatEditable, boatQualified, createBoat, finishBoatUnloading, stepBoat } from './boat.js';
 import { sceneryTypes } from './scenery.js';
-import { CONTENT_VERSION, catalogue, executableContent, legacyRideContent, legacyFacilityContent, informationFacilityContent, historicalContentAllowed, resolveContent } from '../content/registry.js';
+import { CONTENT_VERSION, catalogue, executableContent, legacyRideContent, legacyFacilityContent, informationFacilityContent, atmContent, historicalContentAllowed, resolveContent } from '../content/registry.js';
 import { commerceProfileId, containerIds, facilityProduct, facilityStockCost, productRule } from '../content/consumables.js';
 import { resolveFacilityPlacement } from '../content/facility-profiles.js';
 import { emptyMerchandiseAccounts, informationProducts, isMerchandiseId, merchandiseIds, merchandiseProfileId, merchandiseProfile } from '../content/merchandise.js';
 import { gradualRestroomProfile } from '../content/gradual-restroom.js';
+import { atmProfile, hasAtmProfile, maxAtmWithdrawals, withdrawalAmount } from '../content/atm.js';
 const at = (t) => t.y * 256 + t.x;
 const pathKey = (x, y, z) => `${x},${y},${z}`;
 function validTile(v) { record(v, ['x', 'y']); ensure(integer(v.x, 0, 255) && integer(v.y, 0, 255), 'INVALID_COMMAND', 'Invalid tile coordinates.'); }
@@ -121,7 +122,7 @@ function command(value) {
         case 'place-facility':
             record(c, ['type', 'name', 'kind', 'tile', 'height', 'direction', ...(Object.hasOwn(c, 'content') ? ['content'] : [])]);
             validTile(c.tile);
-            ensure(typeof c.name === 'string' && c.name.length > 0 && c.name.length <= 80 && ['food', 'drink', 'restroom', 'information'].includes(c.kind) && integer(c.direction, 0, 3), 'INVALID_COMMAND', 'Invalid facility.');
+            ensure(typeof c.name === 'string' && c.name.length > 0 && c.name.length <= 80 && ['food', 'drink', 'restroom', 'information', 'atm'].includes(c.kind) && integer(c.direction, 0, 3), 'INVALID_COMMAND', 'Invalid facility.');
             break;
         case 'set-facility-open':
             record(c, ['type', 'facility', 'open']);
@@ -202,14 +203,14 @@ export class Engine {
                 owned[at(l.tile)] = l.owned;
             }
         }
-        this.state = { version: 15, contentVersion: CONTENT_VERSION, nextInstance: 1, amenities: [], litter: [], facilities: [], retiredShopIncome: 0, retiredStock: 0, retiredMerchandise: emptyMerchandiseAccounts(), retiredRideIncome: 0, staff: [], rules: JSON.stringify(this.rules), side: options.side, tick: 0, revision: 0, topologyRevision: 0, rng: options.seed, paused: false, initialCash: options.cash, cash: options.cash, loan: 0, maxLoan: options.maxLoan, spent: 0, refunded: 0, nextElement: 1, nextEntity: 1, people: { entry: null, open: false, guests: [], departedSpent: 0 }, ledger: { rideSales: 0, shopSales: 0, stock: 0, wages: 0, upkeep: 0, interest: 0 }, trains: [], carouselSessions: [], boats: [], terrain, water, owned, rides: [], elements: [] };
+        this.state = { version: 16, contentVersion: CONTENT_VERSION, nextInstance: 1, amenities: [], litter: [], facilities: [], retiredShopIncome: 0, retiredStock: 0, retiredMerchandise: emptyMerchandiseAccounts(), retiredRideIncome: 0, retiredAtmWithdrawals: 0, staff: [], rules: JSON.stringify(this.rules), side: options.side, tick: 0, revision: 0, topologyRevision: 0, rng: options.seed, paused: false, initialCash: options.cash, cash: options.cash, loan: 0, maxLoan: options.maxLoan, spent: 0, refunded: 0, nextElement: 1, nextEntity: 1, people: { entry: null, open: false, guests: [], departedSpent: 0, departedWithdrawn: 0 }, ledger: { rideSales: 0, shopSales: 0, stock: 0, wages: 0, upkeep: 0, interest: 0 }, trains: [], carouselSessions: [], boats: [], terrain, water, owned, rides: [], elements: [] };
         this.index = this.indexState(this.state);
     }
     get revision() { return `${this.session}:${this.generation}:${this.state.revision}`; }
     view(input) { return result(() => ({ ...project(this.state, this.rules, validateView(input, this.state.side), this.index.elements, id => this.course(this.ride(id)), id => this.channelCourse(this.ride(id))), commandRevision: this.revision })); }
     inspect(kind, id) { return result(() => { ensure(integer(id, 0), 'INVALID_COMMAND', 'Invalid selection identifier.'); const selected = kind === 'guest' ? this.index.guests.get(id) : kind === 'staff' ? this.index.staff.get(id) : kind === 'element' ? this.index.elements.get(id) : undefined; ensure(selected, 'UNKNOWN_ELEMENT', 'Selection is unavailable.'); return structuredClone(selected); }); }
     snapshot() { return structuredClone(this.state); }
-    catalogue() { return catalogue(new Set([...Object.keys(this.rules.rideProfiles ?? {}), ...Object.keys(this.rules.fixedProfiles ?? {}), ...Object.keys(this.rules.channelProfiles ?? {}), ...Object.keys(this.rules.commerceProfiles ?? {}), ...Object.keys(this.rules.facilityProfiles ?? {}), ...Object.keys(this.rules.merchandiseProfiles ?? {}), ...Object.keys(this.rules.restroomProfiles ?? {})])); }
+    catalogue() { return catalogue(new Set([...Object.keys(this.rules.rideProfiles ?? {}), ...Object.keys(this.rules.fixedProfiles ?? {}), ...Object.keys(this.rules.channelProfiles ?? {}), ...Object.keys(this.rules.commerceProfiles ?? {}), ...Object.keys(this.rules.facilityProfiles ?? {}), ...Object.keys(this.rules.merchandiseProfiles ?? {}), ...Object.keys(this.rules.restroomProfiles ?? {}), ...Object.keys(this.rules.atmProfiles ?? {})])); }
     exportSave() { return JSON.stringify(this.state); }
     restoreSave(input) {
         return result(() => {
@@ -222,8 +223,14 @@ export class Engine {
                 throw new Fault('INVALID_SAVE', 'Save is not valid JSON.');
             }
             let index;
+            const previousRules = this.rules, previousRoutes = this.routes;
+            let committed = false;
             try {
                 const legacy = candidate;
+                if (legacy?.version === 15 || legacy?.version === 16)
+                    this.rules = savedCurveRules(this.rules, legacy.rules, legacy.version);
+                // Receiving navigation must not populate caches belonging to the previous park.
+                this.routes = new Routes();
                 if (legacy?.version === 6) {
                     ensure(typeof legacy.rules === 'string' && Array.isArray(legacy.elements) && !legacy.elements.some(e => e?.kind === 'scenery'), 'INVALID_SAVE', 'Invalid legacy park.');
                     let previous;
@@ -235,7 +242,7 @@ export class Engine {
                     }
                     ensure(previous !== null && typeof previous === 'object' && !Array.isArray(previous), 'INVALID_SAVE', 'Invalid legacy rule profile.');
                     ensure(!Object.hasOwn(previous, 'scenery') && !Object.hasOwn(previous, 'rideProfiles') && !Object.hasOwn(previous, 'fixedProfiles') && !Object.hasOwn(previous, 'channelProfiles'), 'INVALID_SAVE', 'Invalid legacy rule profile.');
-                    ensure(!Object.hasOwn(previous, 'commerceProfiles') && !Object.hasOwn(previous, 'facilityProfiles') && !Object.hasOwn(previous, 'merchandiseProfiles') && !Object.hasOwn(previous, 'restroomProfiles'), 'INVALID_SAVE', 'Legacy rules cannot contain later commerce or facility placement.');
+                    ensure(!Object.hasOwn(previous, 'commerceProfiles') && !Object.hasOwn(previous, 'facilityProfiles') && !Object.hasOwn(previous, 'merchandiseProfiles') && !Object.hasOwn(previous, 'restroomProfiles') && !Object.hasOwn(previous, 'atmProfiles'), 'INVALID_SAVE', 'Legacy rules cannot contain later commerce or facility placement.');
                     legacy.rules = legacyRuleJSON(validateRules(previous));
                     legacy.version = 7;
                 }
@@ -278,21 +285,37 @@ export class Engine {
                 }
                 if (legacy?.version === 14) {
                     this.indexState(candidate, 14);
-                    Object.assign(candidate, { version: 15, contentVersion: CONTENT_VERSION, rules: JSON.stringify(this.rules) });
+                    Object.assign(candidate, { version: 15, contentVersion: 8, rules: v15RuleJSON(this.rules) });
+                }
+                if (legacy?.version === 15) {
+                    this.indexState(candidate, 15);
+                    for (const guest of candidate.people.guests) {
+                        guest.withdrawn = 0;
+                        guest.atmRefusal = null;
+                    }
+                    candidate.people.departedWithdrawn = 0;
+                    Object.assign(candidate, { version: 16, contentVersion: CONTENT_VERSION, rules: JSON.stringify(this.rules), retiredAtmWithdrawals: 0 });
                 }
                 index = this.indexState(candidate);
+                this.state = candidate;
+                this.index = index;
+                this.courses.clear();
+                this.channels.clear();
+                this.routes = new Routes();
+                this.generation++;
+                committed = true;
             }
             catch (e) {
                 if (e instanceof Fault)
                     throw new Fault(e.code === 'WRONG_RULES' ? 'WRONG_RULES' : 'INVALID_SAVE', e.message);
                 throw e;
             }
-            this.state = candidate;
-            this.index = index;
-            this.courses.clear();
-            this.channels.clear();
-            this.routes = new Routes();
-            this.generation++;
+            finally {
+                if (!committed) {
+                    this.rules = previousRules;
+                    this.routes = previousRoutes;
+                }
+            }
         });
     }
     quote(input) { return result(() => { const p = this.plan(command(input)); this.finances(p); return { revision: this.revision, cost: p.cost, cells: structuredClone(p.cells), ...(p.endpoint ? { endpoint: { ...p.endpoint } } : {}) }; }); }
@@ -453,8 +476,8 @@ export class Engine {
     } return course; }
     trackRide(ride) { ensure(ride.body === undefined, 'INVALID_CONTENT', 'This command requires ordered track.'); return ride; }
     tracked(ride) { ensure(ride.body === undefined && !flumeProfile(ride.content, this.rules), 'INVALID_CONTENT', 'This command requires a coaster train.'); return ride; }
-    channelCourse(ride) { const tracked = this.trackRide(ride); ensure(flumeProfile(ride.content, this.rules), 'INVALID_CONTENT', 'A channel course requires its receiving profile.'); let course = this.channels.get(ride.id); if (!course) {
-        course = compileFlumeCourse(tracked, this.index.elements);
+    channelCourse(ride) { const tracked = this.trackRide(ride), profile = flumeProfile(ride.content, this.rules); ensure(profile, 'INVALID_CONTENT', 'A channel course requires its receiving profile.'); let course = this.channels.get(ride.id); if (!course) {
+        course = compileFlumeCourse(tracked, this.index.elements, profile.pieces);
         this.channels.set(ride.id, course);
     } return course; }
     editable(ride) { if (ride.body !== undefined) {
@@ -501,7 +524,7 @@ export class Engine {
         if (e.kind === 'facility') {
             const f = index.facilities.get(e.facility);
             ensure(f, 'INVALID_CONTENT', 'Facility placement requires its constructed instance.');
-            const profile = resolveFacilityPlacement(f.content ?? (f.kind === 'information' ? informationFacilityContent() : legacyFacilityContent(f.kind)), this.rules);
+            const profile = resolveFacilityPlacement(f.content ?? (f.kind === 'atm' ? atmContent() : f.kind === 'information' ? informationFacilityContent() : legacyFacilityContent(f.kind)), this.rules);
             return [{ x: e.tile.x, y: e.tile.y, low: e.height, high: e.height + profile.height, mask: 15 }];
         }
         return [{ x: e.tile.x, y: e.tile.y, low: e.height, high: e.height + (e.kind === 'scenery' ? this.rules.scenery[e.sceneryType].height : 16), mask: e.kind === 'amenity' ? 1 : 15 }];
@@ -810,14 +833,14 @@ export class Engine {
                 return { cost: -Math.floor(this.rules.housekeeping.buildPrice * this.rules.refundPerThousand / 1000), category: 'refund', cells: [], commit: () => { this.remove(e); this.state.amenities = this.state.amenities.filter(t => t.id !== a.id); this.index.amenities.delete(a.id); } };
             }
             case 'place-facility': {
-                const content = executableContent(Object.hasOwn(c, 'content') ? c.content : c.kind === 'information' ? informationFacilityContent() : legacyFacilityContent(c.kind), c.kind), product = facilityProduct(content, this.rules);
+                const content = executableContent(Object.hasOwn(c, 'content') ? c.content : c.kind === 'atm' ? atmContent() : c.kind === 'information' ? informationFacilityContent() : legacyFacilityContent(c.kind), c.kind), product = facilityProduct(content, this.rules);
                 ensure(integer(this.state.nextInstance + 1), 'CAPACITY', 'Instance identifier capacity exhausted.');
                 ensure(this.state.rides.length + this.state.facilities.length < LIMITS.rideSlots && this.state.nextElement < Number.MAX_SAFE_INTEGER, 'CAPACITY', 'Facility slots or element identifiers exhausted.');
                 let id = 0;
                 while (this.index.rides.has(id) || this.index.facilities.has(id))
                     id++;
                 const e = { id: this.state.nextElement, kind: 'facility', facility: id, tile: c.tile, height: c.height, direction: c.direction };
-                const f = c.kind === 'information' ? { id, instanceId: this.state.nextInstance, content, name: c.name, kind: c.kind, element: e.id, open: false, products: informationProducts(this.rules), umbrellaColour: 11 } : { id, instanceId: this.state.nextInstance, content, name: c.name, kind: c.kind, element: e.id, open: false, price: gradualRestroomProfile(content, this.rules)?.defaultPrice ?? product?.rule.defaultPrice ?? this.rules.services.defaultPrice, income: 0, sales: 0 };
+                const f = c.kind === 'atm' ? { id, instanceId: this.state.nextInstance, content, name: c.name, kind: c.kind, element: e.id, open: false, withdrawals: 0 } : c.kind === 'information' ? { id, instanceId: this.state.nextInstance, content, name: c.name, kind: c.kind, element: e.id, open: false, products: informationProducts(this.rules), umbrellaColour: 11 } : { id, instanceId: this.state.nextInstance, content, name: c.name, kind: c.kind, element: e.id, open: false, price: gradualRestroomProfile(content, this.rules)?.defaultPrice ?? product?.rule.defaultPrice ?? this.rules.services.defaultPrice, income: 0, sales: 0 };
                 const overlay = { ...this.index, facilities: new Map(this.index.facilities).set(id, f) }, cells = this.cells(e, overlay);
                 this.clear(cells, this.state, overlay, null, e);
                 return { cost: this.rules.services.buildPrice, category: 'construction', cells, id, commit: () => { this.add(e, cells); this.state.facilities.push(f); this.index.facilities.set(id, f); this.state.nextInstance++; } };
@@ -830,7 +853,7 @@ export class Engine {
             case 'set-facility-price': {
                 const f = this.index.facilities.get(c.facility);
                 ensure(f, 'UNKNOWN_RIDE', 'Facility does not exist.');
-                ensure(f.kind !== 'information', 'INVALID_COMMAND', 'Information products require independent prices.');
+                ensure(f.kind !== 'information' && f.kind !== 'atm', 'INVALID_COMMAND', 'This facility has no ordinary sale price.');
                 ensure(c.price <= (facilityProduct(f.content, this.rules)?.rule.maxPrice ?? this.rules.services.maxPrice), 'CAPACITY', 'Facility price exceeds profile bounds.');
                 return { ...empty, commit: () => { f.price = c.price; } };
             }
@@ -846,6 +869,11 @@ export class Engine {
                 ensure(f, 'UNKNOWN_RIDE', 'Facility does not exist.');
                 const e = this.index.elements.get(f.element);
                 this.cells(e);
+                if (f.kind === 'atm') {
+                    const retired = BigInt(this.state.retiredAtmWithdrawals) + BigInt(f.withdrawals);
+                    ensure(retired <= BigInt(maxAtmWithdrawals), 'CAPACITY', 'Retired ATM history capacity exhausted.');
+                    return { cost: -Math.floor(this.rules.services.buildPrice * this.rules.refundPerThousand / 1000), category: 'refund', cells: [], commit: () => { this.remove(e); this.state.facilities = this.state.facilities.filter(t => t.id !== f.id); this.index.facilities.delete(f.id); this.state.retiredAtmWithdrawals = Number(retired); } };
+                }
                 if (f.kind === 'information') {
                     const merge = (id) => { const previous = this.state.retiredMerchandise[id], current = f.products[id], sales = BigInt(previous.sales) + BigInt(current.sales), income = BigInt(previous.income) + BigInt(current.income); ensure(sales <= BigInt(Number.MAX_SAFE_INTEGER) && income <= BigInt(Number.MAX_SAFE_INTEGER), 'CAPACITY', 'Retired merchandise capacity exhausted.'); return { sales: Number(sales), income: Number(income) }; };
                     const retired = { 'independent.map': merge('independent.map'), 'independent.umbrella': merge('independent.umbrella') };
@@ -942,17 +970,19 @@ export class Engine {
         }
     }
     indexState(s, legacy) {
-        const identified = legacy !== 7, fixed = legacy === undefined || legacy >= 10, channel = legacy === undefined || legacy >= 11, preCommerce = legacy !== undefined && legacy <= 11, merchandise = legacy === undefined || legacy >= 14;
-        record(s, ['amenities', 'litter', 'facilities', 'retiredShopIncome', 'retiredStock', 'staff', 'version', 'rules', 'side', 'tick', 'revision', 'topologyRevision', 'rng', 'paused', 'initialCash', 'cash', 'loan', 'maxLoan', 'spent', 'refunded', 'nextElement', 'nextEntity', 'people', 'ledger', 'trains', 'terrain', 'water', 'owned', 'rides', 'elements', ...(identified ? ['contentVersion', 'nextInstance'] : []), ...(fixed ? ['carouselSessions', 'retiredRideIncome'] : []), ...(channel ? ['boats'] : []), ...(merchandise ? ['retiredMerchandise'] : [])]);
-        ensure(s.version === (legacy ?? 15), 'INVALID_SAVE', 'Unsupported save version.');
-        ensure(s.rules === (legacy === 14 ? v14RuleJSON(this.rules) : legacy === 13 ? v13RuleJSON(this.rules) : legacy === 12 ? v12RuleJSON(this.rules) : legacy === 11 ? v11RuleJSON(this.rules) : legacy === 10 ? v10RuleJSON(this.rules) : legacy === 9 ? v9RuleJSON(this.rules) : legacy ? legacyRuleJSON(this.rules) : JSON.stringify(this.rules)), 'WRONG_RULES', 'Save rule profile differs from the engine.');
+        const identified = legacy !== 7, fixed = legacy === undefined || legacy >= 10, channel = legacy === undefined || legacy >= 11, preCommerce = legacy !== undefined && legacy <= 11, merchandise = legacy === undefined || legacy >= 14, atm = legacy === undefined;
+        record(s, ['amenities', 'litter', 'facilities', 'retiredShopIncome', 'retiredStock', 'staff', 'version', 'rules', 'side', 'tick', 'revision', 'topologyRevision', 'rng', 'paused', 'initialCash', 'cash', 'loan', 'maxLoan', 'spent', 'refunded', 'nextElement', 'nextEntity', 'people', 'ledger', 'trains', 'terrain', 'water', 'owned', 'rides', 'elements', ...(identified ? ['contentVersion', 'nextInstance'] : []), ...(fixed ? ['carouselSessions', 'retiredRideIncome'] : []), ...(channel ? ['boats'] : []), ...(merchandise ? ['retiredMerchandise'] : []), ...(atm ? ['retiredAtmWithdrawals'] : [])]);
+        ensure(s.version === (legacy ?? 16), 'INVALID_SAVE', 'Unsupported save version.');
+        ensure(s.rules === (legacy === 15 ? v15RuleJSON(this.rules) : legacy === 14 ? v14RuleJSON(this.rules) : legacy === 13 ? v13RuleJSON(this.rules) : legacy === 12 ? v12RuleJSON(this.rules) : legacy === 11 ? v11RuleJSON(this.rules) : legacy === 10 ? v10RuleJSON(this.rules) : legacy === 9 ? v9RuleJSON(this.rules) : legacy ? legacyRuleJSON(this.rules) : JSON.stringify(this.rules)), 'WRONG_RULES', 'Save rule profile differs from the engine.');
         if (identified)
-            ensure(s.contentVersion === (legacy === 8 ? 1 : legacy === 9 ? 2 : legacy === 10 ? 3 : legacy === 11 ? 4 : legacy === 12 ? 5 : legacy === 13 ? 6 : legacy === 14 ? 7 : CONTENT_VERSION) && integer(s.nextInstance, 1), 'INVALID_SAVE', 'Unsupported content version or invalid instance counter.');
+            ensure(s.contentVersion === (legacy === 8 ? 1 : legacy === 9 ? 2 : legacy === 10 ? 3 : legacy === 11 ? 4 : legacy === 12 ? 5 : legacy === 13 ? 6 : legacy === 14 ? 7 : legacy === 15 ? 8 : CONTENT_VERSION) && integer(s.nextInstance, 1), 'INVALID_SAVE', 'Unsupported content version or invalid instance counter.');
         ensure(integer(s.side, LIMITS.mapMin, LIMITS.mapMax) && integer(s.rng, 0, 0xffffffff) && typeof s.paused === 'boolean', 'INVALID_SAVE', 'Invalid world metadata.');
         for (const n of [s.tick, s.revision, s.topologyRevision, s.initialCash, s.loan, s.maxLoan, s.spent, s.refunded, s.retiredShopIncome, s.retiredStock])
             ensure(integer(n), 'INVALID_SAVE', 'Invalid clock or money field.');
         if (fixed)
             ensure(integer(s.retiredRideIncome), 'INVALID_SAVE', 'Invalid retired ride income.');
+        if (atm)
+            ensure(integer(s.retiredAtmWithdrawals, 0, maxAtmWithdrawals) && (hasAtmProfile(this.rules) || s.retiredAtmWithdrawals === 0), 'INVALID_SAVE', 'Invalid retired ATM history.');
         record(s.ledger, ['rideSales', 'shopSales', 'stock', 'wages', 'upkeep', 'interest']);
         for (const n of Object.values(s.ledger))
             ensure(integer(n), 'INVALID_SAVE', 'Invalid operating ledger.');
@@ -988,7 +1018,14 @@ export class Engine {
             this.validateMerchandiseAccounts(s.retiredMerchandise, false);
         for (const f of s.facilities) {
             ensure(f !== null && typeof f === 'object', 'INVALID_SAVE', 'Invalid facility record.');
-            if (f.kind === 'information' && merchandise) {
+            if (f.kind === 'atm') {
+                ensure(atm, 'INVALID_SAVE', 'Historical parks cannot contain an ATM.');
+                record(f, ['id', 'instanceId', 'content', 'name', 'kind', 'element', 'open', 'withdrawals']);
+                identity(f, f.kind);
+                atmProfile(f.content, this.rules);
+                ensure(integer(f.id, 0, 254) && !index.rides.has(f.id) && !index.facilities.has(f.id) && typeof f.name === 'string' && f.name.length > 0 && f.name.length <= 80 && integer(f.element, 1, s.nextElement - 1) && typeof f.open === 'boolean' && integer(f.withdrawals, 0, maxAtmWithdrawals), 'INVALID_SAVE', 'Invalid ATM record.');
+            }
+            else if (f.kind === 'information' && merchandise) {
                 record(f, ['id', 'instanceId', 'content', 'name', 'kind', 'element', 'open', 'products', 'umbrellaColour']);
                 identity(f, f.kind);
                 this.validateMerchandiseAccounts(f.products, true);
@@ -1146,7 +1183,7 @@ export class Engine {
             const ride = index.rides.get(boat.ride), profile = ride ? flumeProfile(ride.content, this.rules) : null;
             ensure(integer(boat.id, 1, s.nextEntity - 1) && !ids.has(boat.id) && integer(boat.ride, 0, 254) && ride && ride.body === undefined && profile && !index.boats.has(boat.ride) && !index.trains.has(boat.ride), 'INVALID_SAVE', 'Invalid boat identity or membership.');
             ids.add(boat.id);
-            const course = compileFlumeCourse(ride, index.elements), p = profile.vehicle;
+            const course = compileFlumeCourse(ride, index.elements, profile.pieces), p = profile.vehicle;
             ensure(Array.isArray(boat.seats) && boat.seats.length === 4 && boat.seats.every(id => id === null || integer(id, 1)) && ['loading', 'running', 'unloading'].includes(boat.phase) && integer(boat.position, 0, course.length - 1) && integer(boat.travelled, 0, course.length) && integer(boat.speed, 0, 1000000000) && integer(boat.wait, 0, p.maxLoadTicks - 1) && integer(boat.laps, 0, s.tick) && typeof boat.docking === 'boolean' && [null, 'testing', 'paid'].includes(boat.mode), 'INVALID_SAVE', 'Invalid boat motion or ordered occupants.');
             ensure(boat.position === (course.dock + boat.travelled) % course.length, 'INVALID_SAVE', 'Boat position disagrees with its current travel.');
             const occupied = boat.seats.some(id => id !== null);
@@ -1188,20 +1225,31 @@ export class Engine {
                 ensure(ride.status === 'closed' || index.boats.has(ride.id), 'INVALID_SAVE', 'Operating channel has no boat.');
     }
     validatePeople(s, index, legacy) {
-        const preCommerce = legacy !== undefined && legacy <= 11, merchandise = legacy === undefined || legacy >= 14;
-        record(s.people, ['entry', 'open', 'guests', 'departedSpent']);
+        const preCommerce = legacy !== undefined && legacy <= 11, merchandise = legacy === undefined || legacy >= 14, atm = legacy === undefined;
+        record(s.people, ['entry', 'open', 'guests', 'departedSpent', ...(atm ? ['departedWithdrawn'] : [])]);
         ensure(typeof s.people.open === 'boolean' && integer(s.people.departedSpent) && Array.isArray(s.people.guests) && s.people.guests.length <= LIMITS.sharedEntities, 'INVALID_SAVE', 'Invalid park guest state.');
+        if (atm)
+            ensure(integer(s.people.departedWithdrawn) && s.people.departedWithdrawn % withdrawalAmount === 0 && (hasAtmProfile(this.rules) || s.people.departedWithdrawn === 0), 'INVALID_SAVE', 'Invalid departed withdrawal total.');
         if (s.people.entry !== null) {
             validPoint(s.people.entry);
             this.owned(s.people.entry, s);
         }
         ensure(!s.people.open || s.people.entry !== null && index.paths.get(pathKey(s.people.entry.x, s.people.entry.y, s.people.entry.z))?.queueFor === null, 'INVALID_SAVE', 'Open park has no public entrance.');
         const ids = new Set([...s.trains.flatMap(t => t.carIds), ...Array.from(index.boats.values(), b => b.id)]), admittedCounts = new Map();
-        let payments = BigInt(s.people.departedSpent);
+        let payments = BigInt(s.people.departedSpent), withdrawn = BigInt(atm ? s.people.departedWithdrawn : 0);
         for (const g of s.people.guests) {
-            record(g, ['navigationRide', 'amenity', 'restProgress', 'wrapper', 'wrapperTick', 'facility', 'serviceProgress', 'bladder', 'id', 'point', 'phase', 'goal', 'next', 'walkProgress', 'destination', 'entrance', 'exit', 'queueRide', 'seat', 'initialCash', 'cash', 'spent', 'fareLimit', 'forceTolerance', 'hunger', 'thirst', 'nausea', 'happiness', 'energy', 'queuedAt', 'lastRide', 'lastRideTick', 'ridesTaken', 'thought', ...(!preCommerce ? ['held'] : []), ...(merchandise ? ['merchandise', 'informationCounter'] : [])]);
-            const admitted = insideRestroom(g);
-            ensure(!admitted || legacy === undefined, 'INVALID_SAVE', 'Historical parks cannot introduce an admitted restroom phase.');
+            record(g, ['navigationRide', 'amenity', 'restProgress', 'wrapper', 'wrapperTick', 'facility', 'serviceProgress', 'bladder', 'id', 'point', 'phase', 'goal', 'next', 'walkProgress', 'destination', 'entrance', 'exit', 'queueRide', 'seat', 'initialCash', 'cash', 'spent', 'fareLimit', 'forceTolerance', 'hunger', 'thirst', 'nausea', 'happiness', 'energy', 'queuedAt', 'lastRide', 'lastRideTick', 'ridesTaken', 'thought', ...(!preCommerce ? ['held'] : []), ...(merchandise ? ['merchandise', 'informationCounter'] : []), ...(atm ? ['withdrawn', 'atmRefusal'] : [])]);
+            const admitted = insideRestroom(g), withdrawing = g.phase === 'withdrawing';
+            ensure(!admitted || legacy === undefined || legacy === 15, 'INVALID_SAVE', 'Historical parks cannot introduce an admitted restroom phase.');
+            ensure(!withdrawing || atm, 'INVALID_SAVE', 'Historical parks cannot introduce a withdrawal action.');
+            if (atm) {
+                ensure(integer(g.withdrawn) && g.withdrawn % withdrawalAmount === 0 && (hasAtmProfile(this.rules) || g.withdrawn === 0 && g.atmRefusal === null), 'INVALID_SAVE', 'Invalid guest withdrawal history.');
+                withdrawn += BigInt(g.withdrawn);
+                if (g.atmRefusal !== null) {
+                    record(g.atmRefusal, ['instanceId', 'tick']);
+                    ensure(integer(g.atmRefusal.instanceId, 1, s.nextInstance - 1) && integer(g.atmRefusal.tick, 0, s.tick), 'INVALID_SAVE', 'Invalid ATM refusal memory.');
+                }
+            }
             if (merchandise) {
                 record(g.merchandise, ['map', 'umbrellaColour']);
                 ensure(typeof g.merchandise.map === 'boolean' && (g.merchandise.umbrellaColour === null || integer(g.merchandise.umbrellaColour, 0, 31)) && (g.informationCounter === null || integer(g.informationCounter, 0, 3)), 'INVALID_SAVE', 'Invalid permanent merchandise or counter intent.');
@@ -1244,9 +1292,10 @@ export class Engine {
             }
             else
                 ensure(g.phase !== 'resting', 'INVALID_SAVE', 'Resting guest has no bench.');
-            ensure(integer(g.serviceProgress, 0, this.rules.services.serviceTicks - 1) && ((g.phase === 'buying') || g.serviceProgress === 0) && (g.facility === null || integer(g.facility, 0, 254) && index.facilities.has(g.facility)), 'INVALID_SAVE', 'Invalid guest facility service.');
+            ensure(integer(g.serviceProgress, 0, this.rules.services.serviceTicks - 1) && ((g.phase === 'buying') || withdrawing || g.serviceProgress === 0) && (g.facility === null || integer(g.facility, 0, 254) && index.facilities.has(g.facility)), 'INVALID_SAVE', 'Invalid guest facility service.');
             ensure(g.phase !== 'buying' || g.facility !== null && g.goal === null && g.next === null, 'INVALID_SAVE', 'Buying guest has no service destination.');
-            ensure(g.facility === null || g.destination === null && g.queueRide === null && g.seat === null && (g.phase === 'walking' || g.phase === 'buying' || admitted), 'INVALID_SAVE', 'Conflicting guest destination.');
+            ensure(!withdrawing || g.facility !== null && index.facilities.get(g.facility)?.kind === 'atm' && g.cash <= 200 && g.goal === null && g.next === null && g.walkProgress === 0, 'INVALID_SAVE', 'Withdrawing guest has no valid public-counter action.');
+            ensure(g.facility === null || g.destination === null && g.queueRide === null && g.seat === null && (g.phase === 'walking' || g.phase === 'buying' || admitted || withdrawing), 'INVALID_SAVE', 'Conflicting guest destination.');
             if (g.facility !== null) {
                 const f = index.facilities.get(g.facility), e = index.elements.get(f.element);
                 ensure(e?.kind === 'facility', 'INVALID_SAVE', 'Guest service has no constructed facility.');
@@ -1259,7 +1308,9 @@ export class Engine {
                 }
                 else {
                     ensure(f.open && (!gradual || g.phase === 'walking'), 'INVALID_SAVE', 'Guest targets an unavailable service or invalid purchase phase.');
-                    if (f.kind === 'information')
+                    if (f.kind === 'atm')
+                        ensure(atm && atmProfile(f.content, this.rules) && (g.phase === 'walking' || withdrawing), 'INVALID_SAVE', 'ATM visit has no receiving public-counter operation.');
+                    else if (f.kind === 'information')
                         ensure(merchandise && g.informationCounter !== null, 'INVALID_SAVE', 'Information visit has no chosen counter.');
                     else
                         ensure((preCommerce || f.kind === 'restroom' || !g.held) && (preCommerce || !g.wrapper || !facilityProduct(f.content, this.rules)) && g.cash >= f.price, 'INVALID_SAVE', 'Guest targets an unavailable service.');
@@ -1267,15 +1318,16 @@ export class Engine {
                     ensure(index.paths.get(pathKey(counter.x, counter.y, counter.z))?.queueFor === null, 'INVALID_SAVE', 'Service counter has no public path.');
                     if (g.phase === 'walking')
                         ensure(g.goal !== null && g.goal.x === counter.x && g.goal.y === counter.y && g.goal.z === counter.z, 'INVALID_SAVE', 'Walking service guest has no chosen counter goal.');
-                    if (g.phase === 'buying')
-                        ensure(g.point.x === counter.x && g.point.y === counter.y && g.point.z === counter.z, 'INVALID_SAVE', 'Buying guest is away from the chosen counter.');
+                    if (g.phase === 'buying' || withdrawing)
+                        ensure(g.point.x === counter.x && g.point.y === counter.y && g.point.z === counter.z, 'INVALID_SAVE', 'Using guest is away from the chosen counter.');
                 }
             }
             ensure(!admitted || g.facility !== null, 'INVALID_SAVE', 'Admitted restroom guest has no owner.');
-            ensure(['walking', 'queued', 'riding', 'stranded', 'leaving', 'buying', 'resting', 'using-restroom', 'restroom-exit'].includes(g.phase) && ['none', 'not-enough-cash', 'too-intense', 'path-lost', 'ride-closed', 'queue-too-long', 'price-changed', 'payment-blocked', 'leaving'].includes(g.thought), 'INVALID_SAVE', 'Invalid guest phase or thought.');
-            for (const value of [g.initialCash, g.cash, g.spent, g.fareLimit, g.forceTolerance])
+            ensure(['walking', 'queued', 'riding', 'stranded', 'leaving', 'buying', 'resting', 'using-restroom', 'restroom-exit', 'withdrawing'].includes(g.phase) && ['none', 'not-enough-cash', 'too-intense', 'path-lost', 'ride-closed', 'queue-too-long', 'price-changed', 'payment-blocked', 'leaving'].includes(g.thought), 'INVALID_SAVE', 'Invalid guest phase or thought.');
+            for (const value of [g.initialCash, g.cash, g.fareLimit, g.forceTolerance])
                 ensure(integer(value, 0, 1000000), 'INVALID_SAVE', 'Invalid guest cash or preference.');
-            ensure(g.initialCash - g.spent === g.cash, 'INVALID_SAVE', 'Guest pocket cash does not reconcile.');
+            ensure(integer(g.spent, 0, atm ? Number.MAX_SAFE_INTEGER : 1000000), 'INVALID_SAVE', 'Invalid guest spending.');
+            ensure(BigInt(g.initialCash) + BigInt(atm ? g.withdrawn : 0) - BigInt(g.spent) === BigInt(g.cash), 'INVALID_SAVE', 'Guest pocket cash does not reconcile.');
             payments += BigInt(g.spent);
             for (const value of [g.bladder, g.hunger, g.thirst, g.nausea, g.happiness, g.energy])
                 ensure(integer(value, 0, 1000), 'INVALID_SAVE', 'Invalid guest need.');
@@ -1328,6 +1380,8 @@ export class Engine {
             }
         }
         ensure(ids.size <= LIMITS.sharedEntities && payments === BigInt(s.ledger.rideSales) + BigInt(s.ledger.shopSales), 'INVALID_SAVE', 'Shared entity or guest payment totals are inconsistent.');
+        if (atm)
+            ensure(withdrawn === (BigInt(s.retiredAtmWithdrawals) + s.facilities.reduce((n, f) => n + BigInt(f.kind === 'atm' ? f.withdrawals : 0), 0n)) * BigInt(withdrawalAmount), 'INVALID_SAVE', 'Guest withdrawal history does not reconcile with completed ATM actions.');
         ensure(BigInt(legacy && legacy < 10 ? 0 : s.retiredRideIncome) + s.rides.reduce((sum, r) => sum + BigInt(r.income), 0n) === BigInt(s.ledger.rideSales), 'INVALID_SAVE', 'Ride income does not reconcile.');
         const queued = new Set(), seated = new Set();
         for (const r of s.rides) {
@@ -1388,7 +1442,7 @@ export class Engine {
                 if (jobProfile && t.job.kind === 'inspection' && t.work > 0) {
                     if (jobChannel) {
                         const boat = index.boats.get(ride.id);
-                        ensure(ride.body === undefined && boat && boatEditable(boat, compileFlumeCourse(ride, index.elements)), 'INVALID_SAVE', 'Channel inspection requires an empty boat at its dock.');
+                        ensure(ride.body === undefined && boat && boatEditable(boat, compileFlumeCourse(ride, index.elements, jobChannel.pieces)), 'INVALID_SAVE', 'Channel inspection requires an empty boat at its dock.');
                     }
                     else
                         ensure(carouselEditable(index.carouselSessions.get(ride.id)), 'INVALID_SAVE', 'Carousel inspection requires an empty session at home.');
@@ -1448,7 +1502,7 @@ export class Engine {
                     stock += BigInt(a.sales) * BigInt(merchandise.products[id].stockCost);
                     merchandiseSales[id] += BigInt(a.sales);
                 }
-            else {
+            else if (f.kind !== 'atm') {
                 income += BigInt(f.income);
                 stock += BigInt(f.sales) * BigInt(facilityStockCost(f, this.rules));
             }

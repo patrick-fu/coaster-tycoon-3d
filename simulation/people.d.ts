@@ -65,7 +65,7 @@ export type Guest = {
     serviceProgress: number;
     bladder: number;
     point: PathPoint;
-    phase: 'walking' | 'queued' | 'riding' | 'stranded' | 'leaving' | 'buying' | 'resting' | 'using-restroom' | 'restroom-exit';
+    phase: 'walking' | 'queued' | 'riding' | 'stranded' | 'leaving' | 'buying' | 'resting' | 'using-restroom' | 'restroom-exit' | 'withdrawing';
     goal: PathPoint | null;
     next: PathPoint | null;
     walkProgress: number;
@@ -80,6 +80,11 @@ export type Guest = {
     initialCash: number;
     cash: number;
     spent: number;
+    withdrawn: number;
+    atmRefusal: {
+        instanceId: number;
+        tick: number;
+    } | null;
     fareLimit: number;
     forceTolerance: number;
     hunger: number;
@@ -98,6 +103,7 @@ export type PeopleState = {
     open: boolean;
     guests: Guest[];
     departedSpent: number;
+    departedWithdrawn: number;
 };
 type Access = {
     entrance: Portal;

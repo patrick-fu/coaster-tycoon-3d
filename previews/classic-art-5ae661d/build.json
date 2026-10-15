@@ -1,0 +1,15 @@
+{
+  "sourceCommit": "5ae661d14a16e7eecc4a4cd720715baff9dd3356",
+  "sourceTree": "7d8729547e0ff639f011465c66aaeb8dda9e846e",
+  "saveVersion": 16,
+  "contentVersion": 9,
+  "protocolVersion": 9,
+  "sourcePullRequest": "https://github.com/patrick-fu/coaster-tycoon-3d/pull/86",
+  "buildReadySHA256": "333f6d07813e2a29327ae458a231bd5c3fab169cb7d8602f0634d8f81bf8b66a",
+  "sourceInventorySHA256": "a34501d443c65ea7a6fde86280c9c82eba376d8c468138f40a2adb4242ec1629",
+  "compiledInventorySHA256": "64103088adbf0b66bf7102ff1e5fbb679f6d53df950142b8ae4a0d803ed00acc",
+  "runtimeInventorySHA256": "e9f1b99d0f1c4f5144f94efe07c354dd2e3e8ba88ecb32bbeb3c8dd8b850aaed",
+  "buildHost": "Grok Bot",
+  "verification": "https://github.com/patrick-fu/coaster-tycoon-3d/pull/86",
+  "scope": "Finite development preview: exact Grok-built197runtime/233source closure, affected saved-Rules13+89 checks, finite geometry/resource checks and nine current private native captures. Public HTTP/native qualification pending; integratedGPU, native recovery/migration suite, largepark scale and original-game breadth remain open. Isolated later art/Junior candidates excluded."
+}

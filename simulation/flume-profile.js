@@ -2,6 +2,7 @@ import { legacyRideContent, resolveContent } from '../content/registry.js';
 import { flumeCandidate, flumePieces, flumeProfileId } from '../content/log-flume.js';
 import { validateRules } from './geometry.js';
 import { ensure, integer, record } from './validation.js';
+import { piecesWithCurveBank } from '../content/curve-samples.js';
 export function flumeProfile(content, rules) {
     const { construction, operation } = resolveContent(content ?? legacyRideContent()).capabilities;
     if (construction.kind !== 'channel')
@@ -34,7 +35,8 @@ export function validateChannelProfiles(input, rules) {
             ensure(seat.x === expected.x && seat.y === expected.y && seat.z === expected.z, 'INVALID_COMMAND', 'Boat hip datum differs from the unit asset.');
         }
         const selected = validateRules({ ...rules, pieces: value.pieces }), expected = validateRules({ ...rules, pieces: flumePieces });
-        ensure(JSON.stringify(selected.pieces) === JSON.stringify(expected.pieces), 'GEOMETRY', 'Channel pieces differ from the qualified finite geometry.');
+        const serialized = JSON.stringify(selected.pieces), legacy = piecesWithCurveBank(expected.pieces, 64, 64, 'legacy-browser');
+        ensure(serialized === JSON.stringify(expected.pieces) || serialized === JSON.stringify(legacy), 'GEOMETRY', 'Channel pieces differ from the qualified finite geometry.');
         const vehicle = Object.fromEntries(Object.keys(flumeCandidate).map(key => [key, key === 'seats' ? p.seats.map(s => ({ x: s.x, y: s.y, z: s.z })) : p[key]]));
         profiles[id] = { vehicle, pieces: selected.pieces };
     }

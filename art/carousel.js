@@ -1,26 +1,12 @@
 import * as THREE from 'three';
+import { getGuestMaterials } from './guest-appearance.js';
 
-const SHIRT_PALETTE = ['#d63031', '#0984e3', '#00b894', '#e17055', '#6c5ce7', '#fdcb6e', '#e84393', '#16a085'];
-const PANTS_PALETTE = ['#2d3436', '#34495e', '#2c3e50', '#4a4e69', '#5c4033', '#1e272e'];
-const SKIN_PALETTE = ['#ffeaa7', '#f1c27d', '#e0ac69', '#c68642', '#8d5524', '#ffdbac'];
-const HAIR_PALETTE = ['#2d3436', '#4a3728', '#6a4e23', '#a76d38', '#b55239', '#e6be8a'];
-const BOOT_PALETTE = ['#1e272e', '#2c1e18', '#3d2b1f'];
-
-function getGuestMaterials(ctx, guestId) {
-  const seed = Math.abs(guestId);
-  const shirtHex = SHIRT_PALETTE[seed % SHIRT_PALETTE.length];
-  const pantsHex = PANTS_PALETTE[(seed * 7) % PANTS_PALETTE.length];
-  const skinHex = SKIN_PALETTE[(seed * 13) % SKIN_PALETTE.length];
-  const hairHex = HAIR_PALETTE[(seed * 31) % HAIR_PALETTE.length];
-  const bootHex = BOOT_PALETTE[(seed * 17) % BOOT_PALETTE.length];
-
-  return {
-    shirt: ctx.material(`carousel:rider:shirt:${shirtHex}`, { color: shirtHex, roughness: 0.7 }),
-    pants: ctx.material(`carousel:rider:pants:${pantsHex}`, { color: pantsHex, roughness: 0.8 }),
-    skin: ctx.material(`carousel:rider:skin:${skinHex}`, { color: skinHex, roughness: 0.6 }),
-    hair: ctx.material(`carousel:rider:hair:${hairHex}`, { color: hairHex, roughness: 0.9 }),
-    boot: ctx.material(`carousel:rider:boot:${bootHex}`, { color: bootHex, roughness: 0.85 }),
-  };
+function createRiderMeshGeometry(positions, indices) {
+  const geo = new THREE.BufferGeometry();
+  geo.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
+  geo.setIndex(indices);
+  geo.computeVertexNormals();
+  return geo;
 }
 
 function buildRider(ctx, guestId) {
@@ -28,9 +14,103 @@ function buildRider(ctx, guestId) {
   const root = new THREE.Group();
   root.name = `Rider_${guestId}`;
 
-  const geoTorso = ctx.geometry('carousel:rider:torso', () => new THREE.BoxGeometry(0.30, 0.42, 0.18));
+  const geoTorso = ctx.geometry('carousel:rider:torso', () => createRiderMeshGeometry(
+    [
+      // Waist (y = -0.21)
+      0.13, -0.21, 0.00,
+      0.07, -0.21, 0.075,
+      -0.07, -0.21, 0.075,
+      -0.13, -0.21, 0.00,
+      -0.07, -0.21, -0.075,
+      0.07, -0.21, -0.075,
+      // Mid-Chest (y = +0.06)
+      0.15, 0.06, 0.00,
+      0.08, 0.06, 0.09,
+      -0.08, 0.06, 0.09,
+      -0.15, 0.06, 0.00,
+      -0.08, 0.06, -0.09,
+      0.08, 0.06, -0.09,
+      // Shoulders (y = +0.14)
+      -0.145, 0.14, 0.035,
+      -0.145, 0.14, -0.035,
+      0.145, 0.14, -0.035,
+      0.145, 0.14, 0.035,
+      // Neck collar (y = +0.21)
+      0.06, 0.21, 0.05,
+      -0.06, 0.21, 0.05,
+      -0.06, 0.21, -0.05,
+      0.06, 0.21, -0.05,
+    ],
+    [
+      // Bottom waist cap (facing -Y)
+      0, 1, 2,  0, 2, 3,  0, 3, 4,  0, 4, 5,
+      // Waist to mid-chest loop
+      0, 6, 7,  0, 7, 1,
+      1, 7, 8,  1, 8, 2,
+      2, 8, 9,  2, 9, 3,
+      3, 9, 10, 3, 10, 4,
+      4, 10, 11, 4, 11, 5,
+      5, 11, 6, 5, 6, 0,
+      // Upper front chest
+      8, 7, 16,  8, 16, 17,
+      // Upper back
+      11, 10, 18, 11, 18, 19,
+      // Left shoulder (sloped and chamfered)
+      8, 12, 9,   8, 17, 12,
+      9, 12, 13,
+      9, 13, 10,  10, 13, 18,
+      17, 18, 13, 17, 13, 12,
+      // Right shoulder (sloped and chamfered)
+      7, 6, 15,   7, 15, 16,
+      6, 14, 15,
+      6, 11, 14,  11, 19, 14,
+      16, 14, 19, 16, 15, 14,
+      // Top neck collar cap (facing +Y)
+      16, 19, 18, 16, 18, 17,
+    ]
+  ));
   const geoHead = ctx.geometry('carousel:rider:head', () => new THREE.SphereGeometry(0.11, 10, 8));
-  const geoHair = ctx.geometry('carousel:rider:hair', () => new THREE.BoxGeometry(0.23, 0.08, 0.23));
+  const geoHair = ctx.geometry('carousel:rider:hair', () => createRiderMeshGeometry(
+    [
+      // Crown top (y = +0.04)
+      0.06, 0.04, 0.04,
+      -0.06, 0.04, 0.04,
+      -0.09, 0.04, -0.03,
+      -0.05, 0.04, -0.10,
+      0.05, 0.04, -0.10,
+      0.09, 0.04, -0.03,
+      // Hairline / rim (forehead, temples, nape)
+      0.06, 0.015, 0.095,
+      -0.06, 0.015, 0.095,
+      -0.114, -0.02, 0.03,
+      -0.114, -0.038, -0.05,
+      0.0, -0.038, -0.114,
+      0.114, -0.038, -0.05,
+      0.114, -0.02, 0.03,
+    ],
+    [
+      // Crown top cap (facing +Y)
+      0, 2, 1,  0, 3, 2,  0, 4, 3,  0, 5, 4,
+      // Front slope (forehead / bangs)
+      0, 1, 6,  1, 7, 6,
+      // Left front slope (left temple)
+      1, 2, 8,  1, 8, 7,
+      // Left side slope (over-ear)
+      2, 3, 9,  2, 9, 8,
+      // Left nape slope
+      3, 10, 9,
+      // Back center slope
+      3, 4, 10,
+      // Right nape slope
+      4, 11, 10,
+      // Right side slope (over-ear)
+      4, 5, 11,  5, 12, 11,
+      // Right front slope (right temple)
+      5, 0, 12,  0, 6, 12,
+      // Bottom rim seal (facing -Y)
+      6, 7, 8,  6, 8, 9,  6, 9, 10,  6, 10, 11,  6, 11, 12,
+    ]
+  ));
   const geoThigh = ctx.geometry('carousel:rider:thigh', () => new THREE.BoxGeometry(0.11, 0.12, 0.22));
   const geoShin = ctx.geometry('carousel:rider:shin', () => new THREE.BoxGeometry(0.09, 0.22, 0.09));
   const geoBoot = ctx.geometry('carousel:rider:boot', () => new THREE.BoxGeometry(0.09, 0.07, 0.13));

@@ -3,7 +3,7 @@ import { type Direction, type State, type Rules, type Tile } from './types.js';
 import type { Guest, PathPoint, PeopleIndex, Routing } from './people.js';
 import type { ContentIdentity } from '../content/registry.js';
 import { type InformationProducts } from '../content/merchandise.js';
-export type FacilityKind = 'food' | 'drink' | 'restroom' | 'information';
+export type FacilityKind = 'food' | 'drink' | 'restroom' | 'information' | 'atm';
 type FacilityBase = {
     id: number;
     instanceId: number;
@@ -13,7 +13,7 @@ type FacilityBase = {
     open: boolean;
 };
 export type OrdinaryFacility = FacilityBase & {
-    kind: Exclude<FacilityKind, 'information'>;
+    kind: Exclude<FacilityKind, 'information' | 'atm'>;
     price: number;
     income: number;
     sales: number;
@@ -23,7 +23,11 @@ export type InformationFacility = FacilityBase & {
     products: InformationProducts;
     umbrellaColour: number;
 };
-export type Facility = OrdinaryFacility | InformationFacility;
+export type AtmFacility = FacilityBase & {
+    kind: 'atm';
+    withdrawals: number;
+};
+export type Facility = OrdinaryFacility | InformationFacility | AtmFacility;
 export type FacilityElement = {
     id: number;
     kind: 'facility';

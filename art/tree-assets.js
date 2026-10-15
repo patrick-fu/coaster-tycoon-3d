@@ -34,7 +34,7 @@ export function createTreeAssets(renderer){
   if(disposed){release();throw new Error('Tree loading was cancelled.');}
  }}));
  assets.readyPromise=Promise.allSettled([0,1,2].map(async lod=>{
-  const gltf=await loader.loadAsync(new URL(`../models/trees/organic-tree-lod${lod}.gltf`,import.meta.url).href);
+  const gltf=await loader.loadAsync(new URL(`../models/trees/organic-tree-lod${lod}.glb`,import.meta.url).href);
   const model=gltf.scene;
   own(model);
   if(disposed){release();return;}

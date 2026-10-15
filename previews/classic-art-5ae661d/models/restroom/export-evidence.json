@@ -1,0 +1,327 @@
+{
+  "authoring": {
+    "asset_name": "VictorianParkRestroom",
+    "axes": {
+      "right": "+X",
+      "front": "-Y",
+      "up": "+Z"
+    },
+    "ground_origin": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "bounds_contract": {
+      "x": [
+        -0.49,
+        0.49
+      ],
+      "y": [
+        -0.49,
+        0.49
+      ],
+      "z": [
+        0.0,
+        0.9
+      ]
+    },
+    "anchors": [
+      "GroundRoot",
+      "Entrance_Front",
+      "Service_Interior",
+      "Sign_Front"
+    ],
+    "declared_material_keys": [
+      "timber",
+      "boards",
+      "roof",
+      "plaster",
+      "metal",
+      "paint_teal",
+      "cream",
+      "ink"
+    ],
+    "candidate_scope": "small Victorian timber/plaster park restroom",
+    "restraints": []
+  },
+  "geometry": {
+    "meshObjects": 18,
+    "trianglesEvaluated": 3826,
+    "boundsBlender": {
+      "min": [
+        -0.4519999921321869,
+        -0.4790000021457672,
+        0.0
+      ],
+      "max": [
+        0.4569999873638153,
+        0.45500001311302185,
+        0.8949999809265137
+      ]
+    },
+    "materials": [
+      "boards",
+      "cream",
+      "ink",
+      "metal",
+      "paint_teal",
+      "plaster",
+      "roof",
+      "timber"
+    ],
+    "anchorsBlender": {
+      "GroundRoot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "Entrance_Front": [
+        0.0,
+        -0.49000000953674316,
+        0.0
+      ],
+      "Service_Interior": [
+        0.0,
+        0.0,
+        0.07999999821186066
+      ],
+      "Sign_Front": [
+        0.0,
+        -0.4650000035762787,
+        0.5699999928474426
+      ]
+    },
+    "issues": []
+  },
+  "blender": "4.3.2",
+  "sourceSha256": "e5502ad0c652074d122f2f12a553d09214313180c4114936278db229432ef534",
+  "driverSha256": "6e92696ea8bf987734e8d0753f4e884ecdfbf56695b39d29ba796731b82917d0",
+  "textureSources": [
+    {
+      "file": "Concrete034_1K-PNG_Color.png",
+      "sourceSha256": "dffbbd0fd7249e938a30b650675262034fe0face516b0d036e9c34cae5a99190",
+      "sourceDimensions": [
+        1024,
+        512
+      ],
+      "runtimeDimensions": [
+        512,
+        512
+      ]
+    },
+    {
+      "file": "Concrete034_1K-PNG_NormalGL.png",
+      "sourceSha256": "7378313b5e38d138a2048d0a300194444ba7b205b062751a93a91bde8dfbccf9",
+      "sourceDimensions": [
+        1024,
+        512
+      ],
+      "runtimeDimensions": [
+        512,
+        512
+      ]
+    },
+    {
+      "file": "Concrete034_1K-PNG_Roughness.png",
+      "sourceSha256": "b2f8b937d4c9d1d305fc30b915b28712d166939bba1c3823ad39767dd22e1f07",
+      "sourceDimensions": [
+        1024,
+        512
+      ],
+      "runtimeDimensions": [
+        512,
+        512
+      ]
+    },
+    {
+      "file": "Metal049A_1K-PNG_Color.png",
+      "sourceSha256": "3c5be68c8a56534f120e88cff835a321ca51459c8f31482f984958c7fbfda8e6",
+      "sourceDimensions": [
+        1024,
+        1024
+      ],
+      "runtimeDimensions": [
+        512,
+        512
+      ]
+    },
+    {
+      "file": "Metal049A_1K-PNG_NormalGL.png",
+      "sourceSha256": "5b80adcc8092618a127bb7dfa547e3a35d156efd027c9daa579ac26f9098a678",
+      "sourceDimensions": [
+        1024,
+        1024
+      ],
+      "runtimeDimensions": [
+        512,
+        512
+      ]
+    },
+    {
+      "file": "Metal049A_1K-PNG_Roughness.png",
+      "sourceSha256": "a42d9eaba9bc232739c7cb86dee03805e66f50a065cecfbbfe906aaeb6b3ded2",
+      "sourceDimensions": [
+        1024,
+        1024
+      ],
+      "runtimeDimensions": [
+        512,
+        512
+      ]
+    },
+    {
+      "file": "RoofingTiles013A_1K-PNG_Color.png",
+      "sourceSha256": "ae2037e4c4934b42b60c799b2755cb73c164a883410f89e22ac54ed5ecb4d1de",
+      "sourceDimensions": [
+        1024,
+        1024
+      ],
+      "runtimeDimensions": [
+        512,
+        512
+      ]
+    },
+    {
+      "file": "RoofingTiles013A_1K-PNG_NormalGL.png",
+      "sourceSha256": "2488e6f327db93fe29558a9326ee4dba94022f944e2daf070a7ed47825fa82ab",
+      "sourceDimensions": [
+        1024,
+        1024
+      ],
+      "runtimeDimensions": [
+        512,
+        512
+      ]
+    },
+    {
+      "file": "RoofingTiles013A_1K-PNG_Roughness.png",
+      "sourceSha256": "575b1674cfd09dde9db152b917503c77fa4187693762bf2f8824521975bac812",
+      "sourceDimensions": [
+        1024,
+        1024
+      ],
+      "runtimeDimensions": [
+        512,
+        512
+      ]
+    },
+    {
+      "file": "Wood096_1K-PNG_Color.png",
+      "sourceSha256": "2635d3b950808e52d5de4ce4ee4b3aa35430ffd3117e00c1b2cfb155168e6b47",
+      "sourceDimensions": [
+        1024,
+        1024
+      ],
+      "runtimeDimensions": [
+        512,
+        512
+      ]
+    },
+    {
+      "file": "Wood096_1K-PNG_NormalGL.png",
+      "sourceSha256": "5b9f71b56cc74a397c9263619f7ef0cfc7d668762f4f2c960e4bd883dc2891c5",
+      "sourceDimensions": [
+        1024,
+        1024
+      ],
+      "runtimeDimensions": [
+        512,
+        512
+      ]
+    },
+    {
+      "file": "Wood096_1K-PNG_Roughness.png",
+      "sourceSha256": "bcba2c9b971c17875e0d8b6e11b234ce86a1c4110bd72725c2586b8950738418",
+      "sourceDimensions": [
+        1024,
+        1024
+      ],
+      "runtimeDimensions": [
+        512,
+        512
+      ]
+    },
+    {
+      "file": "WoodFloor043_1K-PNG_Color.png",
+      "sourceSha256": "55a7c25c191c8eb501d87a8872438dcfba307b3a043fee00ad9e89f0c413d684",
+      "sourceDimensions": [
+        1024,
+        512
+      ],
+      "runtimeDimensions": [
+        512,
+        512
+      ]
+    },
+    {
+      "file": "WoodFloor043_1K-PNG_NormalGL.png",
+      "sourceSha256": "ac8e1221726a512c4eb3cae98674bf0dda774382b2ba2577d36cbf8192986a6e",
+      "sourceDimensions": [
+        1024,
+        512
+      ],
+      "runtimeDimensions": [
+        512,
+        512
+      ]
+    },
+    {
+      "file": "WoodFloor043_1K-PNG_Roughness.png",
+      "sourceSha256": "c15241e172c474ad147003f8e957cf88d305d9e8d82809de201f04f7b969ec26",
+      "sourceDimensions": [
+        1024,
+        512
+      ],
+      "runtimeDimensions": [
+        512,
+        512
+      ]
+    }
+  ],
+  "batchStatic": true,
+  "glb": {
+    "file": "restroom.glb",
+    "sha256": "9b08addd7f836f7e136e23b3d17d57a6b93594575198de8e8ec49de78818bfe9",
+    "bytes": 8419960
+  },
+  "editableMaster": {
+    "file": "restroom.blend",
+    "sha256": "baeca060d799b51a2268720314905fe4e831bc9d752047aef0f312edd116b646",
+    "bytes": 21202922
+  },
+  "scope": "Normalized independent detailed restroom candidate; no original-metric, gameplay, human or GPU acceptance",
+  "renders": [
+    {
+      "file": "restroom-front-right-close.png",
+      "sha256": "3b9450fc2450cfee25ae44e2948fe10954ec21350319983406f4d49807fd0a9d"
+    },
+    {
+      "file": "restroom-front-right-overview.png",
+      "sha256": "ccc3c9d59de51e3d5a5dbb23497831d49574523c6589be2fcd33a3358c9ecc58"
+    },
+    {
+      "file": "restroom-front-left-close.png",
+      "sha256": "1b3affa454a76c90e87b01d4ece19c557f81a02e04eeb470a7d4f40ebf008f40"
+    },
+    {
+      "file": "restroom-front-left-overview.png",
+      "sha256": "94bf9312217776ad56770b410344ac020fa3bd1875a54fe95d3383d1c4eed743"
+    },
+    {
+      "file": "restroom-rear-left-close.png",
+      "sha256": "138e3270e7ee6349a4463e05452631f68d31a60b5080a1452fd373d5f8a9e545"
+    },
+    {
+      "file": "restroom-rear-left-overview.png",
+      "sha256": "f23012473c7c87b582c117e44fba24ff7420ca3205e15d89c8f742ac0145e6d5"
+    },
+    {
+      "file": "restroom-rear-right-close.png",
+      "sha256": "4285af9c95dec6d1403db7cf228c19623beda23227fe9baaca17e747ac7dbe63"
+    },
+    {
+      "file": "restroom-rear-right-overview.png",
+      "sha256": "965437e60eb0654df06f532173d6a2c43b373fa943cc23143e9a1273a1952317"
+    }
+  ]
+}

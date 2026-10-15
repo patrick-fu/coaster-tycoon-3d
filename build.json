@@ -1,16 +1,15 @@
 {
-  "sourceCommit": "665ff288d0fe44e0613035edc03fe6d6c90d480c",
-  "sourceTree": "832ac458bac0be95d0956dad72a0075f2c6f77a7",
-  "sourceIssue": "https://github.com/patrick-fu/coaster-tycoon-3d/issues/83",
-  "saveVersion": 15,
-  "contentVersion": 8,
-  "protocolVersion": 8,
-  "verification": "https://github.com/patrick-fu/coaster-tycoon-3d/blob/665ff288d0fe44e0613035edc03fe6d6c90d480c/docs/validation/gradual-restroom.md",
-  "buildReadySHA256": "67211aa1da50c68800fd9825b69ac4397e5ab1542d510cbe31ee5196c8d9434b",
-  "executedSourcePinsSHA256": "e9eddef337c02810a48f608c407bf7e04af3e22c05f30ec4c06e7ba7fd7ffef4",
-  "compiledInventorySHA256": "4bbcf5f8003c448f7d7db7d5fb42072b1802a0f438e9df1a0261fe84c6b5cf21",
-  "runtimeInventorySHA256": "014a6ae23ba4cba50f56c637c8881a4cd64719cdd1f0e29a65f9a627478f7906",
-  "scope": "Exact repaired Grok-built frozen182 runtime, only people.js changed from pre-fix; affected45 passing cases and independent material reviews. Source code/assets match commit; four progress/validation files updated since snapshot. Actual public/browser qualification pending; original/human/GPU/scale remain open.",
+  "sourceCommit": "5ae661d14a16e7eecc4a4cd720715baff9dd3356",
+  "sourceTree": "7d8729547e0ff639f011465c66aaeb8dda9e846e",
+  "saveVersion": 16,
+  "contentVersion": 9,
+  "protocolVersion": 9,
+  "sourcePullRequest": "https://github.com/patrick-fu/coaster-tycoon-3d/pull/86",
+  "buildReadySHA256": "333f6d07813e2a29327ae458a231bd5c3fab169cb7d8602f0634d8f81bf8b66a",
+  "sourceInventorySHA256": "a34501d443c65ea7a6fde86280c9c82eba376d8c468138f40a2adb4242ec1629",
+  "compiledInventorySHA256": "64103088adbf0b66bf7102ff1e5fbb679f6d53df950142b8ae4a0d803ed00acc",
+  "runtimeInventorySHA256": "e9f1b99d0f1c4f5144f94efe07c354dd2e3e8ba88ecb32bbeb3c8dd8b850aaed",
   "buildHost": "Grok Bot",
-  "sourcePullRequest": "https://github.com/patrick-fu/coaster-tycoon-3d/pull/84"
+  "verification": "https://github.com/patrick-fu/coaster-tycoon-3d/pull/86",
+  "scope": "Finite development preview: exact Grok-built197runtime/233source closure, affected saved-Rules13+89 checks, finite geometry/resource checks and nine current private native captures. Public HTTP/native qualification pending; integratedGPU, native recovery/migration suite, largepark scale and original-game breadth remain open. Isolated later art/Junior candidates excluded."
 }

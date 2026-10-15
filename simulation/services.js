@@ -8,6 +8,7 @@ import { compileFlumeCourse } from './flume-native.js';
 import { commerceProfileId, facilityProduct, facilityStockCost, productRule } from '../content/consumables.js';
 import { merchandiseProfileId } from '../content/merchandise.js';
 import { gradualRestroomProfile } from '../content/gradual-restroom.js';
+import { atmProfile } from '../content/atm.js';
 const same = (a, b) => a.x === b.x && a.y === b.y && a.z === b.z;
 const key = (p) => `${p.x},${p.y},${p.z}`;
 export function validateServiceRules(input) {
@@ -29,7 +30,7 @@ export function chooseFacility(g, s, rules, index, route) {
     const motive = (f) => f.kind === 'food' ? g.hunger : f.kind === 'drink' ? g.thirst : g.bladder;
     let choice = null;
     for (const f of s.facilities) {
-        if (f.kind === 'information')
+        if (f.kind === 'information' || f.kind === 'atm')
             continue;
         if (!f.open || g.cash < f.price || (g.wrapper || g.held) && f.kind !== 'restroom' || motive(f) < rules.services.needThreshold)
             continue;
@@ -55,6 +56,8 @@ export function recoverFacility(g, index, rules) {
         return f?.kind === 'restroom' && !!gradualRestroomProfile(f.content, rules) && e?.kind === 'facility';
     if (f?.kind === 'information')
         return !!rules.merchandiseProfiles?.[merchandiseProfileId] && f.open && g.informationCounter !== null && e?.kind === 'facility' && publicPath(facilityApproach(e, g.informationCounter), index);
+    if (f?.kind === 'atm')
+        return !!atmProfile(f.content, rules) && f.open && e?.kind === 'facility' && publicPath(facilityApproach(e), index);
     return !!f && f.open && g.cash >= f.price && (f.kind === 'restroom' || !g.held) && e?.kind === 'facility' && publicPath(facilityApproach(e), index);
 }
 export function insideRestroom(g) { return g.phase === 'using-restroom' || g.phase === 'restroom-exit'; }
@@ -117,7 +120,7 @@ export function stepRestroom(g, s, rules, index, route) {
 }
 export function buy(g, s, rules, index) {
     const f = index.facilities.get(g.facility);
-    ensure(f.kind !== 'information', 'INVALID_CONTENT', 'Ordinary service cannot sell information merchandise.');
+    ensure(f.kind !== 'information' && f.kind !== 'atm', 'INVALID_CONTENT', 'Ordinary service cannot perform this facility operation.');
     const r = rules.services, product = facilityProduct(f.content, rules), stock = facilityStockCost(f, rules), price = f.price;
     const cash = BigInt(s.cash) + BigInt(price) - BigInt(stock);
     ensure(cash >= BigInt(-Number.MAX_SAFE_INTEGER) && cash <= BigInt(Number.MAX_SAFE_INTEGER) && integer(s.ledger.shopSales + price) && integer(s.ledger.stock + stock) && integer(f.income + price) && integer(f.sales + 1) && integer(g.spent + price), 'CAPACITY', 'Shop accounting capacity exhausted.');
@@ -175,7 +178,7 @@ export function recoverStaff(s, index, route) {
             continue;
         const ride = staff.job ? index.rides.get(staff.job.ride) : undefined;
         const station = staff.goal && staff.job && [...index.elements.values()].some(e => e.kind === 'portal' && e.ride === staff.job.ride && same(portalApproach(e), staff.goal));
-        if (staff.goal && (!station || !ride || staff.job.kind === 'repair' && !ride.broken || !accessible(staff, staff.goal, index, route) || staff.next && !publicPath(staff.next, index)))
+        if (staff.goal && (!station || !ride || staff.job.kind === 'repair' && !ride.broken || staff.job.kind === 'inspection' && ride.broken || !accessible(staff, staff.goal, index, route) || staff.next && !publicPath(staff.next, index)))
             clear(staff);
     }
 }
@@ -186,7 +189,7 @@ export function stepStaff(s, rules, index, route) {
             continue;
         if (staff.job) {
             const ride = index.rides.get(staff.job.ride);
-            if (!ride || staff.job.kind === 'repair' && !ride.broken) {
+            if (!ride || staff.job.kind === 'repair' && !ride.broken || staff.job.kind === 'inspection' && ride.broken) {
                 claimed.delete(staff.job.ride);
                 clear(staff);
             }
@@ -248,7 +251,7 @@ export function stepStaff(s, rules, index, route) {
             }
             if (channel) {
                 const boat = index.boats.get(ride.id);
-                if (ride.body !== undefined || !boat || !boatEditable(boat, compileFlumeCourse(ride, index.elements)))
+                if (ride.body !== undefined || !boat || !boatEditable(boat, compileFlumeCourse(ride, index.elements, channel.pieces)))
                     continue;
             }
             else {

@@ -13,8 +13,8 @@ export type ViewRequest = {
 };
 export declare function validateView(value: unknown, side: number): ViewRequest;
 export declare function project(s: State, rules: Rules, request: ViewRequest, elements: ReadonlyMap<number, Element>, course: (ride: number) => Course, channelCourse: (ride: number) => FlumeCourse): {
-    protocolVersion: 8;
-    contentVersion: 8;
+    protocolVersion: 9;
+    contentVersion: 9;
     coordinates: {
         nativeUnitsPerTile: number;
         nativeHeightStep: number;
@@ -269,6 +269,23 @@ export declare function project(s: State, rules: Rules, request: ViewRequest, el
         name: string;
         element: number;
         open: boolean;
+        kind: 'atm';
+        withdrawals: number;
+        content: {
+            familyId: string;
+            variantId: string;
+            modeId: string;
+        };
+        presentation: import("../content/registry.js").Presentation;
+        cashDispensed: number;
+        using: number;
+        guestIds: number[];
+    } | {
+        id: number;
+        instanceId: number;
+        name: string;
+        element: number;
+        open: boolean;
         kind: 'information';
         umbrellaColour: number;
         content: {
@@ -303,7 +320,7 @@ export declare function project(s: State, rules: Rules, request: ViewRequest, el
         name: string;
         element: number;
         open: boolean;
-        kind: Exclude<import("./services.js").FacilityKind, 'information'>;
+        kind: Exclude<import("./services.js").FacilityKind, 'information' | 'atm'>;
         price: number;
         income: number;
         sales: number;

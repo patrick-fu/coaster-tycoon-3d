@@ -102,9 +102,10 @@ export function eligibility(ride, elements, rules) {
         if (turns.length !== 4 || turns.some(turn => turn !== turns[0]))
             issues.push('The wooden candidate supports one flat four-turn loop with a single turn direction.');
     }
-    if (flumeProfile(ride.content, rules) && circuit) {
+    const channel = flumeProfile(ride.content, rules);
+    if (channel && circuit) {
         try {
-            compileFlumeCourse(ride, elements);
+            compileFlumeCourse(ride, elements, channel.pieces);
         }
         catch (error) {
             if (error instanceof Fault)

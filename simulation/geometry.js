@@ -5,11 +5,13 @@ import { validateFixedProfiles } from './carousel.js';
 import { validateChannelProfiles } from './flume-profile.js';
 import { defaultScenery, sceneryTypes } from './scenery.js';
 import { validateCommerceProfiles } from '../content/consumables.js';
+import { validateAtmProfiles } from '../content/atm.js';
 import { validateFacilityProfiles } from '../content/facility-profiles.js';
 import { validateMerchandiseProfiles } from '../content/merchandise.js';
 import { validateRestroomProfiles } from '../content/gradual-restroom.js';
+import { quarterCurveSamples } from '../content/curve-samples.js';
 export function validateRules(input) {
-    record(input, [...(Object.hasOwn(input ?? {}, 'scenery') ? ['scenery'] : []), 'housekeeping', 'services', 'guests', 'motion', 'id', 'evidence', 'pathPrice', 'portalPrice', 'terrainPrice', 'refundPerThousand', 'maxSupport', 'maxHeight', 'pieces', ...(Object.hasOwn(input ?? {}, 'rideProfiles') ? ['rideProfiles'] : []), ...(Object.hasOwn(input ?? {}, 'fixedProfiles') ? ['fixedProfiles'] : []), ...(Object.hasOwn(input ?? {}, 'channelProfiles') ? ['channelProfiles'] : []), ...(Object.hasOwn(input ?? {}, 'commerceProfiles') ? ['commerceProfiles'] : []), ...(Object.hasOwn(input ?? {}, 'facilityProfiles') ? ['facilityProfiles'] : []), ...(Object.hasOwn(input ?? {}, 'merchandiseProfiles') ? ['merchandiseProfiles'] : []), ...(Object.hasOwn(input ?? {}, 'restroomProfiles') ? ['restroomProfiles'] : [])]);
+    record(input, [...(Object.hasOwn(input ?? {}, 'scenery') ? ['scenery'] : []), 'housekeeping', 'services', 'guests', 'motion', 'id', 'evidence', 'pathPrice', 'portalPrice', 'terrainPrice', 'refundPerThousand', 'maxSupport', 'maxHeight', 'pieces', ...(Object.hasOwn(input ?? {}, 'rideProfiles') ? ['rideProfiles'] : []), ...(Object.hasOwn(input ?? {}, 'fixedProfiles') ? ['fixedProfiles'] : []), ...(Object.hasOwn(input ?? {}, 'channelProfiles') ? ['channelProfiles'] : []), ...(Object.hasOwn(input ?? {}, 'commerceProfiles') ? ['commerceProfiles'] : []), ...(Object.hasOwn(input ?? {}, 'facilityProfiles') ? ['facilityProfiles'] : []), ...(Object.hasOwn(input ?? {}, 'merchandiseProfiles') ? ['merchandiseProfiles'] : []), ...(Object.hasOwn(input ?? {}, 'restroomProfiles') ? ['restroomProfiles'] : []), ...(Object.hasOwn(input ?? {}, 'atmProfiles') ? ['atmProfiles'] : [])]);
     const scenery = structuredClone(Object.hasOwn(input, 'scenery') ? input.scenery : defaultScenery);
     record(scenery, [...sceneryTypes]);
     for (const type of sceneryTypes) {
@@ -86,8 +88,9 @@ export function validateRules(input) {
         for (const [key, piece] of Object.entries(selected.pieces)) {
             const curved = key === 'left' || key === 'right', sign = key === 'left' ? -1 : 1, count = curved ? 64 : 16;
             ensure(piece.station === (key === 'station') && piece.entry.pitch === 0 && piece.entry.bank === 0 && piece.end.pitch === 0 && piece.end.bank === 0 && piece.end.x === (curved ? 128 : 32) && piece.end.y === (curved ? sign * 128 : 0) && piece.end.z === 0 && piece.end.turn === (curved ? sign : 0) && !piece.motion.chain && piece.motion.brake === null && piece.motion.samples.length === count + 1, 'GEOMETRY', 'Unsupported wooden track geometry.');
+            const curve = curved ? quarterCurveSamples(64, sign, 128) : null;
             for (let i = 0; i <= count; i++) {
-                const point = piece.motion.samples[i], angle = i * Math.PI / (2 * count), x = curved ? (i === count ? 128 : 128 * Math.sin(angle)) : 32 * i / count, y = curved ? (i === count ? sign * 128 : sign * 128 * (1 - Math.cos(angle))) : 0;
+                const point = piece.motion.samples[i], x = curve ? curve[i].x : 32 * i / count, y = curve ? curve[i].y : 0;
                 ensure(Math.abs(point.x - x) <= 1e-9 && Math.abs(point.y - y) <= 1e-9 && point.z === 0, 'GEOMETRY', 'Wooden track samples differ from the finite qualified geometry.');
             }
             const directions = value.footprints[key];
@@ -107,8 +110,8 @@ export function validateRules(input) {
         const footprints = Object.fromEntries(['flat', 'left', 'right', 'station'].map(key => [key, value.footprints[key].map(cells => cells.map(c => ({ x: c.x, y: c.y, low: c.low, high: c.high, mask: c.mask })).sort((a, b) => a.x - b.x || a.y - b.y || a.low - b.low || a.high - b.high || a.mask - b.mask))]));
         rideProfiles[id] = { motion: selected.motion, pieces: selected.pieces, vehicle: { kind: 'coupled-flat', originMm: { x: vehicle.originMm.x, y: vehicle.originMm.y, z: vehicle.originMm.z }, wheelbaseMm: vehicle.wheelbaseMm, bogiePivotHeightMm: vehicle.bogiePivotHeightMm, couplerHalfSpanMm: vehicle.couplerHalfSpanMm, couplerHeightMm: vehicle.couplerHeightMm, drawbarLengthMm: vehicle.drawbarLengthMm, railHalfGaugeMm: vehicle.railHalfGaugeMm, stationDeckMm: vehicle.stationDeckMm }, footprints };
     }
-    const commerceProfiles = validateCommerceProfiles(input.commerceProfiles), merchandiseProfiles = validateMerchandiseProfiles(input.merchandiseProfiles), restroomProfiles = validateRestroomProfiles(input.restroomProfiles, common), facilityProfiles = validateFacilityProfiles(input.facilityProfiles, { ...common, commerceProfiles, merchandiseProfiles, restroomProfiles });
-    return { ...common, rideProfiles, fixedProfiles: validateFixedProfiles(input.fixedProfiles, common), channelProfiles: validateChannelProfiles(input.channelProfiles, common), commerceProfiles, facilityProfiles, merchandiseProfiles, restroomProfiles };
+    const commerceProfiles = validateCommerceProfiles(input.commerceProfiles), merchandiseProfiles = validateMerchandiseProfiles(input.merchandiseProfiles), restroomProfiles = validateRestroomProfiles(input.restroomProfiles, common), atmProfiles = validateAtmProfiles(input.atmProfiles, common), facilityProfiles = validateFacilityProfiles(input.facilityProfiles, { ...common, commerceProfiles, merchandiseProfiles, restroomProfiles, atmProfiles });
+    return { ...common, rideProfiles, fixedProfiles: validateFixedProfiles(input.fixedProfiles, common), channelProfiles: validateChannelProfiles(input.channelProfiles, common), commerceProfiles, facilityProfiles, merchandiseProfiles, restroomProfiles, atmProfiles };
 }
 export function turn(x, y, d) { const vectors = [[1, 0], [0, 1], [-1, 0], [0, -1]]; const [dx, dy] = vectors[d]; return { x: x * dx - y * dy, y: x * dy + y * dx }; }
 export function endpoint(a, p) { const b = turn(p.end.x, p.end.y, a.direction); return { x: a.x + b.x, y: a.y + b.y, z: a.z + p.end.z, direction: ((a.direction + p.end.turn + 4) % 4), pitch: p.end.pitch, bank: p.end.bank }; }

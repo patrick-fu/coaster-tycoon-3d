@@ -1,6 +1,7 @@
 import { Engine } from '../simulation/engine.js';
 import { initialWorld } from './steel-coaster.js';
-import { legacyRideContent, woodenRideContent, carouselRideContent, flumeRideContent, detailedFacilityContent } from './registry.js';
+import { legacyRideContent, woodenRideContent, carouselRideContent, flumeRideContent, detailedFacilityContent, atmContent } from './registry.js';
+import { hasAtmProfile } from './atm.js';
 import { flumePortalSocket } from '../simulation/flume-portal.js';
 import { carouselPortal } from '../simulation/carousel.js';
 export function newClassicShowcase(rules) {
@@ -90,6 +91,10 @@ export function newClassicShowcase(rules) {
         const facility = apply(command);
         apply({ type: 'set-facility-open', facility, open: true });
     }
+    if (hasAtmProfile(rules)) {
+        const facility = apply({ type: 'place-facility', name: 'Cash machine', kind: 'atm', tile: { x: 22, y: 9 }, height: 32, direction: 2, content: atmContent() });
+        apply({ type: 'set-facility-open', facility, open: true });
+    }
     for (const [kind, x, y] of [['bench', 21, 10], ['bin', 21, 12], ['bin', 21, 14], ['bench', 19, 15], ['bin', 11, 15], ['bench', 28, 15]])
         apply({ type: 'place-amenity', kind, path: pathIds.get(`${x},${y}`) });
     const entry = { x: 21, y: 9, z: 32 };
@@ -98,10 +103,41 @@ export function newClassicShowcase(rules) {
         apply({ type: 'hire-staff', role, point: { x: 21, y: 15, z: 32 } });
     for (const [sceneryType, x, y] of [
         ['fountain', 19, 9], ['fountain', 23, 8], ['flower', 20, 10], ['lamp', 20, 12], ['flower', 23, 11], ['lamp', 23, 13],
+        ['tree', 18, 8], ['hedge', 18, 9], ['hedge', 18, 10], ['flower', 19, 8], ['flower', 19, 10],
+        ['tree', 24, 7], ['hedge', 24, 8], ['flower', 24, 9],
         ['tree', 4, 7], ['tree', 4, 10], ['rock', 5, 5], ['tree', 17, 5], ['tree', 18, 7], ['flower', 17, 13],
         ['flower', 25, 11], ['flower', 29, 11], ['tree', 31, 7], ['tree', 32, 10],
         ['tree', 9, 24], ['tree', 11, 25], ['rock', 10, 26], ['hedge', 18, 21], ['flower', 18, 17], ['tree', 18, 29],
         ['tree', 35, 21], ['rock', 36, 24], ['tree', 31, 29], ['hedge', 23, 29],
+        // Frame the carousel median, entrance avenue and shop backs before arrivals.
+        ['flower', 27, 11],
+        ['hedge', 27, 12],
+        ['lamp', 27, 13],
+        ['flower', 27, 14],
+        ['hedge', 20, 8],
+        ['flower', 20, 9],
+        ['flower', 20, 11],
+        ['flower', 20, 13],
+        ['lamp', 20, 14],
+        ['hedge', 23, 9],
+        ['flower', 23, 10],
+        ['hedge', 23, 12],
+        ['flower', 23, 14],
+        ['lamp', 24, 10],
+        ['hedge', 24, 11],
+        ['tree', 24, 12],
+        ['flower', 24, 13],
+        ['lamp', 7, 16],
+        ['hedge', 10, 17],
+        ['lamp', 25, 16],
+        ['hedge', 27, 16],
+        ['lamp', 29, 16],
+        ['tree', 30, 22],
+        ['rock', 32, 23],
+        ['tree', 31, 25],
+        ['tree', 7, 13],
+        ['hedge', 7, 14],
+        ['lamp', 10, 14],
     ])
         apply({ type: 'place-scenery', sceneryType, tile: { x, y }, height: 32 });
     for (const ride of [wood, steel, flume])
