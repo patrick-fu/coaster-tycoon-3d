@@ -161,43 +161,95 @@ function paintWaterRipples(ctx2d, width, height) {
   ctx2d.fillStyle = '#124855';
   ctx2d.fillRect(0, 0, width, height);
 
-  // Restrained teal depth: ambient trough shading
-  for (let i = 0; i < 2; i++) {
-    const ym = i * 64 + 32;
-    ctx2d.fillStyle = 'rgba(8, 28, 36, 0.24)';
-    ctx2d.beginPath();
-    for (let x = 0; x <= width; x += 4) ctx2d[x === 0 ? 'moveTo' : 'lineTo'](x, ym - 16 + 4.5 * Math.sin((x / width) * Math.PI * 2));
-    for (let x = width; x >= 0; x -= 4) ctx2d.lineTo(x, ym + 18 + 4.5 * Math.sin((x / width) * Math.PI * 2));
-    ctx2d.closePath();
-    ctx2d.fill();
-  }
+  const pi2 = Math.PI * 2;
 
-  // Broad irregular subtle caustic bands and sparse low-contrast foam
-  for (const b of [{ y: 30, p: 0.2, fx: 22 }, { y: 94, p: 2.4, fx: 76 }]) {
-    const wave = x => b.y + 6.0 * Math.sin((x / width) * Math.PI * 2 + b.p) + 2.2 * Math.sin((x / width) * Math.PI * 4 + b.p * 1.5);
-    const halfW = x => 3.6 + 2.2 * Math.cos((x / width) * Math.PI * 2 + b.p + 0.7) + 1.2 * Math.sin((x / width) * Math.PI * 4 + b.p);
+  // 2. Small wrapped varied-angle wavelets (non-horizontal crests, boundary-crossing coverage)
+  const wavelets = [
+    { qx: 0.01, qy: 0.28, len: 9, curve: 1.1, tx: 0.95, ty: 0.31 },
+    { qx: 0.99, qy: 0.65, len: 10, curve: -1.2, tx: 0.91, ty: -0.41 },
+    { qx: 0.44, qy: 0.01, len: 9, curve: 1.0, tx: 0.85, ty: 0.53 },
+    { qx: 0.58, qy: 0.99, len: 9, curve: -1.1, tx: 0.81, ty: -0.59 },
+    { qx: 0.02, qy: 0.02, len: 8, curve: 1.0, tx: 0.98, ty: 0.21 },
+    { qx: 0.98, qy: 0.98, len: 8, curve: -1.0, tx: 0.96, ty: -0.28 },
+    { qx: 0.98, qy: 0.02, len: 8, curve: 0.9, tx: 0.90, ty: 0.44 },
+    { qx: 0.02, qy: 0.98, len: 8, curve: -0.9, tx: 0.87, ty: -0.50 },
+    { qx: 0.22, qy: 0.15, len: 9, curve: 1.2, tx: 0.94, ty: 0.34 },
+    { qx: 0.72, qy: 0.16, len: 8, curve: -1.0, tx: 0.74, ty: -0.67 },
+    { qx: 0.38, qy: 0.34, len: 10, curve: 1.3, tx: 0.79, ty: 0.62 },
+    { qx: 0.84, qy: 0.36, len: 8, curve: -1.1, tx: 0.98, ty: -0.17 },
+    { qx: 0.16, qy: 0.50, len: 9, curve: 1.1, tx: 0.97, ty: 0.26 },
+    { qx: 0.64, qy: 0.48, len: 11, curve: -1.3, tx: 0.88, ty: -0.47 },
+    { qx: 0.34, qy: 0.68, len: 8, curve: 1.0, tx: 0.83, ty: 0.56 },
+    { qx: 0.82, qy: 0.74, len: 10, curve: -1.2, tx: 0.94, ty: -0.34 },
+    { qx: 0.20, qy: 0.85, len: 9, curve: 1.1, tx: 0.93, ty: 0.37 },
+    { qx: 0.68, qy: 0.84, len: 8, curve: -0.9, tx: 0.83, ty: -0.56 }
+  ];
 
-    for (const [col, scale] of [['rgba(48, 156, 172, 0.16)', 1.5], ['rgba(96, 206, 218, 0.22)', 0.7]]) {
-      ctx2d.fillStyle = col;
-      ctx2d.beginPath();
-      for (let x = 0; x <= width; x += 4) ctx2d[x === 0 ? 'moveTo' : 'lineTo'](x, wave(x) - halfW(x) * scale);
-      for (let x = width; x >= 0; x -= 4) ctx2d.lineTo(x, wave(x) + halfW(x) * scale);
-      ctx2d.closePath();
-      ctx2d.fill();
+  ctx2d.lineCap = 'round';
+
+  // Soft crest halos
+  ctx2d.strokeStyle = 'rgba(56, 172, 188, 0.18)';
+  ctx2d.lineWidth = 1.8;
+  ctx2d.beginPath();
+  for (const w of wavelets) {
+    const hl = w.len * 0.5;
+    const dx = hl * w.tx;
+    const dy = hl * w.ty;
+    const cx0 = -w.curve * w.ty;
+    const cy0 = w.curve * w.tx;
+    for (let ox = -1; ox <= 1; ox++) {
+      for (let oy = -1; oy <= 1; oy++) {
+        const cx = (w.qx + ox) * width;
+        const cy = (w.qy + oy) * height;
+        if (cx < -12 || cx > width + 12 || cy < -12 || cy > height + 12) continue;
+        ctx2d.moveTo(cx - dx, cy - dy);
+        ctx2d.quadraticCurveTo(cx + cx0, cy + cy0, cx + dx, cy + dy);
+      }
     }
-
-    // Sparse low-contrast foam accent along swell crest
-    ctx2d.strokeStyle = 'rgba(215, 244, 248, 0.24)';
-    ctx2d.lineWidth = 1.6;
-    ctx2d.lineCap = 'round';
-    ctx2d.beginPath();
-    for (let x = b.fx; x <= b.fx + 24; x += 2) ctx2d[x === b.fx ? 'moveTo' : 'lineTo'](x, wave(x) - halfW(x) * 0.35);
-    ctx2d.stroke();
-    ctx2d.fillStyle = 'rgba(225, 248, 252, 0.20)';
-    ctx2d.beginPath();
-    ctx2d.arc(b.fx + 27, wave(b.fx + 27) - 1, 1.1, 0, Math.PI * 2);
-    ctx2d.fill();
   }
+  ctx2d.stroke();
+
+  // Subtle crisp highlights
+  ctx2d.strokeStyle = 'rgba(215, 245, 250, 0.24)';
+  ctx2d.lineWidth = 0.9;
+  ctx2d.beginPath();
+  for (const w of wavelets) {
+    const hl = w.len * 0.5;
+    const dx = hl * w.tx;
+    const dy = hl * w.ty;
+    const cx0 = -w.curve * w.ty;
+    const cy0 = w.curve * w.tx;
+    for (let ox = -1; ox <= 1; ox++) {
+      for (let oy = -1; oy <= 1; oy++) {
+        const cx = (w.qx + ox) * width;
+        const cy = (w.qy + oy) * height;
+        if (cx < -12 || cx > width + 12 || cy < -12 || cy > height + 12) continue;
+        ctx2d.moveTo(cx - dx, cy - dy);
+        ctx2d.quadraticCurveTo(cx + cx0, cy + cy0, cx + dx, cy + dy);
+      }
+    }
+  }
+  ctx2d.stroke();
+
+  // Delicate glint points
+  ctx2d.fillStyle = 'rgba(235, 250, 253, 0.28)';
+  ctx2d.beginPath();
+  for (const w of wavelets) {
+    const gx0 = -w.curve * 0.5 * w.ty;
+    const gy0 = w.curve * 0.5 * w.tx;
+    for (let ox = -1; ox <= 1; ox++) {
+      for (let oy = -1; oy <= 1; oy++) {
+        const cx = (w.qx + ox) * width;
+        const cy = (w.qy + oy) * height;
+        if (cx < -12 || cx > width + 12 || cy < -12 || cy > height + 12) continue;
+        const gx = cx + gx0;
+        const gy = cy + gy0;
+        ctx2d.moveTo(gx + 0.85, gy);
+        ctx2d.arc(gx, gy, 0.85, 0, pi2);
+      }
+    }
+  }
+  ctx2d.fill();
 }
 
 /**
@@ -1553,7 +1605,7 @@ export function buildScenery(ctx, parent, e) {
     // Low stone kerb border with corner boss stones, rich compost loam bed,
     // undulating leafy groundcover cushions, and delicate flowering stems with colorful blossoms.
     const stoneKerbMat = getMat(ctx, 'mat-flower-stone-kerb', { color: '#baa990', roughness: 0.82 });
-    const soilBedMat = getMat(ctx, 'mat-flower-soil-bed', { map: flowerSoilTex, color: '#322013', roughness: 0.92 });
+    const soilBedMat = getMat(ctx, 'mat-flower-soil-bed', { map: flowerSoilTex, color: '#ffffff', roughness: 0.92 });
     const leafBaseMat = getMat(ctx, 'mat-flower-leaf-base', { color: '#386324', roughness: 0.85 });
     const leafCushionMat = getMat(ctx, 'mat-flower-leaf-cushion', { color: '#487d2f', roughness: 0.84 });
     const stemMat = getMat(ctx, 'mat-flower-stem', { color: '#2c541e', roughness: 0.86 });

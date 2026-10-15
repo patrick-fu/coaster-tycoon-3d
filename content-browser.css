@@ -489,7 +489,7 @@
 
 .content-library-badge-pending {
   background: #fff1e8;
-  color: #9c4516;
+  color: var(--content-library-copper-dark);
   border: 1px solid #f3c2a4;
 }
 
@@ -797,10 +797,9 @@
 
 .content-library-choose-btn-disabled {
   background: #e0d8c7;
-  color: #887d69;
+  color: var(--content-library-ink-heading);
   border: 1px solid #bfb4a0;
   cursor: not-allowed;
-  opacity: 0.75;
   box-shadow: none;
 }
 
@@ -888,8 +887,13 @@
 .content-library-toolbar button:focus-visible,
 .content-library-categories .content-library-category-tab:focus-visible {
   outline: 2px solid var(--content-library-brass-bright);
-  outline-offset: 2px;
-  box-shadow: 0 0 0 3px rgba(245, 215, 142, 0.45);
+  outline-offset: 1px;
+  box-shadow: 0 0 0 2px rgba(245, 215, 142, 0.5);
+  z-index: 1;
+}
+
+.content-library-filter-btn:focus-visible {
+  outline-offset: -1px;
 }
 
 .content-library-body button:focus-visible,
@@ -899,6 +903,11 @@
   outline: 2px solid var(--content-library-brass-deep);
   outline-offset: 2px;
   box-shadow: 0 0 0 3px rgba(168, 118, 43, 0.35);
+}
+
+.content-library-choose-btn:focus-visible {
+  outline: 2px solid var(--content-library-desk-deep);
+  box-shadow: 0 0 0 3px rgba(22, 48, 35, 0.45);
 }
 
 .content-library-list::-webkit-scrollbar,

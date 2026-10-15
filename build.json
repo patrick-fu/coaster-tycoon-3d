@@ -1,15 +1,18 @@
 {
-  "sourceCommit": "5ae661d14a16e7eecc4a4cd720715baff9dd3356",
-  "sourceTree": "7d8729547e0ff639f011465c66aaeb8dda9e846e",
+  "sourceCommit": "3629b2b83d260f8ac205e10d4986489eeace862c",
+  "sourceTree": "5883df4099007d605aae90b3935ce7f6b70b9a3f",
   "saveVersion": 16,
   "contentVersion": 9,
   "protocolVersion": 9,
   "sourcePullRequest": "https://github.com/patrick-fu/coaster-tycoon-3d/pull/86",
-  "buildReadySHA256": "333f6d07813e2a29327ae458a231bd5c3fab169cb7d8602f0634d8f81bf8b66a",
-  "sourceInventorySHA256": "a34501d443c65ea7a6fde86280c9c82eba376d8c468138f40a2adb4242ec1629",
-  "compiledInventorySHA256": "64103088adbf0b66bf7102ff1e5fbb679f6d53df950142b8ae4a0d803ed00acc",
-  "runtimeInventorySHA256": "e9f1b99d0f1c4f5144f94efe07c354dd2e3e8ba88ecb32bbeb3c8dd8b850aaed",
+  "buildBindingSHA256": "70d6002573d54bc5cd165ae6f01c3de84c0baf61a2184dda35d59627cef1162a",
+  "buildQualificationSHA256": "8ec9e579268c02a47fe6208ea86807d880b7107befa23267610fcd0da687cd35",
+  "finiteArtAcceptanceSHA256": "56083f29aa95712af612643aca59de2bf129c368638056f554ed77749832ac8e",
+  "sourceInventorySHA256": "f6845129df542fd255a75299a2a6fbedc75ba1db61d5a35a2ac56915af68787c",
+  "compiledInventorySHA256": "d0d234fb1ef785b2c35e756b08e823fb8f8461415608fffef9ac11785ab59bef",
+  "runtimeInventorySHA256": "b0f2dc7afd87bc0bc01d89b4d4cf63b215cd7efe10e6bf9bbc4af46ef303aa02",
   "buildHost": "Grok Bot",
   "verification": "https://github.com/patrick-fu/coaster-tycoon-3d/pull/86",
-  "scope": "Finite development preview: exact Grok-built197runtime/233source closure, affected saved-Rules13+89 checks, finite geometry/resource checks and nine current private native captures. Public HTTP/native qualification pending; integratedGPU, native recovery/migration suite, largepark scale and original-game breadth remain open. Isolated later art/Junior candidates excluded."
+  "preparedAtUTC": "2026-10-15T22:55:32.063064+00:00",
+  "scope": "Finite development preview: exact Grok-built197runtime/233source/88compiled closure; six normal prop quote/execute commands and opaque receiver roundtrip; four current private shipping-renderer frames at paused4800 with strict resource/Worker, camera, profile restoration and owned cleanup gates. Incremental visual acceptance only. Public native, integratedGPU/performance, physical fit, migration/recovery, large parks, scenarios and original-game breadth remain open. Two new catalogue focus overrides remain ineffective; prior keyboard focus is retained and a bounded follow-up fix is in progress."
 }

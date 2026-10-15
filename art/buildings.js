@@ -612,10 +612,10 @@ function buildRestroom(ctx, group, e, facility, textures) {
   unitCylinder(ctx, group, matTrim, 0, 4.32, 0, 0.05, 0.2, 0.05);
 
   // 5. Classic Blue Restroom Signboard (+X Frontage)
-  unitBox(ctx, group, matCornice, 1.5, 2.38, 0, 0.06, 0.38, 1.62);
+  unitBox(ctx, group, matCornice, 1.85, 2.75, 0, 0.06, 0.28, 1.62);
   addLabel(ctx, group, name, {
-    x: 1.54, y: 2.38, z: 0,
-    width: 1.5, height: 0.32,
+    x: 1.89, y: 2.75, z: 0,
+    width: 1.5, height: 0.24,
     color: '#ffffff', background: '#1d4ed8',
     rotation: [0, Math.PI / 2, 0]
   });

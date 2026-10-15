@@ -95,7 +95,7 @@ export function newClassicShowcase(rules) {
         const facility = apply({ type: 'place-facility', name: 'Cash machine', kind: 'atm', tile: { x: 22, y: 9 }, height: 32, direction: 2, content: atmContent() });
         apply({ type: 'set-facility-open', facility, open: true });
     }
-    for (const [kind, x, y] of [['bench', 21, 10], ['bin', 21, 12], ['bin', 21, 14], ['bench', 19, 15], ['bin', 11, 15], ['bench', 28, 15]])
+    for (const [kind, x, y] of [['bench', 21, 10], ['bin', 21, 12], ['bin', 21, 14], ['bench', 19, 15], ['bin', 11, 15], ['bench', 28, 15], ['bench', 15, 15], ['bin', 16, 15]])
         apply({ type: 'place-amenity', kind, path: pathIds.get(`${x},${y}`) });
     const entry = { x: 21, y: 9, z: 32 };
     apply({ type: 'set-park-entrance', point: entry });
@@ -138,6 +138,10 @@ export function newClassicShowcase(rules) {
         ['tree', 7, 13],
         ['hedge', 7, 14],
         ['lamp', 10, 14],
+        ['hedge', 14, 14],
+        ['flower', 15, 14],
+        ['lamp', 16, 14],
+        ['tree', 15, 13],
     ])
         apply({ type: 'place-scenery', sceneryType, tile: { x, y }, height: 32 });
     for (const ride of [wood, steel, flume])
