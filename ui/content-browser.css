@@ -892,7 +892,7 @@
   z-index: 1;
 }
 
-.content-library-filter-btn:focus-visible {
+.content-library-toolbar .content-library-filter-btn:focus-visible {
   outline-offset: -1px;
 }
 
@@ -905,7 +905,7 @@
   box-shadow: 0 0 0 3px rgba(168, 118, 43, 0.35);
 }
 
-.content-library-choose-btn:focus-visible {
+.content-library-body .content-library-choose-btn:focus-visible {
   outline: 2px solid var(--content-library-desk-deep);
   box-shadow: 0 0 0 3px rgba(22, 48, 35, 0.45);
 }
