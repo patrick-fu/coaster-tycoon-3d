@@ -1,11 +1,11 @@
 {
-  "kind": "independent-classic-art-pass",
-  "sourceCommit": "3629b2b83d260f8ac205e10d4986489eeace862c",
-  "sourceTree": "5883df4099007d605aae90b3935ce7f6b70b9a3f",
+  "kind": "independent-classic-midway",
+  "sourceCommit": "6ff62a932863ecf6cc860bfbd46d75d59d30c106",
+  "sourceTree": "609b46e80ca505ab25d033414d854966bee17add",
   "saveVersion": 16,
   "contentVersion": 9,
   "protocolVersion": 9,
-  "runtimeBytes": 106101911,
+  "runtimeBytes": 106102493,
   "runtimeFiles": {
     "LICENSE": "f68cef6a23271aa6fa5022cd7acebc98de572571df4a97077b0ecd7b385aa45d",
     "THIRD_PARTY_NOTICES.md": "00b0f7dbc73491ae6de9759847513d40a2ead2632542b0acda004749cd08a51c",
@@ -39,7 +39,7 @@
     "content/carousel.d.ts": "a0110738e7568d46eca29d85f8b77d74d37546752f91c5dcac1aee5d372f8c3c",
     "content/carousel.js": "29f71f912001cf341916541fbf678bf8fb1985d6c1979cf1e541e8e79318ceb9",
     "content/classic-showcase.d.ts": "418d185b2383d0f4e96cc3875d46b6ee3951af6dcf732cfb8bf7a690bc1807b0",
-    "content/classic-showcase.js": "c7540fe9c70e99089cf55754a533086c044fa856cf21d50149ea26781b129d76",
+    "content/classic-showcase.js": "ee3f5e1fc391bdfda88f8805ef1bc10e387e9aaf59878761190f25cd32545a27",
     "content/consumables.d.ts": "feb4a5ecea919e30046668b929adf12a0523d01aa045270354b6041d6d910101",
     "content/consumables.js": "c5a4c9f04b485d5c71d555d71e4cc35b14a529af0db70ad909b94d48bc92e6c7",
     "content/curve-samples.d.ts": "fed6554617c6feff1904f61705597f897faa3e695e64ffedde17086dd6d2729b",
@@ -66,7 +66,7 @@
     "content/wooden-coaster.js": "c783ab00dfab2fadbca045170c6db669dcea763194e36e6b1d78176071edc295",
     "content/wooden-footprints.d.ts": "ba3813d9ef80c8ade8a7156e5d23151699fe3bcf44f520559b64e9481528af43",
     "content/wooden-footprints.js": "ef471c76a23274bf86a3f17acc00bcd69ed9f8eca1a3fb17b74b8c0c9c86f9d2",
-    "content-browser.css": "e0c9e0c8876b2799339c54a3d892233534e5cc72f97cb161e710e1645cffda43",
+    "content-browser.css": "f7e26dbb6eec86c07e403c95fe5e7c869d5b2a33722aa47c04faf2c1367e7b8d",
     "content-browser.js": "62152e9b150838e6e87dc6fa0bb9a3adb184bde68277efbe98e1627a537103b9",
     "favicon.svg": "60879a890648c630ab1dc7cdc25975693b3c0610be77a4a11d2e7c7315d5c697",
     "flume-controls.js": "8ac36733f3ccdfc94d889441ac3d06a7586074a4f65ffc3ba6fab70fdce1423b",
@@ -206,6 +206,7 @@
     "vendor/three.module.js": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea"
   },
   "sourcePullRequest": "https://github.com/patrick-fu/coaster-tycoon-3d/pull/86",
-  "finiteArtAcceptanceSHA256": "56083f29aa95712af612643aca59de2bf129c368638056f554ed77749832ac8e",
-  "scope": "Finite development preview: exact Grok-built197runtime/233source/88compiled closure; six normal prop quote/execute commands and opaque receiver roundtrip; four current private shipping-renderer frames at paused4800 with strict resource/Worker, camera, profile restoration and owned cleanup gates. Incremental visual acceptance only. Public native, integratedGPU/performance, physical fit, migration/recovery, large parks, scenarios and original-game breadth remain open. Two new catalogue focus overrides remain ineffective; prior keyboard focus is retained and a bounded follow-up fix is in progress."
+  "finiteArtAcceptanceSHA256": "3d675981c9c45da06436f2846092c0d2d184322e44550322a15a409f478d1d0a",
+  "visualAdoptionSHA256": "afa50001c553d2755ab1b7b3233b87316fe78422996d9d391e79d98db8ecc716",
+  "scope": "Finite development preview: exact Grok-built 197-runtime/233-source/88-compiled closure for the committed two-file midway/focus slice. Five constructed instances still mean four ride families. Normal construction, one natural paid boarding/lap/unload and exact old/new/continued receivers were finitely accepted; five current paused4800 shipping-renderer frames and two real Tab focus states passed bounded native checks. Root adopted the compact composition and two cascade repairs. Diagnostic access closeup has lower near-plane cropping and does not qualify the complete circuit; portal foundation lawn-gap appearance remains a separate renderer issue. No representative integrated-GPU/performance, physical asset contact, full gameplay, original-game fidelity or public-browser acceptance is claimed."
 }

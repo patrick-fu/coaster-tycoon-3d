@@ -108,7 +108,7 @@ export function newClassicShowcase(rules) {
         ['tree', 4, 7], ['tree', 4, 10], ['rock', 5, 5], ['tree', 17, 5], ['tree', 18, 7], ['flower', 17, 13],
         ['flower', 25, 11], ['flower', 29, 11], ['tree', 31, 7], ['tree', 32, 10],
         ['tree', 9, 24], ['tree', 11, 25], ['rock', 10, 26], ['hedge', 18, 21], ['flower', 18, 17], ['tree', 18, 29],
-        ['tree', 35, 21], ['rock', 36, 24], ['tree', 31, 29], ['hedge', 23, 29],
+        ['tree', 45, 29], ['rock', 44, 30], ['tree', 31, 29], ['hedge', 23, 29],
         // Frame the carousel median, entrance avenue and shop backs before arrivals.
         ['flower', 27, 11],
         ['hedge', 27, 12],
@@ -144,12 +144,20 @@ export function newClassicShowcase(rules) {
         ['tree', 15, 13],
     ])
         apply({ type: 'place-scenery', sceneryType, tile: { x, y }, height: 32 });
-    for (const ride of [wood, steel, flume])
+    // Append the midway after existing elements to preserve their allocation order.
+    const midway = tracked('Meadow Flyer', 37, 19, legacyRideContent(), ['station', 'station', 'station', 'lift-start', 'lift', 'lift-end', 'right', 'flat', 'flat', 'flat', 'right', 'drop-start', 'drop', 'drop-end', 'flat', 'flat', 'flat', 'right', 'flat', 'flat', 'flat', 'right'], 4, 2);
+    for (let x = 31; x <= 39; x++)
+        path(x, 15);
+    path(37, 16, midway);
+    path(37, 17, midway);
+    path(39, 16);
+    path(39, 17);
+    for (const ride of [wood, steel, flume, midway])
         apply({ type: 'set-ride-status', ride, status: 'testing' });
     const test = engine.advance(2400);
     if (!test.ok)
         throw new Error(`Qualification advance failed: ${JSON.stringify(test)}`);
-    for (const ride of [wood, steel, flume, carousel])
+    for (const ride of [wood, steel, flume, carousel, midway])
         apply({ type: 'set-ride-status', ride, status: 'open' });
     apply({ type: 'set-park-open', open: true });
     const warm = engine.advance(2400);

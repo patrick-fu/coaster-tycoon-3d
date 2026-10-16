@@ -1,0 +1,19 @@
+{
+  "sourceCommit": "6ff62a932863ecf6cc860bfbd46d75d59d30c106",
+  "sourceTree": "609b46e80ca505ab25d033414d854966bee17add",
+  "saveVersion": 16,
+  "contentVersion": 9,
+  "protocolVersion": 9,
+  "sourcePullRequest": "https://github.com/patrick-fu/coaster-tycoon-3d/pull/86",
+  "buildBindingSHA256": "8f24b7fce74750ad4e38665d02664537617b4243a76ba7667dbd19c25ea2d3e9",
+  "buildQualificationSHA256": "b2818e09e8ab1e2e7808e6eed7e270aecac3091acc098df21b66c08a9caf0370",
+  "finiteArtAcceptanceSHA256": "3d675981c9c45da06436f2846092c0d2d184322e44550322a15a409f478d1d0a",
+  "visualAdoptionSHA256": "afa50001c553d2755ab1b7b3233b87316fe78422996d9d391e79d98db8ecc716",
+  "sourceInventorySHA256": "480306899099b8c3a715a97428e71221f7a82c38e510ceef1e81d520a0476bfb",
+  "compiledInventorySHA256": "2442ced9a1932f885c97205dec01cf6603b6be8e05d6f7275f55fec0fd8e7190",
+  "runtimeInventorySHA256": "1f67201841027245a3eab6a113910ab4adcf780560c3822f306f2df998cc67f5",
+  "buildHost": "Grok Bot",
+  "verification": "https://github.com/patrick-fu/coaster-tycoon-3d/pull/86",
+  "preparedAtUTC": "2026-10-16T00:42:36.419715+00:00",
+  "scope": "Finite development preview: exact Grok-built 197-runtime/233-source/88-compiled closure for the committed two-file midway/focus slice. Five constructed instances still mean four ride families. Normal construction, one natural paid boarding/lap/unload and exact old/new/continued receivers were finitely accepted; five current paused4800 shipping-renderer frames and two real Tab focus states passed bounded native checks. Root adopted the compact composition and two cascade repairs. Diagnostic access closeup has lower near-plane cropping and does not qualify the complete circuit; portal foundation lawn-gap appearance remains a separate renderer issue. No representative integrated-GPU/performance, physical asset contact, full gameplay, original-game fidelity or public-browser acceptance is claimed."
+}

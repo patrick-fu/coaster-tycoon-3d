@@ -1,0 +1,289 @@
+{
+  "licenseEvidence": {
+    "path": "materials/ambientCG-license.html",
+    "url": "https://docs.ambientcg.com/license/",
+    "bytes": 34106,
+    "sha256": "60138e09b277c89977841462634b36e99d7bae5b77174777813502069c59461c"
+  },
+  "retainedMaterialRoot": "/Volumes/WD/code/workspaces/coaster-rct2-program/evidence",
+  "assets": [
+    {
+      "id": "Wood096",
+      "provider": "ambientCG",
+      "page": "https://ambientcg.com/a/Wood096",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://docs.ambientcg.com/license/",
+      "bundle": {
+        "path": "materials/Wood096_1K-PNG.zip",
+        "url": "https://ambientcg.com/get?file=Wood096_1K-PNG.zip",
+        "bytes": 15153371,
+        "sha256": "08bb999fff1a56789e33f77ab94124f1734238185fd2ff40e0ab109ce2f555b5"
+      },
+      "use": "Source maps packed in editable master; delivery images resized to512x512 with Blender, painted siding/roof tint authored separately, normal/roughness preserved",
+      "members": [
+        {
+          "name": "Wood096_1K-PNG_Color.png",
+          "bytes": 1076245,
+          "sha256": "2635d3b950808e52d5de4ce4ee4b3aa35430ffd3117e00c1b2cfb155168e6b47"
+        },
+        {
+          "name": "Wood096_1K-PNG_NormalGL.png",
+          "bytes": 5092366,
+          "sha256": "5b9f71b56cc74a397c9263619f7ef0cfc7d668762f4f2c960e4bd883dc2891c5"
+        },
+        {
+          "name": "Wood096_1K-PNG_Roughness.png",
+          "bytes": 609059,
+          "sha256": "bcba2c9b971c17875e0d8b6e11b234ce86a1c4110bd72725c2586b8950738418"
+        }
+      ]
+    },
+    {
+      "id": "WoodFloor043",
+      "provider": "ambientCG",
+      "page": "https://ambientcg.com/a/WoodFloor043",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://docs.ambientcg.com/license/",
+      "bundle": {
+        "path": "materials/WoodFloor043_1K-PNG.zip",
+        "url": "https://ambientcg.com/get?file=WoodFloor043_1K-PNG.zip",
+        "bytes": 7581590,
+        "sha256": "6211c1589cc988b72fc74c3ad638be8db789a7cb619537d02cf7b6e0e6b30bb8"
+      },
+      "use": "Source maps packed in editable master; delivery images resized to512x512 with Blender, painted siding/roof tint authored separately, normal/roughness preserved",
+      "members": [
+        {
+          "name": "WoodFloor043_1K-PNG_Color.png",
+          "bytes": 659574,
+          "sha256": "55a7c25c191c8eb501d87a8872438dcfba307b3a043fee00ad9e89f0c413d684"
+        },
+        {
+          "name": "WoodFloor043_1K-PNG_Metalness.png",
+          "bytes": 1644,
+          "sha256": "46ca3dbd1939c6c89b437c195afe51d816336baa0376b9289d6e7dc0757a69dc"
+        },
+        {
+          "name": "WoodFloor043_1K-PNG_NormalGL.png",
+          "bytes": 2205607,
+          "sha256": "ac8e1221726a512c4eb3cae98674bf0dda774382b2ba2577d36cbf8192986a6e"
+        },
+        {
+          "name": "WoodFloor043_1K-PNG_Roughness.png",
+          "bytes": 190238,
+          "sha256": "c15241e172c474ad147003f8e957cf88d305d9e8d82809de201f04f7b969ec26"
+        }
+      ]
+    },
+    {
+      "id": "RoofingTiles013A",
+      "provider": "ambientCG",
+      "page": "https://ambientcg.com/a/RoofingTiles013A",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://docs.ambientcg.com/license/",
+      "bundle": {
+        "path": "materials/RoofingTiles013A_1K-PNG.zip",
+        "url": "https://ambientcg.com/get?file=RoofingTiles013A_1K-PNG.zip",
+        "bytes": 12212479,
+        "sha256": "fc4025f4b5b5a83463406b73f38eca674a9976a3b2785c7e41da5ff23567e3e8"
+      },
+      "use": "Source maps packed in editable master; delivery images resized to512x512 with Blender, painted siding/roof tint authored separately, normal/roughness preserved",
+      "members": [
+        {
+          "name": "RoofingTiles013A_1K-PNG_Color.png",
+          "bytes": 813925,
+          "sha256": "ae2037e4c4934b42b60c799b2755cb73c164a883410f89e22ac54ed5ecb4d1de"
+        },
+        {
+          "name": "RoofingTiles013A_1K-PNG_NormalGL.png",
+          "bytes": 4029497,
+          "sha256": "2488e6f327db93fe29558a9326ee4dba94022f944e2daf070a7ed47825fa82ab"
+        },
+        {
+          "name": "RoofingTiles013A_1K-PNG_Roughness.png",
+          "bytes": 523350,
+          "sha256": "575b1674cfd09dde9db152b917503c77fa4187693762bf2f8824521975bac812"
+        }
+      ]
+    },
+    {
+      "id": "Metal049A",
+      "provider": "ambientCG",
+      "page": "https://ambientcg.com/a/Metal049A",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://docs.ambientcg.com/license/",
+      "bundle": {
+        "path": "materials/Metal049A_1K-PNG.zip",
+        "url": "https://ambientcg.com/get?file=Metal049A_1K-PNG.zip",
+        "bytes": 6456067,
+        "sha256": "802ac78fec292e86642630a510f9e6f869bd702fc2f2e81ad3a2160e80047880"
+      },
+      "use": "Source maps packed in editable master; delivery images resized to512x512 with Blender, painted siding/roof tint authored separately, normal/roughness preserved",
+      "members": [
+        {
+          "name": "Metal049A_1K-PNG_Color.png",
+          "bytes": 535253,
+          "sha256": "3c5be68c8a56534f120e88cff835a321ca51459c8f31482f984958c7fbfda8e6"
+        },
+        {
+          "name": "Metal049A_1K-PNG_Metalness.png",
+          "bytes": 4281,
+          "sha256": "61c66550ad5636c9fb8bfb13fc5b2ff4b2ba7cb66831e8c68509124915be045e"
+        },
+        {
+          "name": "Metal049A_1K-PNG_NormalGL.png",
+          "bytes": 1791977,
+          "sha256": "5b80adcc8092618a127bb7dfa547e3a35d156efd027c9daa579ac26f9098a678"
+        },
+        {
+          "name": "Metal049A_1K-PNG_Roughness.png",
+          "bytes": 325089,
+          "sha256": "a42d9eaba9bc232739c7cb86dee03805e66f50a065cecfbbfe906aaeb6b3ded2"
+        }
+      ]
+    },
+    {
+      "id": "Bricks051",
+      "provider": "ambientCG",
+      "page": "https://ambientcg.com/a/Bricks051",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://docs.ambientcg.com/license/",
+      "bundle": {
+        "path": "materials/Bricks051_1K-PNG.zip",
+        "url": "https://ambientcg.com/get?file=Bricks051_1K-PNG.zip",
+        "bytes": 16665975,
+        "sha256": "9223035fb3a281eeb86caf0aba499994b5b790b3b4b6b6a3633274f2097a937a"
+      },
+      "use": "Source maps packed in editable master; delivery images resized to512x512 with Blender, painted siding/roof tint authored separately, normal/roughness preserved",
+      "members": [
+        {
+          "name": "Bricks051_1K-PNG_Color.png",
+          "bytes": 1807156,
+          "sha256": "9adbf36c4f0d6a7f7eb3b85dc35c5c022c15bea802562e5bf9966d83d29facd4"
+        },
+        {
+          "name": "Bricks051_1K-PNG_NormalGL.png",
+          "bytes": 5673741,
+          "sha256": "8b14ad4bd834773a26b0bbc4f4afd80fe92c939aa3f49385a41a1fb8165646e8"
+        },
+        {
+          "name": "Bricks051_1K-PNG_Roughness.png",
+          "bytes": 425776,
+          "sha256": "fce4ec1fb6301336503c0d65dd6c14aaf7288dfba5b20c4cd6ab15abf9f33a9d"
+        }
+      ]
+    }
+  ],
+  "derivedAlbedos": [
+    {
+      "contentVariant": "independent.detailed-burger-stand",
+      "glbSHA256": "9b646bdd004390fd8c240091d0e85df6bec3def0ba33dfa2826aa4160527ebfe",
+      "editableMasterSHA256": "06803db208873608c6b35d8a8c9b37fe6426aba49e09779c218554d496a8fb4d",
+      "textures": [
+        {
+          "image": "RoofingTiles013A_1K-PNG_Color_terracotta",
+          "sourceFile": "RoofingTiles013A_1K-PNG_Color.png",
+          "sourceSha256": "ae2037e4c4934b42b60c799b2755cb73c164a883410f89e22ac54ed5ecb4d1de",
+          "algorithm": "srgb-decode-linear-mix-srgb-encode-v1",
+          "linearTint": [
+            0.78,
+            0.24,
+            0.16
+          ],
+          "mixFactor": 0.8,
+          "sampleDimensions": [
+            512,
+            512
+          ],
+          "sourceChannels": 4,
+          "samplePixelCount": 1048576,
+          "packedMasterSha256": "732a439243a71431ace68da66bbd0f40954043b2fb01b4a6496d82fb7a88a92b",
+          "packedMasterBytes": 73962,
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "image": "WoodFloor043_1K-PNG_Color_cream",
+          "sourceFile": "WoodFloor043_1K-PNG_Color.png",
+          "sourceSha256": "55a7c25c191c8eb501d87a8872438dcfba307b3a043fee00ad9e89f0c413d684",
+          "algorithm": "srgb-decode-linear-mix-srgb-encode-v1",
+          "linearTint": [
+            0.96,
+            0.92,
+            0.82
+          ],
+          "mixFactor": 0.82,
+          "sampleDimensions": [
+            512,
+            512
+          ],
+          "sourceChannels": 4,
+          "samplePixelCount": 1048576,
+          "packedMasterSha256": "173f87f4d7f1c4448045b4edbbdeec9b19def32ea9eec2a6dc447e8b488bc4e2",
+          "packedMasterBytes": 198208,
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        }
+      ]
+    },
+    {
+      "contentVariant": "independent.detailed-soft-drink-stand",
+      "glbSHA256": "c166d2e28c2be1ab49dec4d26078b26f66a14520ea7a9c011a559d6e6d5a825e",
+      "editableMasterSHA256": "5c09f39806990d7d7903fdb4bb9c401403a3aa038a308144d5d306ab5b51ec38",
+      "textures": [
+        {
+          "image": "RoofingTiles013A_1K-PNG_Color_teal",
+          "sourceFile": "RoofingTiles013A_1K-PNG_Color.png",
+          "sourceSha256": "ae2037e4c4934b42b60c799b2755cb73c164a883410f89e22ac54ed5ecb4d1de",
+          "algorithm": "srgb-decode-linear-mix-srgb-encode-v1",
+          "linearTint": [
+            0.24,
+            0.54,
+            0.52
+          ],
+          "mixFactor": 0.78,
+          "sampleDimensions": [
+            512,
+            512
+          ],
+          "sourceChannels": 4,
+          "samplePixelCount": 1048576,
+          "packedMasterSha256": "2a1344690cbe4f2f6b53fe5b5041f875d76c48997981aebb0d220d37a8fb9a64",
+          "packedMasterBytes": 72247,
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "image": "WoodFloor043_1K-PNG_Color_cream",
+          "sourceFile": "WoodFloor043_1K-PNG_Color.png",
+          "sourceSha256": "55a7c25c191c8eb501d87a8872438dcfba307b3a043fee00ad9e89f0c413d684",
+          "algorithm": "srgb-decode-linear-mix-srgb-encode-v1",
+          "linearTint": [
+            0.96,
+            0.93,
+            0.84
+          ],
+          "mixFactor": 0.82,
+          "sampleDimensions": [
+            512,
+            512
+          ],
+          "sourceChannels": 4,
+          "samplePixelCount": 1048576,
+          "packedMasterSha256": "2696d85571dbab2ef9d20003ba8292aa267c3f4db33fedc3593ca2ba9c6fb405",
+          "packedMasterBytes": 177831,
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        }
+      ]
+    }
+  ],
+  "derivation": "Resize a copy of the original byte/sRGB source to512, decode sRGB, apply the independently authored linear MIX, encode sRGB and pack once. Seventeen original source maps are preserved in each master; two derived albedos per model are embedded in the fifteen-image runtime GLB."
+}
