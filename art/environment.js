@@ -1719,18 +1719,18 @@ export function buildScenery(ctx, parent, e) {
     const plinthMat = getMat(ctx, 'mat-scenery-hedge-plinth', { color: '#8e826e', roughness: 0.84 });
 
     boxMesh(ctx, parent, plinthMat, x, h + 0.06, z, 3.7, 0.12, 1.3);
-    boxMesh(ctx, parent, hedgeMat, x, h + 0.62, z, 3.1, 1.02, 0.9);
-    for (const ox of [-1.45, 1.45]) {
-      sphereMesh(ctx, parent, hedgeMat, x + ox, h + 0.67, z, 0.6, 1.1, 1.05);
+    boxMesh(ctx, parent, hedgeMat, x, h + 0.54, z, 3.3, 0.84, 0.96);
+    boxMesh(ctx, parent, hedgeMat, x, h + 1.02, z, 3.2, 0.28, 0.82);
+    for (const ox of [-1.5, 1.5]) {
+      sphereMesh(ctx, parent, hedgeMat, x + ox, h + 0.65, z, 0.45, 1.05, 0.92);
     }
-    // Overlapping leaf volumes cover the recessed core's straight top and side edges.
-    for (const ox of [-0.68, 0.68]) {
-      for (const oz of [-0.34, 0.34]) {
-        sphereMesh(ctx, parent, hedgeMat, x + ox, h + 0.64, z + oz, 1.4, 0.96, 0.38);
+    for (const ox of [-0.85, 0.85]) {
+      for (const oz of [-0.42, 0.42]) {
+        sphereMesh(ctx, parent, hedgeMat, x + ox, h + 0.62, z + oz, 1.6, 0.92, 0.28);
       }
     }
-    for (const ox of [-1.28, -0.64, 0, 0.64, 1.28]) {
-      sphereMesh(ctx, parent, hedgeMat, x + ox, h + 1.18, z, 0.86, 0.44, 0.96);
+    for (const ox of [-1.0, 0, 1.0]) {
+      sphereMesh(ctx, parent, hedgeMat, x + ox, h + 1.16, z, 1.45, 0.28, 0.78);
     }
   } else if (type === 'lamp') {
     // Victorian heritage cast-iron park lantern

@@ -1,0 +1,326 @@
+{
+  "authoring": {
+    "assetId": "information_kiosk",
+    "referenceVariant": "timber_four_frontage_kiosk",
+    "candidateDimensions": [
+      3.44,
+      3.44,
+      3.84
+    ],
+    "anchors": [
+      "GroundRoot",
+      "Counter_Front",
+      "Counter_Back",
+      "Counter_Left",
+      "Counter_Right",
+      "Sign_Front",
+      "PropMap",
+      "PropUmbrella"
+    ],
+    "restraints": [],
+    "notes": "Polished four-frontage timber information kiosk. Features stepped masonry plinth, chamfered timber posts, recessed counter bays with interior map stacks and narrowed cream notice core, continuous cream vertical eave fascia, rebalanced terracotta shingle hip roof, verdigris teal cupola cap, prominent eave INFO signage with high-contrast diagonal N lettering, and two dedicated inspection props: PropMap (folded trifold map) and PropUmbrella (compact octagonal canopy).",
+    "geometryIntent": "Independent theme-park information kiosk with crisp INFO signs, map markings and alternating umbrella panels. Strictly bounded within X/Y +/-1.95m and Z 0..3.85m to fit standard 4m park tile envelopes without uniform scaling. Employs shared mesh datablocks across symmetrical facade and cupola components to minimize draw calls and geometry overhead, with explicit UV coordinates preserved for woodgrain, shingles, and inspection props."
+  },
+  "geometry": {
+    "meshObjects": 92,
+    "trianglesEvaluated": 12864,
+    "boundsBlender": {
+      "min": [
+        -1.864400029182434,
+        -1.864400029182434,
+        0.0
+      ],
+      "max": [
+        1.7549999952316284,
+        1.7549999952316284,
+        3.8399999141693115
+      ]
+    },
+    "materials": [
+      "boards",
+      "brass",
+      "brick",
+      "cream",
+      "ink",
+      "mat_kiosk_roof_warm",
+      "metal",
+      "paint_teal",
+      "paper",
+      "timber"
+    ],
+    "anchorsBlender": {
+      "GroundRoot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "Counter_Front": [
+        0.0,
+        -1.5199999809265137,
+        0.8799999952316284
+      ],
+      "Counter_Back": [
+        0.0,
+        1.5199999809265137,
+        0.8799999952316284
+      ],
+      "Counter_Left": [
+        -1.5199999809265137,
+        0.0,
+        0.8799999952316284
+      ],
+      "Counter_Right": [
+        1.5199999809265137,
+        0.0,
+        0.8799999952316284
+      ],
+      "Sign_Front": [
+        0.0,
+        -1.7300000190734863,
+        2.3299999237060547
+      ],
+      "PropMap": [
+        0.30000001192092896,
+        -1.399999976158142,
+        0.8799999952316284
+      ],
+      "PropUmbrella": [
+        -1.6399999856948853,
+        -1.6399999856948853,
+        0.2199999988079071
+      ]
+    },
+    "issues": []
+  },
+  "blender": "4.3.2",
+  "sourceSha256": "0d96fc3b6139e2830170c84a36f22ccf5c12a4a6116b60a4a93f407b04871650",
+  "driverSha256": "7538df5fdf06fdc70dd0ac9ae2753ce16c6e85ded9af1bfd56d1b574ef6370e9",
+  "textureSources": [
+    {
+      "file": "Bricks051_1K-PNG_Color.png",
+      "sourceSha256": "9adbf36c4f0d6a7f7eb3b85dc35c5c022c15bea802562e5bf9966d83d29facd4",
+      "sourceDimensions": [
+        1024,
+        1024
+      ],
+      "runtimeDimensions": [
+        512,
+        512
+      ]
+    },
+    {
+      "file": "Bricks051_1K-PNG_NormalGL.png",
+      "sourceSha256": "8b14ad4bd834773a26b0bbc4f4afd80fe92c939aa3f49385a41a1fb8165646e8",
+      "sourceDimensions": [
+        1024,
+        1024
+      ],
+      "runtimeDimensions": [
+        512,
+        512
+      ]
+    },
+    {
+      "file": "Bricks051_1K-PNG_Roughness.png",
+      "sourceSha256": "fce4ec1fb6301336503c0d65dd6c14aaf7288dfba5b20c4cd6ab15abf9f33a9d",
+      "sourceDimensions": [
+        1024,
+        1024
+      ],
+      "runtimeDimensions": [
+        512,
+        512
+      ]
+    },
+    {
+      "file": "Metal049A_1K-PNG_Color.png",
+      "sourceSha256": "3c5be68c8a56534f120e88cff835a321ca51459c8f31482f984958c7fbfda8e6",
+      "sourceDimensions": [
+        1024,
+        1024
+      ],
+      "runtimeDimensions": [
+        512,
+        512
+      ]
+    },
+    {
+      "file": "Metal049A_1K-PNG_Metalness.png",
+      "sourceSha256": "61c66550ad5636c9fb8bfb13fc5b2ff4b2ba7cb66831e8c68509124915be045e",
+      "sourceDimensions": [
+        1024,
+        1024
+      ],
+      "runtimeDimensions": [
+        512,
+        512
+      ]
+    },
+    {
+      "file": "Metal049A_1K-PNG_NormalGL.png",
+      "sourceSha256": "5b80adcc8092618a127bb7dfa547e3a35d156efd027c9daa579ac26f9098a678",
+      "sourceDimensions": [
+        1024,
+        1024
+      ],
+      "runtimeDimensions": [
+        512,
+        512
+      ]
+    },
+    {
+      "file": "Metal049A_1K-PNG_Roughness.png",
+      "sourceSha256": "a42d9eaba9bc232739c7cb86dee03805e66f50a065cecfbbfe906aaeb6b3ded2",
+      "sourceDimensions": [
+        1024,
+        1024
+      ],
+      "runtimeDimensions": [
+        512,
+        512
+      ]
+    },
+    {
+      "file": "RoofingTiles013A_1K-PNG_Color.png",
+      "sourceSha256": "ae2037e4c4934b42b60c799b2755cb73c164a883410f89e22ac54ed5ecb4d1de",
+      "sourceDimensions": [
+        1024,
+        1024
+      ],
+      "runtimeDimensions": [
+        512,
+        512
+      ]
+    },
+    {
+      "file": "RoofingTiles013A_1K-PNG_NormalGL.png",
+      "sourceSha256": "2488e6f327db93fe29558a9326ee4dba94022f944e2daf070a7ed47825fa82ab",
+      "sourceDimensions": [
+        1024,
+        1024
+      ],
+      "runtimeDimensions": [
+        512,
+        512
+      ]
+    },
+    {
+      "file": "RoofingTiles013A_1K-PNG_Roughness.png",
+      "sourceSha256": "575b1674cfd09dde9db152b917503c77fa4187693762bf2f8824521975bac812",
+      "sourceDimensions": [
+        1024,
+        1024
+      ],
+      "runtimeDimensions": [
+        512,
+        512
+      ]
+    },
+    {
+      "file": "Wood096_1K-PNG_Color.png",
+      "sourceSha256": "2635d3b950808e52d5de4ce4ee4b3aa35430ffd3117e00c1b2cfb155168e6b47",
+      "sourceDimensions": [
+        1024,
+        1024
+      ],
+      "runtimeDimensions": [
+        512,
+        512
+      ]
+    },
+    {
+      "file": "Wood096_1K-PNG_NormalGL.png",
+      "sourceSha256": "5b9f71b56cc74a397c9263619f7ef0cfc7d668762f4f2c960e4bd883dc2891c5",
+      "sourceDimensions": [
+        1024,
+        1024
+      ],
+      "runtimeDimensions": [
+        512,
+        512
+      ]
+    },
+    {
+      "file": "Wood096_1K-PNG_Roughness.png",
+      "sourceSha256": "bcba2c9b971c17875e0d8b6e11b234ce86a1c4110bd72725c2586b8950738418",
+      "sourceDimensions": [
+        1024,
+        1024
+      ],
+      "runtimeDimensions": [
+        512,
+        512
+      ]
+    },
+    {
+      "file": "WoodFloor043_1K-PNG_Color.png",
+      "sourceSha256": "55a7c25c191c8eb501d87a8872438dcfba307b3a043fee00ad9e89f0c413d684",
+      "sourceDimensions": [
+        1024,
+        512
+      ],
+      "runtimeDimensions": [
+        512,
+        512
+      ]
+    },
+    {
+      "file": "WoodFloor043_1K-PNG_Metalness.png",
+      "sourceSha256": "46ca3dbd1939c6c89b437c195afe51d816336baa0376b9289d6e7dc0757a69dc",
+      "sourceDimensions": [
+        1024,
+        512
+      ],
+      "runtimeDimensions": [
+        512,
+        512
+      ]
+    },
+    {
+      "file": "WoodFloor043_1K-PNG_NormalGL.png",
+      "sourceSha256": "ac8e1221726a512c4eb3cae98674bf0dda774382b2ba2577d36cbf8192986a6e",
+      "sourceDimensions": [
+        1024,
+        512
+      ],
+      "runtimeDimensions": [
+        512,
+        512
+      ]
+    },
+    {
+      "file": "WoodFloor043_1K-PNG_Roughness.png",
+      "sourceSha256": "c15241e172c474ad147003f8e957cf88d305d9e8d82809de201f04f7b969ec26",
+      "sourceDimensions": [
+        1024,
+        512
+      ],
+      "runtimeDimensions": [
+        512,
+        512
+      ]
+    }
+  ],
+  "batchStatic": true,
+  "glb": {
+    "file": "information-kiosk.glb",
+    "sha256": "f0ff011ca476c4c8d5ef4af85c2438250df2bb91a42ffc89df4e6ee578ed65a4",
+    "bytes": 8987680
+  },
+  "editableMaster": {
+    "file": "information-kiosk.blend",
+    "sha256": "855335e35db37db4e1d259b21474dc887f900708aa368557bc21e119dfde789b",
+    "bytes": 25904218
+  },
+  "scope": "Candidate detailed asset laboratory; no original-metric or gameplay validation",
+  "renders": [
+    {
+      "file": "information-kiosk-front.png",
+      "sha256": "6d92dd46c539637bcf2bae135a572adc6fc6f7ec0f53b17bef8ad72a69708575"
+    },
+    {
+      "file": "information-kiosk-rear.png",
+      "sha256": "15614cf6b3556329dde35acece6dec4caf84195204fbdc7832df7befcf9288b8"
+    }
+  ]
+}

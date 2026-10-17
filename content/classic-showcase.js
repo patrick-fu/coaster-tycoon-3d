@@ -152,6 +152,13 @@ export function newClassicShowcase(rules) {
     path(37, 17, midway);
     path(39, 16);
     path(39, 17);
+    // Plant after the existing midway allocations to preserve their element IDs.
+    for (const [sceneryType, x, y] of [
+        ['tree', 10, 21], ['hedge', 11, 21], ['tree', 12, 21], ['tree', 9, 22],
+        ['flower', 10, 22], ['hedge', 11, 22], ['tree', 12, 22], ['hedge', 9, 23],
+        ['tree', 10, 23], ['flower', 11, 23], ['hedge', 12, 23], ['flower', 10, 24],
+    ])
+        apply({ type: 'place-scenery', sceneryType, tile: { x, y }, height: 32 });
     for (const ride of [wood, steel, flume, midway])
         apply({ type: 'set-ride-status', ride, status: 'testing' });
     const test = engine.advance(2400);
