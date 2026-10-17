@@ -1,5 +1,5 @@
 import type { ProductId } from './consumables.js';
-export declare const CONTENT_VERSION: 9;
+export declare const CONTENT_VERSION: 10;
 export type ContentIdentity = {
     familyId: string;
     variantId: string;
@@ -8,7 +8,7 @@ export type ContentIdentity = {
 type ServiceKind = 'food' | 'drink' | 'restroom';
 type Construction = {
     kind: 'tracked';
-    profileId: 'independent-circuit-v1' | 'independent.wooden-circuit-v1';
+    profileId: 'independent-circuit-v1' | 'independent.wooden-circuit-v1' | 'independent.wooden-rise-return-v2';
 } | {
     kind: 'channel';
     profileId: 'independent.log-flume-v1';
@@ -42,7 +42,7 @@ type Construction = {
 };
 type Operation = {
     kind: 'circuit';
-    profileId: 'independent-circuit-v1' | 'independent.wooden-circuit-v1';
+    profileId: 'independent-circuit-v1' | 'independent.wooden-circuit-v1' | 'independent.wooden-rise-return-v2';
 } | {
     kind: 'channel-circuit';
     profileId: 'independent.log-flume-v1';
@@ -78,7 +78,7 @@ export type Presentation = {
     profileId: 'classic-candidate-v1';
 } | {
     kind: 'detailed-wooden-coaster';
-    profileId: 'detailed-wooden-candidate-v1';
+    profileId: 'detailed-wooden-candidate-v1' | 'detailed-wooden-rise-return-v2';
 } | {
     kind: 'detailed-carousel';
     profileId: 'detailed-carousel-candidate-v1';
@@ -134,6 +134,7 @@ export type ResolvedContent = {
 };
 export declare function legacyRideContent(): ContentIdentity;
 export declare function woodenRideContent(): ContentIdentity;
+export declare function woodenRiseReturnRideContent(): ContentIdentity;
 export declare function carouselRideContent(): ContentIdentity;
 export declare function flumeRideContent(): ContentIdentity;
 export declare function consumableFacilityContent(product: ProductId): ContentIdentity;
@@ -146,7 +147,7 @@ export declare function historicalContentAllowed(value: ContentIdentity, kind: '
 export declare function resolveContent(value: unknown): ResolvedContent;
 export declare function executableContent(value: unknown, kind: 'ride' | ServiceKind | 'information' | 'atm'): ContentIdentity;
 export declare function catalogue(availableProfiles?: ReadonlySet<string>): {
-    contentVersion: 9;
+    contentVersion: 10;
     families: Family[];
     variants: {
         id: string;

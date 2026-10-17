@@ -8,7 +8,7 @@ import { facilityApproach, recoverStaff, sharedCount, stepFinance, stepStaff, in
 import { amenityPoint, carriesWaste, recoverCleanup, stepHandymen } from './housekeeping.js';
 import { encodePatrol, inPatrol } from './patrol.js';
 import { project, validateView } from './view.js';
-import { legacyRuleJSON, v9RuleJSON, v10RuleJSON, v11RuleJSON, v12RuleJSON, v13RuleJSON, v14RuleJSON, v15RuleJSON, savedCurveRules, resolveRideRules, rideFootprint, woodenProfile } from '../content/ride-profiles.js';
+import { legacyRuleJSON, v9RuleJSON, v10RuleJSON, v11RuleJSON, v12RuleJSON, v13RuleJSON, v14RuleJSON, v15RuleJSON, v16RuleJSON, savedCurveRules, resolveRideRules, rideFootprint, woodenProfile } from '../content/ride-profiles.js';
 import { carouselCycleTicks, carouselEditable, fixedBodyCells, fixedProfile, newCarouselSession } from './carousel.js';
 import { qualifyWoodenCourse } from './wooden-motion.js';
 import { woodenInterface, woodenPortalCells } from './wooden-placement.js';
@@ -203,7 +203,7 @@ export class Engine {
                 owned[at(l.tile)] = l.owned;
             }
         }
-        this.state = { version: 16, contentVersion: CONTENT_VERSION, nextInstance: 1, amenities: [], litter: [], facilities: [], retiredShopIncome: 0, retiredStock: 0, retiredMerchandise: emptyMerchandiseAccounts(), retiredRideIncome: 0, retiredAtmWithdrawals: 0, staff: [], rules: JSON.stringify(this.rules), side: options.side, tick: 0, revision: 0, topologyRevision: 0, rng: options.seed, paused: false, initialCash: options.cash, cash: options.cash, loan: 0, maxLoan: options.maxLoan, spent: 0, refunded: 0, nextElement: 1, nextEntity: 1, people: { entry: null, open: false, guests: [], departedSpent: 0, departedWithdrawn: 0 }, ledger: { rideSales: 0, shopSales: 0, stock: 0, wages: 0, upkeep: 0, interest: 0 }, trains: [], carouselSessions: [], boats: [], terrain, water, owned, rides: [], elements: [] };
+        this.state = { version: 17, contentVersion: CONTENT_VERSION, nextInstance: 1, amenities: [], litter: [], facilities: [], retiredShopIncome: 0, retiredStock: 0, retiredMerchandise: emptyMerchandiseAccounts(), retiredRideIncome: 0, retiredAtmWithdrawals: 0, staff: [], rules: JSON.stringify(this.rules), side: options.side, tick: 0, revision: 0, topologyRevision: 0, rng: options.seed, paused: false, initialCash: options.cash, cash: options.cash, loan: 0, maxLoan: options.maxLoan, spent: 0, refunded: 0, nextElement: 1, nextEntity: 1, people: { entry: null, open: false, guests: [], departedSpent: 0, departedWithdrawn: 0 }, ledger: { rideSales: 0, shopSales: 0, stock: 0, wages: 0, upkeep: 0, interest: 0 }, trains: [], carouselSessions: [], boats: [], terrain, water, owned, rides: [], elements: [] };
         this.index = this.indexState(this.state);
     }
     get revision() { return `${this.session}:${this.generation}:${this.state.revision}`; }
@@ -227,7 +227,7 @@ export class Engine {
             let committed = false;
             try {
                 const legacy = candidate;
-                if (legacy?.version === 15 || legacy?.version === 16)
+                if (legacy?.version === 15 || legacy?.version === 16 || legacy?.version === 17)
                     this.rules = savedCurveRules(this.rules, legacy.rules, legacy.version);
                 // Receiving navigation must not populate caches belonging to the previous park.
                 this.routes = new Routes();
@@ -294,7 +294,11 @@ export class Engine {
                         guest.atmRefusal = null;
                     }
                     candidate.people.departedWithdrawn = 0;
-                    Object.assign(candidate, { version: 16, contentVersion: CONTENT_VERSION, rules: JSON.stringify(this.rules), retiredAtmWithdrawals: 0 });
+                    Object.assign(candidate, { version: 16, contentVersion: 9, rules: v16RuleJSON(this.rules), retiredAtmWithdrawals: 0 });
+                }
+                if (legacy?.version === 16) {
+                    this.indexState(candidate, 16);
+                    Object.assign(candidate, { version: 17, contentVersion: CONTENT_VERSION, rules: JSON.stringify(this.rules) });
                 }
                 index = this.indexState(candidate);
                 this.state = candidate;
@@ -534,8 +538,11 @@ export class Engine {
             this.owned(c, s);
             ensure(c.low >= 0 && c.high <= this.rules.maxHeight, 'GEOMETRY', 'Clearance exceeds height range.');
             const ground = s.terrain[at(c)], water = s.water[at(c)];
-            if (candidate?.kind === 'track' && woodenProfile(index.rides.get(candidate.ride).content ?? legacyRideContent(), this.rules))
-                ensure(candidate.origin.z === ground && water === 0, 'GEOMETRY', 'The wooden candidate requires level, dry ground beneath its track.');
+            if (candidate?.kind === 'track') {
+                const profile = woodenProfile(index.rides.get(candidate.ride).content ?? legacyRideContent(), this.rules);
+                if (profile)
+                    ensure(water === 0 && (profile.vehicle.kind === 'coupled-unbanked' && !profile.pieces[candidate.piece].station || candidate.origin.z === ground), 'GEOMETRY', 'Wooden track requires dry ground; its station and flat candidate stay at ground level.');
+            }
             if (candidate?.kind === 'fixed-body' || candidate?.kind === 'portal' && fixedProfile(index.rides.get(candidate.ride).content, this.rules))
                 ensure(candidate.height === ground && water === 0, 'GEOMETRY', 'The Carousel and its portals require level dry ground.');
             if (candidate?.kind === 'facility' && resolveFacilityPlacement(index.facilities.get(candidate.facility).content ?? (index.facilities.get(candidate.facility).kind === 'information' ? informationFacilityContent() : legacyFacilityContent(index.facilities.get(candidate.facility).kind)), this.rules).dryGround)
@@ -970,12 +977,12 @@ export class Engine {
         }
     }
     indexState(s, legacy) {
-        const identified = legacy !== 7, fixed = legacy === undefined || legacy >= 10, channel = legacy === undefined || legacy >= 11, preCommerce = legacy !== undefined && legacy <= 11, merchandise = legacy === undefined || legacy >= 14, atm = legacy === undefined;
+        const identified = legacy !== 7, fixed = legacy === undefined || legacy >= 10, channel = legacy === undefined || legacy >= 11, preCommerce = legacy !== undefined && legacy <= 11, merchandise = legacy === undefined || legacy >= 14, atm = legacy === undefined || legacy >= 16;
         record(s, ['amenities', 'litter', 'facilities', 'retiredShopIncome', 'retiredStock', 'staff', 'version', 'rules', 'side', 'tick', 'revision', 'topologyRevision', 'rng', 'paused', 'initialCash', 'cash', 'loan', 'maxLoan', 'spent', 'refunded', 'nextElement', 'nextEntity', 'people', 'ledger', 'trains', 'terrain', 'water', 'owned', 'rides', 'elements', ...(identified ? ['contentVersion', 'nextInstance'] : []), ...(fixed ? ['carouselSessions', 'retiredRideIncome'] : []), ...(channel ? ['boats'] : []), ...(merchandise ? ['retiredMerchandise'] : []), ...(atm ? ['retiredAtmWithdrawals'] : [])]);
-        ensure(s.version === (legacy ?? 16), 'INVALID_SAVE', 'Unsupported save version.');
-        ensure(s.rules === (legacy === 15 ? v15RuleJSON(this.rules) : legacy === 14 ? v14RuleJSON(this.rules) : legacy === 13 ? v13RuleJSON(this.rules) : legacy === 12 ? v12RuleJSON(this.rules) : legacy === 11 ? v11RuleJSON(this.rules) : legacy === 10 ? v10RuleJSON(this.rules) : legacy === 9 ? v9RuleJSON(this.rules) : legacy ? legacyRuleJSON(this.rules) : JSON.stringify(this.rules)), 'WRONG_RULES', 'Save rule profile differs from the engine.');
+        ensure(s.version === (legacy ?? 17), 'INVALID_SAVE', 'Unsupported save version.');
+        ensure(s.rules === (legacy === 16 ? v16RuleJSON(this.rules) : legacy === 15 ? v15RuleJSON(this.rules) : legacy === 14 ? v14RuleJSON(this.rules) : legacy === 13 ? v13RuleJSON(this.rules) : legacy === 12 ? v12RuleJSON(this.rules) : legacy === 11 ? v11RuleJSON(this.rules) : legacy === 10 ? v10RuleJSON(this.rules) : legacy === 9 ? v9RuleJSON(this.rules) : legacy ? legacyRuleJSON(this.rules) : JSON.stringify(this.rules)), 'WRONG_RULES', 'Save rule profile differs from the engine.');
         if (identified)
-            ensure(s.contentVersion === (legacy === 8 ? 1 : legacy === 9 ? 2 : legacy === 10 ? 3 : legacy === 11 ? 4 : legacy === 12 ? 5 : legacy === 13 ? 6 : legacy === 14 ? 7 : legacy === 15 ? 8 : CONTENT_VERSION) && integer(s.nextInstance, 1), 'INVALID_SAVE', 'Unsupported content version or invalid instance counter.');
+            ensure(s.contentVersion === (legacy === 8 ? 1 : legacy === 9 ? 2 : legacy === 10 ? 3 : legacy === 11 ? 4 : legacy === 12 ? 5 : legacy === 13 ? 6 : legacy === 14 ? 7 : legacy === 15 ? 8 : legacy === 16 ? 9 : CONTENT_VERSION) && integer(s.nextInstance, 1), 'INVALID_SAVE', 'Unsupported content version or invalid instance counter.');
         ensure(integer(s.side, LIMITS.mapMin, LIMITS.mapMax) && integer(s.rng, 0, 0xffffffff) && typeof s.paused === 'boolean', 'INVALID_SAVE', 'Invalid world metadata.');
         for (const n of [s.tick, s.revision, s.topologyRevision, s.initialCash, s.loan, s.maxLoan, s.spent, s.refunded, s.retiredShopIncome, s.retiredStock])
             ensure(integer(n), 'INVALID_SAVE', 'Invalid clock or money field.');
@@ -1225,7 +1232,7 @@ export class Engine {
                 ensure(ride.status === 'closed' || index.boats.has(ride.id), 'INVALID_SAVE', 'Operating channel has no boat.');
     }
     validatePeople(s, index, legacy) {
-        const preCommerce = legacy !== undefined && legacy <= 11, merchandise = legacy === undefined || legacy >= 14, atm = legacy === undefined;
+        const preCommerce = legacy !== undefined && legacy <= 11, merchandise = legacy === undefined || legacy >= 14, atm = legacy === undefined || legacy >= 16;
         record(s.people, ['entry', 'open', 'guests', 'departedSpent', ...(atm ? ['departedWithdrawn'] : [])]);
         ensure(typeof s.people.open === 'boolean' && integer(s.people.departedSpent) && Array.isArray(s.people.guests) && s.people.guests.length <= LIMITS.sharedEntities, 'INVALID_SAVE', 'Invalid park guest state.');
         if (atm)
@@ -1240,7 +1247,7 @@ export class Engine {
         for (const g of s.people.guests) {
             record(g, ['navigationRide', 'amenity', 'restProgress', 'wrapper', 'wrapperTick', 'facility', 'serviceProgress', 'bladder', 'id', 'point', 'phase', 'goal', 'next', 'walkProgress', 'destination', 'entrance', 'exit', 'queueRide', 'seat', 'initialCash', 'cash', 'spent', 'fareLimit', 'forceTolerance', 'hunger', 'thirst', 'nausea', 'happiness', 'energy', 'queuedAt', 'lastRide', 'lastRideTick', 'ridesTaken', 'thought', ...(!preCommerce ? ['held'] : []), ...(merchandise ? ['merchandise', 'informationCounter'] : []), ...(atm ? ['withdrawn', 'atmRefusal'] : [])]);
             const admitted = insideRestroom(g), withdrawing = g.phase === 'withdrawing';
-            ensure(!admitted || legacy === undefined || legacy === 15, 'INVALID_SAVE', 'Historical parks cannot introduce an admitted restroom phase.');
+            ensure(!admitted || legacy === undefined || legacy >= 15, 'INVALID_SAVE', 'Historical parks cannot introduce an admitted restroom phase.');
             ensure(!withdrawing || atm, 'INVALID_SAVE', 'Historical parks cannot introduce a withdrawal action.');
             if (atm) {
                 ensure(integer(g.withdrawn) && g.withdrawn % withdrawalAmount === 0 && (hasAtmProfile(this.rules) || g.withdrawn === 0 && g.atmRefusal === null), 'INVALID_SAVE', 'Invalid guest withdrawal history.');

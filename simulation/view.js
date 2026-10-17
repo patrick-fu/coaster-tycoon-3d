@@ -59,7 +59,7 @@ export function project(s, rules, request, elements, course, channelCourse) {
         for (let i = 0; i < t.carIds.length; i++) {
             const pose = frames ? frames[i].body : carPose(c, t.position - i * selected.motion.carLength), seatIds = t.seats.slice(i * selected.motion.seatsPerCar, (i + 1) * selected.motion.seatsPerCar);
             if (visible(pose.position.x / 1000 / metres, pose.position.y / 1000 / metres))
-                cars.push({ id: t.carIds[i], ride: t.ride, ...metreFrame(pose), occupants: seatIds.filter(id => id !== null).length, seatIds, rig: frames ? { kind: 'wooden-coupled-flat', bogieFront: metreFrame(frames[i].bogieFront), bogieRear: metreFrame(frames[i].bogieRear), link: frames[i].link ? metreFrame(frames[i].link) : null, restraintsClosed: t.phase === 'running' || t.phase === 'stalled' && seatIds.some(id => id !== null) } : null });
+                cars.push({ id: t.carIds[i], ride: t.ride, ...metreFrame(pose), occupants: seatIds.filter(id => id !== null).length, seatIds, rig: frames ? { kind: profile.vehicle.kind === 'coupled-unbanked' ? 'wooden-coupled-unbanked' : 'wooden-coupled-flat', bogieFront: metreFrame(frames[i].bogieFront), bogieRear: metreFrame(frames[i].bogieRear), link: frames[i].link ? metreFrame(frames[i].link) : null, restraintsClosed: t.phase === 'running' || t.phase === 'stalled' && seatIds.some(id => id !== null) } : null });
         }
     }
     const rides = s.rides.map(r => {

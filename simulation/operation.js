@@ -100,7 +100,7 @@ export function eligibility(ride, elements, rules) {
         if (stations.length !== 1)
             issues.push('The wooden candidate requires one connected station.');
         if (turns.length !== 4 || turns.some(turn => turn !== turns[0]))
-            issues.push('The wooden candidate supports one flat four-turn loop with a single turn direction.');
+            issues.push(profile.vehicle.kind === 'coupled-flat' ? 'The wooden candidate supports one flat four-turn loop with a single turn direction.' : 'The wooden rise-and-return candidate supports one four-turn loop with a single turn direction.');
     }
     const channel = flumeProfile(ride.content, rules);
     if (channel && circuit) {

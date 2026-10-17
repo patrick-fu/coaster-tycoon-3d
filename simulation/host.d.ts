@@ -1,7 +1,7 @@
 import { Engine } from './engine.js';
 export declare function createHost(engine: Engine): (message: unknown) => import("./types.js").Result<{
     id: number;
-    protocolVersion: 9;
+    protocolVersion: 10;
     result: {
         ok: true;
         value: void;
@@ -17,8 +17,8 @@ export declare function createHost(engine: Engine): (message: unknown) => import
     } | {
         ok: true;
         value: {
-            protocolVersion: 9;
-            contentVersion: 9;
+            protocolVersion: 10;
+            contentVersion: 10;
             coordinates: {
                 nativeUnitsPerTile: number;
                 nativeHeightStep: number;
@@ -66,7 +66,7 @@ export declare function createHost(engine: Engine): (message: unknown) => import
                 occupants: number;
                 seatIds: (number | null)[];
                 rig: null | {
-                    kind: 'wooden-coupled-flat';
+                    kind: 'wooden-coupled-flat' | 'wooden-coupled-unbanked';
                     bogieFront: import("./wooden-motion.js").PoseFrame;
                     bogieRear: import("./wooden-motion.js").PoseFrame;
                     link: import("./wooden-motion.js").PoseFrame | null;
@@ -382,7 +382,7 @@ export declare function createHost(engine: Engine): (message: unknown) => import
     } | {
         ok: true;
         value: {
-            contentVersion: 9;
+            contentVersion: 10;
             families: {
                 id: string;
                 label: string;
@@ -405,7 +405,7 @@ export declare function createHost(engine: Engine): (message: unknown) => import
                     capabilities: {
                         construction: {
                             kind: 'tracked';
-                            profileId: 'independent-circuit-v1' | 'independent.wooden-circuit-v1';
+                            profileId: 'independent-circuit-v1' | 'independent.wooden-circuit-v1' | 'independent.wooden-rise-return-v2';
                         } | {
                             kind: 'channel';
                             profileId: 'independent.log-flume-v1';
@@ -439,7 +439,7 @@ export declare function createHost(engine: Engine): (message: unknown) => import
                         };
                         operation: {
                             kind: 'circuit';
-                            profileId: 'independent-circuit-v1' | 'independent.wooden-circuit-v1';
+                            profileId: 'independent-circuit-v1' | 'independent.wooden-circuit-v1' | 'independent.wooden-rise-return-v2';
                         } | {
                             kind: 'channel-circuit';
                             profileId: 'independent.log-flume-v1';

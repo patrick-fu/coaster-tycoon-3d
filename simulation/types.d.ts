@@ -60,7 +60,7 @@ export type PieceRule = {
     cells: Cell[];
 };
 export type WoodenVehicleRules = {
-    kind: 'coupled-flat';
+    kind: 'coupled-flat' | 'coupled-unbanked';
     originMm: Vector;
     wheelbaseMm: number;
     bogiePivotHeightMm: number;
@@ -218,8 +218,8 @@ export type FixedRide = RideBase & {
 };
 export type Ride = TrackedRide | ChannelRide | FixedRide;
 export type State = {
-    version: 16;
-    contentVersion: 9;
+    version: 17;
+    contentVersion: 10;
     nextInstance: number;
     amenities: Amenity[];
     litter: Litter[];

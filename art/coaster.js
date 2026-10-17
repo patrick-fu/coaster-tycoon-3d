@@ -968,6 +968,10 @@ export function buildPortal(ctx, parent, e, ride) {
   addBox(ctx, portalGroup, deckMat, 0, 0.06, 0, 2.30, 0.10, 2.30);
   addBox(ctx, portalGroup, deckTrimMat, 0, 0.11, -1.10, 2.30, 0.04, 0.08);
   addBox(ctx, portalGroup, deckTrimMat, 0, 0.11, 1.10, 2.30, 0.04, 0.08);
+  const thresholdLen = (Number.isFinite(ctx?.tile) && ctx.tile > 0 ? ctx.tile : 4.0) / 2 - 1.15;
+  if (thresholdLen > 0) {
+    addBox(ctx, portalGroup, deckMat, -1.15 - thresholdLen / 2, 0.06, 0, thresholdLen, 0.10, 1.75);
+  }
 
   // 2. Corner Posts with stone plinths, brass collars and capitals
   const postH = 2.85;

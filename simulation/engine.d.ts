@@ -13,8 +13,8 @@ export declare class Engine {
     constructor(options: WorldOptions, rules: Rules);
     get revision(): string;
     view(input: unknown): Result<{
-        protocolVersion: 9;
-        contentVersion: 9;
+        protocolVersion: 10;
+        contentVersion: 10;
         coordinates: {
             nativeUnitsPerTile: number;
             nativeHeightStep: number;
@@ -62,7 +62,7 @@ export declare class Engine {
             occupants: number;
             seatIds: (number | null)[];
             rig: null | {
-                kind: 'wooden-coupled-flat';
+                kind: 'wooden-coupled-flat' | 'wooden-coupled-unbanked';
                 bogieFront: import("./wooden-motion.js").PoseFrame;
                 bogieRear: import("./wooden-motion.js").PoseFrame;
                 link: import("./wooden-motion.js").PoseFrame | null;
@@ -369,7 +369,7 @@ export declare class Engine {
     inspect(kind: unknown, id: unknown): Result<Guest | Staff | Element>;
     snapshot(): State;
     catalogue(): {
-        contentVersion: 9;
+        contentVersion: 10;
         families: {
             id: string;
             label: string;
@@ -392,7 +392,7 @@ export declare class Engine {
                 capabilities: {
                     construction: {
                         kind: 'tracked';
-                        profileId: 'independent-circuit-v1' | 'independent.wooden-circuit-v1';
+                        profileId: 'independent-circuit-v1' | 'independent.wooden-circuit-v1' | 'independent.wooden-rise-return-v2';
                     } | {
                         kind: 'channel';
                         profileId: 'independent.log-flume-v1';
@@ -426,7 +426,7 @@ export declare class Engine {
                     };
                     operation: {
                         kind: 'circuit';
-                        profileId: 'independent-circuit-v1' | 'independent.wooden-circuit-v1';
+                        profileId: 'independent-circuit-v1' | 'independent.wooden-circuit-v1' | 'independent.wooden-rise-return-v2';
                     } | {
                         kind: 'channel-circuit';
                         profileId: 'independent.log-flume-v1';

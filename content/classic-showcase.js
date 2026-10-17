@@ -1,6 +1,6 @@
 import { Engine } from '../simulation/engine.js';
 import { initialWorld } from './steel-coaster.js';
-import { legacyRideContent, woodenRideContent, carouselRideContent, flumeRideContent, detailedFacilityContent, atmContent } from './registry.js';
+import { legacyRideContent, woodenRiseReturnRideContent, carouselRideContent, flumeRideContent, detailedFacilityContent, atmContent } from './registry.js';
 import { hasAtmProfile } from './atm.js';
 import { flumePortalSocket } from '../simulation/flume-portal.js';
 import { carouselPortal } from '../simulation/carousel.js';
@@ -37,7 +37,7 @@ export function newClassicShowcase(rules) {
         apply({ type: 'place-portal', ride, station: stations[exitIndex], role: 'exit', tile: { x: x + exitIndex, y: y - 1 }, height: 32, direction: 1 });
         return ride;
     };
-    const wood = tracked('Cedar Timber Run', 8, 19, woodenRideContent(), ['station', 'station', 'station', 'station', 'right', 'flat', 'flat', 'flat', 'flat', 'right', 'flat', 'flat', 'flat', 'flat', 'right', 'flat', 'flat', 'flat', 'flat', 'right'], 2, 3);
+    const wood = tracked('Cedar Timber Run', 8, 19, woodenRiseReturnRideContent(), ['station', 'station', 'station', 'station', 'lift-start', 'lift', 'lift-end', 'right', 'flat', 'flat', 'flat', 'flat', 'right', 'drop-start', 'drop', 'drop-end', 'flat', 'flat', 'flat', 'flat', 'right', 'flat', 'flat', 'flat', 'flat', 'right'], 2, 3);
     const steel = tracked('Copper Loop', 26, 19, legacyRideContent(), ['station', 'station', 'station', 'lift-start', 'lift', 'lift-end', 'right', 'flat', 'flat', 'flat', 'right', 'drop-start', 'drop', 'drop-end', 'flat', 'flat', 'flat', 'right', 'flat', 'flat', 'flat', 'right'], 4, 2);
     // The lake is inside the loop; every channel support cell stays dry.
     for (let x = 9; x <= 12; x++)
@@ -107,7 +107,7 @@ export function newClassicShowcase(rules) {
         ['tree', 24, 7], ['hedge', 24, 8], ['flower', 24, 9],
         ['tree', 4, 7], ['tree', 4, 10], ['rock', 5, 5], ['tree', 17, 5], ['tree', 18, 7], ['flower', 17, 13],
         ['flower', 25, 11], ['flower', 29, 11], ['tree', 31, 7], ['tree', 32, 10],
-        ['tree', 9, 24], ['tree', 11, 25], ['rock', 10, 26], ['hedge', 18, 21], ['flower', 18, 17], ['tree', 18, 29],
+        ['tree', 9, 24], ['tree', 11, 25], ['rock', 10, 26], ['hedge', 21, 22], ['flower', 18, 17], ['tree', 21, 30],
         ['tree', 45, 29], ['rock', 44, 30], ['tree', 31, 29], ['hedge', 23, 29],
         // Frame the carousel median, entrance avenue and shop backs before arrivals.
         ['flower', 27, 11],

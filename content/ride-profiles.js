@@ -30,33 +30,39 @@ export function legacyRuleJSON(rules) {
     const { rideProfiles, fixedProfiles, channelProfiles, commerceProfiles, facilityProfiles, merchandiseProfiles, restroomProfiles, atmProfiles, ...common } = rules;
     return JSON.stringify(common);
 }
+function historicalRideRules(rules) {
+    const rideProfiles = rules.rideProfiles;
+    if (!rideProfiles || !Object.hasOwn(rideProfiles, 'independent.wooden-rise-return-v2'))
+        return rules;
+    return { ...rules, rideProfiles: Object.fromEntries(Object.entries(rideProfiles).filter(([id]) => id !== 'independent.wooden-rise-return-v2')) };
+}
 export function v9RuleJSON(rules) {
-    const { fixedProfiles, channelProfiles, commerceProfiles, facilityProfiles, merchandiseProfiles, restroomProfiles, atmProfiles, ...previous } = rules;
+    const { fixedProfiles, channelProfiles, commerceProfiles, facilityProfiles, merchandiseProfiles, restroomProfiles, atmProfiles, ...previous } = historicalRideRules(rules);
     return JSON.stringify(previous);
 }
 export function v10RuleJSON(rules) {
-    const { channelProfiles, commerceProfiles, facilityProfiles, merchandiseProfiles, restroomProfiles, atmProfiles, ...previous } = rules;
+    const { channelProfiles, commerceProfiles, facilityProfiles, merchandiseProfiles, restroomProfiles, atmProfiles, ...previous } = historicalRideRules(rules);
     return JSON.stringify(previous);
 }
 export function v11RuleJSON(rules) {
-    const { commerceProfiles, facilityProfiles, merchandiseProfiles, restroomProfiles, atmProfiles, ...previous } = rules;
+    const { commerceProfiles, facilityProfiles, merchandiseProfiles, restroomProfiles, atmProfiles, ...previous } = historicalRideRules(rules);
     return JSON.stringify(previous);
 }
 export function v12RuleJSON(rules) {
-    const { facilityProfiles, merchandiseProfiles, restroomProfiles, atmProfiles, ...previous } = rules;
+    const { facilityProfiles, merchandiseProfiles, restroomProfiles, atmProfiles, ...previous } = historicalRideRules(rules);
     return JSON.stringify(previous);
 }
 export function v13RuleJSON(rules) {
-    const { merchandiseProfiles, restroomProfiles, atmProfiles, ...previous } = rules;
+    const { merchandiseProfiles, restroomProfiles, atmProfiles, ...previous } = historicalRideRules(rules);
     // Historical13 has only the delivered stall placement profile.
     return JSON.stringify({ ...previous, facilityProfiles: Object.fromEntries(Object.entries(rules.facilityProfiles ?? {}).filter(([id]) => id === 'independent.detailed-stalls-v1')) });
 }
 export function v14RuleJSON(rules) {
-    const { restroomProfiles, atmProfiles, ...previous } = rules;
+    const { restroomProfiles, atmProfiles, ...previous } = historicalRideRules(rules);
     return JSON.stringify({ ...previous, facilityProfiles: Object.fromEntries(Object.entries(rules.facilityProfiles ?? {}).filter(([id]) => id === 'independent.detailed-stalls-v1' || id === 'independent.information-kiosk-v1')) });
 }
 export function v15RuleJSON(rules) {
-    const { atmProfiles, ...previous } = rules;
+    const { atmProfiles, ...previous } = historicalRideRules(rules);
     return JSON.stringify({ ...previous, facilityProfiles: Object.fromEntries(Object.entries(rules.facilityProfiles ?? {}).filter(([id]) => id !== 'independent.atm-v1')) });
 }
 function curveRules(rules, bank) {
@@ -70,8 +76,9 @@ function curveRules(rules, bank) {
         channel.pieces = piecesWithCurveBank(channel.pieces, 64, 64, bank);
     return selected;
 }
+export function v16RuleJSON(rules) { return JSON.stringify(historicalRideRules(rules)); }
 export function savedCurveRules(rules, serialized, version) {
-    const encode = version === 15 ? v15RuleJSON : JSON.stringify;
+    const encode = version === 15 ? v15RuleJSON : version === 16 ? v16RuleJSON : JSON.stringify;
     if (encode(rules) === serialized)
         return rules;
     const stable = curveRules(rules, 'stable'), legacy = curveRules(rules, 'legacy-browser');

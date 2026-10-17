@@ -5,11 +5,11 @@ import {restroomInspection} from './restroom-controls.js';
 import {atmInspection} from './atm-controls.js';
 import {money,operatingBalance,loanDecimal,parseLoanAmount} from './money.js';
 import {ParkScene} from './park-scene.js';
-const legacySaveSlot=new URLSearchParams(location.search).get('showcase')==='classic'?'showcase-classic':'current',saveSlots=[legacySaveSlot+'-v16',legacySaveSlot+'-v15',legacySaveSlot+'-v14',legacySaveSlot+'-v13',legacySaveSlot+'-v12',legacySaveSlot+'-v11',legacySaveSlot+'-v10',legacySaveSlot+'-v9',legacySaveSlot],saveSlot=saveSlots[0];
+const legacySaveSlot=new URLSearchParams(location.search).get('showcase')==='classic'?'showcase-classic':'current',saveSlots=[legacySaveSlot+'-v17',legacySaveSlot+'-v16',legacySaveSlot+'-v15',legacySaveSlot+'-v14',legacySaveSlot+'-v13',legacySaveSlot+'-v12',legacySaveSlot+'-v11',legacySaveSlot+'-v10',legacySaveSlot+'-v9',legacySaveSlot],saveSlot=saveSlots[0];
 import {steelRules} from './content/steel-coaster.js';
 import {WORKER_PROTOCOL_VERSION} from './simulation/protocol.js';
 import {createContentBrowser} from './content-browser.js';
-import {legacyRideContent,legacyFacilityContent,informationFacilityContent,atmContent,woodenRideContent,carouselRideContent,flumeRideContent,detailedFacilityContent,resolveContent,executableContent,historicalContentAllowed} from './content/registry.js';
+import {legacyRideContent,legacyFacilityContent,informationFacilityContent,atmContent,woodenRideContent,woodenRiseReturnRideContent,carouselRideContent,flumeRideContent,detailedFacilityContent,resolveContent,executableContent,historicalContentAllowed} from './content/registry.js';
 const $=id=>document.getElementById(id),escape=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const scene=new ParkScene($('viewport')),pending=new Map();
 let worker=null;
@@ -31,8 +31,8 @@ const contentLibrary=createContentBrowser({isChoiceReady:choice=>scene.presentat
 $('content-library').onclick=()=>contentLibrary.open({opener:$('content-library')});
 const feedback=(message,error=false)=>{$('feedback').textContent=message;$('feedback').classList.toggle('error',error);$('feedback').classList.remove('hidden');};
 scene.onAssetError=message=>feedback(message,true);
-function contentPresentation(content,kind,version=16){
- try{const identity=executableContent(content,kind);if(version<16&&!historicalContentAllowed(identity,kind,version))return null;return resolveContent(identity).capabilities.presentation;}catch{return null;}
+function contentPresentation(content,kind,version=17){
+ try{const identity=executableContent(content,kind);if(version<17&&!historicalContentAllowed(identity,kind,version))return null;return resolveContent(identity).capabilities.presentation;}catch{return null;}
 }
 function defaultFacilityContent(kind){
  if(kind==='information')return informationFacilityContent();
@@ -40,13 +40,13 @@ function defaultFacilityContent(kind){
  return ['food','drink','restroom'].includes(kind)?legacyFacilityContent(kind):null;
 }
 function uniquePresentations(values){return [...new Map(values.filter(Boolean).map(p=>[JSON.stringify(p),p])).values()];}
-function classicPresentations(){return uniquePresentations([woodenRideContent(),legacyRideContent(),carouselRideContent(),flumeRideContent()].map(c=>contentPresentation(c,'ride')).concat([contentPresentation(detailedFacilityContent('independent.burger'),'food'),contentPresentation(detailedFacilityContent('independent.soft-drink'),'drink'),contentPresentation(atmContent(),'atm')]));}
+function classicPresentations(){return uniquePresentations([woodenRideContent(),woodenRiseReturnRideContent(),legacyRideContent(),carouselRideContent(),flumeRideContent()].map(c=>contentPresentation(c,'ride')).concat([contentPresentation(detailedFacilityContent('independent.burger'),'food'),contentPresentation(detailedFacilityContent('independent.soft-drink'),'drink'),contentPresentation(atmContent(),'atm')]));}
 function parkPresentations(view){return uniquePresentations((view?.rides??[]).map(r=>contentPresentation(r.content,'ride')).concat((view?.facilities??[]).map(f=>contentPresentation(f.content,f.kind))));}
 function savedPresentations(payload){
  if(typeof payload!=='string'||payload.length>64*1024*1024)return [];
  try{
   const saved=JSON.parse(payload),version=saved?.version;
-  if(!Number.isInteger(version)||version<6||version>16||!Array.isArray(saved.rides)||!Array.isArray(saved.facilities))return [];
+  if(!Number.isInteger(version)||version<6||version>17||!Array.isArray(saved.rides)||!Array.isArray(saved.facilities))return [];
   const presentation=(instance,kind)=>{
    if(instance===null||typeof instance!=='object'||Array.isArray(instance))return null;
    const content=Object.hasOwn(instance,'content')?instance.content:version<=7?(kind==='ride'?legacyRideContent():['food','drink','restroom'].includes(kind)?legacyFacilityContent(kind):null):null;

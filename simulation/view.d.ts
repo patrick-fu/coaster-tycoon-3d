@@ -13,8 +13,8 @@ export type ViewRequest = {
 };
 export declare function validateView(value: unknown, side: number): ViewRequest;
 export declare function project(s: State, rules: Rules, request: ViewRequest, elements: ReadonlyMap<number, Element>, course: (ride: number) => Course, channelCourse: (ride: number) => FlumeCourse): {
-    protocolVersion: 9;
-    contentVersion: 9;
+    protocolVersion: 10;
+    contentVersion: 10;
     coordinates: {
         nativeUnitsPerTile: number;
         nativeHeightStep: number;
@@ -62,7 +62,7 @@ export declare function project(s: State, rules: Rules, request: ViewRequest, el
         occupants: number;
         seatIds: (number | null)[];
         rig: null | {
-            kind: 'wooden-coupled-flat';
+            kind: 'wooden-coupled-flat' | 'wooden-coupled-unbanked';
             bogieFront: PoseFrame;
             bogieRear: PoseFrame;
             link: PoseFrame | null;

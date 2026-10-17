@@ -1,14 +1,16 @@
 import { ensure, record } from '../simulation/validation.js';
 import { referenceFamilies, referenceVariants } from './rct2-reference.js';
-export const CONTENT_VERSION = 9;
+export const CONTENT_VERSION = 10;
 const rideIdentity = { familyId: 'independent.circuit-coaster', variantId: 'independent.steel-train', modeId: 'independent.continuous-circuit' };
 const families = new Map(), variants = new Map(), modes = new Map();
 families.set(rideIdentity.familyId, { id: rideIdentity.familyId, label: 'Independent circuit coaster', category: 'rollerCoaster', reference: null });
 modes.set(rideIdentity.modeId, { id: rideIdentity.modeId, label: 'Independent continuous circuit', evidence: 'project-candidate' });
 variants.set(rideIdentity.variantId, { id: rideIdentity.variantId, label: 'Independent uniform steel train', reference: null, choices: [{ familyId: rideIdentity.familyId, modeIds: [rideIdentity.modeId], capabilities: { construction: { kind: 'tracked', profileId: 'independent-circuit-v1' }, operation: { kind: 'circuit', profileId: 'independent-circuit-v1' }, presentation: { kind: 'procedural-coaster', profileId: 'classic-candidate-v1' } } }] });
 const woodenIdentity = { familyId: 'independent.wooden-circuit-coaster', variantId: 'independent.wooden-four-seat-train', modeId: rideIdentity.modeId };
+const woodenRiseReturnIdentity = { ...woodenIdentity, variantId: 'independent.wooden-rise-return-train' };
 families.set(woodenIdentity.familyId, { id: woodenIdentity.familyId, label: 'Independent wooden coaster', category: 'rollerCoaster', reference: null });
 variants.set(woodenIdentity.variantId, { id: woodenIdentity.variantId, label: 'Detailed four-seat wooden train', reference: null, choices: [{ familyId: woodenIdentity.familyId, modeIds: [woodenIdentity.modeId], capabilities: { construction: { kind: 'tracked', profileId: 'independent.wooden-circuit-v1' }, operation: { kind: 'circuit', profileId: 'independent.wooden-circuit-v1' }, presentation: { kind: 'detailed-wooden-coaster', profileId: 'detailed-wooden-candidate-v1' } } }] });
+variants.set(woodenRiseReturnIdentity.variantId, { id: woodenRiseReturnIdentity.variantId, label: 'Wooden rise-and-return train', reference: null, choices: [{ familyId: woodenRiseReturnIdentity.familyId, modeIds: [woodenRiseReturnIdentity.modeId], capabilities: { construction: { kind: 'tracked', profileId: 'independent.wooden-rise-return-v2' }, operation: { kind: 'circuit', profileId: 'independent.wooden-rise-return-v2' }, presentation: { kind: 'detailed-wooden-coaster', profileId: 'detailed-wooden-rise-return-v2' } } }] });
 const carouselIdentity = { familyId: 'independent.carousel', variantId: 'independent.sixteen-seat-carousel', modeId: 'independent.timed-rotation' };
 families.set(carouselIdentity.familyId, { id: carouselIdentity.familyId, label: 'Independent Carousel', category: 'gentle', reference: null });
 modes.set(carouselIdentity.modeId, { id: carouselIdentity.modeId, label: 'Independent timed rotation', evidence: 'project-candidate' });
@@ -54,6 +56,7 @@ for (const v of referenceVariants) {
 }
 export function legacyRideContent() { return { ...rideIdentity }; }
 export function woodenRideContent() { return { ...woodenIdentity }; }
+export function woodenRiseReturnRideContent() { return { ...woodenRiseReturnIdentity }; }
 export function carouselRideContent() { return { ...carouselIdentity }; }
 export function flumeRideContent() { return { ...flumeIdentity }; }
 export function consumableFacilityContent(product) { return { familyId: 'independent.' + (product === 'independent.burger' ? 'food' : 'drink') + '-facility', variantId: product === 'independent.burger' ? 'independent.burger-stand' : 'independent.soft-drink-stand', modeId: 'independent.retail' }; }
@@ -63,7 +66,7 @@ export function gradualRestroomContent() { return { ...restroomIdentity }; }
 export function atmContent() { return { ...atmIdentity }; }
 export function informationFacilityContent() { return { ...informationIdentity }; }
 export function historicalContentAllowed(value, kind, version) {
-    const allowed = kind === 'atm' ? [] : kind === 'ride' ? [rideIdentity, ...(version >= 9 ? [woodenIdentity] : []), ...(version >= 10 ? [carouselIdentity] : []), ...(version >= 11 ? [flumeIdentity] : [])] : kind === 'information' ? (version >= 14 ? [informationIdentity] : []) : [legacyFacilityContent(kind)];
+    const allowed = kind === 'atm' ? (version >= 16 ? [atmIdentity] : []) : kind === 'ride' ? [rideIdentity, ...(version >= 9 ? [woodenIdentity] : []), ...(version >= 10 ? [carouselIdentity] : []), ...(version >= 11 ? [flumeIdentity] : []), ...(version >= 17 ? [woodenRiseReturnIdentity] : [])] : kind === 'information' ? (version >= 14 ? [informationIdentity] : []) : [legacyFacilityContent(kind)];
     if ((kind === 'food' || kind === 'drink') && version >= 12) {
         const product = kind === 'food' ? 'independent.burger' : 'independent.soft-drink';
         allowed.push(consumableFacilityContent(product));

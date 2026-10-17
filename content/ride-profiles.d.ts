@@ -11,4 +11,5 @@ export declare function v12RuleJSON(rules: Rules): string;
 export declare function v13RuleJSON(rules: Rules): string;
 export declare function v14RuleJSON(rules: Rules): string;
 export declare function v15RuleJSON(rules: Rules): string;
-export declare function savedCurveRules(rules: Rules, serialized: string, version: 15 | 16): Rules;
+export declare function v16RuleJSON(rules: Rules): string;
+export declare function savedCurveRules(rules: Rules, serialized: string, version: 15 | 16 | 17): Rules;
