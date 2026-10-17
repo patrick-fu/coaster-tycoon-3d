@@ -543,24 +543,41 @@ function buildOpenTrack(ctx, parent, element, ride, assets) {
   const originY = element.origin.y / 8;
   const base = element.origin.z / 8;
 
-  const matTimber = assets.materials.timber;
-  const baseMetal = assets.materials.metal;
-  const sharedMaps = {};
-  if (baseMetal) {
-    if (baseMetal.map) sharedMaps.map = baseMetal.map;
-    if (baseMetal.roughnessMap) sharedMaps.roughnessMap = baseMetal.roughnessMap;
-    if (baseMetal.metalnessMap) sharedMaps.metalnessMap = baseMetal.metalnessMap;
-    if (baseMetal.normalMap) sharedMaps.normalMap = baseMetal.normalMap;
-  }
+  const getMaps = mat => {
+    const maps = {};
+    if (mat) for (const k of ['map', 'roughnessMap', 'metalnessMap', 'normalMap']) if (mat[k]) maps[k] = mat[k];
+    return maps;
+  };
+  const sharedMaps = getMaps(assets.materials.metal);
+  const timberMaps = getMaps(assets.materials.timber);
 
-  const matRailHead = ctx.material('wooden:track:rail-head', {
+  const matTimber = graded
+    ? ctx.material('wooden:track:timber:graded', {
+        color: '#ba7a3e',
+        roughness: 0.78,
+        metalness: 0.05,
+        ...timberMaps,
+      })
+    : assets.materials.timber;
+
+  const matRailHead = ctx.material(graded ? 'wooden:track:rail-head:graded' : 'wooden:track:rail-head', graded ? {
+    color: '#dce3ec',
+    roughness: 0.38,
+    metalness: 0.65,
+    ...sharedMaps,
+  } : {
     color: '#c5cbd2',
     roughness: 0.28,
     metalness: 0.85,
     ...sharedMaps,
   });
 
-  const matRailFlangeWeb = ctx.material('wooden:track:rail-flange-web', {
+  const matRailFlangeWeb = ctx.material(graded ? 'wooden:track:rail-flange-web:graded' : 'wooden:track:rail-flange-web', graded ? {
+    color: '#6e7987',
+    roughness: 0.52,
+    metalness: 0.45,
+    ...sharedMaps,
+  } : {
     color: '#424852',
     roughness: 0.80,
     metalness: 0.30,
