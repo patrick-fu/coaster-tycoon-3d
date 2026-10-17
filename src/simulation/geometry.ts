@@ -13,6 +13,7 @@ import {validateFacilityProfiles} from '../content/facility-profiles.js';
 import {validateMerchandiseProfiles} from '../content/merchandise.js';
 import {validateRestroomProfiles} from '../content/gradual-restroom.js';
 import {quarterCurveSamples} from '../content/curve-samples.js';
+import {woodenRiseReturnPieces,woodenRiseReturnProfileRecord} from '../content/wooden-rise-return.js';
 export function validateRules(input:Rules):Rules{
   record(input,[...(Object.hasOwn(input??{},'scenery')?['scenery']:[]),'housekeeping','services','guests','motion','id','evidence','pathPrice','portalPrice','terrainPrice','refundPerThousand','maxSupport','maxHeight','pieces',...(Object.hasOwn(input??{},'rideProfiles')?['rideProfiles']:[]),...(Object.hasOwn(input??{},'fixedProfiles')?['fixedProfiles']:[]),...(Object.hasOwn(input??{},'channelProfiles')?['channelProfiles']:[]),...(Object.hasOwn(input??{},'commerceProfiles')?['commerceProfiles']:[]),...(Object.hasOwn(input??{},'facilityProfiles')?['facilityProfiles']:[]),...(Object.hasOwn(input??{},'merchandiseProfiles')?['merchandiseProfiles']:[]),...(Object.hasOwn(input??{},'restroomProfiles')?['restroomProfiles']:[]),...(Object.hasOwn(input??{},'atmProfiles')?['atmProfiles']:[])]);
   const scenery=structuredClone(Object.hasOwn(input,'scenery')?input.scenery:defaultScenery);record(scenery,[...sceneryTypes]);for(const type of sceneryTypes){const rule=scenery[type];record(rule,['price','height']);ensure(integer(rule.price,0,1000000)&&integer(rule.height,8,256)&&rule.height%8===0,'INVALID_COMMAND','Invalid scenery rule.');}
@@ -42,23 +43,30 @@ export function validateRules(input:Rules):Rules{
   const common:Rules={scenery,housekeeping,services,guests,motion,id:input.id,evidence:input.evidence,pathPrice:input.pathPrice,portalPrice:input.portalPrice,terrainPrice:input.terrainPrice,refundPerThousand:input.refundPerThousand,maxSupport:input.maxSupport,maxHeight:input.maxHeight,pieces:Object.fromEntries(keys.sort().map(k=>{const p=input.pieces[k]!;return[k,{price:p.price,station:p.station,motion:{samples:p.motion.samples.map(q=>({x:q.x,y:q.y,z:q.z})),chain:p.motion.chain,brake:p.motion.brake},end:{x:p.end.x,y:p.end.y,z:p.end.z,turn:p.end.turn,pitch:p.end.pitch,bank:p.end.bank},entry:{pitch:p.entry.pitch,bank:p.entry.bank},cells:p.cells.map(c=>({x:c.x,y:c.y,low:c.low,high:c.high,mask:c.mask}))}];}))};
   const supplied=Object.hasOwn(input,'rideProfiles')?input.rideProfiles:{};
   ensure(supplied!==null&&typeof supplied==='object'&&!Array.isArray(supplied),'INVALID_COMMAND','Invalid ride profiles.');
-  const profileIds=Object.keys(supplied);record(supplied,profileIds);
-  ensure(profileIds.length<=1&&profileIds.every(id=>id==='independent.wooden-circuit-v1'),'UNSUPPORTED_CONTENT','Unavailable ride profile.');
+  const profileIds=Object.keys(supplied).sort();record(supplied,profileIds);
+  ensure(profileIds.length<=2&&profileIds.every(id=>id==='independent.wooden-circuit-v1'||id==='independent.wooden-rise-return-v2'),'UNSUPPORTED_CONTENT','Unavailable ride profile.');
   const rideProfiles:Record<string,RideProfile>={};
   for(const id of profileIds){
-    const value=supplied[id]!;record(value,['motion','pieces','vehicle','footprints']);
+    const graded=id==='independent.wooden-rise-return-v2',value=supplied[id]!;record(value,['motion','pieces','vehicle','footprints']);
     const selected=validateRules({...common,motion:value.motion,pieces:value.pieces});
     ensure(selected.motion.tileMetres===4&&selected.motion.tickHz===40&&motion.tileMetres===4&&motion.tickHz===40&&selected.motion.carLength===2880&&selected.motion.seatsPerCar===4&&selected.motion.maxCars<=2,'INVALID_COMMAND','The wooden vehicle requires its qualified world, nominal pitch and seat capacity.');
     const vehicle=value.vehicle;record(vehicle,['kind','originMm','wheelbaseMm','bogiePivotHeightMm','couplerHalfSpanMm','couplerHeightMm','drawbarLengthMm','railHalfGaugeMm','stationDeckMm']);record(vehicle.originMm,['x','y','z']);
-    ensure(vehicle.kind==='coupled-flat'&&vehicle.originMm.x===2000&&vehicle.originMm.y===2000&&vehicle.originMm.z===500&&vehicle.wheelbaseMm===1500&&vehicle.bogiePivotHeightMm===170&&vehicle.couplerHalfSpanMm===1340&&vehicle.couplerHeightMm===220&&vehicle.drawbarLengthMm===200&&vehicle.railHalfGaugeMm===480&&vehicle.stationDeckMm===820,'INVALID_COMMAND','Wooden pose datums differ from the delivered assets.');
-    record(selected.pieces,['flat','left','right','station']);record(value.footprints,['flat','left','right','station']);
+    ensure(vehicle.kind===(graded?'coupled-unbanked':'coupled-flat')&&vehicle.originMm.x===2000&&vehicle.originMm.y===2000&&vehicle.originMm.z===500&&vehicle.wheelbaseMm===1500&&vehicle.bogiePivotHeightMm===170&&vehicle.couplerHalfSpanMm===1340&&vehicle.couplerHeightMm===220&&vehicle.drawbarLengthMm===200&&vehicle.railHalfGaugeMm===480&&vehicle.stationDeckMm===820,'INVALID_COMMAND','Wooden pose datums differ from the delivered assets.');
+    const pieceKeys=graded?Object.keys(woodenRiseReturnPieces):['flat','left','right','station'];
+    record(selected.pieces,pieceKeys);record(value.footprints,pieceKeys);
     for(const [key,piece] of Object.entries(selected.pieces)){
       const curved=key==='left'||key==='right',sign=key==='left'?-1:1,count=curved?64:16;
-      ensure(piece.station===(key==='station')&&piece.entry.pitch===0&&piece.entry.bank===0&&piece.end.pitch===0&&piece.end.bank===0&&piece.end.x===(curved?128:32)&&piece.end.y===(curved?sign*128:0)&&piece.end.z===0&&piece.end.turn===(curved?sign:0)&&!piece.motion.chain&&piece.motion.brake===null&&piece.motion.samples.length===count+1,'GEOMETRY','Unsupported wooden track geometry.');
-      const curve=curved?quarterCurveSamples(64,sign,128):null;
-      for(let i=0;i<=count;i++){
-        const point=piece.motion.samples[i]!,x=curve?curve[i]!.x:32*i/count,y=curve?curve[i]!.y:0;
-        ensure(Math.abs(point.x-x)<=1e-9&&Math.abs(point.y-y)<=1e-9&&point.z===0,'GEOMETRY','Wooden track samples differ from the finite qualified geometry.');
+      if(graded){
+        const expected=woodenRiseReturnPieces[key]!;
+        ensure(piece.station===expected.station&&piece.entry.pitch===expected.entry.pitch&&piece.entry.bank===0&&Object.entries(expected.end).every(([key,value])=>piece.end[key as keyof typeof piece.end]===value)&&piece.motion.chain===expected.motion.chain&&piece.motion.brake===null&&piece.motion.samples.length===expected.motion.samples.length,'GEOMETRY','Unsupported wooden rise-and-return geometry.');
+        ensure(piece.motion.samples.every((point,i)=>{const expectedPoint=expected.motion.samples[i]!;return point.x===expectedPoint.x&&point.y===expectedPoint.y&&point.z===expectedPoint.z;}),'GEOMETRY','Wooden rise-and-return samples differ from their stable geometry.');
+      }else{
+        ensure(piece.station===(key==='station')&&piece.entry.pitch===0&&piece.entry.bank===0&&piece.end.pitch===0&&piece.end.bank===0&&piece.end.x===(curved?128:32)&&piece.end.y===(curved?sign*128:0)&&piece.end.z===0&&piece.end.turn===(curved?sign:0)&&!piece.motion.chain&&piece.motion.brake===null&&piece.motion.samples.length===count+1,'GEOMETRY','Unsupported wooden track geometry.');
+        const curve=curved?quarterCurveSamples(64,sign,128):null;
+        for(let i=0;i<=count;i++){
+          const point=piece.motion.samples[i]!,x=curve?curve[i]!.x:32*i/count,y=curve?curve[i]!.y:0;
+          ensure(Math.abs(point.x-x)<=1e-9&&Math.abs(point.y-y)<=1e-9&&point.z===0,'GEOMETRY','Wooden track samples differ from the finite qualified geometry.');
+        }
       }
       const directions=value.footprints[key]!;ensure(Array.isArray(directions)&&directions.length===4,'INVALID_COMMAND','Four explicit wooden footprints are required.');
       for(const cells of directions){
@@ -69,8 +77,9 @@ export function validateRules(input:Rules):Rules{
         }
       }
     }
-    const footprints=Object.fromEntries(['flat','left','right','station'].map(key=>[key,value.footprints[key]!.map(cells=>cells.map(c=>({x:c.x,y:c.y,low:c.low,high:c.high,mask:c.mask})).sort((a,b)=>a.x-b.x||a.y-b.y||a.low-b.low||a.high-b.high||a.mask-b.mask))])) as RideProfile['footprints'];
-    rideProfiles[id]={motion:selected.motion,pieces:selected.pieces,vehicle:{kind:'coupled-flat',originMm:{x:vehicle.originMm.x,y:vehicle.originMm.y,z:vehicle.originMm.z},wheelbaseMm:vehicle.wheelbaseMm,bogiePivotHeightMm:vehicle.bogiePivotHeightMm,couplerHalfSpanMm:vehicle.couplerHalfSpanMm,couplerHeightMm:vehicle.couplerHeightMm,drawbarLengthMm:vehicle.drawbarLengthMm,railHalfGaugeMm:vehicle.railHalfGaugeMm,stationDeckMm:vehicle.stationDeckMm},footprints};
+    const footprints=Object.fromEntries(pieceKeys.map(key=>[key,value.footprints[key]!.map(cells=>cells.map(c=>({x:c.x,y:c.y,low:c.low,high:c.high,mask:c.mask})).sort((a,b)=>a.x-b.x||a.y-b.y||a.low-b.low||a.high-b.high||a.mask-b.mask))])) as RideProfile['footprints'];
+    if(graded){const expected=woodenRiseReturnProfileRecord().footprints;for(const key of pieceKeys)ensure(footprints[key]!.every((cells,i)=>JSON.stringify(cells)===JSON.stringify(expected[key]![i]!.map(c=>({...c})).sort((a,b)=>a.x-b.x||a.y-b.y||a.low-b.low||a.high-b.high||a.mask-b.mask))),'GEOMETRY','Wooden rise-and-return clearance differs from its qualified footprint.');}
+    rideProfiles[id]={motion:selected.motion,pieces:selected.pieces,vehicle:{kind:vehicle.kind,originMm:{x:vehicle.originMm.x,y:vehicle.originMm.y,z:vehicle.originMm.z},wheelbaseMm:vehicle.wheelbaseMm,bogiePivotHeightMm:vehicle.bogiePivotHeightMm,couplerHalfSpanMm:vehicle.couplerHalfSpanMm,couplerHeightMm:vehicle.couplerHeightMm,drawbarLengthMm:vehicle.drawbarLengthMm,railHalfGaugeMm:vehicle.railHalfGaugeMm,stationDeckMm:vehicle.stationDeckMm},footprints};
   }
   const commerceProfiles=validateCommerceProfiles(input.commerceProfiles),merchandiseProfiles=validateMerchandiseProfiles(input.merchandiseProfiles),restroomProfiles=validateRestroomProfiles(input.restroomProfiles,common),atmProfiles=validateAtmProfiles(input.atmProfiles,common),facilityProfiles=validateFacilityProfiles(input.facilityProfiles,{...common,commerceProfiles,merchandiseProfiles,restroomProfiles,atmProfiles});
   return{...common,rideProfiles,fixedProfiles:validateFixedProfiles(input.fixedProfiles,common),channelProfiles:validateChannelProfiles(input.channelProfiles,common),commerceProfiles,facilityProfiles,merchandiseProfiles,restroomProfiles,atmProfiles};

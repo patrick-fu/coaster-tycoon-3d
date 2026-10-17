@@ -8,7 +8,7 @@ import {facilityApproach,recoverStaff,sharedCount,stepFinance,stepStaff,insideRe
 import {amenityPoint,carriesWaste,recoverCleanup,stepHandymen,type Amenity,type AmenityElement} from './housekeeping.js';
 import {encodePatrol,inPatrol} from './patrol.js';
 import {project,validateView} from './view.js';
-import {legacyRuleJSON,v9RuleJSON,v10RuleJSON,v11RuleJSON,v12RuleJSON,v13RuleJSON,v14RuleJSON,v15RuleJSON,savedCurveRules,resolveRideRules,rideFootprint,woodenProfile} from '../content/ride-profiles.js';
+import {legacyRuleJSON,v9RuleJSON,v10RuleJSON,v11RuleJSON,v12RuleJSON,v13RuleJSON,v14RuleJSON,v15RuleJSON,v16RuleJSON,savedCurveRules,resolveRideRules,rideFootprint,woodenProfile} from '../content/ride-profiles.js';
 import {carouselCycleTicks,carouselEditable,fixedBodyCells,fixedProfile,newCarouselSession,type CarouselSession} from './carousel.js';
 import {qualifyWoodenCourse} from './wooden-motion.js';
 import {woodenInterface,woodenPortalCells} from './wooden-placement.js';
@@ -24,7 +24,7 @@ import {resolveFacilityPlacement} from '../content/facility-profiles.js';
 import {emptyMerchandiseAccounts,informationProducts,isMerchandiseId,merchandiseIds,merchandiseProfileId,merchandiseProfile,type MerchandiseAccounts} from '../content/merchandise.js';
 import {gradualRestroomProfile} from '../content/gradual-restroom.js';
 import {atmProfile,hasAtmProfile,maxAtmWithdrawals,withdrawalAmount} from '../content/atm.js';
-type HistoricalVersion=7|8|9|10|11|12|13|14|15;
+type HistoricalVersion=7|8|9|10|11|12|13|14|15|16;
 type Index=ServiceIndex&{cells:Map<number,{id:number,cell:Cell}[]>,records:number};
 type Plan={cost:number,category:'construction'|'refund'|'loan'|'none',cells:Cell[],endpoint?:Connector,id?:number,commit:()=>void};
 const at=(t:Tile)=>t.y*256+t.x;
@@ -90,7 +90,7 @@ export class Engine{
     if(options.land){ensure(Array.isArray(options.land)&&options.land.length<=65536,'INVALID_COMMAND','Invalid land setup.');const seen=new Set<number>();
       for(const l of options.land){record(l,['tile','height','water','owned']);validTile(l.tile);this.bounds(l.tile,options.side);ensure(!seen.has(at(l.tile))&&integer(l.height,0,this.rules.maxHeight)&&l.height%16===0&&integer(l.water,0,this.rules.maxHeight)&&l.water%16===0&&(l.water===0||l.water>=l.height)&&typeof l.owned==='boolean','INVALID_COMMAND','Invalid land setup.');seen.add(at(l.tile));terrain[at(l.tile)]=l.height;water[at(l.tile)]=l.water;owned[at(l.tile)]=l.owned;}
     }
-    this.state={version:16,contentVersion:CONTENT_VERSION,nextInstance:1,amenities:[],litter:[],facilities:[],retiredShopIncome:0,retiredStock:0,retiredMerchandise:emptyMerchandiseAccounts(),retiredRideIncome:0,retiredAtmWithdrawals:0,staff:[],rules:JSON.stringify(this.rules),side:options.side,tick:0,revision:0,topologyRevision:0,rng:options.seed,paused:false,initialCash:options.cash,cash:options.cash,loan:0,maxLoan:options.maxLoan,spent:0,refunded:0,nextElement:1,nextEntity:1,people:{entry:null,open:false,guests:[],departedSpent:0,departedWithdrawn:0},ledger:{rideSales:0,shopSales:0,stock:0,wages:0,upkeep:0,interest:0},trains:[],carouselSessions:[],boats:[],terrain,water,owned,rides:[],elements:[]};
+    this.state={version:17,contentVersion:CONTENT_VERSION,nextInstance:1,amenities:[],litter:[],facilities:[],retiredShopIncome:0,retiredStock:0,retiredMerchandise:emptyMerchandiseAccounts(),retiredRideIncome:0,retiredAtmWithdrawals:0,staff:[],rules:JSON.stringify(this.rules),side:options.side,tick:0,revision:0,topologyRevision:0,rng:options.seed,paused:false,initialCash:options.cash,cash:options.cash,loan:0,maxLoan:options.maxLoan,spent:0,refunded:0,nextElement:1,nextEntity:1,people:{entry:null,open:false,guests:[],departedSpent:0,departedWithdrawn:0},ledger:{rideSales:0,shopSales:0,stock:0,wages:0,upkeep:0,interest:0},trains:[],carouselSessions:[],boats:[],terrain,water,owned,rides:[],elements:[]};
     this.index=this.indexState(this.state);
   }
   get revision():string{return `${this.session}:${this.generation}:${this.state.revision}`;}
@@ -105,7 +105,7 @@ export class Engine{
     let index:Index;const previousRules=this.rules,previousRoutes=this.routes;let committed=false;
     try{
       const legacy=candidate as unknown as {version:number,rules:string,elements:Element[]};
-      if(legacy?.version===15||legacy?.version===16)this.rules=savedCurveRules(this.rules,legacy.rules,legacy.version);
+      if(legacy?.version===15||legacy?.version===16||legacy?.version===17)this.rules=savedCurveRules(this.rules,legacy.rules,legacy.version);
       // Receiving navigation must not populate caches belonging to the previous park.
       this.routes=new Routes();
       if(legacy?.version===6){
@@ -155,7 +155,11 @@ export class Engine{
         this.indexState(candidate,15);
         for(const guest of candidate.people.guests){guest.withdrawn=0;guest.atmRefusal=null;}
         candidate.people.departedWithdrawn=0;
-        Object.assign(candidate,{version:16,contentVersion:CONTENT_VERSION,rules:JSON.stringify(this.rules),retiredAtmWithdrawals:0});
+        Object.assign(candidate,{version:16,contentVersion:9,rules:v16RuleJSON(this.rules),retiredAtmWithdrawals:0});
+      }
+      if(legacy?.version===16){
+        this.indexState(candidate,16);
+        Object.assign(candidate,{version:17,contentVersion:CONTENT_VERSION,rules:JSON.stringify(this.rules)});
       }
       index=this.indexState(candidate);
       this.state=candidate;this.index=index;this.courses.clear();this.channels.clear();this.routes=new Routes();this.generation++;committed=true;
@@ -270,7 +274,7 @@ export class Engine{
   }
   private clear(cells:Cell[],s=this.state,index=this.index,ignore:number|null=null,candidate?:Element){
     for(const c of cells){this.owned(c,s);ensure(c.low>=0&&c.high<=this.rules.maxHeight,'GEOMETRY','Clearance exceeds height range.');const ground=s.terrain[at(c)]!,water=s.water[at(c)]!;
-      if(candidate?.kind==='track'&&woodenProfile(index.rides.get(candidate.ride)!.content??legacyRideContent(),this.rules))ensure(candidate.origin.z===ground&&water===0,'GEOMETRY','The wooden candidate requires level, dry ground beneath its track.');
+      if(candidate?.kind==='track'){const profile=woodenProfile(index.rides.get(candidate.ride)!.content??legacyRideContent(),this.rules);if(profile)ensure(water===0&&(profile.vehicle.kind==='coupled-unbanked'&&!profile.pieces[candidate.piece]!.station||candidate.origin.z===ground),'GEOMETRY','Wooden track requires dry ground; its station and flat candidate stay at ground level.');}
       if(candidate?.kind==='fixed-body'||candidate?.kind==='portal'&&fixedProfile(index.rides.get(candidate.ride)!.content,this.rules))ensure(candidate.height===ground&&water===0,'GEOMETRY','The Carousel and its portals require level dry ground.');
       if(candidate?.kind==='facility'&&resolveFacilityPlacement(index.facilities.get(candidate.facility)!.content??(index.facilities.get(candidate.facility)!.kind==='information'?informationFacilityContent():legacyFacilityContent(index.facilities.get(candidate.facility)!.kind as 'food'|'drink'|'restroom')),this.rules).dryGround)ensure(candidate.height===ground&&water===0,'GEOMETRY','Detailed stalls require dry ground at their foundation.');
       ensure(c.low>=ground&&c.low>=water,'CLEARANCE','Construction intersects terrain or water.');ensure(c.low-ground<=this.rules.maxSupport,'SUPPORT','Support height exceeded.');
@@ -497,10 +501,10 @@ export class Engine{
     for(const id of merchandiseIds){const a=value[id];record(a,active?['price','sales','income']:['sales','income']);ensure(integer(a.sales)&&integer(a.income),'INVALID_SAVE','Invalid merchandise account.');const r=profile?.products[id];ensure((a.sales===0&&a.income===0||r)&&BigInt(a.income)<=BigInt(a.sales)*BigInt(r?.maxPrice??0),'INVALID_SAVE','Merchandise history exceeds its receiving profile.');if(active)ensure(r&&integer(a.price,0,r.maxPrice),'INVALID_SAVE','Invalid independent product price.');}
   }
   private indexState(s:State,legacy?:HistoricalVersion):Index{
-    const identified=legacy!==7,fixed=legacy===undefined||legacy>=10,channel=legacy===undefined||legacy>=11,preCommerce=legacy!==undefined&&legacy<=11,merchandise=legacy===undefined||legacy>=14,atm=legacy===undefined;
+    const identified=legacy!==7,fixed=legacy===undefined||legacy>=10,channel=legacy===undefined||legacy>=11,preCommerce=legacy!==undefined&&legacy<=11,merchandise=legacy===undefined||legacy>=14,atm=legacy===undefined||legacy>=16;
     record(s,['amenities','litter','facilities','retiredShopIncome','retiredStock','staff','version','rules','side','tick','revision','topologyRevision','rng','paused','initialCash','cash','loan','maxLoan','spent','refunded','nextElement','nextEntity','people','ledger','trains','terrain','water','owned','rides','elements',...(identified?['contentVersion','nextInstance']:[]),...(fixed?['carouselSessions','retiredRideIncome']:[]),...(channel?['boats']:[]),...(merchandise?['retiredMerchandise']:[]),...(atm?['retiredAtmWithdrawals']:[])]);
-    ensure((s as {version:number}).version===(legacy??16),'INVALID_SAVE','Unsupported save version.');ensure(s.rules===(legacy===15?v15RuleJSON(this.rules):legacy===14?v14RuleJSON(this.rules):legacy===13?v13RuleJSON(this.rules):legacy===12?v12RuleJSON(this.rules):legacy===11?v11RuleJSON(this.rules):legacy===10?v10RuleJSON(this.rules):legacy===9?v9RuleJSON(this.rules):legacy?legacyRuleJSON(this.rules):JSON.stringify(this.rules)),'WRONG_RULES','Save rule profile differs from the engine.');
-    if(identified)ensure((s as {contentVersion:number}).contentVersion===(legacy===8?1:legacy===9?2:legacy===10?3:legacy===11?4:legacy===12?5:legacy===13?6:legacy===14?7:legacy===15?8:CONTENT_VERSION)&&integer(s.nextInstance,1),'INVALID_SAVE','Unsupported content version or invalid instance counter.');
+    ensure((s as {version:number}).version===(legacy??17),'INVALID_SAVE','Unsupported save version.');ensure(s.rules===(legacy===16?v16RuleJSON(this.rules):legacy===15?v15RuleJSON(this.rules):legacy===14?v14RuleJSON(this.rules):legacy===13?v13RuleJSON(this.rules):legacy===12?v12RuleJSON(this.rules):legacy===11?v11RuleJSON(this.rules):legacy===10?v10RuleJSON(this.rules):legacy===9?v9RuleJSON(this.rules):legacy?legacyRuleJSON(this.rules):JSON.stringify(this.rules)),'WRONG_RULES','Save rule profile differs from the engine.');
+    if(identified)ensure((s as {contentVersion:number}).contentVersion===(legacy===8?1:legacy===9?2:legacy===10?3:legacy===11?4:legacy===12?5:legacy===13?6:legacy===14?7:legacy===15?8:legacy===16?9:CONTENT_VERSION)&&integer(s.nextInstance,1),'INVALID_SAVE','Unsupported content version or invalid instance counter.');
     ensure(integer(s.side,LIMITS.mapMin,LIMITS.mapMax)&&integer(s.rng,0,0xffffffff)&&typeof s.paused==='boolean','INVALID_SAVE','Invalid world metadata.');
     for(const n of [s.tick,s.revision,s.topologyRevision,s.initialCash,s.loan,s.maxLoan,s.spent,s.refunded,s.retiredShopIncome,s.retiredStock])ensure(integer(n),'INVALID_SAVE','Invalid clock or money field.');
     if(fixed)ensure(integer(s.retiredRideIncome),'INVALID_SAVE','Invalid retired ride income.');
@@ -637,7 +641,7 @@ export class Engine{
     for(const ride of s.rides)if(flumeProfile(ride.content,this.rules))ensure(ride.status==='closed'||index.boats.has(ride.id),'INVALID_SAVE','Operating channel has no boat.');
   }
   private validatePeople(s:State,index:Index,legacy?:HistoricalVersion){
-    const preCommerce=legacy!==undefined&&legacy<=11,merchandise=legacy===undefined||legacy>=14,atm=legacy===undefined;
+    const preCommerce=legacy!==undefined&&legacy<=11,merchandise=legacy===undefined||legacy>=14,atm=legacy===undefined||legacy>=16;
     record(s.people,['entry','open','guests','departedSpent',...(atm?['departedWithdrawn']:[])]);
     ensure(typeof s.people.open==='boolean'&&integer(s.people.departedSpent)&&Array.isArray(s.people.guests)&&s.people.guests.length<=LIMITS.sharedEntities,'INVALID_SAVE','Invalid park guest state.');
     if(atm)ensure(integer(s.people.departedWithdrawn)&&s.people.departedWithdrawn%withdrawalAmount===0&&(hasAtmProfile(this.rules)||s.people.departedWithdrawn===0),'INVALID_SAVE','Invalid departed withdrawal total.');
@@ -646,7 +650,7 @@ export class Engine{
     const ids=new Set([...s.trains.flatMap(t=>t.carIds),...Array.from(index.boats.values(),b=>b.id)]),admittedCounts=new Map<number,number>();let payments=BigInt(s.people.departedSpent),withdrawn=BigInt(atm?s.people.departedWithdrawn:0);
     for(const g of s.people.guests){
       record(g,['navigationRide','amenity','restProgress','wrapper','wrapperTick','facility','serviceProgress','bladder','id','point','phase','goal','next','walkProgress','destination','entrance','exit','queueRide','seat','initialCash','cash','spent','fareLimit','forceTolerance','hunger','thirst','nausea','happiness','energy','queuedAt','lastRide','lastRideTick','ridesTaken','thought',...(!preCommerce?['held']:[]),...(merchandise?['merchandise','informationCounter']:[]),...(atm?['withdrawn','atmRefusal']:[])]);
-      const admitted=insideRestroom(g),withdrawing=g.phase==='withdrawing';ensure(!admitted||legacy===undefined||legacy===15,'INVALID_SAVE','Historical parks cannot introduce an admitted restroom phase.');
+      const admitted=insideRestroom(g),withdrawing=g.phase==='withdrawing';ensure(!admitted||legacy===undefined||legacy>=15,'INVALID_SAVE','Historical parks cannot introduce an admitted restroom phase.');
       ensure(!withdrawing||atm,'INVALID_SAVE','Historical parks cannot introduce a withdrawal action.');
       if(atm){
         ensure(integer(g.withdrawn)&&g.withdrawn%withdrawalAmount===0&&(hasAtmProfile(this.rules)||g.withdrawn===0&&g.atmRefusal===null),'INVALID_SAVE','Invalid guest withdrawal history.');withdrawn+=BigInt(g.withdrawn);

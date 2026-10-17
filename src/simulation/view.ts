@@ -32,12 +32,12 @@ export function project(s:State,rules:Rules,request:ViewRequest,elements:Readonl
   for(const g of s.people.guests){if(g.phase==='riding'||insideRestroom(g))continue;const mix=g.next?g.walkProgress/rules.guests.walkTicks:0,x=g.point.x+(g.next?g.next.x-g.point.x:0)*mix,y=g.point.y+(g.next?g.next.y-g.point.y:0)*mix;if(visible(x,y))people.push(g.id,x*metres,y*metres,g.point.z/32*metres,phases.indexOf(g.phase),0);}
   for(const t of s.staff){const mix=t.next?t.progress/rules.services.staffWalkTicks:0,x=t.point.x+(t.next?t.next.x-t.point.x:0)*mix,y=t.point.y+(t.next?t.next.y-t.point.y:0)*mix;if(visible(x,y))people.push(t.id,x*metres,y*metres,t.point.z/32*metres,t.role==='mechanic'?0:1,1);}
   const metreFrame=(frame:PoseFrame)=>({position:{x:frame.position.x/1000,y:frame.position.y/1000,z:frame.position.z/1000},direction:{...frame.direction},up:{...frame.up}});
-  const cars:{id:number,ride:number,position:Vector,direction:Vector,up:Vector,occupants:number,seatIds:(number|null)[],rig:null|{kind:'wooden-coupled-flat',bogieFront:PoseFrame,bogieRear:PoseFrame,link:PoseFrame|null,restraintsClosed:boolean}}[]=[];
+  const cars:{id:number,ride:number,position:Vector,direction:Vector,up:Vector,occupants:number,seatIds:(number|null)[],rig:null|{kind:'wooden-coupled-flat'|'wooden-coupled-unbanked',bogieFront:PoseFrame,bogieRear:PoseFrame,link:PoseFrame|null,restraintsClosed:boolean}}[]=[];
   for(const t of s.trains){
     const ride=s.rides.find(r=>r.id===t.ride)!,selected=resolveRideRules(ride.content,rules),profile=woodenProfile(ride.content,rules),c=course(t.ride),frames=profile?woodenTrainPoses(t,c,profile):null;
     for(let i=0;i<t.carIds.length;i++){
       const pose=frames?frames[i]!.body:carPose(c,t.position-i*selected.motion.carLength),seatIds=t.seats.slice(i*selected.motion.seatsPerCar,(i+1)*selected.motion.seatsPerCar);
-      if(visible(pose.position.x/1000/metres,pose.position.y/1000/metres))cars.push({id:t.carIds[i]!,ride:t.ride,...metreFrame(pose),occupants:seatIds.filter(id=>id!==null).length,seatIds,rig:frames?{kind:'wooden-coupled-flat',bogieFront:metreFrame(frames[i]!.bogieFront),bogieRear:metreFrame(frames[i]!.bogieRear),link:frames[i]!.link?metreFrame(frames[i]!.link!):null,restraintsClosed:t.phase==='running'||t.phase==='stalled'&&seatIds.some(id=>id!==null)}:null});
+      if(visible(pose.position.x/1000/metres,pose.position.y/1000/metres))cars.push({id:t.carIds[i]!,ride:t.ride,...metreFrame(pose),occupants:seatIds.filter(id=>id!==null).length,seatIds,rig:frames?{kind:profile!.vehicle.kind==='coupled-unbanked'?'wooden-coupled-unbanked':'wooden-coupled-flat',bogieFront:metreFrame(frames[i]!.bogieFront),bogieRear:metreFrame(frames[i]!.bogieRear),link:frames[i]!.link?metreFrame(frames[i]!.link!):null,restraintsClosed:t.phase==='running'||t.phase==='stalled'&&seatIds.some(id=>id!==null)}:null});
     }
   }
   const rides=s.rides.map(r=>{

@@ -30,7 +30,7 @@ function presentationFamily(p){
  if(p.kind==='procedural-coaster'&&p.profileId==='classic-candidate-v1'&&keys.length===2)return 'procedural';
  if(p.kind==='procedural-facility'&&p.profileId==='classic-candidate-v1'&&keys.length===3&&['food','drink','restroom'].includes(p.service))return 'procedural';
  if(keys.length===2){
-  if(p.kind==='detailed-wooden-coaster'&&p.profileId==='detailed-wooden-candidate-v1')return 'wooden';
+  if(p.kind==='detailed-wooden-coaster'&&['detailed-wooden-candidate-v1','detailed-wooden-rise-return-v2'].includes(p.profileId))return 'wooden';
   if(p.kind==='detailed-carousel'&&p.profileId==='detailed-carousel-candidate-v1')return 'carousel';
   if(p.kind==='detailed-log-flume'&&p.profileId==='detailed-log-flume-candidate-v1')return 'flume';
  }
@@ -239,7 +239,8 @@ export class ParkScene{
  update(packet){
   if(this.disposed)return;
   if(packet.protocolVersion!==WORKER_PROTOCOL_VERSION||packet.contentVersion!==CONTENT_VERSION)throw new Error('Unsupported park presentation version.');
-  for(const ride of packet.rides)if(!(ride.presentation.kind==='procedural-coaster'&&ride.presentation.profileId==='classic-candidate-v1'||ride.presentation.kind==='detailed-wooden-coaster'&&ride.presentation.profileId==='detailed-wooden-candidate-v1'&&ride.trackProfile||ride.presentation.kind==='detailed-carousel'&&ride.presentation.profileId==='detailed-carousel-candidate-v1'&&Number.isSafeInteger(ride.body)||ride.presentation.kind==='detailed-log-flume'&&ride.presentation.profileId==='detailed-log-flume-candidate-v1'&&ride.channelProfile&&ride.capacity===4))throw new Error('This ride has no supported presentation.');
+  for(const ride of packet.rides)if(!(ride.presentation.kind==='procedural-coaster'&&ride.presentation.profileId==='classic-candidate-v1'||ride.presentation.kind==='detailed-wooden-coaster'&&(ride.presentation.profileId==='detailed-wooden-candidate-v1'&&ride.trackProfile?.vehicle?.kind==='coupled-flat'||ride.presentation.profileId==='detailed-wooden-rise-return-v2'&&ride.trackProfile?.vehicle?.kind==='coupled-unbanked')||ride.presentation.kind==='detailed-carousel'&&ride.presentation.profileId==='detailed-carousel-candidate-v1'&&Number.isSafeInteger(ride.body)||ride.presentation.kind==='detailed-log-flume'&&ride.presentation.profileId==='detailed-log-flume-candidate-v1'&&ride.channelProfile&&ride.capacity===4))throw new Error('This ride has no supported presentation.');
+  for(const car of packet.cars){const ride=packet.rides.find(ride=>ride.id===car.ride);if(ride?.presentation.kind==='detailed-wooden-coaster'){const expected=ride.trackProfile.vehicle.kind==='coupled-unbanked'?'wooden-coupled-unbanked':'wooden-coupled-flat';if(car.rig?.kind!==expected)throw new Error('Wooden vehicle rig differs from its presentation.');}else if(car.rig!==null)throw new Error('This vehicle has no supported rig.');}
   for(const facility of packet.facilities){
    const p=facility.presentation,legacy=facility.kind!=='atm'&&p.kind==='procedural-facility'&&p.profileId==='classic-candidate-v1'&&p.service===facility.kind,detailed=p.kind==='detailed-facility'&&p.profileId==='detailed-consumable-stalls-v1'&&p.service===facility.kind&&typeof facility.open==='boolean'&&(facility.kind==='food'&&facility.product?.id==='independent.burger'||facility.kind==='drink'&&facility.product?.id==='independent.soft-drink');
    const information=p.kind==='detailed-facility'&&p.profileId==='detailed-information-kiosk-v1'&&p.service==='information'&&facility.kind==='information'&&typeof facility.open==='boolean'&&facility.products&&Object.keys(facility.products).length===2&&['independent.map','independent.umbrella'].every(id=>Number.isSafeInteger(facility.products[id]?.price));

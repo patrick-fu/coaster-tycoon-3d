@@ -18,7 +18,7 @@ export type Connector={x:number,y:number,z:number,direction:Direction,pitch:Atti
 export type Cell={x:number,y:number,low:number,high:number,mask:number};
 export type Vector={x:number,y:number,z:number};
 export type PieceRule={motion:{samples:Vector[],chain:boolean,brake:number|null},price:number,station:boolean,end:{x:number,y:number,z:number,turn:number,pitch:Attitude,bank:Attitude},entry:{pitch:Attitude,bank:Attitude},cells:Cell[]};
-export type WoodenVehicleRules={kind:'coupled-flat',originMm:Vector,wheelbaseMm:number,bogiePivotHeightMm:number,couplerHalfSpanMm:number,couplerHeightMm:number,drawbarLengthMm:number,railHalfGaugeMm:number,stationDeckMm:number};
+export type WoodenVehicleRules={kind:'coupled-flat'|'coupled-unbanked',originMm:Vector,wheelbaseMm:number,bogiePivotHeightMm:number,couplerHalfSpanMm:number,couplerHeightMm:number,drawbarLengthMm:number,railHalfGaugeMm:number,stationDeckMm:number};
 export type RideProfile={motion:MotionRules,pieces:Record<string,PieceRule>,vehicle:WoodenVehicleRules,footprints:Record<string,[Cell[],Cell[],Cell[],Cell[]]>};
 export type FixedRideProfile={size:number,bodyHeight:number,portalHeight:number,deckMm:number,seats:{x:number,y:number,z:number,yaw:number}[],boardTicks:number,minLoadTicks:number,maxLoadTicks:number,accelTicks:number,cruiseTicks:number,decelTicks:number,angleUnits:number,peakUnitsPerTick:number,unloadTicks:number,buildPrice:number,portalPrice:number,defaultPrice:number,maxPrice:number,upkeep:number,inspectionInterval:number,inspectionTicks:number,repairTicks:number};
 export type ChannelRideProfile={vehicle:FlumeProfile,pieces:Record<string,PieceRule>};
@@ -36,7 +36,7 @@ export type TrackedRide=RideBase&{track:number[],cars:number,body?:never};
 export type ChannelRide=RideBase&{track:number[],cars?:never,body?:never};
 export type FixedRide=RideBase&{body:number,track?:never,cars?:never};
 export type Ride=TrackedRide|ChannelRide|FixedRide;
-export type State={version:16,contentVersion:9,nextInstance:number,amenities:Amenity[],litter:Litter[],facilities:Facility[],retiredShopIncome:number,retiredStock:number,retiredMerchandise:MerchandiseAccounts,retiredRideIncome:number,retiredAtmWithdrawals:number,staff:Staff[],rules:string,side:number,tick:number,revision:number,topologyRevision:number,rng:number,paused:boolean,initialCash:number,cash:number,loan:number,maxLoan:number,spent:number,refunded:number,nextElement:number,nextEntity:number,people:PeopleState,ledger:Ledger,trains:Train[],carouselSessions:CarouselSession[],boats:Boat[],terrain:number[],water:number[],owned:boolean[],rides:Ride[],elements:Element[]};
+export type State={version:17,contentVersion:10,nextInstance:number,amenities:Amenity[],litter:Litter[],facilities:Facility[],retiredShopIncome:number,retiredStock:number,retiredMerchandise:MerchandiseAccounts,retiredRideIncome:number,retiredAtmWithdrawals:number,staff:Staff[],rules:string,side:number,tick:number,revision:number,topologyRevision:number,rng:number,paused:boolean,initialCash:number,cash:number,loan:number,maxLoan:number,spent:number,refunded:number,nextElement:number,nextEntity:number,people:PeopleState,ledger:Ledger,trains:Train[],carouselSessions:CarouselSession[],boats:Boat[],terrain:number[],water:number[],owned:boolean[],rides:Ride[],elements:Element[]};
 export type Command=
  | {type:'create-ride',name:string,tile:Tile,height:number,direction:Direction,content?:ContentIdentity}
  | {type:'append-track',ride:number,piece:string}

@@ -32,15 +32,22 @@ const browserHash='9ecebaff89fbf6588913938f91c93fedf5434d6f925c69289794b481e4956
 const oldBrowserHash='d1d3d4bb9309e7aa230e7d1e248a92544e21c01aca691612918111e363fb84a5';
 const browserRules=JSON.parse(browser16.state.rules);
 const options={side:48,cash:500000,maxLoan:200000,seed:20261007};
-const currentRules=()=>withAtmProfile(withGradualRestroomProfile(withInformationProfile(withDetailedStallsProfile(withConsumablesProfile(withFlumeProfile(mixedRules))))));
+const currentRules=()=>{
+ const legacy=structuredClone(mixedRules);delete legacy.rideProfiles['independent.wooden-rise-return-v2'];
+ return withAtmProfile(withGradualRestroomProfile(withInformationProfile(withDetailedStallsProfile(withConsumablesProfile(withFlumeProfile(legacy))))));
+};
 const fresh=()=>new Engine(options,currentRules());
+function received16(state){
+ assert.equal(state.version,16);assert.equal(state.contentVersion,9);
+ return Object.assign(structuredClone(state),{version:17,contentVersion:10});
+}
 
 function client(engine){
  const host=createHost(engine);let id=0;
  return(type,payload=null)=>{
   const requestId=++id,reply=host({id:requestId,protocolVersion:WORKER_PROTOCOL_VERSION,request:{type,payload}});
   assert.equal(reply.ok,true,'Host envelope failed: '+JSON.stringify(reply));
-  assert.equal(reply.value.id,requestId);assert.equal(reply.value.protocolVersion,9);
+  assert.equal(reply.value.id,requestId);assert.equal(reply.value.protocolVersion,10);
   return reply.value.result;
  };
 }
@@ -68,38 +75,38 @@ test('fresh public Engine retains the complete recorded Node Rules profile',()=>
  assert.equal(sha(browser15.state.rules),oldBrowserHash);
  assert.notEqual(node16.state.rules,browser16.state.rules,'Actual historical runtime banks must remain distinct.');
  const engine=fresh(),call=client(engine),saved=JSON.parse(ok(call('save'),'fresh save'));
- assert.equal(saved.version,16);assert.equal(saved.contentVersion,9);
+ assert.equal(saved.version,17);assert.equal(saved.contentVersion,10);
  assert.equal(saved.rules,node16.state.rules,'No new price/physics/footprint or curve profile may replace the recorded default.');
 });
 
 for(const [label,input,expectedHash] of [['Node16 actual',node16,nodeHash],['Browser16 actual',browser16,browserHash]]){
- test(label+' loads through Host and roundtrips the exact original save and Rules',()=>{
-  const engine=fresh(),call=client(engine);
+ test(label+' loads through Host and roundtrips the exact current migration with original Rules',()=>{
+  const engine=fresh(),call=client(engine),expected=received16(input.state),expectedSave=JSON.stringify(expected);
   ok(call('load',input.raw),'actual load');
-  assert.deepEqual(engine.snapshot(),input.state);
-  assert.equal(ok(call('save'),'roundtrip save'),input.raw);
+  assert.deepEqual(engine.snapshot(),expected);
+  assert.equal(ok(call('save'),'roundtrip save'),expectedSave);
   assert.equal(sha(engine.snapshot().rules),expectedHash);
   if(input===browser16)projectedBank(call,browserRules);
   const receiver=fresh(),second=client(receiver);
   ok(second('load',ok(call('save'),'transfer save')),'second receiving');
-  assert.equal(ok(second('save'),'second export'),input.raw);
+  assert.equal(ok(second('save'),'second export'),expectedSave);
   if(input===browser16)projectedBank(second,browserRules);
  });
 }
 
-test('genuine Browser15 migrates only existing ATM fields and preserves its observed curve bank',()=>{
+test('genuine Browser15 migrates ATM fields and current versions while preserving its observed curve bank',()=>{
  const engine=fresh(),call=client(engine);
  ok(call('load',browser15.raw),'genuine15 load');
  const expected=structuredClone(browser15.state);
  for(const guest of expected.people.guests){guest.withdrawn=0;guest.atmRefusal=null;}
  expected.people.departedWithdrawn=0;
- Object.assign(expected,{version:16,contentVersion:9,rules:browser16.state.rules,retiredAtmWithdrawals:0});
+ Object.assign(expected,{version:17,contentVersion:10,rules:browser16.state.rules,retiredAtmWithdrawals:0});
  assert.deepEqual(engine.snapshot(),expected,'Unrelated park, ownership, finance or simulation state changed during old15 migration.');
  assert.equal(ok(call('save'),'migrated save'),JSON.stringify(expected));
  assert.equal(sha(engine.snapshot().rules),browserHash);
  projectedBank(call,browserRules);
  const receiver=fresh(),second=client(receiver);
- ok(second('load',ok(call('save'),'migrated transfer')),'migrated16 receiving');
+ ok(second('load',ok(call('save'),'migrated transfer')),'migrated17 receiving');
  assert.deepEqual(receiver.snapshot(),expected);projectedBank(second,browserRules);
 });
 
@@ -107,10 +114,10 @@ test('synthetic Node15 scaffold from actual Node16 retains the Node bank (not ge
  const synthetic=beforeAtmState(node16.state),engine=fresh(),call=client(engine);
  assert.equal(synthetic.version,15);assert.equal(synthetic.contentVersion,8);
  ok(call('load',JSON.stringify(synthetic)),'synthetic Node15 load');
- assert.deepEqual(engine.snapshot(),node16.state);
+ assert.deepEqual(engine.snapshot(),received16(node16.state));
  assert.equal(engine.snapshot().rules,node16.state.rules);
- const receiver=fresh();ok(client(receiver)('load',ok(call('save'),'synthetic migrated transfer')),'synthetic migrated16 load');
- assert.deepEqual(receiver.snapshot(),node16.state);
+ const receiver=fresh();ok(client(receiver)('load',ok(call('save'),'synthetic migrated transfer')),'synthetic migrated17 load');
+ assert.deepEqual(receiver.snapshot(),received16(node16.state));
 });
 
 test('actual Browser16 continues under its selected bank with equivalent real tick batches',()=>{

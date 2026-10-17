@@ -31,35 +31,41 @@ export function legacyRuleJSON(rules:Rules):string{
  const {rideProfiles,fixedProfiles,channelProfiles,commerceProfiles,facilityProfiles,merchandiseProfiles,restroomProfiles,atmProfiles,...common}=rules;return JSON.stringify(common);
 }
 
+function historicalRideRules(rules:Rules):Rules{
+ const rideProfiles=rules.rideProfiles;
+ if(!rideProfiles||!Object.hasOwn(rideProfiles,'independent.wooden-rise-return-v2'))return rules;
+ return{...rules,rideProfiles:Object.fromEntries(Object.entries(rideProfiles).filter(([id])=>id!=='independent.wooden-rise-return-v2'))};
+}
+
 export function v9RuleJSON(rules:Rules):string{
- const {fixedProfiles,channelProfiles,commerceProfiles,facilityProfiles,merchandiseProfiles,restroomProfiles,atmProfiles,...previous}=rules;return JSON.stringify(previous);
+ const {fixedProfiles,channelProfiles,commerceProfiles,facilityProfiles,merchandiseProfiles,restroomProfiles,atmProfiles,...previous}=historicalRideRules(rules);return JSON.stringify(previous);
 }
 
 export function v10RuleJSON(rules:Rules):string{
- const {channelProfiles,commerceProfiles,facilityProfiles,merchandiseProfiles,restroomProfiles,atmProfiles,...previous}=rules;return JSON.stringify(previous);
+ const {channelProfiles,commerceProfiles,facilityProfiles,merchandiseProfiles,restroomProfiles,atmProfiles,...previous}=historicalRideRules(rules);return JSON.stringify(previous);
 }
 
 export function v11RuleJSON(rules:Rules):string{
- const {commerceProfiles,facilityProfiles,merchandiseProfiles,restroomProfiles,atmProfiles,...previous}=rules;return JSON.stringify(previous);
+ const {commerceProfiles,facilityProfiles,merchandiseProfiles,restroomProfiles,atmProfiles,...previous}=historicalRideRules(rules);return JSON.stringify(previous);
 }
 
 export function v12RuleJSON(rules:Rules):string{
- const {facilityProfiles,merchandiseProfiles,restroomProfiles,atmProfiles,...previous}=rules;return JSON.stringify(previous);
+ const {facilityProfiles,merchandiseProfiles,restroomProfiles,atmProfiles,...previous}=historicalRideRules(rules);return JSON.stringify(previous);
 }
 
 export function v13RuleJSON(rules:Rules):string{
- const {merchandiseProfiles,restroomProfiles,atmProfiles,...previous}=rules;
+ const {merchandiseProfiles,restroomProfiles,atmProfiles,...previous}=historicalRideRules(rules);
  // Historical13 has only the delivered stall placement profile.
  return JSON.stringify({...previous,facilityProfiles:Object.fromEntries(Object.entries(rules.facilityProfiles??{}).filter(([id])=>id==='independent.detailed-stalls-v1'))});
 }
 
 export function v14RuleJSON(rules:Rules):string{
- const {restroomProfiles,atmProfiles,...previous}=rules;
+ const {restroomProfiles,atmProfiles,...previous}=historicalRideRules(rules);
  return JSON.stringify({...previous,facilityProfiles:Object.fromEntries(Object.entries(rules.facilityProfiles??{}).filter(([id])=>id==='independent.detailed-stalls-v1'||id==='independent.information-kiosk-v1'))});
 }
 
 export function v15RuleJSON(rules:Rules):string{
- const {atmProfiles,...previous}=rules;
+ const {atmProfiles,...previous}=historicalRideRules(rules);
  return JSON.stringify({...previous,facilityProfiles:Object.fromEntries(Object.entries(rules.facilityProfiles??{}).filter(([id])=>id!=='independent.atm-v1'))});
 }
 
@@ -73,8 +79,10 @@ function curveRules(rules:Rules,bank:CurveBank):Rules{
  return selected;
 }
 
-export function savedCurveRules(rules:Rules,serialized:string,version:15|16):Rules{
- const encode=version===15?v15RuleJSON:JSON.stringify;
+export function v16RuleJSON(rules:Rules):string{return JSON.stringify(historicalRideRules(rules));}
+
+export function savedCurveRules(rules:Rules,serialized:string,version:15|16|17):Rules{
+ const encode=version===15?v15RuleJSON:version===16?v16RuleJSON:JSON.stringify;
  if(encode(rules)===serialized)return rules;
  const stable=curveRules(rules,'stable'),legacy=curveRules(rules,'legacy-browser');
  // Only complete observed banks can alias; custom or mixed receiving samples stay exact-only.

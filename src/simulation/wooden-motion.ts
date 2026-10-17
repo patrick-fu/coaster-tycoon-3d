@@ -10,6 +10,7 @@ const times=(a:Vector,n:number):Vector=>({x:a.x*n,y:a.y*n,z:a.z*n});
 const length=(a:Vector)=>Math.hypot(a.x,a.y,a.z);
 const up={x:0,y:0,z:1};
 function unit(a:Vector){const size=length(a);ensure(Number.isFinite(size)&&size>1e-9,'GEOMETRY','Wooden pose has no finite direction.');return times(a,1/size);}
+const unbankedUp=(direction:Vector)=>unit(minus(up,times(direction,direction.z)));
 
 function sample(course:Course,distance:number){
  const wrapped=((distance%course.length)+course.length)%course.length;
@@ -21,7 +22,7 @@ function sample(course:Course,distance:number){
 }
 
 export function woodenTrainPoses(train:Pick<Train,'position'|'carIds'>,course:Course,profile:RideProfile):WoodenCarPose[]{
- const v=profile.vehicle,frame=(position:Vector,direction:Vector):PoseFrame=>({position,direction,up:{...up}});
+ const v=profile.vehicle,graded=v.kind==='coupled-unbanked',frame=(position:Vector,direction:Vector):PoseFrame=>({position,direction,up:graded?unbankedUp(direction):{...up}});
  const bodyAt=(frontMm:number)=>{
   const front=sample(course,frontMm);let low=frontMm-v.wheelbaseMm*1.5,high=frontMm;
   ensure(length(minus(front.position,sample(course,low).position))>=v.wheelbaseMm,'GEOMETRY','Wooden wheelbase has no rear-contact bracket.');
@@ -29,9 +30,9 @@ export function woodenTrainPoses(train:Pick<Train,'position'|'carIds'>,course:Co
   const rearMm=(low+high)/2,rear=sample(course,rearMm),direction=unit(minus(front.position,rear.position));
   const body=frame(plus(times(plus(front.position,rear.position),.5),v.originMm),direction);
   const pivotOffset=plus(v.originMm,times(up,v.bogiePivotHeightMm));
-  return{body,bogieFront:frame(plus(front.position,pivotOffset),front.direction),bogieRear:frame(plus(rear.position,pivotOffset),rear.direction),link:null,frontCourseMm:frontMm,rearCourseMm:rearMm} as WoodenCarPose;
+  return{body,bogieFront:frame(plus(front.position,graded?plus(v.originMm,times(unbankedUp(front.direction),v.bogiePivotHeightMm)):pivotOffset),front.direction),bogieRear:frame(plus(rear.position,graded?plus(v.originMm,times(unbankedUp(rear.direction),v.bogiePivotHeightMm)):pivotOffset),rear.direction),link:null,frontCourseMm:frontMm,rearCourseMm:rearMm} as WoodenCarPose;
  };
- const hinge=(body:PoseFrame,sign:number)=>plus(plus(body.position,times(up,v.couplerHeightMm)),times(body.direction,sign*v.couplerHalfSpanMm));
+ const hinge=(body:PoseFrame,sign:number)=>plus(plus(body.position,times(graded?body.up:up,v.couplerHeightMm)),times(body.direction,sign*v.couplerHalfSpanMm));
  const result:WoodenCarPose[]=[];
  for(let i=0;i<train.carIds.length;i++){
   if(i===0){result.push(bodyAt(train.position+v.wheelbaseMm/2));continue;}
@@ -48,14 +49,15 @@ export function woodenTrainPoses(train:Pick<Train,'position'|'carIds'>,course:Co
   let {low,high}=brackets[0]!;
   for(let step=0;step<64;step++){const middle=(low+high)/2;if(residual(middle)>0)low=middle;else high=middle;}
   const following=bodyAt((low+high)/2),followHinge=hinge(following.body,1),span=minus(leadHinge,followHinge);
-  ensure(Math.abs(length(span)-v.drawbarLengthMm)<=.1&&span.x*leading.body.direction.x+span.y*leading.body.direction.y>0,'GEOMETRY','Wooden drawbar does not close behind its leading car.');
+  ensure(Math.abs(length(span)-v.drawbarLengthMm)<=.1&&span.x*leading.body.direction.x+span.y*leading.body.direction.y+(graded?span.z*leading.body.direction.z:0)>0,'GEOMETRY','Wooden drawbar does not close behind its leading car.');
   following.link=frame(times(plus(leadHinge,followHinge),.5),unit(span));result.push(following);
  }
  return result;
 }
 
 export function qualifyWoodenCourse(ride:TrackedRide,course:Course,profile:RideProfile){
- ensure(course.segments.every(s=>s.tangent.z===0),'OPERATING_REQUIREMENTS','This wooden candidate supports flat unbanked courses only.');
+ if(profile.vehicle.kind==='coupled-flat')ensure(course.segments.every(s=>s.tangent.z===0),'OPERATING_REQUIREMENTS','This wooden candidate supports flat unbanked courses only.');
+ else ensure(course.segments.every(s=>Math.abs(s.tangent.z)<=.5/Math.sqrt(1.25)+1e-9),'OPERATING_REQUIREMENTS','The wooden rise-and-return course exceeds its qualified grade.');
  let turn=0,sign=0;
  for(let i=0;i<course.segments.length;i++){
   const before=course.segments[(i+course.segments.length-1)%course.segments.length]!.tangent,after=course.segments[i]!.tangent;
