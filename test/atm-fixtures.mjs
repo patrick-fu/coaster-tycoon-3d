@@ -1,8 +1,24 @@
 import assert from 'node:assert/strict';
 
+// Synthetic scaffolding removes only absent features; genuine exports are separate fixtures.
+export function beforeBalloonState(state){
+ const old=structuredClone(state);if(old.version!==18)return old;
+ assert.equal(old.contentVersion,11);assert.deepEqual(old.retiredBalloon,{sales:0,income:0});
+ assert(old.facilities.every(f=>f.kind!=='balloon'),'Cannot erase a real Balloon facility.');
+ for(const g of old.people.guests){assert.equal(g.balloonColour,null,'Cannot erase guest-owned balloons.');delete g.balloonColour;}
+ const rules=JSON.parse(old.rules);assert.deepEqual(rules.balloonProfiles,{});
+ assert(!Object.hasOwn(rules.facilityProfiles??{},'independent.balloon-stall-v1'),'Cannot erase enabled Balloon placement.');
+ delete rules.balloonProfiles;delete old.retiredBalloon;old.rules=JSON.stringify(rules);old.version=17;old.contentVersion=10;return old;
+}
+export function beforeBalloonView(view){
+ const old=structuredClone(view);if(old.protocolVersion!==11)return old;
+ assert.equal(old.contentVersion,11);assert.deepEqual(old.guestBalloons,[]);assert(old.facilities.every(f=>f.kind!=='balloon'));
+ delete old.guestBalloons;old.protocolVersion=10;old.contentVersion=10;return old;
+}
+
 // Synthetic scaffolding for existing v6-v14 adapter tests, never genuine v15 evidence.
 export function beforeAtmState(state){
- const old=structuredClone(state);
+ const old=beforeBalloonState(state);
  if(old.version===17){
   assert.equal(old.contentVersion,10);
   assert(old.rides.every(r=>r.content.variantId!=='independent.wooden-rise-return-train'),'Synthetic historical state cannot contain v2 rides.');
@@ -20,7 +36,7 @@ export function beforeAtmState(state){
 }
 
 export function beforeAtmView(view){
- const old=structuredClone(view);
+ const old=beforeBalloonView(view);
  if(old.protocolVersion===10){
   assert.equal(old.contentVersion,10);
   assert(old.rides.every(r=>r.content.variantId!=='independent.wooden-rise-return-train'&&r.trackProfile?.vehicle.kind!=='coupled-unbanked'),'Synthetic historical view cannot contain v2 rides.');

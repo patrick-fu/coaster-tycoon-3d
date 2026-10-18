@@ -22,6 +22,8 @@ import {buildFlumeApproach} from './art/flume-approach.js';
 import {flumeFrame} from './simulation/flume-native.js';
 import {createConsumableWaste} from './consumable-waste.js';
 import {createDetailedFacilityAssets} from './art/detailed-facility-assets.js';
+import {createHeldBalloonAssets,balloonInstanceRows} from './art/held-balloon-assets.js';
+export const HELD_BALLOON_PRESENTATION=Object.freeze({kind:'held-balloon',profileId:'detailed-held-balloon-v1'});
 
 function presentationFamily(p){
  if(p===null||typeof p!=='object'||Array.isArray(p))return null;
@@ -33,12 +35,14 @@ function presentationFamily(p){
   if(p.kind==='detailed-wooden-coaster'&&['detailed-wooden-candidate-v1','detailed-wooden-rise-return-v2'].includes(p.profileId))return 'wooden';
   if(p.kind==='detailed-carousel'&&p.profileId==='detailed-carousel-candidate-v1')return 'carousel';
   if(p.kind==='detailed-log-flume'&&p.profileId==='detailed-log-flume-candidate-v1')return 'flume';
+  if(p.kind==='held-balloon'&&p.profileId==='detailed-held-balloon-v1')return 'heldBalloon';
  }
  if(p.kind==='detailed-facility'&&keys.length===3){
   if(p.profileId==='detailed-consumable-stalls-v1'&&['food','drink'].includes(p.service))return p.service;
   if(p.profileId==='detailed-information-kiosk-v1'&&p.service==='information')return 'information';
   if(p.profileId==='detailed-gradual-restroom-v1'&&p.service==='restroom')return 'restroom';
   if(p.profileId==='detailed-atm-v1'&&p.service==='atm')return 'atm';
+  if(p.profileId==='detailed-balloon-stall-v1'&&p.service==='balloon')return 'balloon';
  }
  return null;
 }
@@ -71,7 +75,7 @@ export class ParkScene{
   });
   this.carouselAssets=createCarouselAssets(this.renderer);this.carousels=createCarousels(this.art,this.carouselAssets);this.scene.add(this.carousels.group);
   this.carouselAssets.readyPromise.then(()=>{if(this.disposed)return;if(this.carouselAssets.error){this.onAssetError?.('Carousel models could not load: '+this.carouselAssets.error);return;}if(this.packet)this.carousels.update(this.packet,this.elements??[]);if(this.scenery)this.setStatic(this.scenery,this.entry);});
-  this.flumeAssets=null;this.boats=null;this.foodAssets=null;this.drinkAssets=null;this.informationAssets=null;this.restroomAssets=null;this.atmAssets=null;this.detailedReflectionTarget=null;this.detailedLightingAttempted=false;
+  this.flumeAssets=null;this.boats=null;this.foodAssets=null;this.drinkAssets=null;this.informationAssets=null;this.restroomAssets=null;this.atmAssets=null;this.balloonAssets=null;this.heldBalloonAssets=null;this.detailedReflectionTarget=null;this.detailedLightingAttempted=false;
   this.litter=new THREE.InstancedMesh(this.art.geometry('litter-box',()=>new THREE.BoxGeometry(1,1,1)),this.art.material('litter',{color:'#fff0be',roughness:1}),10000);this.litter.count=0;this.scene.add(this.litter);
   this.waste=createConsumableWaste(this.scene);
   this.ghost=new THREE.Group();this.scene.add(this.ghost);this.ghostMaterial=new THREE.MeshBasicMaterial({color:'#80bd53',transparent:true,opacity:.48,depthWrite:false});this.selection=new THREE.Mesh(new THREE.BoxGeometry(4.08,.06,4.08),new THREE.MeshBasicMaterial({color:'#ffd35e',transparent:true,opacity:.5,depthWrite:false}));this.selection.visible=false;this.scene.add(this.selection);
@@ -181,10 +185,22 @@ export class ParkScene{
   }
   if(!this.atmPresentationReady())throw new Error('The cash machine model is unavailable. This park was not changed.');
  }
+ ensureHeldBalloonAssets(){
+  if(this.disposed||this.heldBalloonAssets)return;
+  const assets=createHeldBalloonAssets();this.heldBalloonAssets=assets;this.scene.add(assets.group);
+  assets.readyPromise.then(()=>{if(this.disposed||this.heldBalloonAssets!==assets)return;if(assets.error){this.onAssetError?.('Held balloon model could not load: '+assets.error);return;}if(this.packet)assets.update(this.packet);});
+ }
+ ensureBalloonAssets(){
+  this.ensureHeldBalloonAssets();
+  if(this.disposed||this.balloonAssets)return;
+  this.ensureDetailedReflection();
+  const assets=createDetailedFacilityAssets(this.renderer,{reflectionTexture:this.detailedReflectionTarget?.texture??null,balloon:true});this.balloonAssets=assets;
+  assets.readyPromise.then(()=>{if(this.disposed||this.balloonAssets!==assets)return;if(assets.error){this.onAssetError?.('Balloon stall model could not load: '+assets.error);return;}if(assets.ready&&this.packet&&this.scenery)this.setStatic(this.scenery,this.packet.entry);});
+ }
  presentationReady(p){
   const family=presentationFamily(p);if(this.disposed||family===null)return false;
   if(family==='procedural')return true;
-  const status=this[family+'Assets']?.status();return status?.ready===true&&!status.error&&!status.disposed;
+  const status=this[family+'Assets']?.status();return status?.ready===true&&!status.error&&!status.disposed&&(family!=='balloon'||this.presentationReady(HELD_BALLOON_PRESENTATION));
  }
  async qualifyPresentation(p){
   const family=presentationFamily(p);
@@ -195,7 +211,9 @@ export class ParkScene{
   else if(family==='information')this.ensureInformationAssets();
   else if(family==='restroom')this.ensureRestroomAssets();
   else if(family==='atm')this.ensureAtmAssets();
-  const owner=family+'Assets',assets=this[owner],label={wooden:'Wooden ride',carousel:'Carousel',flume:'Log Flume',food:'Burger',drink:'Soft drink',information:'Information kiosk',restroom:'Restroom',atm:'Cash machine'}[family];let timer;
+  else if(family==='balloon'){this.ensureBalloonAssets();await this.qualifyPresentation(HELD_BALLOON_PRESENTATION);}
+  else if(family==='heldBalloon')this.ensureHeldBalloonAssets();
+  const owner=family+'Assets',assets=this[owner],label={wooden:'Wooden ride',carousel:'Carousel',flume:'Log Flume',food:'Burger',drink:'Soft drink',information:'Information kiosk',restroom:'Restroom',atm:'Cash machine',balloon:'Balloon stall',heldBalloon:'Held balloon'}[family];let timer;
   const status=assets?.status();
   if(status&&!status.disposed&&!status.error&&!status.ready){
    try{await Promise.race([assets.readyPromise,new Promise((resolve,reject)=>{timer=setTimeout(()=>{assets.dispose();reject(new Error(label+' model did not load in time.'));},20000);})]);}
@@ -223,7 +241,7 @@ export class ParkScene{
     const facility=this.packet?.facilities.find(f=>f.id===e.facility);
     if(facility?.presentation.kind==='detailed-facility'){
      group.userData.detailedFacility=true;
-     const assets=facility.kind==='atm'?this.atmAssets:facility.kind==='information'?this.informationAssets:facility.restroom?this.restroomAssets:facility.kind==='food'&&facility.product?.id==='independent.burger'?this.foodAssets:facility.kind==='drink'&&facility.product?.id==='independent.soft-drink'?this.drinkAssets:null;
+     const assets=facility.kind==='balloon'?this.balloonAssets:facility.kind==='atm'?this.atmAssets:facility.kind==='information'?this.informationAssets:facility.restroom?this.restroomAssets:facility.kind==='food'&&facility.product?.id==='independent.burger'?this.foodAssets:facility.kind==='drink'&&facility.product?.id==='independent.soft-drink'?this.drinkAssets:null;
      if(assets?.ready){const model=assets.cloneFacility(facility);model.position.set(e.tile.x*4+2,e.height/8,e.tile.y*4+2);model.rotation.y=Math.PI/2-e.direction*Math.PI/2;group.add(model);}
     }else buildFacility(this.art,group,e,facility);
    }
@@ -246,9 +264,14 @@ export class ParkScene{
    const information=p.kind==='detailed-facility'&&p.profileId==='detailed-information-kiosk-v1'&&p.service==='information'&&facility.kind==='information'&&typeof facility.open==='boolean'&&facility.products&&Object.keys(facility.products).length===2&&['independent.map','independent.umbrella'].every(id=>Number.isSafeInteger(facility.products[id]?.price));
    const restroom=p.kind==='detailed-facility'&&p.profileId==='detailed-gradual-restroom-v1'&&p.service==='restroom'&&facility.kind==='restroom'&&facility.product===null&&typeof facility.open==='boolean'&&facility.restroom;
    const atm=p.kind==='detailed-facility'&&p.profileId==='detailed-atm-v1'&&p.service==='atm'&&facility.kind==='atm'&&typeof facility.open==='boolean'&&Number.isSafeInteger(facility.withdrawals)&&facility.withdrawals>=0&&Number.isSafeInteger(facility.cashDispensed)&&facility.cashDispensed===facility.withdrawals*500&&Number.isSafeInteger(facility.using)&&facility.using>=0&&Array.isArray(facility.guestIds)&&facility.guestIds.length===facility.using;
-   if(!legacy&&!detailed&&!information&&!restroom&&!atm)throw new Error('This facility has no supported presentation.');
+   const balloon=p.kind==='detailed-facility'&&p.profileId==='detailed-balloon-stall-v1'&&p.service==='balloon'&&facility.kind==='balloon'&&typeof facility.open==='boolean'&&facility.product?.id==='independent.balloon'&&Number.isSafeInteger(facility.balloonColour)&&facility.balloonColour>=0&&facility.balloonColour<=31;
+   if(!legacy&&!detailed&&!information&&!restroom&&!atm&&!balloon)throw new Error('This facility has no supported presentation.');
   }
+  balloonInstanceRows(packet);
   if(packet.coordinates.metresPerTile!==steelRules.motion.tileMetres)throw new Error('Unsupported park coordinate profile.');
+  if(packet.facilities.some(f=>f.kind==='balloon'))this.ensureBalloonAssets();
+  else if(packet.guestBalloons.length)this.ensureHeldBalloonAssets();
+  this.heldBalloonAssets?.update(packet);
   const frameOverview=!this.packet||this.overviewPending;this.packet=packet;this.art.packet=packet;if(frameOverview){this.overview();this.overviewPending=false;}
   if(packet.rides.some(ride=>ride.presentation.kind==='detailed-log-flume'))this.ensureFlumeAssets();
   if(packet.facilities.some(f=>f.presentation.kind==='detailed-facility'&&f.kind==='food'&&f.product?.id==='independent.burger'))this.ensureDetailedFacilityAssets('food');
@@ -270,7 +293,7 @@ export class ParkScene{
  pointer(event,height){const rect=this.renderer.domElement.getBoundingClientRect();this.mouse.set((event.clientX-rect.left)/rect.width*2-1,-(event.clientY-rect.top)/rect.height*2+1);this.ray.setFromCamera(this.mouse,this.camera);const p=this.ray.ray.intersectPlane(new THREE.Plane(new THREE.Vector3(0,1,0),-height/8),new THREE.Vector3());return p?{x:Math.floor(p.x/4),y:Math.floor(p.z/4)}:null;}
  pick(event){
   const rect=this.renderer.domElement.getBoundingClientRect();this.mouse.set((event.clientX-rect.left)/rect.width*2-1,-(event.clientY-rect.top)/rect.height*2+1);this.ray.setFromCamera(this.mouse,this.camera);
-  for(const hit of this.ray.intersectObjects([this.staticGroup,this.woodenVehicles.group,this.carousels.group,...(this.boats?[this.boats.group]:[]),...this.people.pickMeshes,...this.vehicles.pickMeshes],true)){
+  for(const hit of this.ray.intersectObjects([this.staticGroup,this.woodenVehicles.group,this.carousels.group,...(this.boats?[this.boats.group]:[]),...(this.heldBalloonAssets?[this.heldBalloonAssets.group]:[]),...this.people.pickMeshes,...this.vehicles.pickMeshes],true)){
    let visible=true;for(let object=hit.object;object;object=object.parent)if(!object.visible){visible=false;break;}if(!visible)continue;
    for(const dynamic of [this.people,this.vehicles])if(dynamic.pickMeshes.includes(hit.object))return dynamic.selections[hit.instanceId]??null;
    if(hit.object.userData.selections){const selected=hit.object.userData.selections[hit.instanceId];if(selected)return selected;continue;}
@@ -282,5 +305,5 @@ export class ParkScene{
  overview(){this.overviewActive=true;const mixed=!this.packet||this.packet.rides.some(r=>r.presentation.kind==='detailed-wooden-coaster')||this.packet.rides.length>=4;if(mixed){this.controls.target.set(80,4,72);this.camera.position.set(152,64,144);}else{this.controls.target.set(82,4,74);this.camera.position.set(154,64,150);}const availableWidth=this.availableWidth||this.container.clientWidth||960;this.camera.zoom=Math.max(this.controls.minZoom,1.18*Math.min(1,availableWidth/960));this.camera.updateProjectionMatrix();}
  requestOverview(){this.overviewPending=true;}
  close(){this.overviewActive=false;this.controls.target.set(87,4.5,50);this.camera.position.set(51,35,86);this.camera.zoom=2.6;this.camera.updateProjectionMatrix();}
- dispose(){this.disposed=true;this.renderer.setAnimationLoop(null);this.resizeObserver.disconnect();this.renderer.domElement.removeEventListener('pointerdown',this.onPointerDown,{capture:true});this.renderer.domElement.removeEventListener('pointermove',this.onPointerMove,{capture:true});this.renderer.domElement.removeEventListener('wheel',this.onWheelStart,{capture:true});this.renderer.domElement.removeEventListener('wheel',this.onWheel);this.controls.dispose();this.clearStatic();this.people.dispose();this.vehicles.dispose();this.woodenVehicles.dispose();this.carousels.dispose();this.boats?.dispose();this.litter.dispose();this.waste?.dispose();this.ghostMaterial.dispose();this.selection.geometry.dispose();this.selection.material.dispose();this.treeAssets.dispose();this.surfaceAssets.dispose();this.woodenAssets.dispose();this.carouselAssets.dispose();this.flumeAssets?.dispose();this.foodAssets?.dispose();this.drinkAssets?.dispose();this.informationAssets?.dispose();this.restroomAssets?.dispose();this.atmAssets?.dispose();this.detailedReflectionTarget?.dispose();this.detailedReflectionTarget=null;this.art.surfacePalette=null;this.art.dispose();this.renderer.dispose();}
+ dispose(){this.disposed=true;this.renderer.setAnimationLoop(null);this.resizeObserver.disconnect();this.renderer.domElement.removeEventListener('pointerdown',this.onPointerDown,{capture:true});this.renderer.domElement.removeEventListener('pointermove',this.onPointerMove,{capture:true});this.renderer.domElement.removeEventListener('wheel',this.onWheelStart,{capture:true});this.renderer.domElement.removeEventListener('wheel',this.onWheel);this.controls.dispose();this.clearStatic();this.people.dispose();this.vehicles.dispose();this.woodenVehicles.dispose();this.carousels.dispose();this.boats?.dispose();this.litter.dispose();this.waste?.dispose();this.ghostMaterial.dispose();this.selection.geometry.dispose();this.selection.material.dispose();this.treeAssets.dispose();this.surfaceAssets.dispose();this.woodenAssets.dispose();this.carouselAssets.dispose();this.flumeAssets?.dispose();this.foodAssets?.dispose();this.drinkAssets?.dispose();this.informationAssets?.dispose();this.restroomAssets?.dispose();this.atmAssets?.dispose();this.balloonAssets?.dispose();this.heldBalloonAssets?.dispose();this.detailedReflectionTarget?.dispose();this.detailedReflectionTarget=null;this.art.surfacePalette=null;this.art.dispose();this.renderer.dispose();}
 }

@@ -3,6 +3,7 @@ import {beforeRestroomState,beforeRestroomView} from './restroom-fixtures.mjs';
 
 export function beforeMerchandiseGuest(guest) {
  const old=structuredClone(guest);
+ if(Object.hasOwn(old,'balloonColour')){assert.equal(old.balloonColour,null);delete old.balloonColour;}
  if(Object.hasOwn(old,'withdrawn')){assert.equal(old.withdrawn,0);assert.equal(old.atmRefusal,null);delete old.withdrawn;delete old.atmRefusal;}
  assert.deepEqual(old.merchandise,{map:false,umbrellaColour:null});
  assert.equal(old.informationCounter,null);

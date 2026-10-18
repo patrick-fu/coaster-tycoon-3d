@@ -12,7 +12,7 @@ test('a malformed facility record returns a correlated load error and preserves 
  const e=new Engine(options,withInformationProfile(rules)),host=createHost(e),command={type:'set-paused',paused:true},q=e.quote(command),before=e.exportSave();assert(q.ok);
  for(const value of [null,0,'information',[],false]){
   const bad=e.snapshot();bad.facilities=[value];
-  const response=host({id:41,protocolVersion:10,request:{type:'load',payload:JSON.stringify(bad)}});
+  const response=host({id:41,protocolVersion:11,request:{type:'load',payload:JSON.stringify(bad)}});
   assert(response.ok);assert.equal(response.value.id,41);assert.equal(response.value.result.ok,false);assert.equal(response.value.result.error.code,'INVALID_SAVE');
   assert.equal(e.exportSave(),before);assert.equal(e.revision,q.value.revision);
  }

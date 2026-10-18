@@ -13,13 +13,15 @@ import {commerceProfileId,facilityProduct,facilityStockCost,productRule} from '.
 import {merchandiseProfileId,type InformationProducts} from '../content/merchandise.js';
 import {gradualRestroomProfile} from '../content/gradual-restroom.js';
 import {atmProfile} from '../content/atm.js';
+import {hasBalloonProfile} from '../content/balloons.js';
 
-export type FacilityKind='food'|'drink'|'restroom'|'information'|'atm';
+export type FacilityKind='food'|'drink'|'restroom'|'information'|'atm'|'balloon';
 type FacilityBase={id:number,instanceId:number,content:ContentIdentity,name:string,element:number,open:boolean};
-export type OrdinaryFacility=FacilityBase&{kind:Exclude<FacilityKind,'information'|'atm'>,price:number,income:number,sales:number};
+export type OrdinaryFacility=FacilityBase&{kind:Exclude<FacilityKind,'information'|'atm'|'balloon'>,price:number,income:number,sales:number};
 export type InformationFacility=FacilityBase&{kind:'information',products:InformationProducts,umbrellaColour:number};
 export type AtmFacility=FacilityBase&{kind:'atm',withdrawals:number};
-export type Facility=OrdinaryFacility|InformationFacility|AtmFacility;
+export type BalloonFacility=FacilityBase&{kind:'balloon',price:number,income:number,sales:number,balloonColour:number};
+export type Facility=OrdinaryFacility|InformationFacility|AtmFacility|BalloonFacility;
 export type FacilityElement={id:number,kind:'facility',facility:number,tile:Tile,height:number,direction:Direction};
 export type Staff={id:number,role:'mechanic'|'handyman',point:PathPoint,next:PathPoint|null,goal:PathPoint|null,progress:number,patrol:number[],job:{ride:number,kind:'repair'|'inspection'}|null,work:number,completed:number,cleanup:CleanupJob|null};
 export type ServiceRules={buildPrice:number,defaultPrice:number,maxPrice:number,foodStock:number,drinkStock:number,needThreshold:number,relief:number,initialBladder:number,serviceTicks:number,weekTicks:number,upkeepWeeks:number,mechanicMonthlyWage:number,handymanMonthlyWage:number,rideUpkeep:number,facilityUpkeep:number,interestPer10000:number,staffWalkTicks:number,repairTicks:number,inspectionTicks:number,inspectionInterval:number};
@@ -41,7 +43,7 @@ export function chooseFacility(g:Guest,s:State,rules:Rules,index:ServiceIndex,ro
   const motive=(f:Facility)=>f.kind==='food'?g.hunger:f.kind==='drink'?g.thirst:g.bladder;
   let choice:{facility:number,goal:PathPoint,need:number,distance:number}|null=null;
   for(const f of s.facilities){
-    if(f.kind==='information'||f.kind==='atm')continue;
+    if(f.kind==='information'||f.kind==='atm'||f.kind==='balloon')continue;
     if(!f.open||g.cash<f.price||(g.wrapper||g.held)&&f.kind!=='restroom'||motive(f)<rules.services.needThreshold)continue;
     const e=index.elements.get(f.element);if(e?.kind!=='facility')continue;const goal=facilityApproach(e);
     if(!publicPath(goal,index))continue;const distance=route.distance(g.point,goal,null);if(distance===null)continue;
@@ -55,6 +57,7 @@ export function recoverFacility(g:Guest,index:ServiceIndex,rules:Rules):boolean{
   if(insideRestroom(g))return f?.kind==='restroom'&&!!gradualRestroomProfile(f.content,rules)&&e?.kind==='facility';
   if(f?.kind==='information')return !!rules.merchandiseProfiles?.[merchandiseProfileId]&&f.open&&g.informationCounter!==null&&e?.kind==='facility'&&publicPath(facilityApproach(e,g.informationCounter),index);
   if(f?.kind==='atm')return !!atmProfile(f.content,rules)&&f.open&&e?.kind==='facility'&&publicPath(facilityApproach(e),index);
+  if(f?.kind==='balloon')return hasBalloonProfile(rules)&&g.balloonColour===null&&g.cash>=f.price&&f.open&&g.informationCounter===null&&e?.kind==='facility'&&publicPath(facilityApproach(e),index);
   return !!f&&f.open&&g.cash>=f.price&&(f.kind==='restroom'||!g.held)&&e?.kind==='facility'&&publicPath(facilityApproach(e),index);
 }
 export function insideRestroom(g:Guest):boolean{return g.phase==='using-restroom'||g.phase==='restroom-exit';}
@@ -92,7 +95,7 @@ export function stepRestroom(g:Guest,s:State,rules:Rules,index:ServiceIndex,rout
  const out=restroomExit(f,s,index,route);if(out)releaseRestroom(g,out);
 }
 export function buy(g:Guest,s:State,rules:Rules,index:ServiceIndex){
-  const f=index.facilities.get(g.facility!)!;ensure(f.kind!=='information'&&f.kind!=='atm','INVALID_CONTENT','Ordinary service cannot perform this facility operation.');const r=rules.services,product=facilityProduct(f.content,rules),stock=facilityStockCost(f,rules),price=f.price;
+  const f=index.facilities.get(g.facility!)!;ensure(f.kind!=='information'&&f.kind!=='atm'&&f.kind!=='balloon','INVALID_CONTENT','Ordinary service cannot perform this facility operation.');const r=rules.services,product=facilityProduct(f.content,rules),stock=facilityStockCost(f,rules),price=f.price;
   const cash=BigInt(s.cash)+BigInt(price)-BigInt(stock);
   ensure(cash>=BigInt(-Number.MAX_SAFE_INTEGER)&&cash<=BigInt(Number.MAX_SAFE_INTEGER)&&integer(s.ledger.shopSales+price)&&integer(s.ledger.stock+stock)&&integer(f.income+price)&&integer(f.sales+1)&&integer(g.spent+price),'CAPACITY','Shop accounting capacity exhausted.');
   g.cash-=price;g.spent+=price;s.cash=Number(cash);s.ledger.shopSales+=price;s.ledger.stock+=stock;f.income+=price;f.sales++;

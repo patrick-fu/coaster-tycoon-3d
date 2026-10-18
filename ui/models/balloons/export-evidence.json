@@ -1,0 +1,642 @@
+{
+  "scope": "Exact retained actual decoded export maps and report pins; no new local target execution.",
+  "groups": {
+    "balloon-stall": {
+      "glb": {
+        "bytes": 4860536,
+        "sha256": "4edbf276de77d5a173bebbf5b21fb3f111c00888dbfca84df42889a7ebfb871f"
+      },
+      "nodes": [
+        {
+          "extras": {
+            "authoredEdgeFinish": true
+          },
+          "mesh": 0,
+          "name": "Shutter_Closed_Curtain"
+        },
+        {
+          "children": [
+            0
+          ],
+          "name": "ClosedShutter"
+        },
+        {
+          "name": "CounterFront",
+          "translation": [
+            0,
+            1,
+            1.5
+          ]
+        },
+        {
+          "mesh": 1,
+          "name": "Helium_Hose"
+        },
+        {
+          "mesh": 2,
+          "name": "Interior_Metal"
+        },
+        {
+          "name": "MenuPanel",
+          "translation": [
+            -1.100000023841858,
+            1.75,
+            1.659999966621399
+          ]
+        },
+        {
+          "extras": {
+            "authoredEdgeFinish": true
+          },
+          "mesh": 3,
+          "name": "Shutter_Rolled_Coil"
+        },
+        {
+          "children": [
+            6
+          ],
+          "name": "OpenShutter"
+        },
+        {
+          "name": "ProductSign",
+          "translation": [
+            0,
+            2.4200000762939453,
+            1.649999976158142
+          ]
+        },
+        {
+          "mesh": 4,
+          "name": "Roof_Main"
+        },
+        {
+          "mesh": 5,
+          "name": "Static_GroundRoot_brass"
+        },
+        {
+          "mesh": 6,
+          "name": "Static_GroundRoot_cream"
+        },
+        {
+          "extras": {
+            "authoredEdgeFinish": true
+          },
+          "mesh": 7,
+          "name": "Static_GroundRoot_paint_red"
+        },
+        {
+          "mesh": 8,
+          "name": "Static_GroundRoot_paint_teal"
+        },
+        {
+          "mesh": 9,
+          "name": "Static_GroundRoot_timber"
+        },
+        {
+          "children": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "name": "GroundRoot"
+        }
+      ],
+      "anchors": {
+        "GroundRoot": {
+          "children": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "name": "GroundRoot"
+        },
+        "CounterFront": {
+          "name": "CounterFront",
+          "translation": [
+            0,
+            1,
+            1.5
+          ]
+        },
+        "ProductSign": {
+          "name": "ProductSign",
+          "translation": [
+            0,
+            2.4200000762939453,
+            1.649999976158142
+          ]
+        },
+        "MenuPanel": {
+          "name": "MenuPanel",
+          "translation": [
+            -1.100000023841858,
+            1.75,
+            1.659999966621399
+          ]
+        },
+        "OpenShutter": {
+          "children": [
+            6
+          ],
+          "name": "OpenShutter"
+        },
+        "ClosedShutter": {
+          "children": [
+            0
+          ],
+          "name": "ClosedShutter"
+        }
+      },
+      "primitives": [
+        {
+          "mesh": "Shutter_Closed_Curtain",
+          "material": 0,
+          "triangles": 96,
+          "decodedSHA256": "75cafe98902d4b2501acca95183c2b190422d7f5dce09b94a17df7b38a3b4178"
+        },
+        {
+          "mesh": "Helium_Hose",
+          "material": 1,
+          "triangles": 24,
+          "decodedSHA256": "f51277125bbeb28d882e9191b187bdc692c4087ad769ca8a6a0aa5ec5718787e"
+        },
+        {
+          "mesh": "Interior_Metal",
+          "material": 0,
+          "triangles": 252,
+          "decodedSHA256": "38a810c3fd039ffaba77ba47f9c78dfc034fda6e11b252ad0aa3e09061903bf2"
+        },
+        {
+          "mesh": "Shutter_Rolled_Coil",
+          "material": 0,
+          "triangles": 72,
+          "decodedSHA256": "bfea24c41980e0f893f96f77d90107a994969c9955f803accefa8cc34cac0855"
+        },
+        {
+          "mesh": "Roof_Main",
+          "material": 2,
+          "triangles": 10,
+          "decodedSHA256": "3e7323170f3b33614c59b18bb1e8be3d9b74daafc299ba8fa6c5e84c2c68b6eb"
+        },
+        {
+          "mesh": "Plinth_Corners",
+          "material": 3,
+          "triangles": 1088,
+          "decodedSHA256": "5cee9794c0b338690ee38b543b632893f74d45ba74fb9258da414fe27ed029e8"
+        },
+        {
+          "mesh": "Cabin_Walls",
+          "material": 4,
+          "triangles": 1266,
+          "decodedSHA256": "9899b1bf1166dbbb67127dc1adb94bc0ebbc467d927c702fbfca09424dfed16f"
+        },
+        {
+          "mesh": "Spool_Red",
+          "material": 5,
+          "triangles": 636,
+          "decodedSHA256": "9f4e11eef316182d7d2f28ac5e451e793e648bce6713aa734b05141558f5c0a3"
+        },
+        {
+          "mesh": "Plinth_Base",
+          "material": 6,
+          "triangles": 1236,
+          "decodedSHA256": "db735928173e7815ee1bd03374f5bff9044f0f8ad5e1d4999ee78f3e191d93fc"
+        },
+        {
+          "mesh": "Service_Counter",
+          "material": 7,
+          "triangles": 444,
+          "decodedSHA256": "4ffa1051ba2c529dc6f8771752ffc1c40d1b61ea5e65a866b304762bb219b4ce"
+        }
+      ],
+      "materials": {
+        "metal": {
+          "doubleSided": true,
+          "name": "metal",
+          "normalTexture": {
+            "scale": 0.4000000059604645,
+            "image": {
+              "name": "Metal049A_1K-PNG_NormalGL",
+              "bytes": 554223,
+              "sha256": "2477e4e6911cfec3f67e0ef09209f1f7b7a6e573bef90147414a444fd10b3b47",
+              "width": 512,
+              "height": 512
+            },
+            "sampler": {
+              "magFilter": 9729,
+              "minFilter": 9987
+            }
+          },
+          "pbrMetallicRoughness": {
+            "baseColorTexture": {
+              "image": {
+                "name": "Metal049A_1K-PNG_Color",
+                "bytes": 258411,
+                "sha256": "d07f66e233c8d0e1efa8cf0b795cea1ba505f0018c0588241dc1fa3f9c5912ba",
+                "width": 512,
+                "height": 512
+              },
+              "sampler": {
+                "magFilter": 9729,
+                "minFilter": 9987
+              }
+            },
+            "metallicRoughnessTexture": {
+              "image": {
+                "name": "Metal049A_1K-PNG_Metalness-Metal049A_1K-PNG_Roughness",
+                "bytes": 150855,
+                "sha256": "61dc93e29590020dd590248df65630cc00cdd4b0e32499e2dd5700a859af60cd",
+                "width": 512,
+                "height": 512
+              },
+              "sampler": {
+                "magFilter": 9729,
+                "minFilter": 9987
+              }
+            }
+          }
+        },
+        "rubber": {
+          "doubleSided": true,
+          "name": "rubber",
+          "pbrMetallicRoughness": {
+            "baseColorFactor": [
+              0.017999999225139618,
+              0.02199999988079071,
+              0.01899999938905239,
+              1
+            ],
+            "metallicFactor": 0,
+            "roughnessFactor": 0.8700000047683716
+          }
+        },
+        "roof": {
+          "doubleSided": true,
+          "name": "roof",
+          "normalTexture": {
+            "scale": 0.4000000059604645,
+            "image": {
+              "name": "RoofingTiles013A_1K-PNG_NormalGL",
+              "bytes": 1121002,
+              "sha256": "3bec02e1b858b3b0526ece04591aa631ef24da7dcb61103fabe3f435c17a6c82",
+              "width": 512,
+              "height": 512
+            },
+            "sampler": {
+              "magFilter": 9729,
+              "minFilter": 9987
+            }
+          },
+          "pbrMetallicRoughness": {
+            "baseColorTexture": {
+              "image": {
+                "name": "RoofingTiles013A_1K-PNG_Color",
+                "bytes": 277650,
+                "sha256": "da4e1f3f15fcc89f4ca2cbb53c6e6d082380e8d7f4eab7ef4764ecdd853c323f",
+                "width": 512,
+                "height": 512
+              },
+              "sampler": {
+                "magFilter": 9729,
+                "minFilter": 9987
+              }
+            },
+            "metallicFactor": 0,
+            "metallicRoughnessTexture": {
+              "image": {
+                "name": "RoofingTiles013A_1K-PNG_Roughness",
+                "bytes": 236058,
+                "sha256": "8ae0f52dbedbf6a8fc8f9bfc2cd469f1bb9472304509a3cd3315ece6efdb53c8",
+                "width": 512,
+                "height": 512
+              },
+              "sampler": {
+                "magFilter": 9729,
+                "minFilter": 9987
+              }
+            }
+          }
+        },
+        "brass": {
+          "doubleSided": true,
+          "name": "brass",
+          "pbrMetallicRoughness": {
+            "baseColorFactor": [
+              0.5799999833106995,
+              0.36000001430511475,
+              0.07500000298023224,
+              1
+            ],
+            "metallicFactor": 0.800000011920929,
+            "roughnessFactor": 0.2800000011920929
+          }
+        },
+        "cream": {
+          "doubleSided": true,
+          "name": "cream",
+          "pbrMetallicRoughness": {
+            "baseColorFactor": [
+              0.8500000238418579,
+              0.7300000190734863,
+              0.4699999988079071,
+              1
+            ],
+            "metallicFactor": 0,
+            "roughnessFactor": 0.550000011920929
+          }
+        },
+        "paint_red": {
+          "doubleSided": true,
+          "name": "paint_red",
+          "pbrMetallicRoughness": {
+            "baseColorFactor": [
+              0.46000000834465027,
+              0.026000000536441803,
+              0.02199999988079071,
+              1
+            ],
+            "metallicFactor": 0.05000000074505806,
+            "roughnessFactor": 0.3400000035762787
+          }
+        },
+        "paint_teal": {
+          "doubleSided": true,
+          "name": "paint_teal",
+          "pbrMetallicRoughness": {
+            "baseColorFactor": [
+              0.02500000037252903,
+              0.2199999988079071,
+              0.1899999976158142,
+              1
+            ],
+            "metallicFactor": 0.05000000074505806,
+            "roughnessFactor": 0.41999998688697815
+          }
+        },
+        "timber": {
+          "doubleSided": true,
+          "name": "timber",
+          "normalTexture": {
+            "scale": 0.4000000059604645,
+            "image": {
+              "name": "Wood096_1K-PNG_NormalGL",
+              "bytes": 1397135,
+              "sha256": "e141194fae7a455d19778a63a1bc5cafdc9fe17dfb823ca972415c5c32457db8",
+              "width": 512,
+              "height": 512
+            },
+            "sampler": {
+              "magFilter": 9729,
+              "minFilter": 9987
+            }
+          },
+          "pbrMetallicRoughness": {
+            "baseColorTexture": {
+              "image": {
+                "name": "Wood096_1K-PNG_Color",
+                "bytes": 392332,
+                "sha256": "d057034d60a384a3ea89162f4d2ad415a4cc238eaa8da39870c2c6981773487d",
+                "width": 512,
+                "height": 512
+              },
+              "sampler": {
+                "magFilter": 9729,
+                "minFilter": 9987
+              }
+            },
+            "metallicFactor": 0,
+            "metallicRoughnessTexture": {
+              "image": {
+                "name": "Wood096_1K-PNG_Roughness",
+                "bytes": 236358,
+                "sha256": "bd2111e6dafb356a6f81b3b1fccaa2f239dd6145700a4ff3e7c9fc1a32afd3c1",
+                "width": 512,
+                "height": 512
+              },
+              "sampler": {
+                "magFilter": 9729,
+                "minFilter": 9987
+              }
+            }
+          }
+        }
+      },
+      "images": [
+        {
+          "name": "Metal049A_1K-PNG_Color",
+          "bytes": 258411,
+          "sha256": "d07f66e233c8d0e1efa8cf0b795cea1ba505f0018c0588241dc1fa3f9c5912ba",
+          "width": 512,
+          "height": 512
+        },
+        {
+          "name": "Metal049A_1K-PNG_Metalness-Metal049A_1K-PNG_Roughness",
+          "bytes": 150855,
+          "sha256": "61dc93e29590020dd590248df65630cc00cdd4b0e32499e2dd5700a859af60cd",
+          "width": 512,
+          "height": 512
+        },
+        {
+          "name": "Metal049A_1K-PNG_NormalGL",
+          "bytes": 554223,
+          "sha256": "2477e4e6911cfec3f67e0ef09209f1f7b7a6e573bef90147414a444fd10b3b47",
+          "width": 512,
+          "height": 512
+        },
+        {
+          "name": "RoofingTiles013A_1K-PNG_Color",
+          "bytes": 277650,
+          "sha256": "da4e1f3f15fcc89f4ca2cbb53c6e6d082380e8d7f4eab7ef4764ecdd853c323f",
+          "width": 512,
+          "height": 512
+        },
+        {
+          "name": "RoofingTiles013A_1K-PNG_NormalGL",
+          "bytes": 1121002,
+          "sha256": "3bec02e1b858b3b0526ece04591aa631ef24da7dcb61103fabe3f435c17a6c82",
+          "width": 512,
+          "height": 512
+        },
+        {
+          "name": "RoofingTiles013A_1K-PNG_Roughness",
+          "bytes": 236058,
+          "sha256": "8ae0f52dbedbf6a8fc8f9bfc2cd469f1bb9472304509a3cd3315ece6efdb53c8",
+          "width": 512,
+          "height": 512
+        },
+        {
+          "name": "Wood096_1K-PNG_Color",
+          "bytes": 392332,
+          "sha256": "d057034d60a384a3ea89162f4d2ad415a4cc238eaa8da39870c2c6981773487d",
+          "width": 512,
+          "height": 512
+        },
+        {
+          "name": "Wood096_1K-PNG_NormalGL",
+          "bytes": 1397135,
+          "sha256": "e141194fae7a455d19778a63a1bc5cafdc9fe17dfb823ca972415c5c32457db8",
+          "width": 512,
+          "height": 512
+        },
+        {
+          "name": "Wood096_1K-PNG_Roughness",
+          "bytes": 236358,
+          "sha256": "bd2111e6dafb356a6f81b3b1fccaa2f239dd6145700a4ff3e7c9fc1a32afd3c1",
+          "width": 512,
+          "height": 512
+        }
+      ],
+      "triangles": 5124,
+      "extensionsUsed": [],
+      "drawGroupsAllStates": 10,
+      "visibleDrawGroups": {
+        "open": 9,
+        "closed": 9,
+        "default": 10
+      },
+      "uniqueMaterials": 8,
+      "boundsThree": {
+        "min": [
+          -1.5,
+          0.0,
+          -1.2999999523162842
+        ],
+        "max": [
+          1.5,
+          3.747999906539917,
+          1.75
+        ]
+      }
+    },
+    "held-balloon": {
+      "glb": {
+        "bytes": 22176,
+        "sha256": "6b47c07c965a3dccfd87855804a3755d4b59793a355d329a81327b2c6a686056"
+      },
+      "nodes": [
+        {
+          "extras": {
+            "authoredEdgeFinish": true
+          },
+          "mesh": 0,
+          "name": "BalloonSkinMesh"
+        },
+        {
+          "extras": {
+            "authoredEdgeFinish": true
+          },
+          "mesh": 1,
+          "name": "BalloonStringMesh"
+        },
+        {
+          "name": "HandAnchor"
+        },
+        {
+          "children": [
+            0,
+            1,
+            2
+          ],
+          "name": "GroundRoot"
+        }
+      ],
+      "anchors": {
+        "GroundRoot": {
+          "children": [
+            0,
+            1,
+            2
+          ],
+          "name": "GroundRoot"
+        },
+        "HandAnchor": {
+          "name": "HandAnchor"
+        }
+      },
+      "primitives": [
+        {
+          "mesh": "BalloonSkinMesh",
+          "material": 0,
+          "triangles": 540,
+          "decodedSHA256": "e55d163cf0ac1346b9cfad25ae60a3caea557a4bd56f78ccc75ed30dd2e45893"
+        },
+        {
+          "mesh": "BalloonStringMesh",
+          "material": 1,
+          "triangles": 240,
+          "decodedSHA256": "03e7fc251565e9ce822dbc6dd8e6d835f0abf0640cd7cf169fbbd3c2fec2c96b"
+        }
+      ],
+      "materials": {
+        "BalloonSkin": {
+          "doubleSided": true,
+          "name": "BalloonSkin",
+          "pbrMetallicRoughness": {
+            "metallicFactor": 0,
+            "roughnessFactor": 0.30000001192092896
+          }
+        },
+        "BalloonString": {
+          "doubleSided": true,
+          "name": "BalloonString",
+          "pbrMetallicRoughness": {
+            "baseColorFactor": [
+              0.8799999952316284,
+              0.8600000143051147,
+              0.8199999928474426,
+              1
+            ],
+            "metallicFactor": 0,
+            "roughnessFactor": 0.8500000238418579
+          }
+        }
+      },
+      "images": [],
+      "triangles": 780,
+      "extensionsUsed": [],
+      "drawGroupsAllStates": 2,
+      "visibleDrawGroups": {
+        "open": 2,
+        "closed": 2,
+        "default": 2
+      },
+      "uniqueMaterials": 2,
+      "boundsThree": {
+        "min": [
+          -0.20999999344348907,
+          0.0,
+          -0.2068096250295639
+        ],
+        "max": [
+          0.20999999344348907,
+          1.2799999713897705,
+          0.2068096250295639
+        ]
+      }
+    }
+  },
+  "rootFiniteOutcome": {
+    "bytes": 7784,
+    "sha256": "b2c274745adc5a9b40d084454ad1a362577b370d1ed037630c3e65856f44cd56"
+  }
+}

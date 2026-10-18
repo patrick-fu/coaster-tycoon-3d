@@ -13,13 +13,14 @@ import {buyInformation,chooseInformation} from './merchandise.js';
 import {random} from './random.js';
 import {gradualRestroomProfile} from '../content/gradual-restroom.js';
 import {admitAtm,chooseAtm,stepAtm} from './atm.js';
+import {buyBalloon,chooseBalloon} from './balloons.js';
 
 export type HeldItem=null|{readonly kind:'consumable',readonly productId:ProductId,readonly remaining:number}|{readonly kind:'container',readonly containerId:ContainerId,readonly sinceTick:number};
 
 export type PathPoint={readonly x:number,readonly y:number,readonly z:number};
 export type GuestRules={spawnTicks:number,walkTicks:number,decisionTicks:number,needTicks:number,queueSlotsPerTile:number,patienceTicks:number,rideCooldownTicks:number,defaultRidePrice:number,maxRidePrice:number,cashMin:number,cashMax:number,fareMin:number,fareMax:number,forceMin:number,forceMax:number,initialHunger:number,initialThirst:number,initialHappiness:number,initialEnergy:number,needGrowth:number,rideHappiness:number,rideNausea:number};
 export type Ledger={rideSales:number,shopSales:number,stock:number,wages:number,upkeep:number,interest:number};
-export type Guest={id:number,held:HeldItem,merchandise:GuestMerchandise,informationCounter:number|null,navigationRide:number|null,amenity:number|null,restProgress:number,wrapper:boolean,wrapperTick:number,facility:number|null,serviceProgress:number,bladder:number,point:PathPoint,phase:'walking'|'queued'|'riding'|'stranded'|'leaving'|'buying'|'resting'|'using-restroom'|'restroom-exit'|'withdrawing',goal:PathPoint|null,next:PathPoint|null,walkProgress:number,destination:number|null,entrance:number|null,exit:number|null,queueRide:number|null,seat:{ride:number,slot:number}|null,initialCash:number,cash:number,spent:number,withdrawn:number,atmRefusal:{instanceId:number,tick:number}|null,fareLimit:number,forceTolerance:number,hunger:number,thirst:number,nausea:number,happiness:number,energy:number,queuedAt:number,lastRide:number|null,lastRideTick:number,ridesTaken:number,thought:'none'|'not-enough-cash'|'too-intense'|'path-lost'|'ride-closed'|'queue-too-long'|'price-changed'|'payment-blocked'|'leaving'};
+export type Guest={id:number,held:HeldItem,merchandise:GuestMerchandise,balloonColour:number|null,informationCounter:number|null,navigationRide:number|null,amenity:number|null,restProgress:number,wrapper:boolean,wrapperTick:number,facility:number|null,serviceProgress:number,bladder:number,point:PathPoint,phase:'walking'|'queued'|'riding'|'stranded'|'leaving'|'buying'|'resting'|'using-restroom'|'restroom-exit'|'withdrawing',goal:PathPoint|null,next:PathPoint|null,walkProgress:number,destination:number|null,entrance:number|null,exit:number|null,queueRide:number|null,seat:{ride:number,slot:number}|null,initialCash:number,cash:number,spent:number,withdrawn:number,atmRefusal:{instanceId:number,tick:number}|null,fareLimit:number,forceTolerance:number,hunger:number,thirst:number,nausea:number,happiness:number,energy:number,queuedAt:number,lastRide:number|null,lastRideTick:number,ridesTaken:number,thought:'none'|'not-enough-cash'|'too-intense'|'path-lost'|'ride-closed'|'queue-too-long'|'price-changed'|'payment-blocked'|'leaving'};
 export type PeopleState={entry:PathPoint|null,open:boolean,guests:Guest[],departedSpent:number,departedWithdrawn:number};
 type Access={entrance:Portal,exit:Portal,front:PathPoint,out:PathPoint,body:PathPoint[]};
 export type PeopleIndex={elements:Map<number,Element>,paths:Map<string,Path>,rides:Map<number,Ride>,trains:Map<number,Train>,carouselSessions:Map<number,CarouselSession>,boats:Map<number,Boat>,guests:Map<number,Guest>,accessCache:Map<number,{stamp:string,value:Access|null}>};
@@ -125,6 +126,8 @@ function choose(guest:Guest,state:State,rules:Rules,index:ServiceIndex,route:Rou
   if(atm){guest.navigationRide=null;guest.facility=atm.facility;guest.informationCounter=null;guest.destination=null;guest.entrance=null;guest.exit=null;guest.thought='none';navigate(guest,atm.goal);return;}
   const information=includeMerchandise?chooseInformation(guest,state,rules,index,route):null;
   if(information){guest.navigationRide=null;guest.facility=information.facility;guest.informationCounter=information.counter;guest.destination=null;guest.entrance=null;guest.exit=null;guest.thought='none';navigate(guest,information.goal);return;}
+  const balloon=includeMerchandise?chooseBalloon(guest,state,rules,index,route):null;
+  if(balloon){guest.navigationRide=null;guest.facility=balloon.facility;guest.informationCounter=null;guest.destination=null;guest.entrance=null;guest.exit=null;guest.thought='none';navigate(guest,balloon.goal);return;}
   let choice:{ride:Ride,portals:NonNullable<ReturnType<typeof access>>,distance:number}|undefined;
   for(const ride of state.rides){
     if(!accepts(guest,ride,index,rules)||guest.lastRide===ride.id&&state.tick-guest.lastRideTick<rules.guests.rideCooldownTicks)continue;
@@ -144,7 +147,7 @@ export function stepPeople(state:State,rules:Rules,index:ServiceIndex,route:Rout
   const entry=state.people.entry;
   if(state.people.open&&entry&&state.tick%rules.guests.spawnTicks===0&&index.paths.get(key(entry))?.queueFor===null&&sharedCount(state)<LIMITS.sharedEntities&&integer(state.nextEntity+1)){
     const cash=random(state,rules.guests.cashMin,rules.guests.cashMax);
-    const guest:Guest={id:state.nextEntity++,held:null,merchandise:{map:false,umbrellaColour:null},informationCounter:null,navigationRide:null,amenity:null,restProgress:0,wrapper:false,wrapperTick:0,facility:null,serviceProgress:0,bladder:rules.services.initialBladder,point:{...entry},phase:'walking',goal:null,next:null,walkProgress:0,destination:null,entrance:null,exit:null,queueRide:null,seat:null,initialCash:cash,cash,spent:0,withdrawn:0,atmRefusal:null,fareLimit:random(state,rules.guests.fareMin,rules.guests.fareMax),forceTolerance:random(state,rules.guests.forceMin,rules.guests.forceMax),hunger:rules.guests.initialHunger,thirst:rules.guests.initialThirst,nausea:0,happiness:rules.guests.initialHappiness,energy:rules.guests.initialEnergy,queuedAt:0,lastRide:null,lastRideTick:0,ridesTaken:0,thought:'none'};
+    const guest:Guest={id:state.nextEntity++,held:null,merchandise:{map:false,umbrellaColour:null},balloonColour:null,informationCounter:null,navigationRide:null,amenity:null,restProgress:0,wrapper:false,wrapperTick:0,facility:null,serviceProgress:0,bladder:rules.services.initialBladder,point:{...entry},phase:'walking',goal:null,next:null,walkProgress:0,destination:null,entrance:null,exit:null,queueRide:null,seat:null,initialCash:cash,cash,spent:0,withdrawn:0,atmRefusal:null,fareLimit:random(state,rules.guests.fareMin,rules.guests.fareMax),forceTolerance:random(state,rules.guests.forceMin,rules.guests.forceMax),hunger:rules.guests.initialHunger,thirst:rules.guests.initialThirst,nausea:0,happiness:rules.guests.initialHappiness,energy:rules.guests.initialEnergy,queuedAt:0,lastRide:null,lastRideTick:0,ridesTaken:0,thought:'none'};
     state.people.guests.push(guest);index.guests.set(guest.id,guest);
   }
   const departing:number[]=[];
@@ -160,6 +163,7 @@ export function stepPeople(state:State,rules:Rules,index:ServiceIndex,route:Rout
     if(guest.phase==='withdrawing'){stepAtm(guest,rules,index);continue;}
     if(guest.phase==='buying'){guest.serviceProgress++;if(guest.serviceProgress>=rules.services.serviceTicks){
       if(index.facilities.get(guest.facility!)?.kind==='information'){const purchase=buyInformation(guest,state,rules,index);if(purchase==='refused')choose(guest,state,rules,index,route,false);else if(purchase==='unavailable')recover(guest,state,index,route,'path-lost');}
+      else if(index.facilities.get(guest.facility!)?.kind==='balloon'){const purchase=buyBalloon(guest,state,rules,index);if(purchase==='refused')choose(guest,state,rules,index,route,false);else if(purchase==='unavailable')recover(guest,state,index,route,'path-lost');}
       else buy(guest,state,rules,index);
     }continue;}
     if(guest.phase==='queued'){

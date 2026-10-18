@@ -1,0 +1,209 @@
+{
+  "status": "ROOT_ACCEPTED_FINITE_BALLOON_CPU_AND_EXACT_RECEIVER_ONLY",
+  "acceptedUTC": "2026-10-18T01:20:04.305498+00:00",
+  "sourceRoot": "/workspace/coaster-gradual-restroom/balloon-build-root-r2/source",
+  "manifests": {
+    "source-manifest.json": {
+      "path": "/workspace/coaster-gradual-restroom/balloon-build-root-r2/source-manifest.json",
+      "bytes": 38900,
+      "sha256": "60dc966fa05e51e69aaf0452fd867d1820cac16e20c3d72e86e2e3f3803c9341",
+      "count": 253
+    },
+    "compiled-manifest.json": {
+      "path": "/workspace/coaster-gradual-restroom/balloon-build-root-r2/compiled-manifest.json",
+      "bytes": 13868,
+      "sha256": "300f0f33f2e6cf50578a914790a343401c102da8279521e3baee6f7c2ccf7013",
+      "count": 96
+    },
+    "web-manifest.json": {
+      "path": "/workspace/coaster-gradual-restroom/balloon-build-root-r2/web-manifest.json",
+      "bytes": 32097,
+      "sha256": "b802821319a0789a396f3a48e3847049b733a07b57c5e3062ec7596950341afd",
+      "count": 215
+    }
+  },
+  "cpuQualification": {
+    "path": "/workspace/coaster-gradual-restroom/balloon-build-root-r2/evidence/after.json",
+    "bytes": 980,
+    "sha256": "46ca0b730b8924b3c1ada98f17c6053f6e4b7b8092371ea3639c26fa6ba8e552"
+  },
+  "cpuTerminal": {
+    "path": "/workspace/coaster-gradual-restroom/balloon-build-root-r2/evidence/terminal.json",
+    "bytes": 33517,
+    "sha256": "c79a076830c29f5031a6f69672f4fa7a75e6c39b3007f44f35cb10bc64035b67"
+  },
+  "factoryTerminal": {
+    "path": "/workspace/coaster-gradual-restroom/balloon-build-root-r2/evidence/prewarm-terminal.json",
+    "bytes": 305210,
+    "sha256": "f589ac7c0f94a72661909fbe0b63b28e3ef6492ecd660326f8d52aa6ae7f4d30"
+  },
+  "factorySave": {
+    "path": "/workspace/coaster-gradual-restroom/balloon-build-root-r2/evidence/classic-factory4800.save.json",
+    "bytes": 860845,
+    "sha256": "6dbd8ff03f3cc7fb9143a3a12c286bb1365c9c9726aec7bd3648d249decd0378",
+    "browserPolicy": "HASH_ONLY_NOT_INSTALLED_IN_NATIVE_BROWSER"
+  },
+  "actualCustody": {
+    "logicalOriginals": 286,
+    "uniqueObjects": 165,
+    "logicalBytes": 14952325,
+    "retention": {
+      "bytes": 49531,
+      "sha256": "b5162d183069557544ff9108d4de28f3748a0ec4cc061a3869bba9d2ca309edb"
+    },
+    "wire": {
+      "bytes": 7595144,
+      "sha256": "d58fea5793a9f22b6547109bc17df1de661ebae787983fccd72fd4e3eaba6e53"
+    },
+    "job": {
+      "bytes": 21981,
+      "sha256": "18660eea70076e309c9e9e393f25d7e2b20dca7e5a52daddb935c5957f5f1f88"
+    },
+    "localTerminal": {
+      "bytes": 1005,
+      "sha256": "235b6e58241fc56e52d81cec41a76c25829e808e4c053e1eb4e667c0b28104ba"
+    }
+  },
+  "independentReview": {
+    "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/reviewer-receipts/balloon-build-actual-sol-high-r1.md",
+    "bytes": 6355,
+    "sha256": "a2c0159167e540ea9b4bceff1e7882249f664be14d293b2f146144f24d7c4927"
+  },
+  "rootActualDataAudit": {
+    "bytes": 3704,
+    "sha256": "9e3b72abe14eabe408ac8961138ef1b63429f04dcfdc2f70b4a3c60a165b34b5"
+  },
+  "canonical": {
+    "tests": 464,
+    "suites": 0,
+    "pass": 464,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "canonicalFiles": 45,
+  "uiSyntaxFiles": 34,
+  "actualStageCount": 38,
+  "stageOutcomes": [
+    {
+      "label": "compile",
+      "pid": 327699,
+      "naturalExit": 0,
+      "seconds": 0.3439901700039627,
+      "cap": 90
+    },
+    {
+      "label": "build-web",
+      "pid": 328065,
+      "naturalExit": 0,
+      "seconds": 0.2859781130027841,
+      "cap": 120
+    },
+    {
+      "label": "canonical-all",
+      "pid": 328076,
+      "naturalExit": 0,
+      "seconds": 156.39059680199716,
+      "cap": 600
+    },
+    {
+      "label": "classic-factory4800",
+      "pid": 329979,
+      "naturalExit": 0,
+      "seconds": 21.497104001995467,
+      "cap": 240
+    }
+  ],
+  "uiSyntaxGroupSeconds": 13.844128487995476,
+  "workSeconds": 194.53268588000356,
+  "actualChangedCompiled": 27,
+  "finiteCompiledAllowances": 28,
+  "exactBaselineOutputsOutsideAllowances": 68,
+  "webBytes": 111093912,
+  "factorySummary": {
+    "tick": 4800,
+    "saveVersion": 18,
+    "contentVersion": 11,
+    "elements": 254,
+    "scenery": 78,
+    "amenities": 8,
+    "paths": 64,
+    "rideInstances": 5,
+    "rideFamilies": 4,
+    "openRides": 5,
+    "guests": 30,
+    "guestPhases": {
+      "queued": 7,
+      "riding": 17,
+      "walking": 6
+    },
+    "factoryCommandCostUnits": 18678,
+    "factoryCommandCostDisplay": "$1,867.80",
+    "normalQuoteCount": 287,
+    "normalExecuteCount": 287,
+    "rulesSHA256": "4107b4be369e7f4e9e5fdefe882657952d20d5b901246c7b7024b516fba41e4b",
+    "saveBytes": 860845,
+    "saveSHA256": "6dbd8ff03f3cc7fb9143a3a12c286bb1365c9c9726aec7bd3648d249decd0378",
+    "receiver": {
+      "ok": true
+    },
+    "woodId": 0,
+    "woodTrackPieces": 26,
+    "woodCars": 2,
+    "woodOperating": {
+      "ok": true,
+      "value": {
+        "circuit": true,
+        "stations": [
+          {
+            "id": 1,
+            "track": [
+              1,
+              2,
+              3,
+              4
+            ]
+          }
+        ],
+        "issues": []
+      }
+    },
+    "woodAccess": {
+      "ok": true,
+      "value": {
+        "entrances": [
+          27
+        ],
+        "exits": [
+          28
+        ]
+      }
+    }
+  },
+  "actualBalloonVendor": {
+    "id": 9,
+    "instanceId": 10,
+    "content": {
+      "familyId": "independent.balloon-facility",
+      "variantId": "independent.timber-balloon-stall",
+      "modeId": "independent.retail"
+    },
+    "name": "Balloons",
+    "kind": "balloon",
+    "element": 254,
+    "open": true,
+    "price": 9,
+    "income": 0,
+    "sales": 0,
+    "balloonColour": 11
+  },
+  "scope": "Finite current compile/34UI syntax/web/full45canonical464tests/real-GLB loader and ordinary Classic4800 exact independent CPU receiver. Root consumed full source reviews, exact retained data and independent actual audit.",
+  "limits": [
+    "Canonical464 pass includes controlled renderer/RNG fixtures; natural browser sale remains unexecuted.",
+    "Whole baseline/web observations rely on actual checked job inventories and exact retained source/dist/vendor mappings; not every web body retransferred.",
+    "Actual stage private sessions absent; no global process absence inference.",
+    "First TS compile HOLD and failed SSH originals preserved; new canonical600s does not erase old R3 strict120s HOLD.",
+    "No browser/Worker/PNG/handcontact/GPU/publication/full-game or human visual acceptance."
+  ]
+}
