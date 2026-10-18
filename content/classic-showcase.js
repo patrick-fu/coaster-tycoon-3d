@@ -164,6 +164,37 @@ export function newClassicShowcase(rules) {
         const facility = apply({ type: 'place-facility', name: 'Balloons', kind: 'balloon', tile: { x: 22, y: 12 }, height: 32, direction: 2, content: balloonContent() });
         apply({ type: 'set-facility-open', facility, open: true });
     }
+    // Keep new landscaping after facility allocations to preserve saved identities.
+    for (const [sceneryType, x, y] of [
+        ['tree', 5, 4],
+        ['tree', 7, 4],
+        ['tree', 9, 4],
+        ['rock', 11, 4],
+        ['tree', 11, 3],
+        ['tree', 13, 5],
+        ['tree', 15, 4],
+        ['hedge', 8, 5],
+        ['flower', 10, 5],
+        ['rock', 4, 5],
+        ['tree', 5, 8],
+        ['flower', 4, 9],
+        ['hedge', 5, 11],
+        ['tree', 10, 10],
+        ['flower', 11, 10],
+        ['rock', 12, 10],
+        ['hedge', 11, 11],
+        ['flower', 12, 11],
+        ['rock', 13, 9],
+        ['flower', 13, 10],
+        ['hedge', 8, 10],
+        ['lamp', 11, 14],
+        ['hedge', 12, 14],
+        ['flower', 13, 14],
+        ['flower', 11, 13],
+        ['rock', 12, 13],
+        ['hedge', 13, 13],
+    ])
+        apply({ type: 'place-scenery', sceneryType, tile: { x, y }, height: 32 });
     for (const ride of [wood, steel, flume, midway])
         apply({ type: 'set-ride-status', ride, status: 'testing' });
     const test = engine.advance(2400);

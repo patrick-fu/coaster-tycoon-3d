@@ -1,0 +1,26 @@
+{
+  "sourceCommit": "63c4efd0c74fc9aeac4353ba4aa6bb7b500fe1bc",
+  "sourceTree": "336190e0a76b9d0bbf60bf6d3d5622d91b6565f0",
+  "saveVersion": 18,
+  "contentVersion": 11,
+  "protocolVersion": 11,
+  "sourcePullRequest": "https://github.com/patrick-fu/coaster-tycoon-3d/pull/86",
+  "buildBindingSHA256": "10294ba379bda110d87094c5948939b90dc71639c75df236bd9f66961300ef6b",
+  "buildQualificationSHA256": "0a0edd7ac81d4681ebadb01b04c5360e7587a0a70e540d9a1fc046cc880df939",
+  "finiteArtAcceptanceSHA256": "b31f138907a5f76d42a2f407cbb2c622a154676fe28e6bb91f10ddb80c78543a",
+  "normalNewParkAcceptanceSHA256": "b31f138907a5f76d42a2f407cbb2c622a154676fe28e6bb91f10ddb80c78543a",
+  "visualAdoptionSHA256": "5905852e04e31dbcbbf2c86623a1b71226faa3dccc37c6a17e6c2514cd680524",
+  "independentNativeActualReceiptSHA256": "cc50ae977f2001e944336b524f92800f9a284e1d27f7375799ec1bedd2b57c29",
+  "sourceInventorySHA256": "b17a6b8f05307a4d0d4700f796ec63aa8997f4cb337307c16f6ef447e7462349",
+  "compiledInventorySHA256": "8116ab89c9422363c555d90cd6516dcbb8845262b8349bc9c25b351ea026943a",
+  "runtimeInventorySHA256": "79ffe511406a83eef0cb6226468e17938a1d9d6d4488791ba99baab08b74e5b9",
+  "inheritedCraftSourceCommit": "3ff92c574e2629cde7f0b22b7aa5998b05b7b054",
+  "inheritedBalloonExportAcceptanceSHA256": "b63aeadc31874d9d025710771cb8e5f0ab1e1333d082a2738c9f4bad9b022228",
+  "scope": "Finite Classic Timber Splash precinct:27 ordinary scenery placements,254 old elements and ride/facility identities preserved.464 canonical passes and actual current native ordinary NewPark2144.2ms reply/2388.3ms interactive, trusted scenery/ride picks, ordinarySave/exactsecondWorkerreload, two original1920 frames and natural scoped cleanup. Only11of26eligiblePNGURLs requested. Original-style breadth, physical contact, integratedGPU/FPS/soak, fault/migration, fullpublicbrowser observer and humanvisualacceptance remain open. Independent MIT; no proprietary original assets.",
+  "buildHost": "Grok Bot",
+  "preparedAtUTC": "2026-10-18T08:48:49.881905+00:00",
+  "playerInstructions": {
+    "preset": "classic",
+    "oldSavedPark": "Save/export an old park first, then choose New park and confirm to create the current showcase."
+  }
+}
