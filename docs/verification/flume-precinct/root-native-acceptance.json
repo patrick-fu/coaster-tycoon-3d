@@ -1,0 +1,102 @@
+{
+  "status": "ROOT_ACCEPTED_FINITE_FLUME_PRECINCT_NATIVE_CURRENT_SHIPPING_ONLY",
+  "UTC": "2026-10-18T08:43:59.075347+00:00",
+  "sourceRoot": "/workspace/coaster-gradual-restroom/flume-precinct-build-sol-high-r1/source",
+  "sourceCandidate": {
+    "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/implementation/flume-precinct-root-r1/source/src/content/classic-showcase.ts",
+    "bytes": 9496,
+    "sha256": "4121d990a8fe8e926e1106c650c45d9dbbdc4bfd3a3117e44581056b857c4f03"
+  },
+  "CPUAcceptance": {
+    "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/flume-precinct-build-sol-high-r1/actual-run-r1/root-finite-outcome.json",
+    "bytes": 4528,
+    "sha256": "0a0edd7ac81d4681ebadb01b04c5360e7587a0a70e540d9a1fc046cc880df939"
+  },
+  "finalBinding": {
+    "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/flume-precinct-native-sol-high-r1/final-binding.json",
+    "bytes": 8255,
+    "sha256": "9e526f6fc408461de41c7d3519bc94fda7cfe9bd75dc826f75e4ce7a68ade298"
+  },
+  "GO": {
+    "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/flume-precinct-native-sol-high-r1/root-flume-precinct-go.json",
+    "bytes": 5400,
+    "sha256": "566460f7d37acf95d633932de5e68be599a6aed8172fe43318444519f693d8b6"
+  },
+  "actualOuterTerminal": {
+    "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/flume-precinct-native-sol-high-r1/actual-flume-precinct-run-r1/terminal.json",
+    "bytes": 928,
+    "sha256": "a339f541155aae7dccc9b4b25d1301513a512396f568f9282a0675107c920998"
+  },
+  "retention": {
+    "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/flume-precinct-native-sol-high-r1/actual-flume-precinct-run-r1/byte-retention.json",
+    "bytes": 232756,
+    "sha256": "823de271839dd6675ce7ed03a60ad07957be0a645b176b0b8ab4b3e4c9fe10b5"
+  },
+  "rootDataAudit": {
+    "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/flume-precinct-native-sol-high-r1/actual-flume-precinct-run-r1/root-data-audit.json",
+    "bytes": 1497,
+    "sha256": "bec6f245a86513e9179cbf574991c3e6e14131cbe0b2a8641987b1bd9e3017f0"
+  },
+  "independentDrift": {
+    "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/reviewer-receipts/flume-precinct-delivery-drift-sol-high-r1.md",
+    "bytes": 12610,
+    "sha256": "cc50ae977f2001e944336b524f92800f9a284e1d27f7375799ec1bedd2b57c29"
+  },
+  "artDecision": {
+    "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/implementation/flume-precinct-root-r1/root-art-adoption.json",
+    "bytes": 2608,
+    "sha256": "5905852e04e31dbcbbf2c86623a1b71226faa3dccc37c6a17e6c2514cd680524"
+  },
+  "actual": {
+    "status": "ROOT_ACCEPTED_CURRENT_NATIVE_METADATA_AND_RAW_ORIGINALS_ONLY",
+    "UTC": "2026-10-18T08:43:59.075347+00:00",
+    "actualResponses": 369,
+    "ordinaryResponses": 327,
+    "PNGResponses": 42,
+    "distinctPaths": 134,
+    "workerOriginalPathsEach": [
+      47,
+      47
+    ],
+    "requiredPaths": 69,
+    "PNGURLsConsumed": 11,
+    "PNGURLsEligible": 26,
+    "newParkReplyMilliseconds": 2144.2000000029802,
+    "newParkInteractiveMilliseconds": 2388.3000000044703,
+    "oldElements": 254,
+    "newScenery": 27,
+    "pausedTick": 4877,
+    "save": {
+      "bytes": 863289,
+      "sha256": "f2087d70ea8e15b9d51dd8da51a4936bb20c33e8b4fd6db369700357619909d3"
+    },
+    "equalRawSaveFiles": 8,
+    "profile": {
+      "bytes": 342,
+      "sha256": "a3c82370bd92385b83051dfa5b981ba8b9dfec51d326938292fa369456373e46"
+    },
+    "frames": [
+      {
+        "file": "precinct-normal-overview-1920.png",
+        "bytes": 1540714,
+        "sha256": "602ce4db0e9ae124bba19e138d4342d09b62de6a88aeff805a245f2bc619955a"
+      },
+      {
+        "file": "precinct-arrival-close-1920.png",
+        "bytes": 1561422,
+        "sha256": "58c1b8713ff2a36440dca926429bbbb8da45f8fc49c69a6e8ff775e3e02c8e46"
+      }
+    ],
+    "naturalDriverChromeRecorder0": true,
+    "scopedCleanupPortsProfileSourceStageExact": true,
+    "NetLogEvents": 55452,
+    "scope": "Raw/original metadata replay only; saves and profile values remain opaque. Actual layout/slot receiving predicates depend on the executed pinned remote driver, not a Mac save parse. No all26PNG/GPU/fullgame/public/art claim."
+  },
+  "productionIntegrated": false,
+  "publicPublished": false,
+  "remaining": [
+    "Production/source identity and published runtime must be checked separately.",
+    "Only11/26eligiblePNGURLs requested; embedded GLB texture appearance/all26consumption not certified.",
+    "No original game asset parity, breadth/GPU/contact/fault/soak/full-game/human acceptance."
+  ]
+}
