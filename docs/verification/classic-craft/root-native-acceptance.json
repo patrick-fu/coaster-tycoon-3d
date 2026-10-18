@@ -1,0 +1,381 @@
+{
+  "status": "ROOT_ACCEPTED_FINITE_CURRENT_CLASSIC_CRAFT_NATIVE_AND_VISIBLE_PRESENTATION_ONLY",
+  "utc": "2026-10-18T05:33:19.919011+00:00",
+  "scope": "Current entrance, timber balloon facade and map/umbrella label; existing Balloon business exercised, independent MIT implementation",
+  "finalBinding": {
+    "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/classic-craft-native-root-r2/final-binding.json",
+    "bytes": 8105,
+    "sha256": "80e8e245a9d54c6d8742132fe44bea7e822925f71c96ba4321e631226305eb16"
+  },
+  "GO": {
+    "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/classic-craft-native-root-r2/root-classic-craft-go.json",
+    "bytes": 6536,
+    "sha256": "3468a33ec596437964f1e1f8454c1f17cabcbbe2f6c4dfae3183c886a58b2704"
+  },
+  "controlFreeze": {
+    "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/classic-craft-native-root-r2/root-final-freeze.json",
+    "bytes": 4713,
+    "sha256": "6ed774a002d94b6c2b295b49fb7635aaf6b085f552b0fe24917cd27ad13f126e"
+  },
+  "actualTransport": {
+    "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/classic-craft-native-root-r2/actual-classic-craft-run-r1/terminal.json",
+    "bytes": 888,
+    "sha256": "ed8e0242e0c51a0f046468adb2a47ce6bba44f991d87c230384a9daf53e61101"
+  },
+  "archive": {
+    "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/classic-craft-native-root-r2/actual-classic-craft-run-r1/evidence.tar.gz",
+    "bytes": 63973586,
+    "sha256": "3a2130728370afd7df070e5d5e387d551bbb55e7625006aeeacc4a01e6f1a4d3"
+  },
+  "retention": {
+    "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/classic-craft-native-root-r2/actual-classic-craft-run-r1/root-retention.json",
+    "bytes": 268592,
+    "sha256": "3a41169f8c692e91b170e6c5df7087d3de552dfd783eceac9614e5e4f8c33540"
+  },
+  "result": {
+    "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/classic-craft-native-root-r2/actual-classic-craft-run-r1/mirror/evidence/result.json",
+    "bytes": 7843,
+    "sha256": "23693c10025db47986dd35a46a178e8df5f610ce5e70e2db0b9541d3c1fd75fc"
+  },
+  "scientificResult": {
+    "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/classic-craft-native-root-r2/actual-classic-craft-run-r1/mirror/evidence/scientific-result.json",
+    "bytes": 7698,
+    "sha256": "b107cd0dacffed4916a448b8c889261703a3ef3188f47fc24275400722731d60"
+  },
+  "reviewsFullyConsumed": {
+    "classic-craft-native-r2-actual-sol-high.md": {
+      "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/reviewer-receipts/classic-craft-native-r2-actual-sol-high.md",
+      "bytes": 7628,
+      "sha256": "db4435cebf3a808aafcaf955df8a2f741ed21ec52f66717e4f8b10602625c89b"
+    },
+    "classic-craft-delivery-design-drift-sol-high-r1.md": {
+      "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/reviewer-receipts/classic-craft-delivery-design-drift-sol-high-r1.md",
+      "bytes": 8227,
+      "sha256": "b48131e886415c4560940b369e331826c7723a2ee82436731a9541a9596fdc82"
+    },
+    "classic-craft-delivery-design-drift-sol-high-r2.md": {
+      "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/reviewer-receipts/classic-craft-delivery-design-drift-sol-high-r2.md",
+      "bytes": 8703,
+      "sha256": "4914abd4bc4e5b970143e49b24cd1b91a3f9bdaf5c544ff1c507345b29dff09f"
+    },
+    "gemini-r129": {
+      "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/frontend/agy-native-facade-pixels-r129/captures-r129/answer.txt",
+      "bytes": 4749,
+      "sha256": "e87f55f9cdbab692398125f4fde3dbb5e175b8e01733bcb38eb83a4c3504b7a0"
+    },
+    "gemini-r130": {
+      "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/frontend/agy-native-inspector-pixels-r130/captures-r130/answer.txt",
+      "bytes": 4432,
+      "sha256": "e9f1fe33c76aa01e0b5672e5ca6a378d13d3ec8f0546d855031c9aeea043b82c"
+    },
+    "gemini-r131": {
+      "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/frontend/agy-native-entrance-pixels-r131/captures-r131/answer.txt",
+      "bytes": 3206,
+      "sha256": "8a1cdd5629c050ddb38686cb85bdf8b4fac988e376e33c0a08e09a5a60fcbd86"
+    },
+    "gemini-r132": {
+      "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/frontend/agy-native-park-art-priority-r132/captures-r132/answer.txt",
+      "bytes": 3544,
+      "sha256": "de0518c55737685380dcf70cc2f5479aba2266111c29006ae9e36d26446ad438"
+    },
+    "gemini-r133": {
+      "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/frontend/agy-native-business-presentation-r133/captures-r133/answer.txt",
+      "bytes": 4370,
+      "sha256": "e9bc1436cce84ca24cd59f63a07d44458e04c589880d70eacbf2e099c7afd251"
+    }
+  },
+  "previousStrictHOLD": {
+    "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/classic-craft-native-sol-high-r1/actual-classic-craft-run-r1/root-finite-outcome.json",
+    "bytes": 3294,
+    "sha256": "1330b8491d2c5193ae6776d280aee02b4b93beb63004aee32719de23335ff49b"
+  },
+  "newPark": {
+    "replyMilliseconds": 1960.6,
+    "interactiveMilliseconds": 2213.6,
+    "applicationTimeoutMilliseconds": 20000,
+    "oneTrustedClickAndExactConfirm": true,
+    "fallbackOrManualLoad": false,
+    "woodenTrackPieces": 26,
+    "coupledCars": 2
+  },
+  "facade": {
+    "observerWorkSeconds": 90,
+    "previousObserverWorkSeconds": 60,
+    "policyDecision": {
+      "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/implementation/classic-craft-native-repair-root-r2/root-budget-review-disposition.json",
+      "bytes": 2730,
+      "sha256": "4039521c4bfdb9bf3aca183eb744995f9979439be540be0db71c54318aec0d1c"
+    },
+    "observedFirstSaveToAfterSaveSeconds": 58.945802,
+    "causalPerformanceImprovementClaim": false,
+    "pausedTick": 4956,
+    "allStateMeshes": 10,
+    "visibleMeshes": 9,
+    "twoTrustedCloseOpenCommands": true,
+    "fourFrames": [
+      {
+        "image": {
+          "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/classic-craft-native-root-r2/actual-classic-craft-run-r1/mirror/evidence/facade-closed-front-1920.png",
+          "bytes": 2306464,
+          "sha256": "dc88714892dd78bffeb1c6f109b72e3cdba4bccb4931f589e06ab2ba5c828ba2"
+        },
+        "before": {
+          "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/classic-craft-native-root-r2/actual-classic-craft-run-r1/mirror/evidence/facade-closed-front-before.save.json",
+          "bytes": 861546,
+          "sha256": "a6ea644b98dbc69ab2906abb20692020e4589c7bce6582d79fd3d43ba5dca5c1"
+        },
+        "after": {
+          "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/classic-craft-native-root-r2/actual-classic-craft-run-r1/mirror/evidence/facade-closed-front-after.save.json",
+          "bytes": 861546,
+          "sha256": "a6ea644b98dbc69ab2906abb20692020e4589c7bce6582d79fd3d43ba5dca5c1"
+        },
+        "rawPairEqual": true,
+        "oneTrustedNativePick": true,
+        "fullCameraEqual": true,
+        "open": false
+      },
+      {
+        "image": {
+          "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/classic-craft-native-root-r2/actual-classic-craft-run-r1/mirror/evidence/facade-closed-rear-1920.png",
+          "bytes": 2433122,
+          "sha256": "e10474d7501da8a7908cb818d7a457a20756e9411ef322acbf6308a5fa08d456"
+        },
+        "before": {
+          "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/classic-craft-native-root-r2/actual-classic-craft-run-r1/mirror/evidence/facade-closed-rear-before.save.json",
+          "bytes": 861546,
+          "sha256": "a6ea644b98dbc69ab2906abb20692020e4589c7bce6582d79fd3d43ba5dca5c1"
+        },
+        "after": {
+          "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/classic-craft-native-root-r2/actual-classic-craft-run-r1/mirror/evidence/facade-closed-rear-after.save.json",
+          "bytes": 861546,
+          "sha256": "a6ea644b98dbc69ab2906abb20692020e4589c7bce6582d79fd3d43ba5dca5c1"
+        },
+        "rawPairEqual": true,
+        "oneTrustedNativePick": true,
+        "fullCameraEqual": true,
+        "open": false
+      },
+      {
+        "image": {
+          "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/classic-craft-native-root-r2/actual-classic-craft-run-r1/mirror/evidence/facade-open-front-1920.png",
+          "bytes": 2309261,
+          "sha256": "3d6e8d7dc4bc4f67bdbc3dace18c2418323cd87fa47561ae8698e41179a68910"
+        },
+        "before": {
+          "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/classic-craft-native-root-r2/actual-classic-craft-run-r1/mirror/evidence/facade-open-front-before.save.json",
+          "bytes": 861545,
+          "sha256": "678b58edf483d77341ecbc9570ec54792c9faf72cfafa2a62147a16914086707"
+        },
+        "after": {
+          "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/classic-craft-native-root-r2/actual-classic-craft-run-r1/mirror/evidence/facade-open-front-after.save.json",
+          "bytes": 861545,
+          "sha256": "678b58edf483d77341ecbc9570ec54792c9faf72cfafa2a62147a16914086707"
+        },
+        "rawPairEqual": true,
+        "oneTrustedNativePick": true,
+        "fullCameraEqual": true,
+        "open": true
+      },
+      {
+        "image": {
+          "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/classic-craft-native-root-r2/actual-classic-craft-run-r1/mirror/evidence/facade-open-rear-1920.png",
+          "bytes": 2433140,
+          "sha256": "d706886be785c77fc88769ddf3f3119d66a4842d6494038c78bb8a594e0eb9d9"
+        },
+        "before": {
+          "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/classic-craft-native-root-r2/actual-classic-craft-run-r1/mirror/evidence/facade-open-rear-before.save.json",
+          "bytes": 861545,
+          "sha256": "678b58edf483d77341ecbc9570ec54792c9faf72cfafa2a62147a16914086707"
+        },
+        "after": {
+          "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/classic-craft-native-root-r2/actual-classic-craft-run-r1/mirror/evidence/facade-open-rear-after.save.json",
+          "bytes": 861545,
+          "sha256": "678b58edf483d77341ecbc9570ec54792c9faf72cfafa2a62147a16914086707"
+        },
+        "rawPairEqual": true,
+        "oneTrustedNativePick": true,
+        "fullCameraEqual": true,
+        "open": true
+      }
+    ],
+    "cameraRestoration": {
+      "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/classic-craft-native-root-r2/actual-classic-craft-run-r1/mirror/evidence/facade-camera-restoration.json",
+      "bytes": 2625,
+      "sha256": "0856ab95e05c586382e4cd5d8778cd14e789ccda332befd5b3627dbc651e498c"
+    },
+    "completion": {
+      "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/classic-craft-native-root-r2/actual-classic-craft-run-r1/mirror/evidence/facade-phase-completion.json",
+      "bytes": 519,
+      "sha256": "abbcc616d4154ed0752fdafe1c1576764fc2632a157018bb051f809cdf975032"
+    }
+  },
+  "business": {
+    "trustedPriceSequenceTenths": [
+      9,
+      10,
+      9
+    ],
+    "ordinarySpeed": 4,
+    "demandStartTick": 4957,
+    "firstObservedSaleTick": 10092,
+    "additionalObservedTicks": 5135,
+    "maximumObservedTicks": 8192,
+    "maximumDemandSeconds": 180,
+    "driverReserveSeconds": 180,
+    "observationToSaleSeconds": 33.442,
+    "ordinaryPauseTick": 10481,
+    "ownerId": 14,
+    "earnedRides": 3,
+    "colour": 11,
+    "sales": 1,
+    "priceTenths": 9,
+    "revenueTenths": 9,
+    "stockExpenseTenths": 3,
+    "grossMarginTenths": 6,
+    "beforeWagesAndUpkeep": true,
+    "isolatedParkProfitClaim": false,
+    "actualAccount": {
+      "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/classic-craft-native-root-r2/actual-classic-craft-run-r1/mirror/evidence/actual-paid-account.json",
+      "bytes": 2523,
+      "sha256": "4ab6dfe01c29106365f48b79aa00a5458d6d75a41956ac613ee4e48368ae0b79"
+    },
+    "paidInspector": {
+      "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/classic-craft-native-root-r2/actual-classic-craft-run-r1/mirror/evidence/vendor-inspector-paid.json",
+      "bytes": 1076,
+      "sha256": "c47b4c3a4167cba26fa2a7f2bbb57fa15f34e9e75c62a0d3ac95c6633309eb1a"
+    },
+    "trustedVendorRemovalAndOrdinarySave": true,
+    "saved": {
+      "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/classic-craft-native-root-r2/actual-classic-craft-run-r1/mirror/evidence/balloon-vendor-free.save.json",
+      "bytes": 913415,
+      "sha256": "6389ab8dc7d74cefec14f7c5fa34772340ce613542c5b7d450214e962df613a4"
+    },
+    "received": {
+      "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/classic-craft-native-root-r2/actual-classic-craft-run-r1/mirror/evidence/balloon-vendor-free-received.save.json",
+      "bytes": 913415,
+      "sha256": "6389ab8dc7d74cefec14f7c5fa34772340ce613542c5b7d450214e962df613a4"
+    },
+    "freshSecondDocumentLoadExact": true,
+    "sameHeldOwnerPickedBothDocuments": true
+  },
+  "consumer": {
+    "exactStatus200OriginalResponses": 369,
+    "networkFrozenMarkers": 327,
+    "unmodifiedFetchPNGOriginals": 42,
+    "mandatoryPositivePaths": 69,
+    "workerDocuments": 2,
+    "workerOriginalBodiesEach": 47,
+    "consumedPNGURLs": 11,
+    "eligiblePNGURLs": 26,
+    "all215BodiesConsumedClaim": false,
+    "bodyGate": {
+      "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/classic-craft-native-root-r2/actual-classic-craft-run-r1/mirror/evidence/diagnostic-body-gate.json",
+      "bytes": 230150,
+      "sha256": "08fb1cd5111cf944df4a56ce2db060bd0c457e5c63eeec660b50eb54633cb8bf"
+    },
+    "webManifest": {
+      "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/publication/classic-craft-root-r1/web-manifest.json",
+      "bytes": 32097,
+      "sha256": "9b4d790430b4c9f912a008a3011f66ce21954125d5d13b85c008bcd1d6314762"
+    }
+  },
+  "lifecycle": {
+    "driverSeconds": 169.774,
+    "driverLimitSeconds": 600,
+    "SSHSeconds": 453.059072,
+    "SSHLimitSeconds": 1170,
+    "collectorPID": 452829,
+    "recorderPID": 452836,
+    "driverPID": 452837,
+    "chromePID": 452849,
+    "allActualWaitsZero": true,
+    "unforced": true,
+    "ownedProcessesAndAuxAbsent": true,
+    "portsClosed": {
+      "4181": true,
+      "9228": true
+    },
+    "cleanupErrors": [],
+    "recoveryComplete": true,
+    "cancellationFaultExercised": false,
+    "oneOutsidePrivateSessionInaccessibleAncestorExcluded": true,
+    "globalProcessAbsenceClaim": false,
+    "rawInvariants": {
+      "profile": {
+        "before": {
+          "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/classic-craft-native-root-r2/actual-classic-craft-run-r1/mirror/evidence/profile-before.json",
+          "bytes": 342,
+          "sha256": "a3c82370bd92385b83051dfa5b981ba8b9dfec51d326938292fa369456373e46"
+        },
+        "after": {
+          "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/classic-craft-native-root-r2/actual-classic-craft-run-r1/mirror/evidence/profile-after.json",
+          "bytes": 342,
+          "sha256": "a3c82370bd92385b83051dfa5b981ba8b9dfec51d326938292fa369456373e46"
+        },
+        "rawByteEqual": true
+      },
+      "stage": {
+        "before": {
+          "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/classic-craft-native-root-r2/actual-classic-craft-run-r1/mirror/evidence/stage-before.json",
+          "bytes": 21868,
+          "sha256": "9a1fc4c5418011246b9b0e6ebd1179e79f37a6f32cfa107d6b2a7d031b42de58"
+        },
+        "after": {
+          "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/classic-craft-native-root-r2/actual-classic-craft-run-r1/mirror/evidence/stage-after.json",
+          "bytes": 21868,
+          "sha256": "9a1fc4c5418011246b9b0e6ebd1179e79f37a6f32cfa107d6b2a7d031b42de58"
+        },
+        "rawByteEqual": true
+      },
+      "current-source-compiled-web": {
+        "before": {
+          "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/classic-craft-native-root-r2/actual-classic-craft-run-r1/mirror/evidence/current-source-compiled-web-before.json",
+          "bytes": 95019,
+          "sha256": "f03d15f74124e8b5c9418ff88731cc2728dd22c4616454ec0ba8d96d289c9469"
+        },
+        "after": {
+          "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/classic-craft-native-root-r2/actual-classic-craft-run-r1/mirror/evidence/current-source-compiled-web-after.json",
+          "bytes": 95019,
+          "sha256": "f03d15f74124e8b5c9418ff88731cc2728dd22c4616454ec0ba8d96d289c9469"
+        },
+        "rawByteEqual": true
+      }
+    }
+  },
+  "visual": {
+    "rootViewedAllSevenOriginal1920PNGs": true,
+    "otherImages": [
+      {
+        "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/classic-craft-native-root-r2/actual-classic-craft-run-r1/mirror/evidence/balloon-vendor-inspector-1920.png",
+        "bytes": 1508457,
+        "sha256": "ae00fb51597983034a468892f9a81c39516faf55d4e68dc48bf25a6fdd379f99"
+      },
+      {
+        "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/classic-craft-native-root-r2/actual-classic-craft-run-r1/mirror/evidence/balloon-natural-owner-1920.png",
+        "bytes": 2591262,
+        "sha256": "739536ad216540a57e3b05af3b6396e8e4766ff21d83b58c22ec0203af4e114a"
+      },
+      {
+        "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/classic-craft-native-root-r2/actual-classic-craft-run-r1/mirror/evidence/balloon-vendor-free-owner-1920.png",
+        "bytes": 2587100,
+        "sha256": "a9af548cf24da488d2358d12917d94eb9d745a9cef9e645366ae9fabd745d7d5"
+      }
+    ],
+    "adoption": "Visible additive detail and readable map/umbrella, balloon and carrying labels in this finite current consumer",
+    "findingsDisposition": [
+      "R129 tree/lamp occlusion and flat shutter remain real visible polish issues, inherited by this additive delta; no broad visual completion",
+      "R129 exact occlusion percentage or physical rear door/vent collision is not established by projected pixels; full rear facade hidden",
+      "R130 separate labels and controls readable at checked1920; no responsive-layout universal claim",
+      "R131 entrance improvement finite; O2 old balloon asset supports entrance only",
+      "R132 flume/basin hard edges useful next candidate; zero-thickness path/open roof geometry claims require source checks",
+      "R133 unit accounts and visible owner labels consistent; no isolated park-profit or full economic balance claim"
+    ]
+  },
+  "metadataObservation": "Root first assumed sourceBinding was universal and stopped at KeyError before any proof write. Actual42 PNG Fetch captures use captureMethod/continuedUnmodified instead; all369 retained original bytes independently match K3. Corrected only this metadata projection, without product/harness change or relaxed byte equality.",
+  "remaining": [
+    "Exact new source commit/payload/Pages/actual HTTP consumption pending",
+    "Existing public127emptyCDPBlob HOLD persists",
+    "Rear facade occlusion, flat shutter and further flume/landscape craft remain",
+    "Representative integrated GPU/FPS/soak/contact/fault/migration/human visual acceptance and full game breadth remain open"
+  ]
+}

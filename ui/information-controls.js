@@ -54,5 +54,5 @@ export function guestMerchandiseHtml(data, { row }) {
   const owned = [];
   if (data.merchandise?.map) owned.push('Park map');
   if (data.merchandise?.umbrellaColour !== null && data.merchandise?.umbrellaColour !== undefined) owned.push('Umbrella');
-  return row('Owned items', owned.length ? owned.join(' · ') : 'None');
+  return row('Map and umbrella', owned.length ? owned.join(' · ') : 'None');
 }

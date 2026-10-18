@@ -238,6 +238,19 @@ def build(materials):
     wv, wf = merge_geoms(walls)
     add_mesh("Cabin_Walls", wv, wf, mat_cream, root)
 
+    # Split the rear rails around the service door and reuse the existing timber finish.
+    facade_battens = []
+    for x0, x1 in [(-1.445, -1.395), (1.395, 1.445)]:
+        for y in [-0.65, 0.45]:
+            facade_battens.append(box_geom((x0, y - 0.04, 0.18), (x1, y + 0.04, 2.48)))
+        facade_battens.append(box_geom((x0, -1.38, 1.00), (x1, 1.18, 1.07)))
+    for x0, x1 in [(-0.98, -0.90), (0.90, 0.98)]:
+        facade_battens.append(box_geom((x0, 1.195, 0.18), (x1, 1.24, 2.48)))
+    for x0, x1 in [(-1.38, -0.48), (0.48, 1.38)]:
+        facade_battens.append(box_geom((x0, 1.195, 1.00), (x1, 1.24, 1.07)))
+    fv, ff = merge_geoms(facade_battens)
+    add_mesh("Facade_Battens", fv, ff, mat_timber, root)
+
     # 3. Layered Trims, Jambs & Cornice
     trims = [
         box_geom((-0.98, -1.42, 0.94), (-0.94, -1.38, 2.24)),

@@ -1,0 +1,218 @@
+{
+  "status": "ROOT_ACCEPTED_FINITE_BALLOON_CPU_AND_EXACT_RECEIVER_ONLY",
+  "acceptedUTC": "2026-10-18T04:01:40.152997+00:00",
+  "sourceRoot": "/workspace/coaster-gradual-restroom/classic-craft-build-root-r1/source",
+  "manifests": {
+    "source-manifest.json": {
+      "path": "/workspace/coaster-gradual-restroom/classic-craft-build-root-r1/source-manifest.json",
+      "bytes": 38900,
+      "sha256": "4a2cdb59dcd964a8df8bfaf9624aeae59724ee61512c463df88df5320bc32b4a",
+      "count": 253
+    },
+    "compiled-manifest.json": {
+      "path": "/workspace/coaster-gradual-restroom/classic-craft-build-root-r1/compiled-manifest.json",
+      "bytes": 13868,
+      "sha256": "300f0f33f2e6cf50578a914790a343401c102da8279521e3baee6f7c2ccf7013",
+      "count": 96
+    },
+    "web-manifest.json": {
+      "path": "/workspace/coaster-gradual-restroom/classic-craft-build-root-r1/web-manifest.json",
+      "bytes": 32097,
+      "sha256": "9b4d790430b4c9f912a008a3011f66ce21954125d5d13b85c008bcd1d6314762",
+      "count": 215
+    }
+  },
+  "cpuQualification": {
+    "path": "/workspace/coaster-gradual-restroom/classic-craft-build-root-r1/evidence/after.json",
+    "bytes": 980,
+    "sha256": "46ca0b730b8924b3c1ada98f17c6053f6e4b7b8092371ea3639c26fa6ba8e552"
+  },
+  "cpuTerminal": {
+    "path": "/workspace/coaster-gradual-restroom/classic-craft-build-root-r1/evidence/terminal.json",
+    "bytes": 33750,
+    "sha256": "0e0b03768621c8aa8c8657d3ec49b9953f0ede6c7398df25c63ff83c57cb8e45"
+  },
+  "factoryTerminal": {
+    "path": "/workspace/coaster-gradual-restroom/classic-craft-build-root-r1/evidence/prewarm-terminal.json",
+    "bytes": 305210,
+    "sha256": "b8d2f3ad323580fc559e0dd84a4b8b6e8454cb3e11d8825e6c5c771c05e00752"
+  },
+  "factorySave": {
+    "path": "/workspace/coaster-gradual-restroom/classic-craft-build-root-r1/evidence/classic-factory4800.save.json",
+    "bytes": 860845,
+    "sha256": "6dbd8ff03f3cc7fb9143a3a12c286bb1365c9c9726aec7bd3648d249decd0378",
+    "browserPolicy": "HASH_ONLY_NOT_INSTALLED_IN_NATIVE_BROWSER"
+  },
+  "actualCustody": {
+    "logicalOriginals": 290,
+    "uniqueObjects": 167,
+    "logicalBytes": 15197454,
+    "retention": {
+      "bytes": 170162,
+      "sha256": "adee8f6588d3c2283bdcef7821631187eb1567e5de618962d9e607114d18c9a0"
+    },
+    "wire": {
+      "bytes": 7758811,
+      "sha256": "9d9731d81675a30d280c520495f6f7f3559c34d808ecb04255334327ab278e71"
+    },
+    "stdout": {
+      "bytes": 11645961,
+      "sha256": "18505427260f4dc1e377ce4f42da0d02495b67209b63343fc0501da15f0a86f5"
+    },
+    "job": {
+      "bytes": 21987,
+      "sha256": "78ac15771f8ae6c5ddd30a51c6f73c749649cf0dbf54cd2faa77d5329aeedc19"
+    },
+    "localTerminal": {
+      "bytes": 1011,
+      "sha256": "e766b387f4425550d1372022e0fccc14ed99b4a8684096cf338f44a66bab7467"
+    }
+  },
+  "independentReview": {
+    "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/reviewer-receipts/classic-craft-build-actual-sol-high-r1.md",
+    "bytes": 8604,
+    "sha256": "9d78f12425f93313ad06365c6b157c4b046e8e118fb0fa57cb07523d6e9d018c",
+    "relationship": "Fresh actual-data audit; earlier CPU/prewarm/two tests author and current source reviewer relationship disclosed."
+  },
+  "rootActualDataAudit": {
+    "bytes": 1336,
+    "sha256": "2418791974723acecc80b890e87bb65be82d03556de895cd4ab9a36c53a98a80"
+  },
+  "canonical": {
+    "tests": 464,
+    "suites": 0,
+    "pass": 464,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "canonicalFiles": 45,
+  "uiSyntaxFiles": 34,
+  "actualStageCount": 38,
+  "stageOutcomes": [
+    {
+      "label": "compile",
+      "pid": 411120,
+      "naturalExit": 0,
+      "seconds": 0.33564592200127663,
+      "cap": 90
+    },
+    {
+      "label": "build-web",
+      "pid": 411589,
+      "naturalExit": 0,
+      "seconds": 0.3889637649990618,
+      "cap": 120
+    },
+    {
+      "label": "canonical-all",
+      "pid": 411606,
+      "naturalExit": 0,
+      "seconds": 153.46683521699742,
+      "cap": 600
+    },
+    {
+      "label": "classic-factory4800",
+      "pid": 413192,
+      "naturalExit": 0,
+      "seconds": 21.64219498300372,
+      "cap": 240
+    }
+  ],
+  "all38NaturalPrivateChildWaitsZeroAndAbsent": true,
+  "uiSyntaxGroupSeconds": 13.148513001004176,
+  "workSeconds": 190.95823231899703,
+  "localWallSeconds": 219.91690100000002,
+  "allCompiledOutputsEqualK2": true,
+  "actualChangedCompiledAgainstPreBalloonBase": 27,
+  "finiteCompiledAllowances": 28,
+  "exactBaseOutputsOutsideAllowances": 68,
+  "webBytes": 111139915,
+  "factorySummary": {
+    "tick": 4800,
+    "saveVersion": 18,
+    "contentVersion": 11,
+    "elements": 254,
+    "scenery": 78,
+    "amenities": 8,
+    "paths": 64,
+    "rideInstances": 5,
+    "rideFamilies": 4,
+    "openRides": 5,
+    "guests": 30,
+    "guestPhases": {
+      "queued": 7,
+      "riding": 17,
+      "walking": 6
+    },
+    "factoryCommandCostUnits": 18678,
+    "factoryCommandCostDisplay": "$1,867.80",
+    "normalQuoteCount": 287,
+    "normalExecuteCount": 287,
+    "rulesSHA256": "4107b4be369e7f4e9e5fdefe882657952d20d5b901246c7b7024b516fba41e4b",
+    "saveBytes": 860845,
+    "saveSHA256": "6dbd8ff03f3cc7fb9143a3a12c286bb1365c9c9726aec7bd3648d249decd0378",
+    "receiver": {
+      "ok": true
+    },
+    "woodId": 0,
+    "woodTrackPieces": 26,
+    "woodCars": 2,
+    "woodOperating": {
+      "ok": true,
+      "value": {
+        "circuit": true,
+        "stations": [
+          {
+            "id": 1,
+            "track": [
+              1,
+              2,
+              3,
+              4
+            ]
+          }
+        ],
+        "issues": []
+      }
+    },
+    "woodAccess": {
+      "ok": true,
+      "value": {
+        "entrances": [
+          27
+        ],
+        "exits": [
+          28
+        ]
+      }
+    }
+  },
+  "actualBalloonVendor": {
+    "id": 9,
+    "instanceId": 10,
+    "content": {
+      "familyId": "independent.balloon-facility",
+      "variantId": "independent.timber-balloon-stall",
+      "modeId": "independent.retail"
+    },
+    "name": "Balloons",
+    "kind": "balloon",
+    "element": 254,
+    "open": true,
+    "price": 9,
+    "income": 0,
+    "sales": 0,
+    "balloonColour": 11
+  },
+  "currentDelta": "Six exact source/asset/metadata bodies against K2; five shipping body changes. No authoritative TS/test/config changes. Footer excluded.",
+  "scope": "Finite current Classic craft compile/34UI syntax/web/full45canonical464tests/ordinary Classic4800 and exact independent CPU receiver. Root consumed full current typed originals and independent actual audit.",
+  "limits": [
+    "New2bf40e0e Balloon stall and new entrance/label combined browser rendering/state/selection and native full workflow still unexecuted.",
+    "Canonical actual-asset loader coverage concerns unchanged held GLB; new stall strict export/CPU views are separate finite proof, not native readiness.",
+    "Whole web exact inventories are actual remote reports and verified source/dist/dependency mappings; not all111MB web bodies returned locally.",
+    "No direct parent wait for remote observer retained separately; SSH/producer terminal and actual private child waits are the stated evidence.",
+    "Old strict120s R3/compile failures/public Blob HOLD retained. No global process absence, GPU, contact, performance, publication, full-game or human acceptance."
+  ]
+}
