@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import { portalMountYaw, woodenTransition } from '../simulation/wooden-placement.js';
+import { getGuestMaterials } from './guest-appearance.js';
 
 /**
  * Coordinate and Basis Helpers
@@ -40,27 +41,6 @@ const SEAT_NODE_NAMES = [
 
 const LAP_BAR_OPEN_ROTATION_X = Math.PI * 0.25;
 
-// Finite deterministic adult guest color palettes keyed by guest ID
-const SHIRT_PALETTE = ['#2b5c8f', '#a13333', '#2d7a4d', '#c27d2b', '#6b4c82', '#9c3a6e', '#2c757a', '#637a28'];
-const PANTS_PALETTE = ['#232b38', '#383d47', '#4b5563', '#1e293b', '#2e3828', '#4a382a', '#1f2937', '#334155'];
-const SKIN_PALETTE = ['#f7d5b2', '#edd0be', '#e0b594', '#d49b74', '#b87b52', '#8c5332', '#63371f', '#452615'];
-const HAIR_PALETTE = ['#1a1818', '#38251a', '#573822', '#8c592b', '#bfa054', '#615f5c', '#212124', '#7a311e'];
-
-function getGuestMaterials(ctx, guestId) {
-  const seed = Math.abs(guestId);
-  const shirtHex = SHIRT_PALETTE[seed % SHIRT_PALETTE.length];
-  const pantsHex = PANTS_PALETTE[(seed * 7) % PANTS_PALETTE.length];
-  const skinHex = SKIN_PALETTE[(seed * 13) % SKIN_PALETTE.length];
-  const hairHex = HAIR_PALETTE[(seed * 31) % HAIR_PALETTE.length];
-
-  return {
-    shirt: ctx.material(`wooden:passenger:shirt:${shirtHex}`, { color: shirtHex, roughness: 0.8 }),
-    pants: ctx.material(`wooden:passenger:pants:${pantsHex}`, { color: pantsHex, roughness: 0.85 }),
-    skin: ctx.material(`wooden:passenger:skin:${skinHex}`, { color: skinHex, roughness: 0.6 }),
-    hair: ctx.material(`wooden:passenger:hair:${hairHex}`, { color: hairHex, roughness: 0.9 }),
-  };
-}
-
 function buildSeatedGuest(ctx, guestId) {
   const mats = getGuestMaterials(ctx, guestId);
   const root = new THREE.Group();
@@ -91,14 +71,22 @@ function buildSeatedGuest(ctx, guestId) {
   ctx.add(root, geoThigh, mats.pants, [0.08, 0.08, 0.12]);
   ctx.add(root, geoShin, mats.pants, [-0.08, 0.00, 0.19]);
   ctx.add(root, geoShin, mats.pants, [0.08, 0.00, 0.19]);
-  ctx.add(root, geoFoot, mats.pants, [-0.08, -0.13, 0.20]);
-  ctx.add(root, geoFoot, mats.pants, [0.08, -0.13, 0.20]);
+  ctx.add(root, geoFoot, mats.boot, [-0.08, -0.13, 0.20]);
+  ctx.add(root, geoFoot, mats.boot, [0.08, -0.13, 0.20]);
 
   // Arms resting on lap bar, span <= 0.38m
   ctx.add(root, geoUpperArm, mats.shirt, [-0.17, 0.26, 0.00]);
   ctx.add(root, geoUpperArm, mats.shirt, [0.17, 0.26, 0.00]);
   ctx.add(root, geoForearm, mats.skin, [-0.14, 0.16, 0.15]);
   ctx.add(root, geoForearm, mats.skin, [0.14, 0.16, 0.15]);
+
+  const guestSelection = { kind: 'guest', id: guestId };
+  root.userData.isPassenger = true;
+  root.userData.guestId = guestId;
+  root.userData.selection = guestSelection;
+  root.traverse(child => {
+    child.userData.selection = guestSelection;
+  });
 
   return root;
 }
@@ -177,7 +165,7 @@ export function createWoodenVehicles(ctx, assets) {
     const activeLinkIds = new Set();
 
     for (const car of packet.cars) {
-      if (car.rig?.kind !== 'wooden-coupled-flat') continue;
+      if (!['wooden-coupled-flat', 'wooden-coupled-unbanked'].includes(car.rig?.kind)) continue;
       activeCarIds.add(car.id);
 
       let record = cars.get(car.id);
@@ -253,7 +241,9 @@ export function createWoodenVehicles(ctx, assets) {
         };
         cars.set(car.id, record);
       }
-      record.wrapper.userData.selection = { kind: 'ride', id: car.ride };
+      const rideSelection = { kind: 'ride', id: car.ride };
+      record.wrapper.userData.selection = rideSelection;
+      record.carClone.userData.selection = rideSelection;
 
       // Authoritative car body pose
       const bodyPos = simToThree(car.position);
@@ -541,6 +531,7 @@ function buildMergedMesh(ctx, targetGroup, material, bucket) {
 
 function buildOpenTrack(ctx, parent, element, ride, assets) {
   const profile = ride?.trackProfile;
+  const graded = profile?.vehicle?.kind === 'coupled-unbanked';
   const pieceDef = profile?.pieces?.[element.piece];
   if (!pieceDef || !pieceDef.motion?.samples || pieceDef.motion.samples.length < 2) {
     throw new Error(`Invalid or missing motion samples for track piece: ${element.piece}`);
@@ -552,27 +543,44 @@ function buildOpenTrack(ctx, parent, element, ride, assets) {
   const originY = element.origin.y / 8;
   const base = element.origin.z / 8;
 
-  const matTimber = assets.materials.timber;
-  const baseMetal = assets.materials.metal;
-  const sharedMaps = {};
-  if (baseMetal) {
-    if (baseMetal.map) sharedMaps.map = baseMetal.map;
-    if (baseMetal.roughnessMap) sharedMaps.roughnessMap = baseMetal.roughnessMap;
-    if (baseMetal.metalnessMap) sharedMaps.metalnessMap = baseMetal.metalnessMap;
-    if (baseMetal.normalMap) sharedMaps.normalMap = baseMetal.normalMap;
-  }
+  const getMaps = mat => {
+    const maps = {};
+    if (mat) for (const k of ['map', 'roughnessMap', 'metalnessMap', 'normalMap']) if (mat[k]) maps[k] = mat[k];
+    return maps;
+  };
+  const sharedMaps = getMaps(assets.materials.metal);
+  const timberMaps = getMaps(assets.materials.timber);
 
-  const matRailHead = ctx.material('wooden:track:rail-head', {
-    color: '#b6b5ad',
-    roughness: 0.42,
-    metalness: 0.25,
+  const matTimber = graded
+    ? ctx.material('wooden:track:timber:graded', {
+        color: '#ba7a3e',
+        roughness: 0.78,
+        metalness: 0.05,
+        ...timberMaps,
+      })
+    : assets.materials.timber;
+
+  const matRailHead = ctx.material(graded ? 'wooden:track:rail-head:graded' : 'wooden:track:rail-head', graded ? {
+    color: '#dce3ec',
+    roughness: 0.38,
+    metalness: 0.65,
+    ...sharedMaps,
+  } : {
+    color: '#c5cbd2',
+    roughness: 0.28,
+    metalness: 0.85,
     ...sharedMaps,
   });
 
-  const matRailFlangeWeb = ctx.material('wooden:track:rail-flange-web', {
-    color: '#4b5563',
-    roughness: 0.65,
-    metalness: 0.60,
+  const matRailFlangeWeb = ctx.material(graded ? 'wooden:track:rail-flange-web:graded' : 'wooden:track:rail-flange-web', graded ? {
+    color: '#6e7987',
+    roughness: 0.52,
+    metalness: 0.45,
+    ...sharedMaps,
+  } : {
+    color: '#424852',
+    roughness: 0.80,
+    metalness: 0.30,
     ...sharedMaps,
   });
 
@@ -614,8 +622,13 @@ function buildOpenTrack(ctx, parent, element, ride, assets) {
 
     const fwd = chord.clone().normalize();
     const up = new THREE.Vector3(0, 1, 0);
+    if (graded) up.addScaledVector(fwd, -fwd.y).normalize();
     const normal = new THREE.Vector3().crossVectors(up, fwd).normalize();
     const segCenter = p0.clone().add(p1).multiplyScalar(0.5);
+    const reference = graded ? segCenter.clone().add(new THREE.Vector3(0, 0.5, 0)) : null;
+    const crossPoint = (lateral, flatHeight, upOffset) => graded
+      ? reference.clone().addScaledVector(normal, lateral).addScaledVector(up, upOffset)
+      : segCenter.clone().addScaledVector(normal, lateral).setY(base + flatHeight);
     const chordRot = new THREE.Quaternion().setFromRotationMatrix(makeBasisMatrix(fwd, up, segCenter));
 
     // Per-chord variable-length geometries with physical metre UV mapping
@@ -626,26 +639,26 @@ function buildOpenTrack(ctx, parent, element, ride, assets) {
     disposables.push(geoRailHead, geoRailFlange, geoRailWeb, geoStringer);
 
     // 1. Rectangular rail head: width .07, height .06 centered at gauge (+/- .48), Y base+.47 (top base+.50)
-    const leftHead = segCenter.clone().addScaledVector(normal, -0.48); leftHead.y = base + 0.47;
-    const rightHead = segCenter.clone().addScaledVector(normal, 0.48); rightHead.y = base + 0.47;
+    const leftHead = crossPoint(-0.48, 0.47, -0.03);
+    const rightHead = crossPoint(0.48, 0.47, -0.03);
     bucketRailHead.push({ geometry: geoRailHead, matrix: new THREE.Matrix4().makeRotationFromQuaternion(chordRot).setPosition(leftHead) });
     bucketRailHead.push({ geometry: geoRailHead, matrix: new THREE.Matrix4().makeRotationFromQuaternion(chordRot).setPosition(rightHead) });
 
     // The support web stays inboard so the outboard upstop axle can pass below the flange.
-    const leftFlange = segCenter.clone().addScaledVector(normal, -0.416); leftFlange.y = base + 0.43;
-    const rightFlange = segCenter.clone().addScaledVector(normal, 0.416); rightFlange.y = base + 0.43;
+    const leftFlange = crossPoint(-0.416, 0.43, -0.07);
+    const rightFlange = crossPoint(0.416, 0.43, -0.07);
     bucketRailFlangeWeb.push({ geometry: geoRailFlange, matrix: new THREE.Matrix4().makeRotationFromQuaternion(chordRot).setPosition(leftFlange) });
     bucketRailFlangeWeb.push({ geometry: geoRailFlange, matrix: new THREE.Matrix4().makeRotationFromQuaternion(chordRot).setPosition(rightFlange) });
 
     // The inboard web joins sleepers and the rail flange below the guide wheels.
-    const leftWeb = segCenter.clone().addScaledVector(normal, -0.312); leftWeb.y = base + 0.31;
-    const rightWeb = segCenter.clone().addScaledVector(normal, 0.312); rightWeb.y = base + 0.31;
+    const leftWeb = crossPoint(-0.312, 0.31, -0.19);
+    const rightWeb = crossPoint(0.312, 0.31, -0.19);
     bucketRailFlangeWeb.push({ geometry: geoRailWeb, matrix: new THREE.Matrix4().makeRotationFromQuaternion(chordRot).setPosition(leftWeb) });
     bucketRailFlangeWeb.push({ geometry: geoRailWeb, matrix: new THREE.Matrix4().makeRotationFromQuaternion(chordRot).setPosition(rightWeb) });
 
     // 4. Longitudinal timber stringers: width .20, height .12 centered at normal +/- .55, Y base+.12 (top .18)
-    const leftStringer = segCenter.clone().addScaledVector(normal, -0.55); leftStringer.y = base + 0.12;
-    const rightStringer = segCenter.clone().addScaledVector(normal, 0.55); rightStringer.y = base + 0.12;
+    const leftStringer = crossPoint(-0.55, 0.12, -0.38);
+    const rightStringer = crossPoint(0.55, 0.12, -0.38);
     bucketTimber.push({ geometry: geoStringer, matrix: new THREE.Matrix4().makeRotationFromQuaternion(chordRot).setPosition(leftStringer) });
     bucketTimber.push({ geometry: geoStringer, matrix: new THREE.Matrix4().makeRotationFromQuaternion(chordRot).setPosition(rightStringer) });
 
@@ -653,7 +666,8 @@ function buildOpenTrack(ctx, parent, element, ride, assets) {
     while (nextSleeperDist <= accumulatedDist + chordLen) {
       const frac = (nextSleeperDist - accumulatedDist) / chordLen;
       const sleeperPos = p0.clone().lerp(p1, frac);
-      sleeperPos.y = base + 0.23;
+      if (graded) { sleeperPos.y += 0.5; sleeperPos.addScaledVector(up, -0.27); }
+      else sleeperPos.y = base + 0.23;
       bucketTimber.push({ geometry: geoSleeper, matrix: new THREE.Matrix4().makeRotationFromQuaternion(chordRot).setPosition(sleeperPos) });
       nextSleeperDist += SLEEPER_SPACING;
     }
@@ -667,7 +681,38 @@ function buildOpenTrack(ctx, parent, element, ride, assets) {
       const tileZ = Math.floor(bentPos.z / 4);
       const groundY = ctx.surfaceHeight ? ctx.surfaceHeight(tileX, tileZ) : 4;
 
-      if (base > groundY + 0.60) {
+      if (graded) {
+        const bedPos = bentPos.clone().add(new THREE.Vector3(0, 0.5, 0)).addScaledVector(up, -0.44);
+        const feet = [-0.72, 0.72].map(offset => {
+          const top = bedPos.clone().addScaledVector(normal, offset);
+          const ground = ctx.surfaceHeight?.(Math.floor(top.x / 4), Math.floor(top.z / 4));
+          if (!Number.isFinite(ground)) throw new Error('Wooden support ground is unavailable.');
+          return { top, ground, height: top.y - ground };
+        });
+        const yawForward = new THREE.Vector3(fwd.x, 0, fwd.z).normalize();
+        const yawRotation = new THREE.Quaternion().setFromRotationMatrix(makeBasisMatrix(yawForward, new THREE.Vector3(0, 1, 0), bedPos));
+        for (const foot of feet) {
+          if (foot.height <= 0.06) continue;
+          const postGeometry = createPhysicalBox(0.14, foot.height, 0.14);
+          disposables.push(postGeometry);
+          const center = foot.top.clone(); center.y = foot.ground + foot.height / 2;
+          bucketTimber.push({ geometry: postGeometry, matrix: new THREE.Matrix4().makeRotationFromQuaternion(yawRotation).setPosition(center) });
+        }
+        const groundMax = Math.max(...feet.map(foot => foot.ground));
+        const span = bedPos.y - groundMax;
+        if (span > 0.60) {
+          const tiers = Math.max(1, Math.floor(span / 1.8));
+          for (let tier = 1; tier <= tiers; tier++) {
+            const ledger = bedPos.clone(); ledger.y = groundMax + tier * span / (tiers + 1);
+            bucketTimber.push({ geometry: geoBentLedger, matrix: new THREE.Matrix4().makeRotationFromQuaternion(yawRotation).setPosition(ledger) });
+          }
+          const bottom = feet[0].top.clone(); bottom.y = feet[0].ground + 0.20;
+          const top = feet[1].top.clone(), delta = top.clone().sub(bottom), braceLength = delta.length();
+          const braceRotation = new THREE.Quaternion().setFromUnitVectors(new THREE.Vector3(0, 1, 0), delta.normalize());
+          const geometry = ctx.geometry('unit-cylinder', () => new THREE.CylinderGeometry(.5, .5, 1, 12));
+          bucketTimber.push({ geometry, matrix: new THREE.Matrix4().compose(bottom.add(top).multiplyScalar(0.5), braceRotation, new THREE.Vector3(.09, braceLength, .09)) });
+        }
+      } else if (base > groundY + 0.60) {
         const heightSpan = (base + 0.06) - groundY;
         const postCenterY = groundY + heightSpan * 0.5;
 

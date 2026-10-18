@@ -1,0 +1,138 @@
+{
+  "status": "ROOT_ACCEPTED_FINITE_BALLOON_NEW_PARK_PAID_OWNER_VENDOR_FREE_RELOAD",
+  "UTC": "2026-10-18T01:44:44.266150+00:00",
+  "versions": {
+    "save": 18,
+    "content": 11,
+    "protocol": 11
+  },
+  "cpuAcceptanceSHA256": "1c3fea6f7ef810510cd7d2b74ba19fee75800ee715e9c0709ab7d083c078a3de",
+  "assetAcceptanceSHA256": "b2c274745adc5a9b40d084454ad1a362577b370d1ed037630c3e65856f44cd56",
+  "finalBindingSHA256": "f42b443821f3a6e32b5689313194743cf1cdd48809f80fcf67a6b9f1589e97be",
+  "driverSHA256": "547f02064e1f21c14c8d6aac5e061b92d0a1dee74985c33ffdd2f37b4677d902",
+  "oneShotGOSHA256": "a7ea553d4b130bc7a2b1c5c0c504d9bdbc215a9688956bdaa008a5dcbd98effe",
+  "independentActualReceipt": {
+    "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/reviewer-receipts/balloon-new-park-actual-sol-high-r1.md",
+    "bytes": 8155,
+    "sha256": "1d8422dbe9f7ce7a0cac2e8a324d8035cf988d28db7b45038fa990783792bb69",
+    "scope": "Separate actual browser-original audit; reviewer authored held-loader canonical tests and disclosed that dependency."
+  },
+  "custody": {
+    "archive": {
+      "bytes": 43786460,
+      "sha256": "bb1ed4d7137a31adc9f9225ae72190d68ed2fd73f961956158c5e1f4680ce7a1"
+    },
+    "rootRetention": {
+      "bytes": 251461,
+      "sha256": "b1496b4cf01e68e66df91545b39bc4c2e4cb638f60f5b01d7ed1d61ca6122a69"
+    },
+    "logicalOriginals": 273,
+    "logicalBytes": 325314929,
+    "uniqueObjects": 252,
+    "newObjects": 104,
+    "exactKnownUniqueObjects": 148,
+    "allOriginalsRootAndIndependentRehashed": true,
+    "immutableKnownIndexUnchanged": true,
+    "opaqueHistoricalSavesDecoded": false,
+    "storage": "Immutable exact-byte logical hardlinks avoid duplicating retained bytes."
+  },
+  "actual": {
+    "SSHWait": 0,
+    "SSHChildReaped": true,
+    "forced": false,
+    "collectorPID": 337584,
+    "recorderPID": 337595,
+    "driverPID": 337596,
+    "chromePID": 337598,
+    "driverWait": 0,
+    "chromeWait": 0,
+    "recorderWait": 0,
+    "nativeReplyMilliseconds": 1940.9,
+    "nativeInteractiveMilliseconds": 2216.3,
+    "applicationLimitMilliseconds": 20000,
+    "oneTrustedNewParkAndConfirm": true,
+    "firstQualifyingObservation": {
+      "startTick": 4877,
+      "observedTick": 10272,
+      "additionalObservedTicks": 5395,
+      "sales": 1,
+      "income": 9,
+      "owner": 14,
+      "colour": 11,
+      "wallPredicate": true
+    },
+    "correlatedPause": {
+      "tick": 10628,
+      "additionalTicksAfterObservation": 356,
+      "vendorSales": 3,
+      "vendorIncome": 27,
+      "owner": 14,
+      "earnedRides": 3,
+      "colour": 11
+    },
+    "noExactTransactionOrChoiceCallClaim": true,
+    "priceAndSpeedCorrelatedSuccess": true,
+    "naturalDemandOrHistoryInjection": false,
+    "vendorRemovedRetiredSales": 3,
+    "vendorRemovedRetiredIncome": 27,
+    "ordinarySavedAndFreshReloadedBytes": {
+      "bytes": 913866,
+      "sha256": "7a9db466f53beeb628ea5f0e11c809b48b8f25ece473e3f2986503cab92f4f58"
+    },
+    "secondWorkerIndependentHeldPool": true,
+    "originalShippingBodies": 369,
+    "uniqueConsumedPaths": 134,
+    "requiredBodyPathsObserved": 68,
+    "actualWorkers": 2,
+    "workerGraphPathsEach": 47,
+    "PNGResponseStageCaptures": 42,
+    "uniqueCapturedPNGURLs": 11,
+    "interceptionCandidateCount": 26,
+    "bodyLoadingAndRuntimeErrors": 0,
+    "allSourceCompiledWebBeforeAfterEqual": true,
+    "scopedOriginProfileBeforeAfter": {
+      "bytes": 342,
+      "sha256": "a3c82370bd92385b83051dfa5b981ba8b9dfec51d326938292fa369456373e46"
+    },
+    "routineOwnedClosure": {
+      "owners": [],
+      "eligible": [],
+      "unknown": [],
+      "zombies": [],
+      "ports4181And9228Closed": true,
+      "signals": [],
+      "cleanupErrors": []
+    },
+    "netLog": {
+      "bytes": 7929372,
+      "sha256": "ca1928b1473f1bae96098f23659eb3a82d7eee2d5031c7ede85055d550d2591a"
+    },
+    "netLogEvents": 56747
+  },
+  "visualAdoption": {
+    "rootViewedAllThreeActual1920x1080Originals": true,
+    "images": {
+      "balloon-vendor-inspector-1920.png": {
+        "bytes": 1508336,
+        "sha256": "c8d803310c822c4c74c11ca88d510f2a670dce8638c67eb6946d46d461590f55"
+      },
+      "balloon-natural-owner-1920.png": {
+        "bytes": 2590422,
+        "sha256": "f9ee2a232a39308caa165b374fbd9e5c74af48e884be6aa81f38fe1257fb27fc"
+      },
+      "balloon-vendor-free-owner-1920.png": {
+        "bytes": 2586210,
+        "sha256": "6ce9052114e2e9f727511dbd1f4218fc6388c620fa9de183251b621307060c32"
+      }
+    },
+    "decision": "Adopt finite Balloon integration: visible yellow prop, readable matching guest inspector, retained appearance after actual vendor-free ordinary reload. Wide vendor overview does not establish close-up stall craft.",
+    "independentAGYPixelReview": "Initial delegation omitted exact filenames and failed before actual reads; exact-path correction remains pending, not counted as pixel proof."
+  },
+  "scope": "Finite independently authored Balloon retail and visible saved guest ownership integrated with the actual Classic browser. No source/payload publication yet.",
+  "limits": [
+    "No original-game numeric or asset identity, full-game fidelity, precise hand/string/rail contact, human acceptance or representative integrated-GPU/performance claim.",
+    "Native colour0 has canonical coverage only; actual disposal/forced cancellation/fault migration not exercised.",
+    "Public HTTPS/embedded Blob consumer acceptance is separate; old U HOLD remains unchanged.",
+    "Historical R3 strict120s transport/wait hold remains unchanged by current600s canonical scope."
+  ]
+}

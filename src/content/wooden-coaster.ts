@@ -1,12 +1,11 @@
 import type {PieceRule,RideProfile,Rules} from '../simulation/types.js';
 import {woodenFootprints} from './wooden-footprints.js';
+import {quarterCurveSamples} from './curve-samples.js';
 
 export const woodenPieces:Record<string,PieceRule>={};
 for(const key of ['flat','left','right','station']){
  const curved=key==='left'||key==='right',sign=key==='left'?-1:1,count=curved?64:16;
- woodenPieces[key]={price:key==='station'?101:curved?160:61,station:key==='station',entry:{pitch:0,bank:0},end:{x:curved?128:32,y:curved?sign*128:0,z:0,turn:curved?sign:0,pitch:0,bank:0},cells:[{x:0,y:0,low:0,high:key==='station'?40:24,mask:15}],motion:{chain:false,brake:null,samples:Array.from({length:count+1},(_,i)=>{
-  const angle=i*Math.PI/(2*count);return{x:curved?(i===count?128:128*Math.sin(angle)):32*i/count,y:curved?(i===count?sign*128:sign*128*(1-Math.cos(angle))):0,z:0};
- })}};
+ woodenPieces[key]={price:key==='station'?101:curved?160:61,station:key==='station',entry:{pitch:0,bank:0},end:{x:curved?128:32,y:curved?sign*128:0,z:0,turn:curved?sign:0,pitch:0,bank:0},cells:[{x:0,y:0,low:0,high:key==='station'?40:24,mask:15}],motion:{chain:false,brake:null,samples:curved?quarterCurveSamples(64,sign,128):Array.from({length:count+1},(_,i)=>({x:32*i/count,y:0,z:0}))}};
 }
 
 export function woodenProfileRecord(footprints:RideProfile['footprints']):RideProfile{

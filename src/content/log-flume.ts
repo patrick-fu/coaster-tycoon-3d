@@ -1,5 +1,6 @@
 import type {Attitude,PieceRule,Rules,Vector} from '../simulation/types.js';
 import {ensure} from '../simulation/validation.js';
+import {quarterCurveSamples} from './curve-samples.js';
 
 export const flumeProfileId='independent.log-flume-v1';
 export const flumePieceIds=['station','channel','splash','left','right','lift-start','lift','lift-end','drop-start','drop','drop-end'] as const;
@@ -35,7 +36,7 @@ for(const id of flumePieceIds){
  const pitchIn:Attitude=(lift||drop)&&!id.endsWith('start')?(lift?1:-1):0,pitchOut:Attitude=(lift||drop)&&!id.endsWith('end')?(lift?1:-1):0;
  const finish=flumeLocalFrame(id,1).point;
  const price=id==='station'?300:id==='splash'?180:curve?250:id==='lift'?150:id==='lift-start'||id==='lift-end'?200:id==='drop'?140:drop?180:100;
- flumePieces[id]={price,station:id==='station',entry:{pitch:pitchIn,bank:0},end:{...finish,turn:id==='left'?-1:id==='right'?1:0,pitch:pitchOut,bank:0},cells:[{x:0,y:0,low:Math.min(0,finish.z),high:Math.max(0,finish.z)+24,mask:15}],motion:{chain:lift,brake:id==='splash'?50:null,samples:Array.from({length:count+1},(_,i)=>flumeLocalFrame(id,i/count).point)}};
+ flumePieces[id]={price,station:id==='station',entry:{pitch:pitchIn,bank:0},end:{...finish,turn:id==='left'?-1:id==='right'?1:0,pitch:pitchOut,bank:0},cells:[{x:0,y:0,low:Math.min(0,finish.z),high:Math.max(0,finish.z)+24,mask:15}],motion:{chain:lift,brake:id==='splash'?50:null,samples:curve?quarterCurveSamples(64,id==='left'?-1:1,64):Array.from({length:count+1},(_,i)=>flumeLocalFrame(id,i/count).point)}};
 }
 for(const seat of flumeCandidate.seats)Object.freeze(seat);
 Object.freeze(flumeCandidate.seats);Object.freeze(flumeCandidate);Object.freeze(flumePieceIds);

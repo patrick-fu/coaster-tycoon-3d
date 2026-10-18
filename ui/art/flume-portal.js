@@ -160,9 +160,13 @@ export function createFlumePortal(ctx, parent, portal, station, frames, material
   addBox(buckets.timber, -0.395, -0.365, -2.00, -1.20, 0.57, 0.61);
   addBox(buckets.timber, -0.40, 0.58, -1.22, -1.18, 0.96, 1.02);
   addBox(buckets.timber, -0.40, 0.58, -1.215, -1.185, 0.57, 0.61);
+  addBox(buckets.timber, 0.40, 1.305, -1.98, -1.94, 0.96, 1.02);
+  addBox(buckets.timber, 0.40, 1.305, -1.975, -1.945, 0.57, 0.61);
   addBox(buckets.timber, -0.40, -0.36, -1.22, -1.18, 0.14, 1.02);
   addBox(buckets.timber, -0.40, -0.36, -2.00, -1.96, 0.14, 1.02);
   addBox(buckets.timber, 1.305, 1.345, -2.00, -1.96, 0.14, 1.02);
+  addBox(buckets.timber, 1.305, 1.345, -1.22, -1.18, 0.14, 1.02);
+  addBox(buckets.timber, 0.55, 0.59, -1.22, -1.18, 0.14, 1.02);
   // 6. Portal entry jambs, lintel & restrained steel hardware outside .60m corridor
   addBox(buckets.timber, -0.40, -0.34, -1.98, -1.92, 0.14, 2.20);
   addBox(buckets.timber, 0.34, 0.40, -1.98, -1.92, 0.14, 2.20);
@@ -173,18 +177,62 @@ export function createFlumePortal(ctx, parent, portal, station, frames, material
   addBox(buckets.metal, -0.36, -0.32, -1.99, -1.91, 2.06, 2.10);
   addBox(buckets.metal, 0.32, 0.36, -1.99, -1.91, 2.06, 2.10);
   // 7. Legible role signage facing approach path within b[-2,2]
-  const roleText = portal.role === 'entrance' ? 'ENTRANCE' : 'EXIT';
-  const signMesh = ctx.text(portalGroup, roleText, {
-    width: 0.68, height: 0.20, color: '#fbf4dc',
-    background: portal.role === 'entrance' ? '#1e3f28' : '#3b201e',
+  const isEntrance = portal.role === 'entrance';
+  const roleText = isEntrance ? 'IN' : 'OUT';
+  const roleKey = `flume:portal:${isEntrance ? 'in' : 'out'}`;
+  const roleMap = ctx.texture(roleKey, 512, 128, (c, w, h) => {
+    const bg = isEntrance ? '#1a3f24' : '#5a251b';
+    const fg = '#fbf4dc';
+    c.fillStyle = bg;
+    c.fillRect(0, 0, w, h);
+    c.strokeStyle = fg;
+    c.lineWidth = 6;
+    c.strokeRect(8, 8, w - 16, h - 16);
+    c.strokeStyle = isEntrance ? 'rgba(251, 244, 220, 0.35)' : 'rgba(251, 244, 220, 0.32)';
+    c.lineWidth = 1.5;
+    c.strokeRect(14, 14, w - 28, h - 28);
+    c.fillStyle = fg;
+    c.font = 'bold 84px sans-serif';
+    c.textAlign = 'center';
+    c.textBaseline = 'middle';
+    c.fillText(roleText, w / 2, h / 2 + 1);
   });
+  const roleMat = ctx.material(roleKey, {
+    map: roleMap,
+    roughness: 0.56,
+    side: THREE.DoubleSide,
+    transparent: false,
+    depthWrite: true,
+  });
+  const signMesh = ctx.add(
+    portalGroup,
+    ctx.geometry('label-plane', () => new THREE.PlaneGeometry(1, 1)),
+    roleMat,
+    [0, 0, 0],
+    [0.68, 0.20, 1],
+  );
   if (signMesh) {
-    const signPos = new THREE.Vector3(side * (4 - (-1.96)), 2.16, -2.00).applyMatrix4(stationBasis);
+    const signPos = new THREE.Vector3(side * (4 - (-2.00)), 2.16, -2.00).applyMatrix4(stationBasis);
     const fwdSign = new THREE.Vector3().setFromMatrixColumn(stationBasis, 0).multiplyScalar(side);
     const upSign = new THREE.Vector3().setFromMatrixColumn(stationBasis, 1);
     const rightSign = new THREE.Vector3().crossVectors(upSign, fwdSign).normalize();
     signMesh.position.copy(signPos);
     signMesh.quaternion.setFromRotationMatrix(new THREE.Matrix4().makeBasis(rightSign, upSign, fwdSign));
+  }
+  const revSignMesh = ctx.add(
+    portalGroup,
+    ctx.geometry('label-plane', () => new THREE.PlaneGeometry(1, 1)),
+    roleMat,
+    [0, 0, 0],
+    [0.68, 0.20, 1],
+  );
+  if (revSignMesh) {
+    const revPos = new THREE.Vector3(side * (4 - (-1.88)), 2.16, -2.00).applyMatrix4(stationBasis);
+    const fwdRev = new THREE.Vector3().setFromMatrixColumn(stationBasis, 0).multiplyScalar(-side);
+    const upRev = new THREE.Vector3().setFromMatrixColumn(stationBasis, 1);
+    const rightRev = new THREE.Vector3().crossVectors(upRev, fwdRev).normalize();
+    revSignMesh.position.copy(revPos);
+    revSignMesh.quaternion.setFromRotationMatrix(new THREE.Matrix4().makeBasis(rightRev, upRev, fwdRev));
   }
   mergeBucket(ctx, portalGroup, materials.boards, buckets.boards);
   mergeBucket(ctx, portalGroup, materials.timber, buckets.timber);

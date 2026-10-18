@@ -154,39 +154,102 @@ function paintFoliageCluster(ctx2d, width, height) {
 }
 
 /**
- * Authored deterministic Caribbean water ripple texture.
- * Seamless periodic wavelets and turquoise foam crests without square grid seams.
+ * Authored deterministic restrained teal water ripple texture.
+ * Seamless periodic wavelets, subtle caustic bands, and low-contrast crests.
  */
 function paintWaterRipples(ctx2d, width, height) {
-  ctx2d.fillStyle = '#257888';
+  ctx2d.fillStyle = '#124855';
   ctx2d.fillRect(0, 0, width, height);
 
   const pi2 = Math.PI * 2;
-  for (let y = 0; y < height; y++) {
-    const ny = y / height;
-    for (let x = 0; x < width; x += 2) {
-      const nx = x / width;
-      // Two integer periodic harmonics guarantee 100% seamless tile-to-tile continuity
-      const wave1 = Math.sin(ny * pi2 * 4 + Math.sin(nx * pi2 * 2) * 1.2);
-      const wave2 = Math.cos(ny * pi2 * 8 + Math.cos(nx * pi2 * 4) * 0.8);
-      const wave = wave1 * 0.6 + wave2 * 0.4;
 
-      if (wave > 0.72) {
-        ctx2d.fillStyle = 'rgba(215, 248, 255, 0.45)';
-        ctx2d.fillRect(x, y, 2, 1);
-      } else if (wave > 0.35) {
-        // Sunlit turquoise ripple crest
-        const alpha = 0.15 + (wave - 0.35) * 0.45;
-        ctx2d.fillStyle = `rgba(90, 208, 224, ${alpha})`;
-        ctx2d.fillRect(x, y, 2, 1);
-      } else if (wave < -0.3) {
-        // Deeper trough shadow
-        const alpha = 0.12 + (-wave - 0.3) * 0.35;
-        ctx2d.fillStyle = `rgba(20, 80, 92, ${alpha})`;
-        ctx2d.fillRect(x, y, 2, 1);
+  // 2. Small wrapped varied-angle wavelets (non-horizontal crests, boundary-crossing coverage)
+  const wavelets = [
+    { qx: 0.01, qy: 0.28, len: 9, curve: 1.1, tx: 0.95, ty: 0.31 },
+    { qx: 0.99, qy: 0.65, len: 10, curve: -1.2, tx: 0.91, ty: -0.41 },
+    { qx: 0.44, qy: 0.01, len: 9, curve: 1.0, tx: 0.85, ty: 0.53 },
+    { qx: 0.58, qy: 0.99, len: 9, curve: -1.1, tx: 0.81, ty: -0.59 },
+    { qx: 0.02, qy: 0.02, len: 8, curve: 1.0, tx: 0.98, ty: 0.21 },
+    { qx: 0.98, qy: 0.98, len: 8, curve: -1.0, tx: 0.96, ty: -0.28 },
+    { qx: 0.98, qy: 0.02, len: 8, curve: 0.9, tx: 0.90, ty: 0.44 },
+    { qx: 0.02, qy: 0.98, len: 8, curve: -0.9, tx: 0.87, ty: -0.50 },
+    { qx: 0.22, qy: 0.15, len: 9, curve: 1.2, tx: 0.94, ty: 0.34 },
+    { qx: 0.72, qy: 0.16, len: 8, curve: -1.0, tx: 0.74, ty: -0.67 },
+    { qx: 0.38, qy: 0.34, len: 10, curve: 1.3, tx: 0.79, ty: 0.62 },
+    { qx: 0.84, qy: 0.36, len: 8, curve: -1.1, tx: 0.98, ty: -0.17 },
+    { qx: 0.16, qy: 0.50, len: 9, curve: 1.1, tx: 0.97, ty: 0.26 },
+    { qx: 0.64, qy: 0.48, len: 11, curve: -1.3, tx: 0.88, ty: -0.47 },
+    { qx: 0.34, qy: 0.68, len: 8, curve: 1.0, tx: 0.83, ty: 0.56 },
+    { qx: 0.82, qy: 0.74, len: 10, curve: -1.2, tx: 0.94, ty: -0.34 },
+    { qx: 0.20, qy: 0.85, len: 9, curve: 1.1, tx: 0.93, ty: 0.37 },
+    { qx: 0.68, qy: 0.84, len: 8, curve: -0.9, tx: 0.83, ty: -0.56 }
+  ];
+
+  ctx2d.lineCap = 'round';
+
+  // Soft crest halos
+  ctx2d.strokeStyle = 'rgba(56, 172, 188, 0.18)';
+  ctx2d.lineWidth = 1.8;
+  ctx2d.beginPath();
+  for (const w of wavelets) {
+    const hl = w.len * 0.5;
+    const dx = hl * w.tx;
+    const dy = hl * w.ty;
+    const cx0 = -w.curve * w.ty;
+    const cy0 = w.curve * w.tx;
+    for (let ox = -1; ox <= 1; ox++) {
+      for (let oy = -1; oy <= 1; oy++) {
+        const cx = (w.qx + ox) * width;
+        const cy = (w.qy + oy) * height;
+        if (cx < -12 || cx > width + 12 || cy < -12 || cy > height + 12) continue;
+        ctx2d.moveTo(cx - dx, cy - dy);
+        ctx2d.quadraticCurveTo(cx + cx0, cy + cy0, cx + dx, cy + dy);
       }
     }
   }
+  ctx2d.stroke();
+
+  // Subtle crisp highlights
+  ctx2d.strokeStyle = 'rgba(215, 245, 250, 0.24)';
+  ctx2d.lineWidth = 0.9;
+  ctx2d.beginPath();
+  for (const w of wavelets) {
+    const hl = w.len * 0.5;
+    const dx = hl * w.tx;
+    const dy = hl * w.ty;
+    const cx0 = -w.curve * w.ty;
+    const cy0 = w.curve * w.tx;
+    for (let ox = -1; ox <= 1; ox++) {
+      for (let oy = -1; oy <= 1; oy++) {
+        const cx = (w.qx + ox) * width;
+        const cy = (w.qy + oy) * height;
+        if (cx < -12 || cx > width + 12 || cy < -12 || cy > height + 12) continue;
+        ctx2d.moveTo(cx - dx, cy - dy);
+        ctx2d.quadraticCurveTo(cx + cx0, cy + cy0, cx + dx, cy + dy);
+      }
+    }
+  }
+  ctx2d.stroke();
+
+  // Delicate glint points
+  ctx2d.fillStyle = 'rgba(235, 250, 253, 0.28)';
+  ctx2d.beginPath();
+  for (const w of wavelets) {
+    const gx0 = -w.curve * 0.5 * w.ty;
+    const gy0 = w.curve * 0.5 * w.tx;
+    for (let ox = -1; ox <= 1; ox++) {
+      for (let oy = -1; oy <= 1; oy++) {
+        const cx = (w.qx + ox) * width;
+        const cy = (w.qy + oy) * height;
+        if (cx < -12 || cx > width + 12 || cy < -12 || cy > height + 12) continue;
+        const gx = cx + gx0;
+        const gy = cy + gy0;
+        ctx2d.moveTo(gx + 0.85, gy);
+        ctx2d.arc(gx, gy, 0.85, 0, pi2);
+      }
+    }
+  }
+  ctx2d.fill();
 }
 
 /**
@@ -652,6 +715,13 @@ function createPetalBlossomGeometry() {
   positions.push(0, -0.08, 0);
   uvs.push(0.5, 0.5);
 
+  // Split the upper/lower rim normals while keeping every triangle position and UV.
+  const bottomRimStart = positions.length / 3;
+  for (let i = 1; i <= segments; i++) {
+    positions.push(...positions.slice(i * 3, i * 3 + 3));
+    uvs.push(...uvs.slice(i * 2, i * 2 + 2));
+  }
+
   for (let i = 1; i <= segments; i++) {
     const next = i === segments ? 1 : i + 1;
     indices.push(0, next, i);
@@ -659,7 +729,7 @@ function createPetalBlossomGeometry() {
 
   for (let i = 1; i <= segments; i++) {
     const next = i === segments ? 1 : i + 1;
-    indices.push(bottomCenterIdx, i, next);
+    indices.push(bottomCenterIdx, bottomRimStart + i - 1, bottomRimStart + next - 1);
   }
 
   const geo = new THREE.BufferGeometry();
@@ -767,6 +837,158 @@ function flowerEyeMesh(ctx, parent, material, x, y, z, sx = 0.12, sy = 0.08, sz 
   return mesh;
 }
 
+function createPointedLeafClusterGeometry() {
+  const positions = [];
+  const uvs = [];
+  const indices = [];
+
+  const leaves = [
+    [0.0, 0.48, 0.14, 0.04, 0.32, 0.24, 0.08],
+    [1.05, 0.50, 0.15, 0.03, 0.30, 0.25, 0.09],
+    [2.10, 0.46, 0.13, 0.05, 0.34, 0.23, 0.07],
+    [3.14, 0.49, 0.14, 0.04, 0.31, 0.25, 0.08],
+    [4.19, 0.47, 0.15, 0.03, 0.33, 0.24, 0.09],
+    [5.24, 0.50, 0.14, 0.04, 0.30, 0.25, 0.08],
+    [0.52, 0.30, 0.22, 0.18, 0.36, 0.16, 0.16],
+    [2.09, 0.28, 0.21, 0.17, 0.38, 0.15, 0.15],
+    [3.66, 0.31, 0.23, 0.19, 0.35, 0.16, 0.17],
+    [5.23, 0.29, 0.22, 0.18, 0.37, 0.15, 0.16]
+  ];
+
+  for (const [a, r, archY, tipY, spread, mr, my] of leaves) {
+    const baseIdx = positions.length / 3;
+    const bx = 0, by = 0.01, bz = 0;
+    const lx = Math.cos(a + spread) * mr, ly = my, lz = Math.sin(a + spread) * mr;
+    const mx = Math.cos(a) * (r * 0.55), myMid = archY, mz = Math.sin(a) * (r * 0.55);
+    const tx = Math.cos(a) * r, ty = tipY, tz = Math.sin(a) * r;
+    const rx = Math.cos(a - spread) * mr, ryMid = my, rz = Math.sin(a - spread) * mr;
+
+    positions.push(
+      bx, by, bz,
+      lx, ly, lz,
+      mx, myMid, mz,
+      tx, ty, tz,
+      rx, ryMid, rz,
+      bx, by, bz,
+      lx, ly, lz,
+      mx, myMid, mz,
+      tx, ty, tz,
+      rx, ryMid, rz
+    );
+
+    uvs.push(
+      0.5, 0.5,
+      0.5 + lx, 0.5 + lz,
+      0.5 + mx, 0.5 + mz,
+      0.5 + tx, 0.5 + tz,
+      0.5 + rx, 0.5 + rz,
+      0.5, 0.5,
+      0.5 + lx, 0.5 + lz,
+      0.5 + mx, 0.5 + mz,
+      0.5 + tx, 0.5 + tz,
+      0.5 + rx, 0.5 + rz
+    );
+
+    const b = baseIdx, l = baseIdx + 1, m = baseIdx + 2, t = baseIdx + 3, rIdx = baseIdx + 4;
+    const b2 = baseIdx + 5, l2 = baseIdx + 6, m2 = baseIdx + 7, t2 = baseIdx + 8, r2 = baseIdx + 9;
+    indices.push(b, l, m, m, l, t, b, m, rIdx, m, t, rIdx);
+    indices.push(b2, m2, l2, m2, t2, l2, b2, r2, m2, m2, r2, t2);
+  }
+
+  const geo = new THREE.BufferGeometry();
+  geo.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
+  geo.setAttribute('uv', new THREE.Float32BufferAttribute(uvs, 2));
+  geo.setIndex(indices);
+  geo.computeVertexNormals();
+
+  geo.computeBoundingBox();
+  const bb = geo.boundingBox;
+  const sx = 1 / Math.max(0.001, bb.max.x - bb.min.x);
+  const sz = 1 / Math.max(0.001, bb.max.z - bb.min.z);
+  const sy = 1 / Math.max(0.001, bb.max.y - bb.min.y);
+  geo.scale(sx, sy, sz);
+  geo.center();
+  geo.computeVertexNormals();
+
+  return geo;
+}
+
+function flowerFoliageMesh(ctx, parent, material, x, y, z, sx = 0.6, sy = 0.12, sz = 0.6, ry = 0) {
+  const geo = typeof ctx.geometry === 'function'
+    ? ctx.geometry('unit-flower-foliage', () => createPointedLeafClusterGeometry())
+    : createPointedLeafClusterGeometry();
+  if (typeof ctx.add === 'function') {
+    return ctx.add(parent, geo, material, [x, y, z], [sx, sy, sz], [0, ry, 0]);
+  }
+  const mesh = new THREE.Mesh(geo, material);
+  mesh.position.set(x, y, z);
+  mesh.scale.set(sx, sy, sz);
+  if (ry) mesh.rotation.y = ry;
+  mesh.castShadow = true;
+  mesh.receiveShadow = true;
+  if (parent) parent.add(mesh);
+  return mesh;
+}
+
+function fountainBasinMesh(ctx, parent, material, x, y, z, sx = 1, sy = 1, sz = 1) {
+  const createGeo = () => {
+    const pts = [
+      new THREE.Vector2(0, 0),
+      new THREE.Vector2(0.925, 0),
+      new THREE.Vector2(0.925, 0.1),
+      new THREE.Vector2(0.895, 0.16),
+      new THREE.Vector2(0.895, 0.34),
+      new THREE.Vector2(0.925, 0.42),
+      new THREE.Vector2(0.925, 0.5),
+      new THREE.Vector2(0.835, 0.5),
+      new THREE.Vector2(0.835, 0.355),
+      new THREE.Vector2(0, 0.355)
+    ];
+    const geo = new THREE.LatheGeometry(pts, 20);
+    const index = geo.getIndex();
+    if (index) {
+      const pos = geo.getAttribute('position');
+      const oldIndices = index.array;
+      const newIndices = [];
+      const vA = new THREE.Vector3();
+      const vB = new THREE.Vector3();
+      const vC = new THREE.Vector3();
+      const ab = new THREE.Vector3();
+      const ac = new THREE.Vector3();
+      const cross = new THREE.Vector3();
+      for (let i = 0; i < oldIndices.length; i += 3) {
+        const a = oldIndices[i];
+        const b = oldIndices[i + 1];
+        const c = oldIndices[i + 2];
+        vA.fromBufferAttribute(pos, a);
+        vB.fromBufferAttribute(pos, b);
+        vC.fromBufferAttribute(pos, c);
+        ab.subVectors(vB, vA);
+        ac.subVectors(vC, vA);
+        cross.crossVectors(ab, ac);
+        if (cross.lengthSq() > 1e-12) {
+          newIndices.push(a, b, c);
+        }
+      }
+      geo.setIndex(newIndices);
+    }
+    return geo;
+  };
+  const geo = typeof ctx.geometry === 'function'
+    ? ctx.geometry('unit-fountain-basin', createGeo)
+    : createGeo();
+  if (typeof ctx.add === 'function') {
+    return ctx.add(parent, geo, material, [x, y, z], [sx, sy, sz]);
+  }
+  const mesh = new THREE.Mesh(geo, material);
+  mesh.position.set(x, y, z);
+  mesh.scale.set(sx, sy, sz);
+  mesh.castShadow = true;
+  mesh.receiveShadow = true;
+  if (parent) parent.add(mesh);
+  return mesh;
+}
+
 function getElevation(ctx, x, y, fallback = 4) {
   if (typeof ctx.surfaceHeight === 'function') {
     return ctx.surfaceHeight(x, y);
@@ -810,7 +1032,7 @@ export function buildEnvironment(ctx, scenery, entry) {
   // and eliminates interior terrain grid lines showing through from below.
   const waterMat = getMat(ctx, 'mat-water-surface', {
     map: waterTex,
-    color: '#3490a0',
+    color: '#ffffff',
     roughness: 0.16,
     metalness: 0.06
   });
@@ -834,6 +1056,9 @@ export function buildEnvironment(ctx, scenery, entry) {
   const boxGeo = typeof ctx.geometry === 'function'
     ? ctx.geometry('unit-box-ground', () => new THREE.BoxGeometry(1, 1, 1))
     : new THREE.BoxGeometry(1, 1, 1);
+  // Exposed edges already have soil strata; turf needs only the upward face.
+  const turfTop = boxGeo.groups[2];
+  boxGeo.setDrawRange(turfTop.start, turfTop.count);
 
   const ground = new THREE.InstancedMesh(boxGeo, groundMat, tileCount);
   ground.receiveShadow = true;
@@ -873,10 +1098,10 @@ export function buildEnvironment(ctx, scenery, entry) {
     // Subtle, gentle organic grass tone variation across park tiles
     if (owned) {
       const v = hash2D(x, y, 43);
-      color.setRGB(0.34 + (v - 0.5) * 0.035, 0.54 + (v - 0.5) * 0.045, 0.26 + (v - 0.5) * 0.025);
+      color.setRGB(0.34 + (v - 0.5) * 0.014, 0.54 + (v - 0.5) * 0.018, 0.26 + (v - 0.5) * 0.010);
     } else {
       const v = hash2D(x, y, 47);
-      color.setRGB(0.28 + (v - 0.5) * 0.025, 0.44 + (v - 0.5) * 0.035, 0.22 + (v - 0.5) * 0.02);
+      color.setRGB(0.28 + (v - 0.5) * 0.010, 0.44 + (v - 0.5) * 0.014, 0.22 + (v - 0.5) * 0.008);
     }
     ground.setColorAt(idx, color);
 
@@ -1017,18 +1242,18 @@ export function buildEnvironment(ctx, scenery, entry) {
     const goldMat = getMat(ctx, 'mat-gate-gold', { color: '#c7a350', roughness: 0.3, metalness: 0.7 });
     const beaconMat = getMat(ctx, 'mat-gate-beacon', { color: '#56cf72', emissive: '#3aa552' });
 
-    for (const off of [-2.2, 2.2]) {
-      boxMesh(ctx, staticParent, creamMat, ex + off, eh + 0.5, ez, 0.72, 1.0, 0.72);
-      boxMesh(ctx, staticParent, cedarMat, ex + off, eh + 2.6, ez, 0.5, 3.2, 0.5);
-      boxMesh(ctx, staticParent, creamMat, ex + off, eh + 4.3, ez, 0.66, 0.24, 0.66);
-      coneMesh(ctx, staticParent, cedarMat, ex + off, eh + 4.75, ez, 0.36, 0.65, 0.36);
+    for (const off of [-1.65, 1.65]) {
+      boxMesh(ctx, staticParent, creamMat, ex + off, eh + 0.5, ez, 0.48, 1.0, 0.48);
+      boxMesh(ctx, staticParent, cedarMat, ex + off, eh + 2.6, ez, 0.38, 3.2, 0.38);
+      boxMesh(ctx, staticParent, creamMat, ex + off, eh + 4.3, ez, 0.48, 0.24, 0.48);
+      coneMesh(ctx, staticParent, cedarMat, ex + off, eh + 4.745, ez, 0.28, 0.65, 0.28);
     }
 
-    boxMesh(ctx, staticParent, cedarMat, ex, eh + 4.25, ez, 4.9, 0.45, 0.52);
-    boxMesh(ctx, staticParent, creamMat, ex, eh + 4.6, ez, 4.5, 0.25, 0.46);
-    boxMesh(ctx, staticParent, roofMat, ex, eh + 5.0, ez, 4.2, 0.55, 0.62);
+    boxMesh(ctx, staticParent, cedarMat, ex, eh + 4.25, ez, 3.78, 0.45, 0.52);
+    boxMesh(ctx, staticParent, creamMat, ex, eh + 4.6, ez, 3.36, 0.25, 0.46);
+    boxMesh(ctx, staticParent, roofMat, ex, eh + 5.0, ez, 3.0, 0.55, 0.62);
 
-    boxMesh(ctx, staticParent, creamMat, ex, eh + 4.25, ez - 0.28, 2.6, 0.65, 0.08);
+    boxMesh(ctx, staticParent, creamMat, ex, eh + 4.25, ez + 0.28, 2.6, 0.65, 0.08);
     if (typeof ctx.text === 'function') {
       ctx.text(staticParent, 'PARK ENTRANCE', {
         x: ex,
@@ -1041,7 +1266,7 @@ export function buildEnvironment(ctx, scenery, entry) {
       });
     }
 
-    for (const off of [-1.35, 1.35]) {
+    for (const off of [-1.12, 1.12]) {
       boxMesh(ctx, staticParent, roofMat, ex + off, eh + 0.48, ez, 0.32, 0.96, 0.6);
       boxMesh(ctx, staticParent, goldMat, ex + off, eh + 0.98, ez, 0.36, 0.06, 0.64);
       cylinderMesh(ctx, staticParent, metalMat, ex + off * 0.75, eh + 0.85, ez, 0.08, 0.25, 0.08);
@@ -1126,11 +1351,17 @@ export function buildPath(ctx, parent, element, scenery) {
     );
   };
 
+  const allowsFrontage = target => target.kind === 'portal'
+    ? target.role === 'entrance' ? isQueue && element.queueFor === target.ride
+      : target.role === 'exit' && !isQueue
+    : !isQueue;
+
   const connectsEntrance = (dx, dy) => {
     const nx = element.tile.x + dx;
     const ny = element.tile.y + dy;
     return elements.some(p =>
       (p.kind === 'portal' || p.kind === 'facility') &&
+      allowsFrontage(p) &&
       p.tile.x === nx &&
       p.tile.y === ny &&
       p.height === element.height &&
@@ -1145,16 +1376,22 @@ export function buildPath(ctx, parent, element, scenery) {
     );
   };
 
-  const east = hasNeighbor(1, 0) || connectsEntrance(1, 0);
-  const west = hasNeighbor(-1, 0) || connectsEntrance(-1, 0);
-  const south = hasNeighbor(0, 1) || connectsEntrance(0, 1);
-  const north = hasNeighbor(0, -1) || connectsEntrance(0, -1);
+  const pathEast = hasNeighbor(1, 0), pathWest = hasNeighbor(-1, 0);
+  const pathSouth = hasNeighbor(0, 1), pathNorth = hasNeighbor(0, -1);
+  const east = pathEast || connectsEntrance(1, 0);
+  const west = pathWest || connectsEntrance(-1, 0);
+  const south = pathSouth || connectsEntrance(0, 1);
+  const north = pathNorth || connectsEntrance(0, -1);
 
-  // 1. Main paving deck
-  boxMesh(ctx, parent, deckMat, x, h + 0.07, z, 3.86, 0.14, 3.86);
+  // Extend only toward connected path tiles; keep narrow ride frontage bridges separate.
+  const extendEast = pathEast ? 0.07 : 0, extendWest = pathWest ? 0.07 : 0;
+  const extendSouth = pathSouth ? 0.07 : 0, extendNorth = pathNorth ? 0.07 : 0;
+  boxMesh(ctx, parent, deckMat, x + (extendEast - extendWest) / 2, h + 0.07,
+    z + (extendSouth - extendNorth) / 2, 3.86 + extendEast + extendWest, 0.14,
+    3.86 + extendSouth + extendNorth);
 
   for(const portal of elements){
-    if(portal.kind!=='portal'||portal.height!==element.height||!ctx.packet?.rides.some(r=>r.id===portal.ride&&r.presentation.kind==='detailed-carousel'))continue;
+    if(portal.kind!=='portal'||!allowsFrontage(portal)||portal.height!==element.height||!ctx.packet?.rides.some(r=>r.id===portal.ride&&r.presentation.kind==='detailed-carousel'))continue;
     const [dx,dy]=[[1,0],[0,1],[-1,0],[0,-1]][portal.direction];
     if(portal.tile.x-dx!==element.tile.x||portal.tile.y-dy!==element.tile.y)continue;
     boxMesh(ctx,parent,deckMat,x+dx*1.965,h+.07,z+dy*1.965,dx ? .07 : 1.6,.14,dy ? .07 : 1.6);
@@ -1368,7 +1605,7 @@ export function buildScenery(ctx, parent, e) {
     // Low stone kerb border with corner boss stones, rich compost loam bed,
     // undulating leafy groundcover cushions, and delicate flowering stems with colorful blossoms.
     const stoneKerbMat = getMat(ctx, 'mat-flower-stone-kerb', { color: '#baa990', roughness: 0.82 });
-    const soilBedMat = getMat(ctx, 'mat-flower-soil-bed', { map: flowerSoilTex, color: '#322013', roughness: 0.92 });
+    const soilBedMat = getMat(ctx, 'mat-flower-soil-bed', { map: flowerSoilTex, color: '#ffffff', roughness: 0.92 });
     const leafBaseMat = getMat(ctx, 'mat-flower-leaf-base', { color: '#386324', roughness: 0.85 });
     const leafCushionMat = getMat(ctx, 'mat-flower-leaf-cushion', { color: '#487d2f', roughness: 0.84 });
     const stemMat = getMat(ctx, 'mat-flower-stem', { color: '#2c541e', roughness: 0.86 });
@@ -1392,12 +1629,16 @@ export function buildScenery(ctx, parent, e) {
     // 2. Dark compost loam bed
     boxMesh(ctx, parent, soilBedMat, x, h + 0.11, z, 3.24, 0.12, 3.24);
 
-    // 3. Low lush leafy groundcover bed cushions
-    sphereMesh(ctx, parent, leafBaseMat, x, h + 0.18, z, 2.2, 0.22, 2.2);
-    sphereMesh(ctx, parent, leafCushionMat, x + 0.85, h + 0.2, z + 0.85, 1.25, 0.24, 1.25);
-    sphereMesh(ctx, parent, leafCushionMat, x - 0.85, h + 0.2, z + 0.85, 1.25, 0.24, 1.25);
-    sphereMesh(ctx, parent, leafCushionMat, x + 0.85, h + 0.2, z - 0.85, 1.25, 0.24, 1.25);
-    sphereMesh(ctx, parent, leafCushionMat, x - 0.85, h + 0.2, z - 0.85, 1.25, 0.24, 1.25);
+    // Small clustered pointed botanical leaves on soil surface
+    flowerFoliageMesh(ctx, parent, leafBaseMat, x, h + 0.23, z, 0.76, 0.12, 0.76, 0.25);
+    for (const ox of [-0.85, 0.85]) {
+      for (const oz of [-0.85, 0.85]) {
+        flowerFoliageMesh(ctx, parent, leafCushionMat, x + ox, h + 0.225, z + oz, 0.62, 0.11, 0.62, ox * 1.2 + oz * 0.7);
+      }
+    }
+    for (const [ox, oz] of [[-1.02, 0], [1.02, 0], [0, -1.02], [0, 1.02]]) {
+      flowerFoliageMesh(ctx, parent, leafBaseMat, x + ox, h + 0.22, z + oz, 0.54, 0.10, 0.54, ox * 0.8 + oz * 1.4);
+    }
 
     // 4. Low flowering stems and delicate petaled blossom heads (finite deterministic variants)
     const variant = seed % 3;
@@ -1406,9 +1647,16 @@ export function buildScenery(ctx, parent, e) {
     const plantFlower = (ox, oz, bloomMat, stemHeight = 0.24, rot = 0) => {
       const fx = x + ox;
       const fz = z + oz;
-      cylinderMesh(ctx, parent, stemMat, fx, h + 0.2 + stemHeight / 2, fz, 0.04, stemHeight, 0.04);
+      cylinderMesh(ctx, parent, stemMat, fx, h + 0.16 + (stemHeight + 0.04) / 2, fz, 0.04, stemHeight + 0.04, 0.04);
       flowerPetalMesh(ctx, parent, bloomMat, fx, h + 0.2 + stemHeight + 0.06, fz, 0.32, 0.12, 0.32, rot);
-      flowerEyeMesh(ctx, parent, stamenMat, fx, h + 0.2 + stemHeight + 0.11, fz, 0.12, 0.07, 0.12);
+      flowerEyeMesh(ctx, parent, stamenMat, fx, h + 0.2 + stemHeight + 0.055, fz, 0.12, 0.07, 0.12);
+
+      const sh2 = stemHeight * 0.78;
+      const cx = fx + (rot > 1 ? 0.15 : -0.15);
+      const cz = fz + (rot > 1 ? -0.13 : 0.13);
+      cylinderMesh(ctx, parent, stemMat, cx, h + 0.16 + (sh2 + 0.04) / 2, cz, 0.035, sh2 + 0.04, 0.035);
+      flowerPetalMesh(ctx, parent, bloomMat, cx, h + 0.2 + sh2 + 0.05, cz, 0.26, 0.10, 0.26, rot + 0.6);
+      flowerEyeMesh(ctx, parent, stamenMat, cx, h + 0.2 + sh2 + 0.045, cz, 0.10, 0.06, 0.10);
     };
 
     if (variant === 0) {
@@ -1416,7 +1664,7 @@ export function buildScenery(ctx, parent, e) {
       cylinderMesh(ctx, parent, stoneKerbMat, x, h + 0.32, z, 0.44, 0.38, 0.44);
       sphereMesh(ctx, parent, leafCushionMat, x, h + 0.52, z, 0.5, 0.22, 0.5);
       flowerPetalMesh(ctx, parent, whiteBloomMat, x, h + 0.64, z, 0.44, 0.16, 0.44, 0.35);
-      flowerEyeMesh(ctx, parent, stamenMat, x, h + 0.71, z, 0.16, 0.09, 0.16);
+      flowerEyeMesh(ctx, parent, stamenMat, x, h + 0.635, z, 0.16, 0.09, 0.16);
 
       plantFlower(0.65, 0, redBloomMat, 0.24, 0.2);
       plantFlower(-0.65, 0, redBloomMat, 0.24, 0.8);
@@ -1437,7 +1685,7 @@ export function buildScenery(ctx, parent, e) {
       cylinderMesh(ctx, parent, stoneKerbMat, x, h + 0.28, z, 0.36, 0.3, 0.36);
       sphereMesh(ctx, parent, leafCushionMat, x, h + 0.46, z, 0.45, 0.18, 0.45);
       flowerPetalMesh(ctx, parent, yellowBloomMat, x, h + 0.58, z, 0.42, 0.15, 0.42, 0.5);
-      flowerEyeMesh(ctx, parent, stamenMat, x, h + 0.65, z, 0.15, 0.08, 0.15);
+      flowerEyeMesh(ctx, parent, stamenMat, x, h + 0.575, z, 0.15, 0.08, 0.15);
 
       plantFlower(0.55, 0.55, pinkBloomMat, 0.24, 0.4);
       plantFlower(-0.55, 0.55, pinkBloomMat, 0.24, 1.0);
@@ -1471,11 +1719,19 @@ export function buildScenery(ctx, parent, e) {
     const plinthMat = getMat(ctx, 'mat-scenery-hedge-plinth', { color: '#8e826e', roughness: 0.84 });
 
     boxMesh(ctx, parent, plinthMat, x, h + 0.06, z, 3.7, 0.12, 1.3);
-    boxMesh(ctx, parent, hedgeMat, x, h + 0.7, z, 3.5, 1.25, 1.15);
-    boxMesh(ctx, parent, hedgeMat, x, h + 1.35, z, 3.3, 0.18, 0.95);
-    sphereMesh(ctx, parent, hedgeMat, x - 1.45, h + 1.48, z, 0.4, 0.4, 0.4);
-    sphereMesh(ctx, parent, hedgeMat, x + 1.45, h + 1.48, z, 0.4, 0.4, 0.4);
-    // Total hedge height: ~1.68m <= 2m
+    boxMesh(ctx, parent, hedgeMat, x, h + 0.54, z, 3.3, 0.84, 0.96);
+    boxMesh(ctx, parent, hedgeMat, x, h + 1.02, z, 3.2, 0.28, 0.82);
+    for (const ox of [-1.5, 1.5]) {
+      sphereMesh(ctx, parent, hedgeMat, x + ox, h + 0.65, z, 0.45, 1.05, 0.92);
+    }
+    for (const ox of [-0.85, 0.85]) {
+      for (const oz of [-0.42, 0.42]) {
+        sphereMesh(ctx, parent, hedgeMat, x + ox, h + 0.62, z + oz, 1.6, 0.92, 0.28);
+      }
+    }
+    for (const ox of [-1.0, 0, 1.0]) {
+      sphereMesh(ctx, parent, hedgeMat, x + ox, h + 1.16, z, 1.45, 0.28, 0.78);
+    }
   } else if (type === 'lamp') {
     // Victorian heritage cast-iron park lantern
     const ironMat = getMat(ctx, 'mat-scenery-lamp-iron', { color: '#2b3135', roughness: 0.45, metalness: 0.75 });
@@ -1487,12 +1743,20 @@ export function buildScenery(ctx, parent, e) {
     });
 
     boxMesh(ctx, parent, ironMat, x, h + 0.2, z, 0.55, 0.4, 0.55);
+    cylinderMesh(ctx, parent, ironMat, x, h + 0.44, z, 0.22, 0.08, 0.22);
     cylinderMesh(ctx, parent, ironMat, x, h + 1.5, z, 0.14, 2.2, 0.14);
     cylinderMesh(ctx, parent, ironMat, x, h + 2.5, z, 0.24, 0.12, 0.24);
+    boxMesh(ctx, parent, ironMat, x, h + 2.60, z, 0.46, 0.08, 0.46);
     boxMesh(ctx, parent, glassMat, x, h + 2.85, z, 0.38, 0.5, 0.38);
+    // Opaque corner frames sit proud of the luminous core without adding lights.
+    for (const dx of [-0.175, 0.175]) {
+      for (const dz of [-0.175, 0.175]) {
+        boxMesh(ctx, parent, ironMat, x + dx, h + 2.85, z + dz, 0.04, 0.5, 0.04);
+      }
+    }
+    boxMesh(ctx, parent, ironMat, x, h + 3.08, z, 0.44, 0.08, 0.44);
     coneMesh(ctx, parent, ironMat, x, h + 3.22, z, 0.44, 0.36, 0.44);
     cylinderMesh(ctx, parent, ironMat, x, h + 3.48, z, 0.05, 0.22, 0.05);
-    // Total lamp height: ~3.7m <= 5m
   } else if (type === 'fountain') {
     // Two-tier carved stone park fountain with ripple-textured basin water
     const stoneMat = getMat(ctx, 'mat-scenery-fountain-stone', { color: '#c7bea8', roughness: 0.78 });
@@ -1509,7 +1773,7 @@ export function buildScenery(ctx, parent, e) {
       opacity: 0.65
     });
 
-    cylinderMesh(ctx, parent, stoneMat, x, h + 0.25, z, 1.85, 0.5, 1.85);
+    fountainBasinMesh(ctx, parent, stoneMat, x, h, z);
     cylinderMesh(ctx, parent, basinWaterMat, x, h + 0.38, z, 1.68, 0.1, 1.68);
     cylinderMesh(ctx, parent, stoneMat, x, h + 0.8, z, 0.42, 0.9, 0.42);
     cylinderMesh(ctx, parent, stoneMat, x, h + 1.25, z, 0.95, 0.22, 0.95);
@@ -1518,7 +1782,7 @@ export function buildScenery(ctx, parent, e) {
 
     coneMesh(ctx, parent, jetMat, x, h + 1.85, z, 0.2, 0.65, 0.2);
     for (const [dx, dz] of [[0.55, 0], [-0.55, 0], [0, 0.55], [0, -0.55]]) {
-      cylinderMesh(ctx, parent, jetMat, x + dx, h + 0.85, z + dz, 0.06, 0.85, 0.06, dz ? 0.35 : 0, 0, dx ? -0.35 : 0);
+      cylinderMesh(ctx, parent, jetMat, x + dx, h + 0.85, z + dz, 0.06, 0.85, 0.06, Math.sign(dz)*0.35, 0, -Math.sign(dx)*0.35);
     }
     // Total fountain height: ~2.5m <= 3m
   } else if (type === 'rock') {

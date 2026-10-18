@@ -1,5 +1,13 @@
 import * as THREE from 'three';
 import {fitModel} from './runtime.js';
+import {
+  GUEST_HAIR_BASE_HEX,
+  GUEST_HEAD_BASE_HEX,
+  GUEST_MATERIAL_FINISH,
+  GUEST_TORSO_BASE_HEX,
+  STAFF_APPEARANCE_COLORS,
+  getGuestAppearance,
+} from './guest-appearance.js';
 
 // Coordinate helpers and game conventions
 const rotate = (x, y, d) => [[x, y], [-y, x], [-x, -y], [y, -x]][d];
@@ -120,11 +128,11 @@ function getStationRoofMaterial(ctx) {
   let roofTexture = null;
   if (ctx && typeof ctx.texture === 'function') {
     roofTexture = ctx.texture('station_roof_shingles_v2', 256, 256, (c2d, w, h) => {
-      const rows = 16;
-      const cols = 8;
+      const rows = 10;
+      const cols = 6;
       const rh = h / rows;
       const cw = w / cols;
-      c2d.fillStyle = '#173623';
+      c2d.fillStyle = '#142e1f';
       c2d.fillRect(0, 0, w, h);
 
       for (let r = 0; r < rows; r++) {
@@ -133,29 +141,27 @@ function getStationRoofMaterial(ctx) {
         for (let c = -1; c <= cols + 1; c++) {
           const x = c * cw + offset;
           const hVal = ((r * 13 + c * 7 + (r * c)) % 5 + 5) % 5;
-          const shingleColors = ['#2e6448', '#346f50', '#27583f', '#387857', '#2c6145'];
+          const shingleColors = ['#244f37', '#29573d', '#204932', '#2c5d42', '#26533a'];
           c2d.fillStyle = shingleColors[hVal];
           c2d.fillRect(x + 1, y + 1, cw - 2, rh - 2);
 
-          // Top bevel highlight (sunlit weather edge)
-          c2d.fillStyle = '#4fa073';
-          c2d.fillRect(x + 1, y + 1, cw - 2, 2);
+          // Restrained top lap highlight (1px gentle weather edge)
+          c2d.fillStyle = '#36724e';
+          c2d.fillRect(x + 1, y + 1, cw - 2, 1);
 
-          // Bottom lap shadow (depth under overlapping shingle course)
-          c2d.fillStyle = '#12291b';
-          c2d.fillRect(x + 1, y + rh - 3, cw - 2, 2);
+          // Bottom course lap shadow (depth under overlapping shingle course)
+          c2d.fillStyle = '#0f2417';
+          c2d.fillRect(x, y + rh - 2, cw, 2);
 
-          // Vertical keyway / joint slit shadows
-          c2d.fillStyle = '#102418';
-          c2d.fillRect(x, y, 1, rh);
-          c2d.fillStyle = '#3c835d';
-          c2d.fillRect(x + cw - 1, y + 1, 1, rh - 2);
+          // Subtle vertical keyway slit shadow (no bright opposite highlight)
+          c2d.fillStyle = '#0d1f14';
+          c2d.fillRect(x, y + 1, 1, rh - 2);
 
           // Subtle shingle grain texture
-          c2d.fillStyle = 'rgba(255, 255, 255, 0.06)';
-          c2d.fillRect(x + Math.floor(cw * 0.3), y + 2, 1, rh - 4);
-          c2d.fillStyle = 'rgba(0, 0, 0, 0.08)';
-          c2d.fillRect(x + Math.floor(cw * 0.7), y + 2, 1, rh - 4);
+          c2d.fillStyle = 'rgba(255, 255, 255, 0.04)';
+          c2d.fillRect(x + Math.floor(cw * 0.35), y + 2, 1, rh - 4);
+          c2d.fillStyle = 'rgba(0, 0, 0, 0.06)';
+          c2d.fillRect(x + Math.floor(cw * 0.68), y + 2, 1, rh - 4);
         }
       }
     });
@@ -316,7 +322,7 @@ function getStationLatticeMaterial(ctx) {
 // ---------------------------------------------------------------------------
 // 1. buildTrack
 // ---------------------------------------------------------------------------
-export function buildTrack(ctx, parent, e, rules) {
+export function buildTrack(ctx, parent, e, rules, scenery) {
   const p = rules?.pieces?.[e.piece];
   if (!p || !p.motion || !Array.isArray(p.motion.samples) || p.motion.samples.length < 2) return;
 
@@ -687,6 +693,11 @@ export function buildTrack(ctx, parent, e, rules) {
       color: '#eee8d7',
       roughness: 0.60
     });
+    const ironMat = getMaterial(ctx, 'coaster_station_iron_bracket', {
+      color: '#34383c',
+      roughness: 0.54,
+      metalness: 0.65
+    });
 
     const rotY = -e.origin.direction * Math.PI / 2;
 
@@ -706,20 +717,27 @@ export function buildTrack(ctx, parent, e, rules) {
     addBox(ctx, stationGroup, deckTrimMat, -1.94, 0.03, 0, 0.08, 0.06, 3.82);
     addBox(ctx, stationGroup, deckTrimMat, 1.94, 0.03, 0, 0.08, 0.06, 3.82);
 
+    // Restrained iron corner plates joining the perimeter curb framing (4 boxes)
+    for (const px of [-1.94, 1.94]) {
+      for (const pz of [-1.88, 1.88]) {
+        addBox(ctx, stationGroup, ironMat, px, 0.032, pz, 0.09, 0.064, 0.09);
+      }
+    }
+
     // Yellow safety markings along track boarding edges with hazard border
     for (const zSide of [-0.95, 0.95]) {
       addBox(ctx, stationGroup, yellowHazardMat, 0, 0.025, zSide, 3.96, 0.02, 0.14);
       addBox(ctx, stationGroup, hazardStripeMat, 0, 0.026, zSide + (zSide > 0 ? 0.08 : -0.08), 3.96, 0.02, 0.03);
     }
 
-    // 2. Structural cedar timber posts with plinths, capitals, knee braces & restrained brass accents
+    // 2. Structural cedar timber posts with plinths, capitals, knee braces & restrained accents
     const postHeight = 3.35;
     for (const px of [-1.82, 1.82]) {
       for (const pz of [-1.75, 1.75]) {
         // Stone plinth footer
         addBox(ctx, stationGroup, stoneMat, px, 0.10, pz, 0.30, 0.20, 0.30);
-        // Restrained brass plinth collar
-        addBox(ctx, stationGroup, brassMat, px, 0.21, pz, 0.24, 0.03, 0.24);
+        // Restrained structural iron plinth collar
+        addBox(ctx, stationGroup, ironMat, px, 0.21, pz, 0.24, 0.03, 0.24);
         // Cedar timber post shaft
         addBox(ctx, stationGroup, cedarPostMat, px, 0.22 + (postHeight - 0.28) / 2, pz, 0.20, postHeight - 0.28, 0.20);
         // Timber capital block at top of post
@@ -736,28 +754,55 @@ export function buildTrack(ctx, parent, e, rules) {
     }
 
     // 3. Platform Railings & Boarding Gates
-    // Back railing (pz = +1.75): full railing with cedar molded handrails, baseboards and opaque lattice
-    addBox(ctx, stationGroup, latticeMat, 0, 0.62, 1.75, 3.30, 0.98, 0.05);
-    addBox(ctx, stationGroup, cedarPostMat, 0, 1.18, 1.75, 3.44, 0.08, 0.12);
-    addBox(ctx, stationGroup, cedarTrimMat, 0, 0.12, 1.75, 3.44, 0.08, 0.10);
-    // Intermediate railing newel posts with restrained brass finials
-    for (const rpx of [-0.90, 0, 0.90]) {
-      addBox(ctx, stationGroup, cedarPostMat, rpx, 0.65, 1.75, 0.10, 1.15, 0.10);
-      addBox(ctx, stationGroup, brassMat, rpx, 1.25, 1.75, 0.07, 0.07, 0.07);
+    let openNegZ = false;
+    let openPosZ = false;
+    if (Array.isArray(scenery?.elements)) {
+      const directions = [[1, 0], [0, 1], [-1, 0], [0, -1]];
+      for (const portal of scenery.elements) {
+        if (
+          portal?.kind === 'portal' &&
+          portal.ride === e.ride &&
+          portal.station === e.id &&
+          (portal.role === 'entrance' || portal.role === 'exit') &&
+          portal.height === e.origin.z &&
+          (portal.direction % 2) !== (e.origin.direction % 2)
+        ) {
+          const offset = directions[portal.direction];
+          if (
+            offset &&
+            portal.tile &&
+            (portal.tile.x + offset[0]) * 32 === e.origin.x &&
+            (portal.tile.y + offset[1]) * 32 === e.origin.y
+          ) {
+            const relDir = (portal.direction - e.origin.direction + 4) % 4;
+            if (relDir === 1) openNegZ = true;
+            else if (relDir === 3) openPosZ = true;
+          }
+        }
+      }
     }
 
-    // Approach side railing (pz = -1.75): left and right railing wings flanking a clean central boarding opening
-    addBox(ctx, stationGroup, latticeMat, -1.35, 0.62, -1.75, 0.74, 0.98, 0.05);
-    addBox(ctx, stationGroup, cedarPostMat, -1.35, 1.18, -1.75, 0.88, 0.08, 0.12);
-    addBox(ctx, stationGroup, cedarTrimMat, -1.35, 0.12, -1.75, 0.88, 0.08, 0.10);
-    addBox(ctx, stationGroup, cedarPostMat, -0.90, 0.65, -1.75, 0.10, 1.15, 0.10);
-    addBox(ctx, stationGroup, brassMat, -0.90, 1.25, -1.75, 0.07, 0.07, 0.07);
-
-    addBox(ctx, stationGroup, latticeMat, 1.35, 0.62, -1.75, 0.74, 0.98, 0.05);
-    addBox(ctx, stationGroup, cedarPostMat, 1.35, 1.18, -1.75, 0.88, 0.08, 0.12);
-    addBox(ctx, stationGroup, cedarTrimMat, 1.35, 0.12, -1.75, 0.88, 0.08, 0.10);
-    addBox(ctx, stationGroup, cedarPostMat, 0.90, 0.65, -1.75, 0.10, 1.15, 0.10);
-    addBox(ctx, stationGroup, brassMat, 0.90, 1.25, -1.75, 0.07, 0.07, 0.07);
+    for (const zSide of [1.75, -1.75]) {
+      const open = zSide > 0 ? openPosZ : openNegZ;
+      if (open) {
+        for (const wx of [-1.35, 1.35]) {
+          addBox(ctx, stationGroup, latticeMat, wx, 0.62, zSide, 0.74, 0.98, 0.05);
+          addBox(ctx, stationGroup, cedarPostMat, wx, 1.18, zSide, 0.88, 0.08, 0.12);
+          addBox(ctx, stationGroup, cedarTrimMat, wx, 0.12, zSide, 0.88, 0.08, 0.10);
+          const postX = wx < 0 ? -0.90 : 0.90;
+          addBox(ctx, stationGroup, cedarPostMat, postX, 0.65, zSide, 0.10, 1.15, 0.10);
+          addBox(ctx, stationGroup, brassMat, postX, 1.25, zSide, 0.07, 0.07, 0.07);
+        }
+      } else {
+        addBox(ctx, stationGroup, latticeMat, 0, 0.62, zSide, 3.30, 0.98, 0.05);
+        addBox(ctx, stationGroup, cedarPostMat, 0, 1.18, zSide, 3.44, 0.08, 0.12);
+        addBox(ctx, stationGroup, cedarTrimMat, 0, 0.12, zSide, 3.44, 0.08, 0.10);
+        for (const rpx of [-0.90, 0, 0.90]) {
+          addBox(ctx, stationGroup, cedarPostMat, rpx, 0.65, zSide, 0.10, 1.15, 0.10);
+          addBox(ctx, stationGroup, brassMat, rpx, 1.25, zSide, 0.07, 0.07, 0.07);
+        }
+      }
+    }
 
     // 4. Roof Structure, Timber Trusses & Finished Cornice
     const canopyBaseY = postHeight + 0.10;
@@ -771,13 +816,19 @@ export function buildTrack(ctx, parent, e, rules) {
     for (const px of [-1.82, 0, 1.82]) {
       addBox(ctx, stationGroup, cedarPostMat, px, canopyBaseY - 0.06, 0, 0.14, 0.14, 3.60);
     }
+    // Restrained structural iron bracket plates joining posts, eaves beams and tie beams (4 boxes)
+    for (const px of [-1.82, 1.82]) {
+      for (const pz of [-1.75, 1.75]) {
+        addBox(ctx, stationGroup, ironMat, px, canopyBaseY - 0.06, pz, 0.18, 0.16, 0.20);
+      }
+    }
 
     // Open Timber Gable Trusses at the station ends (px = -1.90 and 1.90)
     for (const px of [-1.90, 1.90]) {
       // King post at center apex rising from tie beam to ridge
       addBox(ctx, stationGroup, cedarTrimMat, px, canopyBaseY + 0.44, 0, 0.10, 0.88, 0.10);
-      // Restrained brass collar plate at apex
-      addBox(ctx, stationGroup, brassMat, px, canopyBaseY + 0.86, 0, 0.12, 0.05, 0.12);
+      // Restrained structural iron collar plate at apex
+      addBox(ctx, stationGroup, ironMat, px, canopyBaseY + 0.86, 0, 0.12, 0.05, 0.12);
       // Diagonal collar strut braces
       addBox(ctx, stationGroup, cedarTrimMat, px, canopyBaseY + 0.40, -0.65, 0.08, 0.58, 0.08, Math.PI / 4, 0, 0);
       addBox(ctx, stationGroup, cedarTrimMat, px, canopyBaseY + 0.40, 0.65, 0.08, 0.58, 0.08, -Math.PI / 4, 0, 0);
@@ -917,6 +968,10 @@ export function buildPortal(ctx, parent, e, ride) {
   addBox(ctx, portalGroup, deckMat, 0, 0.06, 0, 2.30, 0.10, 2.30);
   addBox(ctx, portalGroup, deckTrimMat, 0, 0.11, -1.10, 2.30, 0.04, 0.08);
   addBox(ctx, portalGroup, deckTrimMat, 0, 0.11, 1.10, 2.30, 0.04, 0.08);
+  const thresholdLen = (Number.isFinite(ctx?.tile) && ctx.tile > 0 ? ctx.tile : 4.0) / 2 - 1.15;
+  if (thresholdLen > 0) {
+    addBox(ctx, portalGroup, deckMat, -1.15 - thresholdLen / 2, 0.06, 0, thresholdLen, 0.10, 1.75);
+  }
 
   // 2. Corner Posts with stone plinths, brass collars and capitals
   const postH = 2.85;
@@ -961,6 +1016,24 @@ export function buildPortal(ctx, parent, e, ride) {
     // 3-arm turnstile rotor
     addBox(ctx, portalGroup, metalMat, 0.85, 0.78, 0, 0.58, 0.05, 0.05);
     addBox(ctx, portalGroup, metalMat, 0.85, 0.78, 0, 0.05, 0.05, 0.58);
+
+    // Static operator nook against south side wall (Z = +0.95), preserving open passage (6 boxes)
+    const nookIronMat = getMaterial(ctx, 'coaster_station_iron_bracket', {
+      color: '#34383c',
+      roughness: 0.54,
+      metalness: 0.65
+    });
+    const nookConsoleMat = getMaterial(ctx, 'portal_operator_console', {
+      color: '#262f28',
+      roughness: 0.44,
+      metalness: 0.32
+    });
+    addBox(ctx, portalGroup, cedarTrimMat, -0.05, 0.48, 0.83, 0.72, 0.62, 0.16);
+    addBox(ctx, portalGroup, cedarMat, -0.05, 0.81, 0.81, 0.80, 0.04, 0.20);
+    addBox(ctx, portalGroup, nookConsoleMat, -0.05, 0.88, 0.82, 0.44, 0.10, 0.16);
+    addBox(ctx, portalGroup, brassMat, -0.05, 0.89, 0.73, 0.36, 0.06, 0.02);
+    addBox(ctx, portalGroup, cedarTrimMat, -0.05, 1.38, 0.91, 0.84, 0.76, 0.04);
+    addBox(ctx, portalGroup, nookIronMat, -0.22, 1.45, 0.87, 0.22, 0.16, 0.08);
   } else {
     // Exit one-way swinging gate stanchion and barrier arm
     addCylinder(ctx, portalGroup, metalMat, 0.85, 0.48, 0, 0.10, 0.84, 0.10);
@@ -1048,8 +1121,9 @@ export function createVehicles(ctx, capacity) {
     const geo = new THREE.BufferGeometry();
     const pos = [];
     const norm = [];
+    const col = [];
 
-    function quad(v0, v1, v2, v3) {
+    function quad(v0, v1, v2, v3, color = 1.0) {
       pos.push(...v0, ...v1, ...v2, ...v0, ...v2, ...v3);
       const ab = new THREE.Vector3(v1[0] - v0[0], v1[1] - v0[1], v1[2] - v0[2]);
       const ac = new THREE.Vector3(v2[0] - v0[0], v2[1] - v0[1], v2[2] - v0[2]);
@@ -1057,45 +1131,67 @@ export function createVehicles(ctx, capacity) {
       for (let k = 0; k < 6; k++) {
         norm.push(n.x, n.y, n.z);
       }
+      const rgb = Array.isArray(color) ? color : [color, color, color];
+      for (let k = 0; k < 6; k++) {
+        col.push(rgb[0], rgb[1], rgb[2]);
+      }
     }
 
-    // Outer car dimensions: length 1.85 (X), height 0.55 (Y), width 1.25 (Z)
-    const xF = 0.95, xN = 1.10, xB = -0.92;
-    const yB = 0.00, yT = 0.52, yChamf = 0.42;
-    const zW = 0.60, zN = 0.38, zChamf = 0.52;
-
-    // Bottom
-    quad([xB, yB, -zW], [xF, yB, -zW], [xF, yB, zW], [xB, yB, zW]);
-
-    // Left side & chamfer
-    quad([xB, yB, zW], [xF, yB, zW], [xF, yChamf, zW], [xB, yChamf, zW]);
-    quad([xB, yChamf, zW], [xF, yChamf, zW], [xF, yT, zChamf], [xB, yT, zChamf]);
-
-    // Right side & chamfer
-    quad([xF, yB, -zW], [xB, yB, -zW], [xB, yChamf, -zW], [xF, yChamf, -zW]);
-    quad([xF, yChamf, -zW], [xB, yChamf, -zW], [xB, yT, -zChamf], [xF, yT, -zChamf]);
-
-    // Aerodynamic nose
-    quad([xF, yB, -zW], [xF, yB, zW], [xN, yB, 0], [xN, yB, 0]);
-    quad([xF, yChamf, zW], [xF, yB, zW], [xN, yB, 0], [xN, yChamf, 0]);
-    quad([xF, yB, -zW], [xF, yChamf, -zW], [xN, yChamf, 0], [xN, yB, 0]);
-    quad([xF, yT, zChamf], [xF, yChamf, zW], [xN, yChamf, 0], [xN, yT, 0]);
-    quad([xF, yChamf, -zW], [xF, yT, -zChamf], [xN, yT, 0], [xN, yChamf, 0]);
-
-    // Rear panel
-    quad([xB, yB, zW], [xB, yB, -zW], [xB, yChamf, -zW], [xB, yChamf, zW]);
-    quad([xB, yChamf, zW], [xB, yChamf, -zW], [xB, yT, -zChamf], [xB, yT, zChamf]);
-
-    // Cockpit opening tub
+    const xB = -0.92, xDash = 0.72, xN = 1.10;
+    const yB = 0.00, ySill = 0.10, yT = 0.52, yChamf = 0.45;
+    const zW = 0.60, zChamf = 0.54;
     const xTubF = 0.65, xTubB = -0.72, yFloor = 0.16, zTub = 0.44;
-    quad([xTubB, yFloor, -zTub], [xTubF, yFloor, -zTub], [xTubF, yFloor, zTub], [xTubB, yFloor, zTub]);
-    quad([xTubB, yFloor, zTub], [xTubF, yFloor, zTub], [xTubF, yT, zTub], [xTubB, yT, zTub]);
-    quad([xTubF, yFloor, -zTub], [xTubB, yFloor, -zTub], [xTubB, yT, -zTub], [xTubF, yT, -zTub]);
-    quad([xTubF, yFloor, zTub], [xTubF, yFloor, -zTub], [xTubF, yT, -zTub], [xTubF, yT, zTub]);
-    quad([xTubB, yFloor, -zTub], [xTubB, yFloor, zTub], [xTubB, yT, zTub], [xTubB, yT, -zTub]);
+    const cBottom = 0.68, cSill = 0.74, cBody = 0.86, cBelt = 1.00;
+    const cRim = 0.92, cHood = 0.95, cGrille = 0.30;
+    const cTubWall = 0.74, cTubFloor = 0.62;
+
+    // Shared ring vertices keep the raked hood, shoulders and nose closed at each join.
+    const sections = [
+      { x: xB, top: yT, shoulder: yChamf, width: zW, crown: zChamf },
+      { x: xDash, top: yT, shoulder: yChamf, width: zW, crown: zChamf },
+      { x: 0.88, top: 0.40, shoulder: 0.34, width: 0.54, crown: 0.38 },
+      { x: xN, top: 0.26, shoulder: 0.20, width: 0.24, crown: 0.18 }
+    ];
+    const rings = sections.map(s => [
+      [s.x, yB, s.width], [s.x, ySill, s.width],
+      [s.x, s.shoulder, s.width], [s.x, s.top, s.crown],
+      [s.x, s.top, -s.crown], [s.x, s.shoulder, -s.width],
+      [s.x, ySill, -s.width], [s.x, yB, -s.width]
+    ]);
+    const edgeColors = [cSill, cBody, cBelt, cHood, cBelt, cBody, cSill, cBottom];
+    for (let section = 0; section < rings.length - 1; section++) {
+      const back = rings[section], front = rings[section + 1];
+      for (let edge = 0; edge < 8; edge++) {
+        if (section === 0 && edge === 3) continue; // Keep the original cockpit open.
+        const next = (edge + 1) % 8;
+        quad(back[edge], front[edge], front[next], back[next], edgeColors[edge]);
+      }
+    }
+
+    quad([xB, yB, -zW], [xB, yB, zW], [xB, ySill, zW], [xB, ySill, -zW], cSill);
+    quad([xB, ySill, -zW], [xB, ySill, zW], [xB, yChamf, zW], [xB, yChamf, -zW], cBody);
+    quad([xB, yChamf, -zW], [xB, yChamf, zW], [xB, yT, zChamf], [xB, yT, -zChamf], cBelt);
+
+    const nose = rings.at(-1);
+    quad(nose[0], nose[7], nose[6], nose[1], cSill);
+    quad(nose[1], nose[6], nose[5], nose[2], cGrille);
+    quad(nose[2], nose[5], nose[4], nose[3], cBelt);
+
+    quad([xTubB, yT, -zChamf], [xB, yT, -zChamf], [xB, yT, zChamf], [xTubB, yT, zChamf], cRim);
+    quad([xDash, yT, -zChamf], [xTubF, yT, -zChamf], [xTubF, yT, zChamf], [xDash, yT, zChamf], cRim);
+    quad([xTubF, yT, zTub], [xTubB, yT, zTub], [xTubB, yT, zChamf], [xTubF, yT, zChamf], cRim);
+    quad([xTubB, yT, -zTub], [xTubF, yT, -zTub], [xTubF, yT, -zChamf], [xTubB, yT, -zChamf], cRim);
+
+    // Cockpit opening tub (wound so normals point inward into tub & floor points UP)
+    quad([xTubF, yFloor, -zTub], [xTubB, yFloor, -zTub], [xTubB, yFloor, zTub], [xTubF, yFloor, zTub], cTubFloor); // floor (+Y)
+    quad([xTubF, yFloor, zTub], [xTubB, yFloor, zTub], [xTubB, yT, zTub], [xTubF, yT, zTub], cTubWall); // left wall (-Z)
+    quad([xTubB, yFloor, -zTub], [xTubF, yFloor, -zTub], [xTubF, yT, -zTub], [xTubB, yT, -zTub], cTubWall); // right wall (+Z)
+    quad([xTubF, yFloor, -zTub], [xTubF, yFloor, zTub], [xTubF, yT, zTub], [xTubF, yT, -zTub], cTubWall); // front wall (-X)
+    quad([xTubB, yFloor, zTub], [xTubB, yFloor, -zTub], [xTubB, yT, -zTub], [xTubB, yT, zTub], cTubWall); // rear wall (+X)
 
     geo.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
     geo.setAttribute('normal', new THREE.Float32BufferAttribute(norm, 3));
+    geo.setAttribute('color', new THREE.Float32BufferAttribute(col, 3));
     geo.computeVertexNormals();
     return geo;
   });
@@ -1106,7 +1202,7 @@ export function createVehicles(ctx, capacity) {
     const pos = [];
     const norm = [];
 
-    function addBoxPart(cx, cy, cz, sx, sy, sz) {
+    function addBox(cx, cy, cz, sx, sy, sz) {
       const hx = sx / 2, hy = sy / 2, hz = sz / 2;
       const faces = [
         { n: [0, 0, 1], q: [[-hx, -hy, hz], [hx, -hy, hz], [hx, hy, hz], [-hx, hy, hz]] },
@@ -1130,14 +1226,138 @@ export function createVehicles(ctx, capacity) {
       }
     }
 
-    // Chassis base
-    addBoxPart(0, -0.08, 0, 1.65, 0.08, 1.05);
+    function addBeveledGuide(cx, cy, cz, sx, sy, sz) {
+      const hxT = sx / 2, hzT = sz / 2;
+      const hxB = hxT * 0.75, hzB = hzT * 0.65;
+      const hy = sy / 2;
+      const yT = cy + hy, yB = cy - hy;
 
-    // Four wheel bogeys (running wheels + guide wheels)
+      function quadFace(a, b, c, d) {
+        pos.push(
+          ...a, ...b, ...c,
+          ...a, ...c, ...d
+        );
+        const ab = new THREE.Vector3(b[0] - a[0], b[1] - a[1], b[2] - a[2]);
+        const ac = new THREE.Vector3(c[0] - a[0], c[1] - a[1], c[2] - a[2]);
+        const n = new THREE.Vector3().crossVectors(ab, ac).normalize();
+        for (let k = 0; k < 6; k++) norm.push(n.x, n.y, n.z);
+      }
+
+      // Top face (+Y normal)
+      quadFace([cx - hxT, yT, cz + hzT], [cx + hxT, yT, cz + hzT], [cx + hxT, yT, cz - hzT], [cx - hxT, yT, cz - hzT]);
+      // Bottom face (-Y normal)
+      quadFace([cx - hxB, yB, cz - hzB], [cx + hxB, yB, cz - hzB], [cx + hxB, yB, cz + hzB], [cx - hxB, yB, cz + hzB]);
+      // Front (+X normal)
+      quadFace([cx + hxB, yB, cz - hzB], [cx + hxT, yT, cz - hzT], [cx + hxT, yT, cz + hzT], [cx + hxB, yB, cz + hzB]);
+      // Back (-X normal)
+      quadFace([cx - hxB, yB, cz + hzB], [cx - hxT, yT, cz + hzT], [cx - hxT, yT, cz - hzT], [cx - hxB, yB, cz - hzB]);
+      // Outer side (+Z normal)
+      quadFace([cx - hxB, yB, cz + hzB], [cx + hxB, yB, cz + hzB], [cx + hxT, yT, cz + hzT], [cx - hxT, yT, cz + hzT]);
+      // Inner side (-Z normal)
+      quadFace([cx + hxB, yB, cz - hzB], [cx - hxB, yB, cz - hzB], [cx - hxT, yT, cz - hzT], [cx + hxT, yT, cz - hzT]);
+    }
+
+    function addWheel(cx, cy, cz, r, width, isOutPositive) {
+      const segs = 8;
+      const hw = width / 2;
+      const zOut = cz + (isOutPositive ? hw : -hw);
+      const zIn = cz + (isOutPositive ? -hw : hw);
+      const outNormZ = isOutPositive ? 1 : -1;
+      const inNormZ = -outNormZ;
+
+      const pts = [];
+      for (let i = 0; i < segs; i++) {
+        const a = (i / segs) * Math.PI * 2;
+        pts.push([Math.cos(a), Math.sin(a)]);
+      }
+
+      // 8-segment cylindrical tread (16 triangles)
+      for (let i = 0; i < segs; i++) {
+        const next = (i + 1) % segs;
+        const [c0, s0] = pts[i];
+        const [c1, s1] = pts[next];
+        const x0 = cx + c0 * r, y0 = cy + s0 * r;
+        const x1 = cx + c1 * r, y1 = cy + s1 * r;
+
+        if (isOutPositive) {
+          pos.push(
+            x0, y0, zIn,  x1, y1, zIn,  x1, y1, zOut,
+            x0, y0, zIn,  x1, y1, zOut, x0, y0, zOut
+          );
+          norm.push(
+            c0, s0, 0,  c1, s1, 0,  c1, s1, 0,
+            c0, s0, 0,  c1, s1, 0,  c0, s0, 0
+          );
+        } else {
+          pos.push(
+            x1, y1, zIn,  x0, y0, zIn,  x0, y0, zOut,
+            x1, y1, zIn,  x0, y0, zOut, x1, y1, zOut
+          );
+          norm.push(
+            c1, s1, 0,  c0, s0, 0,  c0, s0, 0,
+            c1, s1, 0,  c0, s0, 0,  c1, s1, 0
+          );
+        }
+      }
+
+      // Outer hub face (perimeter triangulation from vertex 0, n-2 = 6 triangles)
+      for (let i = 1; i < segs - 1; i++) {
+        const [c0, s0] = pts[0];
+        const [ci, si] = pts[i];
+        const [cn, sn] = pts[i + 1];
+        if (isOutPositive) {
+          pos.push(
+            cx + c0 * r, cy + s0 * r, zOut,
+            cx + ci * r, cy + si * r, zOut,
+            cx + cn * r, cy + sn * r, zOut
+          );
+        } else {
+          pos.push(
+            cx + c0 * r, cy + s0 * r, zOut,
+            cx + cn * r, cy + sn * r, zOut,
+            cx + ci * r, cy + si * r, zOut
+          );
+        }
+        for (let k = 0; k < 3; k++) norm.push(0, 0, outNormZ);
+      }
+
+      // Inner hub face (perimeter triangulation from vertex 0, n-2 = 6 triangles)
+      for (let i = 1; i < segs - 1; i++) {
+        const [c0, s0] = pts[0];
+        const [ci, si] = pts[i];
+        const [cn, sn] = pts[i + 1];
+        if (isOutPositive) {
+          pos.push(
+            cx + c0 * r, cy + s0 * r, zIn,
+            cx + cn * r, cy + sn * r, zIn,
+            cx + ci * r, cy + si * r, zIn
+          );
+        } else {
+          pos.push(
+            cx + c0 * r, cy + s0 * r, zIn,
+            cx + ci * r, cy + si * r, zIn,
+            cx + cn * r, cy + sn * r, zIn
+          );
+        }
+        for (let k = 0; k < 3; k++) norm.push(0, 0, inNormZ);
+      }
+    }
+
+    // Chassis base
+    addBox(0, -0.08, 0, 1.65, 0.08, 1.05);
+
+    // Four wheel assemblies: round wheel disc + axle housing + beveled guide block inside frozen bounds
     for (const bx of [-0.60, 0.60]) {
       for (const bz of [-0.52, 0.52]) {
-        addBoxPart(bx, -0.18, bz, 0.22, 0.16, 0.08); // wheel hub
-        addBoxPart(bx, -0.25, bz + (bz > 0 ? -0.06 : 0.06), 0.16, 0.10, 0.06); // rail guide
+        // Axle housing connecting bogie to chassis within envelope (0.22 x 0.16 x 0.08)
+        addBox(bx, -0.14, bz, 0.20, 0.06, 0.05);
+
+        // 8-segment round wheel disc (axis Z, radius 0.076 <= 0.08, thickness 0.06 <= 0.08)
+        addWheel(bx, -0.18, bz, 0.076, 0.06, bz > 0);
+
+        // Machined beveled guide block at (bx, -0.25, gz), envelope (0.16 x 0.10 x 0.06)
+        const gz = bz + (bz > 0 ? -0.06 : 0.06);
+        addBeveledGuide(bx, -0.25, gz, 0.16, 0.10, 0.06);
       }
     }
 
@@ -1152,38 +1372,134 @@ export function createVehicles(ctx, capacity) {
     const pos = [];
     const norm = [];
 
-    function addBoxPart(cx, cy, cz, sx, sy, sz) {
-      const hx = sx / 2, hy = sy / 2, hz = sz / 2;
-      const faces = [
-        { n: [0, 0, 1], q: [[-hx, -hy, hz], [hx, -hy, hz], [hx, hy, hz], [-hx, hy, hz]] },
-        { n: [0, 0, -1], q: [[hx, -hy, -hz], [-hx, -hy, -hz], [-hx, hy, -hz], [hx, hy, -hz]] },
-        { n: [0, 1, 0], q: [[-hx, hy, hz], [hx, hy, hz], [hx, hy, -hz], [-hx, hy, -hz]] },
-        { n: [0, -1, 0], q: [[-hx, -hy, -hz], [hx, -hy, -hz], [hx, -hy, hz], [-hx, -hy, hz]] },
-        { n: [1, 0, 0], q: [[hx, -hy, hz], [hx, -hy, -hz], [hx, hy, -hz], [hx, hy, hz]] },
-        { n: [-1, 0, 0], q: [[-hx, -hy, -hz], [-hx, -hy, hz], [-hx, hy, hz], [-hx, hy, -hz]] }
-      ];
-      for (const f of faces) {
-        const [a, b, c, d] = f.q;
-        pos.push(
-          cx + a[0], cy + a[1], cz + a[2],
-          cx + b[0], cy + b[1], cz + b[2],
-          cx + c[0], cy + c[1], cz + c[2],
-          cx + a[0], cy + a[1], cz + a[2],
-          cx + c[0], cy + c[1], cz + c[2],
-          cx + d[0], cy + d[1], cz + d[2]
-        );
-        for (let k = 0; k < 6; k++) norm.push(...f.n);
-      }
+    function quadFace(a, b, c, d) {
+      pos.push(
+        ...a, ...b, ...c,
+        ...a, ...c, ...d
+      );
+      const ab = new THREE.Vector3(b[0] - a[0], b[1] - a[1], b[2] - a[2]);
+      const ac = new THREE.Vector3(c[0] - a[0], c[1] - a[1], c[2] - a[2]);
+      const n = new THREE.Vector3().crossVectors(ab, ac).normalize();
+      for (let k = 0; k < 6; k++) norm.push(n.x, n.y, n.z);
     }
 
-    // Left seat (Z = -0.24) and Right seat (Z = 0.24)
+    function triFace(a, b, c) {
+      pos.push(...a, ...b, ...c);
+      const ab = new THREE.Vector3(b[0] - a[0], b[1] - a[1], b[2] - a[2]);
+      const ac = new THREE.Vector3(c[0] - a[0], c[1] - a[1], c[2] - a[2]);
+      const n = new THREE.Vector3().crossVectors(ab, ac).normalize();
+      for (let k = 0; k < 3; k++) norm.push(n.x, n.y, n.z);
+    }
+
+    function addPaddedCushion(sz) {
+      // Center (0.04, 0.22, sz), size (0.48, 0.12, 0.40) -> X [-0.20..0.28], Y [0.16..0.28], Z [sz±0.20]
+      const xR = -0.20, xF = 0.28, xPadF = 0.23;
+      const yB = 0.16, yT = 0.28, yPadFront = 0.24, ySide = 0.24;
+      const zL = sz + 0.20, zR = sz - 0.20;
+      const zPadL = sz + 0.15, zPadR = sz - 0.15;
+
+      // Bottom face (-Y normal)
+      quadFace([xR, yB, zR], [xF, yB, zR], [xF, yB, zL], [xR, yB, zL]);
+      // Rear face (-X normal)
+      quadFace([xR, yB, zR], [xR, yB, zL], [xR, yT, zL], [xR, yT, zR]);
+      // Front lower face (+X normal)
+      quadFace([xF, yB, zL], [xF, yB, zR], [xF, yPadFront, zR], [xF, yPadFront, zL]);
+      // Left side lower (+Z normal)
+      quadFace([xR, yB, zL], [xF, yB, zL], [xF, yPadFront, zL], [xR, ySide, zL]);
+      // Right side lower (-Z normal)
+      quadFace([xF, yB, zR], [xR, yB, zR], [xR, ySide, zR], [xF, yPadFront, zR]);
+
+      // Thigh bolster front bevel (+X, +Y normal)
+      quadFace([xF, yPadFront, zPadR], [xPadF, yT, zPadR], [xPadF, yT, zPadL], [xF, yPadFront, zPadL]);
+      // Left side bolster bevel (+Z, +Y normal)
+      quadFace([xF, yT, zPadL], [xR, yT, zPadL], [xR, ySide, zL], [xF, yPadFront, zL]);
+      // Right side bolster bevel (-Z, +Y normal)
+      quadFace([xR, yT, zPadR], [xF, yT, zPadR], [xF, yPadFront, zR], [xR, ySide, zR]);
+      // Main central seat support pad (+Y normal)
+      quadFace([xR, yT, zPadL], [xPadF, yT, zPadL], [xPadF, yT, zPadR], [xR, yT, zPadR]);
+
+      // Inset front-corner faces point toward the seat center, outside the raised side padding.
+      triFace([xF, yPadFront, zPadL], [xPadF, yT, zPadL], [xF, yT, zPadL]);
+      triFace([xF, yPadFront, zPadR], [xF, yT, zPadR], [xPadF, yT, zPadR]);
+    }
+
+    function addPaddedBackrest(sz) {
+      // Center (-0.22, 0.48, sz), size (0.10, 0.46, 0.38) -> X [-0.27..-0.17], Y [0.25..0.71], Z [sz±0.19]
+      const xBack = -0.27, xFront = -0.17, xBolster = -0.21, xTopBevel = -0.24;
+      const yB = 0.25, yT = 0.71, yTopPad = 0.67;
+      const zL = sz + 0.19, zR = sz - 0.19;
+      const zPadL = sz + 0.14, zPadR = sz - 0.14;
+
+      // Rear face (-X normal)
+      quadFace([xBack, yB, zR], [xBack, yB, zL], [xBack, yT, zL], [xBack, yT, zR]);
+      // Bottom face (-Y normal)
+      quadFace([xBack, yB, zR], [xFront, yB, zR], [xFront, yB, zL], [xBack, yB, zL]);
+      // Left outer side (+Z normal)
+      quadFace([xBack, yB, zL], [xBolster, yB, zL], [xBolster, yT, zL], [xBack, yT, zL]);
+      // Right outer side (-Z normal)
+      quadFace([xBolster, yB, zR], [xBack, yB, zR], [xBack, yT, zR], [xBolster, yT, zR]);
+
+      // Front center lumbar/backrest pad (+X normal)
+      quadFace([xFront, yB, zPadL], [xFront, yB, zPadR], [xFront, yTopPad, zPadR], [xFront, yTopPad, zPadL]);
+      // Left lateral bolster (+X, +Z normal)
+      quadFace([xBolster, yB, zL], [xFront, yB, zPadL], [xFront, yTopPad, zPadL], [xBolster, yT, zL]);
+      // Right lateral bolster (+X, -Z normal)
+      quadFace([xFront, yB, zPadR], [xBolster, yB, zR], [xBolster, yT, zR], [xFront, yTopPad, zPadR]);
+      // Top shoulder bevel (+X, +Y normal)
+      quadFace([xTopBevel, yT, zPadR], [xTopBevel, yT, zPadL], [xFront, yTopPad, zPadL], [xFront, yTopPad, zPadR]);
+      // Central top crown surface (+Y normal)
+      quadFace([xBack, yT, zPadR], [xBack, yT, zPadL], [xTopBevel, yT, zPadL], [xTopBevel, yT, zPadR]);
+
+      // Left crown corner closure (horizontal quad + shoulder transition triangle)
+      quadFace([xBack, yT, zL], [xBolster, yT, zL], [xTopBevel, yT, zPadL], [xBack, yT, zPadL]);
+      triFace([xTopBevel, yT, zPadL], [xBolster, yT, zL], [xFront, yTopPad, zPadL]);
+
+      // Right crown corner closure (horizontal quad + shoulder transition triangle)
+      quadFace([xBack, yT, zPadR], [xTopBevel, yT, zPadR], [xBolster, yT, zR], [xBack, yT, zR]);
+      triFace([xBolster, yT, zR], [xTopBevel, yT, zPadR], [xFront, yTopPad, zPadR]);
+    }
+
+    function addPaddedHeadrest(sz) {
+      // Center (-0.20, 0.76, sz), size (0.12, 0.18, 0.32) -> X [-0.26..-0.14], Y [0.67..0.85], Z [sz±0.16]
+      const xBack = -0.26, xFront = -0.14, xChamf = -0.19;
+      const yB = 0.67, yT = 0.85, yPadT = 0.81;
+      const zL = sz + 0.16, zR = sz - 0.16;
+      const zPadL = sz + 0.12, zPadR = sz - 0.12;
+
+      // Rear face (-X normal)
+      quadFace([xBack, yB, zR], [xBack, yB, zL], [xBack, yT, zL], [xBack, yT, zR]);
+      // Bottom face (-Y normal)
+      quadFace([xBack, yB, zR], [xFront, yB, zR], [xFront, yB, zL], [xBack, yB, zL]);
+      // Left side rectangle (+Z normal)
+      quadFace([xBack, yB, zL], [xChamf, yB, zL], [xChamf, yT, zL], [xBack, yT, zL]);
+      // Right side rectangle (-Z normal)
+      quadFace([xChamf, yB, zR], [xBack, yB, zR], [xBack, yT, zR], [xChamf, yT, zR]);
+
+      // Front center pad (+X normal)
+      quadFace([xFront, yB, zPadL], [xFront, yB, zPadR], [xFront, yPadT, zPadR], [xFront, yPadT, zPadL]);
+      // Top chamfer (+X, +Y normal)
+      quadFace([xChamf, yT, zPadR], [xChamf, yT, zPadL], [xFront, yPadT, zPadL], [xFront, yPadT, zPadR]);
+      // Left side chamfer (+X, +Z normal)
+      quadFace([xChamf, yB, zL], [xFront, yB, zPadL], [xFront, yPadT, zPadL], [xChamf, yT, zL]);
+      // Right side chamfer (+X, -Z normal)
+      quadFace([xFront, yB, zPadR], [xChamf, yB, zR], [xChamf, yT, zR], [xFront, yPadT, zPadR]);
+      // Central top crown surface (+Y normal)
+      quadFace([xBack, yT, zPadR], [xBack, yT, zPadL], [xChamf, yT, zPadL], [xChamf, yT, zPadR]);
+
+      // Left crown corner closure (horizontal quad + chamfer transition triangle)
+      quadFace([xBack, yT, zL], [xChamf, yT, zL], [xChamf, yT, zPadL], [xBack, yT, zPadL]);
+      triFace([xChamf, yT, zPadL], [xChamf, yT, zL], [xFront, yPadT, zPadL]);
+
+      // Right crown corner closure (horizontal quad + chamfer transition triangle)
+      quadFace([xBack, yT, zPadR], [xChamf, yT, zPadR], [xChamf, yT, zR], [xBack, yT, zR]);
+      triFace([xChamf, yT, zR], [xChamf, yT, zPadR], [xFront, yPadT, zPadR]);
+    }
+
+    // Two bucket seats at Z = -0.24 and +0.24 with ergonomic contours within frozen envelopes
     for (const sz of [-0.24, 0.24]) {
-      // Cushion
-      addBoxPart(0.04, 0.22, sz, 0.48, 0.12, 0.40);
-      // Backrest
-      addBoxPart(-0.22, 0.48, sz, 0.10, 0.46, 0.38);
-      // Headrest
-      addBoxPart(-0.20, 0.76, sz, 0.12, 0.18, 0.32);
+      addPaddedCushion(sz);
+      addPaddedBackrest(sz);
+      addPaddedHeadrest(sz);
     }
 
     geo.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
@@ -1197,36 +1513,97 @@ export function createVehicles(ctx, capacity) {
     const pos = [];
     const norm = [];
 
-    function addBoxPart(cx, cy, cz, sx, sy, sz) {
-      const hx = sx / 2, hy = sy / 2, hz = sz / 2;
-      const faces = [
-        { n: [0, 0, 1], q: [[-hx, -hy, hz], [hx, -hy, hz], [hx, hy, hz], [-hx, hy, hz]] },
-        { n: [0, 0, -1], q: [[hx, -hy, -hz], [-hx, -hy, -hz], [-hx, hy, -hz], [hx, hy, -hz]] },
-        { n: [0, 1, 0], q: [[-hx, hy, hz], [hx, hy, hz], [hx, hy, -hz], [-hx, hy, -hz]] },
-        { n: [0, -1, 0], q: [[-hx, -hy, -hz], [hx, -hy, -hz], [hx, -hy, hz], [-hx, -hy, hz]] },
-        { n: [1, 0, 0], q: [[hx, -hy, hz], [hx, -hy, -hz], [hx, hy, -hz], [hx, hy, hz]] },
-        { n: [-1, 0, 0], q: [[-hx, -hy, -hz], [-hx, -hy, hz], [-hx, hy, hz], [-hx, hy, -hz]] }
+    function quadFace(a, b, c, d) {
+      pos.push(
+        ...a, ...b, ...c,
+        ...a, ...c, ...d
+      );
+      const ab = new THREE.Vector3(b[0] - a[0], b[1] - a[1], b[2] - a[2]);
+      const ac = new THREE.Vector3(c[0] - a[0], c[1] - a[1], c[2] - a[2]);
+      const n = new THREE.Vector3().crossVectors(ab, ac).normalize();
+      for (let k = 0; k < 6; k++) norm.push(n.x, n.y, n.z);
+    }
+
+    function triFace(a, b, c) {
+      pos.push(...a, ...b, ...c);
+      const ab = new THREE.Vector3(b[0] - a[0], b[1] - a[1], b[2] - a[2]);
+      const ac = new THREE.Vector3(c[0] - a[0], c[1] - a[1], c[2] - a[2]);
+      const n = new THREE.Vector3().crossVectors(ab, ac).normalize();
+      for (let k = 0; k < 3; k++) norm.push(n.x, n.y, n.z);
+    }
+
+    function addPaddedLapBar(z0, z1) {
+      // Flattened six-facet padded cross section within baseline envelope X [0.14..0.22], Y [0.380..0.460]
+      // Lower facet spans X 0.16..0.20 at Y 0.380; the hinge arm overlaps it by 2 mm.
+      const pts = [
+        [0.20, 0.380], // 0: bottom front
+        [0.22, 0.420], // 1: front snout
+        [0.20, 0.460], // 2: top front
+        [0.16, 0.460], // 3: top rear
+        [0.14, 0.420], // 4: rear snout
+        [0.16, 0.380]  // 5: bottom rear
       ];
-      for (const f of faces) {
-        const [a, b, c, d] = f.q;
-        pos.push(
-          cx + a[0], cy + a[1], cz + a[2],
-          cx + b[0], cy + b[1], cz + b[2],
-          cx + c[0], cy + c[1], cz + c[2],
-          cx + a[0], cy + a[1], cz + a[2],
-          cx + c[0], cy + c[1], cz + c[2],
-          cx + d[0], cy + d[1], cz + d[2]
+
+      // 6 extruded longitudinal facets along Z (12 triangles)
+      for (let i = 0; i < 6; i++) {
+        const next = (i + 1) % 6;
+        const [x0, y0] = pts[i];
+        const [x1, y1] = pts[next];
+        quadFace([x0, y0, z0], [x1, y1, z0], [x1, y1, z1], [x0, y0, z1]);
+      }
+
+      // End caps with perimeter triangulation from vertex 0 (n - 2 = 4 triangles each)
+      // +Z end cap (z1, normal [0, 0, 1])
+      for (let i = 1; i < 5; i++) {
+        triFace(
+          [pts[0][0], pts[0][1], z1],
+          [pts[i][0], pts[i][1], z1],
+          [pts[i + 1][0], pts[i + 1][1], z1]
         );
-        for (let k = 0; k < 6; k++) norm.push(...f.n);
+      }
+      // -Z end cap (z0, normal [0, 0, -1])
+      for (let i = 1; i < 5; i++) {
+        triFace(
+          [pts[0][0], pts[0][1], z0],
+          [pts[i + 1][0], pts[i + 1][1], z0],
+          [pts[i][0], pts[i][1], z0]
+        );
       }
     }
 
+    function addArmWithHinge(armZ) {
+      // The 19 mm half-width leaves 1 mm beside the seated torso while joining the lap pad.
+      const hw = 0.019;
+      const z0 = armZ - hw, z1 = armZ + hw;
+
+      // Continuous solid arm with chamfered hinge knuckle at pivot end (X -0.08..0.18, Y 0.31..0.382)
+      // Front face (+X normal)
+      quadFace([0.18, 0.31, z1], [0.18, 0.31, z0], [0.18, 0.382, z0], [0.18, 0.382, z1]);
+      // Top face (+Y normal)
+      quadFace([0.18, 0.382, z1], [0.18, 0.382, z0], [-0.05, 0.382, z0], [-0.05, 0.382, z1]);
+      // Bottom face (-Y normal)
+      quadFace([-0.05, 0.31, z1], [-0.05, 0.31, z0], [0.18, 0.31, z0], [0.18, 0.31, z1]);
+      // Rear bottom chamfer (-X, -Y normal)
+      quadFace([-0.08, 0.34, z1], [-0.08, 0.34, z0], [-0.05, 0.31, z0], [-0.05, 0.31, z1]);
+      // Rear top chamfer (-X, +Y normal)
+      quadFace([-0.05, 0.382, z1], [-0.05, 0.382, z0], [-0.08, 0.34, z0], [-0.08, 0.34, z1]);
+
+      // Outer side cap (+Z normal)
+      quadFace([-0.05, 0.31, z1], [0.18, 0.31, z1], [0.18, 0.382, z1], [-0.05, 0.382, z1]);
+      triFace([-0.08, 0.34, z1], [-0.05, 0.31, z1], [-0.05, 0.382, z1]);
+
+      // Inner side cap (-Z normal)
+      quadFace([0.18, 0.31, z0], [-0.05, 0.31, z0], [-0.05, 0.382, z0], [0.18, 0.382, z0]);
+      triFace([-0.08, 0.34, z0], [-0.05, 0.382, z0], [-0.05, 0.31, z0]);
+    }
+
     for (const rz of [-0.24, 0.24]) {
-      // Horizontal padded lap bar
-      addBoxPart(0.18, 0.42, rz, 0.08, 0.08, 0.36);
-      // Hinge arms
-      addBoxPart(0.04, 0.34, rz - 0.16, 0.24, 0.06, 0.05);
-      addBoxPart(0.04, 0.34, rz + 0.16, 0.24, 0.06, 0.05);
+      // Flattened padded horizontal lap bar (length 0.36, lower facet Y 0.380 spanning X 0.16..0.20)
+      addPaddedLapBar(rz - 0.18, rz + 0.18);
+
+      // Two solid hinge arms join the underside of each lap pad.
+      addArmWithHinge(rz - 0.16);
+      addArmWithHinge(rz + 0.16);
     }
 
     geo.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
@@ -1234,43 +1611,80 @@ export function createVehicles(ctx, capacity) {
     return geo;
   });
 
-  // Rider seated torso geometry
-  const riderTorsoGeo = getGeometry(ctx, 'coaster_rider_torso_geo_v1', () => {
-    return new THREE.BoxGeometry(0.28, 0.36, 0.28);
+  function combineRiderParts(parts) {
+    const positions = [], normals = [];
+    for (const part of parts) {
+      const source = part.index ? part.toNonIndexed() : part;
+      positions.push(...source.attributes.position.array);
+      normals.push(...source.attributes.normal.array);
+      if (source !== part) source.dispose();
+      part.dispose();
+    }
+    const geometry = new THREE.BufferGeometry();
+    geometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
+    geometry.setAttribute('normal', new THREE.Float32BufferAttribute(normals, 3));
+    return geometry;
+  }
+
+  const riderTorsoGeo = getGeometry(ctx, 'coaster_rider_torso_geo_v2', () => {
+    const torso = new THREE.CylinderGeometry(1, 1, 0.36, 8, 3);
+    const vertices = torso.attributes.position;
+    const widths = [0.065, 0.113, 0.098, 0.09];
+    for (let i = 0; i < vertices.count; i++) {
+      const y = vertices.getY(i);
+      const width = widths[Math.round((0.18 - y) / 0.12)];
+      vertices.setXYZ(i, vertices.getX(i) * width * 0.78, y, vertices.getZ(i) * width);
+    }
+    torso.computeVertexNormals();
+    const sleeves = [-1, 1].map(side => new THREE.CylinderGeometry(0.024, 0.023, 0.19, 6)
+      .translate(-0.005, 0.01, side * 0.114));
+    return combineRiderParts([torso, ...sleeves]);
   });
-  // Rider seated head geometry
-  const riderHeadGeo = getGeometry(ctx, 'coaster_rider_head_geo_v1', () => {
-    return new THREE.SphereGeometry(0.12, 8, 6);
+  const riderHeadGeo = getGeometry(ctx, 'coaster_rider_head_geo_v2', () => {
+    const head = new THREE.SphereGeometry(0.118, 10, 6).scale(0.86, 1, 0.92);
+    const neck = new THREE.CylinderGeometry(0.04, 0.04, 0.10, 6).translate(0, -0.15, 0);
+    const nose = new THREE.BoxGeometry(0.025, 0.025, 0.035).translate(0.105, -0.01, 0);
+    // These share the head's skin tint and stay behind the lap pad's X=0.14 face.
+    const forearms = [-1, 1].map(side => new THREE.BoxGeometry(0.09, 0.045, 0.045)
+      .translate(0.04, -0.415, side * 0.11));
+    return combineRiderParts([head, neck, nose, ...forearms]);
   });
+  const riderHairGeo = getGeometry(ctx, 'coaster_rider_hair_geo_v1', () =>
+    new THREE.SphereGeometry(0.12, 10, 3, 0, Math.PI * 2, 0, Math.PI / 2).scale(0.86, 1, 0.92));
 
   // Materials
   const shellMat = getMaterial(ctx, 'coaster_car_shell_mat', {
     color: '#ffffff',
-    roughness: 0.25,
-    metalness: 0.35
+    roughness: 0.28,
+    metalness: 0.15,
+    vertexColors: true
   });
   const undercarriageMat = getMaterial(ctx, 'coaster_car_undercarriage_mat', {
     color: '#26292c',
     roughness: 0.45,
-    metalness: 0.65
+    metalness: 0.70
   });
   const seatMat = getMaterial(ctx, 'coaster_car_seat_mat', {
-    color: '#242a27',
-    roughness: 0.70,
-    metalness: 0.10
+    color: '#1f2124',
+    roughness: 0.52,
+    metalness: 0.0
   });
   const restraintMat = getMaterial(ctx, 'coaster_car_restraint_mat', {
-    color: '#e2ac24',
-    roughness: 0.38,
-    metalness: 0.25
+    color: '#f4ba1c',
+    roughness: 0.45,
+    metalness: 0.0
   });
   const riderTorsoMat = getMaterial(ctx, 'coaster_rider_torso_mat', {
-    color: '#4c7999',
-    roughness: 0.75
+    color: GUEST_TORSO_BASE_HEX,
+    ...GUEST_MATERIAL_FINISH.shirt
   });
   const riderHeadMat = getMaterial(ctx, 'coaster_rider_head_mat', {
-    color: '#ebc19c',
-    roughness: 0.65
+    color: GUEST_HEAD_BASE_HEX,
+    ...GUEST_MATERIAL_FINISH.skin
+  });
+  const riderHairMat = getMaterial(ctx, 'coaster_rider_hair_mat', {
+    color: GUEST_HAIR_BASE_HEX,
+    ...GUEST_MATERIAL_FINISH.hair
   });
 
   // Instanced Meshes
@@ -1298,19 +1712,14 @@ export function createVehicles(ctx, capacity) {
   riderHeadMesh.castShadow = true;
   riderHeadMesh.frustumCulled = false;
 
-  group.add(shellMesh, undercarriageMesh, seatMesh, restraintMesh, riderTorsoMesh, riderHeadMesh);
+  const riderHairMesh = new THREE.InstancedMesh(riderHairGeo, riderHairMat, maxRiders);
+  riderHairMesh.castShadow = true;
+  riderHairMesh.frustumCulled = false;
+
+  group.add(shellMesh, undercarriageMesh, seatMesh, restraintMesh, riderTorsoMesh, riderHeadMesh, riderHairMesh);
 
   const selections = [];
   const pickMeshes = [shellMesh, seatMesh];
-
-  const riderColors = [
-    new THREE.Color('#d7b247'),
-    new THREE.Color('#bb6047'),
-    new THREE.Color('#83a56f'),
-    new THREE.Color('#4c7999'),
-    new THREE.Color('#b789a6'),
-    new THREE.Color('#388e3c')
-  ];
 
   const carColors=['#c72c35','#167e9a','#d79326'].map(c=>new THREE.Color(c));
   function update(packet) {
@@ -1346,9 +1755,11 @@ export function createVehicles(ctx, capacity) {
 
       selections[i] = { kind: 'ride', id: c.ride };
 
-      // Individual seated riders matching actual occupants
-      const occupants = Math.min(c.occupants || 0, 2);
-      for (let j = 0; j < occupants && riderIndex < maxRiders; j++) {
+      // Keep sparse owners at their original physical seat; GPU instances remain dense.
+      const seatIds = c.seatIds ?? [];
+      for (let j = 0; j < Math.min(seatIds.length, 2) && riderIndex < maxRiders; j++) {
+        if (seatIds[j] === null) continue;
+        const appearance = getGuestAppearance(seatIds[j]);
         const sideOffset = (j === 0) ? -0.24 : 0.24;
         const riderPos = posVec.clone()
           .addScaledVector(upVec, 0.48)
@@ -1358,13 +1769,14 @@ export function createVehicles(ctx, capacity) {
         subMat.makeBasis(fVec, upVec, sideVec);
         subMat.setPosition(riderPos);
         riderTorsoMesh.setMatrixAt(riderIndex, subMat);
-
-        const colorIdx = (c.id * 3 + j) % riderColors.length;
-        riderTorsoMesh.setColorAt(riderIndex, riderColors[colorIdx]);
+        riderTorsoMesh.setColorAt(riderIndex, appearance.shirtColor);
 
         const headPos = riderPos.clone().addScaledVector(upVec, 0.32);
         subMat.setPosition(headPos);
         riderHeadMesh.setMatrixAt(riderIndex, subMat);
+        riderHeadMesh.setColorAt(riderIndex, appearance.skinInstanceColor);
+        riderHairMesh.setMatrixAt(riderIndex, subMat);
+        riderHairMesh.setColorAt(riderIndex, appearance.hairInstanceColor);
 
         riderIndex++;
       }
@@ -1376,6 +1788,7 @@ export function createVehicles(ctx, capacity) {
     restraintMesh.count = carCount;
     riderTorsoMesh.count = riderIndex;
     riderHeadMesh.count = riderIndex;
+    riderHairMesh.count = riderIndex;
 
     shellMesh.instanceMatrix.needsUpdate = true;
     undercarriageMesh.instanceMatrix.needsUpdate = true;
@@ -1383,9 +1796,12 @@ export function createVehicles(ctx, capacity) {
     restraintMesh.instanceMatrix.needsUpdate = true;
     riderTorsoMesh.instanceMatrix.needsUpdate = true;
     riderHeadMesh.instanceMatrix.needsUpdate = true;
+    riderHairMesh.instanceMatrix.needsUpdate = true;
 
     if (shellMesh.instanceColor) shellMesh.instanceColor.needsUpdate = true;
     if (riderTorsoMesh.instanceColor) riderTorsoMesh.instanceColor.needsUpdate = true;
+    if (riderHeadMesh.instanceColor) riderHeadMesh.instanceColor.needsUpdate = true;
+    if (riderHairMesh.instanceColor) riderHairMesh.instanceColor.needsUpdate = true;
 
     shellMesh.boundingSphere = null;
     undercarriageMesh.boundingSphere = null;
@@ -1393,6 +1809,7 @@ export function createVehicles(ctx, capacity) {
     restraintMesh.boundingSphere = null;
     riderTorsoMesh.boundingSphere = null;
     riderHeadMesh.boundingSphere = null;
+    riderHairMesh.boundingSphere = null;
   }
 
   function dispose() {
@@ -1403,6 +1820,7 @@ export function createVehicles(ctx, capacity) {
     restraintMesh.dispose();
     riderTorsoMesh.dispose();
     riderHeadMesh.dispose();
+    riderHairMesh.dispose();
   }
 
   return {
@@ -1421,59 +1839,59 @@ export function createPeople(ctx, capacity) {
   const group = new THREE.Group();
   const maxPeople = Math.min(Math.max(capacity || 2048, 64), 10000);
 
-  // Subdivided clothed torso geometry
-  const torsoGeo = getGeometry(ctx, 'people_torso_geo_v1', () => {
-    return new THREE.BoxGeometry(0.34, 0.46, 0.24);
-  });
-
-  // Trousers / legs geometry
-  const trousersGeo = getGeometry(ctx, 'people_trousers_geo_v1', () => {
-    return new THREE.BoxGeometry(0.32, 0.52, 0.22);
-  });
-
-  // Head geometry
-  const headGeo = getGeometry(ctx, 'people_head_geo_v1', () => {
-    return new THREE.SphereGeometry(0.14, 8, 6);
-  });
-
-  // Hair & staff uniform cap geometry
-  const hairCapGeo = getGeometry(ctx, 'people_hair_cap_geo_v1', () => {
-    const geo = new THREE.BufferGeometry();
-    const pos = [];
-    const norm = [];
-
-    function addBoxPart(cx, cy, cz, sx, sy, sz) {
-      const hx = sx / 2, hy = sy / 2, hz = sz / 2;
-      const faces = [
-        { n: [0, 0, 1], q: [[-hx, -hy, hz], [hx, -hy, hz], [hx, hy, hz], [-hx, hy, hz]] },
-        { n: [0, 0, -1], q: [[hx, -hy, -hz], [-hx, -hy, -hz], [-hx, hy, -hz], [hx, hy, -hz]] },
-        { n: [0, 1, 0], q: [[-hx, hy, hz], [hx, hy, hz], [hx, hy, -hz], [-hx, hy, -hz]] },
-        { n: [0, -1, 0], q: [[-hx, -hy, -hz], [hx, -hy, -hz], [hx, -hy, hz], [-hx, -hy, hz]] },
-        { n: [1, 0, 0], q: [[hx, -hy, hz], [hx, -hy, -hz], [hx, hy, -hz], [hx, hy, hz]] },
-        { n: [-1, 0, 0], q: [[-hx, -hy, -hz], [-hx, -hy, hz], [-hx, hy, hz], [-hx, hy, -hz]] }
-      ];
-      for (const f of faces) {
-        const [a, b, c, d] = f.q;
-        pos.push(
-          cx + a[0], cy + a[1], cz + a[2],
-          cx + b[0], cy + b[1], cz + b[2],
-          cx + c[0], cy + c[1], cz + c[2],
-          cx + a[0], cy + a[1], cz + a[2],
-          cx + c[0], cy + c[1], cz + c[2],
-          cx + d[0], cy + d[1], cz + d[2]
-        );
-        for (let k = 0; k < 6; k++) norm.push(...f.n);
-      }
+  function combinePeopleParts(parts) {
+    const positions = [], normals = [];
+    for (const part of parts) {
+      const source = part.index ? part.toNonIndexed() : part;
+      positions.push(...source.attributes.position.array);
+      normals.push(...source.attributes.normal.array);
+      if (source !== part) source.dispose();
+      part.dispose();
     }
+    const geometry = new THREE.BufferGeometry();
+    geometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
+    geometry.setAttribute('normal', new THREE.Float32BufferAttribute(normals, 3));
+    return geometry;
+  }
 
-    // Cap crown
-    addBoxPart(0, 0.04, 0, 0.30, 0.12, 0.30);
-    // Cap visor / brim
-    addBoxPart(0, 0.02, 0.18, 0.26, 0.03, 0.12);
+  const torsoGeo = getGeometry(ctx, 'people_torso_geo_v2', () => {
+    const geometry = new THREE.CylinderGeometry(0.17, 0.135, 0.46, 8);
+    geometry.rotateY(Math.PI / 8);
+    geometry.scale(1.06, 1, 0.78);
+    return geometry;
+  });
 
-    geo.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
-    geo.setAttribute('normal', new THREE.Float32BufferAttribute(norm, 3));
-    return geo;
+  // Keep the original sole plane while joining each leg directly to its shoe.
+  const trousersGeo = getGeometry(ctx, 'people_trousers_geo_v2', () => {
+    const pelvis = new THREE.BoxGeometry(0.27, 0.14, 0.19).translate(0, 0.19, 0);
+    const legs = [-0.075, 0.075].map(x =>
+      new THREE.BoxGeometry(0.11, 0.30, 0.17).translate(x, -0.03, 0));
+    const shoes = [-0.075, 0.075].map(x =>
+      new THREE.BoxGeometry(0.105, 0.08, 0.22).translate(x, -0.22, 0.02));
+    return combinePeopleParts([pelvis, ...legs, ...shoes]);
+  });
+
+  const headGeo = getGeometry(ctx, 'people_head_geo_v1', () => {
+    const cranium = new THREE.SphereGeometry(0.14, 10, 6).scale(0.94, 1, 0.92);
+    // Keep the chin at the original neck seam and each feature within the old envelope.
+    const jaw = new THREE.CylinderGeometry(0.072, 0.052, 0.10, 8)
+      .rotateY(Math.PI / 8).scale(1.08, 1, 1.15).translate(0, -0.09, 0.016);
+    const nose = new THREE.BoxGeometry(0.028, 0.032, 0.045)
+      .translate(0, -0.012, 0.1175);
+    const ears = [-1, 1].map(side =>
+      new THREE.BoxGeometry(0.018, 0.036, 0.024).translate(side * 0.128, 0.004, -0.008));
+    return combinePeopleParts([cranium, jaw, nose, ...ears]);
+  });
+
+  const hairCapGeo = getGeometry(ctx, 'people_hair_cap_geo_v2', () => {
+    const crown = new THREE.CylinderGeometry(0.125, 0.148, 0.11, 8);
+    crown.rotateY(Math.PI / 8);
+    crown.translate(0, 0.04, 0);
+    const visor = new THREE.BoxGeometry(0.22, 0.022, 0.11);
+    visor.rotateX(0.16);
+    visor.translate(0, 0.005, 0.16);
+    const button = new THREE.CylinderGeometry(0.02, 0.02, 0.015, 6).translate(0, 0.0925, 0);
+    return combinePeopleParts([crown, visor, button]);
   });
 
   // Arms use the person's clothing color; equipment belongs only to staff.
@@ -1555,47 +1973,13 @@ export function createPeople(ctx, capacity) {
   const selections = [];
   const pickMeshes = [torsosMesh, trousersMesh, headsMesh];
 
-  // Palettes for stable deterministic coloring
-  const guestTorsoColors = [
-    new THREE.Color('#d7b247'),
-    new THREE.Color('#bb6047'),
-    new THREE.Color('#83a56f'),
-    new THREE.Color('#4c7999'),
-    new THREE.Color('#b789a6'),
-    new THREE.Color('#e2dfcf'),
-    new THREE.Color('#c2593f'),
-    new THREE.Color('#388265'),
-    new THREE.Color('#5862a3'),
-    new THREE.Color('#b87d32')
-  ];
-
-  const trousersColors = [
-    new THREE.Color('#2b3d54'), // denim
-    new THREE.Color('#383c42'), // charcoal
-    new THREE.Color('#8a7e6b'), // khaki
-    new THREE.Color('#465042'), // olive
-    new THREE.Color('#22262a')  // black
-  ];
-
-  const skinColors = [
-    new THREE.Color('#ebc19c'),
-    new THREE.Color('#f0cab0'),
-    new THREE.Color('#dfa77b'),
-    new THREE.Color('#c68652')
-  ];
-
-  const hairColors = [
-    new THREE.Color('#382416'),
-    new THREE.Color('#1f1c19'),
-    new THREE.Color('#c4964b'),
-    new THREE.Color('#82341d')
-  ];
-
-  const mechanicUniformColor = new THREE.Color('#326794'); // Mechanic navy blue
-  const mechanicCapColor = new THREE.Color('#214563');
-  const handymanUniformColor = new THREE.Color('#e0b44a'); // Handyman yellow/khaki
-  const handymanCapColor = new THREE.Color('#ba8a25');
-  const staffPantsColor = new THREE.Color('#2a3e52');
+  const {
+    mechanicUniform: mechanicUniformColor,
+    mechanicCap: mechanicCapColor,
+    handymanUniform: handymanUniformColor,
+    handymanCap: handymanCapColor,
+    pants: staffPantsColor,
+  } = STAFF_APPEARANCE_COLORS;
 
   const transformMat = new THREE.Matrix4();
   const posVec = new THREE.Vector3();
@@ -1622,6 +2006,7 @@ export function createPeople(ctx, capacity) {
       const wz = pz + half;
       const wy = py;
 
+      const appearance = getGuestAppearance(id);
       selections[i] = { kind: isStaff ? 'staff' : 'guest', id };
 
       // 1. Torso
@@ -1632,7 +2017,7 @@ export function createPeople(ctx, capacity) {
       if (isStaff) {
         torsosMesh.setColorAt(i, (phase === 0) ? mechanicUniformColor : handymanUniformColor);
       } else {
-        torsosMesh.setColorAt(i, guestTorsoColors[id % guestTorsoColors.length]);
+        torsosMesh.setColorAt(i, appearance.shirtColor);
       }
 
       // 2. Trousers
@@ -1643,14 +2028,14 @@ export function createPeople(ctx, capacity) {
       if (isStaff) {
         trousersMesh.setColorAt(i, staffPantsColor);
       } else {
-        trousersMesh.setColorAt(i, trousersColors[id % trousersColors.length]);
+        trousersMesh.setColorAt(i, appearance.trousersColor);
       }
 
       // 3. Head
       posVec.set(wx, wy + 1.15, wz);
       transformMat.setPosition(posVec);
       headsMesh.setMatrixAt(i, transformMat);
-      headsMesh.setColorAt(i, skinColors[id % skinColors.length]);
+      headsMesh.setColorAt(i, appearance.skinInstanceColor);
 
       // 4. Hair / Staff Uniform Cap
       posVec.set(wx, wy + 1.27, wz);
@@ -1660,14 +2045,14 @@ export function createPeople(ctx, capacity) {
       if (isStaff) {
         hairCapMesh.setColorAt(i, (phase === 0) ? mechanicCapColor : handymanCapColor);
       } else {
-        hairCapMesh.setColorAt(i, hairColors[id % hairColors.length]);
+        hairCapMesh.setColorAt(i, appearance.hairColor);
       }
 
       // 5. Arms and actual employee equipment
       posVec.set(wx, wy + 0.78, wz);
       transformMat.setPosition(posVec);
       armsMesh.setMatrixAt(i, transformMat);
-      armsMesh.setColorAt(i, isStaff ? phase === 0 ? mechanicUniformColor : handymanUniformColor : guestTorsoColors[id % guestTorsoColors.length]);
+      armsMesh.setColorAt(i, isStaff ? phase === 0 ? mechanicUniformColor : handymanUniformColor : appearance.shirtColor);
       if (isStaff) {
         posVec.set(wx + .24, wy + .70, wz + .12);
         transformMat.setPosition(posVec);

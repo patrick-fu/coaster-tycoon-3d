@@ -1,0 +1,246 @@
+{
+  "status": "ROOT_FINITE_EXPORT_AND_CPU_VIEW_ADOPT_FOR_INTEGRATION",
+  "acceptedUTC": "2026-10-18T00:52:09.859228+00:00",
+  "archive": {
+    "bytes": 54694469,
+    "sha256": "eb475983041244a81e515839375f2154a786501e46fb3f07ab8b7b2e0854981a"
+  },
+  "originalRetention": {
+    "bytes": 93273,
+    "sha256": "68e772fbc5a498775e1e335f9e978c6e941765b488c28e4e53e999b0d83297d8"
+  },
+  "actualDataAudit": {
+    "bytes": 6540,
+    "sha256": "4ae9bf45be930bca3dd5f25d1a0047c07aaa06539e55dee78bca007b266e3437"
+  },
+  "independentActualReview": {
+    "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/reviewer-receipts/balloon-assets-actual-sol-high-r3.md",
+    "bytes": 6540,
+    "sha256": "451591f9c7f90375662a48ce349ff793515f54726990edb9ad3d2ed3f21c2ef0"
+  },
+  "sourceRepair": "Exactly two measured faulty auto-bevel groups use existing authoredEdgeFinish; original vertices/UV/material/anchors and all qualification gates retained.",
+  "groups": [
+    {
+      "group": "balloon-stall",
+      "triangles": 5124,
+      "drawGroupsAllStates": 10,
+      "GLB": {
+        "bytes": 4860536,
+        "sha256": "4edbf276de77d5a173bebbf5b21fb3f111c00888dbfca84df42889a7ebfb871f"
+      },
+      "master": {
+        "bytes": 14932735,
+        "sha256": "bf0a51560048846d3f041e6f6f81bc7bc0fc97ee6080b83ea09294a7987c3055"
+      },
+      "views": [
+        {
+          "file": "balloon-stall-open-front.png",
+          "bytes": 879820,
+          "sha256": "5877b04f572bfdd7adb382331559a0ec79b3f4a385a7d31efb6ac90fd92dfa6d"
+        },
+        {
+          "file": "balloon-stall-open-rear.png",
+          "bytes": 842134,
+          "sha256": "682fb02c09da6a5b62bbc802ff5085fba9c1dd192043dff79e8f2725727d4604"
+        },
+        {
+          "file": "balloon-stall-closed-front.png",
+          "bytes": 875137,
+          "sha256": "60f0c966133d357a132893add1e97a0f3b5129ae932f14bcd0c5712987306731"
+        },
+        {
+          "file": "balloon-stall-closed-rear.png",
+          "bytes": 842524,
+          "sha256": "0a9e93d83a42da1a36a0f74e9216e2cc5c4bbc12624a40f2ed9c8e7c3955b8f3"
+        }
+      ],
+      "privateCacheRows": 182
+    },
+    {
+      "group": "held-balloon",
+      "triangles": 780,
+      "drawGroupsAllStates": 2,
+      "GLB": {
+        "bytes": 22176,
+        "sha256": "6b47c07c965a3dccfd87855804a3755d4b59793a355d329a81327b2c6a686056"
+      },
+      "master": {
+        "bytes": 98611,
+        "sha256": "3552bdd409ceac48fe8f68c3faf97616662246aea92899c0bf7d04b5bb880db2"
+      },
+      "views": [
+        {
+          "file": "held-balloon-default-front.png",
+          "bytes": 618914,
+          "sha256": "02a4041229a2b26d00dd0606e42deb86d16bc3335e64dbf68039dc16727ab127"
+        },
+        {
+          "file": "held-balloon-default-rear.png",
+          "bytes": 618696,
+          "sha256": "9adfc1d5fa04df03a5b57837aeeef7d5fa2ebaffdde8d97b6ca160bba623cf00"
+        }
+      ],
+      "privateCacheRows": 182
+    }
+  ],
+  "actualOwnedWaits": [
+    {
+      "label": "balloon-stall-ldd",
+      "argv": [
+        "/usr/bin/ldd",
+        "/workspace/coaster-gradual-restroom/blender-local-sol-r2/root/usr/bin/blender"
+      ],
+      "startUTC": "2026-10-18T00:42:36.396226+00:00",
+      "limitSeconds": 30,
+      "forced": false,
+      "signals": [],
+      "pid": 312920,
+      "initialIdentity": {
+        "pid": 312920,
+        "state": "R",
+        "ppid": 312870,
+        "pgid": 312920,
+        "sid": 312920,
+        "startTicks": 3596809,
+        "uids": [
+          1000,
+          1000,
+          1000,
+          1000
+        ]
+      },
+      "actualWaitExit": 0,
+      "childAbsent": true,
+      "remainingPrivateSession": [],
+      "elapsedMonotonicSeconds": 0.09978717900230549,
+      "endUTC": "2026-10-18T00:42:36.496014+00:00"
+    },
+    {
+      "label": "balloon-stall",
+      "argv": [
+        "/workspace/coaster-gradual-restroom/blender-local-sol-r2/root/usr/bin/blender",
+        "--background",
+        "--factory-startup",
+        "--disable-autoexec",
+        "--threads",
+        "2",
+        "--python-exit-code",
+        "1",
+        "--python",
+        "/workspace/coaster-gradual-restroom/balloon-assets-export-root-r3/inputs/qualify.py",
+        "--",
+        "balloon-stall",
+        "/workspace/coaster-gradual-restroom/balloon-assets-export-root-r3"
+      ],
+      "startUTC": "2026-10-18T00:42:36.542232+00:00",
+      "limitSeconds": 480,
+      "forced": false,
+      "signals": [],
+      "pid": 312927,
+      "initialIdentity": {
+        "pid": 312927,
+        "state": "R",
+        "ppid": 312870,
+        "pgid": 312927,
+        "sid": 312927,
+        "startTicks": 3596824,
+        "uids": [
+          1000,
+          1000,
+          1000,
+          1000
+        ]
+      },
+      "actualWaitExit": 0,
+      "childAbsent": true,
+      "remainingPrivateSession": [],
+      "elapsedMonotonicSeconds": 133.417917630999,
+      "endUTC": "2026-10-18T00:44:49.960194+00:00"
+    },
+    {
+      "label": "held-balloon-ldd",
+      "argv": [
+        "/usr/bin/ldd",
+        "/workspace/coaster-gradual-restroom/blender-local-sol-r2/root/usr/bin/blender"
+      ],
+      "startUTC": "2026-10-18T00:44:54.364756+00:00",
+      "limitSeconds": 30,
+      "forced": false,
+      "signals": [],
+      "pid": 314108,
+      "initialIdentity": {
+        "pid": 314108,
+        "state": "R",
+        "ppid": 312870,
+        "pgid": 314108,
+        "sid": 314108,
+        "startTicks": 3610606,
+        "uids": [
+          1000,
+          1000,
+          1000,
+          1000
+        ]
+      },
+      "actualWaitExit": 0,
+      "childAbsent": true,
+      "remainingPrivateSession": [],
+      "elapsedMonotonicSeconds": 0.08680053800344467,
+      "endUTC": "2026-10-18T00:44:54.451543+00:00"
+    },
+    {
+      "label": "held-balloon",
+      "argv": [
+        "/workspace/coaster-gradual-restroom/blender-local-sol-r2/root/usr/bin/blender",
+        "--background",
+        "--factory-startup",
+        "--disable-autoexec",
+        "--threads",
+        "2",
+        "--python-exit-code",
+        "1",
+        "--python",
+        "/workspace/coaster-gradual-restroom/balloon-assets-export-root-r3/inputs/qualify.py",
+        "--",
+        "held-balloon",
+        "/workspace/coaster-gradual-restroom/balloon-assets-export-root-r3"
+      ],
+      "startUTC": "2026-10-18T00:44:54.495219+00:00",
+      "limitSeconds": 480,
+      "forced": false,
+      "signals": [],
+      "pid": 314115,
+      "initialIdentity": {
+        "pid": 314115,
+        "state": "R",
+        "ppid": 312870,
+        "pgid": 314115,
+        "sid": 314115,
+        "startTicks": 3610619,
+        "uids": [
+          1000,
+          1000,
+          1000,
+          1000
+        ]
+      },
+      "actualWaitExit": 0,
+      "childAbsent": true,
+      "remainingPrivateSession": [],
+      "elapsedMonotonicSeconds": 42.79925445000117,
+      "endUTC": "2026-10-18T00:45:37.294476+00:00"
+    }
+  ],
+  "visualDisposition": {
+    "originalsViewed": 6,
+    "stall": "Candidate kiosk craft adopted for integration: dimensional sign, striped canopy, tiled roof, counter, rear door and alternate shutters coherent in original front/rear views. Plain side-wall refinement remains.",
+    "prop": "Candidate neutral tintable balloon/knot/string adopted for integration; crown faceting visible at asset close-up. Native tint, hand placement and picking unverified.",
+    "scope": "Root actual six768 CPU originals only, not browser/GPU/original parity or human acceptance."
+  },
+  "limits": [
+    "Real GLB owner/parser/browser/network/sampler behavior pending actual tests.",
+    "No representative GPU/performance or overall game/fidelity acceptance.",
+    "No post-stream producer absence observation/global cleanup authority.",
+    "Preserve E1/E2 strict failures and disconnected E3 first attempt."
+  ]
+}
