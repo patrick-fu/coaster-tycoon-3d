@@ -32,25 +32,25 @@
       "presentationProfile": "detailed-balloon-stall-v1",
       "resource": {
         "path": "ui/models/balloons/balloon-stall.glb",
-        "bytes": 4860536,
-        "sha256": "4edbf276de77d5a173bebbf5b21fb3f111c00888dbfca84df42889a7ebfb871f"
+        "bytes": 4903980,
+        "sha256": "2bf40e0efea279c0eb3ce6d13b62bc97847996d6c6f6ec1cd6c3fe1b7cb24167"
       },
       "source": {
         "path": "scripts/art/balloon-stall.py",
-        "bytes": 17629,
-        "sha256": "bf14e7eec085243145c767ef5f68f5fe5260e9c09235043e98745565f3e9d770"
+        "bytes": 18346,
+        "sha256": "275451a29023a2b363dea411a625b5285a437d6610d1b2389e0698196e3251b4"
       },
       "editableMaster": {
-        "retainedPath": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/balloon-assets-export-root-r3/actual-run-r1/mirror/balloon-stall/assets/balloon-stall.blend",
-        "bytes": 14932735,
-        "sha256": "bf0a51560048846d3f041e6f6f81bc7bc0fc97ee6080b83ea09294a7987c3055"
+        "retainedPath": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/balloon-facade-export-sol-high-r1/actual-run-r1/mirror/balloon-stall/assets/balloon-stall.blend",
+        "bytes": 14933697,
+        "sha256": "0326083916353e9e3698a88bfa40eca16d386fb433584db03a951d65f760e987"
       },
       "exportMap": {
-        "retainedPath": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/balloon-assets-export-root-r3/actual-run-r1/mirror/balloon-stall/assets/export-map.json",
+        "retainedPath": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/balloon-facade-export-sol-high-r1/actual-run-r1/mirror/balloon-stall/assets/export-map.json",
         "bytes": 12411,
-        "sha256": "6ebe25915a680d65e13304552a66a29f10397e1990d23dcea088aaacb756604e"
+        "sha256": "4cbc9096d191f83e4c05124c0645c5a00d17b298f56d990095c64be6b51d7583"
       },
-      "trianglesAllStates": 5124,
+      "trianglesAllStates": 6204,
       "drawGroupsAllStates": 10,
       "materials": 8,
       "boundsThree": {
@@ -243,9 +243,9 @@
     }
   ],
   "qualification": {
-    "retainedPath": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/balloon-assets-export-root-r3/actual-run-r1/root-finite-outcome.json",
-    "bytes": 7784,
-    "sha256": "b2c274745adc5a9b40d084454ad1a362577b370d1ed037630c3e65856f44cd56"
+    "retainedPath": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/balloon-facade-export-sol-high-r1/actual-run-r1/root-finite-outcome.json",
+    "bytes": 7706,
+    "sha256": "b63aeadc31874d9d025710771cb8e5f0ab1e1333d082a2738c9f4bad9b022228"
   },
   "renderingNotes": [
     "Stall uses9 embedded512x512 CC0-source-derived images; prop has no textures and supports saved per-instance skin tint.",

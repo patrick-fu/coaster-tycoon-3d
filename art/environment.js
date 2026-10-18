@@ -1243,17 +1243,69 @@ export function buildEnvironment(ctx, scenery, entry) {
     const beaconMat = getMat(ctx, 'mat-gate-beacon', { color: '#56cf72', emissive: '#3aa552' });
 
     for (const off of [-1.65, 1.65]) {
-      boxMesh(ctx, staticParent, creamMat, ex + off, eh + 0.5, ez, 0.48, 1.0, 0.48);
-      boxMesh(ctx, staticParent, cedarMat, ex + off, eh + 2.6, ez, 0.38, 3.2, 0.38);
-      boxMesh(ctx, staticParent, creamMat, ex + off, eh + 4.3, ez, 0.48, 0.24, 0.48);
-      coneMesh(ctx, staticParent, cedarMat, ex + off, eh + 4.745, ez, 0.28, 0.65, 0.28);
+      boxMesh(ctx, staticParent, creamMat, ex + off, eh + 0.48, ez, 0.48, 0.96, 0.48);
+      boxMesh(ctx, staticParent, cedarMat, ex + off, eh + 0.99, ez, 0.44, 0.06, 0.44);
+      boxMesh(ctx, staticParent, cedarMat, ex + off, eh + 2.48, ez, 0.36, 2.92, 0.36);
+      boxMesh(ctx, staticParent, creamMat, ex + off, eh + 3.98, ez, 0.46, 0.08, 0.46);
+      // Overlap both brace ends with the pier and architrave instead of leaving a floating tip.
+      boxMesh(ctx, staticParent, cedarMat, ex + off * 0.86, eh + 3.78, ez, 0.10, 0.64, 0.18, 0, 0, (off > 0 ? 0.7854 : -0.7854));
     }
 
-    boxMesh(ctx, staticParent, cedarMat, ex, eh + 4.25, ez, 3.78, 0.45, 0.52);
-    boxMesh(ctx, staticParent, creamMat, ex, eh + 4.6, ez, 3.36, 0.25, 0.46);
-    boxMesh(ctx, staticParent, roofMat, ex, eh + 5.0, ez, 3.0, 0.55, 0.62);
+    boxMesh(ctx, staticParent, cedarMat, ex, eh + 4.25, ez, 3.70, 0.58, 0.44);
+    boxMesh(ctx, staticParent, creamMat, ex, eh + 4.61, ez, 3.74, 0.14, 0.50);
+    boxMesh(ctx, staticParent, creamMat, ex, eh + 4.73, ez, 3.82, 0.10, 0.56);
+
+    boxMesh(ctx, staticParent, roofMat, ex, eh + 4.98, ez + 0.15, 3.74, 0.07, 0.48, 0.876, 0, 0);
+    boxMesh(ctx, staticParent, roofMat, ex, eh + 4.98, ez - 0.15, 3.74, 0.07, 0.48, -0.876, 0, 0);
+    boxMesh(ctx, staticParent, cedarMat, ex, eh + 5.18, ez, 3.78, 0.06, 0.08);
+
+    cylinderMesh(ctx, staticParent, goldMat, ex, eh + 5.24, ez, 0.12, 0.06, 0.12);
+    coneMesh(ctx, staticParent, goldMat, ex, eh + 5.42, ez, 0.18, 0.30, 0.18);
+
+    const gableGeometry = ctx.geometry('unit-gable-prism-x', () => {
+      const geo = new THREE.BufferGeometry();
+      const positions = new Float32Array([
+        // +X gable end (Y/Z plane, normal +X)
+        0.5, 0.5, 0.0,   0.5, -0.5, 0.5,   0.5, -0.5, -0.5,
+        // -X gable end (Y/Z plane, normal -X)
+        -0.5, 0.5, 0.0,  -0.5, -0.5, -0.5,  -0.5, -0.5, 0.5,
+        // Bottom face (-Y)
+        -0.5, -0.5, -0.5,   0.5, -0.5, -0.5,   0.5, -0.5, 0.5,
+        -0.5, -0.5, -0.5,   0.5, -0.5, 0.5,  -0.5, -0.5, 0.5,
+        // Front roof slope (+Z)
+        -0.5, 0.5, 0.0,  -0.5, -0.5, 0.5,   0.5, -0.5, 0.5,
+        -0.5, 0.5, 0.0,   0.5, -0.5, 0.5,   0.5, 0.5, 0.0,
+        // Back roof slope (-Z)
+        0.5, 0.5, 0.0,   0.5, -0.5, -0.5,  -0.5, -0.5, -0.5,
+        0.5, 0.5, 0.0,  -0.5, -0.5, -0.5,  -0.5, 0.5, 0.0
+      ]);
+      const uvs = new Float32Array([
+        0.5, 1.0,  1.0, 0.0,  0.0, 0.0,
+        0.5, 1.0,  0.0, 0.0,  1.0, 0.0,
+        0.0, 0.0,  1.0, 0.0,  1.0, 1.0,
+        0.0, 0.0,  1.0, 1.0,  0.0, 1.0,
+        0.0, 1.0,  0.0, 0.0,  1.0, 0.0,
+        0.0, 1.0,  1.0, 0.0,  1.0, 1.0,
+        0.0, 1.0,  0.0, 0.0,  1.0, 0.0,
+        0.0, 1.0,  1.0, 0.0,  1.0, 1.0
+      ]);
+      geo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+      geo.setAttribute('uv', new THREE.BufferAttribute(uvs, 2));
+      geo.computeVertexNormals();
+      return geo;
+    });
+
+    for (const off of [-1.70, 1.70]) {
+      // A small concealed roof lap closes the seam at the ridge.
+      ctx.add(staticParent, gableGeometry, creamMat, [ex + off, eh + 4.95, ez], [0.08, 0.34, 0.50]);
+      sphereMesh(ctx, staticParent, goldMat, ex + off, eh + 5.24, ez, 0.14, 0.14, 0.14);
+    }
 
     boxMesh(ctx, staticParent, creamMat, ex, eh + 4.25, ez + 0.28, 2.6, 0.65, 0.08);
+    for (const off of [-1.38, 1.38]) {
+      cylinderMesh(ctx, staticParent, goldMat, ex + off, eh + 4.25, ez + 0.30, 0.10, 0.04, 0.10, 1.5708, 0, 0);
+    }
+
     if (typeof ctx.text === 'function') {
       ctx.text(staticParent, 'PARK ENTRANCE', {
         x: ex,

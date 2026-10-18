@@ -3,8 +3,8 @@
   "groups": {
     "balloon-stall": {
       "glb": {
-        "bytes": 4860536,
-        "sha256": "4edbf276de77d5a173bebbf5b21fb3f111c00888dbfca84df42889a7ebfb871f"
+        "bytes": 4903980,
+        "sha256": "2bf40e0efea279c0eb3ce6d13b62bc97847996d6c6f6ec1cd6c3fe1b7cb24167"
       },
       "nodes": [
         {
@@ -223,10 +223,10 @@
           "decodedSHA256": "db735928173e7815ee1bd03374f5bff9044f0f8ad5e1d4999ee78f3e191d93fc"
         },
         {
-          "mesh": "Service_Counter",
+          "mesh": "Facade_Battens",
           "material": 7,
-          "triangles": 444,
-          "decodedSHA256": "4ffa1051ba2c529dc6f8771752ffc1c40d1b61ea5e65a866b304762bb219b4ce"
+          "triangles": 1524,
+          "decodedSHA256": "1fca55a790a0b8218bf05584df4bcda66f24e00f83c58ee1187402eacd8e99e1"
         }
       ],
       "materials": {
@@ -506,7 +506,7 @@
           "height": 512
         }
       ],
-      "triangles": 5124,
+      "triangles": 6204,
       "extensionsUsed": [],
       "drawGroupsAllStates": 10,
       "visibleDrawGroups": {
@@ -636,7 +636,7 @@
     }
   },
   "rootFiniteOutcome": {
-    "bytes": 7784,
-    "sha256": "b2c274745adc5a9b40d084454ad1a362577b370d1ed037630c3e65856f44cd56"
+    "bytes": 7706,
+    "sha256": "b63aeadc31874d9d025710771cb8e5f0ab1e1333d082a2738c9f4bad9b022228"
   }
 }

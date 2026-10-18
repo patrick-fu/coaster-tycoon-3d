@@ -1,0 +1,55 @@
+{
+  "scope": "Finite independent R7 pixel/export candidate; game loader/picking/disposal/current/public/human/original/GPU qualification pending.",
+  "mapping": {
+    "tileMetres": 4,
+    "glTFUp": "+Y",
+    "glTFFront": "+Z",
+    "unitScale": [
+      1,
+      1,
+      1
+    ],
+    "horizontalEnvelopeMetres": [
+      -1.95,
+      1.95
+    ],
+    "heightMetres": [
+      0,
+      3.85
+    ]
+  },
+  "inputs": [
+    {
+      "path": "ui/models/information/information-kiosk.glb",
+      "bytes": 8987680,
+      "sha256": "f0ff011ca476c4c8d5ef4af85c2438250df2bb91a42ffc89df4e6ee578ed65a4",
+      "retainedInput": "/Volumes/WD/code/workspaces/coaster-information-kiosk-polish-r1/output/candidate-r7/information-kiosk.glb"
+    },
+    {
+      "path": "scripts/art/information-kiosk.py",
+      "bytes": 33483,
+      "sha256": "0d96fc3b6139e2830170c84a36f22ccf5c12a4a6116b60a4a93f407b04871650",
+      "retainedInput": "/Volumes/WD/code/workspaces/coaster-information-kiosk-polish-r1/inputs/information-kiosk-r7.py"
+    },
+    {
+      "path": "scripts/art/export-information-kiosk.py",
+      "bytes": 11994,
+      "sha256": "7538df5fdf06fdc70dd0ac9ae2753ce16c6e85ded9af1bfd56d1b574ef6370e9",
+      "retainedInput": "/Volumes/WD/code/workspaces/coaster-information-kiosk-polish-r1/inputs/export-glyph-exemption-r3.py"
+    }
+  ],
+  "editableMaster": {
+    "retainedPath": "/Volumes/WD/code/workspaces/coaster-information-kiosk-polish-r1/output/candidate-r7/information-kiosk.blend",
+    "bytes": 25904218,
+    "sha256": "855335e35db37db4e1d259b21474dc887f900708aa368557bc21e119dfde789b"
+  },
+  "geometry": {
+    "triangles": 12864,
+    "meshPrimitives": 39,
+    "materials": 10,
+    "authoredObjects": 92
+  },
+  "provenance": "../detailed-stalls/material-provenance.json",
+  "retainedCandidateDisposition": "/Volumes/WD/code/workspaces/coaster-information-kiosk-polish-r1/evidence/export-r7/root-candidate-disposition.json",
+  "note": "AGY-authored geometry partial plus Root technical repair supported by a same-master specular ablation; actual exported roof factor0.3 and hip-aligned UVs,original roof texture roles unchanged."
+}
