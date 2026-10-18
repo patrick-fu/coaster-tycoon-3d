@@ -3,6 +3,7 @@ import { ensure } from '../simulation/validation.js';
 import { footprint } from '../simulation/geometry.js';
 import { flumeProfile } from '../simulation/flume-profile.js';
 import { piecesWithCurveBank } from './curve-samples.js';
+import { balloonPlacementId } from './balloons.js';
 export function woodenProfile(content, rules) {
     const { construction, operation } = resolveContent(content).capabilities;
     if (construction.kind === 'fixed' || construction.kind === 'channel')
@@ -27,10 +28,15 @@ export function rideFootprint(origin, piece, profile, pieceId) {
     return profile.footprints[pieceId][origin.direction].map(c => ({ x: (origin.x + c.x) / 32, y: (origin.y + c.y) / 32, low: origin.z + c.low, high: origin.z + c.high, mask: c.mask }));
 }
 export function legacyRuleJSON(rules) {
-    const { rideProfiles, fixedProfiles, channelProfiles, commerceProfiles, facilityProfiles, merchandiseProfiles, restroomProfiles, atmProfiles, ...common } = rules;
+    const { rideProfiles, fixedProfiles, channelProfiles, commerceProfiles, facilityProfiles, merchandiseProfiles, restroomProfiles, atmProfiles, balloonProfiles, ...common } = rules;
     return JSON.stringify(common);
 }
+function preBalloonRules(rules) {
+    const { balloonProfiles, ...previous } = rules;
+    return { ...previous, facilityProfiles: Object.fromEntries(Object.entries(previous.facilityProfiles ?? {}).filter(([id]) => id !== balloonPlacementId)) };
+}
 function historicalRideRules(rules) {
+    rules = preBalloonRules(rules);
     const rideProfiles = rules.rideProfiles;
     if (!rideProfiles || !Object.hasOwn(rideProfiles, 'independent.wooden-rise-return-v2'))
         return rules;
@@ -63,7 +69,7 @@ export function v14RuleJSON(rules) {
 }
 export function v15RuleJSON(rules) {
     const { atmProfiles, ...previous } = historicalRideRules(rules);
-    return JSON.stringify({ ...previous, facilityProfiles: Object.fromEntries(Object.entries(rules.facilityProfiles ?? {}).filter(([id]) => id !== 'independent.atm-v1')) });
+    return JSON.stringify({ ...previous, facilityProfiles: Object.fromEntries(Object.entries(rules.facilityProfiles ?? {}).filter(([id]) => id !== 'independent.atm-v1' && id !== balloonPlacementId)) });
 }
 function curveRules(rules, bank) {
     const selected = structuredClone(rules);
@@ -77,8 +83,9 @@ function curveRules(rules, bank) {
     return selected;
 }
 export function v16RuleJSON(rules) { return JSON.stringify(historicalRideRules(rules)); }
+export function v17RuleJSON(rules) { return JSON.stringify(preBalloonRules(rules)); }
 export function savedCurveRules(rules, serialized, version) {
-    const encode = version === 15 ? v15RuleJSON : version === 16 ? v16RuleJSON : JSON.stringify;
+    const encode = version === 15 ? v15RuleJSON : version === 16 ? v16RuleJSON : version === 17 ? v17RuleJSON : JSON.stringify;
     if (encode(rules) === serialized)
         return rules;
     const stable = curveRules(rules, 'stable'), legacy = curveRules(rules, 'legacy-browser');

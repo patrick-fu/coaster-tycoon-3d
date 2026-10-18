@@ -6,13 +6,14 @@ import { validateChannelProfiles } from './flume-profile.js';
 import { defaultScenery, sceneryTypes } from './scenery.js';
 import { validateCommerceProfiles } from '../content/consumables.js';
 import { validateAtmProfiles } from '../content/atm.js';
+import { validateBalloonProfiles } from '../content/balloons.js';
 import { validateFacilityProfiles } from '../content/facility-profiles.js';
 import { validateMerchandiseProfiles } from '../content/merchandise.js';
 import { validateRestroomProfiles } from '../content/gradual-restroom.js';
 import { quarterCurveSamples } from '../content/curve-samples.js';
 import { woodenRiseReturnPieces, woodenRiseReturnProfileRecord } from '../content/wooden-rise-return.js';
 export function validateRules(input) {
-    record(input, [...(Object.hasOwn(input ?? {}, 'scenery') ? ['scenery'] : []), 'housekeeping', 'services', 'guests', 'motion', 'id', 'evidence', 'pathPrice', 'portalPrice', 'terrainPrice', 'refundPerThousand', 'maxSupport', 'maxHeight', 'pieces', ...(Object.hasOwn(input ?? {}, 'rideProfiles') ? ['rideProfiles'] : []), ...(Object.hasOwn(input ?? {}, 'fixedProfiles') ? ['fixedProfiles'] : []), ...(Object.hasOwn(input ?? {}, 'channelProfiles') ? ['channelProfiles'] : []), ...(Object.hasOwn(input ?? {}, 'commerceProfiles') ? ['commerceProfiles'] : []), ...(Object.hasOwn(input ?? {}, 'facilityProfiles') ? ['facilityProfiles'] : []), ...(Object.hasOwn(input ?? {}, 'merchandiseProfiles') ? ['merchandiseProfiles'] : []), ...(Object.hasOwn(input ?? {}, 'restroomProfiles') ? ['restroomProfiles'] : []), ...(Object.hasOwn(input ?? {}, 'atmProfiles') ? ['atmProfiles'] : [])]);
+    record(input, [...(Object.hasOwn(input ?? {}, 'scenery') ? ['scenery'] : []), 'housekeeping', 'services', 'guests', 'motion', 'id', 'evidence', 'pathPrice', 'portalPrice', 'terrainPrice', 'refundPerThousand', 'maxSupport', 'maxHeight', 'pieces', ...(Object.hasOwn(input ?? {}, 'rideProfiles') ? ['rideProfiles'] : []), ...(Object.hasOwn(input ?? {}, 'fixedProfiles') ? ['fixedProfiles'] : []), ...(Object.hasOwn(input ?? {}, 'channelProfiles') ? ['channelProfiles'] : []), ...(Object.hasOwn(input ?? {}, 'commerceProfiles') ? ['commerceProfiles'] : []), ...(Object.hasOwn(input ?? {}, 'facilityProfiles') ? ['facilityProfiles'] : []), ...(Object.hasOwn(input ?? {}, 'merchandiseProfiles') ? ['merchandiseProfiles'] : []), ...(Object.hasOwn(input ?? {}, 'restroomProfiles') ? ['restroomProfiles'] : []), ...(Object.hasOwn(input ?? {}, 'atmProfiles') ? ['atmProfiles'] : []), ...(Object.hasOwn(input ?? {}, 'balloonProfiles') ? ['balloonProfiles'] : [])]);
     const scenery = structuredClone(Object.hasOwn(input, 'scenery') ? input.scenery : defaultScenery);
     record(scenery, [...sceneryTypes]);
     for (const type of sceneryTypes) {
@@ -124,8 +125,8 @@ export function validateRules(input) {
         }
         rideProfiles[id] = { motion: selected.motion, pieces: selected.pieces, vehicle: { kind: vehicle.kind, originMm: { x: vehicle.originMm.x, y: vehicle.originMm.y, z: vehicle.originMm.z }, wheelbaseMm: vehicle.wheelbaseMm, bogiePivotHeightMm: vehicle.bogiePivotHeightMm, couplerHalfSpanMm: vehicle.couplerHalfSpanMm, couplerHeightMm: vehicle.couplerHeightMm, drawbarLengthMm: vehicle.drawbarLengthMm, railHalfGaugeMm: vehicle.railHalfGaugeMm, stationDeckMm: vehicle.stationDeckMm }, footprints };
     }
-    const commerceProfiles = validateCommerceProfiles(input.commerceProfiles), merchandiseProfiles = validateMerchandiseProfiles(input.merchandiseProfiles), restroomProfiles = validateRestroomProfiles(input.restroomProfiles, common), atmProfiles = validateAtmProfiles(input.atmProfiles, common), facilityProfiles = validateFacilityProfiles(input.facilityProfiles, { ...common, commerceProfiles, merchandiseProfiles, restroomProfiles, atmProfiles });
-    return { ...common, rideProfiles, fixedProfiles: validateFixedProfiles(input.fixedProfiles, common), channelProfiles: validateChannelProfiles(input.channelProfiles, common), commerceProfiles, facilityProfiles, merchandiseProfiles, restroomProfiles, atmProfiles };
+    const commerceProfiles = validateCommerceProfiles(input.commerceProfiles), merchandiseProfiles = validateMerchandiseProfiles(input.merchandiseProfiles), restroomProfiles = validateRestroomProfiles(input.restroomProfiles, common), atmProfiles = validateAtmProfiles(input.atmProfiles, common), balloonProfiles = validateBalloonProfiles(input.balloonProfiles), facilityProfiles = validateFacilityProfiles(input.facilityProfiles, { ...common, commerceProfiles, merchandiseProfiles, restroomProfiles, atmProfiles, balloonProfiles });
+    return { ...common, rideProfiles, fixedProfiles: validateFixedProfiles(input.fixedProfiles, common), channelProfiles: validateChannelProfiles(input.channelProfiles, common), commerceProfiles, facilityProfiles, merchandiseProfiles, restroomProfiles, atmProfiles, balloonProfiles };
 }
 export function turn(x, y, d) { const vectors = [[1, 0], [0, 1], [-1, 0], [0, -1]]; const [dx, dy] = vectors[d]; return { x: x * dx - y * dy, y: x * dy + y * dx }; }
 export function endpoint(a, p) { const b = turn(p.end.x, p.end.y, a.direction); return { x: a.x + b.x, y: a.y + b.y, z: a.z + p.end.z, direction: ((a.direction + p.end.turn + 4) % 4), pitch: p.end.pitch, bank: p.end.bank }; }

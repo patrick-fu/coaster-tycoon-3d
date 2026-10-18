@@ -1,19 +1,13 @@
 import { steelRules } from '../content/steel-coaster.js';
-import { mixedRules } from '../content/mixed-park.js';
 import { newClassicShowcase } from '../content/classic-showcase.js';
-import { withFlumeProfile } from '../content/log-flume.js';
-import { withConsumablesProfile } from '../content/consumables.js';
-import { withDetailedStallsProfile, withInformationProfile } from '../content/facility-profiles.js';
-import { withGradualRestroomProfile } from '../content/gradual-restroom.js';
-import { withAtmProfile } from '../content/atm.js';
+import { browserRules, restoreBrowserPark } from '../content/browser-park.js';
 import { createHost } from './host.js';
 import { FixedClock } from './clock.js';
 import { ensure, integer, record, result } from './validation.js';
 import { WORKER_PROTOCOL_VERSION } from './protocol.js';
 const scope = globalThis;
-const browserRules = withAtmProfile(withGradualRestroomProfile(withInformationProfile(withDetailedStallsProfile(withConsumablesProfile(withFlumeProfile(mixedRules))))));
 let engine = newClassicShowcase(browserRules), host = createHost(engine), paused = false;
-const clock = new FixedClock(steelRules.motion.tickHz, performance.now());
+let clock = new FixedClock(steelRules.motion.tickHz, performance.now());
 let backlog = 0;
 function drain() { const due = clock.poll(performance.now(), paused); backlog = due.backlog; if (due.ticks) {
     const r = engine.advance(due.ticks);
@@ -26,7 +20,7 @@ setInterval(drain, 25);
 scope.onmessage = event => {
     drain();
     const message = event.data;
-    if (message?.request?.type === 'speed' || message?.request?.type === 'new-park') {
+    if (message?.request?.type === 'speed' || message?.request?.type === 'new-park' || message?.request?.type === 'load') {
         const response = result(() => {
             record(message, ['id', 'protocolVersion', 'request']);
             ensure(integer(message.id), 'INVALID_COMMAND', 'Invalid request identifier.');
@@ -37,6 +31,16 @@ scope.onmessage = event => {
                 ensure(integer(speed) && [1, 2, 4].includes(speed), 'INVALID_COMMAND', 'Invalid simulation speed.');
                 clock.speed = speed;
                 return clock.speed;
+            }
+            if (message.request.type === 'load') {
+                const staged = restoreBrowserPark(message.request.payload), stagedHost = createHost(staged), stagedPaused = staged.snapshot().paused, stagedClock = new FixedClock(steelRules.motion.tickHz, performance.now());
+                stagedClock.speed = clock.speed;
+                engine = staged;
+                host = stagedHost;
+                paused = stagedPaused;
+                clock = stagedClock;
+                backlog = 0;
+                return undefined;
             }
             ensure(message.request.payload === null, 'INVALID_COMMAND', 'New park takes no payload.');
             engine = newClassicShowcase(browserRules);
@@ -52,12 +56,6 @@ scope.onmessage = event => {
     if (response.ok) {
         if (response.value.result.ok && message.request?.type === 'execute' && message.request?.payload?.command?.type === 'set-paused')
             paused = message.request.payload.command.paused;
-        if (response.value.result.ok && message.request?.type === 'load') {
-            const s = engine.view({ bounds: { x0: 0, y0: 0, x1: 0, y1: 0 }, includeStatic: false });
-            if (s.ok)
-                paused = s.value.paused;
-            clock.reset(performance.now());
-        }
         scope.postMessage({ ...response.value, backlog });
     }
     else

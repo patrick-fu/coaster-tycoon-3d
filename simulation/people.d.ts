@@ -55,6 +55,7 @@ export type Guest = {
     id: number;
     held: HeldItem;
     merchandise: GuestMerchandise;
+    balloonColour: number | null;
     informationCounter: number | null;
     navigationRide: number | null;
     amenity: number | null;

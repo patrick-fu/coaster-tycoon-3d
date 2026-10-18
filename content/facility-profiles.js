@@ -3,6 +3,7 @@ import { commerceProfileId, facilityProduct } from './consumables.js';
 import { informationProfileId, merchandiseProfileId, withMerchandiseProfile } from './merchandise.js';
 import { restroomPlacementId, restroomProfileId, gradualRestroomProfile } from './gradual-restroom.js';
 import { atmPlacementId, atmProfile } from './atm.js';
+import { balloonPlacementId, balloonProfileId, facilityBalloon } from './balloons.js';
 import { ensure, record } from '../simulation/validation.js';
 export const detailedStallsProfileId = 'independent.detailed-stalls-v1';
 export function withDetailedStallsProfile(base) { return { ...base, facilityProfiles: { ...base.facilityProfiles, [detailedStallsProfileId]: { height: 32 } } }; }
@@ -12,14 +13,14 @@ export function validateFacilityProfiles(input, rules) {
     ensure(supplied !== null && typeof supplied === 'object' && !Array.isArray(supplied), 'INVALID_COMMAND', 'Invalid facility profiles.');
     const ids = Object.keys(supplied);
     record(supplied, ids);
-    ensure(ids.length <= 4 && ids.every(id => id === detailedStallsProfileId || id === informationProfileId || id === restroomPlacementId || id === atmPlacementId), 'UNSUPPORTED_CONTENT', 'Unavailable facility placement profile.');
+    ensure(ids.length <= 5 && ids.every(id => id === detailedStallsProfileId || id === informationProfileId || id === restroomPlacementId || id === atmPlacementId || id === balloonPlacementId), 'UNSUPPORTED_CONTENT', 'Unavailable facility placement profile.');
     const result = {};
-    for (const id of [detailedStallsProfileId, informationProfileId, restroomPlacementId, atmPlacementId]) {
+    for (const id of [detailedStallsProfileId, informationProfileId, restroomPlacementId, atmPlacementId, balloonPlacementId]) {
         if (!Object.hasOwn(supplied, id))
             continue;
         const p = supplied[id];
         record(p, ['height']);
-        ensure(p.height === 32 && rules.motion.tileMetres === 4 && (id === atmPlacementId ? rules.motion.tickHz === 40 : id === informationProfileId ? rules.merchandiseProfiles?.[merchandiseProfileId] : id === restroomPlacementId ? rules.restroomProfiles?.[restroomProfileId] : rules.commerceProfiles?.[commerceProfileId]), 'INVALID_COMMAND', 'Detailed stalls require the qualified height, world mapping and complete commerce profile.');
+        ensure(p.height === 32 && rules.motion.tileMetres === 4 && (id === balloonPlacementId ? rules.balloonProfiles?.[balloonProfileId] : id === atmPlacementId ? rules.motion.tickHz === 40 : id === informationProfileId ? rules.merchandiseProfiles?.[merchandiseProfileId] : id === restroomPlacementId ? rules.restroomProfiles?.[restroomProfileId] : rules.commerceProfiles?.[commerceProfileId]), 'INVALID_COMMAND', 'Detailed stalls require the qualified height, world mapping and complete commerce profile.');
         result[id] = { height: 32 };
     }
     return result;
@@ -30,9 +31,10 @@ export function resolveFacilityPlacement(content, rules) {
     facilityProduct(content, rules);
     gradualRestroomProfile(content, rules);
     atmProfile(content, rules);
+    facilityBalloon(content, rules);
     if (c.service === 'information')
         ensure(c.profileId === informationProfileId && o.profileId === merchandiseProfileId && rules.merchandiseProfiles?.[merchandiseProfileId], 'UNSUPPORTED_CONTENT', 'Information requires compatible receiving merchandise and placement profiles.');
-    if (c.profileId !== detailedStallsProfileId && c.profileId !== informationProfileId && c.profileId !== restroomPlacementId && c.profileId !== atmPlacementId)
+    if (c.profileId !== detailedStallsProfileId && c.profileId !== informationProfileId && c.profileId !== restroomPlacementId && c.profileId !== atmPlacementId && c.profileId !== balloonPlacementId)
         return { height: 16, dryGround: false };
     const profile = rules.facilityProfiles?.[c.profileId];
     ensure(profile, 'UNSUPPORTED_CONTENT', 'The selected facility profile is unavailable in this receiving park.');

@@ -1,7 +1,8 @@
 import { Engine } from '../simulation/engine.js';
 import { initialWorld } from './steel-coaster.js';
-import { legacyRideContent, woodenRiseReturnRideContent, carouselRideContent, flumeRideContent, detailedFacilityContent, atmContent } from './registry.js';
+import { legacyRideContent, woodenRiseReturnRideContent, carouselRideContent, flumeRideContent, detailedFacilityContent, atmContent, balloonContent } from './registry.js';
 import { hasAtmProfile } from './atm.js';
+import { hasBalloonProfile } from './balloons.js';
 import { flumePortalSocket } from '../simulation/flume-portal.js';
 import { carouselPortal } from '../simulation/carousel.js';
 export function newClassicShowcase(rules) {
@@ -159,6 +160,10 @@ export function newClassicShowcase(rules) {
         ['tree', 10, 23], ['flower', 11, 23], ['hedge', 12, 23], ['flower', 10, 24],
     ])
         apply({ type: 'place-scenery', sceneryType, tile: { x, y }, height: 32 });
+    if (hasBalloonProfile(rules)) {
+        const facility = apply({ type: 'place-facility', name: 'Balloons', kind: 'balloon', tile: { x: 22, y: 12 }, height: 32, direction: 2, content: balloonContent() });
+        apply({ type: 'set-facility-open', facility, open: true });
+    }
     for (const ride of [wood, steel, flume, midway])
         apply({ type: 'set-ride-status', ride, status: 'testing' });
     const test = engine.advance(2400);

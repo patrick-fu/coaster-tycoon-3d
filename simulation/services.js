@@ -9,6 +9,7 @@ import { commerceProfileId, facilityProduct, facilityStockCost, productRule } fr
 import { merchandiseProfileId } from '../content/merchandise.js';
 import { gradualRestroomProfile } from '../content/gradual-restroom.js';
 import { atmProfile } from '../content/atm.js';
+import { hasBalloonProfile } from '../content/balloons.js';
 const same = (a, b) => a.x === b.x && a.y === b.y && a.z === b.z;
 const key = (p) => `${p.x},${p.y},${p.z}`;
 export function validateServiceRules(input) {
@@ -30,7 +31,7 @@ export function chooseFacility(g, s, rules, index, route) {
     const motive = (f) => f.kind === 'food' ? g.hunger : f.kind === 'drink' ? g.thirst : g.bladder;
     let choice = null;
     for (const f of s.facilities) {
-        if (f.kind === 'information' || f.kind === 'atm')
+        if (f.kind === 'information' || f.kind === 'atm' || f.kind === 'balloon')
             continue;
         if (!f.open || g.cash < f.price || (g.wrapper || g.held) && f.kind !== 'restroom' || motive(f) < rules.services.needThreshold)
             continue;
@@ -58,6 +59,8 @@ export function recoverFacility(g, index, rules) {
         return !!rules.merchandiseProfiles?.[merchandiseProfileId] && f.open && g.informationCounter !== null && e?.kind === 'facility' && publicPath(facilityApproach(e, g.informationCounter), index);
     if (f?.kind === 'atm')
         return !!atmProfile(f.content, rules) && f.open && e?.kind === 'facility' && publicPath(facilityApproach(e), index);
+    if (f?.kind === 'balloon')
+        return hasBalloonProfile(rules) && g.balloonColour === null && g.cash >= f.price && f.open && g.informationCounter === null && e?.kind === 'facility' && publicPath(facilityApproach(e), index);
     return !!f && f.open && g.cash >= f.price && (f.kind === 'restroom' || !g.held) && e?.kind === 'facility' && publicPath(facilityApproach(e), index);
 }
 export function insideRestroom(g) { return g.phase === 'using-restroom' || g.phase === 'restroom-exit'; }
@@ -120,7 +123,7 @@ export function stepRestroom(g, s, rules, index, route) {
 }
 export function buy(g, s, rules, index) {
     const f = index.facilities.get(g.facility);
-    ensure(f.kind !== 'information' && f.kind !== 'atm', 'INVALID_CONTENT', 'Ordinary service cannot perform this facility operation.');
+    ensure(f.kind !== 'information' && f.kind !== 'atm' && f.kind !== 'balloon', 'INVALID_CONTENT', 'Ordinary service cannot perform this facility operation.');
     const r = rules.services, product = facilityProduct(f.content, rules), stock = facilityStockCost(f, rules), price = f.price;
     const cash = BigInt(s.cash) + BigInt(price) - BigInt(stock);
     ensure(cash >= BigInt(-Number.MAX_SAFE_INTEGER) && cash <= BigInt(Number.MAX_SAFE_INTEGER) && integer(s.ledger.shopSales + price) && integer(s.ledger.stock + stock) && integer(f.income + price) && integer(f.sales + 1) && integer(g.spent + price), 'CAPACITY', 'Shop accounting capacity exhausted.');

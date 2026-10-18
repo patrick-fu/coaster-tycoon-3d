@@ -1,0 +1,109 @@
+import type { Amenity, Litter, CleanupJob } from './housekeeping.js';
+import { type Direction, type State, type Rules, type Tile } from './types.js';
+import type { Guest, PathPoint, PeopleIndex, Routing } from './people.js';
+import type { ContentIdentity } from '../content/registry.js';
+import { type InformationProducts } from '../content/merchandise.js';
+export type FacilityKind = 'food' | 'drink' | 'restroom' | 'information' | 'atm' | 'balloon';
+type FacilityBase = {
+    id: number;
+    instanceId: number;
+    content: ContentIdentity;
+    name: string;
+    element: number;
+    open: boolean;
+};
+export type OrdinaryFacility = FacilityBase & {
+    kind: Exclude<FacilityKind, 'information' | 'atm' | 'balloon'>;
+    price: number;
+    income: number;
+    sales: number;
+};
+export type InformationFacility = FacilityBase & {
+    kind: 'information';
+    products: InformationProducts;
+    umbrellaColour: number;
+};
+export type AtmFacility = FacilityBase & {
+    kind: 'atm';
+    withdrawals: number;
+};
+export type BalloonFacility = FacilityBase & {
+    kind: 'balloon';
+    price: number;
+    income: number;
+    sales: number;
+    balloonColour: number;
+};
+export type Facility = OrdinaryFacility | InformationFacility | AtmFacility | BalloonFacility;
+export type FacilityElement = {
+    id: number;
+    kind: 'facility';
+    facility: number;
+    tile: Tile;
+    height: number;
+    direction: Direction;
+};
+export type Staff = {
+    id: number;
+    role: 'mechanic' | 'handyman';
+    point: PathPoint;
+    next: PathPoint | null;
+    goal: PathPoint | null;
+    progress: number;
+    patrol: number[];
+    job: {
+        ride: number;
+        kind: 'repair' | 'inspection';
+    } | null;
+    work: number;
+    completed: number;
+    cleanup: CleanupJob | null;
+};
+export type ServiceRules = {
+    buildPrice: number;
+    defaultPrice: number;
+    maxPrice: number;
+    foodStock: number;
+    drinkStock: number;
+    needThreshold: number;
+    relief: number;
+    initialBladder: number;
+    serviceTicks: number;
+    weekTicks: number;
+    upkeepWeeks: number;
+    mechanicMonthlyWage: number;
+    handymanMonthlyWage: number;
+    rideUpkeep: number;
+    facilityUpkeep: number;
+    interestPer10000: number;
+    staffWalkTicks: number;
+    repairTicks: number;
+    inspectionTicks: number;
+    inspectionInterval: number;
+};
+export type ServiceIndex = PeopleIndex & {
+    amenities: Map<number, Amenity>;
+    litter: Map<number, Litter>;
+    facilities: Map<number, Facility>;
+    staff: Map<number, Staff>;
+};
+export declare function validateServiceRules(input: ServiceRules): ServiceRules;
+export declare function facilityApproach(e: FacilityElement, counter?: number): PathPoint;
+export declare function sharedCount(s: State): number;
+export declare function chooseFacility(g: Guest, s: State, rules: Rules, index: ServiceIndex, route: Routing): {
+    facility: number;
+    goal: PathPoint;
+} | null;
+export declare function recoverFacility(g: Guest, index: ServiceIndex, rules: Rules): boolean;
+export declare function insideRestroom(g: Guest): boolean;
+export declare function restroomExit(f: Facility, s: State, index: ServiceIndex, route: Routing): PathPoint | null;
+export declare function admitRestroom(g: Guest, s: State, rules: Rules, index: ServiceIndex): boolean;
+export declare function releaseRestroom(g: Guest, point: PathPoint): void;
+export declare function stepRestroom(g: Guest, s: State, rules: Rules, index: ServiceIndex, route: Routing): void;
+export declare function buy(g: Guest, s: State, rules: Rules, index: ServiceIndex): void;
+export declare function consume(g: Guest, s: State, rules: Rules): void;
+export declare function accessible(staff: Staff, goal: PathPoint, index: PeopleIndex, route: Routing): boolean;
+export declare function recoverStaff(s: State, index: ServiceIndex, route: Routing): void;
+export declare function stepStaff(s: State, rules: Rules, index: ServiceIndex, route: Routing): void;
+export declare function stepFinance(s: State, rules: Rules): void;
+export {};

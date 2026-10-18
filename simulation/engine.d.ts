@@ -13,8 +13,8 @@ export declare class Engine {
     constructor(options: WorldOptions, rules: Rules);
     get revision(): string;
     view(input: unknown): Result<{
-        protocolVersion: 10;
-        contentVersion: 10;
+        protocolVersion: 11;
+        contentVersion: 11;
         coordinates: {
             nativeUnitsPerTile: number;
             nativeHeightStep: number;
@@ -53,6 +53,10 @@ export declare class Engine {
             boats: number;
         };
         people: Float64Array<ArrayBuffer>;
+        guestBalloons: {
+            id: number;
+            colour: number;
+        }[];
         cars: {
             id: number;
             ride: number;
@@ -269,6 +273,34 @@ export declare class Engine {
             name: string;
             element: number;
             open: boolean;
+            kind: 'balloon';
+            price: number;
+            income: number;
+            sales: number;
+            balloonColour: number;
+            content: {
+                familyId: string;
+                variantId: string;
+                modeId: string;
+            };
+            presentation: import("../content/registry.js").Presentation;
+            priceBounds: {
+                min: number;
+                max: number;
+            };
+            product: {
+                id: 'independent.balloon';
+                label: string;
+                stockCost: number;
+                stockExpense: number;
+                grossMargin: number;
+            };
+        } | {
+            id: number;
+            instanceId: number;
+            name: string;
+            element: number;
+            open: boolean;
             kind: 'atm';
             withdrawals: number;
             content: {
@@ -320,7 +352,7 @@ export declare class Engine {
             name: string;
             element: number;
             open: boolean;
-            kind: Exclude<import("./services.js").FacilityKind, 'information' | 'atm'>;
+            kind: Exclude<import("./services.js").FacilityKind, 'information' | 'atm' | 'balloon'>;
             price: number;
             income: number;
             sales: number;
@@ -369,7 +401,7 @@ export declare class Engine {
     inspect(kind: unknown, id: unknown): Result<Guest | Staff | Element>;
     snapshot(): State;
     catalogue(): {
-        contentVersion: 10;
+        contentVersion: 11;
         families: {
             id: string;
             label: string;
@@ -421,6 +453,10 @@ export declare class Engine {
                         service: 'atm';
                         profileId: 'independent.atm-v1';
                     } | {
+                        kind: 'facility';
+                        service: 'balloon';
+                        profileId: 'independent.balloon-stall-v1';
+                    } | {
                         kind: 'unimplemented';
                         referenceShape: string;
                     };
@@ -454,6 +490,10 @@ export declare class Engine {
                         kind: 'service';
                         service: 'atm';
                         profileId: 'independent.atm-withdrawal-v1';
+                    } | {
+                        kind: 'service';
+                        service: 'balloon';
+                        profileId: 'independent.balloon-v1';
                     } | {
                         kind: 'unimplemented';
                     };

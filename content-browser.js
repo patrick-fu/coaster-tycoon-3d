@@ -114,6 +114,7 @@ export function createContentBrowser({ loadCatalogue, onChoose, isChoiceVisible 
   let isLoading = false;
   let loadError = null;
   let cataloguePromise = null;
+  let catalogueGeneration = 0;
   let focusTimer = null;
   let lastRenderedFamily = null;
 
@@ -151,7 +152,7 @@ export function createContentBrowser({ loadCatalogue, onChoose, isChoiceVisible 
       construction.kind === 'fixed' && operation.kind === 'rotation' && presentation.kind === 'detailed-carousel' ||
       construction.kind === 'channel' && operation.kind === 'channel-circuit' && presentation.kind === 'detailed-log-flume' ||
       construction.kind === 'facility' && operation.kind === 'service' && ['procedural-facility','detailed-facility'].includes(presentation.kind) &&
-      ['food','drink','restroom','information','atm'].includes(construction.service) && operation.service === construction.service && presentation.service === construction.service;
+      ['food','drink','restroom','information','atm','balloon'].includes(construction.service) && operation.service === construction.service && presentation.service === construction.service;
   }
 
   function isChoiceAvailable(choice) {
@@ -332,6 +333,7 @@ export function createContentBrowser({ loadCatalogue, onChoose, isChoiceVisible 
     if (isLoading && cataloguePromise) {
       return cataloguePromise;
     }
+    const generation = catalogueGeneration;
     isLoading = true;
     loadError = null;
     render();
@@ -342,6 +344,7 @@ export function createContentBrowser({ loadCatalogue, onChoose, isChoiceVisible 
           throw new Error('The content library is unavailable.');
         }
         const data = await loadCatalogue();
+        if (generation !== catalogueGeneration) return;
         if (!data || data.contentVersion !== CONTENT_VERSION || !Array.isArray(data.families) || !Array.isArray(data.variants) || !Array.isArray(data.modes)) {
           throw new Error('The catalogue uses an unsupported format.');
         }
@@ -351,11 +354,12 @@ export function createContentBrowser({ loadCatalogue, onChoose, isChoiceVisible 
         ensureValidSelection();
         render();
       } catch (err) {
+        if (generation !== catalogueGeneration) return;
         isLoading = false;
         loadError = err && err.message ? err.message : String(err);
         render();
       } finally {
-        cataloguePromise = null;
+        if (generation === catalogueGeneration) cataloguePromise = null;
       }
     })();
 
@@ -1457,8 +1461,20 @@ export function createContentBrowser({ loadCatalogue, onChoose, isChoiceVisible 
     }
   }
 
+  function invalidateCatalogue() {
+    catalogueGeneration++;
+    catalogue = null;
+    cataloguePromise = null;
+    isLoading = false;
+    loadError = null;
+    selectedFamilyId = selectedVariantId = selectedModeId = lastRenderedFamily = null;
+    if (isOpen) return fetchCatalogue();
+    return Promise.resolve();
+  }
+
   function destroy() {
     close();
+    invalidateCatalogue();
     removeGlobalListeners();
 
     if (windowEl && windowEl.parentNode) {
@@ -1483,6 +1499,7 @@ export function createContentBrowser({ loadCatalogue, onChoose, isChoiceVisible 
   return {
     open,
     close,
+    invalidateCatalogue,
     refreshAvailability: () => {
       if (isOpen && catalogue) {
         ensureValidSelection();

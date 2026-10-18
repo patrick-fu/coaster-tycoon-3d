@@ -1,7 +1,7 @@
 import { Engine } from './engine.js';
 export declare function createHost(engine: Engine): (message: unknown) => import("./types.js").Result<{
     id: number;
-    protocolVersion: 10;
+    protocolVersion: 11;
     result: {
         ok: true;
         value: void;
@@ -17,8 +17,8 @@ export declare function createHost(engine: Engine): (message: unknown) => import
     } | {
         ok: true;
         value: {
-            protocolVersion: 10;
-            contentVersion: 10;
+            protocolVersion: 11;
+            contentVersion: 11;
             coordinates: {
                 nativeUnitsPerTile: number;
                 nativeHeightStep: number;
@@ -57,6 +57,10 @@ export declare function createHost(engine: Engine): (message: unknown) => import
                 boats: number;
             };
             people: Float64Array<ArrayBuffer>;
+            guestBalloons: {
+                id: number;
+                colour: number;
+            }[];
             cars: {
                 id: number;
                 ride: number;
@@ -273,6 +277,34 @@ export declare function createHost(engine: Engine): (message: unknown) => import
                 name: string;
                 element: number;
                 open: boolean;
+                kind: 'balloon';
+                price: number;
+                income: number;
+                sales: number;
+                balloonColour: number;
+                content: {
+                    familyId: string;
+                    variantId: string;
+                    modeId: string;
+                };
+                presentation: import("../content/registry.js").Presentation;
+                priceBounds: {
+                    min: number;
+                    max: number;
+                };
+                product: {
+                    id: 'independent.balloon';
+                    label: string;
+                    stockCost: number;
+                    stockExpense: number;
+                    grossMargin: number;
+                };
+            } | {
+                id: number;
+                instanceId: number;
+                name: string;
+                element: number;
+                open: boolean;
                 kind: 'atm';
                 withdrawals: number;
                 content: {
@@ -324,7 +356,7 @@ export declare function createHost(engine: Engine): (message: unknown) => import
                 name: string;
                 element: number;
                 open: boolean;
-                kind: Exclude<import("./services.js").FacilityKind, 'information' | 'atm'>;
+                kind: Exclude<import("./services.js").FacilityKind, 'information' | 'atm' | 'balloon'>;
                 price: number;
                 income: number;
                 sales: number;
@@ -382,7 +414,7 @@ export declare function createHost(engine: Engine): (message: unknown) => import
     } | {
         ok: true;
         value: {
-            contentVersion: 10;
+            contentVersion: 11;
             families: {
                 id: string;
                 label: string;
@@ -434,6 +466,10 @@ export declare function createHost(engine: Engine): (message: unknown) => import
                             service: 'atm';
                             profileId: 'independent.atm-v1';
                         } | {
+                            kind: 'facility';
+                            service: 'balloon';
+                            profileId: 'independent.balloon-stall-v1';
+                        } | {
                             kind: 'unimplemented';
                             referenceShape: string;
                         };
@@ -467,6 +503,10 @@ export declare function createHost(engine: Engine): (message: unknown) => import
                             kind: 'service';
                             service: 'atm';
                             profileId: 'independent.atm-withdrawal-v1';
+                        } | {
+                            kind: 'service';
+                            service: 'balloon';
+                            profileId: 'independent.balloon-v1';
                         } | {
                             kind: 'unimplemented';
                         };

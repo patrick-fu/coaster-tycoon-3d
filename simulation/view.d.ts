@@ -13,8 +13,8 @@ export type ViewRequest = {
 };
 export declare function validateView(value: unknown, side: number): ViewRequest;
 export declare function project(s: State, rules: Rules, request: ViewRequest, elements: ReadonlyMap<number, Element>, course: (ride: number) => Course, channelCourse: (ride: number) => FlumeCourse): {
-    protocolVersion: 10;
-    contentVersion: 10;
+    protocolVersion: 11;
+    contentVersion: 11;
     coordinates: {
         nativeUnitsPerTile: number;
         nativeHeightStep: number;
@@ -53,6 +53,10 @@ export declare function project(s: State, rules: Rules, request: ViewRequest, el
         boats: number;
     };
     people: Float64Array<ArrayBuffer>;
+    guestBalloons: {
+        id: number;
+        colour: number;
+    }[];
     cars: {
         id: number;
         ride: number;
@@ -269,6 +273,34 @@ export declare function project(s: State, rules: Rules, request: ViewRequest, el
         name: string;
         element: number;
         open: boolean;
+        kind: 'balloon';
+        price: number;
+        income: number;
+        sales: number;
+        balloonColour: number;
+        content: {
+            familyId: string;
+            variantId: string;
+            modeId: string;
+        };
+        presentation: import("../content/registry.js").Presentation;
+        priceBounds: {
+            min: number;
+            max: number;
+        };
+        product: {
+            id: 'independent.balloon';
+            label: string;
+            stockCost: number;
+            stockExpense: number;
+            grossMargin: number;
+        };
+    } | {
+        id: number;
+        instanceId: number;
+        name: string;
+        element: number;
+        open: boolean;
         kind: 'atm';
         withdrawals: number;
         content: {
@@ -320,7 +352,7 @@ export declare function project(s: State, rules: Rules, request: ViewRequest, el
         name: string;
         element: number;
         open: boolean;
-        kind: Exclude<import("./services.js").FacilityKind, 'information' | 'atm'>;
+        kind: Exclude<import("./services.js").FacilityKind, 'information' | 'atm' | 'balloon'>;
         price: number;
         income: number;
         sales: number;

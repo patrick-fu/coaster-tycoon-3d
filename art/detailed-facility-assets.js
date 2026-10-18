@@ -1,10 +1,11 @@
 import * as THREE from 'three';
 import { GLTFLoader } from '../vendor/addons/loaders/GLTFLoader.js';
+import {balloonColour} from '../balloon-colours.js';
 
-export function createDetailedFacilityAssets(renderer, {reflectionTexture = null, information = false, restroom = false, atm = false, product: selectedProduct} = {}) {
-  if(information&&restroom||atm&&(information||restroom))throw new Error('Choose one detailed facility asset family.');
+export function createDetailedFacilityAssets(renderer, {reflectionTexture = null, information = false, restroom = false, atm = false, balloon = false, product: selectedProduct} = {}) {
+  if([information,restroom,atm,balloon].filter(Boolean).length>1)throw new Error('Choose one detailed facility asset family.');
   if(selectedProduct!==undefined&&!['burger','soft-drink'].includes(selectedProduct))throw new Error('Detailed stall product must be burger or soft-drink.');
-  if(selectedProduct!==undefined&&(information||restroom||atm))throw new Error('A detailed stall product cannot select another facility asset family.');
+  if(selectedProduct!==undefined&&(information||restroom||atm||balloon))throw new Error('A detailed stall product cannot select another facility asset family.');
   const geometries = new Set();
   const materials = new Set();
   const textures = new Set();
@@ -87,7 +88,8 @@ export function createDetailedFacilityAssets(renderer, {reflectionTexture = null
   };
   const RESTROOM_ANCHORS = {GroundRoot:[0,0,0],Entrance_Front:[0,0,.49],Service_Interior:[0,.08,0],Sign_Front:[0,.57,.465]};
   const ATM_ANCHORS={GroundRoot:[0,0,0],Counter_Front:[0,.35,.48],Sign_Front:[0,.66,.44]};
-  const REQUIRED_ANCHORS = atm ? Object.keys(ATM_ANCHORS) : restroom ? Object.keys(RESTROOM_ANCHORS) : information ? Object.keys(INFORMATION_ANCHORS) : [
+  const BALLOON_ANCHORS={GroundRoot:[0,0,0],CounterFront:[0,1,1.50],ProductSign:[0,2.42,1.65],MenuPanel:[-1.10,1.75,1.66],OpenShutter:[0,0,0],ClosedShutter:[0,0,0]};
+  const REQUIRED_ANCHORS = balloon ? Object.keys(BALLOON_ANCHORS) : atm ? Object.keys(ATM_ANCHORS) : restroom ? Object.keys(RESTROOM_ANCHORS) : information ? Object.keys(INFORMATION_ANCHORS) : [
     'OpenShutter',
     'ClosedShutter',
     'GroundRoot',
@@ -224,7 +226,7 @@ export function createDetailedFacilityAssets(renderer, {reflectionTexture = null
   }
 
   async function loadModel(kind) {
-    const url = new URL(atm ? '../models/atm/atm.glb' : restroom ? '../models/restroom/restroom.glb' : information ? '../models/information/information-kiosk.glb' : `../models/detailed-stalls/${kind}.glb`, import.meta.url).href;
+    const url = new URL(balloon ? '../models/balloons/balloon-stall.glb' : atm ? '../models/atm/atm.glb' : restroom ? '../models/restroom/restroom.glb' : information ? '../models/information/information-kiosk.glb' : `../models/detailed-stalls/${kind}.glb`, import.meta.url).href;
     const response = await fetch(url, { signal: abort.signal });
     if (!response.ok) {
       throw new Error(`Detailed facility ${kind} model returned HTTP ${response.status}.`);
@@ -252,9 +254,9 @@ export function createDetailedFacilityAssets(renderer, {reflectionTexture = null
 
     const groundRoot = gltf.scene.getObjectByName('GroundRoot');
     checkUnitTransform(groundRoot, kind, 'GroundRoot');
-    if (information||restroom||atm) {
+    if (information||restroom||atm||balloon) {
       gltf.scene.updateMatrixWorld(true);
-      for (const [name, expected] of Object.entries(atm?ATM_ANCHORS:restroom?RESTROOM_ANCHORS:INFORMATION_ANCHORS)) {
+      for (const [name, expected] of Object.entries(balloon?BALLOON_ANCHORS:atm?ATM_ANCHORS:restroom?RESTROOM_ANCHORS:INFORMATION_ANCHORS)) {
         const anchor = gltf.scene.getObjectByName(name), point = anchor.getWorldPosition(new THREE.Vector3());
         if (point.toArray().some((value, i) => !Number.isFinite(value) || Math.abs(value - expected[i]) > 1e-4)) {
           throw new Error(`Detailed facility anchor '${name}' does not match its authored counter frame.`);
@@ -316,7 +318,7 @@ export function createDetailedFacilityAssets(renderer, {reflectionTexture = null
     let minX = Infinity, maxX = -Infinity;
     let minY = Infinity, maxY = -Infinity;
     let minZ = Infinity, maxZ = -Infinity;
-    let totalVertices = 0, normalizedTriangles=0;
+    let totalVertices = 0, normalizedTriangles=0, normalizedPrimitives=0;
     const normalizedMaterials=new Set();
     const v = new THREE.Vector3();
 
@@ -340,19 +342,20 @@ export function createDetailedFacilityAssets(renderer, {reflectionTexture = null
         throw new Error(`Detailed facility ${kind} contains malformed geometry.`);
       }
 
-      if(restroom||atm){
+      if(restroom||atm||balloon){
         const normal=object.geometry.attributes.normal,uv=object.geometry.attributes.uv,indices=object.geometry.index;
-        if(!normal||!uv||normal.count!==pos.count||uv.count!==pos.count)throw new Error((atm?'ATM':'Restroom')+' geometry needs complete normals and UVs.');
-        for(let i=0;i<pos.count;i++)if(!Number.isFinite(normal.getX(i))||!Number.isFinite(normal.getY(i))||!Number.isFinite(normal.getZ(i))||!Number.isFinite(uv.getX(i))||!Number.isFinite(uv.getY(i)))throw new Error((atm?'ATM':'Restroom')+' geometry has non-finite normals or UVs.');
-        const count=indices?.count??pos.count;if(count%3!==0)throw new Error((atm?'ATM':'Restroom')+' geometry has incomplete triangles.');
+        if(!normal||!uv||normal.count!==pos.count||uv.count!==pos.count)throw new Error((atm?'ATM':balloon?'Balloon stall':'Restroom')+' geometry needs complete normals and UVs.');
+        for(let i=0;i<pos.count;i++)if(!Number.isFinite(normal.getX(i))||!Number.isFinite(normal.getY(i))||!Number.isFinite(normal.getZ(i))||!Number.isFinite(uv.getX(i))||!Number.isFinite(uv.getY(i)))throw new Error((atm?'ATM':balloon?'Balloon stall':'Restroom')+' geometry has non-finite normals or UVs.');
+        const count=indices?.count??pos.count;if(count%3!==0)throw new Error((atm?'ATM':balloon?'Balloon stall':'Restroom')+' geometry has incomplete triangles.');
         const a=new THREE.Vector3(),b=new THREE.Vector3(),c=new THREE.Vector3();
         for(let i=0;i<count;i+=3){
           const ids=[0,1,2].map(j=>indices?indices.getX(i+j):i+j);
-          if(ids.some(id=>!Number.isInteger(id)||id<0||id>=pos.count))throw new Error((atm?'ATM':'Restroom')+' triangle index is invalid.');
+          if(ids.some(id=>!Number.isInteger(id)||id<0||id>=pos.count))throw new Error((atm?'ATM':balloon?'Balloon stall':'Restroom')+' triangle index is invalid.');
           a.fromBufferAttribute(pos,ids[0]);b.fromBufferAttribute(pos,ids[1]);c.fromBufferAttribute(pos,ids[2]);
-          const area=b.sub(a).cross(c.sub(a)).length();if(!Number.isFinite(area)||area<=2e-12)throw new Error((atm?'ATM':'Restroom')+' geometry has a degenerate triangle.');
+          const area=b.sub(a).cross(c.sub(a)).length();if(!Number.isFinite(area)||area<=2e-12)throw new Error((atm?'ATM':balloon?'Balloon stall':'Restroom')+' geometry has a degenerate triangle.');
         }
-        normalizedTriangles+=count/3;normalizedMaterials.add(object.material);
+        normalizedTriangles+=count/3;normalizedPrimitives++;normalizedMaterials.add(object.material);
+        if(balloon)for(let i=0;i<count;i+=3){const ids=[0,1,2].map(j=>indices?indices.getX(i+j):i+j),[a,b,c]=ids.map(id=>[uv.getX(id),uv.getY(id)]);if(Math.abs((b[0]-a[0])*(c[1]-a[1])-(b[1]-a[1])*(c[0]-a[0]))<=1e-15)throw new Error('Balloon stall has a degenerate UV triangle.');}
       }
 
       for (let i = 0; i < pos.count; i++) {
@@ -390,8 +393,8 @@ export function createDetailedFacilityAssets(renderer, {reflectionTexture = null
       throw new Error(`Detailed facility ${kind} computed non-finite bounding envelope.`);
     }
 
-    if((restroom||atm)&&(normalizedTriangles>(atm?4200:8000)||normalizedMaterials.size>8))throw new Error((atm?'ATM':'Restroom')+' model exceeds its geometry or material budget.');
-    const horizontal=restroom||atm ? .49 : 1.95, vertical=restroom||atm ? .90 : 3.85;
+    if((restroom||atm||balloon)&&(normalizedTriangles>(atm?4200:8000)||normalizedMaterials.size>(balloon?10:8)||balloon&&normalizedPrimitives>10))throw new Error((atm?'ATM':balloon?'Balloon stall':'Restroom')+' model exceeds its geometry or material budget.');
+    const horizontal=restroom||atm ? .49 : balloon ? 1.90 : 1.95, vertical=restroom||atm ? .90 : balloon ? 3.80 : 3.85;
     const TOLERANCE = 1e-6;
     if (
       minX < -horizontal - TOLERANCE ||
@@ -411,7 +414,7 @@ export function createDetailedFacilityAssets(renderer, {reflectionTexture = null
     templates.set(kind, gltf.scene);
   }
 
-  assets.readyPromise = Promise.allSettled((atm ? ['atm'] : restroom ? ['restroom'] : information ? ['information-kiosk'] : selectedProduct === undefined ? ['burger', 'soft-drink'] : [selectedProduct]).map(loadModel)).then(results => {
+  assets.readyPromise = Promise.allSettled((balloon ? ['balloon-stall'] : atm ? ['atm'] : restroom ? ['restroom'] : information ? ['information-kiosk'] : selectedProduct === undefined ? ['burger', 'soft-drink'] : [selectedProduct]).map(loadModel)).then(results => {
     objectURLs.clear();
     const failure = results.find(result => result.status === 'rejected');
     if (disposed || failure) {
@@ -438,7 +441,7 @@ export function createDetailedFacilityAssets(renderer, {reflectionTexture = null
     }
 
     const kind = facility.kind;
-    if (atm ? kind !== 'atm' : restroom ? kind !== 'restroom' : information ? kind !== 'information' : kind !== 'food' && kind !== 'drink') {
+    if (balloon ? kind !== 'balloon' : atm ? kind !== 'atm' : restroom ? kind !== 'restroom' : information ? kind !== 'information' : kind !== 'food' && kind !== 'drink') {
       throw new Error(`Detailed facility requires kind to be 'food' or 'drink', got '${kind}'.`);
     }
 
@@ -451,7 +454,7 @@ export function createDetailedFacilityAssets(renderer, {reflectionTexture = null
       throw new Error(`Detailed facility requires presentation.kind to be 'detailed-facility', got '${presentation.kind}'.`);
     }
 
-    if (presentation.profileId !== (atm ? 'detailed-atm-v1' : restroom ? 'detailed-gradual-restroom-v1' : information ? 'detailed-information-kiosk-v1' : 'detailed-consumable-stalls-v1')) {
+    if (presentation.profileId !== (balloon ? 'detailed-balloon-stall-v1' : atm ? 'detailed-atm-v1' : restroom ? 'detailed-gradual-restroom-v1' : information ? 'detailed-information-kiosk-v1' : 'detailed-consumable-stalls-v1')) {
       throw new Error(`Detailed facility requires presentation.profileId to be 'detailed-consumable-stalls-v1', got '${presentation.profileId}'.`);
     }
 
@@ -460,12 +463,15 @@ export function createDetailedFacilityAssets(renderer, {reflectionTexture = null
     }
 
     let templateKey;
-    if (atm) {
+    if (balloon) {
+      if(facility.product?.id!=='independent.balloon')throw new Error('Balloon stall requires its actual projected product.');
+      balloonColour(facility.balloonColour);templateKey='balloon-stall';
+    } else if (atm) {
       if(!Number.isSafeInteger(facility.withdrawals)||facility.withdrawals<0||!Number.isSafeInteger(facility.cashDispensed)||facility.cashDispensed!==facility.withdrawals*500||!Number.isSafeInteger(facility.using)||facility.using<0||!Array.isArray(facility.guestIds)||facility.guestIds.length!==facility.using||new Set(facility.guestIds).size!==facility.using||facility.guestIds.some(id=>!Number.isSafeInteger(id)||id<1)||['price','income','sales','products','product'].some(key=>Object.hasOwn(facility,key)))throw new Error('ATM requires its actual projected withdrawals and public-counter owners.');
       templateKey='atm';
     } else if (restroom) {
       const visit=facility.restroom;
-      if(facility.product!==null||!visit||!Number.isSafeInteger(visit.using)||visit.using<0||!Number.isSafeInteger(visit.exiting)||visit.exiting<0||!Array.isArray(visit.guestIds)||visit.guestIds.length!==visit.using+visit.exiting)throw new Error((atm?'ATM':'Restroom')+' requires its actual projected service ownership.');
+      if(facility.product!==null||!visit||!Number.isSafeInteger(visit.using)||visit.using<0||!Number.isSafeInteger(visit.exiting)||visit.exiting<0||!Array.isArray(visit.guestIds)||visit.guestIds.length!==visit.using+visit.exiting)throw new Error((atm?'ATM':balloon?'Balloon stall':'Restroom')+' requires its actual projected service ownership.');
       templateKey='restroom';
     } else if (information) {
       const products = facility.products;

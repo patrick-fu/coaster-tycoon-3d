@@ -9,6 +9,7 @@ import { buyInformation, chooseInformation } from './merchandise.js';
 import { random } from './random.js';
 import { gradualRestroomProfile } from '../content/gradual-restroom.js';
 import { admitAtm, chooseAtm, stepAtm } from './atm.js';
+import { buyBalloon, chooseBalloon } from './balloons.js';
 const key = (p) => `${p.x},${p.y},${p.z}`;
 const equal = (a, b) => a.x === b.x && a.y === b.y && a.z === b.z;
 const clamp = (n) => Math.max(0, Math.min(1000, n));
@@ -224,6 +225,18 @@ function choose(guest, state, rules, index, route, includeMerchandise = true) {
         navigate(guest, information.goal);
         return;
     }
+    const balloon = includeMerchandise ? chooseBalloon(guest, state, rules, index, route) : null;
+    if (balloon) {
+        guest.navigationRide = null;
+        guest.facility = balloon.facility;
+        guest.informationCounter = null;
+        guest.destination = null;
+        guest.entrance = null;
+        guest.exit = null;
+        guest.thought = 'none';
+        navigate(guest, balloon.goal);
+        return;
+    }
     let choice;
     for (const ride of state.rides) {
         if (!accepts(guest, ride, index, rules) || guest.lastRide === ride.id && state.tick - guest.lastRideTick < rules.guests.rideCooldownTicks)
@@ -266,7 +279,7 @@ export function stepPeople(state, rules, index, route) {
     const entry = state.people.entry;
     if (state.people.open && entry && state.tick % rules.guests.spawnTicks === 0 && index.paths.get(key(entry))?.queueFor === null && sharedCount(state) < LIMITS.sharedEntities && integer(state.nextEntity + 1)) {
         const cash = random(state, rules.guests.cashMin, rules.guests.cashMax);
-        const guest = { id: state.nextEntity++, held: null, merchandise: { map: false, umbrellaColour: null }, informationCounter: null, navigationRide: null, amenity: null, restProgress: 0, wrapper: false, wrapperTick: 0, facility: null, serviceProgress: 0, bladder: rules.services.initialBladder, point: { ...entry }, phase: 'walking', goal: null, next: null, walkProgress: 0, destination: null, entrance: null, exit: null, queueRide: null, seat: null, initialCash: cash, cash, spent: 0, withdrawn: 0, atmRefusal: null, fareLimit: random(state, rules.guests.fareMin, rules.guests.fareMax), forceTolerance: random(state, rules.guests.forceMin, rules.guests.forceMax), hunger: rules.guests.initialHunger, thirst: rules.guests.initialThirst, nausea: 0, happiness: rules.guests.initialHappiness, energy: rules.guests.initialEnergy, queuedAt: 0, lastRide: null, lastRideTick: 0, ridesTaken: 0, thought: 'none' };
+        const guest = { id: state.nextEntity++, held: null, merchandise: { map: false, umbrellaColour: null }, balloonColour: null, informationCounter: null, navigationRide: null, amenity: null, restProgress: 0, wrapper: false, wrapperTick: 0, facility: null, serviceProgress: 0, bladder: rules.services.initialBladder, point: { ...entry }, phase: 'walking', goal: null, next: null, walkProgress: 0, destination: null, entrance: null, exit: null, queueRide: null, seat: null, initialCash: cash, cash, spent: 0, withdrawn: 0, atmRefusal: null, fareLimit: random(state, rules.guests.fareMin, rules.guests.fareMax), forceTolerance: random(state, rules.guests.forceMin, rules.guests.forceMax), hunger: rules.guests.initialHunger, thirst: rules.guests.initialThirst, nausea: 0, happiness: rules.guests.initialHappiness, energy: rules.guests.initialEnergy, queuedAt: 0, lastRide: null, lastRideTick: 0, ridesTaken: 0, thought: 'none' };
         state.people.guests.push(guest);
         index.guests.set(guest.id, guest);
     }
@@ -311,6 +324,13 @@ export function stepPeople(state, rules, index, route) {
             if (guest.serviceProgress >= rules.services.serviceTicks) {
                 if (index.facilities.get(guest.facility)?.kind === 'information') {
                     const purchase = buyInformation(guest, state, rules, index);
+                    if (purchase === 'refused')
+                        choose(guest, state, rules, index, route, false);
+                    else if (purchase === 'unavailable')
+                        recover(guest, state, index, route, 'path-lost');
+                }
+                else if (index.facilities.get(guest.facility)?.kind === 'balloon') {
+                    const purchase = buyBalloon(guest, state, rules, index);
                     if (purchase === 'refused')
                         choose(guest, state, rules, index, route, false);
                     else if (purchase === 'unavailable')
