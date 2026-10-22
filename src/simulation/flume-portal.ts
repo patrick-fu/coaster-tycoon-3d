@@ -14,6 +14,10 @@ function stationBays(ride:PortalRide,elements:Elements,role:Portal['role']){
  return{first,selected};
 }
 
+export function flumePortalStations(ride:PortalRide,elements:Elements){
+ return{entrance:stationBays(ride,elements,'entrance')?.selected.id??null,exit:stationBays(ride,elements,'exit')?.selected.id??null};
+}
+
 export function flumePortalSocket(ride:PortalRide,elements:Elements,role:Portal['role'],side?:Portal['direction']){
  ensure(role==='entrance'||role==='exit','GEOMETRY','Unknown channel portal role.');
  const bays=stationBays(ride,elements,role);ensure(bays,'GEOMETRY','Entrance requires the first station; exit requires its actual connected second station.');

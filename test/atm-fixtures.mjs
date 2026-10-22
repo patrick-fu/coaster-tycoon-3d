@@ -13,6 +13,7 @@ export function beforeBalloonState(state){
 export function beforeBalloonView(view){
  const old=structuredClone(view);if(old.protocolVersion!==11)return old;
  assert.equal(old.contentVersion,11);assert.deepEqual(old.guestBalloons,[]);assert(old.facilities.every(f=>f.kind!=='balloon'));
+ for(const ride of old.rides)delete ride.portalStations;
  delete old.guestBalloons;old.protocolVersion=10;old.contentVersion=10;return old;
 }
 

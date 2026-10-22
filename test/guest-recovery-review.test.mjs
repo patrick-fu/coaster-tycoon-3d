@@ -21,3 +21,40 @@ test('evacuation imports cannot finish permission at an arbitrary queue-internal
 test('removing and restoring the park entry preserves a waiting evacuation without inventing queue intent',()=>{
  const {e,id}=candidate([[10,7,0],[11,7,0],[11,8,0],[10,8,1],[9,8,1],[8,8,1]],{x:10,y:7}),s=e.snapshot();intended(s,id,{x:10,y:8},true);assert(e.restoreSave(JSON.stringify(s)).ok);apply(e,{type:'set-ride-status',ride:id,status:'closed'});apply(e,{type:'set-park-entrance',point:null});assert.equal(e.snapshot().people.guests[0].phase,'stranded');assert(e.restoreSave(e.exportSave()).ok);apply(e,{type:'set-park-entrance',point:{x:10,y:7,z:32}});assert(e.advance(8).ok);assert(e.restoreSave(e.exportSave()).ok);assert.equal(e.snapshot().people.guests[0].navigationRide,null);
 });
+
+test('a leaving guest survives entrance relocation and later shop availability with reloadable saves',()=>{
+ const {e,id}=candidate([[10,7,0],[11,7,0],[12,7,0],[13,7,0],[14,7,0],[11,8,0],[10,8,1]],{x:10,y:7});
+ apply(e,{type:'set-ride-status',ride:id,status:'closed'});
+ const restroom=apply(e,{type:'place-facility',name:'Departure restroom',kind:'restroom',tile:{x:12,y:6},height:32,direction:1}).id;
+ const food=apply(e,{type:'place-facility',name:'Later food',kind:'food',tile:{x:13,y:6},height:32,direction:1}).id;
+ apply(e,{type:'set-facility-open',facility:restroom,open:true});
+ const setup=e.snapshot(),g=setup.people.guests[0];assert.equal(setup.people.guests.length,1);assert.equal(g.phase,'walking');assert.equal(g.goal,null);assert.equal(g.destination,null);
+ Object.assign(g,{point:{x:12,y:7,z:32},hunger:900,thirst:0,bladder:900,happiness:0});
+ assert(e.restoreSave(JSON.stringify(setup)).ok);
+ const receiver=create(),receive=()=>{
+  const s=e.snapshot(),save=e.exportSave(),received=receiver.restoreSave(save),guest=s.people.guests[0];
+  assert(received.ok,JSON.stringify({tick:s.tick,phase:guest?.phase,facility:guest?.facility,amenity:guest?.amenity,received}));
+  assert.equal(receiver.exportSave(),save);return s;
+ };
+ receive();
+ let leaving;
+ for(let i=0;i<96;i++){
+  assert(e.advance(1).ok);const s=receive();
+  if(s.people.guests[0]?.phase==='leaving'){leaving=s;break;}
+ }
+ assert(leaving,'The ordinary restroom completion must reach a leaving decision.');
+ const departing=leaving.people.guests[0];assert.equal(departing.spent,10);assert.equal(departing.cash,90);assert.equal(departing.facility,null);assert.deepEqual(departing.point,{x:12,y:7,z:32});assert.deepEqual(departing.goal,{x:10,y:7,z:32});
+ assert.equal(leaving.facilities.find(f=>f.id===restroom).sales,1);assert.equal(leaving.ledger.shopSales,10);
+ const entry={x:14,y:7,z:32};apply(e,{type:'set-park-entrance',point:entry});apply(e,{type:'set-facility-open',facility:food,open:true});receive();
+ let retargeted=false,after;
+ for(let i=0;i<128;i++){
+  assert(e.advance(1).ok);after=receive();const current=after.people.guests.find(t=>t.id===departing.id);
+  if(!current)break;
+  assert.equal(current.phase,'leaving');assert.equal(current.facility,null);assert.equal(current.amenity,null);assert.equal(current.destination,null);
+  if(current.goal?.x===entry.x&&current.goal.y===entry.y&&current.goal.z===entry.z)retargeted=true;
+ }
+ assert(retargeted,'Leaving must target the relocated entry after the old goal clears.');
+ assert.equal(after.people.guests.length,0);assert.equal(after.people.departedSpent,leaving.people.departedSpent+departing.spent);assert.equal(after.people.departedWithdrawn,leaving.people.departedWithdrawn+departing.withdrawn);
+ assert.equal(after.facilities.find(f=>f.id===food).sales,0);assert.deepEqual(after.ledger,leaving.ledger);assert.equal(after.cash,leaving.cash);
+ assert(e.advance(64).ok);const settled=receive();assert.equal(settled.people.guests.length,0);assert.equal(settled.people.departedSpent,after.people.departedSpent);assert.equal(settled.people.departedWithdrawn,after.people.departedWithdrawn);assert.deepEqual(settled.ledger,after.ledger);
+});

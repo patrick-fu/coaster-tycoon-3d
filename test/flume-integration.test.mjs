@@ -172,3 +172,17 @@ test('finite exported channel definitions cannot mutate an existing private rece
  assert.throws(()=>{flumeCandidate.seats[0].y=0;},TypeError);assert.throws(()=>{flumePieces.station.motion.samples[0].x=32;},TypeError);assert.throws(()=>{flumePieces.station.end.x=64;},TypeError);assert.throws(()=>{flumePieces.station.cells.push({x:0,y:0,low:0,high:16,mask:15});},TypeError);assert.throws(()=>{flumePieces.station=flumePieces.channel;},TypeError);
  assert.deepEqual(engine.quote(command).value,quote.value);assert.equal(engine.exportSave(),before);assert(engine.execute(command,quote.value.revision).ok);
 });
+
+
+test('channel construction views expose role-specific station bays independent of element order and viewport',()=>{
+ const rules=withFlumeProfile(structuredClone(baseRules)),engine=new Engine(world,rules),ride=apply(engine,build).id;
+ const view=()=>engine.view({bounds:{x0:0,y0:0,x1:2,y1:2},includeStatic:false}).value.rides.find(r=>r.id===ride);
+ assert.deepEqual(view().portalStations,{entrance:null,exit:null});
+ const first=apply(engine,{type:'append-track',ride,piece:'station'}).id;
+ assert.deepEqual(view().portalStations,{entrance:first,exit:null});
+ const second=apply(engine,{type:'append-track',ride,piece:'station'}).id;
+ apply(engine,{type:'append-track',ride,piece:'station'});
+ const expected={entrance:first,exit:second};assert.deepEqual(view().portalStations,expected);
+ const returned=view().portalStations;returned.entrance=999;returned.exit=999;assert.deepEqual(view().portalStations,expected);
+ const reversed=engine.snapshot();reversed.elements.reverse();assert(engine.restoreSave(JSON.stringify(reversed)).ok);assert.deepEqual(view().portalStations,expected);
+});

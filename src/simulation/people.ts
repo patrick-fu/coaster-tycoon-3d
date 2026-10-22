@@ -118,6 +118,7 @@ export function recoverPeople(state:State,rules:Rules,index:ServiceIndex,route:R
 
 function choose(guest:Guest,state:State,rules:Rules,index:ServiceIndex,route:Routing,includeMerchandise=true){
   if(!index.paths.has(key(guest.point))||guest.phase==='riding'||guest.phase==='queued')return;
+  if(guest.phase==='leaving'){navigate(guest,state.people.entry);return;}
   const amenity=chooseAmenity(guest,state,rules,index,route);
   if(amenity){guest.navigationRide=null;guest.amenity=amenity.amenity;guest.thought='none';navigate(guest,amenity.goal);return;}
   const service=chooseFacility(guest,state,rules,index,route);
