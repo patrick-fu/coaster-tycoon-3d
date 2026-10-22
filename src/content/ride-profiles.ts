@@ -4,6 +4,8 @@ import type {Cell,Connector,PieceRule,RideProfile,Rules} from '../simulation/typ
 import {ensure} from '../simulation/validation.js';
 import {footprint} from '../simulation/geometry.js';
 import {flumeProfile} from '../simulation/flume-profile.js';
+import {piecesWithCurveBank,type CurveBank} from './curve-samples.js';
+import {balloonPlacementId} from './balloons.js';
 
 export function woodenProfile(content:ContentIdentity,rules:Rules):RideProfile|null{
  const {construction,operation}=resolveContent(content).capabilities;
@@ -27,32 +29,75 @@ export function rideFootprint(origin:Connector,piece:PieceRule,profile:RideProfi
 }
 
 export function legacyRuleJSON(rules:Rules):string{
- const {rideProfiles,fixedProfiles,channelProfiles,commerceProfiles,facilityProfiles,merchandiseProfiles,restroomProfiles,...common}=rules;return JSON.stringify(common);
+ const {rideProfiles,fixedProfiles,channelProfiles,commerceProfiles,facilityProfiles,merchandiseProfiles,restroomProfiles,atmProfiles,balloonProfiles,...common}=rules;return JSON.stringify(common);
+}
+
+function preBalloonRules(rules:Rules):Rules{
+ const {balloonProfiles,...previous}=rules;
+ return{...previous,facilityProfiles:Object.fromEntries(Object.entries(previous.facilityProfiles??{}).filter(([id])=>id!==balloonPlacementId))};
+}
+
+function historicalRideRules(rules:Rules):Rules{
+ rules=preBalloonRules(rules);
+ const rideProfiles=rules.rideProfiles;
+ if(!rideProfiles||!Object.hasOwn(rideProfiles,'independent.wooden-rise-return-v2'))return rules;
+ return{...rules,rideProfiles:Object.fromEntries(Object.entries(rideProfiles).filter(([id])=>id!=='independent.wooden-rise-return-v2'))};
 }
 
 export function v9RuleJSON(rules:Rules):string{
- const {fixedProfiles,channelProfiles,commerceProfiles,facilityProfiles,merchandiseProfiles,restroomProfiles,...previous}=rules;return JSON.stringify(previous);
+ const {fixedProfiles,channelProfiles,commerceProfiles,facilityProfiles,merchandiseProfiles,restroomProfiles,atmProfiles,...previous}=historicalRideRules(rules);return JSON.stringify(previous);
 }
 
 export function v10RuleJSON(rules:Rules):string{
- const {channelProfiles,commerceProfiles,facilityProfiles,merchandiseProfiles,restroomProfiles,...previous}=rules;return JSON.stringify(previous);
+ const {channelProfiles,commerceProfiles,facilityProfiles,merchandiseProfiles,restroomProfiles,atmProfiles,...previous}=historicalRideRules(rules);return JSON.stringify(previous);
 }
 
 export function v11RuleJSON(rules:Rules):string{
- const {commerceProfiles,facilityProfiles,merchandiseProfiles,restroomProfiles,...previous}=rules;return JSON.stringify(previous);
+ const {commerceProfiles,facilityProfiles,merchandiseProfiles,restroomProfiles,atmProfiles,...previous}=historicalRideRules(rules);return JSON.stringify(previous);
 }
 
 export function v12RuleJSON(rules:Rules):string{
- const {facilityProfiles,merchandiseProfiles,restroomProfiles,...previous}=rules;return JSON.stringify(previous);
+ const {facilityProfiles,merchandiseProfiles,restroomProfiles,atmProfiles,...previous}=historicalRideRules(rules);return JSON.stringify(previous);
 }
 
 export function v13RuleJSON(rules:Rules):string{
- const {merchandiseProfiles,restroomProfiles,...previous}=rules;
+ const {merchandiseProfiles,restroomProfiles,atmProfiles,...previous}=historicalRideRules(rules);
  // Historical13 has only the delivered stall placement profile.
  return JSON.stringify({...previous,facilityProfiles:Object.fromEntries(Object.entries(rules.facilityProfiles??{}).filter(([id])=>id==='independent.detailed-stalls-v1'))});
 }
 
 export function v14RuleJSON(rules:Rules):string{
- const {restroomProfiles,...previous}=rules;
+ const {restroomProfiles,atmProfiles,...previous}=historicalRideRules(rules);
  return JSON.stringify({...previous,facilityProfiles:Object.fromEntries(Object.entries(rules.facilityProfiles??{}).filter(([id])=>id==='independent.detailed-stalls-v1'||id==='independent.information-kiosk-v1'))});
+}
+
+export function v15RuleJSON(rules:Rules):string{
+ const {atmProfiles,...previous}=historicalRideRules(rules);
+ return JSON.stringify({...previous,facilityProfiles:Object.fromEntries(Object.entries(rules.facilityProfiles??{}).filter(([id])=>id!=='independent.atm-v1'&&id!==balloonPlacementId))});
+}
+
+function curveRules(rules:Rules,bank:CurveBank):Rules{
+ const selected=structuredClone(rules);
+ selected.pieces=piecesWithCurveBank(selected.pieces,32,64,bank);
+ const wooden=selected.rideProfiles?.['independent.wooden-circuit-v1'];
+ if(wooden)wooden.pieces=piecesWithCurveBank(wooden.pieces,64,128,bank);
+ const channel=selected.channelProfiles?.['independent.log-flume-v1'];
+ if(channel)channel.pieces=piecesWithCurveBank(channel.pieces,64,64,bank);
+ return selected;
+}
+
+export function v16RuleJSON(rules:Rules):string{return JSON.stringify(historicalRideRules(rules));}
+
+export function v17RuleJSON(rules:Rules):string{return JSON.stringify(preBalloonRules(rules));}
+
+export function savedCurveRules(rules:Rules,serialized:string,version:15|16|17|18):Rules{
+ const encode=version===15?v15RuleJSON:version===16?v16RuleJSON:version===17?v17RuleJSON:JSON.stringify;
+ if(encode(rules)===serialized)return rules;
+ const stable=curveRules(rules,'stable'),legacy=curveRules(rules,'legacy-browser');
+ // Only complete observed banks can alias; custom or mixed receiving samples stay exact-only.
+ const current=JSON.stringify(rules);
+ if(current!==JSON.stringify(stable)&&current!==JSON.stringify(legacy))return rules;
+ if(encode(stable)===serialized)return stable;
+ if(encode(legacy)===serialized)return legacy;
+ return rules;
 }

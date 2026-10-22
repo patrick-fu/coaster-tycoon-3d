@@ -1,0 +1,153 @@
+{
+  "status": "ROOT_FINITE_EXPORT_AND_CPU_VIEW_ADOPT_FOR_INTEGRATION",
+  "acceptedUTC": "2026-10-18T03:40:38.510196+00:00",
+  "scope": "Exact facade source/export/reopen/CPU views only; new combined build/native/public qualification pending.",
+  "source": {
+    "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/implementation/balloon-facade-root-r1/balloon-stall.py",
+    "bytes": 18346,
+    "sha256": "275451a29023a2b363dea411a625b5285a437d6610d1b2389e0698196e3251b4"
+  },
+  "archive": {
+    "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/balloon-facade-export-sol-high-r1/actual-run-r1/originals.tar.gz",
+    "bytes": 54845020,
+    "sha256": "1b213773f09f698df79e36d129339b7c97c8d8ab6723117f1f4ea24c920e9271"
+  },
+  "originalRetention": {
+    "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/balloon-facade-export-sol-high-r1/actual-run-r1/root-originals-retention.json",
+    "bytes": 189031,
+    "sha256": "d8a67621b3b4623e1e534b0d3c35f4b0898b1d52f353b6107360f186c9467f12"
+  },
+  "independentActualReview": {
+    "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/reviewer-receipts/balloon-facade-export-actual-sol-high-r1.md",
+    "bytes": 6983,
+    "sha256": "b8f53d2c8a50e0f2bf5d5e26ac12f495f2a1fec225882b3fcef3b0cf6dad6f65"
+  },
+  "independentPixelAdvice": {
+    "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/frontend/agy-facade-actual-pixels-r122/captures-r122/answer.txt",
+    "bytes": 2938,
+    "sha256": "aa2d849cafd96f71b5f6de8caf4be93fa1072aae517524d3af1a758fde0c94d0"
+  },
+  "actualLocalTerminal": {
+    "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/balloon-facade-export-sol-high-r1/actual-run-r1/terminal.json",
+    "bytes": 862,
+    "sha256": "25357b3e00b53b61f41460b625bee14b71126434fd32aea76dcd6c7755351725"
+  },
+  "groups": [
+    {
+      "group": "balloon-stall",
+      "GLB": {
+        "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/balloon-facade-export-sol-high-r1/actual-run-r1/mirror/balloon-stall/assets/balloon-stall.glb",
+        "bytes": 4903980,
+        "sha256": "2bf40e0efea279c0eb3ce6d13b62bc97847996d6c6f6ec1cd6c3fe1b7cb24167"
+      },
+      "master": {
+        "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/balloon-facade-export-sol-high-r1/actual-run-r1/mirror/balloon-stall/assets/balloon-stall.blend",
+        "bytes": 14933697,
+        "sha256": "0326083916353e9e3698a88bfa40eca16d386fb433584db03a951d65f760e987"
+      },
+      "exportMap": {
+        "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/balloon-facade-export-sol-high-r1/actual-run-r1/mirror/balloon-stall/assets/export-map.json",
+        "bytes": 12411,
+        "sha256": "4cbc9096d191f83e4c05124c0645c5a00d17b298f56d990095c64be6b51d7583"
+      },
+      "views": [
+        {
+          "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/balloon-facade-export-sol-high-r1/actual-run-r1/mirror/balloon-stall/assets/balloon-stall-closed-front.png",
+          "bytes": 895582,
+          "sha256": "68e3c8de75be2fc5eaa0d8e59fc26236198dca9c823a3041097aa14b356ae913"
+        },
+        {
+          "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/balloon-facade-export-sol-high-r1/actual-run-r1/mirror/balloon-stall/assets/balloon-stall-closed-rear.png",
+          "bytes": 876260,
+          "sha256": "5497108a8792d31d07dc7cbf6e4e6f6dc639654882d9e7c0bc7440a1f76b4868"
+        },
+        {
+          "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/balloon-facade-export-sol-high-r1/actual-run-r1/mirror/balloon-stall/assets/balloon-stall-open-front.png",
+          "bytes": 898843,
+          "sha256": "23a345c6361fb16adf95bc1b68772e39f56be57b9b0918d8465a48dc382a74ae"
+        },
+        {
+          "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/balloon-facade-export-sol-high-r1/actual-run-r1/mirror/balloon-stall/assets/balloon-stall-open-rear.png",
+          "bytes": 876013,
+          "sha256": "2d6f2b45ce9d82582c74ce45afb17bc15ed6776be7a771d6cd6c3eef8f910f36"
+        }
+      ]
+    },
+    {
+      "group": "held-balloon",
+      "GLB": {
+        "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/balloon-facade-export-sol-high-r1/actual-run-r1/mirror/held-balloon/assets/held-balloon.glb",
+        "bytes": 22176,
+        "sha256": "6b47c07c965a3dccfd87855804a3755d4b59793a355d329a81327b2c6a686056"
+      },
+      "master": {
+        "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/balloon-facade-export-sol-high-r1/actual-run-r1/mirror/held-balloon/assets/held-balloon.blend",
+        "bytes": 98723,
+        "sha256": "e9c8519c112c9cfd39048cdc5aa37c96e04204e56769f7f048fdf099208982d7"
+      },
+      "exportMap": {
+        "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/balloon-facade-export-sol-high-r1/actual-run-r1/mirror/held-balloon/assets/export-map.json",
+        "bytes": 2065,
+        "sha256": "f0b031a69cbfe31fa85048a6600fabf63c73a05380706140c20da925bf0c22ab"
+      },
+      "views": [
+        {
+          "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/balloon-facade-export-sol-high-r1/actual-run-r1/mirror/held-balloon/assets/held-balloon-default-front.png",
+          "bytes": 618918,
+          "sha256": "36bb9461e1df50916c7f2ced39004156acfd69e1b2082667014000d739b871e6"
+        },
+        {
+          "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/balloon-facade-export-sol-high-r1/actual-run-r1/mirror/held-balloon/assets/held-balloon-default-rear.png",
+          "bytes": 618700,
+          "sha256": "a32dffaaa53144ff6e8ab9b1be0b6c62591e37c3955584b8554dd3cc2eda3fc6"
+        }
+      ]
+    }
+  ],
+  "qualification": {
+    "strictStages": [
+      "raw-build",
+      "evaluated-build",
+      "editable-master-reopen",
+      "glb-reopen"
+    ],
+    "triangleIssues": 0,
+    "thresholdsUnchanged": true,
+    "stallEvaluatedTriangles": 6204,
+    "stallAllStateGroups": 10,
+    "stallVisibleGroupsPerPose": 9,
+    "stallMaterials": 8,
+    "stallEmbedded512Images": 9,
+    "heldTriangles": 780,
+    "heldPrimitives": 2,
+    "heldMaterials": 2,
+    "heldResourceByteIdenticalToE3": true,
+    "runtime1852And371LibrariesAnd17MaterialsBeforeAfterFinalEqual": true,
+    "allFourChildWaits": 0,
+    "childrenAbsent": true,
+    "privateSessionsEmpty": true,
+    "signals": [],
+    "forced": false,
+    "finiteRemoteSeconds": 180.244321,
+    "localWallSeconds": 345.011581
+  },
+  "visualDisposition": {
+    "rootViewedOriginals": 6,
+    "resolution": [
+      768,
+      768
+    ],
+    "render": "CPU,64 samples",
+    "stall": "Adopt timber side/rear framing: it divides previously plain walls, retains front composition, and leaves the source-centered door and rear vent visibly clear in these views.",
+    "held": "Resource remains exact accepted E3; new master and two render originals retained.",
+    "advisoryBoundary": "Gemini advice does not replace Root inspection. Flushness, zero intersection and exact clearance are unmeasured."
+  },
+  "limits": [
+    "New GLB browser sampling, native owner/state/picking and combined-build validation pending.",
+    "Normal exporter bevel gives1080 evaluated facade triangles;120 is only the raw authored count.",
+    "Four allowed roof/awning/curtain sheets remain open; no Boolean watertight-solid certification.",
+    "Draco unavailable and multiple-image-sampler diagnostics retained; no compression extensions.",
+    "No representative integrated GPU, performance, full-game fidelity or human acceptance.",
+    "Original E1/E2 failures and all original masters retained."
+  ]
+}

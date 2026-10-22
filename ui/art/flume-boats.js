@@ -44,7 +44,7 @@ export function createBoats(assets){
     const id=boat.seatIds[slot],existing=record.riders.get(slot);
     if(existing&&existing.userData.guestId!==id){existing.removeFromParent();record.riders.delete(slot);}
     if(id!==null&&!record.riders.has(slot)){
-     const rider=assets.cloneRider(),selection={kind:'guest',id};rider.name=`FlumeGuest_${id}`;rider.userData.guestId=id;rider.traverse(object=>{object.userData.selection=selection;});anchor.add(rider);record.riders.set(slot,rider);
+     const rider=assets.cloneRider(id),selection={kind:'guest',id};rider.name=`FlumeGuest_${id}`;rider.userData.guestId=id;rider.traverse(object=>{object.userData.selection=selection;});anchor.add(rider);record.riders.set(slot,rider);
     }
    }
   }

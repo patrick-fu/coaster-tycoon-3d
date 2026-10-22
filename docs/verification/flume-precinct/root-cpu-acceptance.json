@@ -1,0 +1,107 @@
+{
+  "status": "ROOT_ACCEPTED_FINITE_FLUME_PRECINCT_CPU_AND_EXACT_RECEIVER_ONLY",
+  "utc": "2026-10-18T08:07:13.946464+00:00",
+  "sourceRoot": "/workspace/coaster-gradual-restroom/flume-precinct-build-sol-high-r1/source",
+  "baseSourceCommit": "3ff92c574e2629cde7f0b22b7aa5998b05b7b054",
+  "candidate": {
+    "path": "src/content/classic-showcase.ts",
+    "bytes": 9496,
+    "sha256": "4121d990a8fe8e926e1106c650c45d9dbbdc4bfd3a3117e44581056b857c4f03"
+  },
+  "manifests": {
+    "source-manifest.json": {
+      "path": "/workspace/coaster-gradual-restroom/flume-precinct-build-sol-high-r1/source-manifest.json",
+      "bytes": 38900,
+      "sha256": "b17a6b8f05307a4d0d4700f796ec63aa8997f4cb337307c16f6ef447e7462349",
+      "count": 253
+    },
+    "compiled-manifest.json": {
+      "path": "/workspace/coaster-gradual-restroom/flume-precinct-build-sol-high-r1/compiled-manifest.json",
+      "bytes": 13869,
+      "sha256": "8116ab89c9422363c555d90cd6516dcbb8845262b8349bc9c25b351ea026943a",
+      "count": 96
+    },
+    "web-manifest.json": {
+      "path": "/workspace/coaster-gradual-restroom/flume-precinct-build-sol-high-r1/web-manifest.json",
+      "bytes": 32098,
+      "sha256": "79ffe511406a83eef0cb6226468e17938a1d9d6d4488791ba99baab08b74e5b9",
+      "count": 215
+    }
+  },
+  "cpuQualification": {
+    "path": "/workspace/coaster-gradual-restroom/flume-precinct-build-sol-high-r1/evidence/after.json",
+    "bytes": 980,
+    "sha256": "0e6716eff5725c881fbfe33fb203f0ce37659aeed1cc82630c7649888cba7b33"
+  },
+  "cpuTerminal": {
+    "path": "/workspace/coaster-gradual-restroom/flume-precinct-build-sol-high-r1/evidence/terminal.json",
+    "bytes": 33978,
+    "sha256": "212a351dbddb41e7888feef29d7884a31b2eb61f3220403f4442feedaa1d4c8d"
+  },
+  "factoryTerminal": {
+    "path": "/workspace/coaster-gradual-restroom/flume-precinct-build-sol-high-r1/evidence/prewarm-terminal.json",
+    "bytes": 334876,
+    "sha256": "9f3aa5a0214a6cfc53150e620f02d95f48ec18808af12b5a969df6dda463ed4f"
+  },
+  "rootDataAudit": {
+    "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/flume-precinct-build-sol-high-r1/actual-run-r1/root-data-audit.json",
+    "bytes": 1964,
+    "sha256": "1dbc01259627be7dc24f03dc3a5dfacd248d2e4bca0f5dafeb04e3525890e5c3"
+  },
+  "independentActual": {
+    "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/reviewer-receipts/flume-precinct-cpu-actual-sol-high-r1.md",
+    "bytes": 12207,
+    "sha256": "a4794a2c497f35b9f020549bf1754f8bdae31897764e5f5d9a77132f26cb15d0"
+  },
+  "retention": {
+    "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/flume-precinct-build-sol-high-r1/actual-run-r1/root-retention.json",
+    "bytes": 67628,
+    "sha256": "78222f25603c4879a4e26b8746454d1c06ad1bb2b31f894ebadec3c2e0acc23c"
+  },
+  "originals": {
+    "logical": 201,
+    "logicalBytes": 4319262,
+    "unique": 123
+  },
+  "actual": {
+    "stages": 38,
+    "canonicalFiles": 45,
+    "canonicalTestsPassed": 464,
+    "failedCancelledSkippedTodo": 0,
+    "exactK3ConstructionPrefixRows": 277,
+    "ordinaryAppendedScenery": 27,
+    "oldSuffixCommands": 10,
+    "elements": 281,
+    "scenery": 105,
+    "paths": 64,
+    "amenities": 8,
+    "openRides": 5,
+    "families": 4,
+    "guests": 30,
+    "quoteAndExecute": 314,
+    "tick": 4800,
+    "addedCostUnits": 1205,
+    "receiver": {
+      "bytes": 863111,
+      "sha256": "63aa7e6477665792899f4dd75b017bb0deb2bca0da726dbf1b15e29f3bbddd80",
+      "exactFactoryRawEquality": true
+    },
+    "soleCompiledAndWebDelta": {
+      "path": "content/classic-showcase.js",
+      "bytes": 10600,
+      "sha256": "dc18c639eee9313229f5c99badfab97b532215ffb085452968524e31a8733f05"
+    },
+    "allStagesNatural0AbsentUnforced": true,
+    "canonicalSeconds": 174.46361634100322,
+    "instrumentedFactoryReceiverSeconds": 25.415156434,
+    "remoteWorkSeconds": 218.34514554299676,
+    "SSHseconds": 230.73195975000002
+  },
+  "productionIntegrated": false,
+  "limits": [
+    "The instrumented factory helper25.415s includes quote/save/prefix/receiver observations; this is not ordinary UI NewPark latency or a relaxed20s contract.",
+    "No Mac save/profile values decoded. Public static projections must be derived on Grok from exact pinned originals.",
+    "No independent full baseline/web body download, global process absence or separate postreturn producer census.",
+    "Native NewPark20s, picks, two actual rendered frames, Save/reload, visual value, public preview, GPU/largepark/contact/fault/full-game acceptance remain open."
+  ]
+}

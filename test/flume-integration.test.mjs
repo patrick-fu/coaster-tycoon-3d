@@ -79,7 +79,7 @@ for(const direction of [0,1,2,3])for(const curve of ['left','right'])test(`actua
  assert.deepEqual(engine.advance(2216),{ok:true,value:2216});boat=engine.snapshot().boats[0];assert.equal(boat.phase,'unloading');assert.equal(boat.position,6100);assert.equal(boat.speed,0);assert.equal(boat.travelled,107776);assert.equal(boat.laps,1);assert.equal(boat.measured.ticks,2217);assert.equal(boat.measured.maxSpeed,231);assert.equal(boat.measured.distance,107776);restored(engine,rules);
  assert.deepEqual(engine.advance(40),{ok:true,value:40});boat=engine.snapshot().boats[0];assert.equal(boat.phase,'loading');assert.equal(boat.wait,0);assert.equal(boat.mode,null);assert.equal(boat.travelled,107776);restored(engine,rules);
  apply(engine,{type:'set-ride-status',ride,status:'open'});assert(engine.advance(600).ok);assert.deepEqual(engine.snapshot().boats[0],boat);assert.equal(engine.snapshot().ledger.rideSales,0);assert.equal(engine.snapshot().trains.length,0);
- const saved=engine.exportSave(),view=engine.view(request).value;assert.equal(view.protocolVersion,8);assert.equal(view.contentVersion,8);assert.equal(view.counts.boats,1);assert.equal(view.cars.length,0);assert.equal(view.boats[0].id,boat.id);assert.equal(view.boats[0].seats.length,4);assert.deepEqual(view.boats[0].seatIds,boat.seats);assert.equal(view.rides[0].capacity,4);assert.equal(Object.hasOwn(view.rides[0],'cars'),false);
+ const saved=engine.exportSave(),view=engine.view(request).value;assert.equal(view.protocolVersion,11);assert.equal(view.contentVersion,11);assert.equal(view.counts.boats,1);assert.equal(view.cars.length,0);assert.equal(view.boats[0].id,boat.id);assert.equal(view.boats[0].seats.length,4);assert.deepEqual(view.boats[0].seatIds,boat.seats);assert.equal(view.rides[0].capacity,4);assert.equal(Object.hasOwn(view.rides[0],'cars'),false);
  view.boats[0].seatIds[0]=999;view.boats[0].seats[0].position.z=999;view.rides[0].channelProfile.vehicle.maxSpeed=999;assert.equal(engine.exportSave(),saved);
 });
 
@@ -171,4 +171,18 @@ test('finite exported channel definitions cannot mutate an existing private rece
  const width=flumeCandidate.stationWidthMm;try{assert.throws(()=>{flumeCandidate.stationWidthMm=400;},TypeError);}finally{if(flumeCandidate.stationWidthMm!==width)flumeCandidate.stationWidthMm=width;}
  assert.throws(()=>{flumeCandidate.seats[0].y=0;},TypeError);assert.throws(()=>{flumePieces.station.motion.samples[0].x=32;},TypeError);assert.throws(()=>{flumePieces.station.end.x=64;},TypeError);assert.throws(()=>{flumePieces.station.cells.push({x:0,y:0,low:0,high:16,mask:15});},TypeError);assert.throws(()=>{flumePieces.station=flumePieces.channel;},TypeError);
  assert.deepEqual(engine.quote(command).value,quote.value);assert.equal(engine.exportSave(),before);assert(engine.execute(command,quote.value.revision).ok);
+});
+
+
+test('channel construction views expose role-specific station bays independent of element order and viewport',()=>{
+ const rules=withFlumeProfile(structuredClone(baseRules)),engine=new Engine(world,rules),ride=apply(engine,build).id;
+ const view=()=>engine.view({bounds:{x0:0,y0:0,x1:2,y1:2},includeStatic:false}).value.rides.find(r=>r.id===ride);
+ assert.deepEqual(view().portalStations,{entrance:null,exit:null});
+ const first=apply(engine,{type:'append-track',ride,piece:'station'}).id;
+ assert.deepEqual(view().portalStations,{entrance:first,exit:null});
+ const second=apply(engine,{type:'append-track',ride,piece:'station'}).id;
+ apply(engine,{type:'append-track',ride,piece:'station'});
+ const expected={entrance:first,exit:second};assert.deepEqual(view().portalStations,expected);
+ const returned=view().portalStations;returned.entrance=999;returned.exit=999;assert.deepEqual(view().portalStations,expected);
+ const reversed=engine.snapshot();reversed.elements.reverse();assert(engine.restoreSave(JSON.stringify(reversed)).ok);assert.deepEqual(view().portalStations,expected);
 });

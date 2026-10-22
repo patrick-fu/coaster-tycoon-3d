@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {create,apply} from './fixtures.mjs';
 import {Engine} from '../dist/simulation/engine.js';
+import {beforeAtmState} from './atm-fixtures.mjs';
 const scenery=(type='tree',x=5,y=5,height=16)=>({type:'place-scenery',sceneryType:type,tile:{x,y},height});
 function rejects(e,c,code){const before=e.exportSave();for(const r of[e.quote(c),e.execute(c,e.revision)]){assert(!r.ok);assert.equal(r.error.code,code);}assert.equal(e.exportSave(),before);}
 test('scenery charges integer candidate costs, obstructs its occupied height, persists and refunds on removal',()=>{
@@ -17,7 +18,7 @@ test('flower clearance covers its visible blooms while permitting a separated ov
  const e=create();apply(e,scenery('flower'));rejects(e,{type:'place-path',tile:{x:5,y:5},height:24,queueFor:null},'CLEARANCE');apply(e,{type:'place-path',tile:{x:5,y:5},height:32,queueFor:null});assert(e.restoreSave(e.exportSave()).ok);
 });
 test('version six parks migrate without changing continuation, cash, membership or player construction',()=>{
- const e=create();apply(e,{type:'place-path',tile:{x:5,y:5},height:16,queueFor:null});const expected=e.snapshot(),legacy=structuredClone(expected),profile=JSON.parse(legacy.rules);assert.deepEqual(legacy.boats,[]);delete legacy.boats;assert.deepEqual(profile.restroomProfiles,{});delete profile.restroomProfiles;assert.deepEqual(profile.merchandiseProfiles,{});delete profile.merchandiseProfiles;assert.deepEqual(legacy.retiredMerchandise,{'independent.map':{sales:0,income:0},'independent.umbrella':{sales:0,income:0}});delete legacy.retiredMerchandise;delete profile.facilityProfiles;delete profile.commerceProfiles;delete profile.channelProfiles;delete profile.scenery;delete profile.rideProfiles;delete profile.fixedProfiles;delete legacy.carouselSessions;delete legacy.retiredRideIncome;delete legacy.contentVersion;delete legacy.nextInstance;legacy.version=6;legacy.rules=JSON.stringify(profile);
+ const e=create();apply(e,{type:'place-path',tile:{x:5,y:5},height:16,queueFor:null});const expected=e.snapshot(),legacy=beforeAtmState(expected),profile=JSON.parse(legacy.rules);assert.deepEqual(legacy.boats,[]);delete legacy.boats;assert.deepEqual(profile.restroomProfiles,{});delete profile.restroomProfiles;assert.deepEqual(profile.merchandiseProfiles,{});delete profile.merchandiseProfiles;assert.deepEqual(legacy.retiredMerchandise,{'independent.map':{sales:0,income:0},'independent.umbrella':{sales:0,income:0}});delete legacy.retiredMerchandise;delete profile.facilityProfiles;delete profile.commerceProfiles;delete profile.channelProfiles;delete profile.scenery;delete profile.rideProfiles;delete profile.fixedProfiles;delete legacy.carouselSessions;delete legacy.retiredRideIncome;delete legacy.contentVersion;delete legacy.nextInstance;legacy.version=6;legacy.rules=JSON.stringify(profile);
  assert(e.restoreSave(JSON.stringify(legacy)).ok);assert.deepEqual(e.snapshot(),expected);assert(e.advance(60).ok);assert(e.restoreSave(e.exportSave()).ok);
 });
 test('invalid scenery and legacy metadata preserve the live park on failed import',()=>{

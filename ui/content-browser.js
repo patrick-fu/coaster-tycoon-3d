@@ -1,4 +1,5 @@
 import {CONTENT_VERSION} from './content/registry.js';
+
 const SVG_ROLLER_COASTER = `
 <svg viewBox="0 0 24 24" class="content-library-category-icon" fill="currentColor" aria-hidden="true">
   <path d="M2 20h20v1.5H2z" opacity="0.5"/>
@@ -90,7 +91,7 @@ const REFERENCE_CATEGORIES = [
   { id: 'water', label: 'Water Rides', silhouette: SVG_WATER },
   { id: 'gentle', label: 'Gentle Rides', silhouette: SVG_GENTLE },
   { id: 'thrill', label: 'Thrill Rides', silhouette: SVG_THRILL },
-  { id: 'commercial', label: 'Shops & Stalls', silhouette: SVG_COMMERCIAL }
+  { id: 'commercial', label: 'Shops & Facilities', silhouette: SVG_COMMERCIAL }
 ];
 
 function ensureStylesheet() {
@@ -105,7 +106,7 @@ function ensureStylesheet() {
   }
 }
 
-export function createContentBrowser({ loadCatalogue, onChoose, isChoiceVisible = () => true } = {}) {
+export function createContentBrowser({ loadCatalogue, onChoose, isChoiceVisible = () => true, isChoiceReady = () => true } = {}) {
   ensureStylesheet();
 
   let isOpen = false;
@@ -113,6 +114,7 @@ export function createContentBrowser({ loadCatalogue, onChoose, isChoiceVisible 
   let isLoading = false;
   let loadError = null;
   let cataloguePromise = null;
+  let catalogueGeneration = 0;
   let focusTimer = null;
   let lastRenderedFamily = null;
 
@@ -133,6 +135,7 @@ export function createContentBrowser({ loadCatalogue, onChoose, isChoiceVisible 
 
   let windowEl = null;
   let headerEl = null;
+  let closeBtnEl = null;
   let searchInputEl = null;
   let searchClearBtnEl = null;
   let filterGroupEl = null;
@@ -141,16 +144,46 @@ export function createContentBrowser({ loadCatalogue, onChoose, isChoiceVisible 
   let inspectorPaneEl = null;
   let statusBarEl = null;
 
-
   function isChoiceImplemented(choice) {
-    if (!choice || !choice.capabilities || choice.runtimeAvailable !== true || !isChoiceVisible(choice)) return false;
+    if (!choice || !choice.capabilities) return false;
     const { construction, operation, presentation } = choice.capabilities;
     if (!choice.modeIds?.length || !construction || !operation || !presentation) return false;
     return construction.kind === 'tracked' && operation.kind === 'circuit' && ['procedural-coaster','detailed-wooden-coaster'].includes(presentation.kind) ||
       construction.kind === 'fixed' && operation.kind === 'rotation' && presentation.kind === 'detailed-carousel' ||
       construction.kind === 'channel' && operation.kind === 'channel-circuit' && presentation.kind === 'detailed-log-flume' ||
       construction.kind === 'facility' && operation.kind === 'service' && ['procedural-facility','detailed-facility'].includes(presentation.kind) &&
-      ['food','drink','restroom','information'].includes(construction.service) && operation.service === construction.service && presentation.service === construction.service;
+      ['food','drink','restroom','information','atm','balloon'].includes(construction.service) && operation.service === construction.service && presentation.service === construction.service;
+  }
+
+  function isChoiceAvailable(choice) {
+    return Boolean(
+      choice &&
+      isChoiceImplemented(choice) &&
+      choice.runtimeAvailable === true &&
+      isChoiceVisible(choice) &&
+      isChoiceReady(choice)
+    );
+  }
+
+  function isChoiceModelUnready(choice) {
+    return Boolean(
+      choice &&
+      isChoiceImplemented(choice) &&
+      choice.runtimeAvailable === true &&
+      !isChoiceReady(choice)
+    );
+  }
+
+  function isChoiceReceivingUnavailable(choice) {
+    return Boolean(
+      choice &&
+      isChoiceImplemented(choice) &&
+      choice.runtimeAvailable !== true
+    );
+  }
+
+  function isChoiceInDevelopment(choice) {
+    return !choice || !isChoiceImplemented(choice);
   }
 
   function getVariantsForFamily(familyId) {
@@ -171,7 +204,7 @@ export function createContentBrowser({ loadCatalogue, onChoose, isChoiceVisible 
     const variants = getVariantsForFamily(familyId);
     return variants.some(v => {
       const choice = getChoiceForFamilyAndVariant(familyId, v.id);
-      return isChoiceImplemented(choice);
+      return isChoiceAvailable(choice);
     });
   }
 
@@ -179,8 +212,25 @@ export function createContentBrowser({ loadCatalogue, onChoose, isChoiceVisible 
     const variants = getVariantsForFamily(familyId);
     return variants.some(v => {
       const choice = getChoiceForFamilyAndVariant(familyId, v.id);
-      return !isChoiceImplemented(choice);
+      return isChoiceInDevelopment(choice);
     }) || variants.length === 0;
+  }
+
+  function getEligibleVariantsForFamily(familyId, filter = statusFilter) {
+    const variants = getVariantsForFamily(familyId);
+    if (filter === 'available') {
+      return variants.filter(v => {
+        const choice = getChoiceForFamilyAndVariant(familyId, v.id);
+        return isChoiceAvailable(choice);
+      });
+    }
+    if (filter === 'development') {
+      return variants.filter(v => {
+        const choice = getChoiceForFamilyAndVariant(familyId, v.id);
+        return isChoiceInDevelopment(choice);
+      });
+    }
+    return variants;
   }
 
   function familyMatchesStatus(family) {
@@ -257,25 +307,7 @@ export function createContentBrowser({ loadCatalogue, onChoose, isChoiceVisible 
       return;
     }
 
-    let variants = getVariantsForFamily(selectedFamilyId);
-
-    if (statusFilter === 'available') {
-      const availableVariants = variants.filter(v => {
-        const choice = getChoiceForFamilyAndVariant(selectedFamilyId, v.id);
-        return isChoiceImplemented(choice);
-      });
-      if (availableVariants.length > 0) {
-        variants = availableVariants;
-      }
-    } else if (statusFilter === 'development') {
-      const devVariants = variants.filter(v => {
-        const choice = getChoiceForFamilyAndVariant(selectedFamilyId, v.id);
-        return !isChoiceImplemented(choice);
-      });
-      if (devVariants.length > 0) {
-        variants = devVariants;
-      }
-    }
+    const variants = getEligibleVariantsForFamily(selectedFamilyId, statusFilter);
 
     let currentVariant = variants.find(v => v.id === selectedVariantId);
     if (!currentVariant && variants.length > 0) {
@@ -297,11 +329,11 @@ export function createContentBrowser({ loadCatalogue, onChoose, isChoiceVisible 
     }
   }
 
-
   async function fetchCatalogue() {
     if (isLoading && cataloguePromise) {
       return cataloguePromise;
     }
+    const generation = catalogueGeneration;
     isLoading = true;
     loadError = null;
     render();
@@ -312,6 +344,7 @@ export function createContentBrowser({ loadCatalogue, onChoose, isChoiceVisible 
           throw new Error('The content library is unavailable.');
         }
         const data = await loadCatalogue();
+        if (generation !== catalogueGeneration) return;
         if (!data || data.contentVersion !== CONTENT_VERSION || !Array.isArray(data.families) || !Array.isArray(data.variants) || !Array.isArray(data.modes)) {
           throw new Error('The catalogue uses an unsupported format.');
         }
@@ -321,22 +354,23 @@ export function createContentBrowser({ loadCatalogue, onChoose, isChoiceVisible 
         ensureValidSelection();
         render();
       } catch (err) {
+        if (generation !== catalogueGeneration) return;
         isLoading = false;
         loadError = err && err.message ? err.message : String(err);
         render();
       } finally {
-        cataloguePromise = null;
+        if (generation === catalogueGeneration) cataloguePromise = null;
       }
     })();
 
     return cataloguePromise;
   }
 
-
   function createSafeLink(url, label) {
     if (!url || typeof url !== 'string' || !/^https?:\/\//i.test(url)) return null;
     const a = document.createElement('a');
     a.className = 'content-library-detail-link';
+    a.dataset.contentLibraryFocus = `link:${label || 'spec'}`;
     a.href = url;
     a.target = '_blank';
     a.rel = 'noopener noreferrer';
@@ -350,6 +384,7 @@ export function createContentBrowser({ loadCatalogue, onChoose, isChoiceVisible 
     windowEl.className = 'content-library-window';
     windowEl.setAttribute('role', 'dialog');
     windowEl.setAttribute('aria-label', 'Content Library');
+    windowEl.setAttribute('aria-modal', 'false');
     windowEl.style.display = 'none';
 
     // Isolate mouse/pointer/keyboard events so camera doesn't pan or park pause
@@ -388,11 +423,12 @@ export function createContentBrowser({ loadCatalogue, onChoose, isChoiceVisible 
     subtitleEl.textContent = 'Rides · Shops · Services';
     titlebarEl.appendChild(subtitleEl);
 
-    const closeBtnEl = document.createElement('button');
+    closeBtnEl = document.createElement('button');
     closeBtnEl.className = 'content-library-close-btn';
     closeBtnEl.setAttribute('aria-label', 'Close Content Library (Esc)');
     closeBtnEl.title = 'Close window (Escape)';
     closeBtnEl.textContent = '✕';
+    closeBtnEl.dataset.contentLibraryFocus = 'action:close';
     closeBtnEl.addEventListener('click', (e) => {
       e.preventDefault();
       close();
@@ -412,8 +448,9 @@ export function createContentBrowser({ loadCatalogue, onChoose, isChoiceVisible 
     searchInputEl = document.createElement('input');
     searchInputEl.type = 'text';
     searchInputEl.className = 'content-library-search-input';
-    searchInputEl.placeholder = 'Search families & objects...';
-    searchInputEl.setAttribute('aria-label', 'Search families and objects');
+    searchInputEl.placeholder = 'Search this category...';
+    searchInputEl.setAttribute('aria-label', 'Search families and objects in this category');
+    searchInputEl.dataset.contentLibraryFocus = 'search:input';
     searchInputEl.addEventListener('input', (e) => {
       searchQuery = e.target.value;
       searchClearBtnEl.style.display = searchQuery ? 'grid' : 'none';
@@ -425,6 +462,7 @@ export function createContentBrowser({ loadCatalogue, onChoose, isChoiceVisible 
     searchClearBtnEl.className = 'content-library-search-clear';
     searchClearBtnEl.setAttribute('aria-label', 'Clear search query');
     searchClearBtnEl.textContent = '✕';
+    searchClearBtnEl.dataset.contentLibraryFocus = 'action:search-clear';
     searchClearBtnEl.style.display = 'none';
     searchClearBtnEl.addEventListener('click', () => {
       searchQuery = '';
@@ -454,6 +492,7 @@ export function createContentBrowser({ loadCatalogue, onChoose, isChoiceVisible 
       const btn = document.createElement('button');
       btn.className = 'content-library-filter-btn' + (statusFilter === def.id ? ' active' : '');
       btn.dataset.filter = def.id;
+      btn.dataset.contentLibraryFocus = `filter:${def.id}`;
       btn.textContent = def.label;
       btn.setAttribute('aria-pressed', statusFilter === def.id ? 'true' : 'false');
       btn.addEventListener('click', () => {
@@ -494,7 +533,6 @@ export function createContentBrowser({ loadCatalogue, onChoose, isChoiceVisible 
     document.body.appendChild(windowEl);
     bindGlobalListeners();
   }
-
 
   function onHeaderPointerDown(e) {
     if (e.button !== 0) return;
@@ -599,7 +637,6 @@ export function createContentBrowser({ loadCatalogue, onChoose, isChoiceVisible 
     window.removeEventListener('pointercancel', onWindowPointerUp, true);
   }
 
-
   function renderCategories() {
     categoriesRibbonEl.innerHTML = '';
     const categories = getAllCategories();
@@ -667,6 +704,7 @@ export function createContentBrowser({ loadCatalogue, onChoose, isChoiceVisible 
       const resetBtn = document.createElement('button');
       resetBtn.className = 'content-library-retry-btn';
       resetBtn.textContent = 'Reset filters';
+      resetBtn.dataset.contentLibraryFocus = 'action:reset-filters';
       resetBtn.addEventListener('click', () => {
         searchQuery = '';
         if (searchInputEl) searchInputEl.value = '';
@@ -687,12 +725,14 @@ export function createContentBrowser({ loadCatalogue, onChoose, isChoiceVisible 
     listEl.setAttribute('aria-label', 'Ride and facility families');
 
     families.forEach((fam, index) => {
+      const isSelected = fam.id === selectedFamilyId;
+      const isTabTarget = isSelected || (!selectedFamilyId && index === 0);
       const card = document.createElement('div');
-      card.className = 'content-library-card' + (fam.id === selectedFamilyId ? ' selected' : '');
+      card.className = 'content-library-card' + (isSelected ? ' selected' : '');
       card.setAttribute('role', 'option');
       card.dataset.contentLibraryFocus = `family:${fam.id}`;
-      card.setAttribute('tabindex', '0');
-      card.setAttribute('aria-selected', fam.id === selectedFamilyId ? 'true' : 'false');
+      card.setAttribute('tabindex', isTabTarget ? '0' : '-1');
+      card.setAttribute('aria-selected', isSelected ? 'true' : 'false');
 
       const cardHeader = document.createElement('div');
       cardHeader.className = 'content-library-card-header';
@@ -714,10 +754,25 @@ export function createContentBrowser({ loadCatalogue, onChoose, isChoiceVisible 
       badgesRow.appendChild(srcBadge);
 
       const isAvail = isFamilyAvailable(fam.id);
+      const famVariants = getVariantsForFamily(fam.id);
+      const famChoices = famVariants.map(v => getChoiceForFamilyAndVariant(fam.id, v.id)).filter(Boolean);
+      const isModelUnready = famChoices.some(c => isChoiceModelUnready(c));
+      const isReceivingUnavail = famChoices.some(c => isChoiceReceivingUnavailable(c));
+
       const statusBadge = document.createElement('span');
-      statusBadge.className = 'content-library-badge ' +
-        (isAvail ? 'content-library-badge-available' : 'content-library-badge-pending');
-      statusBadge.textContent = isAvail ? 'Available now' : 'In development';
+      if (isAvail) {
+        statusBadge.className = 'content-library-badge content-library-badge-available';
+        statusBadge.textContent = 'Available now';
+      } else if (isModelUnready) {
+        statusBadge.className = 'content-library-badge content-library-badge-pending';
+        statusBadge.textContent = 'Models not ready';
+      } else if (isReceivingUnavail) {
+        statusBadge.className = 'content-library-badge content-library-badge-pending';
+        statusBadge.textContent = 'Unavailable in this park';
+      } else {
+        statusBadge.className = 'content-library-badge content-library-badge-pending';
+        statusBadge.textContent = 'In development';
+      }
       badgesRow.appendChild(statusBadge);
 
       card.appendChild(badgesRow);
@@ -737,6 +792,7 @@ export function createContentBrowser({ loadCatalogue, onChoose, isChoiceVisible 
         selectedFamilyId = fam.id;
         ensureValidSelection();
         render();
+        focusItem(`family:${selectedFamilyId}`, true);
       });
 
       card.addEventListener('keydown', (e) => {
@@ -745,6 +801,7 @@ export function createContentBrowser({ loadCatalogue, onChoose, isChoiceVisible 
           selectedFamilyId = fam.id;
           ensureValidSelection();
           render();
+          focusItem(`family:${selectedFamilyId}`, true);
         } else if (e.key === 'ArrowDown') {
           e.preventDefault();
           if (index < families.length - 1) {
@@ -757,6 +814,22 @@ export function createContentBrowser({ loadCatalogue, onChoose, isChoiceVisible 
           e.preventDefault();
           if (index > 0) {
             selectedFamilyId = families[index - 1].id;
+            ensureValidSelection();
+            render();
+            focusItem(`family:${selectedFamilyId}`, true);
+          }
+        } else if (e.key === 'Home') {
+          e.preventDefault();
+          if (families.length > 0) {
+            selectedFamilyId = families[0].id;
+            ensureValidSelection();
+            render();
+            focusItem(`family:${selectedFamilyId}`, true);
+          }
+        } else if (e.key === 'End') {
+          e.preventDefault();
+          if (families.length > 0) {
+            selectedFamilyId = families[families.length - 1].id;
             ensureValidSelection();
             render();
             focusItem(`family:${selectedFamilyId}`, true);
@@ -806,8 +879,9 @@ export function createContentBrowser({ loadCatalogue, onChoose, isChoiceVisible 
     metaRow.className = 'content-library-detail-meta';
 
     const categoryDef = getAllCategories().find(c => c.id === family.category);
+    const catLabel = categoryDef ? categoryDef.label : (family.category.charAt(0).toUpperCase() + family.category.slice(1));
     const catSpan = document.createElement('span');
-    catSpan.textContent = `Category: ${categoryDef ? categoryDef.label : family.category}`;
+    catSpan.textContent = `Category: ${catLabel}`;
     metaRow.appendChild(catSpan);
 
     const isIndependent = family.reference === null;
@@ -825,7 +899,7 @@ export function createContentBrowser({ loadCatalogue, onChoose, isChoiceVisible 
     headerSection.appendChild(metaRow);
     container.appendChild(headerSection);
 
-    const variants = getVariantsForFamily(family.id);
+    const variants = getEligibleVariantsForFamily(family.id, statusFilter);
     const variantSection = document.createElement('div');
     variantSection.className = 'content-library-section';
 
@@ -839,7 +913,9 @@ export function createContentBrowser({ loadCatalogue, onChoose, isChoiceVisible 
 
     variants.forEach(v => {
       const choice = getChoiceForFamilyAndVariant(family.id, v.id);
-      const isImplemented = isChoiceImplemented(choice);
+      const isAvail = isChoiceAvailable(choice);
+      const isModelUnready = isChoiceModelUnready(choice);
+      const isReceivingUnavail = isChoiceReceivingUnavailable(choice);
 
       const vBtn = document.createElement('button');
       vBtn.className = 'content-library-variant-btn' + (v.id === selectedVariantId ? ' selected' : '');
@@ -851,9 +927,19 @@ export function createContentBrowser({ loadCatalogue, onChoose, isChoiceVisible 
       vBtn.appendChild(labelSpan);
 
       const badge = document.createElement('span');
-      badge.className = 'content-library-badge ' +
-        (isImplemented ? 'content-library-badge-available' : 'content-library-badge-pending');
-      badge.textContent = isImplemented ? 'Ready' : 'Pending';
+      if (isAvail) {
+        badge.className = 'content-library-badge content-library-badge-available';
+        badge.textContent = 'Ready';
+      } else if (isModelUnready) {
+        badge.className = 'content-library-badge content-library-badge-pending';
+        badge.textContent = 'Models not ready';
+      } else if (isReceivingUnavail) {
+        badge.className = 'content-library-badge content-library-badge-pending';
+        badge.textContent = 'Unavailable in this park';
+      } else {
+        badge.className = 'content-library-badge content-library-badge-pending';
+        badge.textContent = 'In development';
+      }
       vBtn.appendChild(badge);
 
       vBtn.addEventListener('click', () => {
@@ -909,7 +995,11 @@ export function createContentBrowser({ loadCatalogue, onChoose, isChoiceVisible 
         const modeDef = (catalogue && Array.isArray(catalogue.modes))
           ? catalogue.modes.find(m => m.id === mId)
           : null;
-        const modeLabel = (modeDef && modeDef.label ? modeDef.label : mId).replace(/([a-z\d])([A-Z])/g, '$1 $2').replace(/^./, c => c.toUpperCase());
+        const rawLabel = (modeDef && modeDef.label ? modeDef.label : mId);
+        const modeLabel = rawLabel
+          .replace(/([a-z\d])([A-Z])/g, '$1 $2')
+          .replace(/[-_]/g, ' ')
+          .replace(/^./, c => c.toUpperCase());
         const modeEvidence = modeDef && modeDef.evidence ? modeDef.evidence : 'project-candidate';
 
         const mBtn = document.createElement('button');
@@ -972,18 +1062,26 @@ export function createContentBrowser({ loadCatalogue, onChoose, isChoiceVisible 
     const cKind = document.createElement('div');
     cKind.className = 'content-library-capability-kind';
     const cDot = document.createElement('span');
-    const cIsOk = currentChoice?.runtimeAvailable === true && construction && construction.kind && construction.kind !== 'unimplemented';
+    const cIsImplemented = construction && construction.kind && construction.kind !== 'unimplemented';
+    const cIsOk = currentChoice?.runtimeAvailable === true && cIsImplemented;
     cDot.className = 'content-library-dot ' + (cIsOk ? 'content-library-dot-active' : 'content-library-dot-pending');
     cKind.appendChild(cDot);
     const cText = document.createElement('span');
-    cText.textContent = cIsOk ? 'Ready' : 'In development';
+    if (cIsOk) {
+      cText.textContent = 'Ready';
+    } else if (cIsImplemented && currentChoice?.runtimeAvailable !== true) {
+      cText.textContent = 'Unavailable in this park';
+    } else {
+      cText.textContent = 'In development';
+    }
     cKind.appendChild(cText);
     cCard.appendChild(cKind);
 
     if (construction && construction.service) {
       const cService = document.createElement('div');
       cService.className = 'content-library-capability-tag';
-      cService.textContent = `Service: ${construction.service}`;
+      const serviceName = String(construction.service).charAt(0).toUpperCase() + String(construction.service).slice(1);
+      cService.textContent = `Service: ${serviceName}`;
       cCard.appendChild(cService);
     }
     capsGrid.appendChild(cCard);
@@ -999,11 +1097,18 @@ export function createContentBrowser({ loadCatalogue, onChoose, isChoiceVisible 
     const oKind = document.createElement('div');
     oKind.className = 'content-library-capability-kind';
     const oDot = document.createElement('span');
-    const oIsOk = currentChoice?.runtimeAvailable === true && operation && operation.kind && operation.kind !== 'unimplemented';
+    const oIsImplemented = operation && operation.kind && operation.kind !== 'unimplemented';
+    const oIsOk = currentChoice?.runtimeAvailable === true && oIsImplemented;
     oDot.className = 'content-library-dot ' + (oIsOk ? 'content-library-dot-active' : 'content-library-dot-pending');
     oKind.appendChild(oDot);
     const oText = document.createElement('span');
-    oText.textContent = oIsOk ? 'Ready' : 'In development';
+    if (oIsOk) {
+      oText.textContent = 'Ready';
+    } else if (oIsImplemented && currentChoice?.runtimeAvailable !== true) {
+      oText.textContent = 'Unavailable in this park';
+    } else {
+      oText.textContent = 'In development';
+    }
     oKind.appendChild(oText);
     oCard.appendChild(oKind);
     capsGrid.appendChild(oCard);
@@ -1019,11 +1124,20 @@ export function createContentBrowser({ loadCatalogue, onChoose, isChoiceVisible 
     const pKind = document.createElement('div');
     pKind.className = 'content-library-capability-kind';
     const pDot = document.createElement('span');
-    const pIsOk = currentChoice?.runtimeAvailable === true && presentation && presentation.kind && presentation.kind !== 'unimplemented' && isChoiceVisible(currentChoice);
+    const pIsImplemented = presentation && presentation.kind && presentation.kind !== 'unimplemented';
+    const pIsOk = currentChoice?.runtimeAvailable === true && pIsImplemented && isChoiceVisible(currentChoice) && isChoiceReady(currentChoice);
     pDot.className = 'content-library-dot ' + (pIsOk ? 'content-library-dot-active' : 'content-library-dot-pending');
     pKind.appendChild(pDot);
     const pText = document.createElement('span');
-    pText.textContent = pIsOk ? 'Ready' : 'In development';
+    if (pIsOk) {
+      pText.textContent = 'Ready';
+    } else if (pIsImplemented && currentChoice?.runtimeAvailable === true && !isChoiceReady(currentChoice)) {
+      pText.textContent = 'Models not ready';
+    } else if (pIsImplemented && currentChoice?.runtimeAvailable !== true) {
+      pText.textContent = 'Unavailable in this park';
+    } else {
+      pText.textContent = 'In development';
+    }
     pKind.appendChild(pText);
     pCard.appendChild(pKind);
     capsGrid.appendChild(pCard);
@@ -1031,23 +1145,42 @@ export function createContentBrowser({ loadCatalogue, onChoose, isChoiceVisible 
     capsSection.appendChild(capsGrid);
     container.appendChild(capsSection);
 
-    const isReady = isChoiceImplemented(currentChoice);
+    const isAvail = isChoiceAvailable(currentChoice);
+    const isModelUnready = isChoiceModelUnready(currentChoice);
+    const isReceivingUnavail = isChoiceReceivingUnavailable(currentChoice);
+
     const banner = document.createElement('div');
     banner.className = 'content-library-status-banner ' +
-      (isReady ? 'content-library-status-banner-ready' : 'content-library-status-banner-pending');
+      (isAvail ? 'content-library-status-banner-ready' : 'content-library-status-banner-pending');
 
     const bannerTitle = document.createElement('div');
     bannerTitle.className = 'content-library-status-title';
-    bannerTitle.textContent = isReady ? '✓ Available now' : 'In development';
+    if (isAvail) {
+      bannerTitle.textContent = '✓ Available now';
+    } else if (isModelUnready) {
+      bannerTitle.textContent = 'Models not ready; reload to retry';
+    } else if (isReceivingUnavail) {
+      bannerTitle.textContent = 'Unavailable in this park';
+    } else {
+      bannerTitle.textContent = 'In development';
+    }
     banner.appendChild(bannerTitle);
 
     const bannerDesc = document.createElement('div');
     bannerDesc.className = 'content-library-status-desc';
 
-    if (isReady) {
+    if (isAvail) {
       bannerDesc.textContent = 'Choose this independent candidate to build it in your park.';
+    } else if (isModelUnready) {
+      bannerDesc.textContent = 'These models are unavailable. Choose another item or reload to try again.';
+    } else if (isReceivingUnavail) {
+      bannerDesc.textContent = 'This content is not available for construction in this park.';
     } else {
-      bannerDesc.textContent = 'This original reference is planned for a future build. You can inspect its variants and operating modes here.';
+      if (family.reference !== null || (selectedVariant && selectedVariant.reference !== null)) {
+        bannerDesc.textContent = 'This original reference is planned for a future build. You can inspect its variants and operating modes here.';
+      } else {
+        bannerDesc.textContent = 'This independent candidate is planned for a future build. You can inspect its variants and operating modes here.';
+      }
     }
     banner.appendChild(bannerDesc);
     container.appendChild(banner);
@@ -1056,12 +1189,20 @@ export function createContentBrowser({ loadCatalogue, onChoose, isChoiceVisible 
     actionBar.className = 'content-library-action-bar';
 
     const chooseBtn = document.createElement('button');
-    if (isReady) {
+    chooseBtn.dataset.contentLibraryFocus = 'action:choose';
+    if (isAvail) {
       chooseBtn.className = 'content-library-choose-btn content-library-choose-btn-ready';
       chooseBtn.textContent = `Select for Construction: ${family.label}`;
       chooseBtn.disabled = false;
       chooseBtn.addEventListener('click', () => {
         if (!selectedFamilyId || !selectedVariantId || !selectedModeId) return;
+        const choice = getChoiceForFamilyAndVariant(selectedFamilyId, selectedVariantId);
+        if (!choice) return;
+        if (!isChoiceImplemented(choice)) return;
+        if (choice.runtimeAvailable !== true) return;
+        if (!isChoiceVisible(choice)) return;
+        if (!isChoiceReady(choice)) return;
+        if (!Array.isArray(choice.modeIds) || !choice.modeIds.includes(selectedModeId)) return;
         if (typeof onChoose === 'function') {
           onChoose({
             familyId: selectedFamilyId,
@@ -1072,14 +1213,19 @@ export function createContentBrowser({ loadCatalogue, onChoose, isChoiceVisible 
       });
     } else {
       chooseBtn.className = 'content-library-choose-btn content-library-choose-btn-disabled';
-      chooseBtn.textContent = 'In development';
+      if (isModelUnready) {
+        chooseBtn.textContent = 'Models not ready; reload to retry';
+      } else if (isReceivingUnavail) {
+        chooseBtn.textContent = 'Unavailable in this park';
+      } else {
+        chooseBtn.textContent = 'In development';
+      }
       chooseBtn.disabled = true;
       chooseBtn.setAttribute('aria-disabled', 'true');
     }
     actionBar.appendChild(chooseBtn);
-    container.appendChild(actionBar);
-
     inspectorPaneEl.appendChild(container);
+    inspectorPaneEl.appendChild(actionBar);
   }
 
   function renderStatusBar(filteredFamilies) {
@@ -1094,7 +1240,7 @@ export function createContentBrowser({ loadCatalogue, onChoose, isChoiceVisible 
     const rightSpan = document.createElement('span');
     if (catalogue && Array.isArray(catalogue.families)) {
       const totalAvail = catalogue.families.filter(f => isFamilyAvailable(f.id)).length;
-      const totalDev = catalogue.families.length - totalAvail;
+      const totalDev = catalogue.families.filter(f => isFamilyInDevelopment(f.id)).length;
       rightSpan.innerHTML = `Total: <strong>${catalogue.families.length}</strong> families • <strong>${totalAvail}</strong> ready • <strong>${totalDev}</strong> in development`;
     }
     statusBarEl.appendChild(rightSpan);
@@ -1103,7 +1249,8 @@ export function createContentBrowser({ loadCatalogue, onChoose, isChoiceVisible 
   function render() {
     if (!windowEl) return;
 
-    const focusKey = windowEl.contains(document.activeElement) ? document.activeElement.dataset?.contentLibraryFocus : null;
+    const hadFocusInWindow = Boolean(windowEl && windowEl.contains(document.activeElement));
+    const focusKey = hadFocusInWindow ? document.activeElement?.dataset?.contentLibraryFocus : null;
     const listScroll = listPaneEl.querySelector('.content-library-list')?.scrollTop ?? 0;
     const detailScroll = lastRenderedFamily === selectedFamilyId ? inspectorPaneEl.querySelector('.content-library-inspector')?.scrollTop ?? 0 : 0;
 
@@ -1119,7 +1266,7 @@ export function createContentBrowser({ loadCatalogue, onChoose, isChoiceVisible 
       categoriesRibbonEl.innerHTML = '';
       listPaneEl.innerHTML = `
         <div class="content-library-state-panel">
-          <div class="content-library-spinner"></div>
+          <div class="content-library-spinner" aria-hidden="true"></div>
           <div class="content-library-state-title">Loading Catalogue</div>
           <div class="content-library-state-desc">Loading rides, shops and services...</div>
         </div>`;
@@ -1128,6 +1275,10 @@ export function createContentBrowser({ loadCatalogue, onChoose, isChoiceVisible 
           <div class="content-library-state-desc">Preparing the content library...</div>
         </div>`;
       statusBarEl.innerHTML = '<span>Loading content...</span>';
+
+      if (hadFocusInWindow) {
+        restoreOrFallbackFocus(focusKey);
+      }
       return;
     }
 
@@ -1137,14 +1288,20 @@ export function createContentBrowser({ loadCatalogue, onChoose, isChoiceVisible 
         <div class="content-library-state-panel">
           <div class="content-library-state-title" style="color: var(--content-library-danger-red);">Catalogue Unavailable</div>
           <div class="content-library-state-desc">${escapeHtml(loadError)}</div>
-          <button class="content-library-retry-btn" id="content-library-retry">Try Again</button>
+          <button class="content-library-retry-btn" id="content-library-retry" data-content-library-focus="action:retry">Try Again</button>
         </div>`;
       const retryBtn = listPaneEl.querySelector('#content-library-retry');
       if (retryBtn) {
-        retryBtn.addEventListener('click', () => fetchCatalogue());
+        retryBtn.addEventListener('click', () => {
+          fetchCatalogue();
+        });
       }
       inspectorPaneEl.innerHTML = '';
       statusBarEl.innerHTML = '<span style="color: var(--content-library-danger-red);">Error loading catalogue</span>';
+
+      if (hadFocusInWindow) {
+        restoreOrFallbackFocus(focusKey);
+      }
       return;
     }
 
@@ -1157,11 +1314,15 @@ export function createContentBrowser({ loadCatalogue, onChoose, isChoiceVisible 
     renderInspectorPane(selectedFamily);
 
     renderStatusBar(filteredFamilies);
-    const list = listPaneEl.querySelector('.content-library-list'), details = inspectorPaneEl.querySelector('.content-library-inspector');
+    const list = listPaneEl.querySelector('.content-library-list');
+    const details = inspectorPaneEl.querySelector('.content-library-inspector');
     if (list) list.scrollTop = listScroll;
     if (details) details.scrollTop = detailScroll;
     lastRenderedFamily = selectedFamilyId;
-    if (focusKey) focusItem(focusKey);
+
+    if (hadFocusInWindow) {
+      restoreOrFallbackFocus(focusKey);
+    }
   }
 
   function escapeHtml(str) {
@@ -1175,8 +1336,64 @@ export function createContentBrowser({ loadCatalogue, onChoose, isChoiceVisible 
   }
 
   function focusItem(key, reveal = false) {
-    const target = Array.from(windowEl.querySelectorAll('[data-content-library-focus]')).find(el => el.dataset.contentLibraryFocus === key);
-    if (target) { target.focus({preventScroll:true}); if (reveal) target.scrollIntoView({block:'nearest'}); }
+    if (!key || !windowEl) return false;
+    const target = Array.from(windowEl.querySelectorAll('[data-content-library-focus]')).find(
+      el => el.dataset.contentLibraryFocus === key
+    );
+    if (target && !target.disabled && target.getAttribute('aria-disabled') !== 'true') {
+      target.focus({ preventScroll: true });
+      if (reveal && typeof target.scrollIntoView === 'function') {
+        target.scrollIntoView({ block: 'nearest' });
+      }
+      return true;
+    }
+    return false;
+  }
+
+  function restoreOrFallbackFocus(preferredKey) {
+    if (preferredKey && focusItem(preferredKey)) {
+      return true;
+    }
+
+    if (preferredKey === 'action:choose') {
+      if (selectedVariantId && focusItem(`variant:${selectedVariantId}`)) return true;
+      if (selectedFamilyId && focusItem(`family:${selectedFamilyId}`)) return true;
+    }
+
+    if (preferredKey && (preferredKey.startsWith('variant:') || preferredKey.startsWith('mode:'))) {
+      if (selectedVariantId && focusItem(`variant:${selectedVariantId}`)) return true;
+      if (selectedFamilyId && focusItem(`family:${selectedFamilyId}`)) return true;
+    }
+
+    if (loadError) {
+      if (focusItem('action:retry')) return true;
+    }
+
+    if (selectedVariantId && focusItem(`variant:${selectedVariantId}`)) return true;
+    if (selectedFamilyId && focusItem(`family:${selectedFamilyId}`)) return true;
+    if (activeCategory && focusItem(`category:${activeCategory}`)) return true;
+
+    if (searchInputEl && !searchInputEl.disabled) {
+      searchInputEl.focus({ preventScroll: true });
+      return true;
+    }
+
+    if (focusItem('action:reset-filters')) return true;
+
+    if (closeBtnEl && !closeBtnEl.disabled) {
+      closeBtnEl.focus({ preventScroll: true });
+      return true;
+    }
+
+    const fallback = windowEl.querySelector(
+      'button:not([disabled]):not([aria-disabled="true"]), input:not([disabled]), [tabindex="0"]'
+    );
+    if (fallback) {
+      fallback.focus({ preventScroll: true });
+      return true;
+    }
+
+    return false;
   }
 
   function focusFirstElement() {
@@ -1193,7 +1410,6 @@ export function createContentBrowser({ loadCatalogue, onChoose, isChoiceVisible 
       }
     }, 0);
   }
-
 
   function open(options = {}) {
     const opener = (options && options.opener) || (options instanceof Element ? options : document.activeElement);
@@ -1245,8 +1461,20 @@ export function createContentBrowser({ loadCatalogue, onChoose, isChoiceVisible 
     }
   }
 
+  function invalidateCatalogue() {
+    catalogueGeneration++;
+    catalogue = null;
+    cataloguePromise = null;
+    isLoading = false;
+    loadError = null;
+    selectedFamilyId = selectedVariantId = selectedModeId = lastRenderedFamily = null;
+    if (isOpen) return fetchCatalogue();
+    return Promise.resolve();
+  }
+
   function destroy() {
     close();
+    invalidateCatalogue();
     removeGlobalListeners();
 
     if (windowEl && windowEl.parentNode) {
@@ -1255,6 +1483,7 @@ export function createContentBrowser({ loadCatalogue, onChoose, isChoiceVisible 
 
     windowEl = null;
     headerEl = null;
+    closeBtnEl = null;
     searchInputEl = null;
     searchClearBtnEl = null;
     filterGroupEl = null;
@@ -1270,7 +1499,13 @@ export function createContentBrowser({ loadCatalogue, onChoose, isChoiceVisible 
   return {
     open,
     close,
-    refreshAvailability: () => { if (isOpen && catalogue) { ensureValidSelection(); render(); } },
+    invalidateCatalogue,
+    refreshAvailability: () => {
+      if (isOpen && catalogue) {
+        ensureValidSelection();
+        render();
+      }
+    },
     destroy
   };
 }

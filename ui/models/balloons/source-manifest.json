@@ -1,0 +1,254 @@
+{
+  "scope": "Exact independently authored Balloon resources; finite remote export/reopen/CPU-view candidate adopted. Actual loader/native/GPU/human acceptance separate.",
+  "mapping": {
+    "tileMetres": 4,
+    "glTFUp": "+Y",
+    "glTFFront": "+Z",
+    "unitScale": [
+      1,
+      1,
+      1
+    ],
+    "stallMaximumHeightMetres": 3.8,
+    "stallHorizontalEnvelopeMetres": [
+      -1.9,
+      1.9
+    ],
+    "propMaximumHeightMetres": 1.35,
+    "propHorizontalEnvelopeMetres": [
+      -0.25,
+      0.25
+    ]
+  },
+  "exporter": {
+    "path": "scripts/art/export-detailed-stall.py",
+    "bytes": 16566,
+    "sha256": "34a11bbdfce6c01991ea39035d8e9404d00f0221e247a6786acd69b461471db6"
+  },
+  "assets": [
+    {
+      "kind": "balloon-stall",
+      "contentVariant": "independent.timber-balloon-stall",
+      "presentationProfile": "detailed-balloon-stall-v1",
+      "resource": {
+        "path": "ui/models/balloons/balloon-stall.glb",
+        "bytes": 4903980,
+        "sha256": "2bf40e0efea279c0eb3ce6d13b62bc97847996d6c6f6ec1cd6c3fe1b7cb24167"
+      },
+      "source": {
+        "path": "scripts/art/balloon-stall.py",
+        "bytes": 18346,
+        "sha256": "275451a29023a2b363dea411a625b5285a437d6610d1b2389e0698196e3251b4"
+      },
+      "editableMaster": {
+        "retainedPath": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/balloon-facade-export-sol-high-r1/actual-run-r1/mirror/balloon-stall/assets/balloon-stall.blend",
+        "bytes": 14933697,
+        "sha256": "0326083916353e9e3698a88bfa40eca16d386fb433584db03a951d65f760e987"
+      },
+      "exportMap": {
+        "retainedPath": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/balloon-facade-export-sol-high-r1/actual-run-r1/mirror/balloon-stall/assets/export-map.json",
+        "bytes": 12411,
+        "sha256": "4cbc9096d191f83e4c05124c0645c5a00d17b298f56d990095c64be6b51d7583"
+      },
+      "trianglesAllStates": 6204,
+      "drawGroupsAllStates": 10,
+      "materials": 8,
+      "boundsThree": {
+        "min": [
+          -1.5,
+          0.0,
+          -1.2999999523162842
+        ],
+        "max": [
+          1.5,
+          3.747999906539917,
+          1.75
+        ]
+      },
+      "anchorsThree": {
+        "GroundRoot": {
+          "children": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "name": "GroundRoot"
+        },
+        "CounterFront": {
+          "name": "CounterFront",
+          "translation": [
+            0,
+            1,
+            1.5
+          ]
+        },
+        "ProductSign": {
+          "name": "ProductSign",
+          "translation": [
+            0,
+            2.4200000762939453,
+            1.649999976158142
+          ]
+        },
+        "MenuPanel": {
+          "name": "MenuPanel",
+          "translation": [
+            -1.100000023841858,
+            1.75,
+            1.659999966621399
+          ]
+        },
+        "OpenShutter": {
+          "children": [
+            6
+          ],
+          "name": "OpenShutter"
+        },
+        "ClosedShutter": {
+          "children": [
+            0
+          ],
+          "name": "ClosedShutter"
+        }
+      },
+      "images": [
+        {
+          "name": "Metal049A_1K-PNG_Color",
+          "bytes": 258411,
+          "sha256": "d07f66e233c8d0e1efa8cf0b795cea1ba505f0018c0588241dc1fa3f9c5912ba",
+          "width": 512,
+          "height": 512
+        },
+        {
+          "name": "Metal049A_1K-PNG_Metalness-Metal049A_1K-PNG_Roughness",
+          "bytes": 150855,
+          "sha256": "61dc93e29590020dd590248df65630cc00cdd4b0e32499e2dd5700a859af60cd",
+          "width": 512,
+          "height": 512
+        },
+        {
+          "name": "Metal049A_1K-PNG_NormalGL",
+          "bytes": 554223,
+          "sha256": "2477e4e6911cfec3f67e0ef09209f1f7b7a6e573bef90147414a444fd10b3b47",
+          "width": 512,
+          "height": 512
+        },
+        {
+          "name": "RoofingTiles013A_1K-PNG_Color",
+          "bytes": 277650,
+          "sha256": "da4e1f3f15fcc89f4ca2cbb53c6e6d082380e8d7f4eab7ef4764ecdd853c323f",
+          "width": 512,
+          "height": 512
+        },
+        {
+          "name": "RoofingTiles013A_1K-PNG_NormalGL",
+          "bytes": 1121002,
+          "sha256": "3bec02e1b858b3b0526ece04591aa631ef24da7dcb61103fabe3f435c17a6c82",
+          "width": 512,
+          "height": 512
+        },
+        {
+          "name": "RoofingTiles013A_1K-PNG_Roughness",
+          "bytes": 236058,
+          "sha256": "8ae0f52dbedbf6a8fc8f9bfc2cd469f1bb9472304509a3cd3315ece6efdb53c8",
+          "width": 512,
+          "height": 512
+        },
+        {
+          "name": "Wood096_1K-PNG_Color",
+          "bytes": 392332,
+          "sha256": "d057034d60a384a3ea89162f4d2ad415a4cc238eaa8da39870c2c6981773487d",
+          "width": 512,
+          "height": 512
+        },
+        {
+          "name": "Wood096_1K-PNG_NormalGL",
+          "bytes": 1397135,
+          "sha256": "e141194fae7a455d19778a63a1bc5cafdc9fe17dfb823ca972415c5c32457db8",
+          "width": 512,
+          "height": 512
+        },
+        {
+          "name": "Wood096_1K-PNG_Roughness",
+          "bytes": 236358,
+          "sha256": "bd2111e6dafb356a6f81b3b1fccaa2f239dd6145700a4ff3e7c9fc1a32afd3c1",
+          "width": 512,
+          "height": 512
+        }
+      ]
+    },
+    {
+      "kind": "held-balloon",
+      "contentVariant": null,
+      "presentationProfile": "detailed-held-balloon-v1",
+      "resource": {
+        "path": "ui/models/balloons/held-balloon.glb",
+        "bytes": 22176,
+        "sha256": "6b47c07c965a3dccfd87855804a3755d4b59793a355d329a81327b2c6a686056"
+      },
+      "source": {
+        "path": "scripts/art/held-balloon.py",
+        "bytes": 5738,
+        "sha256": "aa4d6db74e0a777b8993a8271cbb0674ebd83e2123877e8284755d2016e4da7c"
+      },
+      "editableMaster": {
+        "retainedPath": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/balloon-assets-export-root-r3/actual-run-r1/mirror/held-balloon/assets/held-balloon.blend",
+        "bytes": 98611,
+        "sha256": "3552bdd409ceac48fe8f68c3faf97616662246aea92899c0bf7d04b5bb880db2"
+      },
+      "exportMap": {
+        "retainedPath": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/balloon-assets-export-root-r3/actual-run-r1/mirror/held-balloon/assets/export-map.json",
+        "bytes": 2065,
+        "sha256": "f0b031a69cbfe31fa85048a6600fabf63c73a05380706140c20da925bf0c22ab"
+      },
+      "trianglesAllStates": 780,
+      "drawGroupsAllStates": 2,
+      "materials": 2,
+      "boundsThree": {
+        "min": [
+          -0.20999999344348907,
+          0.0,
+          -0.2068096250295639
+        ],
+        "max": [
+          0.20999999344348907,
+          1.2799999713897705,
+          0.2068096250295639
+        ]
+      },
+      "anchorsThree": {
+        "GroundRoot": {
+          "children": [
+            0,
+            1,
+            2
+          ],
+          "name": "GroundRoot"
+        },
+        "HandAnchor": {
+          "name": "HandAnchor"
+        }
+      },
+      "images": []
+    }
+  ],
+  "qualification": {
+    "retainedPath": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/runtime/balloon-facade-export-sol-high-r1/actual-run-r1/root-finite-outcome.json",
+    "bytes": 7706,
+    "sha256": "b63aeadc31874d9d025710771cb8e5f0ab1e1333d082a2738c9f4bad9b022228"
+  },
+  "renderingNotes": [
+    "Stall uses9 embedded512x512 CC0-source-derived images; prop has no textures and supports saved per-instance skin tint.",
+    "No compressed GLB extension. Draco-unavailable and stall multiple-image-sampler warnings are retained; actual loader/texture sampling remains to verify."
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "kind": "Immutable actual cross-runtime Rules regression save originals",
+  "packaging": {
+    "command": "gzip -n -9 -c",
+    "originalFilenameIncluded": false,
+    "mtime": 0,
+    "stateAndRulesRegenerated": false,
+    "decompressedBytesComparedWithOriginals": true,
+    "repeatedCompressionByteEqualOnPackagingHost": true,
+    "nodeReaderOrTestsExecutedDuringPackaging": false
+  },
+  "fixtures": {
+    "node16.save.json.gz": {
+      "source": "runtime/cross-runtime-rules-root-r1/evidence/node16.save.json",
+      "upstreamOriginal": "runtime/readiness-genuine-fixtures-sol-high-r2/postflight-r1/mirror/outputs/steel-only.save.json",
+      "provenance": "Actual genuine CPU Engine save from the Node producer; save16/content9, not browser acceptance",
+      "bytes": 11139,
+      "sha256": "168d38f3b465d84544cfcee086134cbd1e1318270ce009e69d6abf4622992349",
+      "uncompressedBytes": 775841,
+      "uncompressedSHA256": "dbc75c286cc78bd555e088f6e3e31d353a00787eeb8aff30195b36adf5a94762",
+      "rulesSHA256": "188290ca68d5e907cb93173be32e1b66467fc19ac40bd9ac19822eafb269673e"
+    },
+    "browser16.save.json.gz": {
+      "source": "runtime/cross-runtime-rules-root-r1/evidence/browser16.save.json",
+      "upstreamOriginal": "runtime/readiness-native-driver-root-r11/rules-diagnostic-r1/selected-retention-r1/mirror/rules-diagnostic-r1/evidence/actual-browser-paused.save.json",
+      "provenance": "Actual default-profile Chrome diagnostic paused Classic save captured from the real Worker; save16/content9, not native9 acceptance",
+      "bytes": 15687,
+      "sha256": "7eadf3429edbd60e36635598ad42e33df02748cf4a3bb56b4a48953c97e2ec72",
+      "uncompressedBytes": 817089,
+      "uncompressedSHA256": "e1b2e11977dd67a3743659f114336291b8a731e0e1ffa8d5bd39ff81260f9665",
+      "rulesSHA256": "9ecebaff89fbf6588913938f91c93fedf5434d6f925c69289794b481e4956161"
+    },
+    "genuine-browser15.save.json.gz": {
+      "source": "runtime/cross-runtime-rules-root-r1/evidence/genuine-browser15.save.json",
+      "upstreamOriginal": "runtime/current-native-preparation-root-r3/inputs/native/original15.save.json",
+      "provenance": "Genuine retained pre-ATM browser save15/content8 authority; not synthetic Node15 scaffolding",
+      "bytes": 15817,
+      "sha256": "7c49d37ad6a414336bed169e0c5263437f64013e736a9a3629eb015e40532827",
+      "uncompressedBytes": 816152,
+      "uncompressedSHA256": "5c14b5f50140e18811ef727943966b3706d213b1430582d93ca1f3b7967f2496",
+      "rulesSHA256": "d1d3d4bb9309e7aa230e7d1e248a92544e21c01aca691612918111e363fb84a5"
+    }
+  }
+}

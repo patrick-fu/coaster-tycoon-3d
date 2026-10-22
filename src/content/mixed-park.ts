@@ -1,11 +1,12 @@
 import {newPark,steelRules} from './steel-coaster.js';
 import {withWoodenProfile} from './wooden-coaster.js';
+import {withWoodenRiseReturnProfile} from './wooden-rise-return.js';
 import {woodenRideContent} from './registry.js';
 import {carouselRideContent} from './registry.js';
 import {withCarouselProfile} from './carousel.js';
 import type {Command,Rules} from '../simulation/types.js';
 
-export const mixedRules=withCarouselProfile(withWoodenProfile(steelRules));
+export const mixedRules=withWoodenRiseReturnProfile(withCarouselProfile(withWoodenProfile(steelRules)));
 
 export function newMixedPark(rules:Rules=mixedRules){
  const engine=newPark(rules);

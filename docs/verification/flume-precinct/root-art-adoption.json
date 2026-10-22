@@ -1,0 +1,44 @@
+{
+  "status": "ROOT_ADOPT_FIXED_27_SCENERY_PRECINCT",
+  "UTC": "2026-10-18T08:43:59.075347+00:00",
+  "candidate": {
+    "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/implementation/flume-precinct-root-r1/source/src/content/classic-showcase.ts",
+    "bytes": 9496,
+    "sha256": "4121d990a8fe8e926e1106c650c45d9dbbdc4bfd3a3117e44581056b857c4f03"
+  },
+  "originalFrames": [
+    {
+      "file": "precinct-normal-overview-1920.png",
+      "bytes": 1540714,
+      "sha256": "602ce4db0e9ae124bba19e138d4342d09b62de6a88aeff805a245f2bc619955a"
+    },
+    {
+      "file": "precinct-arrival-close-1920.png",
+      "bytes": 1561422,
+      "sha256": "58c1b8713ff2a36440dca926429bbbb8da45f8fc49c69a6e8ff775e3e02c8e46"
+    }
+  ],
+  "rootViewedBothOriginal1920": true,
+  "reason": "Woodland backdrop, dry pond-edge planting and low forecourt give the current flume precinct a visible authored boundary while the channel, station and approach remain readable.",
+  "independentDesign": {
+    "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/reviewer-receipts/flume-precinct-delivery-design-sol-high-r1.md",
+    "bytes": 7891,
+    "sha256": "ed0062426e6c42ca4fbb40891150a9d7109baf7a86cffb53470d1fe09ca9886d"
+  },
+  "crossModelOverview": {
+    "path": "/Volumes/WD/code/workspaces/coaster-gradual-restroom/frontend/agy-precinct-overview-r153/captures/answer.txt",
+    "bytes": 3828,
+    "sha256": "21f2e4f5212835d86f9ac0fc52dfac33cff105089c5b265da3525b301d4a399c"
+  },
+  "disposition": [
+    "Retain localized tree/pond overlap and two distinct forecourt lamps; no mandatory pixel-clearance/spacing rule is supported.",
+    "AGYR153 adoptable composition judgment accepted only for two visible views; all27 contact/allangle-clearance or dynamic sightline guarantees rejected.",
+    "AGYR154 empty final is no verdict; Root and independent Sol actual views plus AGYR153 establish bounded pixel review.",
+    "AGYR156 tree palette criticism is a future opinion only. Exact RGB numbers were not measured, smooth-sphere geometry/over30 counts/IDs and tree planted directly in water claims are unsupported by provided pixel-only evidence and dry actual tile. No new material/model work or CSS adoption in this phase.",
+    "R155 intentionally stopped for phase close, candidate exact baseline; no implementation accepted."
+  ],
+  "limits": [
+    "No paired baseline/per-pixel improvement proof, all-angle physical contact, continuous play, original sprite parity, GPU or human visual approval.",
+    "Scope is the27-placement authored layout; future park-wide foliage/model quality remains open."
+  ]
+}

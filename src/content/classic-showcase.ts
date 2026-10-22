@@ -1,6 +1,8 @@
 import {Engine} from '../simulation/engine.js';
 import {initialWorld} from './steel-coaster.js';
-import {legacyRideContent, woodenRideContent, carouselRideContent, flumeRideContent, detailedFacilityContent} from './registry.js';
+import {legacyRideContent, woodenRiseReturnRideContent, carouselRideContent, flumeRideContent, detailedFacilityContent, atmContent, balloonContent} from './registry.js';
+import {hasAtmProfile} from './atm.js';
+import {hasBalloonProfile} from './balloons.js';
 import type {ContentIdentity} from './registry.js';
 import {flumePortalSocket} from '../simulation/flume-portal.js';
 import {carouselPortal} from '../simulation/carousel.js';
@@ -36,8 +38,8 @@ export function newClassicShowcase(rules: Rules) {
     return ride;
   };
 
-  const wood = tracked('Cedar Timber Run', 8, 19, woodenRideContent(),
-    ['station','station','station','station','right','flat','flat','flat','flat','right','flat','flat','flat','flat','right','flat','flat','flat','flat','right'], 2, 3);
+  const wood = tracked('Cedar Timber Run', 8, 19, woodenRiseReturnRideContent(),
+    ['station','station','station','station','lift-start','lift','lift-end','right','flat','flat','flat','flat','right','drop-start','drop','drop-end','flat','flat','flat','flat','right','flat','flat','flat','flat','right'], 2, 3);
   const steel = tracked('Copper Loop', 26, 19, legacyRideContent(),
     ['station','station','station','lift-start','lift','lift-end','right','flat','flat','flat','right','drop-start','drop','drop-end','flat','flat','flat','right','flat','flat','flat','right'], 4, 2);
 
@@ -80,23 +82,111 @@ export function newClassicShowcase(rules: Rules) {
     const facility = apply(command);
     apply({type:'set-facility-open', facility, open:true});
   }
-  for (const [kind,x,y] of [['bench',21,10],['bin',21,12],['bin',21,14],['bench',19,15],['bin',11,15],['bench',28,15]] as const)
+  if (hasAtmProfile(rules)) {
+    const facility=apply({type:'place-facility',name:'Cash machine',kind:'atm',tile:{x:22,y:9},height:32,direction:2,content:atmContent()});
+    apply({type:'set-facility-open',facility,open:true});
+  }
+  for (const [kind,x,y] of [['bench',21,10],['bin',21,12],['bin',21,14],['bench',19,15],['bin',11,15],['bench',28,15],['bench',15,15],['bin',16,15]] as const)
     apply({type:'place-amenity', kind, path:pathIds.get(`${x},${y}`)!});
   const entry = {x:21,y:9,z:32};
   apply({type:'set-park-entrance', point:entry});
   for (const role of ['mechanic','handyman'] as const) apply({type:'hire-staff', role, point:{x:21,y:15,z:32}});
   for (const [sceneryType,x,y] of [
     ['fountain',19,9],['fountain',23,8],['flower',20,10],['lamp',20,12],['flower',23,11],['lamp',23,13],
+    ['tree',18,8],['hedge',18,9],['hedge',18,10],['flower',19,8],['flower',19,10],
+    ['tree',24,7],['hedge',24,8],['flower',24,9],
     ['tree',4,7],['tree',4,10],['rock',5,5],['tree',17,5],['tree',18,7],['flower',17,13],
     ['flower',25,11],['flower',29,11],['tree',31,7],['tree',32,10],
-    ['tree',9,24],['tree',11,25],['rock',10,26],['hedge',18,21],['flower',18,17],['tree',18,29],
-    ['tree',35,21],['rock',36,24],['tree',31,29],['hedge',23,29],
+    ['tree',9,24],['tree',11,25],['rock',10,26],['hedge',21,22],['flower',18,17],['tree',21,30],
+    ['tree',45,29],['rock',44,30],['tree',31,29],['hedge',23,29],
+    // Frame the carousel median, entrance avenue and shop backs before arrivals.
+    ['flower',27,11],
+    ['hedge',27,12],
+    ['lamp',27,13],
+    ['flower',27,14],
+    ['hedge',20,8],
+    ['flower',20,9],
+    ['flower',20,11],
+    ['flower',20,13],
+    ['lamp',20,14],
+    ['hedge',23,9],
+    ['flower',23,10],
+    ['hedge',23,12],
+    ['flower',23,14],
+    ['lamp',24,10],
+    ['hedge',24,11],
+    ['tree',24,12],
+    ['flower',24,13],
+    ['lamp',7,16],
+    ['hedge',10,17],
+    ['lamp',25,16],
+    ['hedge',27,16],
+    ['lamp',29,16],
+    ['tree',30,22],
+    ['rock',32,23],
+    ['tree',31,25],
+    ['tree',7,13],
+    ['hedge',7,14],
+    ['lamp',10,14],
+    ['hedge',14,14],
+    ['flower',15,14],
+    ['lamp',16,14],
+    ['tree',15,13],
   ] as const) apply({type:'place-scenery', sceneryType, tile:{x,y}, height:32});
 
-  for (const ride of [wood,steel,flume]) apply({type:'set-ride-status', ride, status:'testing'});
+  // Append the midway after existing elements to preserve their allocation order.
+  const midway = tracked('Meadow Flyer', 37, 19, legacyRideContent(),
+    ['station','station','station','lift-start','lift','lift-end','right','flat','flat','flat','right','drop-start','drop','drop-end','flat','flat','flat','right','flat','flat','flat','right'], 4, 2);
+  for (let x=31; x<=39; x++) path(x,15);
+  path(37,16,midway); path(37,17,midway); path(39,16); path(39,17);
+
+  // Plant after the existing midway allocations to preserve their element IDs.
+  for (const [sceneryType,x,y] of [
+    ['tree',10,21], ['hedge',11,21], ['tree',12,21], ['tree',9,22],
+    ['flower',10,22], ['hedge',11,22], ['tree',12,22], ['hedge',9,23],
+    ['tree',10,23], ['flower',11,23], ['hedge',12,23], ['flower',10,24],
+  ] as const) apply({type:'place-scenery', sceneryType, tile:{x,y}, height:32});
+
+  if (hasBalloonProfile(rules)) {
+    const facility=apply({type:'place-facility',name:'Balloons',kind:'balloon',tile:{x:22,y:12},height:32,direction:2,content:balloonContent()});
+    apply({type:'set-facility-open',facility,open:true});
+  }
+
+  // Keep new landscaping after facility allocations to preserve saved identities.
+  for (const [sceneryType,x,y] of [
+    ['tree',5,4],
+    ['tree',7,4],
+    ['tree',9,4],
+    ['rock',11,4],
+    ['tree',11,3],
+    ['tree',13,5],
+    ['tree',15,4],
+    ['hedge',8,5],
+    ['flower',10,5],
+    ['rock',4,5],
+    ['tree',5,8],
+    ['flower',4,9],
+    ['hedge',5,11],
+    ['tree',10,10],
+    ['flower',11,10],
+    ['rock',12,10],
+    ['hedge',11,11],
+    ['flower',12,11],
+    ['rock',13,9],
+    ['flower',13,10],
+    ['hedge',8,10],
+    ['lamp',11,14],
+    ['hedge',12,14],
+    ['flower',13,14],
+    ['flower',11,13],
+    ['rock',12,13],
+    ['hedge',13,13],
+  ] as const) apply({type:'place-scenery', sceneryType, tile:{x,y}, height:32});
+
+  for (const ride of [wood,steel,flume,midway]) apply({type:'set-ride-status', ride, status:'testing'});
   const test = engine.advance(2400);
   if (!test.ok) throw new Error(`Qualification advance failed: ${JSON.stringify(test)}`);
-  for (const ride of [wood,steel,flume,carousel]) apply({type:'set-ride-status', ride, status:'open'});
+  for (const ride of [wood,steel,flume,carousel,midway]) apply({type:'set-ride-status', ride, status:'open'});
   apply({type:'set-park-open', open:true});
   const warm = engine.advance(2400);
   if (!warm.ok) throw new Error(`Arrival warm-up failed: ${JSON.stringify(warm)}`);

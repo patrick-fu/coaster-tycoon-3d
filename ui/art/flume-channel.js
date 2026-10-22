@@ -482,40 +482,107 @@ export function buildFlumeChannel(ctx, parent, track, frames, materials, passage
 
   // 6. Materials & Final Piece Batches
   const rippleMap = ctx.texture('flume:water:ripples', 128, 128, (c, w, h) => {
-    c.fillStyle = '#2c7686';
+    c.fillStyle = '#124855';
     c.fillRect(0, 0, w, h);
-    for (let y = 0; y < h; y += 16) {
-      for (let x = 0; x < w; x += 16) {
-        const k = Math.sin((x / w) * Math.PI * 4) * Math.cos((y / h) * Math.PI * 4);
-        c.fillStyle = k > 0 ? 'rgba(64, 150, 168, 0.28)' : 'rgba(26, 76, 88, 0.28)';
-        c.beginPath();
-        c.arc((x + 8) % w, (y + 8) % h, 10, 0, Math.PI * 2);
-        c.fill();
-      }
-    }
-    c.strokeStyle = 'rgba(218, 246, 252, 0.42)';
-    c.lineWidth = 1.2;
+
+    const pi2 = Math.PI * 2;
+
+    // 2. Small wrapped varied-angle wavelets (non-horizontal crests, boundary-crossing coverage)
+    const wavelets = [
+      { qx: 0.01, qy: 0.28, len: 9, curve: 1.1, tx: 0.95, ty: 0.31 },
+      { qx: 0.99, qy: 0.65, len: 10, curve: -1.2, tx: 0.91, ty: -0.41 },
+      { qx: 0.44, qy: 0.01, len: 9, curve: 1.0, tx: 0.85, ty: 0.53 },
+      { qx: 0.58, qy: 0.99, len: 9, curve: -1.1, tx: 0.81, ty: -0.59 },
+      { qx: 0.02, qy: 0.02, len: 8, curve: 1.0, tx: 0.98, ty: 0.21 },
+      { qx: 0.98, qy: 0.98, len: 8, curve: -1.0, tx: 0.96, ty: -0.28 },
+      { qx: 0.98, qy: 0.02, len: 8, curve: 0.9, tx: 0.90, ty: 0.44 },
+      { qx: 0.02, qy: 0.98, len: 8, curve: -0.9, tx: 0.87, ty: -0.50 },
+      { qx: 0.22, qy: 0.15, len: 9, curve: 1.2, tx: 0.94, ty: 0.34 },
+      { qx: 0.72, qy: 0.16, len: 8, curve: -1.0, tx: 0.74, ty: -0.67 },
+      { qx: 0.38, qy: 0.34, len: 10, curve: 1.3, tx: 0.79, ty: 0.62 },
+      { qx: 0.84, qy: 0.36, len: 8, curve: -1.1, tx: 0.98, ty: -0.17 },
+      { qx: 0.16, qy: 0.50, len: 9, curve: 1.1, tx: 0.97, ty: 0.26 },
+      { qx: 0.64, qy: 0.48, len: 11, curve: -1.3, tx: 0.88, ty: -0.47 },
+      { qx: 0.34, qy: 0.68, len: 8, curve: 1.0, tx: 0.83, ty: 0.56 },
+      { qx: 0.82, qy: 0.74, len: 10, curve: -1.2, tx: 0.94, ty: -0.34 },
+      { qx: 0.20, qy: 0.85, len: 9, curve: 1.1, tx: 0.93, ty: 0.37 },
+      { qx: 0.68, qy: 0.84, len: 8, curve: -0.9, tx: 0.83, ty: -0.56 }
+    ];
+
     c.lineCap = 'round';
-    for (let row = 0; row < 8; row++) {
-      const y = row * 16 + 8;
-      const xOff = (row * 37) % 32;
-      for (let xBase = xOff - 32; xBase < w + 32; xBase += 32) {
-        const len = 14 + (row % 3) * 3;
-        c.beginPath();
-        c.moveTo(xBase, y);
-        c.quadraticCurveTo(xBase + len * 0.5, y - 1.5, xBase + len, y);
-        c.stroke();
+
+    // Soft crest halos
+    c.strokeStyle = 'rgba(56, 172, 188, 0.18)';
+    c.lineWidth = 1.8;
+    c.beginPath();
+    for (const wavelet of wavelets) {
+      const hl = wavelet.len * 0.5;
+      const dx = hl * wavelet.tx;
+      const dy = hl * wavelet.ty;
+      const cx0 = -wavelet.curve * wavelet.ty;
+      const cy0 = wavelet.curve * wavelet.tx;
+      for (let ox = -1; ox <= 1; ox++) {
+        for (let oy = -1; oy <= 1; oy++) {
+          const cx = (wavelet.qx + ox) * w;
+          const cy = (wavelet.qy + oy) * h;
+          if (cx < -12 || cx > w + 12 || cy < -12 || cy > h + 12) continue;
+          c.moveTo(cx - dx, cy - dy);
+          c.quadraticCurveTo(cx + cx0, cy + cy0, cx + dx, cy + dy);
+        }
       }
     }
+    c.stroke();
+
+    // Subtle crisp highlights
+    c.strokeStyle = 'rgba(215, 245, 250, 0.24)';
+    c.lineWidth = 0.9;
+    c.beginPath();
+    for (const wavelet of wavelets) {
+      const hl = wavelet.len * 0.5;
+      const dx = hl * wavelet.tx;
+      const dy = hl * wavelet.ty;
+      const cx0 = -wavelet.curve * wavelet.ty;
+      const cy0 = wavelet.curve * wavelet.tx;
+      for (let ox = -1; ox <= 1; ox++) {
+        for (let oy = -1; oy <= 1; oy++) {
+          const cx = (wavelet.qx + ox) * w;
+          const cy = (wavelet.qy + oy) * h;
+          if (cx < -12 || cx > w + 12 || cy < -12 || cy > h + 12) continue;
+          c.moveTo(cx - dx, cy - dy);
+          c.quadraticCurveTo(cx + cx0, cy + cy0, cx + dx, cy + dy);
+        }
+      }
+    }
+    c.stroke();
+
+    // Delicate glint points
+    c.fillStyle = 'rgba(235, 250, 253, 0.28)';
+    c.beginPath();
+    for (const wavelet of wavelets) {
+      const gx0 = -wavelet.curve * 0.5 * wavelet.ty;
+      const gy0 = wavelet.curve * 0.5 * wavelet.tx;
+      for (let ox = -1; ox <= 1; ox++) {
+        for (let oy = -1; oy <= 1; oy++) {
+          const cx = (wavelet.qx + ox) * w;
+          const cy = (wavelet.qy + oy) * h;
+          if (cx < -12 || cx > w + 12 || cy < -12 || cy > h + 12) continue;
+          const gx = cx + gx0;
+          const gy = cy + gy0;
+          c.moveTo(gx + 0.85, gy);
+          c.arc(gx, gy, 0.85, 0, pi2);
+        }
+      }
+    }
+    c.fill();
   });
 
   const matWater = ctx.material('flume:water:standard', {
-    color: '#d6f2f7',
+    color: '#ffffff',
     map: rippleMap,
-    roughness: 0.18,
-    metalness: 0.08,
+    roughness: 0.12,
+    metalness: 0.02,
     transparent: true,
-    opacity: 0.82,
+    opacity: 0.88,
     depthWrite: false,
   });
 
@@ -524,16 +591,31 @@ export function buildFlumeChannel(ctx, parent, track, frames, materials, passage
   mergeBucket(ctx, pieceGroup, materials.boards, buckets.boards);
   mergeBucket(ctx, pieceGroup, materials.roof ?? materials.boards, buckets.roof);
   mergeBucket(ctx, pieceGroup, materials.metal, buckets.metal);
-  mergeBucket(ctx, pieceGroup, matWater, buckets.water);
+  const waterMesh = mergeBucket(ctx, pieceGroup, matWater, buckets.water);
 
   for (const g of disposables) {
     g.dispose();
   }
 
   parent.add(pieceGroup);
+
+  if (waterMesh && ctx) {
+    ctx.flumeWaterMap = rippleMap;
+    if (ctx.packet && Number.isSafeInteger(ctx.packet.tick) && ctx.packet.tick >= 0) {
+      setFlumeWaterTick(ctx, ctx.packet.tick);
+    }
+  }
+
   return parent;
   } catch (error) {
     for (const geometry of disposables) geometry.dispose();
     throw error;
   }
+}
+
+export function setFlumeWaterTick(ctx, tick) {
+  if (!ctx || !ctx.flumeWaterMap) return;
+  if (!Number.isSafeInteger(tick) || tick < 0) return;
+  const r = tick % 160;
+  ctx.flumeWaterMap.offset.y = ((160 - r) % 160) / 160;
 }

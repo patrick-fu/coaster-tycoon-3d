@@ -1,7 +1,8 @@
 import assert from 'node:assert/strict';
+import {beforeAtmState,beforeAtmView} from './atm-fixtures.mjs';
 
 export function beforeRestroomState(state){
- const old=structuredClone(state);assert.equal(old.version,15);assert.equal(old.contentVersion,8);
+ const old=beforeAtmState(state);assert.equal(old.version,15);assert.equal(old.contentVersion,8);
  assert(old.people.guests.every(g=>g.phase!=='using-restroom'&&g.phase!=='restroom-exit'));
  assert(old.facilities.every(f=>f.content.variantId!=='independent.gradual-restroom'));
  const rules=JSON.parse(old.rules);assert(Object.hasOwn(rules,'restroomProfiles'));delete rules.restroomProfiles;
@@ -10,7 +11,7 @@ export function beforeRestroomState(state){
 }
 
 export function beforeRestroomView(view){
- const old=structuredClone(view);assert.equal(old.protocolVersion,8);assert.equal(old.contentVersion,8);
+ const old=beforeAtmView(view);assert.equal(old.protocolVersion,8);assert.equal(old.contentVersion,8);
  assert(old.facilities.every(f=>!Object.hasOwn(f,'restroom')));
  old.protocolVersion=7;old.contentVersion=7;return old;
 }
