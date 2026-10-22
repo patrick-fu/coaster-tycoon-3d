@@ -5,6 +5,10 @@ type PortalRide = {
     track: number[];
 };
 type Elements = Pick<ReadonlyMap<number, Element>, 'get' | 'values'>;
+export declare function flumePortalStations(ride: PortalRide, elements: Elements): {
+    entrance: number | null;
+    exit: number | null;
+};
 export declare function flumePortalSocket(ride: PortalRide, elements: Elements, role: Portal['role'], side?: Portal['direction']): {
     station: number;
     tile: {

@@ -1,0 +1,633 @@
+{
+  "scope": "Three actual camera-selected placed-oak LODs, reduced boundary oak, and shared textures. No original/native or real-GPU qualification.",
+  "authoringReports": [
+    {
+      "authoring": {
+        "assetId": "independent.organic-tree",
+        "role": "scenery",
+        "axes": {
+          "blender": "+X right, -Y forward, +Z up",
+          "gltfExport": "+Y up, +Z forward"
+        },
+        "lod": 0,
+        "anchors": [
+          "TreeRoot",
+          "GroundAnchor",
+          "CrownCenter"
+        ],
+        "candidateDimensions": {
+          "width_x": 3.524,
+          "depth_y": 3.105,
+          "height_z": 5.255,
+          "envelope_bounds": {
+            "min": [
+              -1.727,
+              -1.443,
+              0.0
+            ],
+            "max": [
+              1.797,
+              1.661,
+              5.255
+            ]
+          },
+          "reservation": [
+            4.0,
+            4.0,
+            8.0
+          ]
+        },
+        "geometryIntent": "Oak-like broadleaf park tree using 6-variation LeafSet026 atlas cards, flared root anchor, bifurcated scaffold limbs, and cohesive 8-lobe crown dome.",
+        "edgeFinish": "authored",
+        "notes": "LOD 0 built targeting 2000-6000 bracket. Bark UVs follow branch grain at ~1m metric scale. Foliage utilizes LeafSet026 atlas rectangular cards with outward winding and dual textured sunlit/shaded materials.",
+        "triangleBudget": {
+          "evaluatedTriangles": 5392,
+          "branchTriangles": 1192,
+          "foliageTriangles": 4200,
+          "targetBudget": "2000-6000"
+        },
+        "createdObjects": [
+          "TreeRoot",
+          "GroundAnchor",
+          "CrownCenter",
+          "Tree_Branch_LOD0",
+          "Tree_Foliage_LOD0"
+        ],
+        "restraints": []
+      },
+      "geometry": {
+        "meshObjects": 2,
+        "trianglesEvaluated": 5392,
+        "boundsBlender": {
+          "min": [
+            -1.7270729541778564,
+            -1.4431729316711426,
+            0.0
+          ],
+          "max": [
+            1.7970361709594727,
+            1.661329984664917,
+            5.254534721374512
+          ]
+        },
+        "materials": [
+          "bark",
+          "foliage_shade",
+          "foliage_sun"
+        ],
+        "anchorsBlender": {
+          "TreeRoot": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "GroundAnchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "CrownCenter": [
+            0.039333708584308624,
+            0.04141416773200035,
+            4.056859970092773
+          ]
+        },
+        "issues": []
+      },
+      "blender": "4.3.2",
+      "sourceSha256": "d701d45be796f4ac9b44f179680f755711fe11996a18244fc51f96aaab545954",
+      "driverSha256": "4c816cd2ace0664f13adf5f1551fbfff6f00b522857674ae2676c46722a67736",
+      "textureSources": [
+        {
+          "file": "Bark014_1K-PNG_Color.png",
+          "sourceSha256": "6a4bdc1b737cb5886c64495b3c9b7cd2a1ae568550c87594537319edc66819c6",
+          "sourceDimensions": [
+            1024,
+            1024
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "Bark014_1K-PNG_NormalGL.png",
+          "sourceSha256": "efc1cc84fbbe018651a8b57147b7078a1e316cbeebf42ba6572ca7786a4771f9",
+          "sourceDimensions": [
+            1024,
+            1024
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "Bark014_1K-PNG_Roughness.png",
+          "sourceSha256": "0675f21938dfca7db5632745e6ae42b3d38bd518ecff7d16e86c42f853bf90f1",
+          "sourceDimensions": [
+            1024,
+            1024
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "LeafSet026_1K-PNG_Color.png",
+          "sourceSha256": "3549d4212e4d5c2bac2426866b8bbb54655d5e8c4ad7c1854fd2a7bb1d753ebf",
+          "sourceDimensions": [
+            1024,
+            512
+          ],
+          "runtimeDimensions": [
+            1024,
+            512
+          ]
+        },
+        {
+          "file": "LeafSet026_1K-PNG_NormalGL.png",
+          "sourceSha256": "172fdfadddb68ef4a0a95c37d6e484e5c1511074f9c8b160babc30e93c115e30",
+          "sourceDimensions": [
+            1024,
+            512
+          ],
+          "runtimeDimensions": [
+            1024,
+            512
+          ]
+        },
+        {
+          "file": "LeafSet026_1K-PNG_Opacity.png",
+          "sourceSha256": "3cb6dcdf3b50578f9ecce0043af3b4f8b4cefe9df2918158ced15d964be2f788",
+          "sourceDimensions": [
+            1024,
+            512
+          ],
+          "runtimeDimensions": [
+            1024,
+            512
+          ]
+        }
+      ],
+      "batchStatic": true,
+      "glb": {
+        "file": "organic-tree-lod0.glb",
+        "sha256": "652b3f8e50dd44c466bb63f13f6594150beae1a7767fec2bf7014410b1f1af77",
+        "bytes": 5103704
+      },
+      "editableMaster": {
+        "file": "organic-tree-lod0.blend",
+        "sha256": "e405d862ea6d8db1511ec7e4f3ef46bda4baa50fa6d967eeb370ce6bcd89b913",
+        "bytes": 10844978
+      },
+      "scope": "Candidate detailed asset laboratory; no original-metric or gameplay validation"
+    },
+    {
+      "authoring": {
+        "assetId": "independent.organic-tree",
+        "role": "scenery",
+        "axes": {
+          "blender": "+X right, -Y forward, +Z up",
+          "gltfExport": "+Y up, +Z forward"
+        },
+        "lod": 1,
+        "anchors": [
+          "TreeRoot",
+          "GroundAnchor",
+          "CrownCenter"
+        ],
+        "candidateDimensions": {
+          "width_x": 3.189,
+          "depth_y": 3.093,
+          "height_z": 5.256,
+          "envelope_bounds": {
+            "min": [
+              -1.552,
+              -1.429,
+              0.0
+            ],
+            "max": [
+              1.637,
+              1.663,
+              5.256
+            ]
+          },
+          "reservation": [
+            4.0,
+            4.0,
+            8.0
+          ]
+        },
+        "geometryIntent": "Oak-like broadleaf park tree using 6-variation LeafSet026 atlas cards, flared root anchor, bifurcated scaffold limbs, and cohesive 8-lobe crown dome.",
+        "edgeFinish": "authored",
+        "notes": "LOD 1 built targeting 800-2000 bracket. Bark UVs follow branch grain at ~1m metric scale. Foliage utilizes LeafSet026 atlas rectangular cards with outward winding and dual textured sunlit/shaded materials.",
+        "triangleBudget": {
+          "evaluatedTriangles": 1633,
+          "branchTriangles": 353,
+          "foliageTriangles": 1280,
+          "targetBudget": "800-2000"
+        },
+        "createdObjects": [
+          "TreeRoot",
+          "GroundAnchor",
+          "CrownCenter",
+          "Tree_Branch_LOD1",
+          "Tree_Foliage_LOD1"
+        ],
+        "restraints": []
+      },
+      "geometry": {
+        "meshObjects": 2,
+        "trianglesEvaluated": 1633,
+        "boundsBlender": {
+          "min": [
+            -1.5521184206008911,
+            -1.4294767379760742,
+            0.0
+          ],
+          "max": [
+            1.6373261213302612,
+            1.6634935140609741,
+            5.256246566772461
+          ]
+        },
+        "materials": [
+          "bark",
+          "foliage_shade",
+          "foliage_sun"
+        ],
+        "anchorsBlender": {
+          "TreeRoot": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "GroundAnchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "CrownCenter": [
+            0.025426264852285385,
+            0.030307497829198837,
+            4.060556888580322
+          ]
+        },
+        "issues": []
+      },
+      "blender": "4.3.2",
+      "sourceSha256": "d701d45be796f4ac9b44f179680f755711fe11996a18244fc51f96aaab545954",
+      "driverSha256": "4c816cd2ace0664f13adf5f1551fbfff6f00b522857674ae2676c46722a67736",
+      "textureSources": [
+        {
+          "file": "Bark014_1K-PNG_Color.png",
+          "sourceSha256": "6a4bdc1b737cb5886c64495b3c9b7cd2a1ae568550c87594537319edc66819c6",
+          "sourceDimensions": [
+            1024,
+            1024
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "Bark014_1K-PNG_NormalGL.png",
+          "sourceSha256": "efc1cc84fbbe018651a8b57147b7078a1e316cbeebf42ba6572ca7786a4771f9",
+          "sourceDimensions": [
+            1024,
+            1024
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "Bark014_1K-PNG_Roughness.png",
+          "sourceSha256": "0675f21938dfca7db5632745e6ae42b3d38bd518ecff7d16e86c42f853bf90f1",
+          "sourceDimensions": [
+            1024,
+            1024
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "LeafSet026_1K-PNG_Color.png",
+          "sourceSha256": "3549d4212e4d5c2bac2426866b8bbb54655d5e8c4ad7c1854fd2a7bb1d753ebf",
+          "sourceDimensions": [
+            1024,
+            512
+          ],
+          "runtimeDimensions": [
+            1024,
+            512
+          ]
+        },
+        {
+          "file": "LeafSet026_1K-PNG_NormalGL.png",
+          "sourceSha256": "172fdfadddb68ef4a0a95c37d6e484e5c1511074f9c8b160babc30e93c115e30",
+          "sourceDimensions": [
+            1024,
+            512
+          ],
+          "runtimeDimensions": [
+            1024,
+            512
+          ]
+        },
+        {
+          "file": "LeafSet026_1K-PNG_Opacity.png",
+          "sourceSha256": "3cb6dcdf3b50578f9ecce0043af3b4f8b4cefe9df2918158ced15d964be2f788",
+          "sourceDimensions": [
+            1024,
+            512
+          ],
+          "runtimeDimensions": [
+            1024,
+            512
+          ]
+        }
+      ],
+      "batchStatic": true,
+      "glb": {
+        "file": "organic-tree-lod1.glb",
+        "sha256": "847acc3fd32803bcc269d511e554b556e3044f67796e5fb0b996f5e202e4273c",
+        "bytes": 4806916
+      },
+      "editableMaster": {
+        "file": "organic-tree-lod1.blend",
+        "sha256": "ae48209e6e5ca5a7f56dbc02f4e8ba518c2ddc432df209d6eaab00dc94918d6d",
+        "bytes": 10716096
+      },
+      "scope": "Candidate detailed asset laboratory; no original-metric or gameplay validation"
+    },
+    {
+      "authoring": {
+        "assetId": "independent.organic-tree",
+        "role": "scenery",
+        "axes": {
+          "blender": "+X right, -Y forward, +Z up",
+          "gltfExport": "+Y up, +Z forward"
+        },
+        "lod": 2,
+        "anchors": [
+          "TreeRoot",
+          "GroundAnchor",
+          "CrownCenter"
+        ],
+        "candidateDimensions": {
+          "width_x": 3.453,
+          "depth_y": 3.123,
+          "height_z": 4.945,
+          "envelope_bounds": {
+            "min": [
+              -1.773,
+              -1.556,
+              0.0
+            ],
+            "max": [
+              1.68,
+              1.566,
+              4.945
+            ]
+          },
+          "reservation": [
+            4.0,
+            4.0,
+            8.0
+          ]
+        },
+        "geometryIntent": "Oak-like broadleaf park tree using 6-variation LeafSet026 atlas cards, flared root anchor, bifurcated scaffold limbs, and cohesive 8-lobe crown dome.",
+        "edgeFinish": "authored",
+        "notes": "LOD 2 built targeting 250-700 bracket. Bark UVs follow branch grain at ~1m metric scale. Foliage utilizes LeafSet026 atlas rectangular cards with outward winding and dual textured sunlit/shaded materials.",
+        "triangleBudget": {
+          "evaluatedTriangles": 659,
+          "branchTriangles": 131,
+          "foliageTriangles": 528,
+          "targetBudget": "250-700"
+        },
+        "createdObjects": [
+          "TreeRoot",
+          "GroundAnchor",
+          "CrownCenter",
+          "Tree_Branch_LOD2",
+          "Tree_Foliage_LOD2"
+        ],
+        "restraints": []
+      },
+      "geometry": {
+        "meshObjects": 2,
+        "trianglesEvaluated": 659,
+        "boundsBlender": {
+          "min": [
+            -1.7726237773895264,
+            -1.5563530921936035,
+            0.0
+          ],
+          "max": [
+            1.6801763772964478,
+            1.566299319267273,
+            4.944765090942383
+          ]
+        },
+        "materials": [
+          "bark",
+          "foliage_shade",
+          "foliage_sun"
+        ],
+        "anchorsBlender": {
+          "TreeRoot": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "GroundAnchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "CrownCenter": [
+            0.045720674097537994,
+            0.02588960900902748,
+            3.984360456466675
+          ]
+        },
+        "issues": []
+      },
+      "blender": "4.3.2",
+      "sourceSha256": "d701d45be796f4ac9b44f179680f755711fe11996a18244fc51f96aaab545954",
+      "driverSha256": "4c816cd2ace0664f13adf5f1551fbfff6f00b522857674ae2676c46722a67736",
+      "textureSources": [
+        {
+          "file": "Bark014_1K-PNG_Color.png",
+          "sourceSha256": "6a4bdc1b737cb5886c64495b3c9b7cd2a1ae568550c87594537319edc66819c6",
+          "sourceDimensions": [
+            1024,
+            1024
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "Bark014_1K-PNG_NormalGL.png",
+          "sourceSha256": "efc1cc84fbbe018651a8b57147b7078a1e316cbeebf42ba6572ca7786a4771f9",
+          "sourceDimensions": [
+            1024,
+            1024
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "Bark014_1K-PNG_Roughness.png",
+          "sourceSha256": "0675f21938dfca7db5632745e6ae42b3d38bd518ecff7d16e86c42f853bf90f1",
+          "sourceDimensions": [
+            1024,
+            1024
+          ],
+          "runtimeDimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "file": "LeafSet026_1K-PNG_Color.png",
+          "sourceSha256": "3549d4212e4d5c2bac2426866b8bbb54655d5e8c4ad7c1854fd2a7bb1d753ebf",
+          "sourceDimensions": [
+            1024,
+            512
+          ],
+          "runtimeDimensions": [
+            1024,
+            512
+          ]
+        },
+        {
+          "file": "LeafSet026_1K-PNG_NormalGL.png",
+          "sourceSha256": "172fdfadddb68ef4a0a95c37d6e484e5c1511074f9c8b160babc30e93c115e30",
+          "sourceDimensions": [
+            1024,
+            512
+          ],
+          "runtimeDimensions": [
+            1024,
+            512
+          ]
+        },
+        {
+          "file": "LeafSet026_1K-PNG_Opacity.png",
+          "sourceSha256": "3cb6dcdf3b50578f9ecce0043af3b4f8b4cefe9df2918158ced15d964be2f788",
+          "sourceDimensions": [
+            1024,
+            512
+          ],
+          "runtimeDimensions": [
+            1024,
+            512
+          ]
+        }
+      ],
+      "batchStatic": true,
+      "glb": {
+        "file": "organic-tree-lod2.glb",
+        "sha256": "88b0a05114467f562c34fde96428e3c26c037ff239b91754da63d392f9a0fbac",
+        "bytes": 4721376
+      },
+      "editableMaster": {
+        "file": "organic-tree-lod2.blend",
+        "sha256": "38a57de0daa454ffa97ac30e8b9f265e54f42f006887162508c3dd2be0460e8e",
+        "bytes": 10675218
+      },
+      "scope": "Candidate detailed asset laboratory; no original-metric or gameplay validation"
+    }
+  ],
+  "files": [
+    {
+      "path": "organic-tree-lod0.bin",
+      "bytes": 443040,
+      "sha256": "f1480d960bc1b380527d1514b4056348db2e5cff9cd8a0f3faaa4e1f1a1a6534"
+    },
+    {
+      "path": "organic-tree-lod0.gltf",
+      "bytes": 6555,
+      "sha256": "852ac0bfce78bd271c8484a724f5c95fc0339786c9553d4d32aae159f43be3fa"
+    },
+    {
+      "path": "organic-tree-lod1.bin",
+      "bytes": 146264,
+      "sha256": "47fbd4f8e6fea1c5e80998c15dbb058e468e17e6316e6940a83c8c394166ae0e"
+    },
+    {
+      "path": "organic-tree-lod1.gltf",
+      "bytes": 6543,
+      "sha256": "0d74981a915d491cf2ad8de496f7340cb7f09c7aa8e2c76a8095d39d3000ea85"
+    },
+    {
+      "path": "organic-tree-lod2.bin",
+      "bytes": 60740,
+      "sha256": "ccc5f2c623bd5e86c62b52375bd9b9489309bdfcc333bb107200b7ab7c02dd86"
+    },
+    {
+      "path": "organic-tree-lod2.gltf",
+      "bytes": 6519,
+      "sha256": "9f6b829b9a0446f89f413ceb84fa3be6bbec981f91fd6a288ad4264f7edf5a2d"
+    },
+    {
+      "path": "textures/Bark014_1K-PNG_Color.png",
+      "bytes": 555611,
+      "sha256": "5091ca295325cb289cc40fdd13d182b00a45c767ecc949edd76db4c183de900e"
+    },
+    {
+      "path": "textures/Bark014_1K-PNG_NormalGL.png",
+      "bytes": 1411595,
+      "sha256": "fad0e06319bf5a7f642a324941d9d71448d61eabe70495babb3e27b3d85a2112"
+    },
+    {
+      "path": "textures/Bark014_1K-PNG_Roughness.png",
+      "bytes": 312830,
+      "sha256": "14c8111cb5ef1f5b60c6bd9f30041b468e64d451ac70c04a35982630af104cdd"
+    },
+    {
+      "path": "textures/LeafSet026_1K-PNG_Color-LeafSet026_1K-PNG_Opacity.png",
+      "bytes": 601809,
+      "sha256": "ea06aba219626ed20d94ac895eee043ae28dc5dabe29d2ee8ecfcc7534a60752"
+    },
+    {
+      "path": "textures/LeafSet026_1K-PNG_NormalGL.png",
+      "bytes": 1773840,
+      "sha256": "172fdfadddb68ef4a0a95c37d6e484e5c1511074f9c8b160babc30e93c115e30"
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": "prototypes/organic-tree/sources/export.py",
+      "sha256": "4c816cd2ace0664f13adf5f1551fbfff6f00b522857674ae2676c46722a67736"
+    },
+    {
+      "path": "prototypes/organic-tree/sources/organic-tree.py",
+      "sha256": "d701d45be796f4ac9b44f179680f755711fe11996a18244fc51f96aaab545954"
+    },
+    {
+      "path": "prototypes/organic-tree/sources/probe-leaf-winding.py",
+      "sha256": "e7881e5bc552df6531d63f2da6226620dcacc0fe3cde68d59a3b964bb9d565ef"
+    },
+    {
+      "path": "prototypes/organic-tree/sources/validate-runtime-gltf.mjs",
+      "sha256": "eaad510a9a1bd8a110100f816936ec4e6d65b4140c39216312a3e204bbcf9a3b"
+    },
+    {
+      "path": "prototypes/organic-tree/sources/validate-tree.mjs",
+      "sha256": "1b3730354e1345f4e7ee9282b74088c1660a6fe85612a830ac98dc46f4e46ec6"
+    }
+  ]
+}

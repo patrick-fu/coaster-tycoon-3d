@@ -1,0 +1,22 @@
+{
+  "sourceCommit": "e999ba96aa9e345e7b320957f2c20ce43437476c",
+  "sourceTree": "79fce64f944aa08754a2c13350239eaa01f8e878",
+  "saveVersion": 18,
+  "contentVersion": 11,
+  "protocolVersion": 11,
+  "sourcePullRequest": "https://github.com/patrick-fu/coaster-tycoon-3d/pull/86",
+  "buildBindingSHA256": "faa89435cba70924914bde978645d9e42c7a33dd793f1ff236c272cf05b480d7",
+  "sourceInventorySHA256": "a9399398e8005095ae7718fe07615fe293a15df7171e41d83e64e007fc44a883",
+  "compiledInventorySHA256": "58bcc525bbb35b9f65bb7af4888cec57a2de97c5a970d10e83423ca63e7601e1",
+  "runtimeInventorySHA256": "5250d2088d670b8a53e12dbbd189f67edee97211b2c78baf017d490c91b24193",
+  "canonicalReceiptSHA256": "9161d2ce67c02cd5b63ca9a9ffbfe527ac4dd7a728bf792f7128b8b0ac3c6ec3",
+  "nativeControlsAcceptanceSHA256": "eaf394e423b1cda601f139409d326921780049b8419889969507b848a2197e1d",
+  "previousPublishedSourceCommit": "63c4efd0c74fc9aeac4353ba4aa6bb7b500fe1bc",
+  "scope": "Ride form draft retention, native Flume role stations, valid leaving-guest ownership and Export-only New Park warning. Current remote466/0 and build:web pass; actual default-Chrome role53-to54, draft2.7 submission and authoritative reinspection, warning/cancel pass. Existing five rides/four families and art remain unchanged. Current native Save/fresh-browser-worker reload, public browser/cache compatibility, integrated-GPU throughput, contact, soak and original-game breadth remain open. Independent MIT.",
+  "buildHost": "Grok Bot",
+  "preparedAtUTC": "2026-10-22T14:06:16.399197+00:00",
+  "playerInstructions": {
+    "preset": "classic",
+    "oldSavedPark": "Export an old park first if you want to keep it, then choose New park and confirm."
+  }
+}

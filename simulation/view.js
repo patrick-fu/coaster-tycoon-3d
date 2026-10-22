@@ -9,6 +9,7 @@ import { carouselAngle, carouselSeatFrame, fixedProfile } from './carousel.js';
 import { flumeProfile } from './flume-profile.js';
 import { flumeGroundCells } from './flume-native.js';
 import { boatFrame, boatSeatFrames } from './boat.js';
+import { flumePortalStations } from './flume-portal.js';
 import { facilityProduct, facilityProductView, productDescriptors } from '../content/consumables.js';
 import { informationProductViews } from '../content/merchandise.js';
 import { insideRestroom } from './services.js';
@@ -75,7 +76,7 @@ export function project(s, rules, request, elements, course, channelCourse) {
         const tip = e?.kind === 'track' ? endpoint(e.origin, selected.pieces[e.piece]) : r.anchor;
         if (channel) {
             const boat = s.boats.find(b => b.ride === r.id);
-            return { id: r.id, instanceId: r.instanceId, content: { ...r.content }, presentation: resolveContent(r.content).capabilities.presentation, channelProfile: structuredClone(channel), name: r.name, status: r.status, price: r.price, income: r.income, broken: r.broken, queue: r.queue.length, tip: { ...tip }, trackCount: r.track.length, capacity: 4, measured: boat?.measured ? { ...boat.measured } : null, boatPhase: boat?.phase ?? null };
+            return { id: r.id, instanceId: r.instanceId, content: { ...r.content }, presentation: resolveContent(r.content).capabilities.presentation, channelProfile: structuredClone(channel), portalStations: flumePortalStations(r, elements), name: r.name, status: r.status, price: r.price, income: r.income, broken: r.broken, queue: r.queue.length, tip: { ...tip }, trackCount: r.track.length, capacity: 4, measured: boat?.measured ? { ...boat.measured } : null, boatPhase: boat?.phase ?? null };
         }
         const t = s.trains.find(t => t.ride === r.id);
         return { id: r.id, instanceId: r.instanceId, content: { ...r.content }, presentation: resolveContent(r.content).capabilities.presentation, trackProfile: profile ? structuredClone(profile) : null, name: r.name, status: r.status, cars: r.cars, price: r.price, income: r.income, broken: r.broken, queue: r.queue.length, tip: { ...tip }, trackCount: r.track.length, measured: t?.measured ? { ...t.measured } : null, trainPhase: t?.phase ?? null };

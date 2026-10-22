@@ -10,6 +10,9 @@ function stationBays(ride, elements, role) {
         return null;
     return { first, selected };
 }
+export function flumePortalStations(ride, elements) {
+    return { entrance: stationBays(ride, elements, 'entrance')?.selected.id ?? null, exit: stationBays(ride, elements, 'exit')?.selected.id ?? null };
+}
 export function flumePortalSocket(ride, elements, role, side) {
     ensure(role === 'entrance' || role === 'exit', 'GEOMETRY', 'Unknown channel portal role.');
     const bays = stationBays(ride, elements, role);

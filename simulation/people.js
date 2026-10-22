@@ -181,6 +181,10 @@ export function recoverPeople(state, rules, index, route) {
 function choose(guest, state, rules, index, route, includeMerchandise = true) {
     if (!index.paths.has(key(guest.point)) || guest.phase === 'riding' || guest.phase === 'queued')
         return;
+    if (guest.phase === 'leaving') {
+        navigate(guest, state.people.entry);
+        return;
+    }
     const amenity = chooseAmenity(guest, state, rules, index, route);
     if (amenity) {
         guest.navigationRide = null;

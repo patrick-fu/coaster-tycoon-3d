@@ -160,6 +160,7 @@ export declare function project(s: State, rules: Rules, request: ViewRequest, el
         capacity: number;
         sessionPhase: "loading" | "running" | "unloading";
         channelProfile?: undefined;
+        portalStations?: undefined;
         boatPhase?: undefined;
         trackProfile?: undefined;
         cars?: undefined;
@@ -180,6 +181,10 @@ export declare function project(s: State, rules: Rules, request: ViewRequest, el
         };
         presentation: import("../content/registry.js").Presentation;
         channelProfile: import("./types.js").ChannelRideProfile;
+        portalStations: {
+            entrance: number | null;
+            exit: number | null;
+        };
         name: string;
         status: "closed" | "open" | "testing";
         price: number;
@@ -211,6 +216,7 @@ export declare function project(s: State, rules: Rules, request: ViewRequest, el
         anchor?: undefined;
         sessionPhase?: undefined;
         channelProfile?: undefined;
+        portalStations?: undefined;
         capacity?: undefined;
         boatPhase?: undefined;
         id: number;
